@@ -75,6 +75,37 @@ def test_session_id_is_recovered_from_a_pasted_url() -> None:
     assert auth.SESSION_ID_RE.search(blob).group(1) == "sess_2abcXYZ"
 
 
+def test_user_agent_is_extracted_from_a_curl_paste() -> None:
+    """Cloudflare binds cf_clearance to the UA, so it has to travel along."""
+    blob = (
+        "curl 'https://clerk.finary.com/v1/client' "
+        "-H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36' "
+        "-H 'cookie: __client=abc'"
+    )
+    assert auth.parse_user_agent(blob).endswith("Safari/537.36")
+    assert "Chrome/151" in auth.parse_user_agent(blob)
+
+
+def test_user_agent_absent_is_not_an_error() -> None:
+    assert auth.parse_user_agent("cookie: __client=abc") == ""
+
+
+def test_imported_user_agent_is_persisted(monkeypatch) -> None:
+    payload = {
+        "response": {
+            "sessions": [
+                {"id": "sess_1", "status": "active", "last_active_token": {"jwt": "j"}}
+            ]
+        }
+    }
+    monkeypatch.setattr(
+        auth, "new_session", lambda: StubSession(get_response=StubResponse(200, payload))
+    )
+    blob = "curl 'https://x' -H 'user-agent: Chrome/151 Test' -H 'cookie: __client=a'"
+    assert import_browser_session(blob).user_agent == "Chrome/151 Test"
+
+
 def test_import_rejects_unparseable_input() -> None:
     """Fails before any network call — nothing to send."""
     with pytest.raises(AuthError, match="Aucun cookie"):
@@ -108,6 +139,7 @@ class StubSession:
 
     def __init__(self, get_response=None, post_response=None) -> None:
         self.cookies = self
+        self.headers: dict[str, str] = {}
         self.jar: list[StubCookie] = []
         self._get = get_response or StubResponse(401)
         self._post = post_response or StubResponse(401)

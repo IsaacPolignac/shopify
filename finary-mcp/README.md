@@ -112,8 +112,23 @@ l'instance Clerk.
 Ce chemin est en réalité le plus sobre des deux : aucun mot de passe n'existe,
 donc aucun ne peut être saisi, stocké ni divulgué.
 
-> Le cookie `__client` vaut accès à votre compte. Traitez-le comme un mot de
-> passe : ne le collez nulle part ailleurs, ne le mettez pas dans une issue.
+> **La commande copiée contient une session active.** Le cookie `__client`
+> qu'elle transporte donne accès à votre compte Finary sans mot de passe ni
+> 2FA. Traitez-la comme un mot de passe : ne la collez que dans le tube
+> ci-dessus, jamais dans une issue, un ticket, une conversation ou un
+> presse-papier partagé. Si cela vous arrive, déconnectez-vous de Finary dans
+> ce navigateur : la session est alors révoquée côté Clerk et le jeton devient
+> inutilisable.
+
+Le User-Agent du navigateur est repris depuis la commande collée et rejoué
+ensuite : Cloudflare, qui protège `clerk.finary.com`, lie son jeton
+`cf_clearance` au User-Agent qui l'a obtenu, et un écart le ferait rejeter.
+
+Si Clerk refuse malgré tout la session, forcez une autre empreinte TLS :
+
+```bash
+FINARY_MCP_IMPERSONATE=chrome150 finary-mcp status
+```
 
 Vérifiez à tout moment :
 

@@ -85,4 +85,4 @@ def test_load_returns_none_on_corrupt_payload(isolated_config) -> None:
 def test_saved_payload_contains_only_expected_keys(isolated_config) -> None:
     storage.save_session(StoredSession(session_id="s", email="a@b.c"))
     raw = json.loads((isolated_config / "finary-mcp" / "session.json").read_text())
-    assert set(raw) == {"session_id", "cookies", "jwt", "email"}
+    assert set(raw) == {"session_id", "cookies", "jwt", "email", "user_agent"}

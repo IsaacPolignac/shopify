@@ -51,6 +51,10 @@ class StoredSession:
     #: Email, kept purely so ``status`` can tell the user which account is
     #: connected. Not a secret, and not used for authentication.
     email: str = ""
+    #: User-Agent of the browser the session came from. Cloudflare binds its
+    #: ``cf_clearance`` token to the UA that earned it, so replaying the
+    #: session with a different UA gets the clearance rejected.
+    user_agent: str = ""
 
     def to_json(self) -> str:
         return json.dumps(asdict(self))
@@ -63,6 +67,7 @@ class StoredSession:
             cookies=data.get("cookies", []),
             jwt=data.get("jwt", ""),
             email=data.get("email", ""),
+            user_agent=data.get("user_agent", ""),
         )
 
 

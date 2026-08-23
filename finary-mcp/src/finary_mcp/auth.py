@@ -22,6 +22,7 @@ itself is enforced in :mod:`finary_mcp.client`.
 
 from __future__ import annotations
 
+import os
 import re
 import time
 from contextlib import contextmanager
@@ -35,11 +36,17 @@ from .storage import StoredSession
 APP_ROOT = "https://app.finary.com"
 CLERK_ROOT = "https://clerk.finary.com"
 
-#: Browser TLS fingerprints to impersonate, newest first. Clerk sits behind bot
-#: protection that rejects Python's default TLS handshake, so this is required,
-#: not cosmetic. Older curl_cffi builds do not know the newer profiles, hence
-#: the fallback chain.
-IMPERSONATE_CHAIN = ("chrome124", "chrome120", "chrome110")
+#: Browser TLS fingerprints to impersonate, newest first. Clerk sits behind
+#: Cloudflare, which rejects Python's default TLS handshake, so this is
+#: required rather than cosmetic. ``chrome`` is curl_cffi's alias for the
+#: newest profile it ships, which is what we want: the closer to a real
+#: current Chrome, the better the clearance cookie holds. The numbered entries
+#: are fallbacks for older curl_cffi builds that lack the alias.
+IMPERSONATE_CHAIN = ("chrome", "chrome150", "chrome136", "chrome124", "chrome110")
+
+#: Escape hatch: override the profile without editing code, for when
+#: Cloudflare starts rejecting whatever curl_cffi currently ships.
+IMPERSONATE_ENV = "FINARY_MCP_IMPERSONATE"
 
 _BASE_HEADERS = {
     "Origin": APP_ROOT,
@@ -74,6 +81,8 @@ def _reaching(target: str) -> Iterator[None]:
 
 def _impersonation() -> str:
     """Pick a TLS profile this curl_cffi build actually supports."""
+    if override := os.environ.get(IMPERSONATE_ENV, "").strip():
+        return override
     try:
         from curl_cffi.requests.impersonate import BrowserTypeLiteral  # noqa: F401
 
@@ -216,6 +225,17 @@ CLIENT_COOKIE = "__client"
 #: exactly the request a user is most likely to copy from the Network tab.
 SESSION_ID_RE = re.compile(r"sessions/(sess_[A-Za-z0-9_-]+)")
 
+#: Clerk sits behind Cloudflare, whose `cf_clearance` cookie is bound to the
+#: User-Agent that earned it. Replaying an imported session under a different
+#: UA gets the clearance rejected, so the browser's own UA travels with it.
+USER_AGENT_RE = re.compile(r"(?i)\buser-agent\s*:\s*([^'\"\n]+)")
+
+
+def parse_user_agent(blob: str) -> str:
+    """Extract the browser's User-Agent from a pasted cURL, if present."""
+    match = USER_AGENT_RE.search(blob)
+    return match.group(1).strip().rstrip("'\"") if match else ""
+
 
 def parse_cookie_blob(blob: str) -> dict[str, str]:
     """Pull cookies out of whatever the user managed to copy.
@@ -274,9 +294,13 @@ def import_browser_session(blob: str) -> StoredSession:
             "en-tête « cookie: ... », ou une valeur de cookie seule."
         )
 
+    user_agent = parse_user_agent(blob)
+
     session = new_session()
     for name, value in cookies.items():
         session.cookies.set(name, value, domain=".finary.com", path="/")
+    if user_agent:
+        session.headers.update({"User-Agent": user_agent})
 
     # Path 1: ask Clerk to describe the client. Works whatever the cookies are
     # called, which matters because the naming is instance-specific.
@@ -294,6 +318,7 @@ def import_browser_session(blob: str) -> StoredSession:
                 cookies=_dump_cookies(session),
                 jwt=(clerk_session.get("last_active_token") or {}).get("jwt", ""),
                 email=_extract_email(clerk_session),
+                user_agent=user_agent,
             )
         detail = "Clerk a répondu mais n'a listé aucune session active."
     else:
@@ -313,6 +338,7 @@ def import_browser_session(blob: str) -> StoredSession:
                 session_id=session_id,
                 cookies=_dump_cookies(session),
                 jwt=token_response.json()["jwt"],
+                user_agent=user_agent,
             )
         detail += (
             f" La session {session_id} trouvée dans l'URL a également été "
@@ -358,6 +384,8 @@ def refresh_jwt(stored: StoredSession) -> str:
 
     session = new_session()
     _load_cookies(session, stored.cookies)
+    if stored.user_agent:
+        session.headers.update({"User-Agent": stored.user_agent})
 
     with _reaching("Clerk (clerk.finary.com)"):
         response = session.post(
