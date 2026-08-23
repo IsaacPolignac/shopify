@@ -187,6 +187,87 @@ def cmd_status(_: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_doctor(_: argparse.Namespace) -> int:
+    """Print a diagnostic report that is safe to share.
+
+    Every credential is reduced to a presence flag, a length, or a name.
+    No cookie value, JWT or session token is ever printed, so the output can
+    be pasted into a chat or an issue without leaking an account.
+    """
+    import platform
+
+    from . import __version__
+
+    def line(label: str, value: object) -> None:
+        print(f"  {label:.<34} {value}")
+
+    print("finary-mcp doctor")
+    print("=" * 52)
+
+    print("\n[Environnement]")
+    line("finary-mcp", __version__)
+    line("Python", platform.python_version())
+    line("Plateforme", f"{platform.system()} {platform.machine()}")
+    try:
+        import curl_cffi
+
+        line("curl_cffi", getattr(curl_cffi, "__version__", "?"))
+    except Exception as exc:  # pragma: no cover - import guard
+        line("curl_cffi", f"INDISPONIBLE ({exc})")
+    line("Profil TLS", auth._impersonation())
+
+    print("\n[Stockage]")
+    line("Backend", storage.describe_backend())
+    stored = storage.load_session()
+    if stored is None:
+        line("Session enregistrée", "NON")
+    else:
+        line("Session enregistrée", "oui")
+        line("session_id", f"{stored.session_id[:12]}… ({len(stored.session_id)} car.)")
+        line("Cookies (noms)", ", ".join(c["name"] for c in stored.cookies) or "aucun")
+        line("JWT en cache", f"oui ({len(stored.jwt)} car.)" if stored.jwt else "non")
+        line("User-Agent capturé", stored.user_agent[:60] or "aucun")
+
+    print("\n[Réseau]")
+    # Unauthenticated reachability: proves whether Cloudflare lets us through
+    # at all, independently of whether the session is any good.
+    for label, url in (
+        ("clerk.finary.com", f"{auth.CLERK_ROOT}/v1/client"),
+        ("api.finary.com", "https://api.finary.com/users/me"),
+    ):
+        try:
+            probe = auth.new_session()
+            response = probe.get(
+                url, params=auth.parse_clerk_versions(""), headers=auth._BASE_HEADERS
+            )
+            verdict = f"HTTP {response.status_code}"
+            if response.status_code == 403:
+                verdict += "  <- bloqué (Cloudflare ?)"
+            elif response.status_code in (200, 401):
+                verdict += "  <- joignable"
+            line(label, verdict)
+        except Exception as exc:
+            line(label, f"ÉCHEC : {type(exc).__name__}: {str(exc)[:90]}")
+
+    print("\n[Session]")
+    if stored is None:
+        line("Vérification", "ignorée (aucune session)")
+        print("\nProchaine étape : `finary-mcp import-session` (compte Google/SSO)")
+        print("ou `finary-mcp login` (compte avec mot de passe).")
+        return 1
+
+    try:
+        me = FinaryClient(stored).get("/users/me")
+    except (FinaryError, auth.AuthError) as exc:
+        line("Vérification", "ÉCHEC")
+        print(f"\n  Raison : {exc}")
+        return 1
+
+    line("Vérification", "OK — la session fonctionne")
+    line("Devise", (me.get("ui_configuration") or {}).get("display_currency", {}).get("code", "?"))
+    return 0
+
+
 def cmd_serve(_: argparse.Namespace) -> int:
     from .server import run
 
@@ -208,6 +289,9 @@ def main() -> int:
     )
     sub.add_parser("logout", help="supprimer la session enregistrée")
     sub.add_parser("status", help="vérifier la session")
+    sub.add_parser(
+        "doctor", help="rapport de diagnostic complet, sans aucun secret"
+    )
     sub.add_parser("serve", help="démarrer le serveur MCP sur stdio")
 
     args = parser.parse_args()
@@ -216,6 +300,7 @@ def main() -> int:
         "import-session": cmd_import_session,
         "logout": cmd_logout,
         "status": cmd_status,
+        "doctor": cmd_doctor,
         "serve": cmd_serve,
     }
     # No subcommand means an MCP client launched us directly; serving is the

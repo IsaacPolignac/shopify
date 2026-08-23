@@ -134,8 +134,14 @@ Vérifiez à tout moment :
 
 ```bash
 finary-mcp status     # état de la session et backend de stockage
+finary-mcp doctor     # diagnostic complet, sans aucun secret
 finary-mcp logout     # supprime la session de la machine
 ```
+
+`doctor` vérifie versions, profil TLS, trousseau, joignabilité de Clerk et de
+l'API, puis validité de la session. Les identifiants n'y apparaissent que sous
+forme de présence, de longueur ou de nom — jamais de valeur — donc sa sortie
+peut être collée dans une issue telle quelle.
 
 La session Finary reste valide plusieurs semaines. Quand elle expire, un
 `finary-mcp login` suffit.
