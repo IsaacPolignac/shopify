@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finary-mcp"
+version = "0.1.0"
+description = "Read-only MCP server for Finary — inspect your net worth and portfolio from any MCP client"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["mcp", "finary", "portfolio", "net-worth", "model-context-protocol"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+dependencies = [
+    "mcp>=2.0.0",
+    # curl_cffi impersonates a real browser's TLS fingerprint. Finary's auth
+    # provider (Clerk) sits behind bot protection that rejects plain-Python TLS.
+    "curl_cffi>=0.7.0",
+    # Cross-platform OS keychain: Keychain (macOS), libsecret (Linux), WinCred.
+    "keyring>=25.0.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
+
+[project.scripts]
+finary-mcp = "finary_mcp.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/broly134/finary-mcp"
+Issues = "https://github.com/broly134/finary-mcp/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finary_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

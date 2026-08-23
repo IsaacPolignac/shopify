@@ -1,0 +1,33 @@
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Build
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets — ces fichiers ne doivent JAMAIS être commités.
+# Le serveur n'en crée aucun par défaut (la session va dans le trousseau OS),
+# mais les outils dont il s'inspire écrivent ceci dans le dossier courant.
+credentials.json
+jwt.json
+session.json
+localCookiesMozilla.txt
+.env
+.env.*
+!.env.example
+
+# Éditeurs / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
