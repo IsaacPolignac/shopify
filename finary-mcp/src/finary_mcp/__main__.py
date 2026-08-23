@@ -47,6 +47,12 @@ def cmd_login(_: argparse.Namespace) -> int:
         session = auth.sign_in(email, password, otp_provider=_prompt_otp)
     except auth.AuthError as exc:
         print(f"\nÉchec : {exc}", file=sys.stderr)
+        print(
+            "\nCompte créé avec Google ou un autre SSO ? Il n'a alors aucun "
+            "mot de passe et cette commande ne peut pas aboutir.\n"
+            "Utilisez `finary-mcp import-session` à la place.",
+            file=sys.stderr,
+        )
         return 1
     finally:
         # Drop the only reference we hold. Python may keep the string alive
@@ -62,6 +68,59 @@ def cmd_login(_: argparse.Namespace) -> int:
     print(f"\nConnecté en tant que {email}.")
     print(f"Session enregistrée dans : {storage.describe_backend()}")
     print("Le mot de passe n'a pas été conservé.")
+    return 0
+
+
+IMPORT_INSTRUCTIONS = """\
+Import de session depuis le navigateur
+--------------------------------------
+Pour les comptes créés avec Google (ou tout autre SSO) : ces comptes n'ont
+pas de mot de passe, donc `finary-mcp login` ne peut pas fonctionner. On
+reprend ici la session que votre navigateur détient déjà.
+
+  1. Connectez-vous sur https://app.finary.com dans votre navigateur.
+  2. Ouvrez les outils de développement (Cmd+Option+I sur Mac).
+  3. Onglet « Application » (Chrome) ou « Stockage » (Firefox/Safari),
+     puis Cookies > https://app.finary.com
+  4. Trouvez la ligne « __client » et copiez sa valeur.
+
+Variante si vous ne trouvez pas le cookie : onglet « Réseau », rechargez la
+page, cliquez une requête vers clerk.finary.com, clic droit >
+« Copier » > « Copier comme cURL », et collez la commande entière.
+
+Ce cookie vaut accès à votre compte : ne le partagez avec personne.
+"""
+
+
+def cmd_import_session(_: argparse.Namespace) -> int:
+    """Adopt a browser session — the path for Google/SSO accounts."""
+    print(IMPORT_INSTRUCTIONS)
+
+    # getpass, not input: the value is a credential, and terminal scrollback
+    # outlives the command.
+    blob = getpass.getpass("Collez ici (la saisie reste invisible) : ")
+    if not blob.strip():
+        print("Erreur : rien n'a été collé.", file=sys.stderr)
+        return 1
+
+    try:
+        session = auth.import_browser_session(blob)
+    except auth.AuthError as exc:
+        print(f"\nÉchec : {exc}", file=sys.stderr)
+        return 1
+    finally:
+        del blob
+
+    try:
+        storage.save_session(session)
+    except storage.StorageError as exc:
+        print(f"\nSession valide mais impossible de l'enregistrer :\n{exc}", file=sys.stderr)
+        return 1
+
+    who = session.email or "(compte identifié)"
+    print(f"\nSession importée : {who}")
+    print(f"Enregistrée dans : {storage.describe_backend()}")
+    print("Vérifiez avec `finary-mcp status`.")
     return 0
 
 
@@ -113,7 +172,11 @@ def main() -> int:
     )
     sub = parser.add_subparsers(dest="command")
 
-    sub.add_parser("login", help="se connecter à Finary (mot de passe non conservé)")
+    sub.add_parser("login", help="se connecter avec e-mail + mot de passe")
+    sub.add_parser(
+        "import-session",
+        help="importer la session du navigateur (comptes Google / SSO)",
+    )
     sub.add_parser("logout", help="supprimer la session enregistrée")
     sub.add_parser("status", help="vérifier la session")
     sub.add_parser("serve", help="démarrer le serveur MCP sur stdio")
@@ -121,6 +184,7 @@ def main() -> int:
     args = parser.parse_args()
     handlers = {
         "login": cmd_login,
+        "import-session": cmd_import_session,
         "logout": cmd_logout,
         "status": cmd_status,
         "serve": cmd_serve,

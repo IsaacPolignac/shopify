@@ -72,6 +72,10 @@ pip install -e .
 
 ## Connexion
 
+Deux cas, selon la façon dont votre compte Finary a été créé.
+
+### Compte avec e-mail et mot de passe
+
 ```bash
 finary-mcp login
 ```
@@ -79,6 +83,26 @@ finary-mcp login
 Le programme demande votre e-mail, votre mot de passe (saisie masquée) et, si la
 2FA est active, votre code à 6 chiffres. Il enregistre ensuite **uniquement la
 session**.
+
+### Compte créé avec Google (ou un autre SSO)
+
+Ces comptes n'ont **aucun mot de passe** : `login` ne peut pas aboutir. On
+reprend à la place la session que votre navigateur détient déjà.
+
+```bash
+finary-mcp import-session
+```
+
+La commande affiche la marche à suivre : récupérer le cookie `__client` depuis
+les outils de développement sur `app.finary.com`, ou coller une requête vers
+`clerk.finary.com` copiée en « Copier comme cURL ». Clerk résout ensuite ce
+cookie en session utilisable.
+
+Ce chemin est en réalité le plus sobre des deux : aucun mot de passe n'existe,
+donc aucun ne peut être saisi, stocké ni divulgué.
+
+> Le cookie `__client` vaut accès à votre compte. Traitez-le comme un mot de
+> passe : ne le collez nulle part ailleurs, ne le mettez pas dans une issue.
 
 Vérifiez à tout moment :
 

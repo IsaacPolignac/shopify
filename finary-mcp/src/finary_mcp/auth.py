@@ -10,6 +10,11 @@ short-lived bearer JWT. This module reproduces that exchange:
 Only the second step happens at runtime. The password is used once, in memory,
 during :func:`sign_in` and is never returned, logged or stored.
 
+Accounts created through Google (or any other SSO provider) have no password at
+all, so the first step is impossible for them. :func:`import_browser_session`
+covers that case by adopting the session the user's browser already holds —
+no password exists, so none can be typed, stored or leaked.
+
 This is the one module allowed to issue non-GET requests, and only ever to
 Clerk — never to ``api.finary.com``. The read-only guarantee for the Finary API
 itself is enforced in :mod:`finary_mcp.client`.
@@ -17,6 +22,7 @@ itself is enforced in :mod:`finary_mcp.client`.
 
 from __future__ import annotations
 
+import re
 import time
 from typing import Any, Callable
 
@@ -179,6 +185,120 @@ def sign_in(
         jwt=jwt,
         email=email,
     )
+
+
+#: Clerk's long-lived client cookie. The one value that actually matters.
+CLIENT_COOKIE = "__client"
+
+
+def parse_cookie_blob(blob: str) -> dict[str, str]:
+    """Pull cookies out of whatever the user managed to copy.
+
+    Browsers offer several shapes and users paste all of them, so accept the
+    lot rather than demanding one exact format:
+
+    - a full "Copy as cURL" command, with ``-H 'cookie: a=1; b=2'`` or ``-b``
+    - a bare ``cookie: a=1; b=2`` header line
+    - just ``a=1; b=2``
+    - a lone ``__client`` value with no name at all
+    """
+    text = blob.strip()
+    if not text:
+        return {}
+
+    # Narrow to the cookie header when the paste is a whole cURL command;
+    # otherwise every other -H would be parsed as a cookie.
+    match = re.search(r"(?is)\bcookie\s*:\s*([^'\"\n]+)", text)
+    if not match:
+        match = re.search(r"(?is)\B-b\s+['\"]([^'\"]+)['\"]", text)
+    if match:
+        text = match.group(1)
+
+    cookies: dict[str, str] = {}
+    for part in text.split(";"):
+        part = part.strip()
+        if not part or "=" not in part:
+            continue
+        name, _, value = part.partition("=")
+        name, value = name.strip(), value.strip()
+        # A cURL paste can drop trailing quotes into the last value.
+        value = value.rstrip("'\"")
+        if name:
+            cookies[name] = value
+
+    if not cookies and "=" not in text and " " not in text:
+        # A lone opaque token: assume it is the cookie that matters.
+        cookies[CLIENT_COOKIE] = text
+
+    return cookies
+
+
+def import_browser_session(blob: str) -> StoredSession:
+    """Adopt the Clerk session a browser already holds.
+
+    The route for Google/SSO accounts, which have no password to sign in with.
+    Only the ``__client`` cookie is really needed: Clerk's ``/v1/client``
+    endpoint resolves it into the session id and a current JWT.
+    """
+    cookies = parse_cookie_blob(blob)
+    if not cookies:
+        raise AuthError(
+            "Aucun cookie n'a pu être lu dans ce que vous avez collé. "
+            "Attendu : un en-tête « cookie: ... », une commande cURL copiée "
+            "depuis l'onglet Réseau, ou la valeur du cookie __client."
+        )
+    if CLIENT_COOKIE not in cookies:
+        found = ", ".join(sorted(cookies)) or "aucun"
+        raise AuthError(
+            f"Le cookie « {CLIENT_COOKIE} » est absent (trouvés : {found}). "
+            "C'est celui qui porte la session Clerk. Il est HttpOnly, donc "
+            "invisible depuis `document.cookie` : copiez-le depuis l'onglet "
+            "Application/Stockage des outils de développement, ou copiez une "
+            "requête vers clerk.finary.com en « Copier comme cURL »."
+        )
+
+    session = new_session()
+    for name, value in cookies.items():
+        session.cookies.set(name, value, domain=".finary.com", path="/")
+
+    response = session.get(f"{CLERK_ROOT}/v1/client", headers=_BASE_HEADERS)
+    if response.status_code != 200:
+        raise AuthError(
+            f"Clerk a refusé ce cookie (HTTP {response.status_code}). "
+            "Il est probablement expiré : reconnectez-vous sur "
+            "app.finary.com, puis recopiez-le."
+        )
+
+    body = response.json()
+    if message := _clerk_errors(body):
+        raise AuthError(f"Clerk a rejeté la session : {message}")
+
+    sessions = (body.get("response") or {}).get("sessions") or []
+    active = [s for s in sessions if s.get("status") == "active"] or sessions
+    if not active:
+        raise AuthError(
+            "Ce cookie ne porte aucune session active. Vérifiez que vous êtes "
+            "bien connecté sur app.finary.com dans ce navigateur."
+        )
+
+    clerk_session = active[0]
+    return StoredSession(
+        session_id=clerk_session["id"],
+        cookies=_dump_cookies(session),
+        jwt=(clerk_session.get("last_active_token") or {}).get("jwt", ""),
+        email=_extract_email(clerk_session),
+    )
+
+
+def _extract_email(clerk_session: dict[str, Any]) -> str:
+    """Best-effort label for `status` output. Never load-bearing."""
+    user = clerk_session.get("user") or {}
+    if identifier := user.get("identifier"):
+        return str(identifier)
+    for address in user.get("email_addresses") or []:
+        if value := address.get("email_address"):
+            return str(value)
+    return ""
 
 
 def refresh_jwt(stored: StoredSession) -> str:
