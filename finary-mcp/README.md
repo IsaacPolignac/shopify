@@ -89,25 +89,44 @@ session**.
 Ces comptes n'ont **aucun mot de passe** : `login` ne peut pas aboutir. On
 reprend à la place la session que votre navigateur détient déjà.
 
-1. Connectez-vous sur `app.finary.com` dans Chrome.
-2. `Cmd+Option+I` → onglet **Network**, filtrez sur `clerk`, rechargez.
-3. Clic droit sur une requête → **Copy** → **Copy as cURL**.
-4. Puis :
+Connectez-vous sur `app.finary.com` dans Chrome, puis :
 
 ```bash
-pbpaste | finary-mcp import-session          # macOS
-xclip -o -selection clipboard | finary-mcp import-session   # Linux
+finary-mcp import-chrome
 ```
 
-Le passage par un tube n'est pas cosmétique : un « Copy as cURL » fait souvent
-plusieurs lignes, qu'un prompt masqué tronquerait silencieusement.
+C'est tout. La commande lit les cookies `finary.com` dans le magasin local de
+Chrome (ou Brave, Edge, Chromium), les déchiffre avec la clé du trousseau, et
+enregistre la session. macOS demandera une autorisation d'accès au trousseau la
+première fois.
 
-Aucun nom de cookie n'est exigé — la commande envoie ce que vous avez copié et
+Aucun onglet Réseau, aucun copier-coller. **Seuls les hôtes en `finary.com` sont
+lus**, la base est copiée avant lecture (rien n'est écrit dans votre profil), et
+les valeurs ne quittent jamais la mémoire du processus avant d'aller dans le
+trousseau.
+
+<details>
+<summary>Repli : coller la session à la main</summary>
+
+Si `import-chrome` ne trouve rien — navigateur non supporté, profil exotique —
+il reste la méthode manuelle :
+
+1. `Cmd+Option+I` → onglet **Network**, filtrez sur `clerk`, rechargez.
+2. Clic droit sur une requête → **Copy** → **Copy as cURL**.
+3. Puis :
+
+```bash
+pbpaste | finary-mcp import-session                          # macOS
+xclip -o -selection clipboard | finary-mcp import-session    # Linux
+```
+
+Le tube n'est pas cosmétique : un « Copy as cURL » fait souvent plusieurs
+lignes, qu'un prompt masqué tronquerait silencieusement.
+
+Aucun nom de cookie n'est exigé : la commande envoie ce que vous avez copié et
 laisse Clerk trancher, puis récupère au besoin l'identifiant de session dans
-l'URL collée. Cela la rend indifférente au nommage des cookies, qui dépend de
-l'instance Clerk.
-
-`finary-mcp import-session` sans tube affiche la marche à suivre détaillée.
+l'URL collée.
+</details>
 
 Ce chemin est en réalité le plus sobre des deux : aucun mot de passe n'existe,
 donc aucun ne peut être saisi, stocké ni divulgué.

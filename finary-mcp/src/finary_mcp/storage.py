@@ -45,6 +45,10 @@ class StoredSession:
     session_id: str
     #: Cookie jar as a list of ``{name, value, domain, path}`` dicts.
     cookies: list[dict[str, str]] = field(default_factory=list)
+    #: The raw ``a=1; b=2`` header exactly as the browser sent it. Replayed
+    #: verbatim rather than rebuilt from the jar: domain-matching rules are a
+    #: source of silent failure, and the browser's own string cannot be wrong.
+    cookie_header: str = ""
     #: Last known JWT. Short-lived (~60s); refreshed on demand, cached only to
     #: avoid a round-trip when it is still valid.
     jwt: str = ""
@@ -65,6 +69,7 @@ class StoredSession:
         return cls(
             session_id=data.get("session_id", ""),
             cookies=data.get("cookies", []),
+            cookie_header=data.get("cookie_header", ""),
             jwt=data.get("jwt", ""),
             email=data.get("email", ""),
             user_agent=data.get("user_agent", ""),

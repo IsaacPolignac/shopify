@@ -214,3 +214,37 @@ def test_clerk_versions_fall_back_to_defaults() -> None:
     versions = auth.parse_clerk_versions("cookie: __client=abc")
     assert versions["__clerk_api_version"] == auth.CLERK_API_VERSION
     assert versions["_clerk_js_version"] == auth.CLERK_JS_VERSION
+
+
+def test_cookie_header_is_kept_verbatim() -> None:
+    """Replayed as-is, so no domain-match rule can silently drop a cookie."""
+    blob = "curl 'https://x' -H 'cookie: __client=abc; cf_clearance=xyz; __client_uat=1'"
+    assert auth.extract_cookie_header(blob) == "__client=abc; cf_clearance=xyz; __client_uat=1"
+
+
+def test_cookie_header_from_a_bare_paste() -> None:
+    assert auth.extract_cookie_header("a=1; b=2") == "a=1; b=2"
+    assert auth.extract_cookie_header("loneToken") == "loneToken"
+    assert auth.extract_cookie_header("") == ""
+
+
+def test_imported_cookie_header_is_persisted(monkeypatch) -> None:
+    payload = {
+        "response": {
+            "sessions": [
+                {"id": "sess_1", "status": "active", "last_active_token": {"jwt": "j"}}
+            ]
+        }
+    }
+    monkeypatch.setattr(
+        auth, "new_session", lambda: StubSession(get_response=StubResponse(200, payload))
+    )
+    stored = import_browser_session("cookie: __client=abc; cf_clearance=xyz")
+    assert stored.cookie_header == "__client=abc; cf_clearance=xyz"
+
+
+def test_browser_headers_carry_cookie_and_user_agent() -> None:
+    headers = auth._browser_headers("__client=abc", "Chrome/151")
+    assert headers["Cookie"] == "__client=abc"
+    assert headers["User-Agent"] == "Chrome/151"
+    assert "Cookie" not in auth._browser_headers("", "")

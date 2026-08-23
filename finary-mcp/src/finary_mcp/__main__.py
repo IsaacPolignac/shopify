@@ -132,6 +132,20 @@ def cmd_import_session(_: argparse.Namespace) -> int:
         )
         return 1
 
+    # Report what was understood before going to the network, so a failure
+    # points at the paste or at Clerk rather than being ambiguous. Names only,
+    # never values.
+    found = auth.parse_cookie_blob(blob)
+    print(f"\nCookies lus      : {len(found)}")
+    if found:
+        print(f"Noms             : {', '.join(sorted(found))}")
+    print(
+        f"Cookie de session: "
+        f"{'trouvé' if auth.CLIENT_COOKIE in found else 'ABSENT (' + auth.CLIENT_COOKIE + ')'}"
+    )
+    print(f"User-Agent       : {'capturé' if auth.parse_user_agent(blob) else 'absent'}")
+    print("Contact de Clerk en cours…")
+
     try:
         session = auth.import_browser_session(blob)
     except auth.AuthError as exc:
@@ -148,6 +162,52 @@ def cmd_import_session(_: argparse.Namespace) -> int:
 
     who = session.email or "(compte identifié)"
     print(f"\nSession importée : {who}")
+    print(f"Enregistrée dans : {storage.describe_backend()}")
+    print("Vérifiez avec `finary-mcp status`.")
+    return 0
+
+
+def cmd_import_chrome(_: argparse.Namespace) -> int:
+    """Read the session straight from the local browser. No copy-paste."""
+    from . import chrome
+
+    print("Import depuis le navigateur local")
+    print("-" * 50)
+    print(
+        "Lecture des cookies finary.com stockés par Chrome/Brave/Edge.\n"
+        "macOS demandera l'autorisation d'accéder au trousseau : cliquez\n"
+        "« Autoriser ». Aucun autre site n'est lu, rien n'est modifié.\n"
+    )
+
+    try:
+        cookie_header, source = chrome.read_finary_cookies()
+    except chrome.ChromeError as exc:
+        print(f"Échec : {exc}", file=sys.stderr)
+        return 1
+
+    names = sorted(auth.parse_cookie_blob(cookie_header))
+    print(f"Source           : {source}")
+    print(f"Cookies lus      : {len(names)}")
+    print(f"Noms             : {', '.join(names)}")
+    print(
+        f"Cookie de session: "
+        f"{'trouvé' if auth.CLIENT_COOKIE in names else 'ABSENT (' + auth.CLIENT_COOKIE + ')'}"
+    )
+    print("Contact de Clerk en cours…")
+
+    try:
+        session = auth.import_browser_session(cookie_header)
+    except auth.AuthError as exc:
+        print(f"\nÉchec : {exc}", file=sys.stderr)
+        return 1
+
+    try:
+        storage.save_session(session)
+    except storage.StorageError as exc:
+        print(f"\nSession valide mais non enregistrée :\n{exc}", file=sys.stderr)
+        return 1
+
+    print(f"\nSession importée : {session.email or '(compte identifié)'}")
     print(f"Enregistrée dans : {storage.describe_backend()}")
     print("Vérifiez avec `finary-mcp status`.")
     return 0
@@ -282,10 +342,14 @@ def main() -> int:
     )
     sub = parser.add_subparsers(dest="command")
 
+    sub.add_parser(
+        "import-chrome",
+        help="lire la session directement dans Chrome/Brave/Edge (recommandé)",
+    )
     sub.add_parser("login", help="se connecter avec e-mail + mot de passe")
     sub.add_parser(
         "import-session",
-        help="importer la session du navigateur (comptes Google / SSO)",
+        help="importer une session collée à la main (repli)",
     )
     sub.add_parser("logout", help="supprimer la session enregistrée")
     sub.add_parser("status", help="vérifier la session")
@@ -297,6 +361,7 @@ def main() -> int:
     args = parser.parse_args()
     handlers = {
         "login": cmd_login,
+        "import-chrome": cmd_import_chrome,
         "import-session": cmd_import_session,
         "logout": cmd_logout,
         "status": cmd_status,

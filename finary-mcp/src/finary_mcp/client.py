@@ -70,16 +70,11 @@ class FinaryClient:
             print(f"[finary-mcp] Session non mise en cache : {exc}", file=sys.stderr)
 
         session = auth.new_session()
-        headers = {
-            "authorization": f"Bearer {jwt}",
-            "Origin": auth.APP_ROOT,
-            "Referer": f"{auth.APP_ROOT}/",
-            "Accept": "application/json",
-        }
-        if stored.user_agent:
-            # Match the browser the session was imported from; Cloudflare
-            # checks the UA against the clearance cookie.
-            headers["User-Agent"] = stored.user_agent
+        # Carry the browser's cookies and User-Agent here too: api.finary.com
+        # sits behind the same Cloudflare, whose clearance token is bound to
+        # both. The bearer token alone is not always enough to get through.
+        headers = auth._browser_headers(stored.cookie_header, stored.user_agent)
+        headers["authorization"] = f"Bearer {jwt}"
         session.headers.update(headers)
         self._session = session
         return session

@@ -80,6 +80,20 @@ _BASE_HEADERS = {
 }
 
 
+def _browser_headers(cookie_header: str = "", user_agent: str = "") -> dict[str, str]:
+    """Headers that make a request look like the browser the session came from.
+
+    The cookie string is replayed verbatim rather than rebuilt from a jar, and
+    the User-Agent is matched because Cloudflare ties `cf_clearance` to it.
+    """
+    headers = dict(_BASE_HEADERS)
+    if cookie_header:
+        headers["Cookie"] = cookie_header
+    if user_agent:
+        headers["User-Agent"] = user_agent
+    return headers
+
+
 class AuthError(RuntimeError):
     """Sign-in or refresh failed. Message is safe to show the user."""
 
@@ -262,6 +276,31 @@ def parse_user_agent(blob: str) -> str:
     return match.group(1).strip().rstrip("'\"") if match else ""
 
 
+def extract_cookie_header(blob: str) -> str:
+    """Return the cookie header string from a paste, exactly as sent.
+
+    Kept verbatim so it can be replayed as a ``Cookie:`` header instead of
+    being rebuilt from a jar, where a domain-match rule could silently drop
+    the one cookie that mattered.
+    """
+    text = blob.strip()
+    if not text:
+        return ""
+
+    # Narrow to the cookie header when the paste is a whole cURL command;
+    # otherwise every other -H would be treated as cookie content.
+    match = re.search(r"(?is)\bcookie\s*:\s*([^'\"\n]+)", text)
+    if not match:
+        match = re.search(r"(?is)\B-b\s+['\"]([^'\"]+)['\"]", text)
+    if match:
+        return match.group(1).strip()
+
+    # A bare paste: either "a=1; b=2" or a lone token.
+    if "=" in text or (" " not in text and "\n" not in text):
+        return text
+    return ""
+
+
 def parse_cookie_blob(blob: str) -> dict[str, str]:
     """Pull cookies out of whatever the user managed to copy.
 
@@ -273,17 +312,9 @@ def parse_cookie_blob(blob: str) -> dict[str, str]:
     - just ``a=1; b=2``
     - a lone ``__client`` value with no name at all
     """
-    text = blob.strip()
+    text = extract_cookie_header(blob)
     if not text:
         return {}
-
-    # Narrow to the cookie header when the paste is a whole cURL command;
-    # otherwise every other -H would be parsed as a cookie.
-    match = re.search(r"(?is)\bcookie\s*:\s*([^'\"\n]+)", text)
-    if not match:
-        match = re.search(r"(?is)\B-b\s+['\"]([^'\"]+)['\"]", text)
-    if match:
-        text = match.group(1)
 
     cookies: dict[str, str] = {}
     for part in text.split(";"):
@@ -321,6 +352,8 @@ def import_browser_session(blob: str) -> StoredSession:
 
     user_agent = parse_user_agent(blob)
     versions = parse_clerk_versions(blob)
+    cookie_header = extract_cookie_header(blob)
+    headers = _browser_headers(cookie_header, user_agent)
 
     session = new_session()
     for name, value in cookies.items():
@@ -333,7 +366,7 @@ def import_browser_session(blob: str) -> StoredSession:
     detail: str = ""
     with _reaching("Clerk (clerk.finary.com)"):
         response = session.get(
-            f"{CLERK_ROOT}/v1/client", params=versions, headers=_BASE_HEADERS
+            f"{CLERK_ROOT}/v1/client", params=versions, headers=headers
         )
     if response.status_code == 200:
         body = response.json()
@@ -347,6 +380,7 @@ def import_browser_session(blob: str) -> StoredSession:
                 jwt=(clerk_session.get("last_active_token") or {}).get("jwt", ""),
                 email=_extract_email(clerk_session),
                 user_agent=user_agent,
+                cookie_header=cookie_header,
             )
         detail = "Clerk a répondu mais n'a listé aucune session active."
     else:
@@ -360,7 +394,7 @@ def import_browser_session(blob: str) -> StoredSession:
             token_response = session.post(
                 f"{CLERK_ROOT}/v1/client/sessions/{session_id}/tokens",
                 params=versions,
-                headers=_BASE_HEADERS,
+                headers=headers,
             )
         if token_response.status_code == 200 and token_response.json().get("jwt"):
             return StoredSession(
@@ -368,6 +402,7 @@ def import_browser_session(blob: str) -> StoredSession:
                 cookies=_dump_cookies(session),
                 jwt=token_response.json()["jwt"],
                 user_agent=user_agent,
+                cookie_header=cookie_header,
             )
         detail += (
             f" La session {session_id} trouvée dans l'URL a également été "
@@ -413,14 +448,12 @@ def refresh_jwt(stored: StoredSession) -> str:
 
     session = new_session()
     _load_cookies(session, stored.cookies)
-    if stored.user_agent:
-        session.headers.update({"User-Agent": stored.user_agent})
 
     with _reaching("Clerk (clerk.finary.com)"):
         response = session.post(
             f"{CLERK_ROOT}/v1/client/sessions/{stored.session_id}/tokens",
             params=parse_clerk_versions(""),
-            headers=_BASE_HEADERS,
+            headers=_browser_headers(stored.cookie_header, stored.user_agent),
         )
     if response.status_code != 200:
         raise AuthError(
