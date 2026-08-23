@@ -48,6 +48,31 @@ IMPERSONATE_CHAIN = ("chrome", "chrome150", "chrome136", "chrome124", "chrome110
 #: Cloudflare starts rejecting whatever curl_cffi currently ships.
 IMPERSONATE_ENV = "FINARY_MCP_IMPERSONATE"
 
+#: Clerk pins its response shape to an API version. The web app sends one on
+#: every call; omitting it lets Clerk pick a default that may not match what
+#: this code parses. These are the versions observed in Finary's app, used as
+#: defaults when a paste does not carry its own.
+CLERK_API_VERSION = "2026-05-12"
+CLERK_JS_VERSION = "6.29.2"
+
+API_VERSION_RE = re.compile(r"__clerk_api_version=([0-9-]+)")
+JS_VERSION_RE = re.compile(r"_clerk_js_version=([0-9.]+)")
+
+
+def parse_clerk_versions(blob: str) -> dict[str, str]:
+    """Read Clerk's version parameters out of a pasted request, if present.
+
+    Taking them from the paste means the tool tracks whatever Finary is
+    actually running, instead of drifting behind a hardcoded pair.
+    """
+    api = API_VERSION_RE.search(blob)
+    js = JS_VERSION_RE.search(blob)
+    return {
+        "__clerk_api_version": api.group(1) if api else CLERK_API_VERSION,
+        "_clerk_js_version": js.group(1) if js else CLERK_JS_VERSION,
+    }
+
+
 _BASE_HEADERS = {
     "Origin": APP_ROOT,
     "Referer": f"{APP_ROOT}/",
@@ -295,6 +320,7 @@ def import_browser_session(blob: str) -> StoredSession:
         )
 
     user_agent = parse_user_agent(blob)
+    versions = parse_clerk_versions(blob)
 
     session = new_session()
     for name, value in cookies.items():
@@ -306,7 +332,9 @@ def import_browser_session(blob: str) -> StoredSession:
     # called, which matters because the naming is instance-specific.
     detail: str = ""
     with _reaching("Clerk (clerk.finary.com)"):
-        response = session.get(f"{CLERK_ROOT}/v1/client", headers=_BASE_HEADERS)
+        response = session.get(
+            f"{CLERK_ROOT}/v1/client", params=versions, headers=_BASE_HEADERS
+        )
     if response.status_code == 200:
         body = response.json()
         sessions = (body.get("response") or {}).get("sessions") or []
@@ -331,6 +359,7 @@ def import_browser_session(blob: str) -> StoredSession:
         with _reaching("Clerk (clerk.finary.com)"):
             token_response = session.post(
                 f"{CLERK_ROOT}/v1/client/sessions/{session_id}/tokens",
+                params=versions,
                 headers=_BASE_HEADERS,
             )
         if token_response.status_code == 200 and token_response.json().get("jwt"):
@@ -390,6 +419,7 @@ def refresh_jwt(stored: StoredSession) -> str:
     with _reaching("Clerk (clerk.finary.com)"):
         response = session.post(
             f"{CLERK_ROOT}/v1/client/sessions/{stored.session_id}/tokens",
+            params=parse_clerk_versions(""),
             headers=_BASE_HEADERS,
         )
     if response.status_code != 200:

@@ -200,3 +200,17 @@ def test_failure_explains_the_missing_client_cookie(monkeypatch) -> None:
     monkeypatch.setattr(auth, "new_session", lambda: StubSession())
     with pytest.raises(AuthError, match="__client"):
         import_browser_session("cookie: some_other=1; unrelated=2")
+
+
+def test_clerk_versions_are_read_from_the_paste() -> None:
+    """Track whatever Finary currently runs instead of drifting behind."""
+    blob = "curl 'https://clerk.finary.com/v1/client?__clerk_api_version=2026-05-12&_clerk_js_version=6.29.2'"
+    versions = auth.parse_clerk_versions(blob)
+    assert versions["__clerk_api_version"] == "2026-05-12"
+    assert versions["_clerk_js_version"] == "6.29.2"
+
+
+def test_clerk_versions_fall_back_to_defaults() -> None:
+    versions = auth.parse_clerk_versions("cookie: __client=abc")
+    assert versions["__clerk_api_version"] == auth.CLERK_API_VERSION
+    assert versions["_clerk_js_version"] == auth.CLERK_JS_VERSION
