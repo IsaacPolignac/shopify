@@ -78,29 +78,58 @@ Pour les comptes créés avec Google (ou tout autre SSO) : ces comptes n'ont
 pas de mot de passe, donc `finary-mcp login` ne peut pas fonctionner. On
 reprend ici la session que votre navigateur détient déjà.
 
-  1. Connectez-vous sur https://app.finary.com dans votre navigateur.
-  2. Ouvrez les outils de développement (Cmd+Option+I sur Mac).
-  3. Onglet « Application » (Chrome) ou « Stockage » (Firefox/Safari),
-     puis Cookies > https://app.finary.com
-  4. Trouvez la ligne « __client » et copiez sa valeur.
+Aucun nom de cookie à chercher :
 
-Variante si vous ne trouvez pas le cookie : onglet « Réseau », rechargez la
-page, cliquez une requête vers clerk.finary.com, clic droit >
-« Copier » > « Copier comme cURL », et collez la commande entière.
+  1. Connectez-vous sur https://app.finary.com dans Chrome.
+  2. Cmd+Option+I pour ouvrir les outils de développement.
+  3. Onglet « Network » (Réseau).
+  4. Tapez  clerk  dans le champ de filtre.
+  5. Rechargez la page avec Cmd+R. Des lignes apparaissent.
+  6. Clic droit sur n'importe laquelle  >  Copy  >  Copy as cURL.
 
-Ce cookie vaut accès à votre compte : ne le partagez avec personne.
+Puis, plutôt que de coller ici (la commande fait souvent plusieurs lignes,
+ce que ce prompt gère mal), lancez sur macOS :
+
+    pbpaste | finary-mcp import-session
+
+Sous Linux :  xclip -o -selection clipboard | finary-mcp import-session
+
+Sur Safari, activez d'abord le menu Développement :
+Réglages > Avancé > « Afficher les fonctionnalités pour développeurs web ».
+
+Ce que vous copiez contient vos cookies de session : cela vaut accès à
+votre compte. Ne le partagez avec personne, ne le mettez pas dans une issue.
 """
+
+
+def _read_blob() -> str:
+    """Read the pasted credential, from a pipe when there is one.
+
+    A "Copy as cURL" is frequently multi-line, and a hidden single-line prompt
+    would silently truncate it — hence the pipe being the documented route.
+    """
+    if not sys.stdin.isatty():
+        return sys.stdin.read()
+
+    try:
+        return getpass.getpass("Ou collez ici, sur UNE ligne (invisible) : ")
+    except (EOFError, OSError):
+        # No usable terminal for a hidden prompt.
+        return ""
 
 
 def cmd_import_session(_: argparse.Namespace) -> int:
     """Adopt a browser session — the path for Google/SSO accounts."""
-    print(IMPORT_INSTRUCTIONS)
+    if sys.stdin.isatty():
+        print(IMPORT_INSTRUCTIONS)
 
-    # getpass, not input: the value is a credential, and terminal scrollback
-    # outlives the command.
-    blob = getpass.getpass("Collez ici (la saisie reste invisible) : ")
+    blob = _read_blob()
     if not blob.strip():
-        print("Erreur : rien n'a été collé.", file=sys.stderr)
+        print(
+            "Erreur : rien à lire. Copiez la requête en « Copy as cURL » puis "
+            "lancez :  pbpaste | finary-mcp import-session",
+            file=sys.stderr,
+        )
         return 1
 
     try:

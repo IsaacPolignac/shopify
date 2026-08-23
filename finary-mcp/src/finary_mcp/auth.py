@@ -24,9 +24,11 @@ from __future__ import annotations
 
 import re
 import time
-from typing import Any, Callable
+from contextlib import contextmanager
+from typing import Any, Callable, Iterator
 
 from curl_cffi import requests
+from curl_cffi.requests.exceptions import RequestException
 
 from .storage import StoredSession
 
@@ -52,6 +54,22 @@ class AuthError(RuntimeError):
 
 class MFARequired(AuthError):
     """The account has 2FA enabled and no code was supplied."""
+
+
+@contextmanager
+def _reaching(target: str) -> Iterator[None]:
+    """Turn transport failures into AuthError, which every caller handles.
+
+    Without this a DNS failure, a corporate proxy or an offline laptop
+    surfaces as a raw curl traceback.
+    """
+    try:
+        yield
+    except RequestException as exc:
+        raise AuthError(
+            f"Impossible de joindre {target}. Vérifiez votre connexion réseau, "
+            f"ou un proxy/VPN qui intercepterait le trafic. Détail : {exc}"
+        ) from exc
 
 
 def _impersonation() -> str:
@@ -127,9 +145,10 @@ def sign_in(
     session = new_session()
     payload = {"identifier": email, "password": password}
 
-    response = session.post(
-        f"{CLERK_ROOT}/v1/client/sign_ins", data=payload, headers=_BASE_HEADERS
-    )
+    with _reaching("Clerk (clerk.finary.com)"):
+        response = session.post(
+            f"{CLERK_ROOT}/v1/client/sign_ins", data=payload, headers=_BASE_HEADERS
+        )
     if response.status_code >= 500:
         raise AuthError(
             f"Clerk a répondu {response.status_code}. Service indisponible, réessayez."
@@ -156,11 +175,12 @@ def sign_in(
             raise MFARequired("Aucun code TOTP fourni.")
         sign_in_id = body["response"]["id"]
         time.sleep(0.3)  # Clerk rate-limits back-to-back attempts.
-        response = session.post(
-            f"{CLERK_ROOT}/v1/client/sign_ins/{sign_in_id}/attempt_second_factor",
-            data={"strategy": "totp", "code": code},
-            headers=_BASE_HEADERS,
-        )
+        with _reaching("Clerk (clerk.finary.com)"):
+            response = session.post(
+                f"{CLERK_ROOT}/v1/client/sign_ins/{sign_in_id}/attempt_second_factor",
+                data={"strategy": "totp", "code": code},
+                headers=_BASE_HEADERS,
+            )
         body = response.json()
         if message := _clerk_errors(body):
             raise AuthError(f"Code TOTP refusé : {message}")
@@ -187,8 +207,14 @@ def sign_in(
     )
 
 
-#: Clerk's long-lived client cookie. The one value that actually matters.
+#: Clerk's long-lived client cookie under the default naming. Finary's Clerk
+#: instance may name it differently, so its absence is a warning, never a
+#: refusal — whatever cookies the user pasted get sent and Clerk decides.
 CLIENT_COOKIE = "__client"
+
+#: Clerk session ids appear in the URL of the token-refresh request, which is
+#: exactly the request a user is most likely to copy from the Network tab.
+SESSION_ID_RE = re.compile(r"sessions/(sess_[A-Za-z0-9_-]+)")
 
 
 def parse_cookie_blob(blob: str) -> dict[str, str]:
@@ -244,49 +270,69 @@ def import_browser_session(blob: str) -> StoredSession:
     if not cookies:
         raise AuthError(
             "Aucun cookie n'a pu être lu dans ce que vous avez collé. "
-            "Attendu : un en-tête « cookie: ... », une commande cURL copiée "
-            "depuis l'onglet Réseau, ou la valeur du cookie __client."
-        )
-    if CLIENT_COOKIE not in cookies:
-        found = ", ".join(sorted(cookies)) or "aucun"
-        raise AuthError(
-            f"Le cookie « {CLIENT_COOKIE} » est absent (trouvés : {found}). "
-            "C'est celui qui porte la session Clerk. Il est HttpOnly, donc "
-            "invisible depuis `document.cookie` : copiez-le depuis l'onglet "
-            "Application/Stockage des outils de développement, ou copiez une "
-            "requête vers clerk.finary.com en « Copier comme cURL »."
+            "Attendu : une commande cURL copiée depuis l'onglet Réseau, un "
+            "en-tête « cookie: ... », ou une valeur de cookie seule."
         )
 
     session = new_session()
     for name, value in cookies.items():
         session.cookies.set(name, value, domain=".finary.com", path="/")
 
-    response = session.get(f"{CLERK_ROOT}/v1/client", headers=_BASE_HEADERS)
-    if response.status_code != 200:
-        raise AuthError(
-            f"Clerk a refusé ce cookie (HTTP {response.status_code}). "
-            "Il est probablement expiré : reconnectez-vous sur "
-            "app.finary.com, puis recopiez-le."
+    # Path 1: ask Clerk to describe the client. Works whatever the cookies are
+    # called, which matters because the naming is instance-specific.
+    detail: str = ""
+    with _reaching("Clerk (clerk.finary.com)"):
+        response = session.get(f"{CLERK_ROOT}/v1/client", headers=_BASE_HEADERS)
+    if response.status_code == 200:
+        body = response.json()
+        sessions = (body.get("response") or {}).get("sessions") or []
+        active = [s for s in sessions if s.get("status") == "active"] or sessions
+        if active:
+            clerk_session = active[0]
+            return StoredSession(
+                session_id=clerk_session["id"],
+                cookies=_dump_cookies(session),
+                jwt=(clerk_session.get("last_active_token") or {}).get("jwt", ""),
+                email=_extract_email(clerk_session),
+            )
+        detail = "Clerk a répondu mais n'a listé aucune session active."
+    else:
+        detail = f"Clerk a répondu HTTP {response.status_code} sur /v1/client."
+
+    # Path 2: the paste came from the token-refresh request, so the session id
+    # is in the URL. Mint a token directly to prove the cookies still work.
+    if match := SESSION_ID_RE.search(blob):
+        session_id = match.group(1)
+        with _reaching("Clerk (clerk.finary.com)"):
+            token_response = session.post(
+                f"{CLERK_ROOT}/v1/client/sessions/{session_id}/tokens",
+                headers=_BASE_HEADERS,
+            )
+        if token_response.status_code == 200 and token_response.json().get("jwt"):
+            return StoredSession(
+                session_id=session_id,
+                cookies=_dump_cookies(session),
+                jwt=token_response.json()["jwt"],
+            )
+        detail += (
+            f" La session {session_id} trouvée dans l'URL a également été "
+            f"refusée (HTTP {token_response.status_code})."
         )
 
-    body = response.json()
-    if message := _clerk_errors(body):
-        raise AuthError(f"Clerk a rejeté la session : {message}")
-
-    sessions = (body.get("response") or {}).get("sessions") or []
-    active = [s for s in sessions if s.get("status") == "active"] or sessions
-    if not active:
-        raise AuthError(
-            "Ce cookie ne porte aucune session active. Vérifiez que vous êtes "
-            "bien connecté sur app.finary.com dans ce navigateur."
+    hint = ""
+    if CLIENT_COOKIE not in cookies:
+        hint = (
+            f"\nAucun cookie « {CLIENT_COOKIE} » dans ce que vous avez collé "
+            f"(trouvés : {', '.join(sorted(cookies))}). Le cookie de session "
+            "est HttpOnly : il n'apparaît pas dans `document.cookie`. Copiez "
+            "plutôt une requête vers clerk.finary.com via « Copier comme "
+            "cURL » depuis l'onglet Réseau — elle emporte tous les cookies."
         )
 
-    clerk_session = active[0]
-    return StoredSession(
-        session_id=clerk_session["id"],
-        cookies=_dump_cookies(session),
-        jwt=(clerk_session.get("last_active_token") or {}).get("jwt", ""),
-        email=_extract_email(clerk_session),
+    raise AuthError(
+        f"Session non reconnue. {detail}{hint}\n"
+        "Si vous venez de vous reconnecter sur app.finary.com, recopiez : "
+        "les cookies changent à chaque connexion."
     )
 
 
@@ -313,10 +359,11 @@ def refresh_jwt(stored: StoredSession) -> str:
     session = new_session()
     _load_cookies(session, stored.cookies)
 
-    response = session.post(
-        f"{CLERK_ROOT}/v1/client/sessions/{stored.session_id}/tokens",
-        headers=_BASE_HEADERS,
-    )
+    with _reaching("Clerk (clerk.finary.com)"):
+        response = session.post(
+            f"{CLERK_ROOT}/v1/client/sessions/{stored.session_id}/tokens",
+            headers=_BASE_HEADERS,
+        )
     if response.status_code != 200:
         raise AuthError(
             "La session Finary a expiré ou a été révoquée "

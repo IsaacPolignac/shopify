@@ -14,9 +14,11 @@ from __future__ import annotations
 
 import json
 import sys
-from typing import Any
+from contextlib import contextmanager
+from typing import Any, Iterator
 
 from curl_cffi import requests
+from curl_cffi.requests.exceptions import RequestException
 
 from . import auth, storage
 
@@ -81,6 +83,18 @@ class FinaryClient:
 
     # -- requests ---------------------------------------------------------
 
+    @staticmethod
+    @contextmanager
+    def _reaching() -> Iterator[None]:
+        """Surface transport failures as FinaryError, not a curl traceback."""
+        try:
+            yield
+        except RequestException as exc:
+            raise FinaryError(
+                "Impossible de joindre l'API Finary (api.finary.com). "
+                f"Vérifiez votre connexion réseau. Détail : {exc}"
+            ) from exc
+
     def request(
         self,
         method: str,
@@ -104,12 +118,14 @@ class FinaryClient:
         clean = {k: v for k, v in (params or {}).items() if v not in (None, "")}
 
         session = self._session or self._authenticate()
-        response = session.request(verb, url, params=clean)
+        with self._reaching():
+            response = session.request(verb, url, params=clean)
 
         if response.status_code == 401:
             # Expected: the cached JWT aged out. Refresh once, then retry.
             session = self._authenticate()
-            response = session.request(verb, url, params=clean)
+            with self._reaching():
+                response = session.request(verb, url, params=clean)
 
         if response.status_code == 403:
             raise FinaryError(
