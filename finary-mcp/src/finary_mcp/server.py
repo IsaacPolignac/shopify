@@ -11,6 +11,7 @@ the audience — while implementation comments stay in English.
 from __future__ import annotations
 
 import functools
+import os
 from typing import Any, Callable
 
 from mcp.server.mcpserver import MCPServer
@@ -41,13 +42,21 @@ READ_ONLY = ToolAnnotations(
     openWorldHint=True,
 )
 
+#: Set to "1" to unlock the write tools. Read once at startup, never from a
+#: tool argument: a model must not be able to grant itself write access.
+ENABLE_WRITES_ENV = "FINARY_MCP_ENABLE_WRITES"
+
 _client: FinaryClient | None = None
+
+
+def writes_enabled() -> bool:
+    return os.environ.get(ENABLE_WRITES_ENV, "") == "1"
 
 
 def _get_client() -> FinaryClient:
     global _client
     if _client is None:
-        _client = FinaryClient()
+        _client = FinaryClient(allow_writes=writes_enabled())
     return _client
 
 
@@ -83,6 +92,28 @@ def readonly_tool(func: Callable[..., Any]) -> Callable[..., Any]:
     return mcp.tool(annotations=READ_ONLY)(handles_errors(func))
 
 
+def write_tool(*, destructive: bool = False) -> Callable[..., Any]:
+    """Register a mutating tool, but only when writes are unlocked.
+
+    When locked the tool is not registered at all rather than registered and
+    refusing: a model that cannot see a capability will not try to use it, and
+    the tool list itself then tells the truth about what this server can do.
+    """
+
+    def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
+        if not writes_enabled():
+            return func
+        annotations = ToolAnnotations(
+            readOnlyHint=False,
+            destructiveHint=destructive,
+            idempotentHint=False,
+            openWorldHint=True,
+        )
+        return mcp.tool(annotations=annotations)(handles_errors(func))
+
+    return decorator
+
+
 # ---------------------------------------------------------------------------
 # Session and account
 # ---------------------------------------------------------------------------
@@ -109,7 +140,12 @@ def finary_status() -> dict[str, Any]:
         "compte": stored.email or me.get("email"),
         "devise_affichage": currency.get("code"),
         "stockage": storage.describe_backend(),
-        "mode": "lecture seule (aucune écriture possible)",
+        "mode": (
+            "lecture + écriture (les outils de modification sont actifs)"
+            if writes_enabled()
+            else "lecture seule — aucune écriture possible. Pour activer : "
+            "`finary-mcp serve --enable-writes`."
+        ),
     }
 
 
@@ -376,6 +412,296 @@ def finary_raw_get(path: str, params_json: str = "", raw: bool = True) -> Any:
         params = parsed
 
     return prepare(_get_client().get(path, params), raw=raw)
+
+
+# ---------------------------------------------------------------------------
+# Lookups — read-only, but the necessary first step before most writes
+# ---------------------------------------------------------------------------
+
+
+@readonly_tool
+def finary_search_security(query: str, raw: bool = False) -> Any:
+    """Cherche une action / un ETF par nom, ticker ou ISIN.
+
+    Renvoie des `correlation_id`, à passer à `finary_add_security`. C'est
+    l'étape obligatoire avant d'ajouter une ligne : Finary identifie les titres
+    par cet identifiant, pas par leur nom.
+    """
+    return prepare(
+        _get_client().get("/securities/autocomplete", {"query": query}), raw=raw
+    )
+
+
+@readonly_tool
+def finary_search_crypto(query: str, raw: bool = False) -> Any:
+    """Cherche une cryptomonnaie par nom ou code (BTC, ETH…).
+
+    Renvoie des `correlation_id`, à passer à `finary_add_crypto`.
+    """
+    return prepare(
+        _get_client().get(
+            "/currencies/autocomplete", {"type": "crypto", "query": query}
+        ),
+        raw=raw,
+    )
+
+
+@readonly_tool
+def finary_search_precious_metal(query: str, raw: bool = False) -> Any:
+    """Cherche un métal précieux (pièce, lingot) par nom.
+
+    Renvoie des `id`, à passer à `finary_add_precious_metal`.
+    """
+    return prepare(
+        _get_client().get("/precious_metals/autocomplete", {"query": query}), raw=raw
+    )
+
+
+@readonly_tool
+def finary_asset_categories(raw: bool = False) -> Any:
+    """Catégories valides pour un « autre actif » (montre, voiture, art…).
+
+    À utiliser avant `finary_add_other_asset` : la catégorie doit être une de
+    ces valeurs exactes.
+    """
+    return prepare(
+        _get_client().get("/generic_asset_categories/autocomplete"), raw=raw
+    )
+
+
+# ---------------------------------------------------------------------------
+# Writes — registered only when FINARY_MCP_ENABLE_WRITES=1
+# ---------------------------------------------------------------------------
+
+
+def _find_by_id(items: Any, item_id: str, label: str) -> dict[str, Any]:
+    """Fetch the existing object so an update can be a full-object PUT.
+
+    Finary expects the whole record back; sending only the changed fields
+    would blank the rest.
+    """
+    for item in items if isinstance(items, list) else []:
+        if str(item.get("id")) == str(item_id):
+            return item
+    raise FinaryError(
+        f"Aucun {label} avec l'identifiant {item_id}. Listez-les d'abord pour "
+        "récupérer le bon `id`."
+    )
+
+
+@write_tool()
+def finary_add_crypto(
+    holdings_account_id: str,
+    correlation_id: str,
+    quantity: float,
+    buying_price: float,
+) -> Any:
+    """Ajoute une ligne de cryptomonnaie à un compte.
+
+    `correlation_id` vient de `finary_search_crypto`.
+    `holdings_account_id` vient de `finary_accounts`.
+    `buying_price` est le prix unitaire d'achat.
+    """
+    return _get_client().post(
+        "/users/me/cryptos",
+        {
+            "quantity": quantity,
+            "buying_price": buying_price,
+            "correlation_id": correlation_id,
+            "holdings_account": {"id": holdings_account_id},
+        },
+    )
+
+
+@write_tool()
+def finary_update_crypto(crypto_id: str, quantity: float, buying_price: float) -> Any:
+    """Modifie la quantité et le prix d'achat d'une ligne crypto existante."""
+    client = _get_client()
+    existing = _find_by_id(client.get("/users/me/cryptos"), crypto_id, "crypto")
+    existing["quantity"] = quantity
+    existing["buying_price"] = buying_price
+    return client.put(f"/users/me/cryptos/{crypto_id}", existing)
+
+
+@write_tool(destructive=True)
+def finary_delete_crypto(crypto_id: str) -> Any:
+    """Supprime définitivement une ligne crypto. Irréversible."""
+    return _get_client().delete(f"/users/me/cryptos/{crypto_id}")
+
+
+@write_tool()
+def finary_add_security(
+    holdings_account_id: str,
+    correlation_id: str,
+    quantity: float,
+    buying_price: float,
+) -> Any:
+    """Ajoute une ligne de titre (action, ETF) à un compte-titres.
+
+    `correlation_id` vient de `finary_search_security`.
+    `holdings_account_id` vient de `finary_accounts`.
+    """
+    return _get_client().post(
+        "/users/me/securities",
+        {
+            "holdings_account": {"id": holdings_account_id},
+            "correlation_id": correlation_id,
+            "quantity": quantity,
+            "buying_price": buying_price,
+        },
+    )
+
+
+@write_tool()
+def finary_update_security(
+    security_id: str, quantity: float, buying_price: float
+) -> Any:
+    """Modifie la quantité et le prix d'achat d'une ligne de titre existante."""
+    client = _get_client()
+    existing = _find_by_id(client.get("/users/me/securities"), security_id, "titre")
+    existing["quantity"] = quantity
+    existing["buying_price"] = buying_price
+    return client.put(f"/users/me/securities/{security_id}", existing)
+
+
+@write_tool(destructive=True)
+def finary_delete_security(security_id: str) -> Any:
+    """Supprime définitivement une ligne de titre. Irréversible."""
+    return _get_client().delete(f"/users/me/securities/{security_id}")
+
+
+@write_tool()
+def finary_add_precious_metal(
+    precious_metal_id: str, quantity: float, buying_price: float
+) -> Any:
+    """Ajoute des métaux précieux. `precious_metal_id` vient de la recherche."""
+    return _get_client().post(
+        "/users/me/precious_metals",
+        {
+            "quantity": quantity,
+            "buying_price": buying_price,
+            "precious_metal": {"id": precious_metal_id},
+        },
+    )
+
+
+@write_tool(destructive=True)
+def finary_delete_precious_metal(user_precious_metal_id: str) -> Any:
+    """Supprime définitivement une ligne de métal précieux. Irréversible."""
+    return _get_client().delete(
+        f"/users/me/precious_metals/{user_precious_metal_id}"
+    )
+
+
+@write_tool()
+def finary_add_other_asset(
+    name: str,
+    category: str,
+    quantity: float = 1,
+    buying_price: float = 0,
+    current_price: float = 0,
+) -> Any:
+    """Ajoute un actif divers : montre, voiture, œuvre d'art, objet de valeur.
+
+    `category` doit être une valeur exacte de `finary_asset_categories`.
+    """
+    return _get_client().post(
+        "/users/me/generic_assets",
+        {
+            "name": name,
+            "category": category,
+            "quantity": quantity,
+            "buying_price": buying_price,
+            "current_price": current_price,
+        },
+    )
+
+
+@write_tool()
+def finary_update_other_asset(
+    asset_id: str,
+    name: str = "",
+    quantity: float | None = None,
+    buying_price: float | None = None,
+    current_price: float | None = None,
+) -> Any:
+    """Modifie un actif divers. Seuls les champs fournis sont changés."""
+    client = _get_client()
+    existing = _find_by_id(client.get("/users/me/generic_assets"), asset_id, "actif")
+    if name:
+        existing["name"] = name
+    if quantity is not None:
+        existing["quantity"] = quantity
+    if buying_price is not None:
+        existing["buying_price"] = buying_price
+    if current_price is not None:
+        existing["current_price"] = current_price
+    return client.put(f"/users/me/generic_assets/{asset_id}", existing)
+
+
+@write_tool(destructive=True)
+def finary_delete_other_asset(asset_id: str) -> Any:
+    """Supprime définitivement un actif divers. Irréversible."""
+    return _get_client().delete(f"/users/me/generic_assets/{asset_id}")
+
+
+@write_tool()
+def finary_add_account(
+    name: str,
+    account_type: str = "stocks",
+    currency: str = "EUR",
+    balance: float | None = None,
+) -> Any:
+    """Crée un compte saisi manuellement, pour y loger ensuite des lignes.
+
+    `account_type` : "stocks", "crypto" ou "crowdlending".
+    """
+    allowed = {"stocks", "crypto", "crowdlending"}
+    if account_type not in allowed:
+        return {"error": f"`account_type` doit valoir l'un de {sorted(allowed)}."}
+    body: dict[str, Any] = {
+        "name": name,
+        "manual_type": account_type,
+        "currency": {"code": currency},
+    }
+    if balance is not None:
+        body["balance"] = balance
+    return _get_client().post("/users/me/holdings_accounts", body)
+
+
+@write_tool(destructive=True)
+def finary_delete_account(account_id: str) -> Any:
+    """Supprime un compte ET toutes les lignes qu'il contient. Irréversible."""
+    return _get_client().delete(f"/users/me/holdings_accounts/{account_id}")
+
+
+@write_tool(destructive=True)
+def finary_raw_write(method: str, path: str, body_json: str = "") -> Any:
+    """Appel écrivant brut, pour les ressources sans outil dédié.
+
+    `method` : "POST", "PUT", "PATCH" ou "DELETE".
+    `path` : chemin commençant par "/", ex. "/users/me/scpis".
+    `body_json` : corps de la requête en JSON.
+
+    À n'utiliser que si aucun outil typé ne couvre le besoin, et après avoir
+    lu la ressource concernée pour connaître sa forme exacte.
+    """
+    import json as _json
+
+    if not path.startswith("/"):
+        return {"error": "`path` doit commencer par « / »."}
+
+    body: dict[str, Any] | None = None
+    if body_json.strip():
+        try:
+            parsed = _json.loads(body_json)
+        except _json.JSONDecodeError as exc:
+            return {"error": f"`body_json` n'est pas un JSON valide : {exc}"}
+        if not isinstance(parsed, dict):
+            return {"error": "`body_json` doit être un objet JSON."}
+        body = parsed
+
+    return _get_client().request(method.upper(), path, body=body)
 
 
 def run() -> None:

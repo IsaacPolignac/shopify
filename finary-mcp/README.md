@@ -1,13 +1,14 @@
 # finary-mcp
 
-**Serveur MCP en lecture seule pour [Finary](https://finary.com).** Branchez votre
-patrimoine sur Claude (ou tout autre client MCP) et posez-lui des questions en
-langage naturel.
+**Serveur MCP pour [Finary](https://finary.com), en lecture seule par défaut.**
+Branchez votre patrimoine sur Claude (ou tout autre client MCP) et posez-lui des
+questions en langage naturel. Les modifications sont possibles, mais
+[verrouillées](#activer-lécriture) tant que vous ne les activez pas.
 
-> *Read-only MCP server for Finary, the French wealth-tracking app. Ask any MCP
-> client about your net worth, holdings and transactions. Your password is never
-> stored; the session lives in your OS keychain. Documentation below is in French,
-> as Finary's user base is.*
+> *MCP server for Finary, the French wealth-tracking app. Ask any MCP client
+> about your net worth, holdings and transactions. Read-only unless you
+> explicitly unlock writes. Your password is never stored; the session lives in
+> your OS keychain. Documentation below is in French, as Finary's user base is.*
 
 ```
 « Quelle est la répartition de mon portefeuille par secteur ? »
@@ -20,11 +21,17 @@ langage naturel.
 
 ## Ce que ce serveur garantit
 
-**Lecture seule, structurellement.** Le client HTTP refuse tout verbe autre que
-`GET` avant même d'ouvrir une socket ([`client.py`](src/finary_mcp/client.py)).
-Ce n'est pas une convention de nommage des outils : un outil d'écriture ajouté
-par erreur ou suggéré par un modèle ne pourrait pas atteindre le réseau. Vos
-données Finary ne peuvent pas être modifiées ni supprimées par ce serveur.
+**Lecture seule par défaut, structurellement.** Le client HTTP refuse tout
+verbe modifiant avant même d'ouvrir une socket
+([`client.py`](src/finary_mcp/client.py)). Ce n'est pas une convention de
+nommage : la décision vient d'un drapeau fixé au démarrage, jamais d'un
+argument d'outil, donc un modèle ne peut pas s'auto-autoriser une écriture.
+Les outils de modification ne sont même pas déclarés tant que le verrou tient —
+ce que le serveur annonce correspond à ce qu'il peut faire.
+
+Qui clone ce dépôt et l'installe sans lire la documentation obtient une
+instance incapable d'abîmer ses données patrimoniales. **L'écriture s'active
+explicitement**, voir [Activer l'écriture](#activer-lécriture).
 
 **Votre mot de passe n'est jamais conservé.** Il est saisi une fois dans votre
 terminal (masqué), utilisé pour l'échange d'authentification, puis abandonné.
@@ -243,6 +250,15 @@ absolu renvoyé par `which finary-mcp`.
 | `finary_transactions` | Transactions paginées, filtrables par date, compte et libellé |
 | `finary_dividends` | Dividendes perçus et à venir |
 
+### Recherche
+
+| Outil | Description |
+|---|---|
+| `finary_search_security` | Cherche une action / un ETF (nom, ticker, ISIN) |
+| `finary_search_crypto` | Cherche une cryptomonnaie |
+| `finary_search_precious_metal` | Cherche une pièce ou un lingot |
+| `finary_asset_categories` | Catégories valides pour un « autre actif » |
+
 ### Échappatoire
 
 | Outil | Description |
@@ -250,6 +266,46 @@ absolu renvoyé par `which finary-mcp`.
 | `finary_raw_get` | `GET` brut sur n'importe quelle route de l'API, pour ce qui n'a pas d'outil dédié |
 
 Tous les outils acceptent `raw: true` pour désactiver l'allègement des réponses.
+
+---
+
+## Activer l'écriture
+
+**Par défaut, ce serveur ne peut rien modifier.** Les 14 outils d'écriture ne
+sont pas déclarés, et le client refuserait la requête même s'ils l'étaient.
+
+Pour les activer :
+
+```bash
+claude mcp remove finary
+claude mcp add finary -- finary-mcp serve --enable-writes
+```
+
+Ou via l'environnement : `FINARY_MCP_ENABLE_WRITES=1`.
+
+Une fois déverrouillé :
+
+| Outil | Description |
+|---|---|
+| `finary_add_crypto` · `finary_update_crypto` · `finary_delete_crypto` | Lignes de cryptomonnaies |
+| `finary_add_security` · `finary_update_security` · `finary_delete_security` | Lignes de titres (actions, ETF) |
+| `finary_add_precious_metal` · `finary_delete_precious_metal` | Métaux précieux |
+| `finary_add_other_asset` · `finary_update_other_asset` · `finary_delete_other_asset` | Montres, voitures, art |
+| `finary_add_account` · `finary_delete_account` | Comptes saisis manuellement |
+| `finary_raw_write` | Écriture brute, pour les ressources sans outil dédié |
+
+Les suppressions portent l'annotation `destructiveHint`, que les clients MCP
+utilisent pour demander une confirmation renforcée.
+
+**Ce qui reste hors de portée en toutes circonstances :** les paramètres du
+compte — profil, e-mail, mot de passe, 2FA, abonnement. Aucun outil ne les
+touche, et l'authentification est cantonnée à un module séparé qui ne parle
+qu'à Clerk.
+
+> Les modifications sont **immédiates et irréversibles** : elles écrivent dans
+> votre patrimoine réel, sans corbeille ni annulation. Les mises à jour font un
+> `PUT` de l'objet entier, relu juste avant, pour ne pas effacer les champs non
+> modifiés. Gardez le verrou fermé si vous ne comptez que consulter.
 
 ---
 
@@ -332,9 +388,9 @@ pip install -e ".[dev]"
 pytest
 ```
 
-Les contributions sont bienvenues, à une exception près : **aucune capacité
-d'écriture ne sera acceptée dans ce dépôt.** La lecture seule est la
-proposition de valeur, pas une limitation temporaire.
+Les contributions sont bienvenues. Une règle tient : **toute nouvelle capacité
+d'écriture doit rester derrière le verrou `--enable-writes`.** La lecture
+seule par défaut est la proposition de valeur du projet.
 
 ## Remerciements
 

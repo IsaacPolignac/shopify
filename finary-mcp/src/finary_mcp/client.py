@@ -1,10 +1,14 @@
-"""Read-only HTTP client for ``api.finary.com``.
+"""HTTP client for ``api.finary.com``, read-only unless explicitly unlocked.
 
-The read-only guarantee of this server lives here, and it is structural rather
-than a convention: :meth:`FinaryClient.request` refuses any verb outside
-``GET``/``HEAD`` before a socket is opened. A tool that tried to mutate data —
-whether added by mistake, by a future contributor, or at a model's suggestion —
-cannot reach the network through this class.
+The write boundary of this server lives here, and it is structural rather than
+a convention: :meth:`FinaryClient.request` refuses any mutating verb before a
+socket is opened unless the client was constructed with ``allow_writes=True``.
+That flag is set once, at startup, from an explicit operator decision — never
+from tool input. A write tool cannot talk itself past this.
+
+Defaulting to read-only matters because this server is meant to be cloned:
+someone who installs it without reading the docs gets an instance that cannot
+damage their wealth records.
 
 Clerk's token endpoint is a POST, but it is issued from :mod:`finary_mcp.auth`
 against a different host and never passes through here.
@@ -24,8 +28,12 @@ from . import auth, storage
 
 API_ROOT = "https://api.finary.com"
 
-#: The only verbs this client will ever send.
+#: Verbs that can never change anything, always permitted.
 SAFE_METHODS = frozenset({"GET", "HEAD"})
+
+#: Verbs permitted only when writes are explicitly unlocked. Anything outside
+#: both sets (TRACE, OPTIONS, CONNECT…) is refused unconditionally.
+WRITE_METHODS = frozenset({"POST", "PUT", "PATCH", "DELETE"})
 
 
 class FinaryError(RuntimeError):
@@ -33,19 +41,33 @@ class FinaryError(RuntimeError):
 
 
 class ReadOnlyViolation(FinaryError):
-    """A caller attempted a mutating request. Always a bug, never user input."""
+    """A mutating request was attempted while writes are locked."""
 
 
 class FinaryClient:
-    """Authenticated, read-only access to the Finary API.
+    """Authenticated access to the Finary API, read-only by default.
 
     The bearer token is refreshed lazily: once on first use, and again on a
     401, which is the normal path since Clerk JWTs live about a minute.
+
+    ``allow_writes`` comes from the process's startup configuration. It is
+    deliberately a constructor argument rather than a per-call parameter, so
+    no caller can raise its own privileges mid-session.
     """
 
-    def __init__(self, stored: storage.StoredSession | None = None) -> None:
+    def __init__(
+        self,
+        stored: storage.StoredSession | None = None,
+        *,
+        allow_writes: bool = False,
+    ) -> None:
         self._stored = stored
         self._session: requests.Session | None = None
+        self._allow_writes = allow_writes
+
+    @property
+    def allow_writes(self) -> bool:
+        return self._allow_writes
 
     # -- session plumbing -------------------------------------------------
 
@@ -98,32 +120,47 @@ class FinaryClient:
         method: str,
         path: str,
         params: dict[str, Any] | None = None,
+        body: dict[str, Any] | None = None,
     ) -> Any:
-        """Issue a safe request and return the decoded body.
+        """Issue a request and return the decoded body.
 
-        Raises :class:`ReadOnlyViolation` for anything that would write.
+        Raises :class:`ReadOnlyViolation` for a mutating verb while writes are
+        locked, and for any verb outside the two known sets.
         """
         verb = method.upper()
         if verb not in SAFE_METHODS:
-            raise ReadOnlyViolation(
-                f"{verb} est refusé : ce serveur est en lecture seule et "
-                "n'émet que des requêtes GET vers l'API Finary."
-            )
+            if verb not in WRITE_METHODS:
+                raise ReadOnlyViolation(
+                    f"{verb} n'est pas un verbe supporté par ce client."
+                )
+            if not self._allow_writes:
+                raise ReadOnlyViolation(
+                    f"{verb} est refusé : ce serveur tourne en lecture seule. "
+                    "Pour autoriser les modifications, démarrez-le avec "
+                    "`finary-mcp serve --enable-writes` (ou "
+                    "FINARY_MCP_ENABLE_WRITES=1)."
+                )
 
         if not path.startswith("/"):
             path = "/" + path
         url = f"{API_ROOT}{path}"
         clean = {k: v for k, v in (params or {}).items() if v not in (None, "")}
+        payload = json.dumps(body) if body is not None else None
+        headers = {"Content-Type": "application/json"} if payload else None
 
         session = self._session or self._authenticate()
         with self._reaching():
-            response = session.request(verb, url, params=clean)
+            response = session.request(
+                verb, url, params=clean, data=payload, headers=headers
+            )
 
         if response.status_code == 401:
             # Expected: the cached JWT aged out. Refresh once, then retry.
             session = self._authenticate()
             with self._reaching():
-                response = session.request(verb, url, params=clean)
+                response = session.request(
+                    verb, url, params=clean, data=payload, headers=headers
+                )
 
         if response.status_code == 403:
             raise FinaryError(
@@ -142,6 +179,11 @@ class FinaryClient:
                 f"{response.text[:300]}"
             )
 
+        # A successful DELETE commonly answers 204 with no body; that is a
+        # success, not a parse failure.
+        if response.status_code == 204 or not (response.text or "").strip():
+            return {"ok": True, "status": response.status_code}
+
         try:
             return response.json()
         except json.JSONDecodeError as exc:
@@ -149,7 +191,20 @@ class FinaryClient:
 
     def get(self, path: str, params: dict[str, Any] | None = None) -> Any:
         """Shorthand for a GET. Returns the payload's ``result`` when present."""
-        body = self.request("GET", path, params)
-        if isinstance(body, dict) and "result" in body:
-            return body["result"]
-        return body
+        return _unwrap(self.request("GET", path, params))
+
+    def post(self, path: str, body: dict[str, Any]) -> Any:
+        return _unwrap(self.request("POST", path, body=body))
+
+    def put(self, path: str, body: dict[str, Any]) -> Any:
+        return _unwrap(self.request("PUT", path, body=body))
+
+    def delete(self, path: str) -> Any:
+        return _unwrap(self.request("DELETE", path))
+
+
+def _unwrap(body: Any) -> Any:
+    """Finary wraps most payloads in a ``result`` envelope; drop it."""
+    if isinstance(body, dict) and "result" in body:
+        return body["result"]
+    return body

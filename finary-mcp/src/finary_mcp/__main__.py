@@ -328,9 +328,20 @@ def cmd_doctor(_: argparse.Namespace) -> int:
     return 0
 
 
-def cmd_serve(_: argparse.Namespace) -> int:
-    from .server import run
+def cmd_serve(args: argparse.Namespace) -> int:
+    # Set before importing the server: tool registration reads this at import
+    # time, so the flag has to be in the environment first.
+    if getattr(args, "enable_writes", False):
+        os.environ["FINARY_MCP_ENABLE_WRITES"] = "1"
 
+    from .server import run, writes_enabled
+
+    if writes_enabled():
+        print(
+            "[finary-mcp] ÉCRITURE ACTIVÉE — les outils de modification et de "
+            "suppression sont exposés.",
+            file=sys.stderr,
+        )
     run()
     return 0
 
@@ -338,7 +349,7 @@ def cmd_serve(_: argparse.Namespace) -> int:
 def main() -> int:
     parser = argparse.ArgumentParser(
         prog="finary-mcp",
-        description="Serveur MCP en lecture seule pour Finary.",
+        description="Serveur MCP pour Finary, en lecture seule par défaut.",
     )
     sub = parser.add_subparsers(dest="command")
 
@@ -356,7 +367,15 @@ def main() -> int:
     sub.add_parser(
         "doctor", help="rapport de diagnostic complet, sans aucun secret"
     )
-    sub.add_parser("serve", help="démarrer le serveur MCP sur stdio")
+    serve = sub.add_parser("serve", help="démarrer le serveur MCP sur stdio")
+    serve.add_argument(
+        "--enable-writes",
+        action="store_true",
+        help=(
+            "exposer les outils de modification et de suppression "
+            "(désactivés par défaut)"
+        ),
+    )
 
     args = parser.parse_args()
     handlers = {
