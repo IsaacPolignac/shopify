@@ -581,23 +581,39 @@
   
     <script>
       (function () {
-        var spideySound = new Audio("{{ 'spiderman2099theme.mp3' | asset_url }}");
-        spideySound.preload = 'auto';
+        var KEY = 'spideyPlayTheme';
+        var audioUrl = "{{ 'spiderman2099theme.mp3' | asset_url }}";
+
+        var shouldPlay = false;
+        try {
+          shouldPlay = sessionStorage.getItem(KEY) === '1';
+          if (shouldPlay) sessionStorage.removeItem(KEY);
+        } catch (e) {}
+
+        if (shouldPlay) {
+          var sound = new Audio(audioUrl);
+          var unlock = function () {
+            sound.play().catch(function () {});
+            document.removeEventListener('pointerdown', unlock);
+            document.removeEventListener('touchstart', unlock);
+            document.removeEventListener('keydown', unlock);
+          };
+          var attempt = sound.play();
+          if (attempt && attempt.catch) {
+            attempt.catch(function () {
+              document.addEventListener('pointerdown', unlock);
+              document.addEventListener('touchstart', unlock);
+              document.addEventListener('keydown', unlock);
+            });
+          }
+        }
+
         document.addEventListener('click', function (e) {
           var link = e.target.closest ? e.target.closest('a[href*="/products/"]') : null;
           if (!link) return;
           var label = (link.textContent || '').trim().toLowerCase();
           if (label.indexOf('get yours') !== 0) return;
-          e.preventDefault();
-          var dest = link.href;
-          var done = false;
-          var go = function () { if (!done) { done = true; window.location.href = dest; } };
-          try {
-            spideySound.currentTime = 0;
-            var p = spideySound.play();
-            if (p && p.catch) p.catch(go);
-          } catch (err) { go(); }
-          setTimeout(go, 1400);
+          try { sessionStorage.setItem(KEY, '1'); } catch (err) {}
         }, true);
       })();
     </script>
