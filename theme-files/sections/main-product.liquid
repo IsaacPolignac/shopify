@@ -1186,20 +1186,6 @@
       ]
     }
   </script>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const buttons = document.querySelectorAll('.main-product-atc');
-      const audioUrl = '{{ "spiderman2099theme.mp3" | asset_url }}';
-
-      buttons.forEach(button => {
-        button.addEventListener('click', function() {
-          const audio = new Audio(audioUrl);
-          audio.play().catch(e => console.log('Audio playback failed:', e));
-        });
-      });
-    });
-  </script>
 </section>
 
 {% schema %}
