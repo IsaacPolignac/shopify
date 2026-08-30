@@ -2,89 +2,109 @@
 
 ---
 
-## Tout de suite
+## 1. Regarder l'aperçu, puis publier le thème
 
-### 1. Repasser le dépôt GitHub en privé
+```
+https://liyan.shop/?preview_theme_id=157230071965
+```
 
-`Settings → General → Danger Zone → Change visibility`
+Le thème **Shrine PRO** est entièrement construit mais **non publié** : l'API Shopify
+interdit d'écrire sur un thème en ligne, et je ne publie rien à ta place.
 
-Tu l'as passé public pour que Shopify accède aux images. **C'est fait** : les visuels sont
-désormais hébergés sur le CDN Shopify, l'accès public n'a plus d'utilité.
+Quand l'aperçu te convient : `Boutique en ligne → Thèmes → shrine-pro-v1-2-3-186-sections
+→ Publier`. L'ancien thème `LIYAN — v3 (France)` reste dans la liste, tu peux revenir
+dessus en un clic.
 
-Le dépôt contient ta charte de marque complète et, dans `archive/freehold/`, une analyse
-de marché avec des marges et des coûts d'achat cibles. Rien de tout ça n'a vocation à
-rester lisible par n'importe qui.
+Regarde en priorité : la page d'accueil, la fiche **Oreiller Halo** (le gabarit le plus
+travaillé), la fiche **Bandelettes de sommeil** (paliers de quantité) et le tiroir panier.
 
-### 2. Renommer la boutique
+## 2. Renommer la boutique
 
 `Réglages → Détails de la boutique`
 
-Elle s'appelle encore **PawDeck**, sur le domaine `pawdeck-store.myshopify.com`.
-Non modifiable par API. Change aussi l'e-mail de contact : une adresse Gmail personnelle
-est un signal négatif pour les processeurs de paiement.
+Elle s'appelle encore **« boutique »** — ça s'affiche tel quel dans le pied de page
+(« © 2026, boutique ») et dans le titre des pages. Non modifiable par API. Mets **LIYAN**.
 
-### 3. Redescendre en forfait Basic — économie ~360 $/mois
+Change aussi l'e-mail de contact : une adresse Gmail personnelle est un signal négatif
+pour les processeurs de paiement.
 
-`Réglages → Forfait`
+## 3. Remplir les `[À COMPLÉTER]`
 
-Tu es sur **Advanced**, rentable seulement au-delà d'environ 72 000 € de chiffre d'affaires
-mensuel. Sur trois mois, ce changement libère plus que ton budget de lancement.
+`Contenu → Pages`, cherche `[À COMPLÉTER]`. Il y en a **une trentaine**, concentrés dans
+*Questions fréquentes*, *Livraison*, *Retours & Remboursements*, *CGV* et *Nous contacter*.
 
-### 4. Refaire la page d'accueil du thème
+Ce sont les seuls endroits où je n'ai rien inventé, parce qu'inventer y aurait été
+mensonger. Il te faut au minimum :
 
-`Boutique en ligne → Thèmes → Personnaliser`
+- [ ] Raison sociale, forme juridique, adresse, SIREN, TVA intracommunautaire
+- [ ] E-mail de contact et délai de réponse annoncé
+- [ ] Délais de préparation et d'acheminement **réels**, par zone
+- [ ] Frais de port, seuil de livraison offerte, transporteur
+- [ ] Qui paie les frais de retour
+- [ ] Nom du médiateur de la consommation (obligatoire, art. L612-1)
+- [ ] Moyens de paiement effectivement activés
 
-Le thème Horizon affiche encore la bannière PawDeck. L'API interdit l'écriture sur un thème
-publié. Mets en avant la collection **Coffrets Cadeaux** — c'est le produit d'appel de la
-catégorie.
+## 4. Vérifier les deux réglages que le thème promet
+
+- [ ] **Livraison offerte à 60 €** — le tiroir panier affiche une barre de progression
+      vers ce seuil. Crée le tarif d'expédition correspondant dans
+      `Réglages → Livraison et traitement`, sinon tu promets quelque chose que la caisse
+      ne donne pas.
+- [ ] **Estimation de livraison 5–10 jours ouvrés** sur les fiches produits. Ajuste-la à
+      ton fournisseur réel dans le thème (bloc « Estimated shipping » de `main-product`).
+
+## 5. Redescendre en forfait Basic — économie ~360 $/mois
+
+`Réglages → Forfait`. Tu es sur **Advanced**, rentable au-delà d'environ 72 000 € de
+chiffre d'affaires mensuel. Action de facturation, réservée à l'admin.
 
 ---
 
 ## Avant la première vente — non négociable
 
-### 5. Constituer le dossier de conformité
+### 6. Ne pas activer la section « avis » tant qu'ils n'existent pas
 
-Checklist complète dans [`docs/compliance/normes-puericulture.md`](docs/compliance/normes-puericulture.md).
+La section témoignages de la page d'accueil est **désactivée** et son texte le dit.
+Installe une application d'avis vérifiés (Judge.me, Loox, Avis Vérifiés) qui collecte
+après achat, puis remplace la section.
 
-Il te faut, **du fournisseur et portant sur tes références précises** :
+Inventer un avis, une note moyenne ou un « 10 000+ clients » est une pratique commerciale
+trompeuse : jusqu'à **300 000 €** d'amende ou 10 % du chiffre d'affaires
+(art. L121-2 et L121-4 du code de la consommation, directive Omnibus 2019/2161).
 
-- [ ] Rapports d'essai EN 1400 (tétines), EN 14350 (biberons), EN 71-1/2/3 (anneaux, hochets)
-- [ ] Déclaration UE de conformité signée + marquage CE
-- [ ] Déclaration contact alimentaire (1935/2004 et 10/2011)
-- [ ] Attestation sans BPA ni PVC
-- [ ] Traçabilité des lots
+### 7. Les bandelettes — le dossier à ne pas bâcler
 
-**Tant que ces documents n'existent pas, retire de la boutique toute mention de norme.**
-Une allégation de conformité invérifiable est plus dangereuse que pas d'allégation du tout.
+- [ ] Vérifier auprès du fournisseur que les bandelettes **nasales** ne sont pas
+      revendiquées comme dispositif médical dans leur pays d'origine. Si elles le sont,
+      tu ne peux pas les vendre en UE sans marquage CE et déclaration.
+- [ ] Attestation d'adhésif **hypoallergénique et sans latex** — c'est écrit sur les fiches.
+- [ ] Conditionnement **scellé individuellement** : sans scellé, tu ne peux pas invoquer
+      l'exception d'hygiène (art. L221-28 5°) et tout retour devient recevable.
+- [ ] Assurance responsabilité civile produits couvrant les articles en contact avec les
+      voies respiratoires.
 
-### 6. Vérifier deux points opérationnels
+### 8. Valider les prix contre le coût d'achat réel
 
-- [ ] **Scellés individuels** sur tétines, téterelles et anneaux. Sans scellé, tu ne peux
-      pas invoquer l'exception d'hygiène et tout retour devient recevable.
-- [ ] **Assurance responsabilité civile produits couvrant les nourrissons.** Beaucoup
-      d'assureurs excluent cette catégorie — vérifie l'exclusion, pas seulement le contrat.
+La grille actuelle est une transposition de celle de Pilloway en euros. Elle n'a été
+confrontée à aucun coût d'achat. Refais-la avec tes marges avant d'ouvrir.
 
-### 7. Remplir les `[À COMPLÉTER]`
+### 9. Vérifier la marque LIYAN
 
-Cherche `[À COMPLÉTER` dans `Contenu → Pages`. Il te faut au minimum : entité légale,
-adresse physique réelle, numéro d'immatriculation, TVA, e-mail de contact, délais de
-livraison réels, statut IOSS, libellé bancaire (= le nom de la marque).
-
-### 8. Vérifier la marque LIYAN
-
-Recherche d'antériorité en **classe 12 (puériculture)** et **classe 10** auprès de l'INPI
-ou de l'EUIPO. `liyan.tn` apparaît sur la charte : si ce domaine et cette marque ne sont
-pas déjà à toi, règle ce point avant d'investir dans le packaging.
+Recherche d'antériorité en **classe 20** (literie, oreillers) et **classe 24** (textiles)
+auprès de l'INPI ou de l'EUIPO. La marque était jusqu'ici positionnée sur la puériculture
+(classes 10 et 12) : le dépôt éventuel ne couvre pas la literie.
 
 ---
 
 ## Ensuite
 
-- [ ] Valider les prix du kit 6 et du coffret naissance contre le coût d'achat réel
-- [ ] Trier les trois `visuel-a-classer-*.png` et les affecter aux fiches
-- [ ] Ajouter des visuels secondaires sur chaque fiche (une seule image par produit actuellement)
-- [ ] Mettre le stock à jour à réception de la première série
-- [ ] Créer le marché et la langue arabe si tu vises aussi le public arabophone
+- [ ] Remplacer les visuels produits par des photos du fournisseur — les 10 visuels
+      actuels sont générés, cohérents avec la charte mais ce ne sont pas tes produits
+- [ ] Ajouter des images secondaires sur chaque fiche (1 à 2 par produit actuellement)
+- [ ] Activer le suivi de stock quand la première série arrive (aujourd'hui : suivi
+      désactivé, donc vente illimitée)
+- [ ] Traduire la boutique si tu vises hors francophonie
+- [ ] Repasser le dépôt GitHub en privé s'il ne l'est pas
 
 ---
 
@@ -92,8 +112,8 @@ pas déjà à toi, règle ce point avant d'investir dans le packaging.
 
 | Interdit | Pourquoi |
 |---|---|
-| Affirmer une norme sans le rapport d'essai correspondant | Tu es juridiquement le fabricant. Une allégation fausse t'expose personnellement. |
-| Promettre un bénéfice santé | Une tétine ne soigne rien. La valve anti-colique réduit l'air avalé, c'est un fait mécanique, pas une promesse médicale. |
-| Vendre un article buccal non scellé | Impossible d'invoquer l'exception d'hygiène, et risque sanitaire réel. |
-| Refuser un remboursement sur un produit défectueux | L'exception d'hygiène ne joue jamais pour un défaut. La garantie légale de 2 ans s'applique. |
-| Culpabiliser les parents dans le marketing | Registre le plus répandu du secteur et le plus méprisable. La charte de marque s'y oppose explicitement. |
+| Écrire un avis client toi-même | Pratique commerciale trompeuse. Jusqu'à 300 000 € ou 10 % du CA. |
+| Promettre un bénéfice santé sur les bandelettes | Elles deviendraient un dispositif médical non déclaré. Le ronflement et l'apnée relèvent d'un diagnostic. |
+| Afficher un prix barré qui n'a jamais été pratiqué | Le prix de référence doit être le prix le plus bas des 30 derniers jours (directive Omnibus, art. L112-1-1). Les 99,90 € et 129,90 € doivent être des prix réels. |
+| Vendre une bandelette non scellée | Impossible d'invoquer l'exception d'hygiène, et risque sanitaire réel. |
+| Laisser la barre « livraison offerte à 60 € » sans le tarif correspondant | Tu promets à l'écran ce que la caisse ne donne pas. |

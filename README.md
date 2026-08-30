@@ -1,35 +1,55 @@
-# LIYAN — boutique de puériculture
+# LIYAN — boutique sommeil
 
-Marque de puériculture haut de gamme : tétines en silicone médical, biberons en verre
-borosilicate, anneaux de dentition. Boutique Shopify en euros, contenu en français.
+Marque de sommeil : oreillers ergonomiques, taies techniques, accessoires de respiration
+nocturne. Boutique Shopify en euros, contenu en français, thème **Shrine PRO**.
 
-> **لحظات صغيرة، معنى كبير** — *Little moments, big meaning*
+> **Mieux dormir, par conception.**
+
+Le site reprend l'architecture de conversion de [pilloway.com.au](https://www.pilloway.com.au/)
+— même thème, même logique de page — en corrigeant ses défauts. Le détail de la comparaison
+est dans [`docs/reference/analyse-pilloway.md`](docs/reference/analyse-pilloway.md).
 
 ---
 
-## État de la boutique
+## État
 
 | Élément | État |
 |---|---|
-| Produits | **5 actifs**, visuels de marque importés sur le CDN Shopify |
-| Collections | Coffrets Cadeaux · Tétines · Biberons · Éveil & Dentition |
-| Pages | 7 pages en français, conformes au droit de la consommation UE |
-| Navigation | Menu principal et pied de page refaits |
-| Devise | EUR |
-| Stock | 0 sur toutes les références → affichage « épuisé », aucun achat possible |
+| Boutique | `liyan.shop` (admin `07beme-9h.myshopify.com`) · EUR · FR |
+| Thème | `shrine-pro-v1-2-3-186-sections` — **non publié**, entièrement construit |
+| Thème en ligne | `LIYAN — v3 (France)` — inchangé, l'ancien site puériculture |
+| Produits | **7 actifs**, publiés sur la vitrine, visuels de marque sur le CDN |
+| Collections | Les incontournables · Oreillers · Taies & housses · Respiration & sommeil |
+| Pages | 7 pages françaises réécrites, conformes UE |
+| Navigation | 3 menus refaits : `main-menu`, `footer`, `aide` |
+| Gabarits | accueil, collection, panier, 2 gabarits de page, **4 gabarits produit** |
+
+### Aperçu
+
+```
+https://liyan.shop/?preview_theme_id=157230071965
+```
 
 ### La gamme
 
-| SKU | Produit | Prix |
-|---|---|---:|
-| `LIY-COF-NAIS` | Coffret Naissance — le coffret complet | 49,90 € |
-| `LIY-BIB-2-240` | Coffret 2 Biberons — verre borosilicate | 29,90 € |
-| `LIY-TET-6-06` | Kit 6 Tétines — 0-6 mois | 24,90 € |
-| `LIY-TET-3-06` | Kit 3 Tétines — 0-6 mois | 14,90 € |
-| `LIY-EVL-3` | Coffret Éveil — anneaux de dentition | 12,90 € |
+| SKU | Produit | Prix | Coloris |
+|---|---|---:|---|
+| `LIY-HAL-*` | Oreiller Halo — Soutien 3 zones | 59,90 € <s>99,90 €</s> | 6 |
+| `LIY-NUE-*` | Oreiller Nuée — Alignement cervical | 89,90 € <s>129,90 €</s> | 5 |
+| `LIY-TRH-*` | Taie rafraîchissante Halo | 29,90 € | 6 |
+| `LIY-TRN-*` | Taie rafraîchissante Nuée | 29,90 € | 5 |
+| `LIY-TCH-*` | Taie coton Halo | 24,90 € | 6 |
+| `LIY-BSO-*` | Bandelettes de sommeil | 34,90 € / 69,90 € / 119,90 € | 3 formats |
+| `LIY-BNA-*` | Bandelettes nasales | 29,90 € / 59,90 € | 2 formats |
 
-Les prix des trois références de base proviennent des maquettes de la charte. Le kit de 6
-et le coffret naissance sont extrapolés et **restent à valider** contre le coût d'achat réel.
+Palette de coloris unifiée sur toute la gamme, dans cet ordre exact — le thème mappe les
+pastilles par position :
+
+`Sauge #A8BCA9` · `Crème #EFE7D9` · `Gris perle #C4C2BD` · `Bleu nuit #33445C` · `Rose poudré #E0BFBB` · `Terracotta #B97D65`
+
+**Les prix sont des positions de marché, pas des prix validés.** Ils reprennent la grille de
+Pilloway convertie en euros. Rien n'a été calculé contre un coût d'achat réel, qui n'est pas
+connu.
 
 ---
 
@@ -37,24 +57,31 @@ et le coffret naissance sont extrapolés et **restent à valider** contre le co�
 
 | Fichier | Contenu |
 |---|---|
-| [`ACTIONS.md`](ACTIONS.md) | **Ce que tu dois faire toi-même** |
-| [`docs/produits/charte-de-marque.md`](docs/produits/charte-de-marque.md) | Couleurs, typographies, applications, index des visuels |
-| [`docs/compliance/normes-puericulture.md`](docs/compliance/normes-puericulture.md) | **À lire avant toute vente** — normes EN, marquage CE, exception hygiène |
-| [`assets/marque/`](assets/marque/) | Les 14 planches et visuels fournis |
-| [`archive/freehold/`](archive/freehold/) | Recherche du projet montres, abandonné. Conservée : le modèle d'économie unitaire et le dossier sourcing restent transposables. |
+| [`ACTIONS.md`](ACTIONS.md) | **Ce que tu dois faire toi-même** — à lire en premier |
+| [`HANDOFF.md`](HANDOFF.md) | Reprise du projet dans une autre session |
+| [`docs/reference/analyse-pilloway.md`](docs/reference/analyse-pilloway.md) | Le site de référence, ses mécaniques et ses 10 défauts |
+| [`docs/theme/architecture.md`](docs/theme/architecture.md) | Carte des fichiers du thème, section par section |
+| [`docs/theme/files/`](docs/theme/files/) | Copie versionnée des fichiers écrits dans le thème |
+| [`docs/pages/`](docs/pages/) | Copie versionnée du contenu des 7 pages |
+| [`archive/puericulture/`](archive/puericulture/) | Projet puériculture, abandonné |
+| [`archive/freehold/`](archive/freehold/) | Projet montres, abandonné |
 
 ---
 
 ## Le point qui commande tout le reste
 
-**Cette catégorie n'est pas un produit ordinaire.** En vendant sous ta propre marque, tu
-deviens juridiquement le fabricant, même si tu ne fabriques rien. Tu portes la
-responsabilité de la conformité EN 1400, EN 14350, EN 71 et du marquage CE.
+**Les bandelettes buccales et nasales sont la partie risquée du catalogue.**
 
-Les fiches produits affichent déjà les consignes de sécurité et les pages citent les
-normes applicables — mais **ces mentions sont des engagements que tu dois pouvoir
-prouver.** Tant que ton fournisseur n'a pas fourni les rapports d'essai et la déclaration
-CE, elles ne doivent pas rester en ligne.
+Pilloway leur prête des bénéfices — « more energy & immunity », « enhanced jawline & facial
+structure ». En France et dans l'UE, ces allégations transformeraient le produit en
+dispositif médical non déclaré et constitueraient une pratique commerciale trompeuse
+(art. L121-2 du code de la consommation).
 
-C'est la raison pour laquelle le stock est à 0 : la boutique est complète et présentable,
-et rien ne peut être vendu tant que ce dossier n'est pas constitué.
+Les fiches produits de cette boutique décrivent donc **un effet mécanique et rien d'autre**,
+avec les contre-indications ouvertes par défaut sur la fiche. C'est plus vendeur que ça n'en
+a l'air, et surtout c'est tenable.
+
+Deuxième point, du même ordre : **aucun avis client n'a été inventé**. La section témoignages
+de la page d'accueil existe mais elle est **désactivée**, avec un texte qui explique pourquoi.
+Un faux avis coûte jusqu'à 300 000 € ou 10 % du chiffre d'affaires (directive Omnibus
+2019/2161, art. L121-4). Branche une application d'avis vérifiés avant de l'activer.

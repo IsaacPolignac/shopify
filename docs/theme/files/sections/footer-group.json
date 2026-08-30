@@ -1,0 +1,81 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "b_logo": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LIYAN_logo_vector.svg",
+            "image_width": 140,
+            "alignment": "",
+            "url": "/",
+            "width_desktop": 3,
+            "width_mobile": "2"
+          }
+        },
+        "b_shop": {
+          "type": "link_list",
+          "settings": {
+            "heading": "La boutique",
+            "menu": "footer",
+            "width_desktop": 3,
+            "width_mobile": "1"
+          }
+        },
+        "b_help": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Aide & informations",
+            "menu": "aide",
+            "width_desktop": 3,
+            "width_mobile": "1"
+          }
+        },
+        "b_mail": {
+          "type": "email_signup",
+          "settings": {
+            "heading": "Rester au courant",
+            "subtext": "<p>Nouveautés et remises en stock. Deux envois par mois au maximum, désinscription en un clic.</p>",
+            "button_type": "solid",
+            "button_label": "Je m’inscris",
+            "button_style_secondary": false,
+            "width_desktop": 3,
+            "width_mobile": "2"
+          }
+        }
+      },
+      "block_order": [
+        "b_logo",
+        "b_shop",
+        "b_help",
+        "b_mail"
+      ],
+      "settings": {
+        "color_scheme": "custom",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "enabled_payment_types": "visa, master, american_express, paypal, apple_pay, google_pay, shopify_pay, klarna",
+        "show_policy": true,
+        "branding_text": "",
+        "margin_top": 0,
+        "padding_top": 48,
+        "padding_bottom": 28,
+        "custom_colors_background": "#3F5143",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#F2EFE8",
+        "custom_colors_solid_button_background": "#F7F3EC",
+        "custom_colors_solid_button_text": "#2C2A27",
+        "custom_colors_outline_button": "#F2EFE8"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

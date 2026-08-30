@@ -1,0 +1,106 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "annonce": {
+      "type": "announcement-bar",
+      "blocks": {
+        "a1": {
+          "type": "announcement",
+          "settings": {
+            "text": "<strong>30 nuits d’essai</strong> sur les oreillers",
+            "text_alignment": "center",
+            "mobile_text_size": 12,
+            "desktop_text_size": 14,
+            "icon": "bedtime",
+            "filled_icon": false,
+            "mobile_icon_size": 16,
+            "desktop_icon_size": 18,
+            "desktop_layout": "horizontal",
+            "mobile_layout": "horizontal"
+          }
+        },
+        "a2": {
+          "type": "announcement",
+          "settings": {
+            "text": "<strong>Livraison suivie</strong> sur chaque commande",
+            "text_alignment": "center",
+            "mobile_text_size": 12,
+            "desktop_text_size": 14,
+            "icon": "local_shipping",
+            "filled_icon": false,
+            "mobile_icon_size": 16,
+            "desktop_icon_size": 18,
+            "desktop_layout": "horizontal",
+            "mobile_layout": "horizontal"
+          }
+        },
+        "a3": {
+          "type": "announcement",
+          "settings": {
+            "text": "<strong>Paiement sécurisé</strong> — CB, PayPal, Apple Pay",
+            "text_alignment": "center",
+            "mobile_text_size": 12,
+            "desktop_text_size": 14,
+            "icon": "lock",
+            "filled_icon": false,
+            "mobile_icon_size": 16,
+            "desktop_icon_size": 18,
+            "desktop_layout": "horizontal",
+            "mobile_layout": "horizontal"
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "settings": {
+        "columns_desktop": 3,
+        "columns_mobile": 1,
+        "desktop_spacing": 40,
+        "mobile_spacing": 16,
+        "show_separator": true,
+        "color_scheme": "accent-1",
+        "slider_mobile": true,
+        "slider_desktop": false,
+        "type": "loop",
+        "autoplay": true,
+        "autoplay_speed": 4,
+        "padding_top": 10,
+        "padding_bottom": 10
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": true,
+        "color_scheme": "background-1",
+        "logo_link": "/",
+        "logo_position": "middle-center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "highlight_active_link": true,
+        "highlighted_link_color_scheme": "accent-1",
+        "products_mega_menu_links": "",
+        "products_mega_menu_display_collection_products": false,
+        "products_mega_menu_display_collection_images": true,
+        "products_mega_menu_display_collection_images_on_mobile": false,
+        "mobile_menu_title": "Menu",
+        "secondary_menu": "",
+        "menu_color_scheme": "background-1",
+        "mobile_logo_position": "center",
+        "display_search": true,
+        "margin_bottom": 0,
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    }
+  },
+  "order": [
+    "annonce",
+    "header"
+  ]
+}

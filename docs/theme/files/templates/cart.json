@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "settings": {
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "cart-footer": {
+      "type": "main-cart-footer",
+      "blocks": {
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {}
+    },
+    "reassure": {
+      "type": "icon-bar",
+      "blocks": {
+        "r1": {
+          "type": "column",
+          "settings": {
+            "icon": "bedtime",
+            "title": "30 nuits d’essai",
+            "text": "<p>Sur les oreillers. Remboursement du prix du produit, sans formulaire.</p>"
+          }
+        },
+        "r2": {
+          "type": "column",
+          "settings": {
+            "icon": "local_shipping",
+            "title": "Livraison suivie",
+            "text": "<p>Un numéro de suivi vous est envoyé dès l’expédition.</p>"
+          }
+        },
+        "r3": {
+          "type": "column",
+          "settings": {
+            "icon": "gavel",
+            "title": "Garanties légales",
+            "text": "<p>Rétractation 14 jours et conformité 2 ans, en plus de la garantie commerciale.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h2",
+        "color_scheme": "background-2",
+        "icon_layout": "vertical",
+        "icon_size": "small",
+        "icon_color": "accent-1",
+        "cards_color_scheme": "background-2",
+        "columns_desktop": 3,
+        "slider_desktop": false,
+        "columns_mobile": "1",
+        "slider_mobile": true,
+        "desktop_dots_position": "hidden",
+        "desktop_arrows_position": "hidden",
+        "mobile_arrows_position": "hidden",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "suggestions": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Compléter la nuit",
+        "heading_size": "h2",
+        "show_description": false,
+        "color_scheme": "background-1",
+        "collection": "taies-et-housses",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "padding_top": 24,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "cart-footer",
+    "reassure",
+    "suggestions"
+  ]
+}

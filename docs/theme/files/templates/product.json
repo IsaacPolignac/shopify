@@ -1,0 +1,365 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "custom_css": [],
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text_size": "h1",
+            "title_alignment": "left",
+            "uppercase_title": false,
+            "margin_top": 0,
+            "margin_bottom": 9
+          }
+        },
+        "bullets": {
+          "type": "text",
+          "settings": {
+            "text_1": "Coupe ajustée à la forme de l’oreiller",
+            "text_2": "Zip invisible sur le côté long",
+            "text_3": "Lavable en machine, sans nettoyage à sec",
+            "icon_1": "check_circle",
+            "icon_2": "check_circle",
+            "icon_3": "check_circle",
+            "filled_icon_1": false,
+            "filled_icon_2": false,
+            "filled_icon_3": false,
+            "icon_color": "#586F5B",
+            "text_color": "#2C2A27",
+            "icon_scale": 115,
+            "alignment": "left",
+            "direction": "vertical",
+            "width": "100%",
+            "column_gap": 2.5,
+            "desktop_text_size": 15,
+            "mobile_text_size": 14,
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "layout": "price_first",
+            "price_color": "accent-1",
+            "compare_price_color": "text",
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_types": "swatches",
+            "custom_labels": "[name] · [selected]",
+            "swatches_size": "large",
+            "swatches_custom_colors": "custom",
+            "swatches_custom_colors_list": "#A8BCA9, #EFE7D9, #C4C2BD, #33445C, #E0BFBB, #B97D65",
+            "skip_unavailable": false,
+            "margin_top": 15,
+            "margin_bottom": 15
+          }
+        },
+        "buy": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "skip_cart": false,
+            "uppercase_text": true,
+            "icon_scale": 120,
+            "icon_spacing": 10,
+            "display_price": false,
+            "enable_custom_color": false,
+            "margin_top": 18,
+            "margin_bottom": 12
+          }
+        },
+        "pay": {
+          "type": "payment_badges",
+          "settings": {
+            "enabled_payment_types": "visa, master, american_express, paypal, apple_pay, google_pay, shopify_pay, klarna",
+            "margin_top": 6,
+            "margin_bottom": 18
+          }
+        },
+        "ship": {
+          "type": "estimated_shipping",
+          "settings": {
+            "icon": "local_shipping",
+            "filled_icon": false,
+            "icon_size": "medium",
+            "icon_alignment": "middle",
+            "message": "<p>Livraison estimée entre <strong>[start_date]</strong> et <strong>[end_date]</strong>.</p>",
+            "min_shipping_days": 5,
+            "max_shipping_days": 10,
+            "date_format": "day_dd_mm",
+            "days_labels": "lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche",
+            "months_labels": "janvier, février, mars, avril, mai, juin, juillet, août, septembre, octobre, novembre, décembre",
+            "margin_top": 6,
+            "margin_bottom": 12
+          }
+        },
+        "reassure": {
+          "type": "icon_with_text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_color": "accent-1",
+            "desktop_icon_size": 32,
+            "desktop_spacing": 10,
+            "desktop_text_size": 14,
+            "mobile_icon_size": 28,
+            "mobile_spacing": 8,
+            "mobile_text_size": 12,
+            "icon_1": "bedtime",
+            "icon_1_fill": false,
+            "heading_1": "30 nuits d’essai",
+            "icon_2": "local_shipping",
+            "icon_2_fill": false,
+            "heading_2": "Livraison suivie",
+            "icon_3": "verified_user",
+            "icon_3_fill": false,
+            "heading_3": "Paiement sécurisé",
+            "margin_top": 12,
+            "margin_bottom": 18
+          }
+        },
+        "div": {
+          "type": "divider",
+          "settings": {
+            "color": "#E4E1DB",
+            "height": 1,
+            "width": 100,
+            "Full_mobile_width": false,
+            "alignment": "center",
+            "border_radius": 0,
+            "margin_top": 9,
+            "margin_bottom": 15
+          }
+        },
+        "desc": {
+          "type": "description",
+          "settings": {
+            "margin_top": 12,
+            "margin_bottom": 18
+          }
+        },
+        "t1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Matière et entretien",
+            "heading_size": "medium",
+            "icon": "local_laundry_service",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "display_top_border": true,
+            "open": false,
+            "content": "<p>Les taies rafraîchissantes sont en maille technique à dissipation thermique : lavage machine à 30 °C, cycle délicat, séchage à l’air. La taie coton est en coton peigné 200 fils : lavage à 40 °C, sèche-linge doux accepté.</p><p>Dans les deux cas : pas de javel, pas de nettoyage à sec.</p>",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "t2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Compatibilité",
+            "heading_size": "medium",
+            "icon": "straighten",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "display_top_border": true,
+            "open": false,
+            "content": "<p>Chaque taie est coupée pour un oreiller précis — Halo ou Nuée — afin d’éviter les plis sous la joue. Vérifiez le modèle indiqué dans le titre avant de commander.</p><p>Toutes les taies mesurent 60 × 40 cm et reprennent la même palette de six coloris que les oreillers.</p>",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "t3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Garantie et retours",
+            "heading_size": "medium",
+            "icon": "verified",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "display_top_border": true,
+            "open": false,
+            "content": "<p>Garantie légale de conformité de 2 ans et droit de rétractation de 14 jours. La garantie commerciale 30 nuits porte sur les oreillers ; les taies non ouvertes restent reprises pendant 14 jours.</p>",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "t4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Livraison et suivi",
+            "heading_size": "medium",
+            "icon": "local_shipping",
+            "filled_icon": false,
+            "collapse_icon": "carret",
+            "display_top_border": true,
+            "open": false,
+            "content": "<p>Préparation sous 24 à 48 heures ouvrées, acheminement estimé entre 5 et 10 jours ouvrés. Numéro de suivi dès l’expédition. Détail sur la page <a href=\"/pages/livraison\">Livraison</a>.</p>",
+            "margin_top": 0,
+            "margin_bottom": 0
+          }
+        },
+        "sticky": {
+          "type": "sticky_atc",
+          "settings": {
+            "function": "add_to_cart",
+            "display_when": "after_scroll",
+            "button_label": "Ajouter au panier",
+            "enable_custom_btn_color": false,
+            "color_scheme": "background-1",
+            "picker_type": "combined",
+            "desktop_show_image": true,
+            "desktop_show_title": true,
+            "desktop_rating_stars": false,
+            "desktop_show_price": true,
+            "desktop_show_sale_badge": true,
+            "desktop_variant_picker": true,
+            "desktop_full_button_width": false,
+            "desktop_show_price_in_button": false,
+            "desktop_transparent_bg": false,
+            "mobile_show_image": false,
+            "mobile_show_title": true,
+            "mobile_rating_stars": false,
+            "mobile_show_price": true,
+            "mobile_show_sale_badge": false,
+            "mobile_variant_picker": false,
+            "mobile_full_button_width": true,
+            "mobile_show_price_in_button": false,
+            "mobile_transparent_bg": false
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "bullets",
+        "price",
+        "picker",
+        "buy",
+        "pay",
+        "ship",
+        "reassure",
+        "div",
+        "desc",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "sticky"
+      ],
+      "settings": {
+        "display_id": false,
+        "enable_sticky_info": true,
+        "display_variant_image_first": false,
+        "disable_prepend": true,
+        "hide_variants": false,
+        "variant_image_filtering": "none",
+        "image_zoom": "none",
+        "arrows_color_scheme": "inverse",
+        "transparent_arrows": false,
+        "dots_color_scheme": "inverse",
+        "media_size": "medium",
+        "media_position": "left",
+        "gallery_layout": "thumbnail_slider",
+        "desktop_thumbnails_count": 5,
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "desktop_arrows_position": "hidden",
+        "mobile_media_corner_radius": 12,
+        "mobile_spacing_pixels": 0,
+        "mobile_arrows_position": "sides",
+        "mobile_pagination": "dots_overlay",
+        "mobile_thumbnails": "hide",
+        "mobile_thumbnails_count": 5,
+        "mobile_scroll_padding_percentage": 0,
+        "mobile_scroll_padding_pixels": 14,
+        "enable_mobile_outher_spacing": false,
+        "mobile_slides_container_width": 100,
+        "mobile_slides_inner_width": 100,
+        "trust_badge_position": "top-right",
+        "trust_badge_size": "medium",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 16,
+        "desktop_padding_top": 36,
+        "desktop_padding_bottom": 36
+      }
+    },
+    "faq": {
+      "type": "collapsible-content",
+      "blocks": {
+        "f1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Quelle différence entre la taie coton et la taie rafraîchissante ?",
+            "icon": "help",
+            "filled_icon": false,
+            "row_content": "<p>Le coton peigné est doux, mat et neutre en température. La maille technique évacue la chaleur plus vite : elle reste fraîche au contact plus longtemps. Si vous avez chaud la nuit, prenez la rafraîchissante.</p>"
+          }
+        },
+        "f2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Une taie est-elle fournie avec l’oreiller ?",
+            "icon": "redeem",
+            "filled_icon": false,
+            "row_content": "<p>Oui, chaque oreiller Halo est livré avec sa taie coton déjà montée. Les taies vendues ici sont des rechanges ou des surclassements.</p>"
+          }
+        },
+        "f3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Combien en prévoir ?",
+            "icon": "inventory_2",
+            "filled_icon": false,
+            "row_content": "<p>Deux par oreiller : une en place, une au lavage. C’est le rythme le plus simple à tenir.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3"
+      ],
+      "settings": {
+        "caption": "FAQ",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "title": "Questions <b>fréquentes</b>.",
+        "title_highlight_color": "#586F5B"
+      }
+    },
+    "related": {
+      "type": "related-products",
+      "settings": {
+        "title": "Avec quel oreiller ?",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 48,
+        "padding_bottom": 56
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq",
+    "related"
+  ]
+}
