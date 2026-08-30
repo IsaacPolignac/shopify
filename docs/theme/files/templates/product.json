@@ -26,8 +26,8 @@
             "filled_icon_1": false,
             "filled_icon_2": false,
             "filled_icon_3": false,
-            "icon_color": "#586F5B",
-            "text_color": "#2C2A27",
+            "icon_color": "#1C2B3A",
+            "text_color": "#15191E",
             "icon_scale": 115,
             "alignment": "left",
             "direction": "vertical",
@@ -128,7 +128,7 @@
         "div": {
           "type": "divider",
           "settings": {
-            "color": "#E4E1DB",
+            "color": "#DDE1E5",
             "height": 1,
             "width": 100,
             "Full_mobile_width": false,
@@ -170,7 +170,7 @@
             "collapse_icon": "carret",
             "display_top_border": true,
             "open": false,
-            "content": "<p>Chaque taie est coupée pour un oreiller précis — Halo ou Nuée — afin d’éviter les plis sous la joue. Vérifiez le modèle indiqué dans le titre avant de commander.</p><p>Toutes les taies mesurent 60 × 40 cm et reprennent la même palette de six coloris que les oreillers.</p>",
+            "content": "<p>Chaque taie est coupée pour un oreiller précis — Appui ou Aplomb — afin d’éviter les plis sous la joue. Vérifiez le modèle indiqué dans le titre avant de commander.</p><p>Toutes les taies mesurent 60 × 40 cm et reprennent la même palette de six coloris que les oreillers.</p>",
             "margin_top": 0,
             "margin_bottom": 0
           }
@@ -307,7 +307,7 @@
             "heading": "Une taie est-elle fournie avec l’oreiller ?",
             "icon": "redeem",
             "filled_icon": false,
-            "row_content": "<p>Oui, chaque oreiller Halo est livré avec sa taie coton déjà montée. Les taies vendues ici sont des rechanges ou des surclassements.</p>"
+            "row_content": "<p>Oui, chaque oreiller Appui est livré avec sa taie coton déjà montée. Les taies vendues ici sont des rechanges ou des surclassements.</p>"
           }
         },
         "f3": {
@@ -336,7 +336,7 @@
         "padding_top": 56,
         "padding_bottom": 56,
         "title": "Questions <b>fréquentes</b>.",
-        "title_highlight_color": "#586F5B"
+        "title_highlight_color": "#1C2B3A"
       }
     },
     "related": {

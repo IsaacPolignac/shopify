@@ -26,8 +26,8 @@
             "filled_icon_1": false,
             "filled_icon_2": false,
             "filled_icon_3": false,
-            "icon_color": "#586F5B",
-            "text_color": "#2C2A27",
+            "icon_color": "#1C2B3A",
+            "text_color": "#15191E",
             "icon_scale": 115,
             "alignment": "left",
             "direction": "vertical",
@@ -47,19 +47,19 @@
             "text_3": "",
             "icon_1": "warning",
             "filled_icon_1": false,
-            "icon_color": "#A97268",
-            "text_color": "#2C2A27",
+            "icon_color": "#B5652E",
+            "text_color": "#15191E",
             "icon_scale": 120,
             "alignment": "left",
             "direction": "horizontal",
             "width": "100%",
             "column_gap": 2.5,
             "enable_bg": true,
-            "bg_color": "#F7F0EC",
+            "bg_color": "#F7F0E7",
             "corner_radius": 10,
             "padding": 3,
             "border_size": 1,
-            "border_color": "#E3D2CA",
+            "border_color": "#E6D6C2",
             "desktop_text_size": 13,
             "mobile_text_size": 12,
             "margin_top": 6,
@@ -167,7 +167,7 @@
         "div": {
           "type": "divider",
           "settings": {
-            "color": "#E4E1DB",
+            "color": "#DDE1E5",
             "height": 1,
             "width": 100,
             "Full_mobile_width": false,
@@ -360,7 +360,7 @@
           "type": "heading",
           "settings": {
             "title": "Écarter les ailes du nez, <b>c’est tout</b>.",
-            "title_highlight_color": "#586F5B",
+            "title_highlight_color": "#1C2B3A",
             "heading_size": "h1"
           }
         },
@@ -380,8 +380,8 @@
             "icon_1": "check_circle",
             "icon_2": "check_circle",
             "icon_3": "check_circle",
-            "icon_color": "#586F5B",
-            "text_color": "#2C2A27",
+            "icon_color": "#1C2B3A",
+            "text_color": "#15191E",
             "direction": "vertical",
             "alignment": "left",
             "desktop_text_size": 16,
@@ -481,7 +481,7 @@
         "padding_top": 56,
         "padding_bottom": 56,
         "title": "Les questions <b>qui comptent</b>.",
-        "title_highlight_color": "#586F5B"
+        "title_highlight_color": "#1C2B3A"
       }
     },
     "related": {

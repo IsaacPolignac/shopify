@@ -8,27 +8,27 @@
           "settings": {
             "desktop_bg_image": "shopify://shop_images/hf_20260830_193807_09a49472-5756-4b13-962b-8e3772271b6f.png",
             "mobile_bg_image": "shopify://shop_images/hf_20260830_194618_b8c5dbc9-f28d-4009-8c8b-e3978348babd.png",
-            "desktop_overlay_color": "#241F1B",
+            "desktop_overlay_color": "#0E1216",
             "desktop_overlay_opacity": 30,
-            "mobile_overlay_color": "#241F1B",
+            "mobile_overlay_color": "#0E1216",
             "mobile_overlay_opacity": 38,
             "heading_prefix": "Oreillers & accessoires de sommeil",
             "heading_prefix_size": "h5",
-            "heading": "Mieux dormir, <b>par conception</b>.",
-            "title_highlight_color": "#CFE0D2",
+            "heading": "Ce qui vous <b>porte</b>.",
+            "title_highlight_color": "#A8C0D6",
             "heading_size": "h0",
             "heading_suffix": "",
-            "text": "<p>Votre literie devrait travailler avec votre corps, pas contre lui. Chaque forme, chaque matière est choisie pour une raison précise — et pour aucune autre.</p>",
+            "text": "<p>La portance, c’est la force qui vous tient. Nos oreillers partent d’une seule mesure : l’écart entre votre oreille et le matelas. Tout le reste en découle.</p>",
             "button_label_1": "Découvrir la gamme",
             "button_link_1": "/collections/best-sellers",
             "button_style_secondary_1": false,
-            "button_label_2": "L’oreiller Halo",
-            "button_link_2": "/products/oreiller-halo-soutien-3-zones",
+            "button_label_2": "L’oreiller Appui",
+            "button_link_2": "/products/oreiller-appui-soutien-3-zones",
             "button_style_secondary_2": true,
             "color_scheme": "custom",
             "custom_colors_text": "#FFFFFF",
             "custom_colors_solid_button_background": "#FFFFFF",
-            "custom_colors_solid_button_text": "#2C2A27",
+            "custom_colors_solid_button_text": "#15191E",
             "custom_colors_outline_button": "#FFFFFF",
             "full_page_width": false,
             "content_max_width": "pixels",
@@ -161,15 +161,15 @@
         "h": {
           "type": "heading",
           "settings": {
-            "title": "On part de la position, <b>pas du rayon</b>.",
-            "title_highlight_color": "#586F5B",
+            "title": "Un oreiller ne se juge pas <b>à la main</b>.",
+            "title_highlight_color": "#1C2B3A",
             "heading_size": "h1"
           }
         },
         "t": {
           "type": "text",
           "settings": {
-            "text": "<p>La plupart des oreillers sont dessinés pour bien paraître en magasin : épais, blancs, bien gonflés. Personne ne dort comme ça.</p><p>Nous partons de l’inverse. Comment votre corps se pose réellement quand vous dormez sur le côté, sur le dos, ou quand vous changez trois fois de position dans la nuit. La forme découle de là. La matière aussi.</p><p><strong>Une seule question décide de tout : est-ce que ça aide à dormir ?</strong> Si la réponse est non, ça ne rentre pas dans le produit.</p>"
+            "text": "<p>En magasin, on appuie avec la paume et on décide en trois secondes. Ce geste ne dit rien de ce qui se passera six heures plus tard, quand votre nuque aura porté le poids de votre tête toute la nuit.</p><p>Nous partons de l’inverse : la position dans laquelle vous dormez, et la hauteur qu’elle exige. Sur le côté, il reste un espace entre l’oreille et le matelas. Cet espace se mesure. La forme en découle, la densité aussi.</p><p><strong>Une seule question décide de tout : est-ce que ça vous porte ?</strong> Si la réponse est non, ça ne rentre pas dans la gamme.</p>"
           }
         },
         "b": {
@@ -212,7 +212,7 @@
           "type": "heading",
           "settings": {
             "title": "Trois points portent la nuit : <b>nuque, épaule, hanche</b>.",
-            "title_highlight_color": "#586F5B",
+            "title_highlight_color": "#1C2B3A",
             "heading_size": "h1"
           }
         },
@@ -232,8 +232,8 @@
             "icon_1": "check_circle",
             "icon_2": "check_circle",
             "icon_3": "check_circle",
-            "icon_color": "#586F5B",
-            "text_color": "#2C2A27",
+            "icon_color": "#1C2B3A",
+            "text_color": "#15191E",
             "direction": "vertical",
             "alignment": "left",
             "desktop_text_size": 16,
@@ -244,8 +244,8 @@
         "b": {
           "type": "button",
           "settings": {
-            "button_label": "Voir l’oreiller Halo",
-            "button_link": "/products/oreiller-halo-soutien-3-zones"
+            "button_label": "Voir l’oreiller Appui",
+            "button_link": "/products/oreiller-appui-soutien-3-zones"
           }
         }
       },
@@ -341,22 +341,22 @@
         "display_id": false,
         "visibility": "always-display",
         "title": "Ce qui change, <b>concrètement</b>.",
-        "title_highlight_color": "#586F5B",
+        "title_highlight_color": "#1C2B3A",
         "heading_size": "h1",
         "text": "<p>Comparé à un oreiller de grande surface au même usage.</p>",
         "color_scheme": "background-1",
         "layout": "table_second",
         "style": "centered",
-        "us_label": "LIYAN",
+        "us_label": "PORTANCE",
         "us_label_size": 18,
         "others_label": "Oreiller classique",
         "others_label_size": 18,
         "checkmark_style": "regular",
         "checkmark_color": "#ffffff",
-        "checkmark_bg_color": "#586F5B",
+        "checkmark_bg_color": "#1C2B3A",
         "x_style": "regular",
         "x_color": "#8A8A8A",
-        "x_bg_color": "#E4E1DB",
+        "x_bg_color": "#DDE1E5",
         "opposite_icon_colors": "original",
         "highlighted_color_scheme": "background-2",
         "highlighted_separator_opacity": 12,
@@ -420,10 +420,10 @@
         "q1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Halo ou Nuée : lequel choisir ?",
+            "heading": "Appui ou Aplomb : lequel choisir ?",
             "icon": "help",
             "filled_icon": false,
-            "row_content": "<p>Le <strong>Halo</strong> si vous dormez principalement sur le côté : sa forme contourée libère l’épaule et cale la hanche. Le <strong>Nuée</strong> si vous dormez sur le dos ou si vous changez souvent de position : son double bourrelet comble le creux cervical sans surélever la tête.</p>"
+            "row_content": "<p>L’<strong>Appui</strong> si vous dormez principalement sur le côté : sa forme contourée libère l’épaule et cale la hanche. L’<strong>Aplomb</strong> si vous dormez sur le dos ou si vous changez souvent de position : son double bourrelet comble le creux cervical sans surélever la tête.</p>"
           }
         },
         "q2": {
@@ -441,7 +441,7 @@
             "heading": "L’oreiller va-t-il s’affaisser ?",
             "icon": "schedule",
             "filled_icon": false,
-            "row_content": "<p>Le Halo utilise une fibre haute résilience conçue pour reprendre son volume après compression. Le Nuée utilise une mousse à mémoire de forme perforée. Aucun des deux n’est un garnissage bas de gamme qui se tasse et reste tassé. Un secouage hebdomadaire suffit à entretenir le gonflant.</p>"
+            "row_content": "<p>L’Appui utilise une fibre haute résilience conçue pour reprendre son volume après compression. L’Aplomb utilise une mousse à mémoire de forme perforée. Aucun des deux n’est un garnissage bas de gamme qui se tasse et reste tassé. Un secouage hebdomadaire suffit à entretenir le gonflant.</p>"
           }
         },
         "q4": {
@@ -483,7 +483,7 @@
         "padding_top": 64,
         "padding_bottom": 48,
         "title": "Les questions qu’on nous pose <b>vraiment</b>.",
-        "title_highlight_color": "#586F5B"
+        "title_highlight_color": "#1C2B3A"
       }
     },
     "newsletter": {
@@ -493,7 +493,7 @@
           "type": "heading",
           "settings": {
             "title": "Une lettre, pas une pluie de promos.",
-            "title_highlight_color": "#586F5B",
+            "title_highlight_color": "#1C2B3A",
             "heading_size": "h2"
           }
         },

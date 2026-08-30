@@ -1,5 +1,7 @@
 # Architecture du thème
 
+> Marque : **PORTANCE** — « Ce qui vous porte. »
+
 Thème : `shrine-pro-v1-2-3-186-sections` — Shrine PRO 1.2.3, 186 sections disponibles.
 ID : `gid://shopify/OnlineStoreTheme/157230071965`. **Non publié.**
 
@@ -12,14 +14,15 @@ thème. Ils font foi : en cas de doute, c'est la copie du dépôt qui est la sou
 
 | Rôle | Valeur |
 |---|---|
-| Accent 1 — boutons, liens, icônes | `#586F5B` sauge profond |
-| Accent 2 — badges de remise | `#A97268` terracotta |
-| Texte | `#2C2A27` |
+| Accent 1 — boutons, liens, icônes | `#1C2B3A` ardoise profonde |
+| Accent 2 — badges de remise | `#B5652E` ambre brique |
+| Texte, pied de page | `#15191E` encre |
 | Fond 1 | `#FFFFFF` |
-| Fond 2 — bandes crème | `#F7F3EC` |
-| Titres | Lato Bold (`lato_n7`), échelle 120 |
-| Corps | Lato Regular (`lato_n4`) |
-| Rayon des boutons | 4 px |
+| Fond 2 — bandes | `#EDEFF1` gris froid |
+| Titres | Jost SemiBold (`jost_n6`), échelle 115 |
+| Corps | Inter Regular (`inter_n4`) |
+| Rayon des boutons, cartes, champs, médias | 0 px |
+| Logo / favicon | `portance-logotype.png` / `portance-favicon.png` |
 | Largeur de page | 1400 px |
 | Badge de remise | `-[percentage]` |
 | Panier | tiroir, franco à 60 €, minuteur 5 min |
@@ -56,7 +59,7 @@ leurs bandelettes parle d'épaules et de genoux. Ici, quatre gabarits.
 
 | Gabarit | Produits | Particularité |
 |---|---|---|
-| `templates/product.oreiller.json` | Halo, Nuée | Pastilles de couleur, accordéon dimensions/entretien/garantie |
+| `templates/product.oreiller.json` | Appui, Aplomb | Pastilles de couleur, accordéon dimensions/entretien/garantie |
 | `templates/product.respiration.json` | Bandelettes de sommeil | **Paliers de quantité** (3) + encart d'avertissement + accordéon contre-indications **ouvert par défaut** |
 | `templates/product.nasal.json` | Bandelettes nasales | Paliers de quantité (2), avertissement et FAQ propres au produit |
 | `templates/product.json` | Les 3 taies | Pastilles de couleur, accordéon matière/compatibilité |
@@ -131,7 +134,7 @@ progression vers 60 €, code promo, économies, icônes de paiement.
 
 | Handle | Titre | Contenu |
 |---|---|---|
-| `main-menu` | Menu principal | Boutique (+4 sous-entrées), Oreiller Halo, Notre histoire, Garantie 30 nuits, Nous contacter |
+| `main-menu` | Menu principal | Boutique (+4 sous-entrées), Oreiller Appui, Notre histoire, Garantie 30 nuits, Nous contacter |
 | `footer` | La boutique | Les 4 collections |
 | `aide` | Aide & informations | FAQ, Livraison, Retours, Garantie, Contact, CGV |
 
