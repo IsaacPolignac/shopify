@@ -6,16 +6,16 @@
         "slide1": {
           "type": "slide",
           "settings": {
-            "desktop_bg_image": "shopify://shop_images/hf_20260830_193807_09a49472-5756-4b13-962b-8e3772271b6f.png",
-            "mobile_bg_image": "shopify://shop_images/hf_20260830_194618_b8c5dbc9-f28d-4009-8c8b-e3978348babd.png",
-            "desktop_overlay_color": "#0E1216",
-            "desktop_overlay_opacity": 30,
-            "mobile_overlay_color": "#0E1216",
-            "mobile_overlay_opacity": 38,
+            "desktop_bg_image": "shopify://shop_images/portance-hero-desktop.png",
+            "mobile_bg_image": "shopify://shop_images/portance-hero-mobile.png",
+            "desktop_overlay_color": "#0B1418",
+            "desktop_overlay_opacity": 0,
+            "mobile_overlay_color": "#0B1418",
+            "mobile_overlay_opacity": 0,
             "heading_prefix": "L'art du sommeil",
             "heading_prefix_size": "h5",
             "heading": "Ce qui vous <b>porte</b>.",
-            "title_highlight_color": "#A8C0D6",
+            "title_highlight_color": "#43789A",
             "heading_size": "h0",
             "heading_suffix": "",
             "text": "<p>La portance, c’est la force qui vous tient. Nos oreillers partent d’une seule mesure : l’écart entre votre oreille et le matelas. Tout le reste en découle.</p>",
@@ -26,10 +26,10 @@
             "button_link_2": "/products/oreiller-appui-soutien-3-zones",
             "button_style_secondary_2": true,
             "color_scheme": "custom",
-            "custom_colors_text": "#FFFFFF",
-            "custom_colors_solid_button_background": "#FFFFFF",
-            "custom_colors_solid_button_text": "#15191E",
-            "custom_colors_outline_button": "#FFFFFF",
+            "custom_colors_text": "#121212",
+            "custom_colors_solid_button_background": "#121212",
+            "custom_colors_solid_button_text": "#FFFFFF",
+            "custom_colors_outline_button": "#121212",
             "full_page_width": false,
             "content_max_width": "pixels",
             "content_pixels_max_width": 620,
@@ -144,7 +144,7 @@
         "products_to_show": 4,
         "show_view_all": true,
         "view_all_style": "solid",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
@@ -162,7 +162,7 @@
           "type": "heading",
           "settings": {
             "title": "Un oreiller ne se juge pas <b>à la main</b>.",
-            "title_highlight_color": "#1C2B3A",
+            "title_highlight_color": "#43789A",
             "heading_size": "h1"
           }
         },
@@ -212,7 +212,7 @@
           "type": "heading",
           "settings": {
             "title": "Trois points portent la nuit : <b>nuque, épaule, hanche</b>.",
-            "title_highlight_color": "#1C2B3A",
+            "title_highlight_color": "#43789A",
             "heading_size": "h1"
           }
         },
@@ -232,8 +232,8 @@
             "icon_1": "check_circle",
             "icon_2": "check_circle",
             "icon_3": "check_circle",
-            "icon_color": "#1C2B3A",
-            "text_color": "#15191E",
+            "icon_color": "#43789A",
+            "text_color": "#121212",
             "direction": "vertical",
             "alignment": "left",
             "desktop_text_size": 16,
@@ -259,7 +259,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "image": "shopify://shop_images/hf_20260830_194504_dfe24fca-ee8d-4df2-9390-f67d7c5648b0.png",
+        "image": "shopify://shop_images/portance-lifestyle-froid.png",
         "height": "adapt",
         "color_scheme": "background-1",
         "section_color_scheme": "background-1",
@@ -341,7 +341,7 @@
         "display_id": false,
         "visibility": "always-display",
         "title": "Ce qui change, <b>concrètement</b>.",
-        "title_highlight_color": "#1C2B3A",
+        "title_highlight_color": "#43789A",
         "heading_size": "h1",
         "text": "<p>Comparé à un oreiller de grande surface au même usage.</p>",
         "color_scheme": "background-1",
@@ -353,10 +353,10 @@
         "others_label_size": 18,
         "checkmark_style": "regular",
         "checkmark_color": "#ffffff",
-        "checkmark_bg_color": "#1C2B3A",
+        "checkmark_bg_color": "#43789A",
         "x_style": "regular",
         "x_color": "#8A8A8A",
-        "x_bg_color": "#DDE1E5",
+        "x_bg_color": "#C9DCE8",
         "opposite_icon_colors": "original",
         "highlighted_color_scheme": "background-2",
         "highlighted_separator_opacity": 12,
@@ -483,7 +483,7 @@
         "padding_top": 64,
         "padding_bottom": 48,
         "title": "Les questions qu’on nous pose <b>vraiment</b>.",
-        "title_highlight_color": "#1C2B3A"
+        "title_highlight_color": "#43789A"
       }
     },
     "newsletter": {
@@ -493,7 +493,7 @@
           "type": "heading",
           "settings": {
             "title": "Une lettre, pas une pluie de promos.",
-            "title_highlight_color": "#1C2B3A",
+            "title_highlight_color": "#43789A",
             "heading_size": "h2"
           }
         },
@@ -526,8 +526,8 @@
     "image-pleine": {
       "type": "image-banner",
       "settings": {
-        "image": "shopify://shop_images/hf_20260830_194504_dfe24fca-ee8d-4df2-9390-f67d7c5648b0.png",
-        "image_2": "shopify://shop_images/hf_20260830_194618_b8c5dbc9-f28d-4009-8c8b-e3978348babd.png",
+        "image": "shopify://shop_images/portance-banniere-large.png",
+        "image_2": "shopify://shop_images/portance-banniere-large.png",
         "image_1_visibility": "always-display",
         "image_2_visibility": "desktop-hidden",
         "image_overlay_opacity": 0,
@@ -580,7 +580,7 @@
       "settings": {
         "caption": "NOTRE PARTI PRIS",
         "title": "On part de la position, <b>pas du rayon</b>.",
-        "title_highlight_color": "#1C2B3A",
+        "title_highlight_color": "#43789A",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",

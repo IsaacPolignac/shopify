@@ -1,0 +1,10 @@
+# polices récupérées à la demande, voir README
+fonts/
+# sources et sorties de travail
+*-hero.png
+hero-*.png
+banniere-large.png
+lifestyle-froid.png
+lifestyle-src.png
+check*.png
+!apercu-*.jpg

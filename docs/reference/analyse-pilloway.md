@@ -64,6 +64,42 @@ Le point remarquable : **le mécanisme est présenté avant le problème.** Le l
 la solution en tête quand l'agitation arrive. C'est contre-intuitif et ça fonctionne — on
 a gardé cet ordre.
 
+## Le « style nuageux » — d'où il vient réellement
+
+C'est la question qui a demandé le plus de vérification, parce que la réponse est
+contre-intuitive. **Leur atmosphère bleu poudré ne tient à aucune CSS.** On a cherché un
+dégradé de fond, une forme de nuage en SVG, un `radial-gradient` : rien. Les seules
+occurrences de `filter: blur` dans leur feuille de style appartiennent à l'animation
+d'apparition au défilement fournie par Shrine.
+
+Tout vient de **leurs images**, qui ne sont pas des photos catalogue mais des
+compositions marketing, toutes bâties sur le même gabarit :
+
+| Élément | Chez eux | Ici |
+|---|---|---|
+| Fond | dégradé bleu poudré, aucun décor | idem, calé sur `#DCE8F0` |
+| Produit | en lévitation, ombre portée douce | idem |
+| Titre | noir gras incrusté, deux lignes, en haut | idem, en Poppins Bold (police du thème) |
+| Annotation | manuscrite, reliée par une flèche courbe | idem, en Caveat |
+| Pastille | contour arrondi, « SLEEP BETTER SALE » | « 30 NUITS D'ESSAI » |
+
+Un point où l'on s'écarte volontairement : leur pastille annonce une promotion. Une
+remise incrustée dans un fichier image ne peut plus être retirée sans regénérer le
+visuel, et nos prix barrés ne sont pas encore validés. La pastille porte donc la garantie,
+qui est vraie et permanente.
+
+Deux améliorations sur le même gabarit :
+
+1. **Ils n'ont pas de hero** ; la page d'accueil s'ouvre sur un bloc de titre. On a
+   composé un bandeau 2:1 dans le même registre, avec le produit à droite et le texte à
+   gauche sur le fond nu — et le voile sombre du thème ramené à 0 %, sans quoi le fond
+   pâle serait assombri et perdrait tout l'intérêt.
+2. **Leur typographie est incohérente** (Poppins dans le thème, Helvetica Neue en dur
+   dans les sections). Les titres incrustés d'ici emploient la police du thème, si bien
+   que l'image et la page parlent la même langue.
+
+---
+
 ## Les 10 défauts qu'on ne reproduit pas
 
 Relevés dans leur code, pas supposés.

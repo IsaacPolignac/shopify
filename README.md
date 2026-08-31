@@ -70,13 +70,35 @@ de Pilloway convertie en euros, sans confrontation à un coût d'achat réel.
 |---|---|
 | Nom | **PORTANCE** |
 | Signature | L'art du sommeil. |
-| Encre (texte, pied de page) | `#15191E` |
-| Accent 1 (boutons, liens) | `#1C2B3A` |
-| Accent 2 (remises) | `#B5652E` |
-| Fond secondaire | `#EDEFF1` |
-| Titres | Jost SemiBold |
-| Textes | Inter Regular |
-| Angles | 0 px — boutons, cartes, champs, médias |
+| Texte | `#121212` — celui de Pilloway |
+| Accent (boutons, liens, en-tête, badges) | `#43789A` |
+| Fond secondaire | `#DCE8F0` — leur bleu poudre, à l'identique |
+| Titres et textes | Poppins — 700 / 400, comme eux |
+| Boutons | rayon 6 px, bordure 2 px |
+| Cartes produit | rayon 12 px, texte centré, ombre `2/6/15` à 10 % |
+| Badge remise | bas-gauche, rayon 6 px, « ÉCONOMISEZ −40 % » |
+| Largeur de page | 1400 px · espacement inter-sections 0 |
+
+**Le système visuel est celui de Pilloway, repris valeur par valeur.** Une seule
+correction : leur bleu `#5A97B9` donne un contraste de **3,20:1** avec du texte blanc —
+sous le seuil WCAG AA de 4,5:1, donc illisible pour une partie des visiteurs sur l'en-tête
+et les boutons. Il est assombri à `#43789A`, soit **4,78:1**, même teinte. Si tu préfères
+leur valeur exacte, c'est un seul réglage à changer dans le thème.
+
+### Les images
+
+C'est là que se joue leur « style nuageux », et nulle part ailleurs : **leur atmosphère
+bleu poudré ne vient d'aucune CSS**, mais de visuels composés. Fond en dégradé bleu, produit
+en lévitation avec une ombre douce, titre noir incrusté sur deux lignes, annotation
+manuscrite reliée par une flèche, pastille à contour arrondi. Le même gabarit est repris
+ici pour les 4 fiches, le hero, le bandeau pleine largeur — et la photo d'ambiance a été
+refroidie pour rejoindre le même registre.
+
+Les titres incrustés sont en Poppins, la police du thème : l'image et la page parlent la
+même langue, ce qui n'est pas le cas chez eux. La pastille annonce **« 30 nuits d'essai »**
+et non une promotion, parce qu'une remise incrustée dans une image ne se retire pas.
+
+Scripts et aperçus : [`outils/images/`](outils/images/).
 
 Le logotype est un mot en capitales espacées, composé ici en Liberation Sans (métriques
 Helvetica). Il est propre et cohérent, mais **ce n'est pas un logotype dessiné** : à
