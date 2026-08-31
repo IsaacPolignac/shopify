@@ -3,14 +3,17 @@
 Marque de sommeil : oreillers ergonomiques, taies techniques, accessoires de respiration
 nocturne. Boutique Shopify **en français uniquement**, en euros, thème **Shrine PRO**.
 
-> **Ce qui vous porte.**
+> **L'art du sommeil.**
 
 La portance, en mécanique, c'est la force qui tient une masse en l'air. Une force, une
 direction, une intensité — c'est exactement ce qu'on attend d'un oreiller, et c'est
-rarement comme ça qu'on en parle.
+rarement comme ça qu'on en parle. La signature **« L'art du sommeil »** apporte la
+chaleur que le mot seul n'a pas ; elle n'est pas déposable telle quelle, d'où le
+verrouillage en lockup sous le logotype plutôt qu'en nom principal.
 
-Le site reprend l'architecture de conversion de [pilloway.com.au](https://www.pilloway.com.au/)
-— même thème, même logique de page — en corrigeant ses défauts. Le détail est dans
+Le site **reprend le squelette de [pilloway.com.au](https://www.pilloway.com.au/) bloc pour
+bloc** — même thème, même ordre de sections, même séquence narrative sous le pli — en
+corrigeant ses dix défauts relevés. Le détail est dans
 [`docs/reference/analyse-pilloway.md`](docs/reference/analyse-pilloway.md).
 
 ---
@@ -66,7 +69,7 @@ de Pilloway convertie en euros, sans confrontation à un coût d'achat réel.
 | | |
 |---|---|
 | Nom | **PORTANCE** |
-| Signature | Ce qui vous porte. |
+| Signature | L'art du sommeil. |
 | Encre (texte, pied de page) | `#15191E` |
 | Accent 1 (boutons, liens) | `#1C2B3A` |
 | Accent 2 (remises) | `#B5652E` |

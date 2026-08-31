@@ -8,8 +8,8 @@
         "b_logo": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/PORTANCE_logo_vector.svg",
-            "image_width": 140,
+            "image": "shopify://shop_images/portance-lockup-clair.png",
+            "image_width": 200,
             "alignment": "",
             "url": "/",
             "width_desktop": 3,

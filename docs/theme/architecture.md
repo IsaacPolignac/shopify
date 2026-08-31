@@ -1,6 +1,6 @@
 # Architecture du thème
 
-> Marque : **PORTANCE** — « Ce qui vous porte. »
+> Marque : **PORTANCE** — « L'art du sommeil. »
 
 Thème : `shrine-pro-v1-2-3-186-sections` — Shrine PRO 1.2.3, 186 sections disponibles.
 ID : `gid://shopify/OnlineStoreTheme/157230071965`. **Non publié.**
@@ -22,7 +22,8 @@ thème. Ils font foi : en cas de doute, c'est la copie du dépôt qui est la sou
 | Titres | Jost SemiBold (`jost_n6`), échelle 115 |
 | Corps | Inter Regular (`inter_n4`) |
 | Rayon des boutons, cartes, champs, médias | 0 px |
-| Logo / favicon | `portance-logotype.png` / `portance-favicon.png` |
+| Logo / favicon | `portance-lockup.png` (200 px) / `portance-favicon.png` |
+| Pied de page | `portance-lockup-clair.png` |
 | Largeur de page | 1400 px |
 | Badge de remise | `-[percentage]` |
 | Panier | tiroir, franco à 60 €, minuteur 5 min |
@@ -63,6 +64,30 @@ leurs bandelettes parle d'épaules et de genoux. Ici, quatre gabarits.
 | `templates/product.respiration.json` | Bandelettes de sommeil | **Paliers de quantité** (3) + encart d'avertissement + accordéon contre-indications **ouvert par défaut** |
 | `templates/product.nasal.json` | Bandelettes nasales | Paliers de quantité (2), avertissement et FAQ propres au produit |
 | `templates/product.json` | Les 3 taies | Pastilles de couleur, accordéon matière/compatibilité |
+
+### Séquence des pages produit — le squelette de Pilloway
+
+Sous le bloc d'achat, l'ordre reprend exactement celui du site modèle : **mécanisme →
+à quoi s'attendre → problème → avis → FAQ**. Le mécanisme est présenté *avant* le
+problème : le lecteur a déjà la solution en tête quand l'agitation arrive. C'est
+contre-intuitif et c'est ce qui fait marcher leur page.
+
+| # | Section | Type | Rôle |
+|---|---|---|---|
+| 1 | `main` | `main-product` | Bloc d'achat |
+| 2 | `science` | `image-with-text` | Eyebrow « LA MÉCANIQUE » + démonstration |
+| 3 | `science-cartes` | `multicolumn` ×3 | Les trois temps du mécanisme |
+| 4 | `attendre` | `multicolumn` ×4 | Frise « Nuits 1-3 → Nuit 30 » |
+| 5 | `garantie` | `rich-text` | Bandeau encre pleine largeur |
+| 6 | `probleme` | `image-with-text` | Eyebrow « LE PROBLÈME » |
+| 7 | `probleme-lignes` | `multicolumn` ×3 | Douleurs numérotées 01/02/03 |
+| 8 | `avis` | `testimonials` | **Désactivée** — pas d'avis réels |
+| 9 | `faq` | `collapsible-content` | 5 questions |
+| 10 | `related` | `related-products` | |
+
+Sur les bandelettes, le bloc 6-7 est remplacé par **« Un produit d'hygiène scellé »** et
+le bandeau 5 par **« Avant d'acheter, lisez ceci »** : agiter un problème respiratoire
+serait exactement l'allégation de santé interdite.
 
 ### Ordre des blocs du bloc d'achat
 

@@ -12,7 +12,7 @@
             "desktop_overlay_opacity": 30,
             "mobile_overlay_color": "#0E1216",
             "mobile_overlay_opacity": 38,
-            "heading_prefix": "Oreillers & accessoires de sommeil",
+            "heading_prefix": "L'art du sommeil",
             "heading_prefix_size": "h5",
             "heading": "Ce qui vous <b>porte</b>.",
             "title_highlight_color": "#A8C0D6",
@@ -522,6 +522,74 @@
         "padding_top": 72,
         "padding_bottom": 72
       }
+    },
+    "image-pleine": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/hf_20260830_194504_dfe24fca-ee8d-4df2-9390-f67d7c5648b0.png",
+        "image_2": "shopify://shop_images/hf_20260830_194618_b8c5dbc9-f28d-4009-8c8b-e3978348babd.png",
+        "image_1_visibility": "always-display",
+        "image_2_visibility": "desktop-hidden",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "difference": {
+      "type": "collapsible-content",
+      "blocks": {
+        "d1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ce qui nous rend différents",
+            "icon": "help",
+            "filled_icon": false,
+            "row_content": "<p>La plupart des oreillers sont dessinés pour bien paraître en magasin : épais, blancs, bien gonflés. Personne ne dort comme ça. Chaque courbe, chaque matière part d'une seule question : est-ce que ça aide à dormir ?</p>"
+          }
+        },
+        "d2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Conçu autour de votre façon de dormir",
+            "icon": "bedtime",
+            "filled_icon": false,
+            "row_content": "<p>Sur le côté, sur le dos, ou en changeant trois fois de position dans la nuit. Nous partons d'habitudes réelles, pas de catégories imprimées sur un carton. Chaque fiche produit dit précisément pour qui l'oreiller est fait — et pour qui il ne l'est pas.</p>"
+          }
+        },
+        "d3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Chaque matière justifie sa place",
+            "icon": "check_circle",
+            "filled_icon": false,
+            "row_content": "<p>Rien n'entre dans un produit parce que ça sonne bien sur une étiquette. Les tissus respirent, les garnissages tiennent leur forme, les housses se retirent et passent en machine. Si ça n'améliore pas la nuit, ça ne rentre pas.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d1",
+        "d2",
+        "d3"
+      ],
+      "settings": {
+        "caption": "NOTRE PARTI PRIS",
+        "title": "On part de la position, <b>pas du rayon</b>.",
+        "title_highlight_color": "#1C2B3A",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-2",
+        "container_color_scheme": "background-1",
+        "open_first_collapsible_row": true,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
     }
   },
   "order": [
@@ -530,6 +598,8 @@
     "gamme",
     "manifeste",
     "lifestyle",
+    "image-pleine",
+    "difference",
     "comparatif",
     "avis",
     "faq",

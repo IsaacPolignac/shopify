@@ -114,3 +114,59 @@ Paliers des Sleep Strips, la seule vraie échelle de quantité du site :
 (−50 %, badge « Best Value »).
 
 C'est cette structure à trois paliers qu'on a reprise pour les bandelettes, en euros.
+
+---
+
+## Ce qui a été reproduit, bloc par bloc
+
+Relevé après reconstruction. « Fidèle » signifie : même position dans la page, même rôle,
+même intention narrative — pas le même texte, qui est original et en français.
+
+### Page d'accueil
+
+| Bloc Pilloway | Chez nous | Écart |
+|---|---|---|
+| Bandeau de confiance à 3 cellules | `announcement-bar`, 3 messages | Fidèle. Leurs chiffres d'avis sont remplacés par des promesses vérifiables. |
+| *(pas de hero)* | `slideshow-hero` plein écran | **Ajout.** Leur section hero existe mais est vide. |
+| Titre de section + 4 produits | `featured-collection` | Fidèle. |
+| Déclaration de marque | `rich-text` | Fidèle. |
+| Photo lifestyle pleine largeur | `image-banner` + `image-with-text` | Fidèle, plus une démonstration du mécanisme. |
+| Accordéon 3 items | `collapsible-content` | Fidèle. |
+| *(rien)* | `comparison-table` | **Ajout.** |
+| Carrousel d'avis Loox (20 cartes) | `testimonials` **désactivée** | Volontaire — voir plus bas. |
+| FAQ 5 questions | `collapsible-content` | Fidèle. |
+| *(3 sections mortes)* | — | **Supprimé.** |
+
+### Page produit — la séquence sous le pli
+
+C'est le cœur de leur page, et l'ordre est reproduit tel quel.
+
+| # | Pilloway | Chez nous |
+|---|---|---|
+| 1 | Carrousel témoignages | `testimonials` **désactivée** |
+| 2 | « THE SCIENCE » → mécanisme | `image-with-text` « LA MÉCANIQUE » |
+| 3 | GIF explicatif | image intégrée à la section |
+| 4 | 3 cartes mécanisme | `multicolumn` ×3 |
+| 5 | Frise « What To Expect » 4 étapes | `multicolumn` ×4 |
+| 6 | Bandeau garantie 30 nuits | `rich-text` pleine largeur, fond encre |
+| 7 | « THE PROBLEM » | `image-with-text` « LE PROBLÈME » |
+| 8 | 3 douleurs numérotées 01/02/03 | `multicolumn` ×3 |
+| 9 | Mur d'avis | *(à brancher sur une app d'avis)* |
+| 10 | FAQ | `collapsible-content` |
+
+**Le mécanisme reste avant le problème.** C'est leur trouvaille : le lecteur a déjà la
+solution en tête quand l'agitation arrive. C'est contre-intuitif, et c'est gardé.
+
+Sur les bandelettes, les blocs 7 et 8 deviennent « Un produit d'hygiène scellé » et le
+bandeau 6 devient « Avant d'acheter, lisez ceci ». Agiter un problème respiratoire serait
+exactement l'allégation de santé interdite — c'est le seul endroit où la fidélité cède
+devant la loi.
+
+### Les cinq écarts assumés
+
+1. **Aucun avis inventé.** Ils affichent 4,8/5 sur 2 845 avis et « 10 000+ clients ». Nous
+   avons zéro commande : la section existe, désactivée, avec le texte qui l'explique.
+2. **Aucune allégation de santé** sur les bandelettes.
+3. **Un vrai hero**, qu'ils n'ont pas.
+4. **Un comparatif**, qu'ils n'ont pas.
+5. **Une seule promesse de livraison**, contre trois contradictoires chez eux.
