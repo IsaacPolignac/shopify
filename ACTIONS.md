@@ -269,6 +269,29 @@ Ce qui a été corrigé directement sur le thème (rien à faire de ton côté) 
 - Le tiroir panier affichait **« Panier • 1 articles »**. Le compte n'est plus suivi d'un
   nom au pluriel, dans les six langues.
 
+Autres corrections de la même passe :
+
+- La page **Contact** n'avait aucun formulaire, et son bouton « Nous contacter »
+  renvoyait sur elle-même. Le gabarit `page.contact` du thème, déjà écrit et déjà
+  traduit dans les six langues, n'était simplement pas assigné à la page. Il l'est
+  maintenant : formulaire nom / e-mail / téléphone / message, plus la barre de
+  réassurance (délai de réponse, suivi de commande, questions de santé renvoyées à un
+  professionnel).
+- Le **pied de page affichait un second formulaire d'inscription** à quinze centimètres
+  du premier. Celui du pied est retiré ; la section dédiée, plus lisible, reste sur
+  l'accueil et sur les collections.
+- Le **texte alternatif du logotype** est repassé en « PORTANCE — L'art du sommeil »,
+  traduit dans les six langues. La baseline a quitté les pixels mais reste lisible par
+  Google et par un lecteur d'écran.
+
+Deux points signalés à tort dans mon premier passage, vérifiés depuis :
+
+- Le `<h1>` de l'accueil n'est **pas** vide : il contient le logotype, dont le texte
+  alternatif est traduit. C'est la convention Dawn, elle tient.
+- Les quatre images « sans texte alternatif » des cartes produit sont les images de
+  survol, avec `alt=""` **volontairement** : ce sont des doublons décoratifs, et un
+  lecteur d'écran doit les ignorer.
+
 À décider de ton côté :
 
 - [ ] **Le logotype est à refaire quand le nom sera tranché.** Le fichier en service

@@ -8,11 +8,11 @@
         "b_logo": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/portance-lockup-clair.png",
+            "image": "shopify://shop_images/portance-wordmark.png",
             "image_width": 200,
             "alignment": "",
             "url": "/",
-            "width_desktop": 3,
+            "width_desktop": 4,
             "width_mobile": "2"
           }
         },
@@ -21,7 +21,7 @@
           "settings": {
             "heading": "La boutique",
             "menu": "footer",
-            "width_desktop": 3,
+            "width_desktop": 4,
             "width_mobile": "1"
           }
         },
@@ -30,28 +30,15 @@
           "settings": {
             "heading": "Aide & informations",
             "menu": "aide",
-            "width_desktop": 3,
+            "width_desktop": 4,
             "width_mobile": "1"
-          }
-        },
-        "b_mail": {
-          "type": "email_signup",
-          "settings": {
-            "heading": "Rester au courant",
-            "subtext": "<p>Nouveautés et remises en stock. Deux envois par mois au maximum, désinscription en un clic.</p>",
-            "button_type": "solid",
-            "button_label": "Je m’inscris",
-            "button_style_secondary": false,
-            "width_desktop": 3,
-            "width_mobile": "2"
           }
         }
       },
       "block_order": [
         "b_logo",
         "b_shop",
-        "b_help",
-        "b_mail"
+        "b_help"
       ],
       "settings": {
         "color_scheme": "custom",
