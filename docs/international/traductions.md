@@ -41,13 +41,18 @@ et le panier sont repassés en base française le 1er septembre.
 | `templates/cart.json` | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
 | `templates/collection.json` | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
 | `templates/page.json`, `page.contact.json` | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
-| `templates/product*.json` (4) | fr | ✅ | — | — | base | — | — |
+| `templates/product*.json` (4) | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
 
 Les cases vides retombent sur l'anglais, langue par défaut des six marchés.
-Un visiteur allemand voit donc aujourd'hui : accueil, en-tête, pied, panier,
-collection et fiche produit **en allemand** pour le contenu produit, et les
-onglets et la FAQ des gabarits produit **en anglais**. C'est lisible, ce n'est
-pas fini.
+Il en reste deux : les **pages** (livraison, retours, CGV, garantie, contact,
+histoire, FAQ, sécurité, confidentialité) et les **collections**, traduites en
+anglais mais pas encore en allemand, espagnol, italien ni néerlandais. Un
+visiteur allemand lit donc tout le parcours d'achat en allemand — accueil,
+collection, fiche produit, panier — et bascule en anglais s'il ouvre les CGV.
+
+Vérifié le 1er septembre en rendu réel sur le thème de prévisualisation :
+les six langues affichent l'accueil et les fiches produit sans une seule
+chaîne étrangère.
 
 ## Ce qui reste en français à l'écran, et pourquoi
 
