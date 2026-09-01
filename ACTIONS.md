@@ -66,11 +66,17 @@ la liste des collections :
 
 `Tétines` · `Biberons` · `Éveil & Dentition` · `Coffrets Cadeaux` · `Ancienne gamme`
 
-### 6. Vérifier les deux promesses que le thème affiche
+### 6. Vérifier les promesses que le thème affiche
 
-- [ ] **Livraison offerte à 60 €** — le tiroir panier affiche une barre de progression vers
-      ce seuil. Crée le tarif correspondant dans `Réglages → Livraison et traitement`,
-      sinon tu promets à l'écran ce que la caisse ne donne pas.
+- [x] **Livraison offerte à 60 €** — la barre de progression du tiroir panier a été
+      **retirée** le 1er septembre. Elle promettait la livraison offerte au-dessus de
+      60 alors qu'aucun tarif n'est encore créé, et le nombre 60 ne se convertissait
+      pas d'un marché à l'autre : un Australien la débloquait à 60 AUD, soit environ
+      36 €. Elle tombait aussi à « plus que 0,10 € » sur l'oreiller Appui à 59,90 €,
+      ce qui agace au lieu de pousser.
+      **Pour la remettre** : crée d'abord le tarif dans `Réglages → Livraison et
+      traitement`, puis rajoute le bloc `progress_bar` au tiroir panier avec un seuil
+      qui correspond au tarif — et vérifie-le marché par marché.
 - [ ] **Estimation 5–10 jours ouvrés** sur les fiches produits. Ajuste-la à ton
       fournisseur réel (bloc « Estimated shipping » de `main-product`).
 
@@ -233,3 +239,52 @@ d'achat. Refais-la avec tes marges.
    l'EUIPO, l'UKIPO, l'USPTO et IP Australia avant tout dépôt.
    Le renommage est scripté partout sauf le logotype et le favicon, qui sont à
    refaire.
+
+
+---
+
+## Passe design et fonctionnalités — 1er septembre 2026
+
+Ce qui a été corrigé directement sur le thème (rien à faire de ton côté) :
+
+- Les **quatre visuels de carte produit** portaient leur promesse en français dans les
+  pixels. Ils sont remplacés par les prises de studio recadrées, sans aucun texte.
+- Le **logotype était blanc sur fond blanc** dans l'en-tête de toutes les pages : le
+  réglage `logo` pointait sur la version claire. Il pointe maintenant sur la version
+  sombre, et la version claire sert de logo secondaire.
+- Le lockup contenait la ligne **« L'ART DU SOMMEIL »**, en français, sous le nom, donc
+  visible par un Allemand comme par un Américain. Le logotype en service est désormais
+  le mot seul.
+- `layout/theme.liquid` chargeait un script depuis **shopify.jsdeliver.cloud** (domaine
+  qui imite jsDelivr sans lui appartenir) et un **marqueur Hotjar dont l'identifiant
+  appartient à une autre boutique** (ceio.store, id 5110780) : les enregistrements de
+  session de tes visiteurs partaient sur un compte tiers. Les deux sont retirés.
+- Le **menu passait sur deux lignes** à 1440 px. Le lien « Oreiller Appui » est retiré du
+  premier niveau (il reste dans Boutique et dans le hero), et une règle CSS empêche le
+  retour à la ligne dans toutes les langues.
+- Le **tableau comparatif** se calait sur 500 px dans une colonne de 625, colonne mise en
+  avant à 75 px et libellés coupés en trois lignes. Corrigé.
+- Les **boutons des cartes produit** n'étaient pas alignés d'une carte à l'autre, et les
+  **deux boutons du hero mobile** étaient décalés de 10 px. Corrigés.
+- Le tiroir panier affichait **« Panier • 1 articles »**. Le compte n'est plus suivi d'un
+  nom au pluriel, dans les six langues.
+
+À décider de ton côté :
+
+- [ ] **Le logotype est à refaire quand le nom sera tranché.** Le fichier en service
+      (`portance-wordmark.png`) est un recadrage du lockup existant : propre, mais c'est
+      le mot PORTANCE. Voir `docs/marque/nom.md`.
+- [ ] **`product_cards_custom_badges_list`** vaut encore
+      `MEILLEURE VENTE, NOUVEAU, [percentage] DE REMISE`, en français. Cette liste est
+      positionnelle et **non traduisible** : un badge s'afficherait en français dans les
+      six langues. Aucun produit ne porte les étiquettes correspondantes aujourd'hui,
+      donc rien ne s'affiche — mais ne tague pas un produit `Meilleure vente` avant
+      d'avoir tranché la question.
+- [ ] **La section `image-pleine` de l'accueil** est une image pleine largeur de 720 px
+      sans un mot dessus, et c'est la troisième photo d'oreiller de la page. Elle a été
+      laissée telle quelle : c'est un procédé courant, et Pilloway comme Derila en
+      utilisent un. Si tu veux qu'elle travaille, elle peut devenir une bande de rappel
+      « 30 nuits d'essai » avec un bouton — dis-le et je la convertis.
+- [ ] **Le bloc de gauche du tableau comparatif** laisse encore beaucoup de vide. Le
+      passer en pleine largeur, titre centré au-dessus du tableau, se fait en une
+      modification de `templates/index.json`.

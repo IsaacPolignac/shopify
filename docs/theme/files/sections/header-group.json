@@ -97,9 +97,21 @@
         "padding_top": 16,
         "padding_bottom": 16
       }
+    },
+    "corrections": {
+      "type": "custom-liquid",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "custom_liquid": "<style>\n  /* La section ne sert qu'a porter ces regles : son propre conteneur ne doit\n     rien occuper dans la grille de l'en-tete. */\n  #shopify-section-{{ section.id }} { display: none !important; }\n\n  /* Corrections de mise en page PORTANCE, injectees par une section\n     custom-liquid du groupe d'en-tete pour ne pas reecrire base.css, qui\n     appartient au theme achete et fait 370 ko. */\n\n  /* 1. Le menu passait sur deux lignes des que la traduction s'allongeait :\n     la colonne de gauche fait 534 px et les libelles allemands debordent. */\n  @media screen and (min-width: 990px) {\n    .header__inline-menu > .list-menu--inline { flex-wrap: nowrap; }\n    .header__inline-menu .header__menu-item { white-space: nowrap; }\n  }\n  @media screen and (min-width: 990px) and (max-width: 1279px) {\n    .header__inline-menu .header__menu-item {\n      padding-left: 0.8rem;\n      padding-right: 0.8rem;\n      font-size: 1.4rem;\n    }\n  }\n\n  /* 2. Cartes produit : deux titres tenaient sur une ligne, deux sur deux, et\n     les boutons se retrouvaient a 21 px d'ecart, soit exactement une ligne de\n     titre. On reserve les deux lignes pour toute la rangee. */\n  @media screen and (min-width: 750px) {\n    .product-grid .card__heading.h5 { min-height: 4.2rem; }\n  }\n\n  /* 3. Tableau comparatif : la table se calait sur la largeur de son contenu,\n     500 px dans une colonne de 625. La colonne mise en avant tombait a 75 px\n     et « machine washable at 30 °C » se coupait en trois lignes. */\n  @media screen and (min-width: 990px) {\n    .content-and-comparison-table { justify-items: stretch; }\n    .comparison-table-container { display: block; width: 100%; max-width: none; }\n    .comparison-table { width: 100%; }\n    .comparison-table th:nth-child(2),\n    .comparison-table td:nth-child(2),\n    .comparison-table th:nth-child(3),\n    .comparison-table td:nth-child(3) { width: 21%; }\n  }\n\n  /* 4. Hero mobile : les deux boutons avaient des largeurs differentes et ne\n     s'alignaient sur rien. On les met a la meme largeur, l'un sous l'autre. */\n  @media screen and (max-width: 749px) {\n    .hero__buttons {\n      display: flex;\n      flex-direction: column;\n      align-items: stretch;\n      gap: 1rem;\n      width: min(30rem, 100%);\n      margin-left: auto;\n      margin-right: auto;\n    }\n    /* .button--secondary porte un margin-left: 10px qui ne sert qu'a la\n       version cote a cote ; en colonne il decale le second bouton. */\n    .hero__buttons > .button { width: 100%; justify-content: center; margin-left: 0 !important; }\n  }\n</style>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
+    "corrections",
     "annonce",
     "header"
   ]

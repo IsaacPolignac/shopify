@@ -4,9 +4,9 @@
     "disable_inspect": false,
     "country_list_function": "block",
     "country_list": "",
-    "logo": "shopify://shop_images/portance-lockup.png",
-    "logo_width": 200,
-    "mobile_logo_width": 150,
+    "logo": "shopify://shop_images/portance-wordmark.png",
+    "logo_width": 210,
+    "mobile_logo_width": 160,
     "favicon": "shopify://shop_images/portance-favicon.png",
     "colors_solid_button_labels": "#FFFFFF",
     "colors_accent_1": "#1C2B3A",
@@ -26,14 +26,14 @@
     "body_scale": 100,
     "enable_load_animations": true,
     "repeat_section_animations": false,
-    "badge_position": "top left",
-    "badge_corner_radius": 0,
+    "badge_position": "bottom left",
+    "badge_corner_radius": 6,
     "sale_badge_color_scheme": "accent-2",
-    "sale_badge_text": "-[percentage]",
+    "sale_badge_text": "ÉCONOMISEZ [percentage]",
     "sold_out_badge_color_scheme": "inverse",
     "accent_icons": "accent-1",
     "product_cards_badge_push_sides": true,
-    "product_cards_custom_badges_list": "MEILLEURE VENTE, NOUVEAU, -[percentage]",
+    "product_cards_custom_badges_list": "MEILLEURE VENTE, NOUVEAU, [percentage] DE REMISE",
     "page_width": 1400,
     "spacing_sections": 0,
     "spacing_grid_horizontal": 32,
@@ -158,7 +158,7 @@
     "predictive_search_show_price": true,
     "currency_code_enabled": false,
     "scrollbar_style": "default",
-    "scrollbar_thumb_color": "#8A94A0",
+    "scrollbar_thumb_color": "#7FA6BE",
     "scrollbar_width": 9,
     "cart_type": "drawer",
     "cart_icon": "bag_2",
@@ -236,20 +236,6 @@
       "cart-drawer": {
         "type": "cart-drawer",
         "blocks": {
-          "progress": {
-            "type": "progress_bar",
-            "settings": {
-              "goal_type": "subtotal",
-              "goal": 60,
-              "progress_message": "Plus que [amount] pour la livraison offerte.",
-              "success_message": "Livraison offerte débloquée.",
-              "icon": "local_shipping",
-              "icon_filled": false,
-              "accent_color": "accent-1",
-              "margin_top": 6,
-              "margin_bottom": 18
-            }
-          },
           "items": {
             "type": "cart_items",
             "settings": {
@@ -340,7 +326,6 @@
           }
         },
         "block_order": [
-          "progress",
           "items",
           "discount",
           "subtotals",
@@ -349,20 +334,21 @@
         ],
         "settings": {
           "test_mode": false,
-          "heading_text": "Panier • [count] articles",
+          "heading_text": "Panier • [count]",
           "heading_alignment": "flex-start",
           "desktop_width": "normal",
           "mobile_width": "full",
           "enable_header_bg": false,
-          "header_bg_color": "#EDEFF1",
+          "header_bg_color": "#DCE8F0",
           "enable_body_bg": false,
-          "body_bg_color": "#EDEFF1",
+          "body_bg_color": "#DCE8F0",
           "enable_footer_bg": true,
-          "footer_bg_color": "#EDEFF1"
+          "footer_bg_color": "#DCE8F0"
         }
       }
     },
-    "content_for_index": []
+    "content_for_index": [],
+    "secondary_logo": "shopify://shop_images/portance-wordmark-clair.png"
   },
   "presets": {
     "Default": {
