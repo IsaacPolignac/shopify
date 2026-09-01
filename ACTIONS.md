@@ -185,3 +185,26 @@ d'achat. Refais-la avec tes marges.
   manquante retombe donc sur l'anglais, jamais sur le français. Vérifié.
 - **Les balises hreflang.** 181 émises automatiquement, `x-default` compris.
   Aucune application à installer.
+
+### Encore à faire à la main (mise à jour du 1er septembre 2026)
+
+4. **Titre de la page d'accueil en français.** `SHOP.meta_title` vaut encore
+   « LIYAN | Biberons & Accessoires Bébé Premium ». Les traductions en, de, es,
+   it et nl sont posées, donc seuls les visiteurs francophones voient l'ancien
+   titre. L'API Admin n'expose pas ce champ en écriture :
+   Admin → Boutique en ligne → Préférences → Titre et méta-description.
+
+5. **`product_cards_custom_badges_list`.** Ce réglage vaut encore
+   « MEILLEURE VENTE, NOUVEAU, [percentage] DE REMISE » et Shopify ne le déclare
+   pas traduisible. Aucun produit ne porte aujourd'hui les étiquettes
+   correspondantes, donc rien ne s'affiche — mais si vous en ajoutez une, le
+   badge sortira en français dans les six marchés. À corriger dans
+   l'éditeur de thème (Réglages → Badges).
+
+6. **La page « Sécurité & conformité » a été réécrite.** Elle décrivait encore
+   des biberons et des tétines, avec des normes EN 1400 et EN 14350 qui ne
+   concernent aucun produit vendu aujourd'hui. Elle parle désormais des
+   oreillers et des bandelettes : étiquetage textile (UE 1007/2011), REACH,
+   GPSR, et le fait que rien dans la gamme n'est un dispositif médical.
+   **Les numéros de rapports d'essai et les certificats fournisseurs restent à
+   fournir** — sans eux, retirez les mentions de conformité.
