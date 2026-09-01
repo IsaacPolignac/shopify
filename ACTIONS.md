@@ -208,3 +208,16 @@ d'achat. Refais-la avec tes marges.
    GPSR, et le fait que rien dans la gamme n'est un dispositif médical.
    **Les numéros de rapports d'essai et les certificats fournisseurs restent à
    fournir** — sans eux, retirez les mentions de conformité.
+
+7. **Créer les quatre politiques manquantes.** La boutique n'a que la politique
+   de confidentialité. Il manque le remboursement, la livraison, les conditions
+   de service et les coordonnées — celles qui s'affichent dans le pied de page
+   du **checkout**, au moment le plus sensible du parcours.
+   Les textes sont écrits et prêts à coller dans
+   `docs/international/politiques/` (français et anglais).
+   `shopPolicyUpdate` exige le scope `write_legal_policies` que le connecteur
+   n'a pas : c'est une limite du connecteur, pas un droit manquant sur la
+   boutique. Admin → Paramètres → Politiques.
+   Une fois collées, elles deviennent traduisibles (`SHOP_POLICY`) : enregistrez
+   les versions anglaises, sinon un acheteur américain lit une politique en
+   français au moment de payer.
