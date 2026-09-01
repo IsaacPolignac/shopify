@@ -221,3 +221,15 @@ d'achat. Refais-la avec tes marges.
    Une fois collées, elles deviennent traduisibles (`SHOP_POLICY`) : enregistrez
    les versions anglaises, sinon un acheteur américain lit une politique en
    français au moment de payer.
+
+### Le nom de la marque
+
+8. **Trancher le nom.** La boutique tourne sous PORTANCE, qui était un nom de
+   travail et ne répond pas au brief (international et médical). La
+   recommandation est **SOMNILA**, avec NUCAILA et ALIGNISA en repli : le
+   raisonnement, les vérifications de domaine et le coût exact du renommage
+   sont dans `docs/marque/nom.md`.
+   **Aucune recherche d'antériorité de marque n'a été faite** — à lancer à
+   l'EUIPO, l'UKIPO, l'USPTO et IP Australia avant tout dépôt.
+   Le renommage est scripté partout sauf le logotype et le favicon, qui sont à
+   refaire.
