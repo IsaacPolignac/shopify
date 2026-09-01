@@ -311,3 +311,43 @@ Deux points signalés à tort dans mon premier passage, vérifiés depuis :
 - [ ] **Le bloc de gauche du tableau comparatif** laisse encore beaucoup de vide. Le
       passer en pleine largeur, titre centré au-dessus du tableau, se fait en une
       modification de `templates/index.json`.
+
+
+---
+
+## Passe mobile et registre nuageux — 1er septembre 2026
+
+Le site n'etait pas adapte au telephone. Mesure sur un ecran de 390 px avant
+correction : gouttieres de 15 px, texte des cartes de reassurance large de
+**140 px** — dix-huit signes par ligne —, corps de texte a 15 px, quatorze
+cibles tactiles sous 40 px, et un `--gap-mobile: px` livre par le theme, valeur
+vide donc invalide, qui collait les colonnes entre elles.
+
+Corrige :
+
+- **Gouttieres a 22 px**, gouttiere interne des grilles a 16 px.
+- **Cartes de reassurance en pleine largeur**, disposees en ligne : pastille
+  d'icone a gauche, titre et texte a droite. Le texte passe de 140 a 242 px.
+- **Cartes produit en pleine largeur** : le theme les servait en carrousel a
+  deux par ecran, soit 165 px par carte, titre sur trois lignes et
+  « Choose options » sur deux. Le carrousel est defait sur telephone, une carte
+  par ligne, bouton pleine largeur de 50 px de haut.
+- **Rythme vertical** : 54 px de respiration en haut et en bas de chaque
+  section, la moitie d'entre elles etait a zero.
+- **Hero** : le titre se posait sur l'oreiller. Le bloc gagne de la hauteur et
+  un voile laiteux qui le detache sans masquer la photo.
+- **Corps de texte a 16 px**, interligne 1.85. Cibles tactiles a 46 px.
+
+Registre nuageux, sur toutes les tailles d'ecran :
+
+- Fond de page en ciel degrade, fixe au defilement.
+- Bandeaux bleu poudre aux angles arrondis, qui se fondent au lieu de s'empiler.
+- Cartes produit moelleuses : tuile bleue, photo posee dedans avec ses propres
+  angles, ombre diffuse bleutee, leger soulevement au survol.
+- Boutons en pastille, champs et selecteur de quantite arrondis, ombres du
+  theme passees du gris au bleu.
+
+Le tout tient dans une seule section `custom-liquid` du groupe d'en-tete, pour
+ne pas reecrire `assets/base.css`, qui appartient au theme achete et pese
+370 ko. Si tu changes de theme un jour, cette section part avec, et rien
+d'autre n'est a defaire.
