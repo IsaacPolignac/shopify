@@ -53,12 +53,15 @@ construction.
 | Oreiller Aplomb | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Bandelettes de sommeil | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Bandelettes nasales | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Taie rafraîchissante Appui | ✅ | — | — | — | — |
-| Taie rafraîchissante Aplomb | ✅ | — | — | — | — |
-| Taie coton Appui | ✅ | — | — | — | — |
-| Collections | — | — | — | — | — |
+| Taie rafraîchissante Appui | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Taie rafraîchissante Aplomb | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Taie coton Appui | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Les 4 collections de la gamme | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Pages | — | — | — | — | — |
 | Contenu du thème | — | — | — | — | — |
+
+**Les 7 produits actifs et les 4 collections de la gamme sommeil sont complets
+dans les six langues.**
 
 Chaque produit traduit l'est intégralement : titre, description, **handle**
 (donc l'URL est localisée), type, balise title et méta description.
@@ -71,6 +74,19 @@ aucune pathologie, en particulier pas l'apnée du sommeil » existe en anglais,
 allemand, espagnol, italien et néerlandais. Un accessoire de confort qui
 laisserait entendre l'inverse deviendrait un dispositif médical non déclaré —
 règlement (UE) 2017/745, et l'équivalent FDA aux États-Unis.
+
+## Deux pièges rencontrés
+
+**Handles en double entre langues.** Donner `essentials` à la fois en anglais et
+en néerlandais fait que Shopify renomme silencieusement le second en
+`essentials-1`. L'URL fonctionne quand même, mais elle est laide. Chaque langue
+doit avoir son propre handle : le néerlandais est passé à `onmisbaar`.
+
+**Cinq collections de l'ancienne gamme puériculture** (`tetines`, `biberons`,
+`eveil-amp-dentition`, `coffrets-cadeaux`, `toute-la-gamme`) sont encore publiées
+et apparaissent donc dans **les six marchés**. La dépublication par l'API est
+refusée par la politique de sécurité du connecteur : à faire à la main dans
+l'admin. C'est devenu plus urgent qu'avant — le problème est multiplié par six.
 
 ## Ce qui reste
 

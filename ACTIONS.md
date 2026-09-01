@@ -158,3 +158,30 @@ d'achat. Refais-la avec tes marges.
 | Vendre une bandelette non scellée | Pas d'exception d'hygiène possible, et risque sanitaire réel. |
 | Ajouter une variante sans toucher aux listes du thème | `breaks_*` et `swatches_custom_colors_list` sont **positionnelles** : badges et pastilles se décalent. |
 | Mettre une virgule décimale dans un champ `breaks_*` | La virgule est le séparateur de liste. « 1,16 € » compte pour deux entrées et casse tous les paliers. |
+
+---
+
+## Ouverture internationale — septembre 2026
+
+### À faire à la main dans l'admin (l'API refuse)
+
+1. **Dépublier les 5 collections de l'ancienne gamme puériculture.**
+   `tetines`, `biberons`, `eveil-amp-dentition`, `coffrets-cadeaux`,
+   `toute-la-gamme`. Elles apparaissent aujourd'hui dans **les six marchés**.
+   Admin → Collections → sélectionner → Retirer de « Boutique en ligne ».
+   La mutation `publishableUnpublish` est bloquée par la politique de sécurité
+   du connecteur, ce n'est pas un problème de droits.
+
+2. **Renommer la boutique.** Elle s'appelle toujours « boutique ».
+
+3. **Domaines par marché** (facultatif mais recommandé). Aujourd'hui tout passe
+   par des sous-dossiers de `liyan.shop`. Des domaines dédiés par marché
+   amélioreraient le référencement local.
+
+### Ce qui NE nécessite PAS d'intervention, contrairement à ce qu'on pourrait croire
+
+- **La langue par défaut.** Elle reste le français côté boutique, mais chaque
+  marché a `en` comme langue par défaut de sa présence web. Une traduction
+  manquante retombe donc sur l'anglais, jamais sur le français. Vérifié.
+- **Les balises hreflang.** 181 émises automatiquement, `x-default` compris.
+  Aucune application à installer.
