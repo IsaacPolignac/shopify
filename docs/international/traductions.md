@@ -18,30 +18,36 @@ traduire l'accueil, l'en-tête, le pied de page et les fiches sans republier.
 
 ## État par ressource
 
-| Ressource | Base | en | de | es | it | nl |
-|---|---|---|---|---|---|---|
-| Produits (7) | fr | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Options produit (`Couleur`, `Format`) | fr | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Valeurs d'options (couleurs, formats) | fr | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Alt des visuels sommeil (26) | fr | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Menus (22 liens) | fr | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Pages (9) | fr | ✅ | — | — | — | — |
-| SEO boutique (`meta_title`, `meta_description`) | fr (héritée LIYAN) | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `settings_data` — tiroir panier, pop-up | fr | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `settings_data` — marque, badge promo | fr | ✅ | ✅ | ✅ | ✅ | ✅ |
-| `templates/index.json` | **en** | base | — | — | — | — |
-| `sections/header-group.json` | **en** | base | — | — | — | — |
-| `sections/footer-group.json` | **en** | base | — | — | — | — |
-| `templates/cart.json` | **en** | base | — | — | — | — |
-| `templates/product*.json` (4) | fr | ✅ | — | — | — | — |
-| `templates/collection.json`, `page.json`, `page.contact.json` | fr | ✅ | — | — | — | — |
+`base` = la langue dans laquelle le contenu est stocké. ✅ = traduction enregistrée.
+La base est le **français** partout, comme la locale primaire de la boutique :
+c'est la seule configuration possible, puisque Shopify refuse d'enregistrer une
+traduction dans la locale primaire. Un gabarit écrit en anglais ne pouvait donc
+pas être servi en français — c'est pour cela que l'accueil, l'en-tête, le pied
+et le panier sont repassés en base française le 1er septembre.
 
-Les quatre gabarits en base anglaise (accueil, en-tête, pied, panier) ont été
-réécrits en anglais lors de la fusion des deux sites de référence ; les autres
-ont gardé leur base française et reçoivent une traduction anglaise. Les deux
-approches donnent le même résultat à l'écran, mais il faut le savoir avant
-d'éditer : sur l'accueil on modifie le fichier, sur une fiche produit on modifie
-la traduction.
+| Ressource | Base | en | de | es | fr | it | nl |
+|---|---|---|---|---|---|---|---|
+| Produits (7) | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| Options produit et valeurs | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| Alt des visuels sommeil (26) | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| Menus (22 liens) | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| Collections sommeil (4) | fr | ✅ | — | — | base | — | — |
+| Pages (9) | fr | ✅ | — | — | base | — | — |
+| SEO boutique | fr (héritée LIYAN) | ✅ | ✅ | ✅ | ✗ | ✅ | ✅ |
+| `settings_data` (panier, pop-up, marque, badge) | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| `templates/index.json` (accueil) | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| `sections/header-group.json` | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| `sections/footer-group.json` | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| `templates/cart.json` | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| `templates/collection.json` | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| `templates/page.json`, `page.contact.json` | fr | ✅ | ✅ | ✅ | base | ✅ | ✅ |
+| `templates/product*.json` (4) | fr | ✅ | — | — | base | — | — |
+
+Les cases vides retombent sur l'anglais, langue par défaut des six marchés.
+Un visiteur allemand voit donc aujourd'hui : accueil, en-tête, pied, panier,
+collection et fiche produit **en allemand** pour le contenu produit, et les
+onglets et la FAQ des gabarits produit **en anglais**. C'est lisible, ce n'est
+pas fini.
 
 ## Ce qui reste en français à l'écran, et pourquoi
 

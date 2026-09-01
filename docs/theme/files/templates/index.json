@@ -12,17 +12,17 @@
             "desktop_overlay_opacity": 0,
             "mobile_overlay_color": "#0B1418",
             "mobile_overlay_opacity": 0,
-            "heading_prefix": "The art of sleep",
+            "heading_prefix": "L'art du sommeil",
             "heading_prefix_size": "h5",
-            "heading": "What <b>holds</b> you.",
+            "heading": "Ce qui vous <b>porte</b>.",
             "title_highlight_color": "#43789A",
             "heading_size": "h0",
             "heading_suffix": "",
-            "text": "<p>Support is the force that carries you. Our pillows start from a single measurement: the gap between your ear and the mattress. Everything else follows from it.</p>",
-            "button_label_1": "Shop the range",
+            "text": "<p>La portance, c'est la force qui vous soutient. Nos oreillers partent d'une seule mesure : l'écart entre votre oreille et le matelas. Tout le reste en découle.</p>",
+            "button_label_1": "Voir la gamme",
             "button_link_1": "/collections/best-sellers",
             "button_style_secondary_1": false,
-            "button_label_2": "The Appui pillow",
+            "button_label_2": "L'oreiller Appui",
             "button_link_2": "/products/oreiller-appui-soutien-3-zones",
             "button_style_secondary_2": true,
             "color_scheme": "custom",
@@ -67,8 +67,8 @@
           "settings": {
             "icon": "bedtime",
             "filled_icon": false,
-            "title": "30-night trial",
-            "text": "<p>Sleep on it for a full month. If it isn't right, we take the pillow back.</p>"
+            "title": "30 nuits d'essai",
+            "text": "<p>Dormez dessus un mois entier. Si ça ne va pas, nous reprenons l'oreiller.</p>"
           }
         },
         "t2": {
@@ -76,8 +76,8 @@
           "settings": {
             "icon": "local_shipping",
             "filled_icon": false,
-            "title": "Tracked delivery",
-            "text": "<p>A tracking number the moment it ships, on every order.</p>"
+            "title": "Livraison suivie",
+            "text": "<p>Un numéro de suivi dès l'expédition, sur chaque commande.</p>"
           }
         },
         "t3": {
@@ -85,8 +85,8 @@
           "settings": {
             "icon": "local_laundry_service",
             "filled_icon": false,
-            "title": "Washable covers",
-            "text": "<p>Zip along the long side, machine wash at 30 °C. No dry cleaning.</p>"
+            "title": "Housses lavables",
+            "text": "<p>Zip sur le côté long, lavage machine à 30 °C. Pas de nettoyage à sec.</p>"
           }
         },
         "t4": {
@@ -94,8 +94,8 @@
           "settings": {
             "icon": "lock",
             "filled_icon": false,
-            "title": "Secure payment",
-            "text": "<p>Card, PayPal, Apple Pay and Google Pay.</p>"
+            "title": "Paiement sécurisé",
+            "text": "<p>Carte, PayPal, Apple Pay et Google Pay.</p>"
           }
         }
       },
@@ -134,9 +134,9 @@
     "gamme": {
       "type": "featured-collection",
       "settings": {
-        "title": "The range",
+        "title": "La gamme",
         "heading_size": "h1",
-        "description": "<p>Two pillows, three covers, two breathing accessories. Nothing else: the rest didn't pass the test.</p>",
+        "description": "<p>Deux oreillers, trois taies, deux accessoires de respiration. Rien d'autre : le reste n'a pas passé le test.</p>",
         "show_description": true,
         "description_style": "body",
         "color_scheme": "background-1",
@@ -161,7 +161,7 @@
         "h": {
           "type": "heading",
           "settings": {
-            "title": "A pillow can't be judged <b>by hand</b>.",
+            "title": "Un oreiller ne se juge pas <b>à la main</b>.",
             "title_highlight_color": "#43789A",
             "heading_size": "h1"
           }
@@ -169,13 +169,13 @@
         "t": {
           "type": "text",
           "settings": {
-            "text": "<p>In a shop you press it with your palm and decide in three seconds. That tells you nothing about what happens six hours later, once your neck has carried the weight of your head all night.</p><p>We start from the opposite end: the position you actually sleep in, and the height it demands. On your side, a gap stays open between your ear and the mattress. That gap can be measured. The shape follows from it, and so does the density.</p><p><strong>One question decides everything: does it hold you?</strong> If the answer is no, it doesn't join the range.</p>"
+            "text": "<p>En magasin, on appuie dessus avec la paume et on décide en trois secondes. Cela ne dit rien de ce qui se passera six heures plus tard, quand votre nuque aura porté le poids de votre tête toute la nuit.</p><p>Nous partons de l'autre bout : la position dans laquelle vous dormez vraiment, et la hauteur qu'elle exige. Sur le côté, un espace reste ouvert entre votre oreille et le matelas. Cet espace se mesure. La forme en découle, la densité aussi.</p><p><strong>Une seule question tranche : est-ce que ça vous tient ?</strong> Si la réponse est non, le produit n'entre pas dans la gamme.</p>"
           }
         },
         "b": {
           "type": "button",
           "settings": {
-            "button_label": "Our story",
+            "button_label": "Notre histoire",
             "button_link": "/pages/notre-histoire",
             "button_style_secondary": true
           }
@@ -203,7 +203,7 @@
         "c": {
           "type": "caption",
           "settings": {
-            "caption": "THE PRINCIPLE",
+            "caption": "LE PRINCIPE",
             "text_style": "caption-with-letter-spacing",
             "text_size": "medium"
           }
@@ -211,7 +211,7 @@
         "h": {
           "type": "heading",
           "settings": {
-            "title": "Three points carry the night: <b>neck, shoulder, hip</b>.",
+            "title": "Trois points portent la nuit : <b>nuque, épaule, hanche</b>.",
             "title_highlight_color": "#43789A",
             "heading_size": "h1"
           }
@@ -219,16 +219,16 @@
         "t": {
           "type": "text",
           "settings": {
-            "text": "<p>On your side, your shoulder takes the weight of your torso and your hip sinks in. The pelvis tilts, the lower back compensates. That imbalance is what wakes you at three in the morning — not the noise.</p>",
+            "text": "<p>Sur le côté, votre épaule encaisse le poids du buste et votre hanche s'enfonce. Le bassin bascule, le bas du dos compense. C'est ce déséquilibre qui vous réveille à trois heures du matin — pas le bruit.</p>",
             "text_style": "body"
           }
         },
         "i": {
           "type": "text_with_icon",
           "settings": {
-            "text_1": "The central notch cradles the head without lifting it",
-            "text_2": "The side hollow frees the shoulder instead of crushing it",
-            "text_3": "The lower curve keeps the pelvis in line",
+            "text_1": "Le creux central berce la tête sans la soulever",
+            "text_2": "Le creux latéral libère l'épaule au lieu de l'écraser",
+            "text_3": "La courbe basse garde le bassin dans l'axe",
             "icon_1": "check_circle",
             "icon_2": "check_circle",
             "icon_3": "check_circle",
@@ -244,7 +244,7 @@
         "b": {
           "type": "button",
           "settings": {
-            "button_label": "See the Appui pillow",
+            "button_label": "Voir l'oreiller Appui",
             "button_link": "/products/oreiller-appui-soutien-3-zones"
           }
         }
@@ -283,7 +283,7 @@
         "r1": {
           "type": "row",
           "settings": {
-            "benefit": "Shape drawn from an actual sleeping position",
+            "benefit": "Forme dessinée à partir d'une vraie position de sommeil",
             "us": true,
             "others": false
           }
@@ -291,7 +291,7 @@
         "r2": {
           "type": "row",
           "settings": {
-            "benefit": "Height matched to your shoulder-to-ear gap",
+            "benefit": "Hauteur ajustée à l'écart entre l'épaule et l'oreille",
             "us": true,
             "others": false
           }
@@ -299,7 +299,7 @@
         "r3": {
           "type": "row",
           "settings": {
-            "benefit": "Fill that recovers its shape, without packing down",
+            "benefit": "Garnissage qui reprend sa forme, sans tassement",
             "us": true,
             "others": false
           }
@@ -307,7 +307,7 @@
         "r4": {
           "type": "row",
           "settings": {
-            "benefit": "Removable cover, machine washable at 30 °C",
+            "benefit": "Housse déhoussable, lavable en machine à 30 °C",
             "us": true,
             "others": false
           }
@@ -315,7 +315,7 @@
         "r5": {
           "type": "row",
           "settings": {
-            "benefit": "Dimensions, materials and weight stated on the page",
+            "benefit": "Dimensions, matières et poids indiqués sur la page",
             "us": true,
             "others": false
           }
@@ -323,7 +323,7 @@
         "r6": {
           "type": "row",
           "settings": {
-            "benefit": "30 nights to decide, product refunded",
+            "benefit": "30 nuits pour décider, produit remboursé",
             "us": true,
             "others": false
           }
@@ -340,16 +340,16 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "title": "What changes, <b>concretely</b>.",
+        "title": "Ce qui change, <b>concrètement</b>.",
         "title_highlight_color": "#43789A",
         "heading_size": "h1",
-        "text": "<p>Compared with a supermarket pillow at the same use.</p>",
+        "text": "<p>Face à un oreiller de grande surface, au même usage.</p>",
         "color_scheme": "background-1",
         "layout": "table_second",
         "style": "centered",
-        "us_label": "OURS",
+        "us_label": "NOUS",
         "us_label_size": 18,
-        "others_label": "Ordinary pillow",
+        "others_label": "Oreiller ordinaire",
         "others_label_size": 18,
         "checkmark_style": "regular",
         "checkmark_color": "#ffffff",
@@ -376,24 +376,24 @@
         "a1": {
           "type": "column",
           "settings": {
-            "title": "[REPLACE WITH A REAL REVIEW]",
-            "text": "<p>This section is deliberately switched off. Only publish it with real, verifiable customer reviews: an invented testimonial is a misleading commercial practice under EU Directive 2005/29/EC and its national transpositions, and under the FTC Act in the United States.</p>",
+            "title": "[À REMPLACER PAR UN AVIS RÉEL]",
+            "text": "<p>Section volontairement désactivée. Ne la publiez qu'avec de vrais avis clients vérifiables : un témoignage inventé est une pratique commerciale trompeuse au sens de la directive 2005/29/CE et de ses transpositions nationales, et du FTC Act aux États-Unis.</p>",
             "author": "—"
           }
         },
         "a2": {
           "type": "column",
           "settings": {
-            "title": "[REPLACE WITH A REAL REVIEW]",
-            "text": "<p>Connect a verified-review app instead (Judge.me, Loox, Trustpilot) that collects reviews after purchase.</p>",
+            "title": "[À REMPLACER PAR UN AVIS RÉEL]",
+            "text": "<p>Branchez plutôt une application d'avis vérifiés (Judge.me, Loox, Trustpilot) qui collecte les avis après achat.</p>",
             "author": "—"
           }
         },
         "a3": {
           "type": "column",
           "settings": {
-            "title": "[REPLACE WITH A REAL REVIEW]",
-            "text": "<p>Switch this section on once you have at least a dozen genuine reviews.</p>",
+            "title": "[À REMPLACER PAR UN AVIS RÉEL]",
+            "text": "<p>Activez cette section une fois que vous avez au moins une dizaine d'avis authentiques.</p>",
             "author": "—"
           }
         }
@@ -404,7 +404,7 @@
         "a3"
       ],
       "settings": {
-        "title": "What our customers say",
+        "title": "Ce qu'en disent nos clients",
         "heading_size": "h1",
         "color_scheme": "background-2",
         "column_alignment": "center",
@@ -420,46 +420,46 @@
         "q1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Appui or Aplomb — which one?",
+            "heading": "Appui ou Aplomb : lequel ?",
             "icon": "help",
             "filled_icon": false,
-            "row_content": "<p><strong>Appui</strong> if you mostly sleep on your side: its contoured shape frees the shoulder and steadies the hip. <strong>Aplomb</strong> if you sleep on your back or keep changing position: its twin bolster fills the cervical hollow without lifting your head.</p>"
+            "row_content": "<p><strong>Appui</strong> si vous dormez surtout sur le côté : sa forme contourée libère l'épaule et cale la hanche. <strong>Aplomb</strong> si vous dormez sur le dos ou si vous changez sans cesse de position : son double bourrelet comble le creux cervical sans soulever la tête.</p>"
           }
         },
         "q2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "How do I wash it?",
+            "heading": "Comment le laver ?",
             "icon": "local_laundry_service",
             "filled_icon": false,
-            "row_content": "<p>The cover comes off via the zip on the long side and goes in the machine at 30 °C on a delicate cycle. Air dry, no tumble dryer, no iron. The pillow itself is spot-cleaned.</p>"
+            "row_content": "<p>La housse se retire par le zip du côté long et passe en machine à 30 °C, cycle délicat. Séchage à l'air libre, pas de sèche-linge, pas de fer. L'oreiller lui-même se nettoie par tamponnage localisé.</p>"
           }
         },
         "q3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Will it go flat?",
+            "heading": "Va-t-il s'affaisser ?",
             "icon": "schedule",
             "filled_icon": false,
-            "row_content": "<p>Appui uses a high-resilience fibre designed to recover its volume after compression. Aplomb uses perforated memory foam. Neither is a cheap fill that packs down and stays down. A weekly shake keeps the loft.</p>"
+            "row_content": "<p>L'Appui utilise une fibre haute résilience conçue pour reprendre son volume après compression. L'Aplomb utilise une mousse à mémoire de forme perforée. Ni l'un ni l'autre n'est un garnissage bon marché qui se tasse et reste tassé. Un secouage hebdomadaire entretient le gonflant.</p>"
           }
         },
         "q4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What if it isn't right for me?",
+            "heading": "Et s'il ne me convient pas ?",
             "icon": "replay",
             "filled_icon": false,
-            "row_content": "<p>You have 30 nights to try the pillows at home. An email is enough, no form. This commercial guarantee sits on top of your statutory rights — it does not replace them. In the EU that means your 14-day right of withdrawal and the 2-year legal guarantee of conformity.</p><p><a href=\"/pages/garantie-30-nuits\">Read the guarantee terms</a></p>"
+            "row_content": "<p>Vous avez 30 nuits pour essayer les oreillers chez vous. Un e-mail suffit, pas de formulaire. Cette garantie commerciale s'ajoute à vos droits légaux — elle ne les remplace pas. Dans l'Union européenne, cela signifie votre droit de rétractation de 14 jours et la garantie légale de conformité de 2 ans.</p><p><a href='/pages/garantie-30-nuits'>Lire les conditions de la garantie</a></p>"
           }
         },
         "q5": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Are the strips a medical device?",
+            "heading": "Les bandelettes sont-elles un dispositif médical ?",
             "icon": "info",
             "filled_icon": false,
-            "row_content": "<p>No. They are comfort accessories with a purely mechanical effect. They do not treat, prevent or cure any condition — in particular not sleep apnoea. The contraindications are listed on every product page: read them before buying.</p>"
+            "row_content": "<p>Non. Ce sont des accessoires de confort à effet purement mécanique. Elles ne traitent, ne préviennent et ne soignent aucune pathologie — en particulier pas l'apnée du sommeil. Les contre-indications figurent sur chaque fiche produit : lisez-les avant d'acheter.</p>"
           }
         }
       },
@@ -482,7 +482,7 @@
         "desktop_layout": "image_second",
         "padding_top": 64,
         "padding_bottom": 48,
-        "title": "The questions people <b>actually</b> ask.",
+        "title": "Les questions <b>qu'on nous pose vraiment</b>.",
         "title_highlight_color": "#43789A"
       }
     },
@@ -492,7 +492,7 @@
         "h": {
           "type": "heading",
           "settings": {
-            "title": "One letter, not a flood of offers.",
+            "title": "Une lettre, pas une pluie de promos.",
             "title_highlight_color": "#43789A",
             "heading_size": "h2"
           }
@@ -500,7 +500,7 @@
         "p": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>New arrivals, restocks, and what we learn about sleep. Two emails a month at most, one-click unsubscribe.</p>"
+            "text": "<p>Nouveautés, remises en stock, et ce qu'on apprend sur le sommeil. Deux e-mails par mois au maximum, désinscription en un clic.</p>"
           }
         },
         "e": {
@@ -515,7 +515,7 @@
       ],
       "settings": {
         "button_type": "solid",
-        "button_label": "Sign me up",
+        "button_label": "Je m'inscris",
         "button_style_secondary": false,
         "color_scheme": "background-2",
         "full_width": true,
@@ -547,28 +547,28 @@
         "d1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "What makes us different",
+            "heading": "Ce qui nous distingue",
             "icon": "help",
             "filled_icon": false,
-            "row_content": "<p>Most pillows are designed to look good in a shop: thick, white, well plumped. Nobody sleeps like that. Every curve, every material here answers a single question: does it help you sleep?</p>"
+            "row_content": "<p>La plupart des oreillers sont conçus pour bien paraître en rayon : épais, blancs, bien gonflés. Personne ne dort comme ça. Ici, chaque courbe et chaque matière répond à une seule question : est-ce que ça aide à dormir ?</p>"
           }
         },
         "d2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Built around how you actually sleep",
+            "heading": "Conçu pour la façon dont vous dormez vraiment",
             "icon": "bedtime",
             "filled_icon": false,
-            "row_content": "<p>On your side, on your back, or changing position three times a night. We start from real habits, not from categories printed on a box. Every product page says precisely who the pillow is for — and who it isn't for.</p>"
+            "row_content": "<p>Sur le côté, sur le dos, ou en changeant trois fois de position dans la nuit. Nous partons d'habitudes réelles, pas de catégories imprimées sur un carton. Chaque fiche produit dit précisément à qui l'oreiller s'adresse — et à qui il ne s'adresse pas.</p>"
           }
         },
         "d3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Every material earns its place",
+            "heading": "Chaque matière justifie sa place",
             "icon": "check_circle",
             "filled_icon": false,
-            "row_content": "<p>Nothing goes into a product because it reads well on a label. The fabrics breathe, the fills hold their shape, the covers come off and go in the machine. If it doesn't improve the night, it doesn't go in.</p>"
+            "row_content": "<p>Rien n'entre dans un produit parce que ça se lit bien sur une étiquette. Les tissus respirent, les garnissages tiennent leur forme, les housses se retirent et passent en machine. Si ça n'améliore pas la nuit, ça n'y va pas.</p>"
           }
         }
       },
@@ -578,8 +578,8 @@
         "d3"
       ],
       "settings": {
-        "caption": "WHERE WE STAND",
-        "title": "We start from the position, <b>not the shelf</b>.",
+        "caption": "NOTRE POSITION",
+        "title": "On part de la position, <b>pas du rayon</b>.",
         "title_highlight_color": "#43789A",
         "heading_size": "h1",
         "heading_alignment": "center",
