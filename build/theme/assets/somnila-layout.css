@@ -1,0 +1,32 @@
+/* --- passe design 5 : composition, rythme, alignements --- */
+/* une seule échelle d'espacement pour toute la page */
+:root{--s-tight:clamp(3.2rem,3.6vw,4.4rem);--s-mid:clamp(4.8rem,5.6vw,8rem);--s-sec:clamp(6.4rem,7vw,10rem);--s-big:clamp(8rem,9vw,12.8rem)}
+[id$="__positions"] [class*="-padding"],[id$="__why"] [class*="-padding"],[id$="__problem"] [class*="-padding"],[id$="__compare"] [class*="-padding"],[id$="__sets"] [class*="-padding"],[id$="__faq"] [class*="-padding"],[id$="__related"] [class*="-padding"]{padding-top:var(--s-sec)!important;padding-bottom:var(--s-sec)!important}
+[id$="__trial"] .image-with-text{padding-top:var(--s-sec)!important;padding-bottom:var(--s-sec)!important}
+[id$="__founder"]>.rich-text,[id$="__cta"]>.rich-text{padding-top:var(--s-big)!important;padding-bottom:var(--s-big)!important}
+[id$="__neck"] [class*="-padding"]{padding-top:var(--s-mid)!important;padding-bottom:var(--s-mid)!important}
+[id$="__trust"] [class*="-padding"]{padding-top:var(--s-tight)!important;padding-bottom:var(--s-tight)!important}
+[id$="__newsletter"] .newsletter__wrapper{padding-top:var(--s-sec)!important;padding-bottom:var(--s-sec)!important}
+/* titres de section : plus grands, plus serrés, même respiration */
+.multicolumn .title,.featured-collection .title,.collapsible-content__heading,.comparison-table .title,.rich-text__heading,.title.h1{font-size:clamp(3.2rem,3.5vw,4.8rem);line-height:1.04;letter-spacing:-.022em}
+.collapsible-content__header .caption-with-letter-spacing{margin-bottom:1.2rem;display:block}
+.animate-section .title-with-highlight::after{width:6.4rem;height:1.5px;margin-top:1.8rem}
+/* cartes : le lien se cale en bas, quelle que soit la longueur du titre */
+.multicolumn-card__info{flex-direction:column}
+.multicolumn-card__info h3{font-size:2rem!important;line-height:1.2;text-wrap:balance;margin:0}
+.multicolumn-card__info .rte{margin-top:1.1rem;font-size:1.45rem;line-height:1.6}
+.multicolumn-card__info .link{margin-top:auto;padding-top:1.8rem}
+.icon-bar .multicolumn-card__info h3{font-size:1.5rem!important;line-height:1.35;min-height:0}
+/* les corps de texte des cinq cartes démarrent à la même hauteur */
+[id$="__positions"] .multicolumn-card__info h3{min-height:2.4em}
+/* hero : rythme régulier entre le titre, le texte, la preuve et les boutons */
+.hero__heading.hxl{line-height:.96;margin-bottom:0}
+.hero-slide__content .title-with-highlight::after{width:7.2rem;margin-top:2.8rem}
+.hero__text{margin-top:2.4rem}
+.hero__text p{font-size:1.85rem;line-height:1.55;max-width:48rem}
+.hero__text p+p{margin-top:2rem;font-size:1.25rem;letter-spacing:.1em}
+.hero__buttons{margin-top:3.2rem;gap:1.2rem}
+.hero__buttons .button{min-height:5.2rem;padding-inline:2.8rem}
+/* mesure de lecture : jamais plus large que confortable */
+.rich-text__text,.comparison-table__text,.featured-collection__description{max-width:58ch;margin-inline:auto}
+.image-with-text__text{max-width:52ch}

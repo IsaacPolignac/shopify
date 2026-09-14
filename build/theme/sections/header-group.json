@@ -7,7 +7,7 @@
       "settings": {
         "display_id": false,
         "visibility": "always-display",
-        "custom_liquid": "<style>\n#shopify-section-{{ section.id }}{height:0;overflow:hidden;padding:0!important;margin:0!important}\n</style>\n{{ 'somnila-brand.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-ux.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-brand.js' | asset_url | script_tag }}\n{%- if template.name == 'index' -%}<h1 class=\"visually-hidden\">Somnila memory-foam pillows shaped around the way you actually lie</h1>{%- endif -%}"
+        "custom_liquid": "<style>\n#shopify-section-{{ section.id }}{height:0;overflow:hidden;padding:0!important;margin:0!important}\n</style>\n{{ 'somnila-brand.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-layout.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-ux.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-brand.js' | asset_url | script_tag }}\n{%- if template.name == 'index' -%}<h1 class=\"visually-hidden\">Somnila memory-foam pillows shaped around the way you actually lie</h1>{%- endif -%}"
       }
     },
     "annonce": {

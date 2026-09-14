@@ -270,3 +270,59 @@ décide sans toi.
 | Boutons − et + | 25 × 25 px | 43 × 51 px |
 | Quantité sur la fiche produit | absente | présente, à côté du bouton d'ajout |
 | Mention livraison et taxes au panier | absente | sous le bouton de paiement |
+
+## 9. Passe design 5 — composition
+
+14 septembre 2026. Tu as confirmé que la DA et le branding te vont : je n'ai
+donc touché ni la palette, ni les polices, ni la structure des sections. Ce
+qui manquait était la qualité de composition. Tout se joue dans une nouvelle
+feuille, `assets/somnila-layout.css`, chargée entre la couche de marque et la
+couche d'accessibilité.
+
+### Ce qui n'allait pas, mesuré sur la page
+
+1. **Le rythme vertical était arbitraire.** Les sections s'enchaînaient en
+   24, 40, 48, 56, 64 et 72 px de marge intérieure, au gré du réglage posé
+   section par section. L'œil ne trouvait aucune règle.
+2. **Les cartes de la gamme finissaient en dents de scie.** Les titres sur une
+   ou deux lignes décalaient le texte et les liens : « Shop Neck 01 » et
+   « Shop Side 01 » ne tombaient pas à la même hauteur, à 26 px près.
+3. **Les titres de section n'avaient qu'une taille**, quel que soit leur poids
+   dans la page, avec un interligne trop lâche pour du Fraunces.
+4. **Le hero manquait de hiérarchie** : le filet Dawn collait à la descendante
+   du « p » de « Sleep », et les quatre blocs s'enchaînaient sans respiration
+   régulière.
+
+### Ce que j'ai posé
+
+- **Une échelle d'espacement unique**, en quatre valeurs fluides : serré pour
+  la barre de confiance, moyen pour le produit mis en avant, standard pour les
+  sections de contenu, large pour les deux dalles de parole. Chaque section
+  s'y range, sur toutes les largeurs d'écran.
+- **Des cartes alignées au pixel.** Le bloc de texte devient une colonne
+  flexible, le lien se cale en bas, et le titre réserve deux lignes : les cinq
+  titres, les cinq textes et les cinq liens démarrent désormais à la même
+  hauteur.
+- **Une échelle typographique** pour les titres de section, de 32 à 48 px selon
+  la largeur, interligne 1,04, chasse resserrée. Les titres de carte passent à
+  20 px avec `text-wrap: balance`, donc plus de coupure bancale du genre
+  « You like it softer and / lower ».
+- **Un hero rythmé** : filet plus large et plus bas, texte à 18,5 px sur une
+  mesure de 48 rem, ligne de preuve détachée, boutons de 52 px.
+- **Une mesure de lecture** plafonnée à 58 caractères sur les blocs de texte
+  centrés, 52 sur la section essai.
+
+### Mesures avant / après
+
+| Point | Avant | Après |
+| --- | --- | --- |
+| Marges intérieures de section | 24 à 72 px, six valeurs | 4 valeurs fluides, une échelle |
+| Liens des cinq cartes de la gamme | 2 hauteurs différentes | tous à la même hauteur |
+| Départ des textes de carte | 4 hauteurs différentes | tous à la même hauteur |
+| Taille des titres de section | 38 px fixes | 32 à 48 px selon l'écran |
+| Hauteur de l'accueil | 7 697 px | 8 777 px, l'air en plus |
+
+### Et la proposition « catalogue de nuit » ?
+
+Elle reste dans `build/design-v2/`, non appliquée. Tu as tranché : on garde la
+direction actuelle. Le fichier ne gêne rien et documente la piste écartée.

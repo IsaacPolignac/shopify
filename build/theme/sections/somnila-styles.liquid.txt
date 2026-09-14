@@ -2,6 +2,7 @@
 #shopify-section-{{ section.id }}{height:0;overflow:hidden;padding:0!important;margin:0!important}
 </style>
 {{ 'somnila-brand.css' | asset_url | stylesheet_tag }}
+{{ 'somnila-layout.css' | asset_url | stylesheet_tag }}
 {{ 'somnila-ux.css' | asset_url | stylesheet_tag }}
 {{ 'somnila-brand.js' | asset_url | script_tag }}
 {%- if template.name == 'index' -%}<h1 class="visually-hidden">Somnila memory-foam pillows shaped around the way you actually lie</h1>{%- endif -%}
