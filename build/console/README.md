@@ -40,22 +40,31 @@ deux thèmes. `--mute`, qui doublonnait `--ink-3`, a été supprimé.
 le tertiaire tombait à 4,0 L\*, soit un dégradé illisible. Il est maintenant
 de 9,7 L\* en clair et 8,4 L\* en sombre.
 
-**Texte sur fond teinté.** Deux jetons servent uniquement à du texte posé sur
-un fond teinté, jamais à un aplat, une bordure ou un trait de graphique :
-`--ok-tx` sur `--ok-bg`, `--accent-tx` sur `--accent-soft`. En thème sombre ils
-valent leur jeton d'origine, qui passe déjà : seul le clair est assombri.
+**Texte sur fond teinté.** Règle sans exception : un texte posé sur un fond
+teinté utilise la variante `-tx` de la teinte, jamais la couleur d'état
+elle-même. Cinq variantes : `--ok-tx`, `--accent-tx`, `--warn-tx`, `--bad-tx`,
+`--d-pos-tx`. En thème sombre chacune est un alias de sa couleur d'origine,
+qui passe déjà : seul le clair est assombri. Les icônes, bordures,
+remplissages et marks de graphique gardent `--ok`, `--accent`, `--warn`,
+`--bad`, `--d-pos`.
 
-Les quatre familles teintées, thème clair, pire cas mesuré :
-`--accent-tx` 4,74 · `--warn` 4,53 · `--bad` 4,73 · `--ok-tx` 5,56.
-En sombre : 9,87 · 7,49 · 5,90 · 7,05.
+Thème clair, pire cas mesuré après : `--accent-tx` 4,74 · `--warn-tx` 5,16 ·
+`--bad-tx` 5,28 · `--ok-tx` 5,56 · `--d-pos-tx` 5,17.
+Thème sombre : 9,87 · 7,49 · 5,90 · 7,05 · 5,34.
 
 Le point des pastilles utilise `background:currentColor` : il suit la couleur
-du texte, par construction.
+du texte, par construction. L'icône du bandeau de séquencement est épinglée à
+`var(--warn)` pour rester une icône d'état.
 
-Restent sous 4,5:1 en clair, sur fond neutre donc hors du périmètre « fond
-teinté » : le lien accent dans une note `n-info` (3,83:1 sur `--surface-2`) et
-le compteur de liste complète posé en ligne par `refreshCounts` (4,10:1 sur
-`--surface`).
+**Aucune couleur n'est écrite en JavaScript.** Les états de texte passent par
+des classes (`.is-done`, `.is-ok`, `.is-bad`) posées avec `classList`, jamais
+par `style.color`. Une couleur écrite en JS n'apparaîtrait ni dans le système
+de jetons ni dans le script de balayage.
+
+**Balayage.** `scanall.cjs` parcourt tous les éléments porteurs de texte, dans
+les 17 vues démasquées et dans les deux thèmes, calcule le fond réel avec
+compositing alpha et `color()`, et liste toute paire sous 4,5:1. Résultat
+actuel : aucune, teinté comme neutre.
 
 ## Vérification
 `build/console/verif/` n'est pas versionné. Les 11 critères ont été validés par

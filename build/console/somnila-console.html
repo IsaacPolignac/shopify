@@ -21,6 +21,9 @@
   --ink-3:#5E6D84;           /* tertiaire, jeton unique : >= 4,5:1 sur canvas, surface, surface-2 et sunken */
   --ok-tx:#0A6F4D;           /* vert lisible sur fond teinte vert */
   --accent-tx:#9A5F2E;       /* accent lisible sur --accent-soft ; texte seulement */
+  --warn-tx:#8E5C07;         /* orange lisible sur --warn-bg ; texte seulement */
+  --bad-tx:#B4342A;          /* rouge lisible sur --bad-bg ; texte seulement */
+  --d-pos-tx:#1F62B4;        /* bleu lisible sur la ligne tr.hi ; texte seulement */
   --solid:#1F2837;
   --solid-ink:#FFFFFF;
   --accent:#B0703F;          /* accent UI lisible sur clair */
@@ -55,7 +58,10 @@
     --ink-2:#93A3B8;
     --ink-3:#7D8DA1;
     --ok-tx:#3FBF90;
-    --accent-tx:#F0B79B;       /* en sombre : identique a --accent, rien ne change */
+    --accent-tx:#F0B79B;       /* en sombre : les trois -tx valent leur couleur d'etat */
+    --warn-tx:#D9A445;
+    --bad-tx:#E4726F;
+    --d-pos-tx:#4E95E9;
     --solid:#F0B79B;
     --solid-ink:#16202D;
     --accent:#F0B79B;
@@ -77,7 +83,7 @@
 :root[data-theme="dark"]{
   color-scheme:dark;
   --canvas:#0A0E14; --surface:#131A23; --surface-2:#161E28; --sunken:#0D131A;
-  --line:#1F2A38; --line-2:#2C3A4B; --ink:#E8EEF6; --ink-2:#93A3B8; --ink-3:#7D8DA1; --ok-tx:#3FBF90; --accent-tx:#F0B79B;
+  --line:#1F2A38; --line-2:#2C3A4B; --ink:#E8EEF6; --ink-2:#93A3B8; --ink-3:#7D8DA1; --ok-tx:#3FBF90; --accent-tx:#F0B79B; --warn-tx:#D9A445; --bad-tx:#E4726F; --d-pos-tx:#4E95E9;
   --solid:#F0B79B; --solid-ink:#16202D; --accent:#F0B79B; --accent-soft:#201914; --accent-line:#4A362A;
   --ok:#3FBF90; --ok-bg:#0F2419; --warn:#D9A445; --warn-bg:#241C0E; --bad:#E4726F; --bad-bg:#26120F;
   --d-serie:#D9773E; --d-pos:#3987e5; --d-neg:#e66767; --d-grid:#1C2533;
@@ -257,8 +263,8 @@ svg{display:block}
 .b-live{background:var(--accent-soft);color:var(--accent-tx);border-color:var(--accent-line)}
 .b-ok{background:var(--ok-bg);color:var(--ok-tx);border-color:color-mix(in srgb,var(--ok) 28%,transparent)}
 .b-soon{background:var(--sunken);color:var(--ink-3);border-color:var(--line)}
-.b-warn{background:var(--warn-bg);color:var(--warn);border-color:color-mix(in srgb,var(--warn) 30%,transparent)}
-.b-bad{background:var(--bad-bg);color:var(--bad);border-color:color-mix(in srgb,var(--bad) 30%,transparent)}
+.b-warn{background:var(--warn-bg);color:var(--warn-tx);border-color:color-mix(in srgb,var(--warn) 30%,transparent)}
+.b-bad{background:var(--bad-bg);color:var(--bad-tx);border-color:color-mix(in srgb,var(--bad) 30%,transparent)}
 
 /* boutons */
 .bt{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:550;padding:6px 12px;border-radius:var(--r1);
@@ -295,7 +301,7 @@ tbody tr:last-child td{border-bottom:none}
 tbody tr:hover td{background:var(--surface-2)}
 tr.hi td{background:color-mix(in srgb,var(--d-pos) 8%,var(--surface))}
 tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
-.pos{color:var(--d-pos);font-weight:600}
+.pos{color:var(--d-pos-tx);font-weight:600}
 .neg{color:var(--d-neg);font-weight:600}
 @media (max-width:640px){
   table.st thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -313,8 +319,12 @@ tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
 .nt h4{margin-bottom:4px;font-size:.83rem}
 .nt p{color:inherit;opacity:.9;margin-bottom:.45em;max-width:74ch}
 .nt p:last-child{margin-bottom:0}
-.n-warn{background:var(--warn-bg);border-color:color-mix(in srgb,var(--warn) 26%,transparent);color:var(--warn)}
-.n-bad{background:var(--bad-bg);border-color:color-mix(in srgb,var(--bad) 26%,transparent);color:var(--bad)}
+.lk{color:var(--accent-tx);font-weight:600;text-decoration:underline;
+  text-decoration-color:color-mix(in srgb,var(--accent-tx) 42%,transparent);
+  text-decoration-thickness:1px;text-underline-offset:2px;transition:text-decoration-color .12s ease}
+.lk:hover{text-decoration-color:var(--accent-tx);text-decoration-thickness:2px}
+.n-warn{background:var(--warn-bg);border-color:color-mix(in srgb,var(--warn) 26%,transparent);color:var(--warn-tx)}
+.n-bad{background:var(--bad-bg);border-color:color-mix(in srgb,var(--bad) 26%,transparent);color:var(--bad-tx)}
 .n-ok{background:var(--ok-bg);border-color:color-mix(in srgb,var(--ok) 26%,transparent);color:var(--ok-tx)}
 .n-info{background:var(--surface-2);border-color:var(--line);color:var(--ink-2)}
 
@@ -510,7 +520,7 @@ tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
 }
 #v-log .lede{color:var(--ink-3)}
 .lgc.is-ok{color:var(--ok-tx);background:var(--ok-bg);font-weight:600}
-.lgc.is-bad{color:var(--bad);background:var(--bad-bg);font-weight:600}
+.lgc.is-bad{color:var(--bad-tx);background:var(--bad-bg);font-weight:600}
 .lgt tfoot td{
   position:sticky;bottom:0;z-index:3;background:var(--sunken);border-top:1px solid var(--line-2);
   border-bottom:none;padding:9px 7px;text-align:right;font-family:"Geist Mono",monospace;
@@ -518,7 +528,12 @@ tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
 }
 .lgt tfoot td.d0{z-index:4;background:var(--sunken);text-transform:uppercase;font-size:.63rem;letter-spacing:.06em;color:var(--ink-3)}
 .lgt tfoot td.is-ok{color:var(--ok-tx)}
-.lgt tfoot td.is-bad{color:var(--bad)}
+/* etats de texte poses par classe, jamais par style.color : ils restent
+   visibles pour le systeme de jetons et pour le balayage du DOM */
+[data-count].is-done{color:var(--ok-tx)}
+.tile .n.is-ok{color:var(--ok-tx)}
+.tile .n.is-bad{color:var(--bad-tx)}
+.lgt tfoot td.is-bad{color:var(--bad-tx)}
 .lgt tfoot td.mu{color:var(--ink-3);font-weight:400}
 .lg-leg{display:flex;gap:14px;flex-wrap:wrap;font-size:.73rem;color:var(--ink-3);padding:10px 16px;border-top:1px solid var(--line)}
 .lg-leg span{display:inline-flex;align-items:center;gap:6px}
@@ -530,9 +545,9 @@ tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
 /* ===================== bandeau de sequencement ===================== */
 .seqw{
   display:flex;gap:12px;align-items:flex-start;border-radius:var(--r2);padding:13px 15px;
-  background:var(--warn-bg);border:1px solid color-mix(in srgb,var(--warn) 30%,transparent);color:var(--warn)
+  background:var(--warn-bg);border:1px solid color-mix(in srgb,var(--warn) 30%,transparent);color:var(--warn-tx)
 }
-.seqw>svg{width:18px;height:18px;flex:0 0 auto;stroke-width:2;margin-top:1px}
+.seqw>svg{width:18px;height:18px;flex:0 0 auto;stroke-width:2;margin-top:1px;color:var(--warn)}
 .seqw b{display:block;font-size:.85rem;margin-bottom:3px;color:inherit}
 .seqw p{margin:0;font-size:.82rem;line-height:1.5;color:inherit;opacity:.92;max-width:78ch}
 .seqw ul{margin:7px 0 0;padding-left:1.1em;font-size:.82rem;color:inherit;opacity:.92}
@@ -542,7 +557,7 @@ tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
   padding:1px 7px;border-radius:99px;background:var(--sunken);color:var(--ink-3);border:1px solid var(--line);
   vertical-align:baseline
 }
-.dly.w{background:var(--warn-bg);color:var(--warn);border-color:color-mix(in srgb,var(--warn) 30%,transparent)}
+.dly.w{background:var(--warn-bg);color:var(--warn-tx);border-color:color-mix(in srgb,var(--warn) 30%,transparent)}
 
 /* ===================== decisions enregistrees ===================== */
 .gdec{margin-top:15px;padding-top:14px;border-top:1px solid rgba(255,255,255,.14)}
@@ -911,7 +926,7 @@ tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
 
   <div class="nt n-info mb">
     <h4>Deux vues du même plan</h4>
-    <p>Cette console sert au pilotage quotidien : où tu en es, quoi faire aujourd’hui, quels seuils surveiller. Le <a href="https://claude.ai/artifact/7nCpyrwxC8EvNqd35cdb1z" target="_blank" rel="noopener" style="color:var(--accent);font-weight:600">plan complet</a> est la version rédigée, celle qui explique le raisonnement derrière chaque décision — à lire une fois avant de démarrer, puis à garder sous la main.</p>
+    <p>Cette console sert au pilotage quotidien : où tu en es, quoi faire aujourd’hui, quels seuils surveiller. Le <a class="lk" href="https://claude.ai/artifact/7nCpyrwxC8EvNqd35cdb1z" target="_blank" rel="noopener">plan complet</a> est la version rédigée, celle qui explique le raisonnement derrière chaque décision — à lire une fois avant de démarrer, puis à garder sous la main.</p>
   </div>
 
   <div class="gr g4 mb">
@@ -1875,7 +1890,7 @@ function refreshCounts(){
     var bx=qa("input[type=checkbox]",list), d=0;
     bx.forEach(function(b){ if(b.checked) d++; });
     doneAll+=d; totAll+=bx.length;
-    if(cnt){ cnt.textContent=d+"/"+bx.length; cnt.style.color=(d===bx.length&&bx.length)?"var(--ok)":""; }
+    if(cnt){ cnt.textContent=d+"/"+bx.length; cnt.classList.toggle("is-done", d===bx.length && bx.length>0); }
     var row=qs('[data-prg="'+list.dataset.key+'"]');
     if(row){
       var pc=bx.length?d/bx.length*100:0;
@@ -2310,7 +2325,10 @@ function paintTotals(){
     if(!isFinite(t.cpa)) fn.textContent="saisi dans le journal";
     else if(!isFinite(MARGE)) fn.textContent="renseigne Unit economics pour le comparer";
     else fn.textContent = (t.cpa<=MARGE ? "sous le point mort de "+eur2(MARGE) : "au-dessus du point mort de "+eur2(MARGE));
-    fn.style.color = (isFinite(t.cpa)&&isFinite(MARGE)) ? (t.cpa<=MARGE?"var(--ok)":"var(--bad)") : "";
+    var sous = isFinite(t.cpa)&&isFinite(MARGE) && t.cpa<=MARGE;
+    var au   = isFinite(t.cpa)&&isFinite(MARGE) && t.cpa>MARGE;
+    fn.classList.toggle("is-ok", sous);
+    fn.classList.toggle("is-bad", au);
   }
   var fn2=$("o-cmdreefn");
   if(fn2) fn2.textContent = t.days ? (t.days+" jour"+(t.days>1?"s":"")+" saisi"+(t.days>1?"s":"")+" sur 30") : "saisies dans le journal";
