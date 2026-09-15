@@ -40,12 +40,22 @@ deux thèmes. `--mute`, qui doublonnait `--ink-3`, a été supprimé.
 le tertiaire tombait à 4,0 L\*, soit un dégradé illisible. Il est maintenant
 de 9,7 L\* en clair et 8,4 L\* en sombre.
 
-`--ok-tx` reste distinct de `--ok` : c'est une couleur d'état lisible sur fond
-teinté, pas un jeton de texte.
+**Texte sur fond teinté.** Deux jetons servent uniquement à du texte posé sur
+un fond teinté, jamais à un aplat, une bordure ou un trait de graphique :
+`--ok-tx` sur `--ok-bg`, `--accent-tx` sur `--accent-soft`. En thème sombre ils
+valent leur jeton d'origine, qui passe déjà : seul le clair est assombri.
 
-Deux couleurs restent sous 4,5:1 en thème clair, hors périmètre des jetons de
-texte : `--accent` sur `--accent-soft` (3,67:1) et `--ok` sur `--ok-bg`
-(3,68:1), toutes deux sur des pastilles d'état.
+Les quatre familles teintées, thème clair, pire cas mesuré :
+`--accent-tx` 4,74 · `--warn` 4,53 · `--bad` 4,73 · `--ok-tx` 5,56.
+En sombre : 9,87 · 7,49 · 5,90 · 7,05.
+
+Le point des pastilles utilise `background:currentColor` : il suit la couleur
+du texte, par construction.
+
+Restent sous 4,5:1 en clair, sur fond neutre donc hors du périmètre « fond
+teinté » : le lien accent dans une note `n-info` (3,83:1 sur `--surface-2`) et
+le compteur de liste complète posé en ligne par `refreshCounts` (4,10:1 sur
+`--surface`).
 
 ## Vérification
 `build/console/verif/` n'est pas versionné. Les 11 critères ont été validés par

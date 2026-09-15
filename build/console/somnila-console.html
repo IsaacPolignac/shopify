@@ -20,6 +20,7 @@
   --ink-2:#48556B;           /* recule pour garder un ecart net avec --ink-3 */
   --ink-3:#5E6D84;           /* tertiaire, jeton unique : >= 4,5:1 sur canvas, surface, surface-2 et sunken */
   --ok-tx:#0A6F4D;           /* vert lisible sur fond teinte vert */
+  --accent-tx:#9A5F2E;       /* accent lisible sur --accent-soft ; texte seulement */
   --solid:#1F2837;
   --solid-ink:#FFFFFF;
   --accent:#B0703F;          /* accent UI lisible sur clair */
@@ -54,6 +55,7 @@
     --ink-2:#93A3B8;
     --ink-3:#7D8DA1;
     --ok-tx:#3FBF90;
+    --accent-tx:#F0B79B;       /* en sombre : identique a --accent, rien ne change */
     --solid:#F0B79B;
     --solid-ink:#16202D;
     --accent:#F0B79B;
@@ -75,7 +77,7 @@
 :root[data-theme="dark"]{
   color-scheme:dark;
   --canvas:#0A0E14; --surface:#131A23; --surface-2:#161E28; --sunken:#0D131A;
-  --line:#1F2A38; --line-2:#2C3A4B; --ink:#E8EEF6; --ink-2:#93A3B8; --ink-3:#7D8DA1; --ok-tx:#3FBF90;
+  --line:#1F2A38; --line-2:#2C3A4B; --ink:#E8EEF6; --ink-2:#93A3B8; --ink-3:#7D8DA1; --ok-tx:#3FBF90; --accent-tx:#F0B79B;
   --solid:#F0B79B; --solid-ink:#16202D; --accent:#F0B79B; --accent-soft:#201914; --accent-line:#4A362A;
   --ok:#3FBF90; --ok-bg:#0F2419; --warn:#D9A445; --warn-bg:#241C0E; --bad:#E4726F; --bad-bg:#26120F;
   --d-serie:#D9773E; --d-pos:#3987e5; --d-neg:#e66767; --d-grid:#1C2533;
@@ -157,7 +159,7 @@ svg{display:block}
 .side__foot{flex:0 0 auto;border-top:1px solid var(--line);padding:10px 12px;display:flex;align-items:center;gap:9px}
 .side__foot .fx{font-size:.7rem;color:var(--ink-3);line-height:1.35;min-width:0}
 .side__foot .fx b{display:block;color:var(--ink-2);font-weight:600;font-size:.73rem}
-.plan{margin-left:auto;font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:99px;background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-line);flex:0 0 auto}
+.plan{margin-left:auto;font-size:.64rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 7px;border-radius:99px;background:var(--accent-soft);color:var(--accent-tx);border:1px solid var(--accent-line);flex:0 0 auto}
 
 /* --- tiroir mobile --- */
 @media (max-width:1040px){
@@ -252,8 +254,8 @@ svg{display:block}
 .bg{display:inline-flex;align-items:center;gap:5px;font-size:.705rem;font-weight:550;padding:2px 8px 2px 7px;border-radius:99px;border:1px solid transparent;white-space:nowrap;line-height:1.5}
 .bg i{width:5px;height:5px;border-radius:50%;background:currentColor;flex:0 0 auto}
 .bg svg{width:11px;height:11px;stroke-width:2.4;flex:0 0 auto}
-.b-live{background:var(--accent-soft);color:var(--accent);border-color:var(--accent-line)}
-.b-ok{background:var(--ok-bg);color:var(--ok);border-color:color-mix(in srgb,var(--ok) 28%,transparent)}
+.b-live{background:var(--accent-soft);color:var(--accent-tx);border-color:var(--accent-line)}
+.b-ok{background:var(--ok-bg);color:var(--ok-tx);border-color:color-mix(in srgb,var(--ok) 28%,transparent)}
 .b-soon{background:var(--sunken);color:var(--ink-3);border-color:var(--line)}
 .b-warn{background:var(--warn-bg);color:var(--warn);border-color:color-mix(in srgb,var(--warn) 30%,transparent)}
 .b-bad{background:var(--bad-bg);color:var(--bad);border-color:color-mix(in srgb,var(--bad) 30%,transparent)}
@@ -313,7 +315,7 @@ tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
 .nt p:last-child{margin-bottom:0}
 .n-warn{background:var(--warn-bg);border-color:color-mix(in srgb,var(--warn) 26%,transparent);color:var(--warn)}
 .n-bad{background:var(--bad-bg);border-color:color-mix(in srgb,var(--bad) 26%,transparent);color:var(--bad)}
-.n-ok{background:var(--ok-bg);border-color:color-mix(in srgb,var(--ok) 26%,transparent);color:var(--ok)}
+.n-ok{background:var(--ok-bg);border-color:color-mix(in srgb,var(--ok) 26%,transparent);color:var(--ok-tx)}
 .n-info{background:var(--surface-2);border-color:var(--line);color:var(--ink-2)}
 
 /* segmenté */
@@ -412,7 +414,7 @@ tr.hi:hover td{background:color-mix(in srgb,var(--d-pos) 12%,var(--surface))}
   white-space:nowrap;overflow:hidden;transform-origin:left center}
 .sg-a{background:var(--sunken);color:var(--ink-2);border:1px solid var(--line-2)}
 .sg-b{background:var(--solid);color:var(--solid-ink)}
-.sg-c{background:var(--accent-soft);color:var(--accent);border:1px dashed var(--accent-line)}
+.sg-c{background:var(--accent-soft);color:var(--accent-tx);border:1px dashed var(--accent-line)}
 .anim .sg{animation:gw .6s cubic-bezier(.22,.8,.3,1) both}
 .anim .lane:nth-child(2) .sg{animation-delay:.09s}
 .anim .lane:nth-child(3) .sg{animation-delay:.18s}
