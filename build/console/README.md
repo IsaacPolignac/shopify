@@ -31,10 +31,21 @@ sur un élément masqué. `afterprint` restaure l'état exact d'avant.
 rendue depuis elle, et le journal s'en sert pour colorer ses colonnes
 calculées. Une seule écriture des valeurs dans le fichier.
 
-**Jetons de contraste.** `--mute` et `--ok-tx` existent parce que `--ink-3` et
-`--ok` passent sous 4,5:1 sur les fonds des nouvelles vues. Le même défaut
-existe dans les vues plus anciennes : non corrigé ici pour ne pas restyler
-l'application entière sans arbitrage.
+**Jetons de texte.** Trois niveaux, un seul jeton par niveau :
+`--ink` (primaire), `--ink-2` (secondaire), `--ink-3` (tertiaire). Tous
+mesurés au-dessus de 4,5:1 sur les quatre fonds de l'application, dans les
+deux thèmes. `--mute`, qui doublonnait `--ink-3`, a été supprimé.
+
+`--ink-2` a reculé en thème clair (#55637A → #48556B) : sans ça, l'écart avec
+le tertiaire tombait à 4,0 L\*, soit un dégradé illisible. Il est maintenant
+de 9,7 L\* en clair et 8,4 L\* en sombre.
+
+`--ok-tx` reste distinct de `--ok` : c'est une couleur d'état lisible sur fond
+teinté, pas un jeton de texte.
+
+Deux couleurs restent sous 4,5:1 en thème clair, hors périmètre des jetons de
+texte : `--accent` sur `--accent-soft` (3,67:1) et `--ok` sur `--ok-bg`
+(3,68:1), toutes deux sur des pastilles d'état.
 
 ## Vérification
 `build/console/verif/` n'est pas versionné. Les 11 critères ont été validés par
