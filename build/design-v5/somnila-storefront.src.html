@@ -1,0 +1,1273 @@
+<title>Somnila Storefront</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,0..100,0..1;1,9..144,400..800,0..100,0..1&family=Manrope:wght@400..800&display=swap">
+<style>
+/* Somnila brand book v2, "night and dawn". One light world, painted explicitly. */
+:root{
+  --cloud:#F7F9FC; --mist:#DCE8F2; --mist-2:#EAF1F8; --night:#1E2A3A; --night-2:#28374B; --dawn:#F0B79B; --dawn-soft:#FBE7DC;
+  --ink:#1E2A3A; --ink-2:#556676; --on-night:#F7F9FC; --on-night-2:#B6C3D1; --dawn-tx:#8A5428;
+  --paper:#FFFFFF; --line:rgba(30,42,58,.13); --line-2:rgba(30,42,58,.24);
+  --c-side:#1E2A3A; --c-back:#7F97B2; --c-front:#E39A74;
+  --shadow:0 30px 60px -30px rgba(30,42,58,.38); --shadow-sm:0 12px 28px -16px rgba(30,42,58,.32);
+  --f-d:"Fraunces", "Iowan Old Style", Georgia, serif; --f-u:"Manrope", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --g:clamp(16px,4vw,48px); --sec:clamp(72px,10vw,140px);
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:90px}
+body{margin:0;background:var(--cloud);color:var(--ink);font:400 16px/1.6 var(--f-u);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--night);outline-offset:3px;border-radius:6px}
+.night :focus-visible{outline-color:var(--dawn)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.wrap{max-width:1320px;margin-inline:auto;padding-inline:var(--g)}
+.num{font-variant-numeric:tabular-nums}
+h1,h2,h3,.d{font-family:var(--f-d);font-weight:600;font-variation-settings:"SOFT" 100,"WONK" 0;letter-spacing:-.025em;text-wrap:balance;margin:0}
+h2{font-size:clamp(40px,5.6vw,80px);line-height:.98;letter-spacing:-.035em}
+h3{font-size:24px;line-height:1.15;letter-spacing:-.01em}
+p{margin:0}
+.it{font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1}
+.lede{font-size:clamp(17px,1.45vw,19.5px);line-height:1.6;color:var(--ink-2);max-width:46ch}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font:650 12px/1.2 var(--f-u);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+.eyebrow::before{content:"";width:28px;height:1.5px;background:currentColor;opacity:.7}
+.night{background:var(--night);color:var(--on-night)}
+.night .eyebrow{color:var(--on-night-2)}
+.sec{padding-block:var(--sec)}
+.head{display:grid;gap:18px;max-width:900px;margin-bottom:clamp(36px,5vw,64px)}
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,64px)}
+.head-row .head{margin:0}
+.link{font-weight:650;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px;text-decoration-color:var(--line-2);transition:text-decoration-color .2s}
+.link:hover{text-decoration-color:currentColor}
+.arrow{display:inline-flex;align-items:center;gap:10px;font-weight:650;text-decoration:none;min-height:44px}
+.arrow svg{transition:transform .3s var(--ease)}
+.arrow:hover svg{transform:translateX(5px)}
+.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;border:0;background:var(--night);color:var(--on-night);font:650 15.5px/1 var(--f-u);text-decoration:none;white-space:nowrap;overflow:hidden;isolation:isolate;transition:transform .25s var(--ease),box-shadow .25s}
+.btn::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(110deg,transparent 30%,rgba(240,183,155,.35) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 34px -16px rgba(30,42,58,.6)}
+.btn:hover::after{transform:translateX(120%)}
+.btn:active{transform:scale(.98)}
+.btn--ghost{background:transparent;color:var(--night);box-shadow:inset 0 0 0 1.5px var(--night)}
+.btn--light{background:var(--cloud);color:var(--night)}
+.btn--block{width:100%}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.chip{position:relative;display:inline-flex}
+.chip input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;background:rgba(255,255,255,.72);box-shadow:inset 0 0 0 1.5px var(--line-2);font:650 14.5px/1 var(--f-u);transition:background .25s,color .25s,box-shadow .25s,transform .25s var(--ease)}
+.chip:hover span{box-shadow:inset 0 0 0 1.5px var(--night);transform:translateY(-1px)}
+.chip input:checked + span{background:var(--night);color:var(--on-night);box-shadow:none}
+.chip input:focus-visible + span{outline:2px solid var(--night);outline-offset:3px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.sw{position:relative;display:inline-flex}
+.sw input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.sw span{width:36px;height:36px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(30,42,58,.2);transition:transform .25s var(--ease),box-shadow .25s}
+.sw input:checked + span{box-shadow:inset 0 0 0 1px rgba(30,42,58,.2),0 0 0 3px var(--cloud),0 0 0 4.5px var(--night)}
+.sw:hover span{transform:translateY(-2px)}
+.sw input:focus-visible + span{outline:2px solid var(--night);outline-offset:6px}
+.swatches{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.opt{font-size:14px;color:var(--ink-2)}
+.opt b{color:var(--ink);font-weight:650}
+.price{font:700 17px/1.2 var(--f-u);font-variant-numeric:tabular-nums}
+.save{font:650 13px/1.35 var(--f-u);color:var(--ink-2)}
+.save b{color:var(--dawn-tx)}
+.note{font-size:13.5px;color:var(--ink-2)}
+/* scroll-linked rise: transform only, so nothing is ever hidden at rest */
+@supports (animation-timeline: view()){
+  .rv{animation:rv linear both;animation-timeline:view();animation-range:entry 0% entry 55%}
+  @keyframes rv{from{transform:translateY(46px)}to{transform:none}}
+}
+
+/* ---------------- header ---------------- */
+.ann{background:var(--night);color:var(--on-night);font:650 12.5px/1.3 var(--f-u);letter-spacing:.02em;position:relative;z-index:41}
+.ann .wrap{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;min-height:38px;padding-block:8px;text-align:center}
+.ann i{width:4px;height:4px;border-radius:50%;background:var(--dawn)}
+@media (max-width:620px){.ann .wrap > :nth-child(n+4){display:none}.ann .wrap{gap:10px;font-size:12px}}
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;transition:background .35s,box-shadow .35s,backdrop-filter .35s}
+.hdr.solid{background:rgba(247,249,252,.82);backdrop-filter:saturate(1.5) blur(16px);-webkit-backdrop-filter:saturate(1.5) blur(16px);box-shadow:0 1px 0 var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:24px;height:72px}
+.logo{display:inline-flex;align-items:center;color:var(--night);text-decoration:none;min-height:44px}
+.logo svg{width:128px;height:29px}
+.nav{display:flex;gap:2px;margin-inline:auto}
+.nav a{position:relative;padding:12px 14px;font:650 14.5px/1 var(--f-u);text-decoration:none;border-radius:999px}
+.nav a::after{content:"";position:absolute;left:14px;right:14px;bottom:5px;height:1.5px;background:var(--night);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.nav a[aria-current="page"]::after{transform:scaleX(1);background:var(--dawn);height:2px}
+.acts{display:flex;align-items:center;gap:4px}
+.nav + .acts{margin-left:0}
+.ib{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:0;background:transparent;transition:background .2s}
+.ib:hover{background:rgba(220,232,242,.7)}
+.ib .icon{width:22px;height:22px}
+.count{position:absolute;top:3px;right:1px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--night);color:var(--on-night);font:700 11px/18px var(--f-u);text-align:center}
+.count[data-n="0"]{display:none}
+@keyframes bump{0%{transform:scale(1)}35%{transform:scale(1.28)}100%{transform:scale(1)}}
+.bump{animation:bump .5s var(--ease)}
+.menu-btn{display:none}
+.mnav{position:absolute;left:0;right:0;top:100%;background:var(--cloud);box-shadow:0 1px 0 var(--line);padding:6px var(--g) 18px}
+.mnav a{display:flex;align-items:center;min-height:52px;font:600 22px/1 var(--f-d);font-variation-settings:"SOFT" 100;text-decoration:none;border-bottom:1px solid var(--line)}
+@media (max-width:960px){.nav{display:none}.menu-btn{display:inline-grid}.acts{margin-left:auto}}
+
+/* ---------------- hero ---------------- */
+.hero{position:relative;isolation:isolate;margin-top:-72px;padding-top:96px;overflow:hidden;background:linear-gradient(180deg,var(--cloud),var(--mist))}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;display:block}
+.kicker{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font:650 12px/1.3 var(--f-u);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);padding-top:clamp(12px,3vw,36px)}
+.title{position:relative;margin-top:clamp(8px,2vw,24px)}
+.mega{display:grid;font-size:clamp(96px,18.2vw,284px);line-height:.8;letter-spacing:-.055em;font-weight:620;font-variation-settings:"SOFT" 100,"WONK" 0,"opsz" 144;padding-bottom:.1em}
+.mega .l1{justify-self:start}
+.mega .l2{justify-self:end;font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144;margin-right:-.02em}
+.mega span{display:block;animation:up 1s var(--ease) both}
+.mega .l2{animation-delay:.12s}
+@keyframes up{from{transform:translateY(.18em);opacity:.001}to{transform:none;opacity:1}}
+.floater{position:absolute;left:31%;bottom:4%;width:clamp(230px,37vw,560px);z-index:2;pointer-events:none;will-change:transform}
+.floater .bob{animation:bob 8s ease-in-out infinite}
+.floater img{width:100%;filter:drop-shadow(0 34px 34px rgba(30,42,58,.22));transition:opacity .45s ease}
+.floater .shadow{position:absolute;left:14%;right:14%;bottom:-9%;height:14%;border-radius:50%;background:radial-gradient(closest-side,rgba(30,42,58,.26),rgba(30,42,58,0));animation:shade 8s ease-in-out infinite;z-index:-1}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes shade{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(.84);opacity:.7}}
+.rail{display:grid;grid-template-columns:1.1fr 1.2fr .9fr;border-top:1.5px solid var(--night);margin-top:4px}
+.rail > *{padding:26px 28px 34px;display:grid;gap:16px;align-content:start}
+.rail > * + *{border-left:1px solid var(--line-2)}
+.rail > :first-child{padding-left:0}
+.rail > :last-child{padding-right:0}
+.rail h2{font:650 15px/1.3 var(--f-u);letter-spacing:0}
+.qout{min-height:92px;display:grid;gap:12px;align-content:start}
+.qout p{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.qout p b{color:var(--ink);font-weight:700}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px}
+@media (max-width:1080px){.rail{grid-template-columns:1fr 1fr}.rail > :last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--line-2);padding-left:0}}
+@media (max-width:720px){
+  .hero{padding-top:84px}
+  .mega{font-size:clamp(88px,27vw,190px)}
+  .mega .l2{justify-self:start;margin-left:.3em}
+  .floater{position:relative;left:auto;bottom:auto;width:74vw;margin:-2vw auto -1vw}
+  .floater .shadow{bottom:-6%}
+  .rail{grid-template-columns:1fr}
+  .rail > *{padding:22px 0 26px!important;border-left:0!important}
+  .rail > * + *{border-top:1px solid var(--line-2)}
+}
+
+/* ---------------- ticker ---------------- */
+.tick{overflow:hidden;background:var(--night);color:var(--on-night);padding-block:22px}
+.tick .track{display:flex;width:max-content;animation:marq 55s linear infinite}
+.tick:hover .track{animation-play-state:paused}
+.tick span{display:inline-flex;align-items:center;gap:30px;padding-right:30px;font:500 clamp(24px,2.6vw,36px)/1 var(--f-d);font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1;white-space:nowrap}
+.tick svg{width:22px;height:22px;color:var(--dawn)}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ---------------- chapter: the night measured ---------------- */
+.night-top{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(24px,5vw,80px);align-items:end}
+.big13{display:grid;justify-items:end;text-align:right;gap:8px}
+.big13 .d{font-size:clamp(150px,20vw,300px);line-height:.78;letter-spacing:-.06em;font-variation-settings:"SOFT" 100,"opsz" 144}
+.big13 .d i{font-size:.36em;letter-spacing:-.02em;vertical-align:.95em;margin-right:.08em;color:var(--ink-2)}
+.big13 p{font-size:14.5px;color:var(--ink-2);max-width:30ch}
+.timeline{margin-top:clamp(40px,6vw,72px);position:relative;padding-block:56px 10px}
+.timeline .ln{height:1.5px;background:var(--night)}
+.timeline .turn{position:absolute;top:24px;width:24px;height:32px;margin-left:-12px;display:grid;justify-items:center}
+.timeline .turn i{width:12px;height:12px;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 2px var(--night);transition:background .4s,transform .4s var(--ease)}
+.timeline .turn b{width:1.5px;flex:1;background:var(--night);opacity:.5}
+.timeline .turn.on i{background:var(--dawn);box-shadow:inset 0 0 0 2px var(--night);transform:scale(1.25)}
+.hours{display:flex;justify-content:space-between;margin-top:12px;font:650 12px/1 var(--f-u);letter-spacing:.06em;color:var(--ink-2)}
+.tl-cap{margin-top:12px;font-size:13px;color:var(--ink-2)}
+.pos{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,56px);margin-top:clamp(48px,6vw,80px)}
+.panel{background:var(--paper);border-radius:28px;padding:clamp(22px,3vw,36px);box-shadow:0 0 0 1px var(--line);display:grid;gap:22px;align-content:start}
+.panel h3{font:650 14.5px/1.3 var(--f-u);letter-spacing:0}
+.stack{display:flex;gap:2px;height:64px}
+.stack span{display:flex;align-items:center;padding:0 16px;font:700 15px/1 var(--f-u);white-space:nowrap}
+.stack span:first-child{border-radius:14px 4px 4px 14px}
+.stack span:last-child{border-radius:4px 14px 14px 4px}
+.s1{background:var(--c-side);color:var(--on-night)} .s2{background:var(--c-back);color:var(--night)} .s3{background:var(--c-front)} .s4{background:var(--mist)}
+.legend{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px}
+.legend li{display:flex;align-items:center;gap:8px}
+.legend i{width:12px;height:12px;border-radius:3px}
+.age{display:grid;gap:14px}
+.agerow{display:grid;grid-template-columns:92px 1fr 56px;gap:12px;align-items:center;font-size:14px}
+.agerow .tr{position:relative;height:18px;background:linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/25% 100%}
+.agerow .f{position:absolute;left:0;top:3px;bottom:3px;background:var(--c-side);border-radius:0 4px 4px 0}
+.agerow b{text-align:right}
+.axis{display:grid;grid-template-columns:92px 1fr 56px;gap:12px;font-size:12px;color:var(--ink-2)}
+.axis div{display:flex;justify-content:space-between}
+.src{font-size:13px;color:var(--ink-2);line-height:1.55}
+.src a{color:var(--ink)}
+.so{margin-top:clamp(40px,5vw,64px);display:flex;justify-content:space-between;align-items:center;gap:20px 40px;flex-wrap:wrap;padding-top:28px;border-top:1.5px solid var(--night)}
+.so p{font:600 clamp(24px,2.6vw,34px)/1.15 var(--f-d);font-variation-settings:"SOFT" 100;letter-spacing:-.02em;max-width:26ch}
+@media (max-width:900px){.night-top,.pos{grid-template-columns:1fr}.big13{justify-items:start;text-align:left}}
+
+/* ---------------- chapter: two heights (sticky) ---------------- */
+.edges{position:relative;height:300vh;background:linear-gradient(180deg,var(--cloud),var(--mist-2) 40%,var(--mist-2) 70%,var(--cloud))}
+.edges .stage{position:sticky;top:calc(env(safe-area-inset-top,0px) + 72px);min-height:calc(100vh - 72px);display:grid;align-content:center;padding-block:32px}
+.edges .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,72px);align-items:center}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.steps li{padding:18px 0 18px 22px;border-left:2px solid var(--line);transition:border-color .4s,opacity .4s}
+.steps li h3{font-size:clamp(24px,2.4vw,32px);transition:color .4s}
+.steps li p{font-size:15.5px;color:var(--ink-2);margin-top:6px;max-width:40ch}
+.steps li b{font-weight:700;color:var(--ink)}
+.steps li:not(.on) h3{color:var(--ink-2)}
+.steps li.on{border-left-color:var(--night)}
+.seg{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:var(--paper);box-shadow:0 0 0 1px var(--line);margin-top:18px}
+.seg button{min-height:40px;padding:0 16px;border-radius:999px;border:0;background:transparent;font:650 14px/1 var(--f-u)}
+.seg button[aria-pressed="true"]{background:var(--night);color:var(--on-night)}
+.fig{margin:0;display:grid;gap:12px}
+.fig svg{width:100%;height:auto;overflow:visible}
+.fig .pw{transform-box:view-box;transform-origin:400px 0;transition:transform .9s var(--ease)}
+.fig[data-state="back"] .pw{transform:scaleX(-1)}
+.fig .la,.fig .lb,.fig .lvl{transition:opacity .5s}
+.fig .lb{opacity:0}
+.fig[data-state="back"] .la{opacity:0}
+.fig[data-state="back"] .lb{opacity:1}
+.fig .lvl{opacity:0}
+.fig[data-state="level"] .lvl{opacity:1}
+.fig .bub{transition:transform .9s var(--ease)}
+.fig[data-state="side"] .bub{transform:translateX(-26px)}
+.fig[data-state="back"] .bub{transform:translateX(24px)}
+.fig figcaption{font-size:13px;color:var(--ink-2)}
+.fig text{font-family:var(--f-u)}
+@media (max-width:720px){.fig svg text{font-size:34px}.fig svg .t2{display:none}}
+@media (max-width:900px){
+  .edges{height:260vh}
+  .edges .grid{grid-template-columns:1fr;gap:8px}
+  .edges .fig{order:-1}
+  .steps li{padding:10px 0 10px 16px}
+  .steps li:not(.on){display:none}
+}
+
+/* ---------------- chapter: the range on the horizon ---------------- */
+.shelf{--k:2.8px;overflow-x:auto;scrollbar-width:none;margin-inline:calc(var(--g) * -1);padding-inline:var(--g)}
+.shelf::-webkit-scrollbar{display:none}
+.shelf .line{display:flex;align-items:flex-end;gap:clamp(20px,3vw,48px);min-width:max-content;padding-top:40px;border-bottom:1.5px solid var(--night);position:relative}
+.item{position:relative;display:grid;justify-items:center;width:calc(var(--len) * var(--k) * var(--f,1));text-decoration:none;padding-bottom:18px}
+.item img{width:100%;filter:drop-shadow(0 22px 20px rgba(30,42,58,.2));transition:transform .6s var(--ease),filter .6s}
+.item:hover img,.item:focus-visible img{transform:translateY(-14px) rotate(-1.5deg);filter:drop-shadow(0 36px 26px rgba(30,42,58,.16))}
+.item .shd{position:absolute;bottom:4px;left:12%;right:12%;height:14px;border-radius:50%;background:radial-gradient(closest-side,rgba(30,42,58,.24),transparent);transition:transform .6s var(--ease),opacity .6s}
+.item:hover .shd{transform:scaleX(.8);opacity:.6}
+.tags{display:flex;gap:clamp(20px,3vw,48px);min-width:max-content;padding-top:18px}
+.tag{width:calc(var(--len) * var(--k) * var(--f,1));min-width:150px;display:grid;gap:4px;align-content:start}
+.tag .for{font:650 11.5px/1.3 var(--f-u);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.tag h3 a{text-decoration:none}
+.tag h3 a:hover{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}
+.tag .dim{font-size:14px;color:var(--ink-2)}
+.shelf-cap{margin-top:18px;font-size:13px;color:var(--ink-2)}
+@media (max-width:720px){.shelf{--k:2.5px}}
+
+/* ---------------- Neck 01 buy module ---------------- */
+.buymod{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(24px,5vw,80px);align-items:center}
+.skytile{position:relative;aspect-ratio:1/1;border-radius:36px;overflow:hidden;background:radial-gradient(60% 50% at 70% 88%,rgba(240,183,155,.45),rgba(240,183,155,0) 70%),linear-gradient(180deg,#F3F6FA,var(--mist));display:grid;place-items:center;isolation:isolate}
+.skytile .flt{position:relative;width:74%}
+.skytile .flt .bob{animation:bob 8s ease-in-out infinite}
+.skytile img{width:100%;filter:drop-shadow(0 34px 30px rgba(30,42,58,.22));transition:opacity .35s}
+.skytile .shadow{position:absolute;left:16%;right:16%;bottom:-12%;height:12%;border-radius:50%;background:radial-gradient(closest-side,rgba(30,42,58,.25),transparent);animation:shade 8s ease-in-out infinite;z-index:-1}
+.skytile .hl{position:absolute;left:0;right:0;bottom:17%;height:1.5px;background:rgba(30,42,58,.5)}
+.skytile .flag{position:absolute;left:20px;top:20px;display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:0 14px;border-radius:999px;background:rgba(255,255,255,.9);font:700 12px/1 var(--f-u);letter-spacing:.07em;text-transform:uppercase}
+.skytile .flag i{width:7px;height:7px;border-radius:50%;background:var(--dawn)}
+.skytile .dims{position:absolute;right:20px;bottom:20px;font:650 12.5px/1.5 var(--f-u);color:var(--ink-2);text-align:right}
+.buybox{display:grid;gap:20px}
+.buybox h2{font-size:clamp(56px,6.4vw,96px);line-height:.9}
+.tagline{font:500 clamp(20px,1.9vw,24px)/1.35 var(--f-d);font-variation-settings:"SOFT" 100;color:var(--ink-2);max-width:32ch;letter-spacing:-.01em}
+.tiers{display:grid;gap:10px}
+.tier{position:relative;display:grid;grid-template-columns:22px 1fr auto;gap:14px;align-items:center;padding:13px 18px;border-radius:20px;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line);cursor:pointer;transition:box-shadow .25s,transform .25s var(--ease)}
+.tier:hover{transform:translateY(-1px)}
+.tier input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.tier .dot{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line-2);display:grid;place-items:center}
+.tier .dot::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--night);transform:scale(0);transition:transform .25s var(--ease)}
+.tier:has(input:checked){box-shadow:inset 0 0 0 2px var(--night)}
+.tier:has(input:checked) .dot::after{transform:scale(1)}
+.tier:has(input:focus-visible){outline:2px solid var(--night);outline-offset:3px}
+.tier b{display:block;font-weight:700;font-size:15px}
+.tier small{display:block;font-size:13px;color:var(--ink-2)}
+.tier .p{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.tier .p small{color:var(--dawn-tx);font-weight:700}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.facts li{display:flex;gap:12px;align-items:center;font-size:14.5px}
+.facts .icon{width:22px;height:22px}
+@media (max-width:900px){.buymod{grid-template-columns:1fr}}
+
+/* ---------------- compare ---------------- */
+.cmp-wrap{overflow-x:auto;border-radius:28px;background:var(--paper);box-shadow:0 0 0 1px var(--line)}
+.cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:15.5px}
+.cmp th,.cmp td{padding:20px 24px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.cmp tr:last-child > *{border-bottom:0}
+.cmp thead th{font:700 12px/1.3 var(--f-u);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.cmp thead th.us{color:var(--ink)}
+.cmp tbody th{font-weight:650;width:22%}
+.cmp .us{background:var(--mist-2)}
+.cmp td .icon{width:18px;height:18px;vertical-align:-3px;margin-right:8px}
+@media (max-width:620px){.cmp{font-size:14px}.cmp th,.cmp td{padding:14px 12px}.cmp td .icon{display:none}}
+
+/* ---------------- thirty nights ---------------- */
+.trial{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,96px);align-items:center}
+.cal{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1.4vw,16px);max-width:520px}
+.cal i{aspect-ratio:1;border-radius:50%;background:var(--paper);box-shadow:inset 0 0 0 1.5px var(--line-2);display:grid;place-items:center;font:700 11px/1 var(--f-u);font-style:normal;color:var(--ink-2);transition:background .4s,box-shadow .4s,color .4s}
+.cal i.on{background:var(--night);box-shadow:none;color:var(--on-night)}
+.cal i.last{background:var(--dawn);box-shadow:0 0 0 5px var(--dawn-soft);color:var(--night)}
+.cal-cap{display:flex;justify-content:space-between;max-width:520px;margin-top:14px;font:650 12.5px/1.3 var(--f-u);color:var(--ink-2)}
+.tsteps{list-style:none;margin:0;padding:0;counter-reset:s;display:grid;gap:0}
+.tsteps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:18px;padding:22px 0;border-top:1px solid var(--line-2)}
+.tsteps li:last-child{border-bottom:1px solid var(--line-2)}
+.tsteps li::before{content:counter(s,decimal-leading-zero);font:600 30px/1 var(--f-d);font-variation-settings:"SOFT" 100;color:var(--ink-2)}
+.tsteps h3{font-size:24px}
+.tsteps p{font-size:15.5px;color:var(--ink-2);margin-top:4px}
+@media (max-width:900px){.trial{grid-template-columns:1fr}}
+
+/* ---------------- manifesto ---------------- */
+.mani{position:relative;overflow:hidden;isolation:isolate}
+.mani::before{content:"";position:absolute;right:-18%;bottom:-55%;width:80%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(240,183,155,.32),rgba(240,183,155,0) 62%);z-index:-1}
+.strikes{list-style:none;margin:clamp(32px,5vw,56px) 0 0;padding:0;display:grid}
+.strikes li{display:grid;grid-template-columns:1fr minmax(0,34ch);gap:12px 40px;align-items:center;padding:clamp(18px,2.4vw,28px) 0;border-top:1px solid rgba(247,249,252,.16)}
+.strikes li:last-child{border-bottom:1px solid rgba(247,249,252,.16)}
+.strikes s{font:600 clamp(32px,4.6vw,66px)/1.1 var(--f-d);font-variation-settings:"SOFT" 100;letter-spacing:-.03em;text-decoration:none}
+.strikes s span{background:linear-gradient(var(--dawn),var(--dawn)) no-repeat 0 58%/100% 3px;-webkit-box-decoration-break:clone;box-decoration-break:clone;transition:background-size 1.1s var(--ease)}
+.strikes s span.pre{background-size:0% 3px}
+.strikes p{color:var(--on-night-2);font-size:15.5px}
+.mani .lede{color:var(--on-night-2);max-width:60ch}
+@media (max-width:820px){.strikes li{grid-template-columns:1fr}}
+
+/* ---------------- cards, sets rail ---------------- */
+.pcard{position:relative;display:flex;flex-direction:column;border-radius:28px;background:var(--paper);box-shadow:0 0 0 1px var(--line);overflow:hidden;transition:transform .45s var(--ease),box-shadow .45s;transform-style:preserve-3d}
+.pcard:hover{box-shadow:0 0 0 1px var(--line),var(--shadow)}
+.tile{position:relative;aspect-ratio:4/5;overflow:hidden;background:radial-gradient(60% 45% at 78% 92%,rgba(240,183,155,.34),rgba(240,183,155,0) 70%),linear-gradient(180deg,#F3F6FA 0%,var(--mist) 100%)}
+.tile::after{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx,50%) var(--my,30%),rgba(255,255,255,.55),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.pcard:hover .tile::after{opacity:1}
+.tile img{position:absolute;height:auto;filter:drop-shadow(0 18px 18px rgba(30,42,58,.2));transition:transform .6s var(--ease)}
+.tile .full{inset:0;width:100%;height:100%;object-fit:cover;filter:none}
+.tile .solo{width:80%;left:10%;top:34%}
+.tile .solo.tall{width:50%;left:25%;top:14%}
+.tile .solo.long{width:70%;left:15%;top:16%}
+.tile .c1{width:68%;left:3%;top:28%}
+.tile .c2{width:68%;right:2%;top:44%}
+.tile.three .c1{width:58%;left:2%;top:22%}
+.tile.three .c2{width:58%;right:1%;top:33%}
+.tile.three .c3{width:58%;left:21%;top:50%}
+.tile.pair .c1{width:70%;left:2%;top:40%}
+.tile.pair .c2{width:40%;right:4%;top:10%}
+.pcard:hover .tile img:not(.full){transform:translateY(-8px)}
+.thumbs{position:absolute;right:12px;bottom:12px;display:flex;gap:8px;z-index:1}
+.thumbs span{display:grid;place-items:center;width:60px;height:60px;border-radius:50%;overflow:hidden;background:var(--paper);box-shadow:0 0 0 3px var(--paper),var(--shadow-sm);font:700 11px/1.1 var(--f-u);text-align:center}
+.thumbs img{position:static;width:100%;height:100%;object-fit:cover;filter:none}
+.duo{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:22% 10px}
+.duo img{position:static;width:100%;height:100%;object-fit:cover;border-radius:18px;filter:none}
+.pbody{display:flex;flex-direction:column;gap:5px;padding:16px 18px 18px;flex:1}
+.pfor{font:650 11.5px/1.3 var(--f-u);letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2)}
+.pcard h3{font-size:26px}
+.pcard h3 a{text-decoration:none}
+.pcard h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.pspec{font-size:14px;color:var(--ink-2)}
+.pfoot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:10px}
+.qadd{position:relative;z-index:2;display:inline-flex;align-items:center;gap:6px;min-height:42px;padding:0 15px;border-radius:999px;border:0;background:var(--mist-2);font:700 13.5px/1 var(--f-u);transition:background .2s,color .2s}
+.qadd:hover{background:var(--night);color:var(--on-night)}
+.qadd .icon{width:16px;height:16px}
+.rail-x{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,23%);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--g) 18px;margin-inline:calc(var(--g) * -1);scroll-padding-inline:var(--g);scrollbar-width:thin;cursor:grab}
+.rail-x > *{scroll-snap-align:start}
+.rail-x.drag{cursor:grabbing;scroll-snap-type:none}
+@media (max-width:720px){.rail-x{grid-auto-columns:76%}}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1000px){.grid3,.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid3,.grid4{gap:12px}.pcard h3{font-size:21px}.pbody{padding:12px 13px 14px}.qadd span{display:none}.qadd{padding:0 12px}}
+
+/* ---------------- founder ---------------- */
+.founder{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,96px);align-items:start}
+.founder .q{font:620 clamp(52px,7vw,108px)/.9 var(--f-d);font-variation-settings:"SOFT" 100,"opsz" 144;letter-spacing:-.045em;position:sticky;top:120px}
+.founder .q em{font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+.story{font:500 clamp(22px,2.2vw,30px)/1.38 var(--f-d);font-variation-settings:"SOFT" 100;letter-spacing:-.012em;display:grid;gap:.8em}
+.story .w{color:var(--ink-2);transition:color .35s}
+.story .w.lit{color:var(--ink)}
+.story .last{font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1}
+.who{font:650 12px/1.3 var(--f-u);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
+@media (max-width:900px){.founder{grid-template-columns:1fr}.founder .q{position:static}}
+
+/* ---------------- FAQ ---------------- */
+.faq{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,6vw,96px);align-items:start}
+.faq .aside{display:grid;gap:18px;position:sticky;top:110px}
+.qa{border-top:1px solid var(--line-2)}
+.qa:last-child{border-bottom:1px solid var(--line-2)}
+.qa summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px;padding:14px 0;font:600 clamp(19px,1.7vw,22px)/1.3 var(--f-d);font-variation-settings:"SOFT" 100;letter-spacing:-.01em;cursor:pointer}
+.qa summary::-webkit-details-marker{display:none}
+.qa .pm{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;box-shadow:inset 0 0 0 1.5px var(--line-2);transition:transform .4s var(--ease),background .3s}
+.qa[open] .pm{transform:rotate(45deg);background:var(--night);color:var(--on-night);box-shadow:none}
+.qa .ans{padding:0 56px 22px 0;color:var(--ink-2);font-size:16px;line-height:1.65}
+.qa[open] .ans{animation:up .5s var(--ease) both}
+.copy{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+.copy code{font:650 15px/1 var(--f-u);background:var(--mist-2);padding:10px 14px;border-radius:12px;user-select:all}
+.copy button{min-height:40px;padding:0 14px;border-radius:999px;border:0;background:var(--night);color:var(--on-night);font:650 13px/1 var(--f-u)}
+@media (max-width:900px){.faq{grid-template-columns:1fr}.faq .aside{position:static}}
+
+/* ---------------- footer ---------------- */
+footer{position:relative;overflow:hidden;background:var(--night);color:var(--on-night);isolation:isolate}
+.f-top{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;padding-block:clamp(56px,7vw,96px) 40px}
+.f-top h2{font-size:clamp(34px,3.6vw,52px)}
+.f-top p{color:var(--on-night-2);margin-top:12px;max-width:40ch}
+.nl{display:flex;gap:8px;flex-wrap:wrap}
+.field{flex:1;min-width:200px;min-height:56px;padding:0 22px;border-radius:22px;border:1.5px solid rgba(247,249,252,.28);background:transparent;color:var(--on-night)}
+.field::placeholder{color:var(--on-night-2)}
+.field:focus{outline:none;border-color:var(--dawn);box-shadow:0 0 0 4px rgba(240,183,155,.25)}
+.f-links{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;padding-block:32px;border-top:1px solid rgba(247,249,252,.14)}
+.f-links h4{margin:0 0 12px;font:700 12px/1.2 var(--f-u);letter-spacing:.1em;text-transform:uppercase;color:var(--on-night-2)}
+.f-links ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.f-links a{display:inline-flex;min-height:36px;align-items:center;text-decoration:none}
+.f-links a:hover{text-decoration:underline;text-underline-offset:4px}
+.f-links p{font-size:14.5px;color:var(--on-night-2)}
+.giant{position:relative;margin-top:24px;padding-bottom:22px}
+.giant .sun{position:absolute;left:50%;bottom:22px;width:min(52vw,640px);aspect-ratio:2/1;transform:translateX(-50%);border-radius:999px 999px 0 0;background:radial-gradient(100% 200% at 50% 100%,rgba(240,183,155,.95),rgba(240,183,155,.35) 45%,rgba(240,183,155,0) 70%);z-index:-1}
+.giant .w{display:block;font:620 clamp(60px,14.5vw,240px)/.8 var(--f-d);font-variation-settings:"SOFT" 100,"opsz" 144;letter-spacing:-.06em;text-align:center;white-space:nowrap;color:var(--on-night)}
+.giant .w em{font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+.giant .hl{height:1.5px;background:var(--on-night);opacity:.55}
+.legal{display:flex;justify-content:space-between;gap:10px 24px;flex-wrap:wrap;padding-block:18px 28px;font-size:13px;color:var(--on-night-2)}
+@media (max-width:900px){.f-top{grid-template-columns:1fr}.f-links{grid-template-columns:1fr 1fr}}
+
+/* ---------------- shop ---------------- */
+.phead{position:relative;margin-top:-72px;padding-top:120px;padding-bottom:clamp(28px,4vw,48px);background:linear-gradient(180deg,var(--cloud),var(--mist))}
+.phead h1{font-size:clamp(64px,10vw,150px);line-height:.85;letter-spacing:-.05em;font-variation-settings:"SOFT" 100,"opsz" 144}
+.phead h1 em{font-style:italic;font-variation-settings:"SOFT" 100,"WONK" 1,"opsz" 144}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13.5px;color:var(--ink-2);margin-bottom:20px}
+.crumbs a{text-decoration:none;display:inline-flex;align-items:center;min-height:32px}
+.crumbs a:hover{text-decoration:underline}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.promo{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:30px;border-radius:28px;min-height:100%;background:var(--night);color:var(--on-night);position:relative;overflow:hidden;isolation:isolate}
+.promo::before{content:"";position:absolute;right:-30%;bottom:-30%;width:90%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(240,183,155,.35),transparent 62%);z-index:-1}
+.promo h3{font-size:clamp(30px,3vw,40px);line-height:1.02}
+.promo p{color:var(--on-night-2)}
+.pcard[hidden]{display:none}
+.sub{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:clamp(64px,8vw,104px) 0 26px}
+.sub h2{font-size:clamp(36px,4vw,56px)}
+.sub p{color:var(--ink-2);max-width:52ch}
+
+/* ---------------- product page ---------------- */
+.pdp{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,5vw,72px);align-items:start;padding-block:18px clamp(64px,8vw,104px)}
+.gal{position:sticky;top:96px;display:grid;gap:12px}
+.gmain{position:relative;aspect-ratio:1/1;border-radius:32px;overflow:hidden;background:var(--mist);view-transition-name:pmain}
+.gmain > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .2s}
+.gmain.zoom{cursor:zoom-in}
+.gmain .panel{position:absolute;inset:0;display:grid;align-content:center;gap:14px;padding:7%;background:var(--paper);border-radius:0;box-shadow:none}
+.gmain .skytile{position:absolute;inset:0;border-radius:0;aspect-ratio:auto}
+.gthumbs{display:flex;gap:10px;overflow-x:auto;padding:2px}
+.gthumbs button{flex:none;width:68px;height:68px;border-radius:18px;overflow:hidden;border:0;padding:0;background:var(--mist);box-shadow:0 0 0 1px var(--line);transition:transform .25s var(--ease),box-shadow .25s}
+.gthumbs button[aria-current="true"]{box-shadow:0 0 0 2px var(--night)}
+.gthumbs button:hover{transform:translateY(-2px)}
+.gthumbs img{width:100%;height:100%;object-fit:cover}
+.gthumbs .tt{display:grid;place-items:center;height:100%;background:var(--paper);font:700 11px/1.2 var(--f-u);text-align:center;padding:6px}
+.buy{display:grid;gap:14px}
+.buy .tagline{font-size:clamp(18px,1.5vw,20px)}
+.buy .tier{padding:10px 16px}
+.buy h1{font-size:clamp(48px,4.4vw,66px);line-height:.9;letter-spacing:-.045em;font-variation-settings:"SOFT" 100,"opsz" 144}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:0 13px;border-radius:999px;background:var(--mist-2);font:700 12.5px/1 var(--f-u)}
+.pill .icon{width:15px;height:15px}
+.pricebox{display:flex;align-items:baseline;gap:6px 16px;flex-wrap:wrap}
+.pricebox .price{font-size:32px;letter-spacing:-.01em}
+.wallets{font-size:13px;color:var(--ink-2);text-align:center}
+.acc .qa summary{min-height:58px;font:650 15.5px/1.3 var(--f-u);letter-spacing:0}
+.acc .qa .ans{font-size:15px}
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:35;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 -1px 0 var(--line);padding-bottom:env(safe-area-inset-bottom,0px);transform:translateY(110%);visibility:hidden;transition:transform .4s var(--ease),visibility 0s .4s}
+.stick.on{transform:none;visibility:visible;transition:transform .4s var(--ease)}
+.stick .wrap{display:flex;align-items:center;gap:16px;min-height:74px;padding-block:10px}
+.stick img{width:56px;height:56px;border-radius:14px;object-fit:cover;background:var(--mist)}
+.stick .nm{font:600 20px/1.1 var(--f-d);font-variation-settings:"SOFT" 100}
+.stick .btn{margin-left:auto;min-height:50px}
+@media (max-width:960px){.pdp{grid-template-columns:1fr}.gal{position:static}}
+@media (max-width:520px){.stick img{display:none}}
+.duo2{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(24px,5vw,72px);align-items:center}
+@media (max-width:900px){.duo2{grid-template-columns:1fr}}
+.scale{width:100%;height:auto}
+.scale text{font:600 14px var(--f-u);fill:var(--ink)}
+.scale .t2{font-weight:500;fill:var(--ink-2)}
+
+/* ---------------- finder ---------------- */
+.finder{max-width:880px;margin-inline:auto;background:var(--paper);border-radius:36px;box-shadow:var(--shadow);padding:clamp(22px,4vw,48px);display:grid;gap:26px}
+.prog{display:flex;align-items:center;gap:14px;font:700 12.5px/1 var(--f-u);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.prog .bar{flex:1;height:4px;border-radius:2px;background:var(--mist);overflow:hidden}
+.prog .bar i{display:block;height:100%;background:var(--night);border-radius:2px;transition:width .5s var(--ease)}
+.finder h2{font-size:clamp(34px,4vw,54px)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fopt{display:grid;gap:4px;padding:20px 22px;border-radius:22px;background:var(--cloud);box-shadow:inset 0 0 0 1.5px var(--line);text-align:left;border:0;transition:box-shadow .25s,transform .25s var(--ease),background .25s}
+.fopt:hover{box-shadow:inset 0 0 0 1.5px var(--night);transform:translateY(-2px);background:var(--paper)}
+.fopt b{font:600 22px/1.2 var(--f-d);font-variation-settings:"SOFT" 100}
+.fopt span{font-size:14.5px;color:var(--ink-2)}
+@media (max-width:620px){.opts{grid-template-columns:1fr}}
+.fnav{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.step{animation:up .5s var(--ease) both;display:grid;gap:22px}
+.result{display:grid;grid-template-columns:260px 1fr;gap:28px;align-items:center}
+.result .tile{border-radius:26px}
+.result .rb{display:grid;gap:14px}
+.result h3{font-size:clamp(40px,4vw,56px);line-height:.95}
+.why{margin:0;padding:0;list-style:none;display:grid;gap:10px;font-size:15.5px}
+.why li{display:flex;gap:10px}
+.why .icon{width:18px;height:18px;margin-top:3px}
+.also{display:flex;align-items:center;gap:16px;padding:14px 16px;border-radius:22px;box-shadow:inset 0 0 0 1.5px var(--line)}
+.also .tile{width:72px;border-radius:16px;flex:none}
+.also p{font-size:14.5px;color:var(--ink-2)}
+.also b{color:var(--ink)}
+.honest{padding:16px 20px;border-radius:20px;background:var(--dawn-soft);font-weight:650}
+@media (max-width:620px){.result{grid-template-columns:1fr}.result .tile{max-width:260px}}
+
+/* ---------------- cart ---------------- */
+.scrim{position:fixed;inset:0;z-index:60;background:rgba(30,42,58,.36);opacity:0;pointer-events:none;transition:opacity .35s}
+.scrim.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:61;width:min(460px,100%);background:var(--cloud);display:flex;flex-direction:column;transform:translateX(102%);visibility:hidden;transition:transform .45s var(--ease),visibility 0s .45s;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.on{transform:none;visibility:visible;transition:transform .45s var(--ease);box-shadow:-30px 0 70px -30px rgba(30,42,58,.5)}
+.dh{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 22px;border-bottom:1px solid var(--line)}
+.dh h2{font-size:30px}
+.ship{padding:14px 22px;border-bottom:1px solid var(--line);display:grid;gap:10px;font-size:14px}
+.ship .bar{height:6px;border-radius:3px;background:var(--mist);overflow:hidden}
+.ship .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--night),var(--night) 88%,var(--dawn));border-radius:3px;transition:width .6s var(--ease)}
+.lines{flex:1;overflow-y:auto;padding:6px 22px}
+.line{display:grid;grid-template-columns:76px 1fr auto;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
+.line .th{width:76px;height:92px;border-radius:16px;overflow:hidden;position:relative;background:var(--mist)}
+.line .th .tile{position:absolute;inset:0;aspect-ratio:auto}
+.line .th > img{width:100%;height:100%;object-fit:cover}
+.line h3{font:700 15px/1.3 var(--f-u);letter-spacing:0}
+.line small{display:block;font-size:13px;color:var(--ink-2)}
+.qty{display:inline-flex;align-items:center;margin-top:10px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--line-2)}
+.qty button{width:42px;height:42px;border:0;background:transparent;border-radius:50%;display:grid;place-items:center}
+.qty button:hover{background:var(--mist-2)}
+.qty span{min-width:22px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.rm{border:0;background:transparent;font-size:13px;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px;min-height:36px;padding:0}
+.line .lp{display:grid;gap:4px;justify-items:end}
+.empty{padding:44px 8px;text-align:center;display:grid;gap:16px;justify-items:center;color:var(--ink-2)}
+.empty h3{color:var(--ink);font-size:28px}
+.up{display:flex;align-items:center;gap:14px;padding:14px 22px;border-top:1px solid var(--line);background:var(--paper)}
+.up img{width:54px;height:54px;border-radius:14px;object-fit:cover}
+.up p{flex:1;font-size:14px;line-height:1.4}
+.up small{display:block;color:var(--ink-2)}
+.df{padding:18px 22px 22px;border-top:1px solid var(--line);display:grid;gap:12px;background:var(--paper)}
+.tot{display:flex;justify-content:space-between;align-items:baseline;font-weight:700;font-size:18px}
+.df .note{text-align:center}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:80;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--night);color:var(--on-night);padding:14px 22px;border-radius:999px;font:650 14px/1.3 var(--f-u);box-shadow:var(--shadow);transition:opacity .3s,transform .3s var(--ease);max-width:calc(100% - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.flyer{position:fixed;z-index:90;pointer-events:none;border-radius:50%;overflow:hidden;background:var(--mist);box-shadow:var(--shadow)}
+.flyer img{width:100%;height:100%;object-fit:contain}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.45s}
+.view[hidden]{display:none}
+.lg-defs{position:absolute;width:0;height:0;overflow:hidden}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .edges{height:auto}.edges .stage{position:static;min-height:0}
+  .steps li:not(.on){display:block;opacity:1}
+}
+</style>
+
+%%LOGO%%
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></symbol>
+  <symbol id="i-wash" viewBox="0 0 24 24"><path d="M3.5 7h17l-1.6 11.2a2 2 0 0 1-2 1.8H7.1a2 2 0 0 1-2-1.8z"/><path d="M6.5 11.5c1.2-1 2.3-1 3.5 0s2.3 1 3.5 0 2.3-1 3.5 0"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="3"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 4 3 8.5l9 4.5 9-4.5z"/><path d="M3 12.5l9 4.5 9-4.5"/></symbol>
+</svg>
+
+<a class="vh" href="#main" onfocus="this.classList.remove('vh')" onblur="this.classList.add('vh')" style="position:fixed;left:16px;top:12px;z-index:100;background:#1E2A3A;color:#F7F9FC;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:650">Skip to content</a>
+
+<div class="ann"><div class="wrap"><span>Free shipping on every pillow</span><i aria-hidden="true"></i><span>Thirty nights to decide</span><i aria-hidden="true"></i><span>Ships in 6–10 days</span></div></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="Somnila, home"><svg viewBox="129.3 226.7 1616.4 364.8" aria-hidden="true"><use href="#lg" x="129.3" y="226.7" width="1616.4" height="364.8"/></svg></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#shop" data-nav="shop">Pillows</a><a href="#sets" data-nav="sets">Sets</a><a href="#neck-01" data-nav="neck-01">Neck 01</a><a href="#finder" data-nav="finder">Find your pillow</a><a href="#story" data-nav="story">Our story</a>
+    </nav>
+    <div class="acts">
+      <button class="ib menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><svg class="icon"><use href="#i-menu"/></svg></button>
+      <button class="ib" id="cartBtn" type="button" aria-label="Open cart, 0 items" aria-haspopup="dialog"><svg class="icon"><use href="#i-bag"/></svg><span class="count" id="count" data-n="0">0</span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile" hidden><a href="#shop">Pillows</a><a href="#sets">Sets</a><a href="#neck-01">Neck 01</a><a href="#finder">Find your pillow</a><a href="#story">Our story</a></nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============================ HOME ============================ -->
+<section class="view" data-view="home">
+
+  <section class="hero" aria-labelledby="h1">
+    <canvas id="sky" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="kicker"><span>Memory-foam pillows · five shapes</span><span>Est. 2026</span></div>
+      <div class="title">
+        <h1 class="mega" id="h1"><span class="l1">Sleep</span><span class="l2">well.</span></h1>
+        <div class="floater" id="floater" aria-hidden="true"><div class="bob"><img id="heroImg" data-img="c_neck_cloud" alt="" width="544" height="359"></div><div class="shadow"></div></div>
+      </div>
+      <div class="rail">
+        <div>
+          <p class="lede">Memory-foam pillows shaped for the way you actually lie. Foam that holds its height all night, a cover that goes in the wash, and thirty nights to decide.</p>
+          <div class="row"><a class="btn" href="#neck-01" id="heroCta"><span>Shop Neck 01 · <span class="num">$79.50</span></span></a><a class="link" href="#finder">Find my pillow</a></div>
+        </div>
+        <form id="quick" onsubmit="return false">
+          <div style="display:grid;gap:14px">
+            <h2 id="qh">How do you usually fall asleep?</h2>
+            <div class="chips" role="radiogroup" aria-labelledby="qh">
+              <label class="chip"><input type="radio" name="qpos" id="q-side" value="side"><span>On my side</span></label>
+              <label class="chip"><input type="radio" name="qpos" id="q-back" value="back"><span>On my back</span></label>
+              <label class="chip"><input type="radio" name="qpos" id="q-changes" value="changes"><span>It changes</span></label>
+              <label class="chip"><input type="radio" name="qpos" id="q-sit" value="sitting"><span>Sitting up</span></label>
+            </div>
+            <div class="qout" id="qout" aria-live="polite"></div>
+          </div>
+        </form>
+        <div>
+          <h2 id="colh">Neck 01 in <span id="heroCol">Cloud</span></h2>
+          <div class="swatches" role="radiogroup" aria-labelledby="colh" id="heroSw"></div>
+          <p class="note">$79.50 · cover included · free shipping</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="tick"><p class="vh">Free shipping on every pillow. Thirty nights to decide. Cover included and machine-washable. Ships in 6–10 days. Card, Shop Pay, Apple Pay, Google Pay.</p><div class="track" id="tick" aria-hidden="true"></div></div>
+
+  <section class="sec" aria-labelledby="h-night">
+    <div class="wrap">
+      <div class="night-top">
+        <div class="head" style="margin:0">
+          <p class="eyebrow">The night, measured</p>
+          <h2 id="h-night">Tonight, you'll turn about thirteen times.</h2>
+          <p class="lede">A study fitted 664 working adults with small motion sensors and let them sleep at home. On average they changed position 1.6 times an hour. Over an eight-hour night, that is about thirteen turns.</p>
+        </div>
+        <div class="big13"><div class="d num"><i>≈</i>13</div><p>position changes in an eight-hour night, at the measured average of 1.6 an hour</p></div>
+      </div>
+      <div class="timeline" id="timeline" role="img" aria-label="An eight-hour night from 11 pm to 7 am with thirteen evenly spaced turns">
+        <div class="ln"></div>
+        <div class="hours"><span>11 PM</span><span>1 AM</span><span>3 AM</span><span>5 AM</span><span>7 AM</span></div>
+      </div>
+      <p class="tl-cap">Turns spaced evenly to show the average rate. Real nights are less regular.</p>
+      <div class="pos">
+        <figure class="panel rv" style="margin:0" aria-labelledby="h-share">
+          <h3 id="h-share">Share of time in bed, by position</h3>
+          <div class="stack num" role="img" aria-label="Side 54.1 percent, back 37.5 percent, front 7.3 percent, other 1.1 percent">
+            <span class="s1" style="width:54.1%">Side 54.1%</span><span class="s2" style="width:37.5%">Back 37.5%</span><span class="s3" style="width:7.3%"></span><span class="s4" style="width:1.1%"></span>
+          </div>
+          <ul class="legend num"><li><i class="s1"></i>Side 54.1%</li><li><i class="s2"></i>Back 37.5%</li><li><i class="s3"></i>Front 7.3%</li><li><i class="s4" style="box-shadow:inset 0 0 0 1px var(--line-2)"></i>Other 1.1%</li></ul>
+        </figure>
+        <figure class="panel rv" style="margin:0" aria-labelledby="h-age">
+          <h3 id="h-age">Time on the side, by age</h3>
+          <div class="age num">
+            <div class="agerow"><span>20–34 years</span><div class="tr"><div class="f" style="width:47.7%"></div></div><b>47.7%</b></div>
+            <div class="agerow"><span>55–65 years</span><div class="tr"><div class="f" style="width:58.3%"></div></div><b>58.3%</b></div>
+            <div class="axis" aria-hidden="true"><span></span><div><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></div><span></span></div>
+          </div>
+        </figure>
+      </div>
+      <p class="src" style="margin-top:18px">Source: Skarpsno E. S. et al., “Sleep positions and nocturnal body movements based on free-living accelerometer recordings”, <i>Nature and Science of Sleep</i>, 2017. 664 adults. <a class="link" href="https://www.dovepress.com/sleep-positions-and-nocturnal-body-movements-based-on-free-living-acce-peer-reviewed-fulltext-article-NSS" target="_blank" rel="noopener">Read the study</a></p>
+      <div class="so"><p>So one pillow has to work on your side and on your back.</p><a class="btn btn--ghost" href="#neck-01">See how <svg class="icon"><use href="#i-arrow"/></svg></a></div>
+    </div>
+  </section>
+
+  <section class="edges" id="edges" aria-labelledby="h-edges">
+    <div class="stage">
+      <div class="wrap grid">
+        <div>
+          <p class="eyebrow">Neck 01 · two heights</p>
+          <h2 id="h-edges" style="font-size:clamp(40px,4.8vw,68px);margin:14px 0 22px">One pillow, turned over.</h2>
+          <ol class="steps" id="steps">
+            <li class="on" data-s="side"><h3>On your side</h3><p>Start on the <b>13 cm edge</b> (5.1 in), the higher one. If your head tilts up, turn it over.</p></li>
+            <li data-s="back"><h3>On your back</h3><p>Start on the <b>11 cm edge</b> (4.3 in), the lower one. If your head sits too low, turn it over.</p></li>
+            <li data-s="level"><h3>Either way</h3><p>Keep the edge where your head lies level. You turn about 1.6 times an hour, so the pillow you keep has to work both ways.</p></li>
+          </ol>
+          <div class="seg" role="group" aria-label="Show a position"><button type="button" data-go="0" aria-pressed="true">Side</button><button type="button" data-go="1" aria-pressed="false">Back</button><button type="button" data-go="2" aria-pressed="false">Level</button></div>
+        </div>
+        <figure class="fig" id="fig" data-state="side">
+          <svg viewBox="-110 20 1020 320" role="img" aria-label="Side view of Neck 01: 62 centimetres long, one edge 13 centimetres high, the other 11. Turning it over swaps which edge sits under the neck."><g class="pw"><path d="M90 270 L90 158 Q90 140 108 140 C214 140 290 172 400 172 C520 172 586 160 692 160 Q710 160 710 178 L710 270 Z" fill="#DCE8F2" stroke="#1E2A3A" stroke-width="2"/><path d="M104 262 L104 162 Q104 152 114 152 C214 152 290 184 400 184 C520 184 586 172 690 172" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".7"/></g><line x1="-110" x2="910" y1="270" y2="270" stroke="#1E2A3A" stroke-width="2"/><g class="la"><line x1="62" x2="62" y1="140" y2="270" stroke="#556676" stroke-width="1.5"/><line x1="54" x2="70" y1="140" y2="140" stroke="#556676" stroke-width="1.5"/><text x="48" y="208" text-anchor="end" font-size="24" font-weight="700" fill="#1E2A3A">13 cm</text><text x="48" y="232" text-anchor="end" class="t2" font-size="18" fill="#556676">5.1 in</text><line x1="738" x2="738" y1="160" y2="270" stroke="#556676" stroke-width="1.5"/><line x1="730" x2="746" y1="160" y2="160" stroke="#556676" stroke-width="1.5"/><text x="752" y="218" font-size="24" font-weight="700" fill="#1E2A3A">11 cm</text><text x="752" y="242" class="t2" font-size="18" fill="#556676">4.3 in</text><line x1="132" x2="132" y1="134" y2="84" stroke="#1E2A3A" stroke-width="1.5"/><circle cx="132" cy="140" r="8" fill="#F0B79B" stroke="#1E2A3A" stroke-width="2"/><text x="120" y="72" font-size="20" font-weight="700" fill="#1E2A3A">Under your neck</text></g><g class="lb"><line x1="62" x2="62" y1="160" y2="270" stroke="#556676" stroke-width="1.5"/><line x1="54" x2="70" y1="160" y2="160" stroke="#556676" stroke-width="1.5"/><text x="48" y="218" text-anchor="end" font-size="24" font-weight="700" fill="#1E2A3A">11 cm</text><text x="48" y="242" text-anchor="end" class="t2" font-size="18" fill="#556676">4.3 in</text><line x1="738" x2="738" y1="140" y2="270" stroke="#556676" stroke-width="1.5"/><line x1="730" x2="746" y1="140" y2="140" stroke="#556676" stroke-width="1.5"/><text x="752" y="208" font-size="24" font-weight="700" fill="#1E2A3A">13 cm</text><text x="752" y="232" class="t2" font-size="18" fill="#556676">5.1 in</text><line x1="132" x2="132" y1="154" y2="104" stroke="#1E2A3A" stroke-width="1.5"/><circle cx="132" cy="160" r="8" fill="#F0B79B" stroke="#1E2A3A" stroke-width="2"/><text x="120" y="92" font-size="20" font-weight="700" fill="#1E2A3A">Under your neck</text></g><g transform="translate(560 40)"><rect x="0" y="0" width="200" height="40" rx="20" fill="#FFFFFF" stroke="#1E2A3A" stroke-width="2"/><line x1="86" x2="86" y1="8" y2="32" stroke="#1E2A3A" stroke-width="1.5"/><line x1="114" x2="114" y1="8" y2="32" stroke="#1E2A3A" stroke-width="1.5"/><circle class="bub" cx="100" cy="20" r="11" fill="#F0B79B"/><g class="lvl"><text x="100" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1E2A3A">Level</text></g></g><line x1="90" x2="710" y1="300" y2="300" stroke="#556676" stroke-width="1.5"/><line x1="90" x2="90" y1="292" y2="308" stroke="#556676" stroke-width="1.5"/><line x1="710" x2="710" y1="292" y2="308" stroke="#556676" stroke-width="1.5"/><text x="400" y="330" text-anchor="middle" font-size="20" fill="#1E2A3A"><tspan font-weight="700">62 cm</tspan> · 24.4 in</text></svg>
+          <figcaption>Side view of Neck 01, to scale on its length and both heights. Turning it over swaps which edge sits under your neck. The curve between the edges is a sketch.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-range">
+    <div class="wrap">
+      <div class="head-row">
+        <div class="head"><p class="eyebrow">The range</p><h2 id="h-range">Five shapes, on one horizon.</h2><p class="lede">Each one named for what it does. Lined up by length, from 60 to 120 cm.</p></div>
+        <a class="arrow" href="#shop">All pillows <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="shelf" id="shelf"></div>
+      <p class="shelf-cap">Drawn to one scale on each pillow's longest side: Neck 01 62 cm, Contour 01 60 cm, Side 01 60 cm, Lounge 01 60 cm, and Body 01 120 cm, measured along its curve.</p>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0" aria-labelledby="h-buy">
+    <div class="wrap buymod">
+      <div class="skytile rv" id="modTile"><span class="flag"><i aria-hidden="true"></i>Start here</span><div class="hl"></div><div class="flt"><div class="bob"><img id="modImg" data-img="c_neck_night" alt="Neck 01 in Night" width="546" height="374"></div><div class="shadow"></div></div><span class="dims num">62 × 42 cm<br>24.4 × 16.5 in</span></div>
+      <div class="buybox">
+        <p class="eyebrow">Memory-foam pillow</p>
+        <h2 id="h-buy">Neck 01</h2>
+        <p class="tagline">Two heights on one pillow. Turn it over until your head lies level.</p>
+        <div><p class="opt" style="margin-bottom:12px">Colour: <b id="modCol">Night</b></p><div class="swatches" role="radiogroup" aria-label="Colour" id="modSw"></div></div>
+        <div class="tiers" role="radiogroup" aria-label="How many" id="modTiers"></div>
+        <button class="btn btn--block" id="modAdd" type="button" style="min-height:60px;font-size:16.5px"><span>Add to cart · <span class="num" id="modPrice">$79.50</span></span></button>
+        <ul class="facts">
+          <li><svg class="icon"><use href="#i-box"/></svg>Free shipping. Leaves within 6–10 days.</li>
+          <li><svg class="icon"><use href="#i-cal"/></svg>Thirty nights to decide. If it isn't right, send it back.</li>
+          <li><svg class="icon"><use href="#i-wash"/></svg>Cool-touch cover included. It goes in the washing machine.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0" aria-labelledby="h-cmp">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Side by side</p><h2 id="h-cmp">Neck 01, or the pillow you have now?</h2></div>
+      <div class="cmp-wrap rv"><table class="cmp">
+        <thead><tr><th scope="col"><span class="vh">Feature</span></th><th scope="col" class="us">Neck 01</th><th scope="col">A standard fibre pillow</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Heights</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Two: 13 cm and 11 cm</td><td>One</td></tr>
+          <tr><th scope="row">Shape</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Contoured, with a curve for the neck</td><td>Flat</td></tr>
+          <tr><th scope="row">Inside</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Memory foam that keeps its shape</td><td>Loose polyester fibre</td></tr>
+          <tr><th scope="row">Cover</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Included, cool-touch, machine-washable</td><td>You buy a pillowcase</td></tr>
+          <tr><th scope="row">Try it at home</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Thirty nights</td><td>Depends on the shop</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </section>
+
+  <section class="sec" style="background:var(--mist-2)" aria-labelledby="h-trial">
+    <div class="wrap trial">
+      <div>
+        <div class="cal" id="cal" role="img" aria-label="Thirty nights, from night 1 to night 30"></div>
+        <div class="cal-cap"><span>Night 1</span><span>Night 30: keep it, or send it back</span></div>
+      </div>
+      <div style="display:grid;gap:22px">
+        <p class="eyebrow">The trial</p>
+        <h2 id="h-trial">Thirty nights to decide.</h2>
+        <p class="lede">A pillow is judged at 3 a.m., not in a shop. So you sleep on it at home first, on both heights and in every position you end up in.</p>
+        <ol class="tsteps">
+          <li><div><h3>Order</h3><p>Shipping is free on every pillow. Your order leaves within 6–10 days.</p></div></li>
+          <li><div><h3>Sleep on it</h3><p>Up to thirty nights. Try the 13 cm edge, then the 11 cm edge.</p></div></li>
+          <li><div><h3>Keep it, or send it back</h3><p>If it isn't right, one email to support@somnila.com starts the return.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec night mani" aria-labelledby="h-mani">
+    <div class="wrap">
+      <div class="head" style="margin:0"><p class="eyebrow">How we sell</p><h2 id="h-mani">What you won't find here.</h2><p class="lede">We opened in 2026. Reviews will appear on this site once real customers have slept on Somnila for thirty nights. Until then, everything we say can be checked: the size in centimetres and inches, what's inside, and the price you pay.</p></div>
+      <ul class="strikes">
+        <li><s><span>A sale that never ends.</span></s><p>The price on the page is the price. Sets cost less because you buy more, and each one shows the saving in dollars.</p></li>
+        <li><s><span>A countdown to midnight.</span></s><p>No timers, no "only 3 left". Take the time you need, or take thirty nights.</p></li>
+        <li><s><span>Stars we haven't earned.</span></s><p>No borrowed ratings, no invented reviews. When they come, they will be real.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-sets">
+    <div class="wrap">
+      <div class="head-row">
+        <div class="head"><p class="eyebrow">Sets</p><h2 id="h-sets">Sets, priced honestly.</h2><p class="lede">Each set costs less than the same pieces bought one by one. The difference is written on every card.</p></div>
+        <a class="arrow" href="#sets">All eight sets <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="rail-x" id="homeSets"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="founder" style="padding-top:0" aria-labelledby="h-story">
+    <div class="wrap founder">
+      <div style="display:grid;gap:20px;align-content:start"><p class="eyebrow">From the workshop</p><p class="q" id="h-story">I kept waking up <em>stiff.</em></p></div>
+      <div style="display:grid;gap:28px">
+        <div class="story" id="story">
+          <p>Not every morning. Enough of them. I went looking for a pillow I would actually want to keep, and found three kinds: the blue hospital kind, the overpriced kind, and the kind that goes flat in three months. Sometimes all three at once.</p>
+          <p>Most people sleep badly and accept it. I didn't want to.</p>
+          <p>So I built the pillow I was looking for. Shaped around the way a body actually lies, made of foam that holds, with a cover you can wash. Priced like an object you keep, not a gadget you replace.</p>
+          <p class="last">Try it for thirty nights. If it isn't right, send it back.</p>
+        </div>
+        <p class="who">The founder of Somnila</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" style="padding-top:0" aria-labelledby="h-faq">
+    <div class="wrap faq">
+      <div class="aside">
+        <p class="eyebrow">Questions</p>
+        <h2 id="h-faq">Asked plainly, answered plainly.</h2>
+        <p class="lede" style="font-size:16px">Something else? Write to us.</p>
+        <div class="copy"><code id="mail">support@somnila.com</code><button type="button" id="copyMail">Copy</button></div>
+      </div>
+      <div id="faqHome"></div>
+    </div>
+  </section>
+</section>
+
+<!-- ============================ SHOP ============================ -->
+<section class="view" data-view="shop" hidden>
+  <div class="phead">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a><span aria-hidden="true">/</span><span aria-current="page">Shop</span></nav>
+      <h1>The <em>range.</em></h1>
+      <p class="lede" style="margin-top:20px">Five shapes, each named for what it does. Every pillow ships free, with its cover, and thirty nights to decide.</p>
+      <div class="filters" role="radiogroup" aria-label="Filter by the way you sleep" id="filters"></div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-block:clamp(28px,4vw,48px) clamp(72px,9vw,120px)">
+    <div class="grid3" id="shopGrid"></div>
+    <div class="sub" id="setsAnchor"><div style="display:grid;gap:10px"><h2>Sets</h2><p>Cheaper than the same pieces bought one by one. The saving is shown in dollars on each set.</p></div></div>
+    <div class="grid4" id="shopSets"></div>
+    <div class="sub"><div style="display:grid;gap:10px"><h2>For the rest of the night</h2><p>Spare covers exist for every pillow, $19.22 each. Accessories bought on their own ship at the rate shown at checkout.</p></div></div>
+    <div class="grid4" id="shopAcc"></div>
+  </div>
+</section>
+
+<!-- ============================ PRODUCT ============================ -->
+<section class="view" data-view="product" hidden>
+  <div class="wrap" id="pdp"></div>
+  <div id="pdpBelow"></div>
+</section>
+
+<!-- ============================ FINDER ============================ -->
+<section class="view" data-view="finder" hidden>
+  <div class="phead" style="padding-bottom:clamp(64px,8vw,112px)">
+    <div class="wrap">
+      <div style="max-width:880px;margin:0 auto 32px;display:grid;gap:16px">
+        <p class="eyebrow">Pillow finder</p>
+        <h1 style="font-size:clamp(52px,7vw,104px)">Three questions. <em>One pillow.</em></h1>
+        <p class="lede">We only recommend from what we make, and we say so when none of it fits.</p>
+      </div>
+      <div class="finder" id="finder" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer aria-labelledby="h-nl">
+  <div class="wrap">
+    <div class="f-top">
+      <div><h2 id="h-nl">Notes from the workshop</h2><p>New shapes and what we learn making them. No countdowns, no codes shouting at you.</p></div>
+      <form class="nl" id="nlForm" novalidate><label class="vh" for="nlEmail">Email address</label><input class="field" id="nlEmail" type="email" placeholder="Email address" autocomplete="email"><button class="btn btn--light" type="submit">Subscribe</button></form>
+    </div>
+    <div class="f-links">
+      <div><h4>Shop</h4><ul><li><a href="#shop">Pillows</a></li><li><a href="#sets">Sets</a></li><li><a href="#finder">Find your pillow</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#story">Thirty-night trial</a></li><li><a href="#neck-01">Sizes and care</a></li></ul></div>
+      <div><h4>Somnila</h4><ul><li><a href="#story">Our story</a></li><li><a href="#shop">All products</a></li></ul></div>
+      <div><h4>Contact</h4><p>support@somnila.com</p></div>
+    </div>
+    <div class="giant" aria-hidden="true"><div class="sun"></div><span class="w">Sleep <em>well.</em></span><div class="hl"></div></div>
+    <div class="legal"><span>© 2026 Somnila. Sizes in centimetres and inches.</span><span>Design preview. Prices in US dollars as converted by the store on 24 September 2026.</span></div>
+  </div>
+</footer>
+
+<div class="stick" id="stick" aria-hidden="true"><div class="wrap"><img id="stickImg" alt=""><div><div class="nm" id="stickName">Neck 01</div><div class="price num" id="stickPrice" style="font-size:15px">$79.50</div></div><button class="btn" id="stickAdd" type="button" tabindex="-1">Add to cart</button></div></div>
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="h-cart" aria-hidden="true">
+  <div class="dh"><h2 id="h-cart">Your cart</h2><button class="ib" id="cartClose" type="button" aria-label="Close cart"><svg class="icon"><use href="#i-close"/></svg></button></div>
+  <div class="ship" id="ship"></div>
+  <div class="lines" id="lines"></div>
+  <div class="up" id="upsell" hidden></div>
+  <div class="df">
+    <div class="tot"><span>Subtotal</span><span class="num" id="subtotal">$0.00</span></div>
+    <p class="note" id="shipNote">Shipping and taxes calculated at checkout.</p>
+    <button class="btn btn--block" id="checkout" type="button"><svg class="icon"><use href="#i-lock"/></svg>Check out</button>
+    <p class="note">Card, Shop Pay, Apple Pay or Google Pay</p>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const IMG = %%IMGJSON%%;
+const FREE = 62.44; // €54.90 free-shipping threshold, converted by the store on 24 Sept 2026
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const money = n => '$' + n.toFixed(2);
+const ico = id => `<svg class="icon" aria-hidden="true"><use href="#${id}"/></svg>`;
+const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* Real catalogue. Prices: Shopify contextual pricing for the US, 24 Sept 2026. Sizes, weights, materials, taglines: the store's own product data. */
+const NECK_COLS = [['Night','c_neck_night','p_neck_night','#262B40'],['Cloud','c_neck_cloud','p_neck_cloud','#ECEEF2'],['Stone','c_neck_stone','p_neck_stone','#6A6771'],['Sky','c_neck_sky','p_neck_sky','#A8BAD2']];
+const P = {
+  'neck-01':{name:'Neck 01',type:'Memory-foam pillow',price:79.50,cut:'c_neck_night',img:'p_neck_night',len:62,for:'Side and back',pos:['side','back'],spec:'Two heights · 13 / 11 cm',
+    tag:'Two heights on one pillow. Turn it over until your head lies level.',cm:'62 × 42 × 13/11 cm',inch:'24.4 × 16.5 × 5.1/4.3 in',L:62,W:42,weight:'1.4 kg · 3.1 lb',
+    inside:'Memory foam.',cover:'Cool-touch cover. It comes off and goes in the washing machine.',box:'The pillow and its cover. Nothing else.',
+    pills:[['i-layers','Two heights'],['i-wash','Cover included'],['i-box','Free shipping']],tiers:[['neck-01','1 pillow','For one bed'],['for-two','2 pillows','For Two'],['family-set','3 pillows','Family Set']],goes:['cover-neck','mask-01','quiet-01']},
+  'contour-01':{name:'Contour 01',type:'Contoured comfort pillow',price:68.13,cut:'c_contour',img:'p_contour',len:60,for:'Softer and lower',pos:['back','softer'],spec:'10 cm high · 3.9 in',
+    tag:'The softer, lower one. A gentle wave that follows the neck and shoulders.',colourList:'Stone, Cloud, Blue, Blush, Night',cm:'60 × 35 × 10 cm',inch:'23.6 × 13.8 × 3.9 in',L:60,W:35,weight:'1.1 kg · 2.4 lb',
+    inside:'A gentle wave shape, softer and lower than Neck 01.',cover:'Washable cover with a cool-touch surface.',box:'The pillow and its cover.',
+    pills:[['i-wash','Cover included'],['i-box','Free shipping'],['i-cal','30 nights']],tiers:[['contour-01','1 pillow','For one bed'],['contour-for-two','2 pillows','Contour for Two']],goes:['mask-01','quiet-01','neck-01']},
+  'side-01':{name:'Side 01',type:'Side-sleeper pillow',price:62.44,cut:'c_side',img:'p_side',len:60,for:'On your side',pos:['side'],spec:'10 cm profile · 3.9 in',
+    tag:'Ten centimetres that keep your head level with your shoulders, all night.',colourList:'Blue, Red, Dark grey',cm:'60 cm long, 10 cm profile',inch:'23.6 in long, 3.9 in profile',weight:null,
+    inside:'Memory foam.',cover:'Cover included.',box:'The pillow and its cover.',pills:[['i-wash','Cover included'],['i-box','Free shipping'],['i-cal','30 nights']],goes:['mask-01','quiet-01','body-01']},
+  'body-01':{name:'Body 01',type:'S-shaped body pillow',price:79.50,cut:'c_body',img:'p_body',len:120,for:'Along the whole body',pos:['side','whole'],spec:'120 cm long · 47.2 in',
+    tag:'One pillow for the knees, the arm and the back at the same time.',colourList:'Sky, Blush, Azure, Stone, Ice, Night, Mint, Apricot',cm:'120 cm long, about 30 cm wide',inch:'47.2 in long, about 11.8 in wide',L:120,W:30,approx:true,weight:'1.8 kg · 4.0 lb',
+    inside:'An S shape that sits between the knees, under the arm and along the back.',cover:'Removable, machine-washable cover in a breathable, cool-touch fabric.',box:'The pillow and its cover.',
+    pills:[['i-wash','Cover included'],['i-box','Free shipping'],['i-cal','30 nights']],tiers:[['body-01','Body 01 alone','For one bed'],['side-sleeper-set','With Neck 01','Side-Sleeper Set']],goes:['neck-01','mask-01','quiet-01']},
+  'lounge-01':{name:'Lounge 01',type:'Reading pillow',price:62.44,cut:'c_lounge',img:'p_lounge',len:60,for:'Sitting up in bed',pos:['sitting'],spec:'23 cm high · 9.1 in',
+    tag:'For the hour before sleep: the book or the phone, held up for you.',colourList:'Sky, Stone, Sand, Blush, Green, Yellow, Black',cm:'60 × 37 × 23 cm',inch:'23.6 × 14.6 × 9.1 in',L:60,W:37,weight:'1.1 kg · 2.4 lb',
+    inside:'A raised back with a ledge for the phone or the book.',cover:'Cover included.',box:'The pillow and its cover.',pills:[['i-wash','Cover included'],['i-box','Free shipping'],['i-cal','30 nights']],
+    tiers:[['lounge-01','Lounge 01 alone','For reading in bed'],['evening-set','With Throw 01','Evening Set']],goes:['throw-01','mask-01','quiet-01']},
+  'for-two':{name:'For Two',sub:'2 × Neck 01',price:136.38,sep:159.00,comp:{k:'two',a:'c_neck_cloud'}},
+  'family-set':{name:'Family Set',sub:'3 × Neck 01',price:193.25,sep:238.50,comp:{k:'three',a:'c_neck_cloud'}},
+  'neck-01-cover-set':{name:'Neck 01 + Cover',sub:'The pillow and a spare cover',price:87.47,sep:98.72,comp:{k:'solo',a:'c_neck_cloud',t:[['','Spare<br>cover']]}},
+  'sleep-set':{name:'Sleep Set',sub:'Neck 01, Mask 01, Quiet 01',price:113.63,sep:119.08,comp:{k:'solo',a:'c_neck_night',t:[['mask'],['quiet']]}},
+  'side-sleeper-set':{name:'Side-Sleeper Set',sub:'Neck 01 + Body 01',price:136.38,sep:159.00,comp:{k:'pair',a:'c_neck_cloud',b:'c_body'}},
+  'contour-for-two':{name:'Contour for Two',sub:'2 × Contour 01',price:113.63,sep:136.26,comp:{k:'two',a:'c_contour'}},
+  'evening-set':{name:'Evening Set',sub:'Lounge 01 + Throw 01',price:107.94,sep:130.57,comp:{k:'solo',a:'c_lounge',t:[['throw']]}},
+  'quiet-night':{name:'Quiet Night',sub:'Mask 01 + Quiet 01',price:34.01,sep:39.58,comp:{k:'duo',t:[['mask'],['quiet']]}},
+  'mask-01':{name:'Mask 01',sub:'Contoured sleep mask',price:22.63,img:'mask'},
+  'quiet-01':{name:'Quiet 01',sub:'Earplugs, 2 pairs with case',price:16.95,img:'quiet'},
+  'cover-neck':{name:'Cover for Neck 01',sub:'A second cover, same fit',price:19.22,img:'p_neck_cloud'},
+  'throw-01':{name:'Throw 01',sub:'200 × 230 cm throw',price:68.13,img:'throw'},
+};
+const PILLOWS = ['neck-01','contour-01','side-01','body-01','lounge-01'];
+const SETS = ['for-two','family-set','neck-01-cover-set','sleep-set','side-sleeper-set','contour-for-two','evening-set','quiet-night'];
+const ACC = ['mask-01','quiet-01','cover-neck','throw-01'];
+
+/* ---------- visuals: real photos and real cut-outs, arranged, never retouched ---------- */
+function visual(h, o = {}) {
+  const p = P[h], alt = o.alt ?? (p.sub ? `${p.name}: ${p.sub}` : p.name), A = alt ? `role="img" aria-label="${alt}"` : 'aria-hidden="true"';
+  if (PILLOWS.includes(h)) {
+    const cut = o.cut || p.cut, cls = h === 'body-01' ? 'solo long' : 'solo';
+    return `<div class="tile" ${A}><img class="${cls}" src="${IMG[cut]}" alt=""></div>`;
+  }
+  if (p.img) return `<div class="tile" ${A}><img class="full" src="${IMG[p.img]}" alt=""></div>`;
+  const c = p.comp, th = (c.t || []).map(([k, l]) => `<span>${k ? `<img src="${IMG[k]}" alt="">` : l}</span>`).join('');
+  let inner = '';
+  if (c.k === 'two') inner = `<img class="c1" src="${IMG[c.a]}" alt=""><img class="c2" src="${IMG[c.a]}" alt="">`;
+  if (c.k === 'three') inner = `<img class="c1" src="${IMG[c.a]}" alt=""><img class="c2" src="${IMG[c.a]}" alt=""><img class="c3" src="${IMG[c.a]}" alt="">`;
+  if (c.k === 'solo') inner = `<img class="solo${c.tall ? ' tall' : ''}" src="${IMG[c.a]}" alt="">`;
+  if (c.k === 'pair') inner = `<img class="c2" src="${IMG[c.b]}" alt=""><img class="c1" src="${IMG[c.a]}" alt="">`;
+  if (c.k === 'duo') inner = `<div class="duo">${c.t.map(([k]) => `<img src="${IMG[k]}" alt="">`).join('')}</div>`;
+  return `<div class="tile ${c.k}" ${A}>${inner}${th ? `<div class="thumbs">${th}</div>` : ''}</div>`;
+}
+function card(h) {
+  const p = P[h], isP = PILLOWS.includes(h);
+  const href = isP ? `#${h}` : SETS.includes(h) ? '#sets' : '#shop';
+  const save = p.sep ? `<p class="save num">Separately ${money(p.sep)}<br><b>You save ${money(p.sep - p.price)}</b></p>` : '';
+  return `<article class="pcard" data-h="${h}"${isP ? ` data-pos="${p.pos.join(' ')}"` : ''}>${visual(h)}
+    <div class="pbody"><p class="pfor">${isP ? p.for : p.sep ? 'Set' : 'Accessory'}</p><h3><a href="${href}" data-morph>${p.name}</a></h3><p class="pspec num">${isP ? p.spec : p.sub}</p>${save}
+      <div class="pfoot"><span class="price num">${money(p.price)}</span><button class="qadd" type="button" data-add="${h}" aria-label="Add ${p.name} to cart">${ico('i-plus')}<span>Add</span></button></div></div></article>`;
+}
+
+/* ---------- Neck 01 side view: 10 px per cm. Length 62 cm, edges 13 cm and 11 cm. ---------- */
+function footprint(p) {
+  const std = [66, 51], pad = 28, s = 540 / Math.max(std[0], p.L), mx = Math.max(std[0], p.L);
+  const H = Math.max(std[1], p.W) * s + pad * 2 + 34, W = mx * s + pad * 2, by = pad + Math.max(std[1], p.W) * s;
+  return `<svg class="scale" viewBox="0 0 ${W} ${H}" role="img" aria-label="Seen from above: ${p.name} is ${p.L} by ${p.W} centimetres; a US standard pillow is 66 by 51">
+    <rect x="${pad}" y="${by - std[1] * s}" width="${std[0] * s}" height="${std[1] * s}" rx="18" fill="none" stroke="#6B7D90" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <rect x="${pad}" y="${by - p.W * s}" width="${p.L * s}" height="${p.W * s}" rx="${Math.min(40, p.W * s / 3)}" fill="#DCE8F2" stroke="#1E2A3A" stroke-width="1.5"/>
+    <text x="${pad + 16}" y="${by - p.W * s + 28}">${p.name}</text><text class="t2" x="${pad + 16}" y="${by - p.W * s + 48}">${p.approx ? 'about ' : ''}${p.L} × ${p.W} cm</text>
+    <text class="t2" x="${pad + std[0] * s - 8}" y="${by - std[1] * s - 10}" text-anchor="end">US standard pillow · 66 × 51 cm · 26 × 20 in</text>
+    <line x1="${pad}" x2="${pad + mx * s}" y1="${by + 16}" y2="${by + 16}" stroke="rgba(30,42,58,.24)"/>
+    ${[0, 20, 40, 60, 80, 100, 120].filter(v => v <= mx).map(v => `<line x1="${pad + v * s}" x2="${pad + v * s}" y1="${by + 12}" y2="${by + 20}" stroke="#556676"/><text class="t2" x="${pad + v * s}" y="${by + 36}" text-anchor="middle" style="font-size:12px">${v}${v === 0 ? ' cm' : ''}</text>`).join('')}
+  </svg>`;
+}
+
+/* ---------- FAQ: verified answers only ---------- */
+const FAQ = {
+  height:['Which height should I use?','Neck 01 has two edges: 13 cm (5.1 in) and 11 cm (4.3 in). On your side, start on the higher edge. On your back, start on the lower one. Turn it over until your head lies level.'],
+  wash:['Can I wash it?','The cover, yes. It comes off and goes in the washing machine. Follow the care label for temperature. A spare cover costs $19.22, so one can be on the pillow while the other is in the wash.'],
+  ship:['How long does delivery take?','Every order leaves within 6–10 days. Shipping is free on every pillow and on any order from $62.44. Below that, the rate for your country appears at checkout.'],
+  trial:['How does the thirty-night trial work?','Sleep on it for up to thirty nights. If it isn\'t right, write to support@somnila.com and send it back. The exact conditions are in our refund policy.'],
+  where:['Where do you ship?','To the United States, Canada, the United Kingdom, the European Union, Australia and most other countries. The cost for your country appears at checkout.'],
+  pay:['How can I pay?','By card, Shop Pay, Apple Pay or Google Pay. Checkout is handled by Shopify.'],
+  front:['I sleep on my front. Which one?','None of our pillows is shaped for sleeping on the front, and we would rather say so. The lowest we make is Contour 01, at 10 cm (3.9 in).'],
+};
+const qa = ([q, a], open) => `<details class="qa"${open ? ' open' : ''}><summary>${q}<span class="pm" aria-hidden="true">${ico('i-plus')}</span></summary><div class="ans"><p>${a}</p></div></details>`;
+
+/* ---------- cart ---------- */
+let cart = [];
+function add(h, opt, from) {
+  const f = cart.find(l => l.h === h && l.opt === opt);
+  f ? f.qty++ : cart.push({h, opt, qty:1});
+  renderCart();
+  const done = () => { const c = $('#count'); c.classList.remove('bump'); void c.offsetWidth; c.classList.add('bump'); toast(`${P[h].name} added`); openCart(); };
+  if (from && !RM) fly(from, h, done); else done();
+}
+function fly(from, h, done) {
+  const p = P[h], src = IMG[p.cut || p.img || (p.comp && (p.comp.a || p.comp.t[0][0])) || 'c_neck_cloud'];
+  const a = from.getBoundingClientRect(), b = $('#cartBtn').getBoundingClientRect(), s = 84;
+  const el = document.createElement('div'); el.className = 'flyer'; el.innerHTML = `<img src="${src}" alt="">`;
+  Object.assign(el.style, {width:s + 'px', height:s + 'px', left:(a.left + a.width / 2 - s / 2) + 'px', top:(a.top + a.height / 2 - s / 2) + 'px'});
+  document.body.appendChild(el);
+  const dx = b.left + b.width / 2 - (a.left + a.width / 2), dy = b.top + b.height / 2 - (a.top + a.height / 2);
+  el.animate([{transform:'translate(0,0) scale(1)', opacity:1},{transform:`translate(${dx * .45}px,${dy * .45 - 140}px) scale(.8)`, opacity:1, offset:.5},{transform:`translate(${dx}px,${dy}px) scale(.18)`, opacity:.3}], {duration:850, easing:'cubic-bezier(.5,0,.2,1)'}).onfinish = () => { el.remove(); done(); };
+}
+function renderCart() {
+  const n = cart.reduce((a, l) => a + l.qty, 0), sub = cart.reduce((a, l) => a + l.qty * P[l.h].price, 0), left = Math.max(0, FREE - sub);
+  $('#count').textContent = n; $('#count').dataset.n = n;
+  $('#cartBtn').setAttribute('aria-label', `Open cart, ${n} item${n === 1 ? '' : 's'}`);
+  $('#ship').innerHTML = n ? (left > 0 ? `<span>Add <b class="num">${money(left)}</b> for free shipping.</span>` : `<span><b>Free shipping</b> on this order.</span>`) + `<div class="bar"><i style="width:${Math.min(100, sub / FREE * 100)}%"></i></div>` : `<span>Free shipping on every pillow.</span>`;
+  $('#lines').innerHTML = n ? cart.map((l, i) => { const p = P[l.h];
+    return `<div class="line"><div class="th">${visual(l.h, {alt:''})}</div><div><h3>${p.name}</h3><small>${l.opt ? 'Colour: ' + l.opt : (p.sub || p.type)}</small>
+      <div class="qty" role="group" aria-label="Quantity of ${p.name}"><button type="button" data-q="${i}" data-d="-1" aria-label="One less">${ico('i-minus')}</button><span>${l.qty}</span><button type="button" data-q="${i}" data-d="1" aria-label="One more">${ico('i-plus')}</button></div></div>
+      <div class="lp"><span class="price num">${money(p.price * l.qty)}</span><button class="rm" type="button" data-rm="${i}">Remove</button></div></div>`; }).join('')
+    : `<div class="empty"><h3>Your cart is empty.</h3><p>Not sure where to start? Three questions and we'll point you to one pillow.</p><a class="btn btn--ghost" href="#finder" data-close>Find my pillow</a></div>`;
+  const up = ['mask-01', 'quiet-01', 'cover-neck'].find(h => !cart.some(l => l.h === h));
+  const hasPillow = cart.some(l => PILLOWS.includes(l.h) || SETS.includes(l.h));
+  $('#upsell').hidden = !(n && up && hasPillow);
+  if (up) $('#upsell').innerHTML = `<img src="${IMG[P[up].img]}" alt=""><p><b>${P[up].name}</b><small>${P[up].sub}</small></p><button class="qadd" type="button" data-add="${up}" data-nofly>${ico('i-plus')}<span class="num">${money(P[up].price)}</span></button>`;
+  $('#subtotal').textContent = money(sub);
+  $('#shipNote').textContent = n && left === 0 ? 'Shipping: free. Taxes calculated at checkout.' : 'Shipping and taxes calculated at checkout.';
+  $('#checkout').disabled = !n;
+}
+let lastFocus = null;
+function openCart() { if ($('#drawer').classList.contains('on')) return; lastFocus = document.activeElement; $('#drawer').classList.add('on'); $('#drawer').setAttribute('aria-hidden', 'false'); $('#scrim').classList.add('on'); setTimeout(() => $('#cartClose').focus(), 80); }
+function closeCart() { $('#drawer').classList.remove('on'); $('#drawer').setAttribute('aria-hidden', 'true'); $('#scrim').classList.remove('on'); lastFocus && lastFocus.focus && lastFocus.focus(); }
+let tt; function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('on'), 2200); }
+
+/* ---------- home ---------- */
+const QUICK = {
+  side:{h:'neck-01', why:'<b>Neck 01.</b> Start on the 13 cm edge, the higher one. If your head tilts up, turn it over.'},
+  back:{h:'neck-01', why:'<b>Neck 01.</b> Start on the 11 cm edge, the lower one. If your head sits too low, turn it over.'},
+  changes:{h:'neck-01', why:'<b>Neck 01.</b> Two heights on one pillow, one for the side and one for the back.'},
+  sitting:{h:'lounge-01', why:'<b>Lounge 01.</b> 23 cm high, with a ledge that holds the book or the phone while you read in bed.'},
+};
+function renderQuick(v) {
+  const o = $('#qout');
+  if (!v) { o.innerHTML = `<p>Pick one and we'll point you to the right shape. Most people start with Neck 01.</p>`; return; }
+  const r = QUICK[v], p = P[r.h];
+  o.innerHTML = `<p>${r.why}</p><div class="row"><a class="arrow" href="#${r.h}">See ${p.name} · <span class="num">${money(p.price)}</span> ${ico('i-arrow')}</a></div>`;
+  $('#heroCta').innerHTML = `<span>Shop ${p.name} · <span class="num">${money(p.price)}</span></span>`; $('#heroCta').href = '#' + r.h;
+}
+const swatchHTML = (name, sel) => NECK_COLS.map(([n, , , c]) => `<label class="sw" title="${n}"><input type="radio" name="${name}" id="${name}-${n.toLowerCase()}" value="${n}"${n === sel ? ' checked' : ''}><span style="--c:${c}"></span><span class="vh">${n}</span></label>`).join('');
+function tiersHTML(h, name) {
+  const p = P[h];
+  return (p.tiers || [[h, '1 pillow', 'For one bed']]).map(([th, a, b], i) => { const t = P[th], sv = t.sep ? t.sep - t.price : 0;
+    return `<label class="tier"><input type="radio" name="${name}" id="${name}-${th}" value="${i}"${i ? '' : ' checked'}><span class="dot" aria-hidden="true"></span><span><b>${a}</b><small>${b}</small></span><span class="p num">${money(t.price)}${sv ? `<small>save ${money(sv)}</small>` : ''}</span></label>`; }).join('');
+}
+function renderHome() {
+  $('#heroSw').innerHTML = swatchHTML('hcol', 'Cloud');
+  $('#modSw').innerHTML = swatchHTML('mcol', 'Night');
+  $('#modTiers').innerHTML = tiersHTML('neck-01', 'mtier');
+  const words = ['Free shipping on every pillow', 'Thirty nights to decide', 'Cover included, machine-washable', 'Ships in 6–10 days', 'Card, Shop Pay, Apple Pay, Google Pay'];
+  const moon = `<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#lg-mark" width="100" height="100"/></svg>`;
+  const run = words.map(w => `<span>${w}${moon}</span>`).join('');
+  $('#tick').innerHTML = run + run;
+  $('#timeline').insertAdjacentHTML('beforeend', Array.from({length:13}, (_, i) => `<span class="turn" style="left:${(i + .5) / 13 * 100}%"><i></i><b></b></span>`).join(''));
+  $('#cal').innerHTML = Array.from({length:30}, (_, i) => `<i class="${i === 29 ? 'last' : ''}">${i + 1}</i>`).join('');
+  const order = ['neck-01', 'contour-01', 'side-01', 'body-01', 'lounge-01'];
+  $('#shelf').innerHTML = `<div class="line">${order.map(h => `<a class="item" href="#${h}" style="--len:${P[h].len};--f:${h === 'body-01' ? .667 : 1}" aria-label="${P[h].name}, ${P[h].for}, ${money(P[h].price)}"><img src="${IMG[P[h].cut]}" alt=""><span class="shd"></span></a>`).join('')}</div>
+    <div class="tags">${order.map(h => `<div class="tag" style="--len:${P[h].len};--f:${h === 'body-01' ? .667 : 1}"><span class="for">${P[h].for}</span><h3><a href="#${h}">${P[h].name}</a></h3><span class="dim num">${P[h].spec}</span><span class="price num">${money(P[h].price)}</span></div>`).join('')}</div>`;
+  $('#homeSets').innerHTML = SETS.map(card).join('');
+  $('#faqHome').innerHTML = ['height', 'trial', 'ship', 'wash', 'where', 'pay', 'front'].map((k, i) => qa(FAQ[k], i === 0)).join('');
+  const st = $('#story');
+  st.querySelectorAll('p').forEach(p => { p.innerHTML = p.textContent.split(/(\s+)/).map(w => /\s+/.test(w) ? w : `<span class="w">${w}</span>`).join(''); });
+  renderQuick(null);
+}
+
+/* ---------- shop ---------- */
+const FILTERS = [['all','All'],['side','Side'],['back','Back'],['softer','Softer'],['whole','Whole body'],['sitting','Sitting up']];
+function renderShop() {
+  $('#filters').innerHTML = FILTERS.map(([v, l], i) => `<label class="chip"><input type="radio" name="flt" id="flt-${v}" value="${v}"${i ? '' : ' checked'}><span>${l}</span></label>`).join('');
+  $('#shopGrid').innerHTML = PILLOWS.map(card).join('') + `<div class="promo night"><div style="display:grid;gap:14px"><p class="eyebrow">Not sure which?</p><h3>Three questions, thirty seconds, one pillow.</h3><p>We only recommend from what we make, and say so when none of it fits.</p></div><div><a class="btn btn--light" href="#finder">Find my pillow ${ico('i-arrow')}</a></div></div>`;
+  $('#shopSets').innerHTML = SETS.map(card).join('');
+  $('#shopAcc').innerHTML = ACC.map(card).join('');
+}
+
+/* ---------- product page ---------- */
+let cur = {h:'neck-01', col:null, tier:0, slides:[]};
+function slides(h) {
+  const p = P[h], s = [];
+  if (h === 'neck-01') { NECK_COLS.forEach(([n, c, pk]) => s.push({cut:c, label:n, thumb:c})); NECK_COLS.forEach(([n, , pk]) => s.push({img:pk, label:n + ' photo', thumb:pk})); }
+  else { s.push({cut:p.cut, label:p.name, thumb:p.cut}); s.push({img:p.img, label:'Photo', thumb:p.img}); }
+  if (h === 'neck-01') s.push({panel:'profile', label:'Side view'});
+  if (p.L) s.push({panel:'scale', label:'To scale'});
+  return s;
+}
+function slideHTML(p, s) {
+  if (s.cut) return `<div class="skytile"><div class="hl"></div><div class="flt"><div class="bob"><img src="${IMG[s.cut]}" alt="${p.name}${s.label !== p.name ? ' in ' + s.label : ''}"></div><div class="shadow"></div></div></div>`;
+  if (s.img) return `<img src="${IMG[s.img]}" alt="${p.name}, ${s.label}">`;
+  if (s.panel === 'profile') return `<div class="panel fig" data-state="side">${PROFILE_SVG}<p class="note">Side view, to scale on length and both heights.</p></div>`;
+  return `<div class="panel">${footprint(p)}<p class="note">Seen from above. Dashed: a US standard pillow, 26 × 20 in.</p></div>`;
+}
+function renderPDP(h) {
+  const p = P[h]; cur = {h, col:h === 'neck-01' ? 'Night' : null, tier:0, slides:slides(h)};
+  $('#pdp').innerHTML = `<div class="pdp">
+    <div class="gal"><div class="gmain" id="gmain">${slideHTML(p, cur.slides[0])}</div>
+      <div class="gthumbs" role="list">${cur.slides.map((s, i) => `<button type="button" role="listitem" data-g="${i}" aria-current="${i ? 'false' : 'true'}" aria-label="Show ${s.label}">${s.thumb ? `<img src="${IMG[s.thumb]}" alt="" style="${s.cut ? 'object-fit:contain;padding:8px;background:linear-gradient(#F3F6FA,#DCE8F2)' : ''}">` : `<span class="tt">${s.label}</span>`}</button>`).join('')}</div></div>
+    <div class="buy">
+      <nav class="crumbs" aria-label="Breadcrumb" style="margin:0"><a href="#home">Home</a><span aria-hidden="true">/</span><a href="#shop">Pillows</a><span aria-hidden="true">/</span><span aria-current="page">${p.name}</span></nav>
+      <p class="eyebrow">${p.type}</p>
+      <h1>${p.name}</h1>
+      <p class="tagline">${p.tag}</p>
+      <div class="pills">${p.pills.map(([i, t]) => `<span class="pill">${ico(i)}${t}</span>`).join('')}</div>
+      <div class="pricebox"><span class="price num" id="pdpPrice">${money(p.price)}</span><span class="note">Free shipping · Taxes calculated at checkout</span></div>
+      ${h === 'neck-01' ? `<div><p class="opt" style="margin-bottom:12px">Colour: <b id="pdpCol">Night</b></p><div class="swatches" role="radiogroup" aria-label="Colour">${swatchHTML('pcol', 'Night')}</div></div>` : `<p class="opt">Colours: <b>${p.colourList}</b></p>`}
+      <fieldset style="border:0;margin:0;padding:0;min-width:0"><legend class="opt" style="margin-bottom:10px;padding:0">How many?</legend><div class="tiers">${tiersHTML(h, 'tier')}</div></fieldset>
+      <button class="btn btn--block" id="pdpAdd" type="button" style="min-height:60px;font-size:16.5px"><span>Add to cart · <span class="num" id="pdpBtn">${money(p.price)}</span></span></button>
+      <p class="wallets">Card, Shop Pay, Apple Pay or Google Pay</p>
+      <ul class="facts"><li>${ico('i-box')}Free shipping. Leaves within 6–10 days.</li><li>${ico('i-cal')}Thirty nights to decide. If it isn't right, send it back.</li><li>${ico('i-wash')}${p.cover}</li></ul>
+      <div class="acc">${qa(['Size and weight', `${p.cm}<br>${p.inch}${p.weight ? '<br>' + p.weight : ''}`], true)}${qa(['What it\'s made of', `${p.inside} ${p.cover}`])}${qa(['In the box', p.box])}${qa(FAQ.ship)}${qa(FAQ.trial)}</div>
+    </div></div>`;
+  let below = '';
+  if (h === 'neck-01') below += `<section class="sec" style="background:var(--mist-2)" aria-labelledby="h-edge2"><div class="wrap duo2"><div style="display:grid;gap:16px"><p class="eyebrow">Two heights</p><h2 id="h-edge2">Which edge is yours?</h2><figure class="fig" data-state="side" style="margin-top:8px">${PROFILE_SVG}<figcaption>Side view, to scale on length and on both heights. The curve between the edges is a sketch.</figcaption></figure></div>
+    <div class="facts" style="gap:12px"><div class="panel"><span class="note">On your side</span><b class="d num" style="font-size:40px">13 cm · 5.1 in</b><span class="note">Start on the higher edge.</span></div><div class="panel"><span class="note">On your back</span><b class="d num" style="font-size:40px">11 cm · 4.3 in</b><span class="note">Start on the lower edge.</span></div></div></div></section>`;
+  if (p.L) below += `<section class="sec" aria-labelledby="h-scale"><div class="wrap duo2" style="grid-template-columns:1fr 1.3fr"><div style="display:grid;gap:16px"><p class="eyebrow">To scale</p><h2 id="h-scale">How big is it, really?</h2><p class="lede">Seen from above, against a US standard pillow. The dashed outline is 26 × 20 in. ${p.name} is ${p.inch.split(' ×').slice(0, 2).join(' ×')}${p.approx ? ', approximately' : ''}.</p></div><div class="panel">${footprint(p)}</div></div></section>`;
+  below += `<section class="sec" style="padding-top:${p.L ? 0 : 'var(--sec)'}" aria-labelledby="h-goes"><div class="wrap"><div class="head"><p class="eyebrow">Goes with it</p><h2 id="h-goes">For the rest of the night</h2></div><div class="grid3">${p.goes.map(card).join('')}</div></div></section>`;
+  $('#pdpBelow').innerHTML = below;
+  $('#stickImg').src = IMG[p.cut]; $('#stickName').textContent = p.name; updateTier();
+}
+function galShow(i) {
+  const p = P[cur.h], s = cur.slides[i]; if (!s) return;
+  $('#gmain').innerHTML = slideHTML(p, s); $('#gmain').classList.toggle('zoom', !!s.img);
+  $$('.gthumbs button').forEach((b, j) => b.setAttribute('aria-current', String(i === j)));
+}
+function updateTier() { const p = P[cur.h], th = (p.tiers || [[cur.h]])[cur.tier][0], pr = P[th].price; $('#pdpBtn').textContent = money(pr); $('#pdpPrice').textContent = money(pr); $('#stickPrice').textContent = money(pr); }
+function addCurrent(btn) { const p = P[cur.h], th = (p.tiers || [[cur.h]])[cur.tier][0]; add(th, P[th].comp ? (cur.col || null) : cur.col, btn); }
+
+/* ---------- finder ---------- */
+let F = {};
+function finderStep() {
+  const Q = [
+    {k:'pos', q:'How do you usually fall asleep?', o:[['side','On my side','Knees bent, or one arm under the pillow'],['back','On my back','Face up, most of the night'],['changes','It changes','Side, back, side again'],['front','On my front','Face down or turned to one side'],['sitting','Sitting up','Reading or watching before sleep']]},
+    {k:'feel', q:'How do you like a pillow?', o:[['height','With some height','The head held up, not sinking'],['softer','Softer and lower','Something that gives a little more'],['unsure','Not sure','We\'ll pick the one you can adjust']]},
+    {k:'hug', q:'Do you also hold something at night?', o:[['yes','Yes','A pillow between the knees or along the body'],['no','No','Just the one under my head']]},
+  ];
+  const needs = i => i === 0 || (i === 1 && !['front', 'sitting'].includes(F.pos)) || (i === 2 && ['side', 'changes'].includes(F.pos));
+  const steps = Q.filter((_, i) => needs(i)), i = steps.findIndex(s => !(s.k in F));
+  const total = ['front', 'sitting'].includes(F.pos) ? 1 : ['side', 'changes'].includes(F.pos) ? 3 : F.pos ? 2 : 3;
+  if (i === -1) return finderResult();
+  const s = steps[i];
+  $('#finder').innerHTML = `<div class="prog"><span>Question ${i + 1} of ${total}</span><div class="bar"><i style="width:${i / total * 100}%"></i></div></div>
+    <div class="step"><h2 id="fq" tabindex="-1">${s.q}</h2><div class="opts" role="group" aria-labelledby="fq">${s.o.map(([v, a, b]) => `<button class="fopt" type="button" data-f="${s.k}" data-v="${v}"><b>${a}</b><span>${b}</span></button>`).join('')}</div></div>
+    <div class="fnav">${i ? `<button class="link" type="button" data-fback style="border:0;background:none;min-height:44px">Back</button>` : '<span></span>'}<span class="note">Your answers stay on this page.</span></div>`;
+}
+function finderResult() {
+  const {pos, feel, hug} = F; let main = 'neck-01', why = [], also = null, alsoWhy = '', honest = '';
+  if (pos === 'sitting') { main = 'lounge-01'; why = ['23 cm high, made for sitting up in bed', 'A ledge holds the book or the phone for you', 'Cover included, free shipping']; }
+  else if (pos === 'front') { main = 'contour-01'; honest = 'None of our pillows is shaped for sleeping on the front. This is the lowest we make.'; why = ['10 cm high, the lowest in the range', 'Softer, with a gentle wave', 'Thirty nights to decide']; also = 'neck-01'; alsoWhy = 'If you end up on your back or side later in the night, its lower edge is 11 cm.'; }
+  else if (feel === 'softer') { main = 'contour-01'; why = ['The softer, lower one: 10 cm high', 'A gentle wave that follows the neck and shoulders', 'Cover with a cool-touch surface, included']; also = pos === 'side' ? 'side-01' : 'neck-01'; alsoWhy = pos === 'side' ? 'Made for side sleeping, with a 10 cm profile.' : 'If you want to try two heights instead of one.'; }
+  else { why = [pos === 'back' ? 'Start on the 11 cm edge, the lower one' : pos === 'side' ? 'Start on the 13 cm edge, the higher one' : 'Two heights for two positions: 13 cm and 11 cm', 'Memory foam that keeps its height all night', 'Cool-touch cover, machine-washable, included'];
+    also = pos === 'side' ? 'side-01' : 'contour-01'; alsoWhy = pos === 'side' ? 'Only ever on your side? A 10 cm profile made for it.' : 'Prefer it softer and lower? 10 cm, with a gentle wave.'; }
+  if (hug === 'yes' && main === 'neck-01') { main = 'side-sleeper-set'; why = ['Neck 01 for the head, 13 cm edge first', 'Body 01 between the knees and along the back, 120 cm', `Costs ${money(P['side-sleeper-set'].sep - P['side-sleeper-set'].price)} less than both bought separately`]; also = 'neck-01'; alsoWhy = 'Just the pillow for your head.'; }
+  else if (hug === 'yes') { also = 'body-01'; alsoWhy = '120 cm, for the knees, the arm and the back at the same time.'; }
+  const mp = P[main], href = PILLOWS.includes(main) ? `#${main}` : '#sets';
+  const setLine = main === 'neck-01' ? `<p class="note">Sleeping as two? <a class="link" href="#neck-01">For Two</a> is two Neck 01 for ${money(P['for-two'].price)}, ${money(P['for-two'].sep - P['for-two'].price)} less than two bought separately.</p>` : '';
+  $('#finder').innerHTML = `<div class="prog"><span>Your pillow</span><div class="bar"><i style="width:100%"></i></div></div>
+    <div class="step">${honest ? `<p class="honest">${honest}</p>` : ''}
+      <div class="result">${visual(main)}<div class="rb"><p class="eyebrow">${mp.type || 'Set · ' + mp.sub}</p><h3 id="fres" tabindex="-1">${mp.name}</h3>
+        <ul class="why">${why.map(w => `<li>${ico('i-check')}<span>${w}</span></li>`).join('')}</ul>
+        <div class="row"><span class="price num" style="font-size:24px">${money(mp.price)}</span><button class="btn" type="button" data-add="${main}">Add to cart</button><a class="link" href="${href}">Details</a></div></div></div>
+      ${also ? `<div class="also">${visual(also, {alt:''})}<p><b>Also consider ${P[also].name}</b> · <span class="num">${money(P[also].price)}</span><br>${alsoWhy}</p><a class="arrow" href="#${also}" aria-label="See ${P[also].name}">${ico('i-arrow')}</a></div>` : ''}${setLine}</div>
+    <div class="fnav"><button class="link" type="button" data-freset style="border:0;background:none;min-height:44px">Start again</button><span class="note">Thirty nights to decide, whichever you choose.</span></div>`;
+  setTimeout(() => $('#fres') && $('#fres').focus({preventScroll:true}), 30);
+}
+
+/* ---------- router: bare hash tokens ---------- */
+function route() {
+  const t = location.hash.replace('#', '') || 'home';
+  let view = 'home', nav = '', to = null;
+  if (t === 'shop') { view = 'shop'; nav = 'shop'; }
+  else if (t === 'sets') { view = 'shop'; nav = 'sets'; to = '#setsAnchor'; }
+  else if (t === 'finder') { view = 'finder'; nav = 'finder'; F = {}; finderStep(); }
+  else if (t === 'story') { nav = 'story'; to = '#founder'; }
+  else if (PILLOWS.includes(t)) { view = 'product'; nav = t; renderPDP(t); }
+  else if (t === 'main') return;
+  $$('.view').forEach(v => v.hidden = v.dataset.view !== view);
+  $$('.nav a').forEach(a => a.dataset.nav === nav ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+  $('#stick').classList.remove('on'); $('#mnav').hidden = true; $('#menuBtn').setAttribute('aria-expanded', 'false');
+  if (to) requestAnimationFrame(() => $(to).scrollIntoView({behavior:RM ? 'auto' : 'smooth', block:'start'})); else window.scrollTo(0, 0);
+  onScroll();
+}
+function go() { if (document.startViewTransition && !RM) document.startViewTransition(route); else route(); }
+
+/* ---------- hero sky: soft cloud banks drifting, a Dawn halo that rises as you scroll ---------- */
+const sky = (() => {
+  const cv = $('#sky'), cx = cv.getContext('2d'); let W = 0, H = 0, t = 0, run = true, last = 0, lift = 0, px = 0, py = 0;
+  const clouds = Array.from({length:7}, (_, i) => ({x:Math.random(), y:.14 + (i % 4) * .17, s:.18 + Math.random() * .16, v:.00005 + Math.random() * .00008, a:.34 + Math.random() * .3}));
+  function size() { const r = cv.getBoundingClientRect(); W = cv.width = Math.round(r.width); H = cv.height = Math.round(r.height); }
+  function blob(x, y, r, a) { const g = cx.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, `rgba(255,255,255,${a})`); g.addColorStop(1, 'rgba(255,255,255,0)'); cx.fillStyle = g; cx.beginPath(); cx.arc(x, y, r, 0, 6.3); cx.fill(); }
+  function draw() {
+    const g = cx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#F7F9FC'); g.addColorStop(.55, '#E9F0F7'); g.addColorStop(1, '#DCE8F2'); cx.fillStyle = g; cx.fillRect(0, 0, W, H);
+    const hy = H * (.86 - lift * .22) - py * 14, hx = W * .62 - px * 30, hr = Math.max(W, H) * .55;
+    const d = cx.createRadialGradient(hx, hy, 0, hx, hy, hr); d.addColorStop(0, 'rgba(240,183,155,.62)'); d.addColorStop(.35, 'rgba(240,183,155,.26)'); d.addColorStop(1, 'rgba(240,183,155,0)'); cx.fillStyle = d; cx.fillRect(0, 0, W, H);
+    clouds.forEach(c => { const x = ((c.x + t * c.v) % 1.4 - .2) * W + px * 12 * c.s * 4, y = c.y * H + Math.sin(t / 2600 + c.x * 9) * 8, r = c.s * W;
+      blob(x, y, r * .55, c.a * .8); blob(x - r * .45, y + r * .08, r * .4, c.a * .6); blob(x + r * .5, y + r * .1, r * .42, c.a * .6); blob(x + r * .1, y - r * .16, r * .36, c.a * .5); });
+  }
+  function loop(ts) { if (!run) return; if (ts - last > 33) { t = ts; last = ts; draw(); } requestAnimationFrame(loop); }
+  size(); draw(); addEventListener('resize', () => { size(); draw(); });
+  if (!RM) { new IntersectionObserver(([e]) => { const was = run; run = e.isIntersecting && !$('[data-view="home"]').hidden; if (run && !was) requestAnimationFrame(loop); }, {threshold:0}).observe(cv); requestAnimationFrame(loop); }
+  return {set(l, x, y) { lift = l; px = x; py = y; if (RM) draw(); }};
+})();
+
+/* ---------- pointer parallax on the floating pillow ---------- */
+let tx = 0, ty = 0, cxp = 0, cyp = 0;
+$('.hero').addEventListener('pointermove', e => { const r = e.currentTarget.getBoundingClientRect(); tx = (e.clientX - r.left) / r.width - .5; ty = (e.clientY - r.top) / r.height - .5; });
+$('.hero').addEventListener('pointerleave', () => { tx = 0; ty = 0; });
+if (!RM) (function par() { if ($('[data-view="home"]').hidden) return void requestAnimationFrame(par); cxp += (tx - cxp) * .06; cyp += (ty - cyp) * .06;
+  const hs = Math.min(1, scrollY / 700);
+  $('#floater').style.transform = `translate3d(${cxp * 34}px, ${cyp * 22 - hs * 80}px, 0) rotateX(${-cyp * 8}deg) rotateY(${cxp * 12}deg) rotate(${cxp * 2}deg)`;
+  sky.set(hs, cxp, cyp); requestAnimationFrame(par); })();
+
+/* ---------- scroll-linked chapters ---------- */
+let lastState = -1;
+function setEdge(i) { if (i === lastState) return; lastState = i; const s = ['side', 'back', 'level'][i]; $('#fig').dataset.state = s;
+  $$('#steps li').forEach((li, j) => li.classList.toggle('on', j === i)); $$('.seg button').forEach((b, j) => b.setAttribute('aria-pressed', String(j === i))); }
+function onScroll() {
+  $('#hdr').classList.toggle('solid', scrollY > 40 || $('[data-view="home"]').hidden && scrollY > 0);
+  if (!$('[data-view="home"]').hidden) {
+    const e = $('#edges'), r = e.getBoundingClientRect(), span = r.height - innerHeight;
+    if (!RM && span > 0) { const p = Math.min(1, Math.max(0, -r.top / span)); setEdge(p < .36 ? 0 : p < .7 ? 1 : 2); }
+    const tl = $('#timeline').getBoundingClientRect(), tp = Math.min(1, Math.max(0, (innerHeight * .85 - tl.top) / (innerHeight * .6)));
+    $$('#timeline .turn').forEach((el, i) => el.classList.toggle('on', i < Math.round(tp * 13)));
+    const cal = $('#cal').getBoundingClientRect(), cp = Math.min(1, Math.max(0, (innerHeight * .9 - cal.top) / (innerHeight * .7)));
+    $$('#cal i').forEach((el, i) => i < 29 && el.classList.toggle('on', i < Math.round(cp * 29)));
+    const st = $('#story'), sr = st.getBoundingClientRect(), sp = Math.min(1, Math.max(0, (innerHeight * .8 - sr.top) / (sr.height + innerHeight * .1)));
+    const ws = $$('#story .w'), n = Math.round(sp * ws.length); ws.forEach((w, i) => w.classList.toggle('lit', i < n));
+  }
+  const btn = $('#pdpAdd');
+  if (btn && !$('[data-view="product"]').hidden) { const on = btn.getBoundingClientRect().bottom < 72; $('#stick').classList.toggle('on', on); $('#stick').setAttribute('aria-hidden', String(!on)); $('#stickAdd').tabIndex = on ? 0 : -1; }
+}
+const strikeIO = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('pre'); strikeIO.unobserve(e.target); } }), {threshold:.6});
+
+/* ---------- events ---------- */
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-add]'); if (a) { e.preventDefault(); const h = a.dataset.add; add(h, P[h].tiers && h === 'neck-01' ? 'Night' : null, a.hasAttribute('data-nofly') ? null : a); return; }
+  const q = e.target.closest('[data-q]'); if (q) { const l = cart[+q.dataset.q]; l.qty += +q.dataset.d; if (l.qty < 1) cart.splice(+q.dataset.q, 1); renderCart(); return; }
+  const rm = e.target.closest('[data-rm]'); if (rm) { cart.splice(+rm.dataset.rm, 1); renderCart(); return; }
+  const g = e.target.closest('[data-g]'); if (g) { galShow(+g.dataset.g); return; }
+  const fo = e.target.closest('[data-f]'); if (fo) { F[fo.dataset.f] = fo.dataset.v; finderStep(); setTimeout(() => $('#fq') && $('#fq').focus({preventScroll:true}), 30); return; }
+  if (e.target.closest('[data-fback]')) { const k = Object.keys(F); delete F[k[k.length - 1]]; finderStep(); return; }
+  if (e.target.closest('[data-freset]')) { F = {}; finderStep(); return; }
+  const sg = e.target.closest('[data-go]'); if (sg) { const i = +sg.dataset.go, ed = $('#edges'), span = ed.offsetHeight - innerHeight;
+    if (span > 0 && !RM) scrollTo({top:ed.offsetTop + span * [.1, .52, .88][i], behavior:'smooth'}); setEdge(i); return; }
+  if (e.target.closest('[data-close]')) closeCart();
+  if (e.target.closest('#pdpAdd') || e.target.closest('#stickAdd')) addCurrent(e.target.closest('button'));
+  const m = e.target.closest('a[data-morph], .item'); if (m && document.startViewTransition && $('[data-view="product"]').hidden) { const tile = m.closest('.pcard')?.querySelector('.tile') || m.querySelector('img'); if (tile) { tile.style.viewTransitionName = 'pmain'; setTimeout(() => tile.style.viewTransitionName = '', 800); } }
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.name === 'qpos') renderQuick(t.value);
+  if (t.name === 'hcol') { const c = NECK_COLS.find(c => c[0] === t.value), im = $('#heroImg'); im.style.opacity = 0; setTimeout(() => { im.src = IMG[c[1]]; im.style.opacity = 1; }, 220); $('#heroCol').textContent = c[0]; }
+  if (t.name === 'mcol') { const c = NECK_COLS.find(c => c[0] === t.value), im = $('#modImg'); im.style.opacity = 0; setTimeout(() => { im.src = IMG[c[1]]; im.alt = 'Neck 01 in ' + c[0]; im.style.opacity = 1; }, 180); $('#modCol').textContent = c[0]; }
+  if (t.name === 'mtier') $('#modPrice').textContent = money(P[P['neck-01'].tiers[+t.value][0]].price);
+  if (t.name === 'pcol') { cur.col = t.value; $('#pdpCol').textContent = t.value; const i = NECK_COLS.findIndex(c => c[0] === t.value); galShow(i); $('#stickImg').src = IMG[NECK_COLS[i][1]]; }
+  if (t.name === 'tier') { cur.tier = +t.value; updateTier(); }
+  if (t.name === 'flt') $$('#shopGrid .pcard').forEach(c => c.hidden = !(t.value === 'all' || c.dataset.pos.split(' ').includes(t.value)));
+});
+$('#modAdd').addEventListener('click', e => { const i = +$('input[name="mtier"]:checked').value, th = P['neck-01'].tiers[i][0]; add(th, $('input[name="mcol"]:checked').value, e.currentTarget); });
+$('#cartBtn').addEventListener('click', openCart);
+$('#cartClose').addEventListener('click', closeCart);
+$('#scrim').addEventListener('click', closeCart);
+$('#checkout').addEventListener('click', () => toast('Design preview. Checkout opens in the live store.'));
+$('#nlForm').addEventListener('submit', e => { e.preventDefault(); toast('Design preview. Nothing was sent.'); });
+$('#copyMail').addEventListener('click', async () => { try { await navigator.clipboard.writeText('support@somnila.com'); toast('Address copied'); } catch { const r = document.createRange(); r.selectNodeContents($('#mail')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); toast('Address selected. Copy it with your keyboard.'); } });
+$('#menuBtn').addEventListener('click', () => { const m = $('#mnav'); m.hidden = !m.hidden; $('#menuBtn').setAttribute('aria-expanded', String(!m.hidden)); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && $('#drawer').classList.contains('on')) closeCart();
+  if (e.key === 'Tab' && $('#drawer').classList.contains('on')) { const f = $$('#drawer button:not([disabled]), #drawer a[href]'); if (!f.length) return;
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); } else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); } }
+});
+document.addEventListener('pointermove', e => { const t = e.target.closest?.('.pcard'); if (!t || RM) return; const r = t.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+  t.style.transform = `perspective(900px) rotateX(${(.5 - y) * 5}deg) rotateY(${(x - .5) * 6}deg) translateY(-4px)`; const tile = t.querySelector('.tile'); if (tile) { tile.style.setProperty('--mx', x * 100 + '%'); tile.style.setProperty('--my', y * 100 + '%'); } });
+document.addEventListener('pointerout', e => { const t = e.target.closest?.('.pcard'); if (t && !t.contains(e.relatedTarget)) t.style.transform = ''; });
+document.addEventListener('mousemove', e => { const gm = e.target.closest?.('.gmain.zoom'); if (!gm) return; const im = gm.querySelector('img'), r = gm.getBoundingClientRect(); im.style.transformOrigin = `${(e.clientX - r.left) / r.width * 100}% ${(e.clientY - r.top) / r.height * 100}%`; im.style.transform = 'scale(1.8)'; });
+document.addEventListener('mouseout', e => { const gm = e.target.closest?.('.gmain.zoom'); if (gm && !gm.contains(e.relatedTarget)) { const im = gm.querySelector('img'); if (im) im.style.transform = ''; } });
+(function dragRails() { let el = null, sx = 0, sl = 0, moved = false;
+  document.addEventListener('pointerdown', e => { const r = e.target.closest('.rail-x'); if (!r || e.pointerType !== 'mouse') return; el = r; sx = e.clientX; sl = r.scrollLeft; moved = false; });
+  document.addEventListener('pointermove', e => { if (!el) return; const d = e.clientX - sx; if (Math.abs(d) > 4) { moved = true; el.classList.add('drag'); el.scrollLeft = sl - d; } });
+  document.addEventListener('pointerup', () => { if (el) { el.classList.remove('drag'); setTimeout(() => moved = false, 0); } el = null; });
+  document.addEventListener('click', e => { if (moved && e.target.closest('.rail-x')) { e.preventDefault(); e.stopPropagation(); } }, true); })();
+addEventListener('scroll', onScroll, {passive:true});
+addEventListener('hashchange', go);
+
+const PROFILE_SVG = `<svg viewBox="-110 20 1020 320" role="img" aria-label="Side view of Neck 01: 62 centimetres long, one edge 13 centimetres high, the other 11. Turning it over swaps which edge sits under the neck."><g class="pw"><path d="M90 270 L90 158 Q90 140 108 140 C214 140 290 172 400 172 C520 172 586 160 692 160 Q710 160 710 178 L710 270 Z" fill="#DCE8F2" stroke="#1E2A3A" stroke-width="2"/><path d="M104 262 L104 162 Q104 152 114 152 C214 152 290 184 400 184 C520 184 586 172 690 172" fill="none" stroke="#FFFFFF" stroke-width="3" opacity=".7"/></g><line x1="-110" x2="910" y1="270" y2="270" stroke="#1E2A3A" stroke-width="2"/><g class="la"><line x1="62" x2="62" y1="140" y2="270" stroke="#556676" stroke-width="1.5"/><line x1="54" x2="70" y1="140" y2="140" stroke="#556676" stroke-width="1.5"/><text x="48" y="208" text-anchor="end" font-size="24" font-weight="700" fill="#1E2A3A">13 cm</text><text x="48" y="232" text-anchor="end" class="t2" font-size="18" fill="#556676">5.1 in</text><line x1="738" x2="738" y1="160" y2="270" stroke="#556676" stroke-width="1.5"/><line x1="730" x2="746" y1="160" y2="160" stroke="#556676" stroke-width="1.5"/><text x="752" y="218" font-size="24" font-weight="700" fill="#1E2A3A">11 cm</text><text x="752" y="242" class="t2" font-size="18" fill="#556676">4.3 in</text><line x1="132" x2="132" y1="134" y2="84" stroke="#1E2A3A" stroke-width="1.5"/><circle cx="132" cy="140" r="8" fill="#F0B79B" stroke="#1E2A3A" stroke-width="2"/><text x="120" y="72" font-size="20" font-weight="700" fill="#1E2A3A">Under your neck</text></g><g class="lb"><line x1="62" x2="62" y1="160" y2="270" stroke="#556676" stroke-width="1.5"/><line x1="54" x2="70" y1="160" y2="160" stroke="#556676" stroke-width="1.5"/><text x="48" y="218" text-anchor="end" font-size="24" font-weight="700" fill="#1E2A3A">11 cm</text><text x="48" y="242" text-anchor="end" class="t2" font-size="18" fill="#556676">4.3 in</text><line x1="738" x2="738" y1="140" y2="270" stroke="#556676" stroke-width="1.5"/><line x1="730" x2="746" y1="140" y2="140" stroke="#556676" stroke-width="1.5"/><text x="752" y="208" font-size="24" font-weight="700" fill="#1E2A3A">13 cm</text><text x="752" y="232" class="t2" font-size="18" fill="#556676">5.1 in</text><line x1="132" x2="132" y1="154" y2="104" stroke="#1E2A3A" stroke-width="1.5"/><circle cx="132" cy="160" r="8" fill="#F0B79B" stroke="#1E2A3A" stroke-width="2"/><text x="120" y="92" font-size="20" font-weight="700" fill="#1E2A3A">Under your neck</text></g><g transform="translate(560 40)"><rect x="0" y="0" width="200" height="40" rx="20" fill="#FFFFFF" stroke="#1E2A3A" stroke-width="2"/><line x1="86" x2="86" y1="8" y2="32" stroke="#1E2A3A" stroke-width="1.5"/><line x1="114" x2="114" y1="8" y2="32" stroke="#1E2A3A" stroke-width="1.5"/><circle class="bub" cx="100" cy="20" r="11" fill="#F0B79B"/><g class="lvl"><text x="100" y="66" text-anchor="middle" font-size="18" font-weight="700" fill="#1E2A3A">Level</text></g></g><line x1="90" x2="710" y1="300" y2="300" stroke="#556676" stroke-width="1.5"/><line x1="90" x2="90" y1="292" y2="308" stroke="#556676" stroke-width="1.5"/><line x1="710" x2="710" y1="292" y2="308" stroke="#556676" stroke-width="1.5"/><text x="400" y="330" text-anchor="middle" font-size="20" fill="#1E2A3A"><tspan font-weight="700">62 cm</tspan> · 24.4 in</text></svg>`;
+$$('[data-img]').forEach(i => i.src = IMG[i.dataset.img]);
+renderHome(); renderShop(); renderCart(); route();
+$$('.strikes s span').forEach(s => { if (s.getBoundingClientRect().top > innerHeight) { s.classList.add('pre'); strikeIO.observe(s); } });
+</script>
