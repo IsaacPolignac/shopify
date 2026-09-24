@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'avatar Somnila</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,400..800&family=Manrope:wght@400..800&display=swap">
+<style>
+:root{
+  --bg:#F7F9FC; --surface:#FFFFFF; --tint:#EAF1F8; --mist:#DCE8F2;
+  --ink:#1E2A3A; --ink-2:#556676; --line:rgba(30,42,58,.12); --line-2:rgba(30,42,58,.22);
+  --accent:#F0B79B; --accent-tx:#8A5428; --accent-bg:#FBE7DC;
+  --ok-tx:#0A6F4D; --ok-bg:#E3F3EC; --hyp-tx:#8A5428; --hyp-bg:#FBE7DC; --dec-tx:#1F4F86; --dec-bg:#E3EDF8;
+  --c-design:#1E2A3A; --c-shopify:#7F97B2; --c-wait:#E39A74; --c-out:#D3DEEA;
+  --f-d:"Fraunces", Georgia, serif; --f-u:"Manrope", system-ui, sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121A25; --surface:#1A2431; --tint:#202C3B; --mist:#2A384A;
+    --ink:#EEF2F7; --ink-2:#A9B8C9; --line:rgba(238,242,247,.12); --line-2:rgba(238,242,247,.24);
+    --accent:#F0B79B; --accent-tx:#F0B79B; --accent-bg:#3A2A24;
+    --ok-tx:#7FD8B2; --ok-bg:#16342A; --hyp-tx:#F0B79B; --hyp-bg:#3A2A24; --dec-tx:#9CC3F0; --dec-bg:#1C2F47;
+    --c-design:#DCE8F2; --c-shopify:#7F97B2; --c-wait:#F0B79B; --c-out:#34445A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121A25; --surface:#1A2431; --tint:#202C3B; --mist:#2A384A;
+  --ink:#EEF2F7; --ink-2:#A9B8C9; --line:rgba(238,242,247,.12); --line-2:rgba(238,242,247,.24);
+  --accent:#F0B79B; --accent-tx:#F0B79B; --accent-bg:#3A2A24;
+  --ok-tx:#7FD8B2; --ok-bg:#16342A; --hyp-tx:#F0B79B; --hyp-bg:#3A2A24; --dec-tx:#9CC3F0; --dec-bg:#1C2F47;
+  --c-design:#DCE8F2; --c-shopify:#7F97B2; --c-wait:#F0B79B; --c-out:#34445A;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.65 var(--f-u);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:underline;text-decoration-color:var(--line-2);text-underline-offset:3px}
+a:hover{text-decoration-color:currentColor}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.page{max-width:1180px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(16px,4vw,40px) 96px;display:grid;grid-template-columns:220px minmax(0,1fr);gap:clamp(24px,5vw,72px)}
+@media (max-width:900px){.page{grid-template-columns:1fr}.toc{display:none}}
+.toc{position:sticky;top:32px;align-self:start;display:grid;gap:4px;font-size:14px}
+.toc b{font:650 11.5px/1.2 var(--f-u);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+.toc a{text-decoration:none;color:var(--ink-2);padding:6px 0;border-left:2px solid transparent;padding-left:12px;margin-left:-14px}
+.toc a:hover{color:var(--ink);border-left-color:var(--accent)}
+main{min-width:0;display:grid;gap:clamp(48px,6vw,72px)}
+h1,h2,h3{font-family:var(--f-d);font-weight:600;font-variation-settings:"SOFT" 100,"WONK" 0;letter-spacing:-.02em;text-wrap:balance;margin:0}
+h1{font-size:clamp(46px,6.5vw,80px);line-height:.95;letter-spacing:-.04em}
+h2{font-size:clamp(30px,3.4vw,40px);line-height:1.08}
+h3{font-size:21px;line-height:1.2}
+p{margin:0}
+.eyebrow{font:650 12px/1.3 var(--f-u);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.lede{font-size:clamp(18px,1.7vw,20px);color:var(--ink-2);max-width:62ch}
+section{display:grid;gap:20px;scroll-margin-top:24px}
+.prose{display:grid;gap:14px;max-width:70ch}
+.hz{width:56px;height:2px;background:var(--ink);border-radius:2px}
+.hero{display:grid;gap:22px;padding-bottom:8px}
+.cta{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:650;text-decoration:none;justify-self:start}
+.cta:hover{opacity:.92}
+.thesis{padding:clamp(22px,3vw,32px);border-radius:24px;background:var(--tint);font:600 clamp(20px,2.1vw,25px)/1.4 var(--f-d);font-variation-settings:"SOFT" 100;letter-spacing:-.01em}
+.card{background:var(--surface);border-radius:24px;box-shadow:0 0 0 1px var(--line);padding:clamp(20px,3vw,30px);display:grid;gap:16px}
+.tbl{overflow-x:auto;border-radius:20px;box-shadow:0 0 0 1px var(--line);background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:14px 16px;border-bottom:1px solid var(--line)}
+tr:last-child th,tr:last-child td{border-bottom:0}
+thead th{font:650 12px/1.3 var(--f-u);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+tbody th{font-weight:650}
+td small,th small{display:block;color:var(--ink-2);font-size:13px;margin-top:4px}
+.num{font-variant-numeric:tabular-nums}
+.tag{display:inline-flex;align-items:center;min-height:26px;padding:0 10px;border-radius:999px;font:700 12px/1 var(--f-u);white-space:nowrap}
+.t-fait{background:var(--ok-bg);color:var(--ok-tx)}
+.t-hyp{background:var(--hyp-bg);color:var(--hyp-tx)}
+.t-dec{background:var(--dec-bg);color:var(--dec-tx)}
+.quotes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.quotes li{padding:16px 18px;border-radius:18px;background:var(--tint);font:500 18px/1.35 var(--f-d);font-variation-settings:"SOFT" 100}
+.note{font-size:14px;color:var(--ink-2)}
+.chart{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:minmax(150px,230px) 1fr 44px;gap:12px;align-items:center;font-size:14.5px}
+.track{position:relative;height:20px}
+.track::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 25%);}
+.bar{position:absolute;left:0;top:2px;bottom:2px;border-radius:5px}
+.row b{text-align:right}
+.axis{display:grid;grid-template-columns:minmax(150px,230px) 1fr 44px;gap:12px;font-size:12px;color:var(--ink-2)}
+.axis div{position:relative;height:16px}
+.axis span{position:absolute;transform:translateX(-50%)}
+.axis span:first-child{transform:none}
+.axis span:last-child{transform:translateX(-100%)}
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:12px;height:12px;border-radius:3px}
+.b-design{background:var(--c-design)} .b-shopify{background:var(--c-shopify)} .b-wait{background:var(--c-wait)} .b-out{background:var(--c-out)}
+@media (max-width:620px){.row,.axis{grid-template-columns:120px 1fr 40px;font-size:13px}}
+.bench{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.bench{grid-template-columns:1fr}}
+.bench .card h3{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.bench ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15px}
+.bench .no li::marker{content:"✕  ";color:var(--accent-tx)}
+.bench .yes li::marker{content:"✓  ";color:var(--ok-tx)}
+.lbl{font:650 12px/1.2 var(--f-u);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.flow{list-style:none;margin:0;padding:0;counter-reset:f;display:grid;gap:8px}
+.flow li{counter-increment:f;display:grid;grid-template-columns:36px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.flow li:last-child{border-bottom:0}
+.flow li::before{content:counter(f);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--tint);font:600 14px/1 var(--f-u)}
+.flow b{font-weight:650}
+.flow span{display:block;color:var(--ink-2);font-size:14.5px}
+.pages{display:grid;gap:14px}
+details.pg{background:var(--surface);border-radius:20px;box-shadow:0 0 0 1px var(--line);padding:0 22px}
+details.pg summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:64px;font:600 21px/1.2 var(--f-d);font-variation-settings:"SOFT" 100}
+details.pg summary::-webkit-details-marker{display:none}
+details.pg summary small{font:500 14px var(--f-u);color:var(--ink-2)}
+details.pg[open]{padding-bottom:12px}
+.block{display:grid;grid-template-columns:auto 1fr;gap:12px 16px;align-items:start}
+.sev{display:inline-flex;align-items:center;justify-content:center;min-width:88px;min-height:26px;padding:0 10px;border-radius:999px;font:700 12px/1 var(--f-u)}
+.s-block{background:var(--accent-bg);color:var(--accent-tx)}
+.s-dec{background:var(--dec-bg);color:var(--dec-tx)}
+.s-later{background:var(--tint);color:var(--ink-2)}
+.todo{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.todo li{display:grid;grid-template-columns:100px 1fr;gap:16px;padding:16px 18px;border-radius:18px;background:var(--surface);box-shadow:0 0 0 1px var(--line)}
+.todo b{display:block;margin-bottom:2px}
+.todo .sev{align-self:start;justify-self:start}
+.todo p{font-size:15px;color:var(--ink-2)}
+@media (max-width:560px){.todo li{grid-template-columns:1fr}}
+.end{padding:clamp(22px,3vw,32px);border-radius:24px;background:var(--ink);color:var(--bg);display:grid;gap:14px}
+.end h2{color:var(--bg)}
+.end p{opacity:.85}
+.end a{color:var(--bg)}
+</style>
+</head>
+<body>
+<div class="page">
+<nav class="toc" aria-label="Sommaire">
+  <b>Sommaire</b>
+  <a href="#phrase">En une phrase</a>
+  <a href="#avatar">L'avatar</a>
+  <a href="#objections">Ses objections</a>
+  <a href="#abandons">Pourquoi on abandonne</a>
+  <a href="#etudes">Les études</a>
+  <a href="#bench">Ce qu'on prend, ce qu'on refuse</a>
+  <a href="#pages">Le site, page par page</a>
+  <a href="#manque">Ce qui manque</a>
+</nav>
+<main>
+  <header class="hero">
+    <p class="eyebrow">Somnila · design du site · 24 septembre 2026</p>
+    <h1>L'avatar Somnila</h1>
+    <p class="lede">Pour qui le site est dessiné, ce qui la fait hésiter, et quelle preuve justifie chaque bloc. Chaque chiffre renvoie à sa source. Chaque trait non prouvé porte l'étiquette « hypothèse ».</p>
+    <a class="cta" href="https://claude.ai/artifact/BwsoBzQP1kx8dPvDJeR41b" target="_blank" rel="noopener">Ouvrir la maquette du site →</a>
+  </header>
+
+  <section id="phrase" aria-labelledby="h-phrase">
+    <p class="eyebrow">En une phrase</p>
+    <h2 id="h-phrase" class="vh" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">En une phrase</h2>
+    <p class="thesis">Le site parle à une Américaine de 40 à 60 ans qui dort surtout sur le côté, a déjà racheté plusieurs oreillers et se méfie des pubs à −50 %. Il doit lui faire choisir la bonne forme en moins d'une minute, et lui prouver qu'elle ne prend aucun risque.</p>
+  </section>
+
+  <section id="avatar" aria-labelledby="h-avatar">
+    <p class="eyebrow">L'avatar</p>
+    <div class="hz" aria-hidden="true"></div>
+    <h2 id="h-avatar">La dormeuse de côté au troisième oreiller</h2>
+    <div class="prose"><p>Un portrait, pas une personne réelle. Ce qui est mesuré est marqué <span class="tag t-fait">fait</span>, ce qui est déduit <span class="tag t-hyp">hypothèse</span>, ce qui vient du brief <span class="tag t-dec">décision</span>. Les hypothèses se vérifient dès les 100 premières commandes, dans Shopify Analytics.</p></div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th scope="col">Trait</th><th scope="col">Ce qui l'appuie</th><th scope="col">Statut</th></tr></thead>
+        <tbody class="num">
+          <tr><th scope="row">Dort surtout sur le côté</th><td>54,1 % du temps au lit sur le côté, 37,5 % sur le dos, 7,3 % sur le ventre. Mesuré par capteurs chez 664 adultes.<small>Skarpsno et al., Nature and Science of Sleep, 2017</small></td><td><span class="tag t-fait">fait</span></td></tr>
+          <tr><th scope="row">Change souvent de position</th><td>1,6 changement de position par heure en moyenne. D'où les deux hauteurs de Neck 01.<small>Même étude</small></td><td><span class="tag t-fait">fait</span></td></tr>
+          <tr><th scope="row">A entre 40 et 60 ans</th><td>La part du côté passe de 47,7 % (20–34 ans) à 58,3 % (55–65 ans). Le sommeil de moins de 7 h culmine à 34,5 % chez les 50–64 ans.<small>Skarpsno 2017 · CDC NCHS Data Brief 559, 2024</small></td><td><span class="tag t-hyp">hypothèse</span></td></tr>
+          <tr><th scope="row">Plutôt une femme</th><td>Du mal à rester endormi la plupart des nuits : 21,4 % des femmes, 14,6 % des hommes. Du mal à s'endormir : 18,5 % contre 12,2 %.<small>CDC NCHS Data Brief 559, 2024</small></td><td><span class="tag t-hyp">hypothèse</span></td></tr>
+          <tr><th scope="row">Vit aux États-Unis</th><td>Marché principal du brief, puis Canada, Royaume-Uni, UE, Australie.</td><td><span class="tag t-dec">décision</span></td></tr>
+          <tr><th scope="row">Achète sur téléphone, le soir, depuis une pub</th><td>Le plan de lancement passe par Meta. À confirmer avec les premières sessions (appareil, heure, source).</td><td><span class="tag t-hyp">hypothèse</span></td></tr>
+          <tr><th scope="row">A déjà racheté 2 ou 3 oreillers</th><td>Correspond à l'histoire du fondateur (« the kind that goes flat in three months »). Aucune donnée client encore.</td><td><span class="tag t-hyp">hypothèse</span></td></tr>
+          <tr><th scope="row">Se méfie des notes parfaites</th><td>La probabilité d'achat culmine entre 4,0 et 4,7 étoiles, puis baisse quand la note approche 5,0.<small>Spiegel Research Center, Northwestern</small></td><td><span class="tag t-fait">fait</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="card">
+      <p class="lbl">Ce qu'elle se dit — formulations de travail, pas des citations</p>
+      <ul class="quotes">
+        <li>« Encore un oreiller qui va s'aplatir en trois mois. »</li>
+        <li>« Il y en a cinq. Lequel est pour moi ? »</li>
+        <li>« Et si c'est trop haut ? »</li>
+        <li>« C'est encore une marque à fausse promo ? »</li>
+        <li>« Je le reçois quand, et je le renvoie comment ? »</li>
+      </ul>
+      <p class="lbl" style="margin-top:6px">Ce qu'elle cherche vraiment</p>
+      <p>Quand elle se réveille raide et que son oreiller s'est aplati, elle veut une forme qui garde sa hauteur dans toutes les positions où elle finit la nuit, pour arrêter d'en racheter. Le site ne promet rien sur la raideur : c'est son vécu, pas notre allégation.</p>
+    </div>
+    <div class="prose">
+      <p><b>Trois profils secondaires</b>, servis par les packs et le questionnaire, sans page à eux : le couple (For Two, 22,62 $ de moins que deux Neck 01), le foyer (Family Set, 45,25 $ de moins que trois), la lectrice du soir (Lounge 01 et Evening Set).</p>
+    </div>
+  </section>
+
+  <section id="objections" aria-labelledby="h-obj">
+    <p class="eyebrow">Ses objections</p>
+    <div class="hz" aria-hidden="true"></div>
+    <h2 id="h-obj">Huit hésitations, et où le site y répond</h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th scope="col">Elle se demande</th><th scope="col">Pourquoi ça compte</th><th scope="col">La réponse dans la maquette</th></tr></thead>
+        <tbody class="num">
+          <tr><th scope="row">Lequel choisir ?</th><td>La surcharge de choix augmente quand les options sont dures à comparer et que la préférence est floue.<small>Chernev et al., méta-analyse, 99 observations, N = 7 202, 2015</small></td><td>Questionnaire dans le héro : 4 réponses, 1 oreiller. Questionnaire complet en 3 questions. Filtres par position dans la boutique.</td></tr>
+          <tr><th scope="row">Et si ça ne me va pas ?</th><td>90 % regardent la politique de retour avant d'acheter. 13 % des abandons viennent d'une politique de retour insatisfaisante.<small>Narvar 2025 · Baymard</small></td><td>« Thirty nights to decide » dans le bandeau, le héro, la fiche, la FAQ et une section dédiée en trois étapes.</td></tr>
+          <tr><th scope="row">Combien au total ?</th><td>Premier motif d'abandon : 40 % pour des frais en plus. 12 % parce que le total n'était pas visible.<small>Baymard</small></td><td>« Free shipping on every pillow » partout. Barre de livraison offerte dans le panier. « Taxes calculated at checkout ».</td></tr>
+          <tr><th scope="row">Je le reçois quand ?</th><td>20 % abandonnent pour une livraison trop lente. 73 % disent que la date estimée pèse sur l'achat, 40 % n'achètent pas sans date.<small>Baymard · Narvar 2025</small></td><td>« Ships in 6–10 days ». <b>Il manque la durée de transit</b> pour afficher une vraie date : premier bloquant.</td></tr>
+          <tr><th scope="row">C'est une arnaque à fausse promo ?</th><td>19 % abandonnent faute de confiance. 46,1 % des jugements de crédibilité portent sur l'apparence du site.<small>Baymard · Fogg, Stanford, 2 684 participants</small></td><td>Section « What you won't find here ». Prix réels, économie des packs en dollars, aucun badge inventé.</td></tr>
+          <tr><th scope="row">C'est grand comment ?</th><td>56 % commencent par explorer les images. 28 % des sites n'ont aucune image qui montre l'échelle.<small>Baymard</small></td><td>Profil à l'échelle (13 cm et 11 cm), empreinte comparée à un oreiller standard US de 20 × 26 in, cm et pouces partout.</td></tr>
+          <tr><th scope="row">Le paiement est sûr ?</th><td>19 % n'ont pas confiance dans le site pour leur carte.<small>Baymard</small></td><td>Shop Pay, Apple Pay et Google Pay, vérifiés actifs dans la boutique, nommés sous chaque bouton d'achat.</td></tr>
+          <tr><th scope="row">Pourquoi aucun avis ?</th><td>Avec 5 avis, la probabilité d'achat est 270 % plus élevée qu'avec aucun.<small>Spiegel Research Center</small></td><td>On le dit : « Stars we haven't earned ». Et on prépare une app d'avis gratuite pour les premiers vrais avis (voir plus bas).</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="abandons" aria-labelledby="h-ab">
+    <p class="eyebrow">Pourquoi on abandonne un panier</p>
+    <div class="hz" aria-hidden="true"></div>
+    <h2 id="h-ab">Ce que le design traite, et ce qu'il attend encore</h2>
+    <div class="prose"><p>70,22 % des paniers sont abandonnés en moyenne (50 études). Voici les motifs des acheteurs américains, hors « je regardais seulement ». Plusieurs motifs possibles par personne.</p></div>
+    <figure class="card" style="margin:0" aria-labelledby="h-fig">
+      <p id="h-fig" class="lbl">Motifs d'abandon au paiement, en % des acheteurs américains qui ont abandonné</p>
+      <div class="legend"><span><i class="b-design"></i>Traité par la maquette</span><span><i class="b-shopify"></i>Traité par le checkout Shopify</span><span><i class="b-wait"></i>Attend une donnée</span><span><i class="b-out"></i>Hors design</span></div>
+      <div class="chart num" id="abChart"></div>
+      <div class="axis" aria-hidden="true"><span></span><div><span style="left:0">0</span><span style="left:25%">10</span><span style="left:50%">20</span><span style="left:75%">30</span><span style="left:100%">40</span></div><span></span></div>
+      <p class="note">Source : Baymard Institute, « 50 Cart Abandonment Rate Statistics 2026 », consulté le 24 septembre 2026. <a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">baymard.com</a></p>
+    </figure>
+  </section>
+
+  <section id="etudes" aria-labelledby="h-et">
+    <p class="eyebrow">Les études</p>
+    <div class="hz" aria-hidden="true"></div>
+    <h2 id="h-et">Onze chiffres, vérifiés à la source</h2>
+    <div class="prose"><p>Chaque chiffre a été relu sur la page d'origine le 24 septembre 2026. Ceux qui concernent la santé restent dans ce dossier : sur le site, on ne cite que les positions de sommeil, qui décrivent un comportement et ne promettent rien.</p></div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th scope="col">Chiffre</th><th scope="col">Source</th><th scope="col">Ce qu'on en fait</th></tr></thead>
+        <tbody class="num">
+          <tr><th scope="row">54,1 % côté · 37,5 % dos · 7,3 % ventre · 1,6 changement/h</th><td><a href="https://www.dovepress.com/sleep-positions-and-nocturnal-body-movements-based-on-free-living-acce-peer-reviewed-fulltext-article-NSS" target="_blank" rel="noopener">Skarpsno et al., 2017</a><small>664 adultes, accéléromètres, à domicile</small></td><td>Section « The night, measured » sur l'accueil. Justifie les deux hauteurs.</td></tr>
+          <tr><th scope="row">30,5 % des adultes US dorment moins de 7 h</th><td><a href="https://www.cdc.gov/nchs/products/databriefs/db559.htm" target="_blank" rel="noopener">CDC, NCHS Data Brief 559</a><small>NHIS 2024</small></td><td>Taille du marché, âge et sexe de l'avatar. Pas sur le site.</td></tr>
+          <tr><th scope="row">70,22 % d'abandon · 40 % frais · 20 % lenteur · 19 % confiance · 13 % retours</th><td><a href="https://baymard.com/lists/cart-abandonment-rate" target="_blank" rel="noopener">Baymard Institute</a></td><td>Livraison offerte visible, essai partout, moyens de paiement nommés.</td></tr>
+          <tr><th scope="row">56 % explorent d'abord les images</th><td><a href="https://baymard.com/blog/ensure-sufficient-image-resolution-and-zoom" target="_blank" rel="noopener">Baymard, product page</a></td><td>Galerie en tête de fiche, 4 couleurs, 2 schémas.</td></tr>
+          <tr><th scope="row">28 % des sites sans image à l'échelle</th><td><a href="https://baymard.com/blog/in-scale-product-images" target="_blank" rel="noopener">Baymard, in-scale images</a></td><td>« How big is it, really? » : empreinte contre un oreiller standard.</td></tr>
+          <tr><th scope="row">57 % du temps au-dessus de la ligne de flottaison, 74 % sur les deux premiers écrans</th><td><a href="https://www.nngroup.com/articles/scrolling-and-attention/" target="_blank" rel="noopener">Nielsen Norman Group, 2018</a><small>120 participants, 130 000 fixations</small></td><td>Le choix de l'oreiller se fait dans le héro. Le bouton d'achat de la fiche est visible sans défiler sur 1440 × 900.</td></tr>
+          <tr><th scope="row">90 % lisent la politique de retour · 73 % sensibles à la date · 40 % n'achètent pas sans date</th><td><a href="https://corp.narvar.com/press/new-narvar-state-of-post-purchase-report" target="_blank" rel="noopener">Narvar, State of Post-Purchase 2025</a><small>3 461 acheteurs US</small></td><td>Essai affiché partout. Transit à obtenir pour afficher une date.</td></tr>
+          <tr><th scope="row">5 avis = +270 % de probabilité d'achat · pic entre 4,0 et 4,7 étoiles</th><td><a href="https://spiegel.medill.northwestern.edu/how-online-reviews-influence-sales/" target="_blank" rel="noopener">Spiegel Research Center</a></td><td>Pas de fausse note. Collecte d'avis réels dès les premières commandes.</td></tr>
+          <tr><th scope="row">46,1 % jugent la crédibilité sur l'apparence</th><td><a href="https://credibility.stanford.edu/pdf/How_Do_People_Evaluate_a_Web_Site's_Credibility_v37.pdf" target="_blank" rel="noopener">Fogg et al., Stanford</a><small>2 684 participants</small></td><td>Soin typographique, alignements, zéro gabarit générique.</td></tr>
+          <tr><th scope="row">0,1 s plus rapide sur mobile : +8,4 % de conversions retail</th><td><a href="https://deloitte.com/ie/en/services/consulting/research/milliseconds-make-millions.html" target="_blank" rel="noopener">Deloitte pour Google, « Milliseconds Make Millions »</a><small>37 sites, 30 millions de sessions</small></td><td>Aucune app tierce. Toutes les images de la maquette pèsent 173 Ko.</td></tr>
+          <tr><th scope="row">Surcharge de choix : 4 facteurs aggravants</th><td><a href="https://chernev.com/wp-content/uploads/2017/02/ChoiceOverload_JCP_2015.pdf" target="_blank" rel="noopener">Chernev, Böckenholt, Goodman, 2015</a></td><td>Questionnaire, gamme présentée par position, un seul oreiller mis en avant.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="bench" aria-labelledby="h-bench">
+    <p class="eyebrow">Ce qu'on prend, ce qu'on refuse</p>
+    <div class="hz" aria-hidden="true"></div>
+    <h2 id="h-bench">Quatre sites de référence</h2>
+    <div class="bench">
+      <div class="card"><h3>Pilloway <small class="note">même thème, Shrine</small></h3>
+        <ul class="yes"><li>Le mécanisme avant le problème</li><li>Trois puces bénéfice + preuve</li><li>Paliers de quantité, le plus petit présélectionné</li><li>Accordéon d'objections sous le bouton, barre d'achat collante</li></ul>
+        <ul class="no"><li>« 10,000+ reviews » et 4,8/5 sans avis réels</li><li>Trois délais de livraison contradictoires</li><li>Compte à rebours qui vide le panier</li></ul></div>
+      <div class="card"><h3>Derila</h3>
+        <ul class="yes"><li>L'entrée par la position de sommeil</li><li>Le ciel poudré</li><li>La vidéo produit dans le héro (quand tu l'auras)</li></ul>
+        <ul class="no"><li>Prix barrés permanents</li><li>Stocks qui s'épuisent en continu</li></ul></div>
+      <div class="card"><h3>Soya Paris</h3>
+        <ul class="yes"><li>Ajout rapide depuis la carte produit</li><li>Carrousel de la gamme, défilement horizontal sur mobile</li><li>Une bande de chiffres</li></ul>
+        <ul class="no"><li>« 92 % des clients… » sans étude publiée</li><li>« Recommandé par les ostéopathes »</li></ul></div>
+      <div class="card"><h3>Blume <small class="note">la fiche que tu m'as montrée</small></h3>
+        <ul class="yes"><li>Badge sur l'image, pastilles sous le titre</li><li>Liste de faits, « dans le carton »</li><li>Packs dans le bloc d'achat, barre collante</li></ul>
+        <ul class="no"><li>Étoiles sans avis</li><li>« 4 free gifts » : aucun cadeau n'existe</li></ul></div>
+    </div>
+    <div class="prose"><p><b>Ce qui n'existe chez aucun des quatre</b> : une étude citée avec sa source, un schéma à l'échelle, un questionnaire qui avoue quand aucun produit ne convient (dormeurs sur le ventre), et l'économie de chaque pack écrite en dollars.</p></div>
+  </section>
+
+  <section id="pages" aria-labelledby="h-pages">
+    <p class="eyebrow">Le site, page par page</p>
+    <div class="hz" aria-hidden="true"></div>
+    <h2 id="h-pages">L'ordre des blocs, et la raison de chacun</h2>
+    <div class="pages">
+      <details class="pg" open><summary>Accueil <small>13 blocs</small></summary>
+        <ol class="flow">
+          <li><div><b>Bandeau</b><span>Livraison offerte · 30 nuits · départ sous 6–10 jours. Les trois freins Baymard les plus fréquents, d'entrée.</span></div></li>
+          <li><div><b>Héro « Sleep well. » + questionnaire éclair</b><span>Quatre réponses mènent à un oreiller et à son prix. La décision se prend là où se passe 57 % de l'attention.</span></div></li>
+          <li><div><b>Quatre garanties</b><span>Livraison, essai, housse lavable, paiement sûr (Shop Pay, Apple Pay, Google Pay).</span></div></li>
+          <li><div><b>« The night, measured »</b><span>L'étude Skarpsno en graphique. Le mécanisme avant le problème, comme Pilloway, mais sourcé.</span></div></li>
+          <li><div><b>La gamme par position</b><span>Cinq cartes, chacune titrée par la façon de dormir, pas par la matière.</span></div></li>
+          <li><div><b>Neck 01 achetable sur place</b><span>Couleurs, profil à l'échelle, dimensions en cm et en pouces, bouton d'ajout.</span></div></li>
+          <li><div><b>Comparatif</b><span>Neck 01 contre un oreiller en fibre standard. Cinq lignes vérifiables.</span></div></li>
+          <li><div><b>L'essai, en trois étapes</b><span>Commander, dormir dessus, garder ou renvoyer. Une vraie séquence, donc numérotée.</span></div></li>
+          <li><div><b>« What you won't find here »</b><span>Ce qu'on refuse, barré en Dawn. Répond à la méfiance de l'avatar envers les pubs de la catégorie.</span></div></li>
+          <li><div><b>Packs, prix honnêtes</b><span>Économie en dollars sur chaque carte : For Two −22,62 $, Family Set −45,25 $.</span></div></li>
+          <li><div><b>Le fondateur</b><span>Le texte exact du brand book, sans visage.</span></div></li>
+          <li><div><b>FAQ</b><span>Sept questions, réponses tirées des données de la boutique. Dont « je dors sur le ventre » : on dit qu'aucun oreiller n'est fait pour ça.</span></div></li>
+          <li><div><b>Newsletter</b><span>« Notes from the workshop ». Sans code promo.</span></div></li>
+        </ol>
+      </details>
+      <details class="pg"><summary>Boutique <small>filtres, packs, accessoires</small></summary>
+        <ol class="flow">
+          <li><div><b>Titre et filtres par position</b><span>Tout · Côté · Dos · Plus souple · Corps entier · Assis.</span></div></li>
+          <li><div><b>Cinq oreillers + une tuile questionnaire</b><span>La sixième case remplit la grille et récupère les indécis.</span></div></li>
+          <li><div><b>Huit packs</b><span>Visuels composés de vraies photos détourées, jamais retouchées. Économie écrite en dollars.</span></div></li>
+          <li><div><b>Accessoires</b><span>Mask 01, Quiet 01, housse de rechange, Throw 01.</span></div></li>
+        </ol>
+      </details>
+      <details class="pg"><summary>Fiche produit <small>Neck 01, puis les quatre autres</small></summary>
+        <ol class="flow">
+          <li><div><b>Galerie</b><span>Quatre couleurs, le profil à l'échelle, l'empreinte comparée.</span></div></li>
+          <li><div><b>Bloc d'achat</b><span>Titre, accroche du brand book, trois pastilles, prix, couleur, 1 · 2 · 3 oreillers (le plus petit présélectionné), bouton visible sans défiler.</span></div></li>
+          <li><div><b>Trois faits et cinq accordéons</b><span>Taille et poids, matières, contenu du carton, livraison, essai.</span></div></li>
+          <li><div><b>« Which edge is yours? »</b><span>Le schéma 13 cm / 11 cm et la règle : garder le bord où la tête reste droite.</span></div></li>
+          <li><div><b>« How big is it, really? »</b><span>L'image à l'échelle qui manque à 28 % des sites.</span></div></li>
+          <li><div><b>« Goes with it » et barre collante</b><span>Housse, masque, bouchons.</span></div></li>
+        </ol>
+      </details>
+      <details class="pg"><summary>Questionnaire <small>3 questions au plus</small></summary>
+        <ol class="flow">
+          <li><div><b>Position</b><span>Côté, dos, ça change, ventre, assis. Ventre et assis donnent un résultat direct.</span></div></li>
+          <li><div><b>Sensation</b><span>De la hauteur, plus souple et plus bas, ou ne sait pas (Neck 01, réglable).</span></div></li>
+          <li><div><b>Un oreiller à serrer ?</b><span>Oui : Side-Sleeper Set (Neck 01 + Body 01, −22,62 $).</span></div></li>
+          <li><div><b>Résultat</b><span>Un oreiller, trois raisons, le prix, « Also consider », et l'offre couple si elle s'applique.</span></div></li>
+        </ol>
+      </details>
+      <details class="pg"><summary>Panier <small>tiroir latéral</small></summary>
+        <ol class="flow">
+          <li><div><b>Barre de livraison offerte</b><span>Seuil de 62,44 $ (54,90 € convertis). Tout oreiller le franchit seul.</span></div></li>
+          <li><div><b>Lignes, quantités, retrait</b><span>Boutons de 40 px, lisibles au pouce.</span></div></li>
+          <li><div><b>Un seul ajout proposé</b><span>Mask 01, sinon Quiet 01, sinon la housse. Seulement si le panier contient un oreiller.</span></div></li>
+          <li><div><b>Total, taxes, moyens de paiement</b><span>Rien à découvrir au paiement.</span></div></li>
+        </ol>
+      </details>
+    </div>
+  </section>
+
+  <section id="manque" aria-labelledby="h-manque">
+    <p class="eyebrow">Ce qui manque</p>
+    <div class="hz" aria-hidden="true"></div>
+    <h2 id="h-manque">Avant de mettre ce design en ligne</h2>
+    <ul class="todo">
+      <li><span class="sev s-block">Bloquant</span><div><b>Durées de transit par zone</b><p>US, Canada, Royaume-Uni, UE, Australie. Sans elles, pas de date de livraison affichée, et 40 % des acheteurs n'achètent pas sans date (Narvar). À demander au fournisseur ou au transporteur.</p></div></li>
+      <li><span class="sev s-block">Bloquant</span><div><b>Politiques de remboursement et d'expédition</b><p>Pas en ligne. Les brouillons parlent encore des oreillers Appui et Aplomb et des bandelettes PORTANCE. Je les réécris pour Somnila, tu les colles (le connecteur ne peut pas les écrire).</p></div></li>
+      <li><span class="sev s-block">Bloquant</span><div><b>Conditions exactes de l'essai 30 nuits</b><p>Qui paie le retour, dans quel état, sous quel délai le remboursement. En attendant, la maquette n'affiche que la phrase du brand book : « Try it for thirty nights. If it isn't right, send it back. »</p></div></li>
+      <li><span class="sev s-dec">Décision</span><div><b>Seuil de livraison offerte</b><p>54,90 € donnent 62,44 $ aujourd'hui : exactement le prix de Side 01 et de Lounge 01. Un mouvement de change peut les faire passer sous le seuil. Deux options : descendre le seuil à 49,90 €, ou arrondir les prix par marché dans Markets.</p></div></li>
+      <li><span class="sev s-dec">Décision</span><div><b>Suivi de colis</b><p>Si le suivi est confirmé, on l'écrit dans le bandeau. 38 % des acheteurs disent que les mises à jour de suivi réduisent leur anxiété (Narvar).</p></div></li>
+      <li><span class="sev s-dec">Décision</span><div><b>Avis clients</b><p>Une app d'avis gratuite et une relance automatique à J+30. La section avis s'active à partir de 5 avis réels, pas avant.</p></div></li>
+      <li><span class="sev s-later">À demander</span><div><b>Odeur à l'ouverture, pays de fabrication, certification de la mousse</b><p>Questions probables dans la catégorie (hypothèse). Aucune donnée aujourd'hui, donc rien d'affiché.</p></div></li>
+      <li><span class="sev s-later">À fournir</span><div><b>Vidéo de 10 à 20 secondes</b><p>Une main qui presse la mousse et la regarde remonter. Elle remplacerait l'image du héro.</p></div></li>
+    </ul>
+  </section>
+
+  <div class="end">
+    <h2>Prochaine étape</h2>
+    <p>Porter cette maquette dans le thème non publié « Somnila — build v1 », en sections écrites à la main, en commençant par la fiche Neck 01. Rien n'est publié, rien n'est supprimé. J'attends ton « ok ».</p>
+    <p><a href="https://claude.ai/artifact/BwsoBzQP1kx8dPvDJeR41b" target="_blank" rel="noopener">Revoir la maquette du site</a></p>
+  </div>
+</main>
+</div>
+<script>
+const AB = [
+  ['Frais en plus trop élevés', 40, 'design'], ['Livraison trop lente', 20, 'wait'], ['Pas confiance pour la carte', 19, 'design'],
+  ['Création de compte obligatoire', 18, 'shopify'], ['Paiement trop long', 17, 'shopify'], ['Erreurs du site', 17, 'out'],
+  ['Politique de retour insatisfaisante', 13, 'design'], ['Total non visible à l\'avance', 12, 'design'], ['Carte refusée', 10, 'out'],
+  ['Pas assez de moyens de paiement', 9, 'design'], ['Ne sait pas', 7, 'out']
+];
+document.getElementById('abChart').innerHTML = AB.map(([l, v, k]) =>
+  `<div class="row" role="img" aria-label="${l} : ${v} %"><span>${l}</span><div class="track"><div class="bar b-${k}" style="width:${v / 40 * 100}%"></div></div><b>${v} %</b></div>`).join('');
+</script>
+</body>
+</html>

@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Somnila Storefront</title>
+<meta name="description" content="Somnila memory-foam pillows: home, shop, product page, pillow finder and cart, designed with real prices and real product data.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:SOFT,WONK,opsz,wght@0..100,0..1,9..144,400..800&family=Manrope:wght@400..800&display=swap">
+<style>
+/* ---------- Tokens: the Somnila brand book, v2 ("night and dawn") ---------- */
+:root{
+  --cloud:#F7F9FC; --mist:#DCE8F2; --mist-2:#EAF1F8; --night:#1E2A3A; --night-2:#27364A;
+  --dawn:#F0B79B; --dawn-soft:#FBE7DC; --slate:#6B7D90;
+  --ink:#1E2A3A; --ink-2:#556676; --dawn-tx:#8A5428; --on-night:#F7F9FC; --on-night-2:#B6C3D1;
+  --card:#FFFFFF; --line:rgba(30,42,58,.12); --line-2:rgba(30,42,58,.22);
+  --back:#7F97B2;
+  --focus:#1E2A3A;
+  --shadow:0 20px 46px -20px rgba(30,42,58,.30);
+  --shadow-sm:0 10px 24px -14px rgba(30,42,58,.28);
+  --r-card:28px; --r-tile:22px; --r-panel:32px;
+  --f-display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --f-ui:"Manrope", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --gutter:clamp(16px,4vw,40px);
+  --sec:clamp(64px,8.5vw,112px);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--cloud);color:var(--ink);font:400 16px/1.6 var(--f-ui);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:6px}
+.night :focus-visible,.night:focus-visible{--focus:var(--dawn)}
+.vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.wrap{max-width:1240px;margin-inline:auto;padding-inline:var(--gutter)}
+.num{font-variant-numeric:tabular-nums}
+
+h1,h2,h3,.disp{font-family:var(--f-display);font-weight:600;font-variation-settings:"SOFT" 100,"WONK" 0;letter-spacing:-.02em;text-wrap:balance;margin:0;color:inherit}
+h2{font-size:clamp(34px,4.3vw,54px);line-height:1.03}
+h3{font-size:24px;line-height:1.15;letter-spacing:-.01em}
+p{margin:0}
+.lede{font-size:clamp(17px,1.5vw,19px);line-height:1.6;color:var(--ink-2);max-width:48ch}
+.eyebrow{font:600 12px/1.2 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.night .eyebrow{color:var(--on-night-2)}
+.sec{padding-block:var(--sec)}
+.sec-head{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:clamp(28px,3.5vw,44px)}
+.sec-head .stack{display:grid;gap:14px;max-width:760px}
+.hz{display:block;width:56px;height:2px;background:var(--night);border-radius:2px}
+.night .hz{background:var(--dawn)}
+.link{font-weight:600;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px;text-decoration-color:var(--line-2);transition:text-decoration-color .2s}
+.link:hover{text-decoration-color:currentColor}
+.arrow-link{display:inline-flex;align-items:center;gap:8px;font-weight:600;text-decoration:none;min-height:44px}
+.arrow-link svg{transition:transform .25s}
+.arrow-link:hover svg{transform:translateX(4px)}
+
+/* Buttons: pill, Night fill. Dawn is never a button fill (brand book). */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;border:0;background:var(--night);color:var(--on-night);font:650 15px/1 var(--f-ui);letter-spacing:.005em;text-decoration:none;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease,background .2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 14px 28px -14px rgba(30,42,58,.55)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn--ghost{background:transparent;color:var(--night);box-shadow:inset 0 0 0 1.5px var(--night)}
+.btn--ghost:hover{box-shadow:inset 0 0 0 1.5px var(--night),0 14px 28px -18px rgba(30,42,58,.4)}
+.btn--light{background:var(--cloud);color:var(--night)}
+.btn--block{width:100%}
+.btn svg{flex:none}
+.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* Sky: the only gradient the brand allows. Cloud to Mist, Dawn halo low right. */
+.sky{background:radial-gradient(55% 60% at 88% 100%,rgba(240,183,155,.34),rgba(240,183,155,0) 70%),linear-gradient(180deg,var(--cloud) 0%,var(--mist) 100%)}
+.night{background:var(--night);color:var(--on-night)}
+
+/* ---------- Announcement + header ---------- */
+.ann{background:var(--night);color:var(--on-night);font:600 12.5px/1.3 var(--f-ui);letter-spacing:.02em}
+.ann .wrap{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;min-height:38px;padding-block:8px;text-align:center}
+.ann i{width:4px;height:4px;border-radius:50%;background:var(--dawn);display:inline-block}
+@media (max-width:560px){.ann .wrap > :nth-child(n+4){display:none}.ann .wrap{gap:10px;font-size:12px}}
+.hdr{position:sticky;top:0;z-index:40;background:rgba(247,249,252,.88);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid transparent;transition:border-color .25s,box-shadow .25s}
+.hdr.is-scrolled{border-bottom-color:var(--line);box-shadow:0 8px 24px -22px rgba(30,42,58,.5)}
+.hdr .wrap{display:flex;align-items:center;gap:28px;height:70px}
+.logo{display:inline-flex;align-items:center;color:var(--night);text-decoration:none;min-height:44px}
+.logo svg{width:124px;height:28px}
+.nav{display:flex;gap:4px;margin-inline:auto}
+.nav a{position:relative;padding:12px 12px;font:600 14.5px/1 var(--f-ui);text-decoration:none;border-radius:999px;transition:background .2s}
+.nav a:hover{background:var(--mist-2)}
+.nav a[aria-current="page"]::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;background:var(--dawn)}
+.hdr-actions{display:flex;align-items:center;gap:6px;margin-left:auto}
+.nav + .hdr-actions{margin-left:0}
+.icon-btn{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:50%;border:0;background:transparent;transition:background .2s}
+.icon-btn:hover{background:var(--mist-2)}
+.icon-btn .icon{width:22px;height:22px}
+.count{position:absolute;top:4px;right:2px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:var(--night);color:var(--on-night);font:700 11px/18px var(--f-ui);text-align:center}
+.count[data-n="0"]{display:none}
+.menu-btn{display:none}
+.mnav{display:none}
+@media (max-width:900px){
+  .nav{display:none}
+  .menu-btn{display:inline-grid}
+  .hdr .wrap{gap:8px}
+  .mnav{display:block;position:absolute;left:0;right:0;top:100%;background:var(--cloud);border-bottom:1px solid var(--line);padding:8px var(--gutter) 16px}
+  .mnav[hidden]{display:none}
+  .mnav a{display:flex;align-items:center;min-height:48px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;isolation:isolate}
+.hero__img{position:absolute;inset:0;z-index:-1}
+.hero__img img{width:100%;height:100%;object-fit:cover;object-position:68% 50%}
+.hero .wrap{display:grid;min-height:640px;align-content:center;padding-block:64px 72px}
+.hero__text{max-width:560px;display:grid;gap:22px}
+.hero h1{font-size:clamp(68px,10vw,138px);line-height:.9;letter-spacing:-.045em;font-weight:620}
+.hero h1 span{display:block;width:72px;height:3px;border-radius:3px;background:var(--dawn);margin-top:22px}
+.qf{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:var(--r-card);padding:20px 20px 18px;box-shadow:var(--shadow);display:grid;gap:14px;max-width:540px}
+.qf legend{font:650 15px/1.3 var(--f-ui);padding:0;margin-bottom:12px}
+.qf fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 17px;border-radius:999px;background:var(--card);box-shadow:inset 0 0 0 1.5px var(--line-2);font:600 14.5px/1 var(--f-ui);transition:background .2s,color .2s,box-shadow .2s,transform .2s}
+.chip:hover span{box-shadow:inset 0 0 0 1.5px var(--night)}
+.chip input:checked + span{background:var(--night);color:var(--on-night);box-shadow:none}
+.chip input:focus-visible + span{outline:2px solid var(--focus);outline-offset:3px}
+.qf__out{display:grid;gap:12px;min-height:106px;align-content:start}
+.qf__why{font-size:14.5px;color:var(--ink-2);line-height:1.5}
+.qf__why b{color:var(--ink);font-weight:650}
+.qf__row{display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px}
+.proofline{font:600 12px/1.5 var(--f-ui);letter-spacing:.07em;text-transform:uppercase;color:var(--ink-2)}
+.proofline i{display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--ink-2);vertical-align:middle;margin:0 10px 2px}
+@media (max-width:900px){
+  .hero__img{position:relative;inset:auto;aspect-ratio:16/10;z-index:0}
+  .hero__img{aspect-ratio:5/4}
+  .hero__img img{object-position:50% 42%}
+  .hero .wrap{min-height:0;padding-block:28px 48px}
+  .hero{background:linear-gradient(180deg,var(--mist) 0%,var(--cloud) 36%)}
+}
+/* Page-load sequence, from a visible resting state; nothing waits on scroll. */
+@keyframes rise{from{transform:translateY(14px);opacity:.001}to{transform:none;opacity:1}}
+.hero__text > *{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.hero__text > :nth-child(2){animation-delay:.08s}
+.hero__text > :nth-child(3){animation-delay:.16s}
+.hero__text > :nth-child(4){animation-delay:.26s}
+.hero__text > :nth-child(5){animation-delay:.34s}
+@keyframes drift{0%,100%{transform:scale(1.01) translateY(0)}50%{transform:scale(1.035) translateY(-6px)}}
+.hero__img img{animation:drift 22s ease-in-out infinite}
+
+/* ---------- Proof strip ---------- */
+.proof{border-block:1px solid var(--line);background:var(--card)}
+.proof ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.proof li{display:flex;gap:14px;align-items:flex-start;padding:22px 20px}
+.proof li + li{border-left:1px solid var(--line)}
+.proof .icon{width:26px;height:26px;flex:none;margin-top:2px}
+.proof b{display:block;font:650 14.5px/1.35 var(--f-ui)}
+.proof small{display:block;font-size:13px;line-height:1.45;color:var(--ink-2);margin-top:2px}
+@media (max-width:900px){.proof ul{grid-template-columns:1fr 1fr}.proof li:nth-child(3){border-left:0}.proof li:nth-child(n+3){border-top:1px solid var(--line)}}
+@media (max-width:420px){.proof li{padding:18px 12px;gap:10px}}
+
+/* ---------- Evidence: the night, measured ---------- */
+.ev{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,5vw,72px);align-items:center}
+.ev__text{display:grid;gap:18px}
+.src{font-size:13px;line-height:1.55;color:var(--ink-2);max-width:56ch}
+.src a{color:var(--ink)}
+.chart{background:var(--card);border-radius:var(--r-card);padding:clamp(22px,3vw,34px);box-shadow:var(--shadow-sm);display:grid;gap:22px}
+.chart h3{font:650 14.5px/1.3 var(--f-ui);letter-spacing:0}
+.chart hr{border:0;border-top:1px solid var(--line);margin:0}
+.stack100{display:flex;height:46px;border-radius:14px;overflow:hidden;background:var(--mist)}
+.stack100 span{display:block;height:100%}
+.s-side{background:var(--night)} .s-back{background:var(--back)} .s-front{background:var(--dawn)} .s-other{background:var(--mist)}
+.legend{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,auto);gap:8px 22px;justify-content:start}
+.legend li{display:flex;align-items:center;gap:8px;font-size:14px}
+.legend i{width:12px;height:12px;border-radius:4px;flex:none}
+.legend b{font-weight:700}
+.legend .o{color:var(--ink-2)}
+.hbar{display:grid;grid-template-columns:96px 1fr 58px;align-items:center;gap:12px;font-size:14px}
+.hbar .track{position:relative;height:14px;border-radius:7px;background:var(--mist)}
+.hbar .fill{position:absolute;inset:0 auto 0 0;border-radius:7px;background:var(--night)}
+.hbar b{text-align:right;font-weight:700}
+.axis{display:grid;grid-template-columns:96px 1fr 58px;gap:12px;font-size:12px;color:var(--ink-2)}
+.axis div{display:flex;justify-content:space-between}
+.bignum{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.bignum .disp{font-size:64px;line-height:1;letter-spacing:-.04em}
+.bignum p{font-size:15px;color:var(--ink-2);max-width:26ch;line-height:1.45}
+.ev__so{margin-top:clamp(32px,4vw,52px);display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap;padding:22px 26px;border-radius:var(--r-tile);background:var(--mist-2)}
+.ev__so p{font:600 clamp(19px,2vw,23px)/1.3 var(--f-display);font-variation-settings:"SOFT" 100;max-width:52ch;letter-spacing:-.01em}
+@media (max-width:960px){.ev{grid-template-columns:1fr}}
+@media (max-width:520px){.legend{grid-template-columns:repeat(2,auto)}.hbar,.axis{grid-template-columns:78px 1fr 50px}}
+
+/* ---------- Product cards ---------- */
+.grid5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+@media (max-width:1180px){
+  .grid5{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(232px,34%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;margin-inline:calc(var(--gutter) * -1);padding-inline:var(--gutter);scroll-padding-inline:var(--gutter);scrollbar-width:thin}
+  .grid5 > *{scroll-snap-align:start}
+}
+@media (max-width:560px){.grid5{grid-auto-columns:74%}}
+@media (max-width:1000px){.grid3.rail{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(220px,40%);overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:calc(var(--gutter) * -1);padding:0 var(--gutter) 10px;scroll-padding-inline:var(--gutter)}.grid3.rail > *{scroll-snap-align:start}}
+@media (max-width:560px){.grid3.rail{grid-auto-columns:70%}}
+.pcard{position:relative;display:flex;flex-direction:column;background:var(--card);border-radius:var(--r-card);overflow:hidden;box-shadow:0 0 0 1px var(--line);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.pcard:hover{transform:translateY(-5px);box-shadow:0 0 0 1px var(--line),var(--shadow)}
+.pcard__img{aspect-ratio:4/5;overflow:hidden;background:var(--mist)}
+.pcard__img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.pcard:hover .pcard__img img{transform:scale(1.04)}
+.pcard__body{display:flex;flex-direction:column;gap:6px;padding:16px 18px 18px;flex:1}
+.pcard__for{font:650 11.5px/1.3 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.pcard h3{font-size:25px}
+.pcard h3 a{text-decoration:none}
+.pcard h3 a::after{content:"";position:absolute;inset:0;z-index:1}
+.pcard__spec{font-size:14px;color:var(--ink-2)}
+.pcard__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:10px}
+.price{font:700 16.5px/1.2 var(--f-ui);font-variant-numeric:tabular-nums}
+.save{font:600 13px/1.35 var(--f-ui);color:var(--ink-2)}
+.save b{color:var(--dawn-tx);font-weight:700}
+.qadd{position:relative;z-index:2;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:0;background:var(--mist-2);font:650 13.5px/1 var(--f-ui);transition:background .2s,color .2s}
+.qadd:hover{background:var(--night);color:var(--on-night)}
+.qadd .icon{width:16px;height:16px}
+
+/* composite tiles for sets: real cut-outs, arranged, never retouched */
+.tile{position:relative;aspect-ratio:4/5;overflow:hidden}
+.tile.sky{background:radial-gradient(60% 45% at 80% 92%,rgba(240,183,155,.30),rgba(240,183,155,0) 70%),linear-gradient(180deg,#F3F6FA 0%,var(--mist) 100%)}
+.tile img{position:absolute;filter:drop-shadow(0 18px 18px rgba(30,42,58,.18))}
+.pcard__img .tile img:not(.full),.line .tile img:not(.full),.result .tile img:not(.full){height:auto;object-fit:contain}
+.pcard__img .tile .thumbs img,.pcard__img .duo img{height:100%;object-fit:cover}
+.tile .full{inset:0;width:100%;height:100%;object-fit:cover;filter:none}
+.tile .c1{width:66%;left:4%;top:30%}
+.tile .c2{width:66%;right:3%;top:44%}
+.tile.three .c1{width:56%;left:3%;top:24%}
+.tile.three .c2{width:56%;right:2%;top:34%}
+.tile.three .c3{width:56%;left:22%;top:50%}
+.tile .solo{width:78%;left:11%;top:32%}
+.tile .solo.tall{width:48%;left:26%;top:16%}
+.thumbs{position:absolute;right:12px;bottom:12px;display:flex;gap:8px;z-index:1}
+.thumbs span{display:grid;place-items:center;width:62px;height:62px;border-radius:50%;overflow:hidden;background:var(--card);box-shadow:0 0 0 3px var(--card),var(--shadow-sm);font:700 11px/1.1 var(--f-ui);text-align:center;color:var(--ink)}
+.thumbs img{position:static;width:100%;height:100%;object-fit:cover;filter:none}
+.duo{position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:22% 10px}
+.duo img{position:static;width:100%;height:100%;object-fit:cover;border-radius:18px;filter:none}
+
+/* ---------- Neck 01 feature ---------- */
+.feature{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,64px);align-items:center;padding:clamp(18px,2.4vw,28px);border-radius:var(--r-panel);background:var(--card);box-shadow:0 0 0 1px var(--line)}
+.feature__media{display:grid;gap:14px}
+.fimg{position:relative;aspect-ratio:4/5;border-radius:var(--r-card);overflow:hidden;background:var(--mist)}
+.fimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .45s ease}
+.fimg .flag{position:absolute;left:16px;top:16px;z-index:2;display:inline-flex;align-items:center;gap:8px;min-height:32px;padding:0 13px;border-radius:999px;background:rgba(255,255,255,.92);font:650 12px/1 var(--f-ui);letter-spacing:.06em;text-transform:uppercase}
+.fimg .flag i{width:7px;height:7px;border-radius:50%;background:var(--dawn)}
+.feature__body{display:grid;gap:20px;padding-right:clamp(0px,2vw,24px)}
+.tagline{font:500 clamp(19px,1.8vw,22px)/1.4 var(--f-display);font-variation-settings:"SOFT" 100;color:var(--ink-2);letter-spacing:-.005em;max-width:40ch}
+.swatches{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.sw{position:relative}
+.sw input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.sw span{display:block;width:34px;height:34px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(30,42,58,.18);transition:transform .2s}
+.sw input:checked + span{box-shadow:inset 0 0 0 1px rgba(30,42,58,.18),0 0 0 3px var(--card),0 0 0 4.5px var(--night)}
+.sw:hover span{transform:translateY(-2px)}
+.sw input:focus-visible + span{outline:2px solid var(--focus);outline-offset:6px}
+.opt-label{font-size:14px;color:var(--ink-2)}
+.opt-label b{color:var(--ink);font-weight:650}
+.specs{display:grid;grid-template-columns:auto 1fr;gap:10px 22px;margin:0;font-size:14.5px}
+.specs dt{color:var(--ink-2)}
+.specs dd{margin:0;font-weight:600}
+.buyrow{display:flex;align-items:center;gap:14px 22px;flex-wrap:wrap}
+.buyrow .price{font-size:26px}
+.note{font-size:13.5px;color:var(--ink-2)}
+@media (max-width:900px){.feature{grid-template-columns:1fr}}
+
+/* profile diagram */
+.profile{width:100%;height:auto;overflow:visible}
+.profile .body{fill:var(--mist);stroke:var(--night);stroke-width:1.5}
+.profile .base{stroke:var(--night);stroke-width:1.5}
+.profile .dim{stroke:var(--ink-2);stroke-width:1}
+.profile text{font:600 17px var(--f-ui);fill:var(--ink)}
+.profile .t2{font-weight:500;fill:var(--ink-2)}
+.profile .halo{fill:var(--dawn)}
+.caption{font-size:12.5px;color:var(--ink-2);line-height:1.5}
+
+/* ---------- Compare ---------- */
+.cmp-wrap{overflow-x:auto;border-radius:var(--r-card);background:var(--card);box-shadow:0 0 0 1px var(--line)}
+.cmp{width:100%;min-width:0;border-collapse:separate;border-spacing:0;font-size:15px}
+.cmp th,.cmp td{padding:18px 22px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.cmp tr:last-child th,.cmp tr:last-child td{border-bottom:0}
+.cmp thead th{font:650 13px/1.3 var(--f-ui);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);background:var(--card)}
+.cmp thead th.us{color:var(--ink)}
+.cmp tbody th{font-weight:600;width:24%}
+.cmp .us{background:var(--mist-2)}
+.cmp td .icon{width:18px;height:18px;vertical-align:-3px;margin-right:8px}
+.cmp tbody tr{transition:background .2s}
+@media (max-width:600px){.cmp{font-size:14px}.cmp th,.cmp td{padding:14px 12px}.cmp td .icon{display:none}.cmp thead th{font-size:11.5px;letter-spacing:.04em}}
+.cmp tbody tr:hover td:not(.us),.cmp tbody tr:hover th{background:#FAFBFD}
+
+/* ---------- Trial ---------- */
+.trial{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(28px,5vw,80px);align-items:start}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:start;padding:20px 22px;border-radius:var(--r-tile);background:var(--card);box-shadow:0 0 0 1px var(--line)}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--mist);font:600 19px/1 var(--f-display);font-variation-settings:"SOFT" 100}
+.steps h3{font-size:20px;margin-bottom:4px}
+.steps p{font-size:15px;color:var(--ink-2)}
+@media (max-width:900px){.trial{grid-template-columns:1fr}}
+
+/* ---------- Manifesto (night) ---------- */
+.mani{position:relative;overflow:hidden;isolation:isolate}
+.mani::before{content:"";position:absolute;right:-12%;bottom:-40%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(240,183,155,.28),rgba(240,183,155,0) 62%);z-index:-1}
+.refuse{list-style:none;margin:clamp(28px,4vw,48px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.refuse li{padding:24px 24px 26px;border-radius:var(--r-tile);background:var(--night-2);display:grid;gap:10px}
+.refuse s{font:600 clamp(21px,2.1vw,26px)/1.2 var(--f-display);font-variation-settings:"SOFT" 100;text-decoration:line-through;text-decoration-color:var(--dawn);text-decoration-thickness:2px;letter-spacing:-.01em}
+.refuse p{font-size:14.5px;color:var(--on-night-2)}
+.mani .lede{color:var(--on-night-2);max-width:62ch}
+@media (max-width:900px){.refuse{grid-template-columns:1fr}}
+
+/* ---------- Founder ---------- */
+.founder{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(28px,5vw,80px);padding:clamp(28px,5vw,64px);border-radius:var(--r-panel);background:var(--mist)}
+.founder blockquote{margin:0;font:600 clamp(40px,5.2vw,68px)/1 var(--f-display);font-variation-settings:"SOFT" 100;letter-spacing:-.035em}
+.founder .text{display:grid;gap:16px;font-size:16.5px;line-height:1.7;max-width:56ch}
+.founder .text .close{font:600 20px/1.45 var(--f-display);font-variation-settings:"SOFT" 100}
+.founder .who{font-size:13.5px;color:var(--ink-2)}
+@media (max-width:900px){.founder{grid-template-columns:1fr}}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(28px,5vw,80px);align-items:start}
+.faq .aside{display:grid;gap:16px;position:sticky;top:100px}
+.qa{border-top:1px solid var(--line)}
+.qa:last-child{border-bottom:1px solid var(--line)}
+.qa summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:14px 0;font:650 16.5px/1.35 var(--f-ui);cursor:pointer}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .pm{flex:none;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--mist-2);transition:transform .3s,background .2s}
+.qa[open] summary .pm{transform:rotate(45deg);background:var(--mist)}
+.qa .ans{padding:0 48px 20px 0;color:var(--ink-2);font-size:15.5px;line-height:1.65;display:grid;gap:10px}
+.qa[open] .ans{animation:rise .45s ease both}
+@media (max-width:900px){.faq{grid-template-columns:1fr}.faq .aside{position:static}}
+
+/* ---------- Newsletter + footer ---------- */
+.nl{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding-block:clamp(40px,5vw,56px);border-top:1px solid var(--line)}
+.nl form{display:flex;gap:8px;flex-wrap:wrap;flex:1;max-width:520px}
+.field{flex:1;min-width:200px;min-height:52px;padding:0 20px;border-radius:22px;border:1.5px solid var(--line-2);background:var(--card);transition:border-color .2s,box-shadow .2s}
+.field:focus{outline:none;border-color:var(--night);box-shadow:0 0 0 4px var(--dawn-soft)}
+footer.night{padding-block:clamp(48px,6vw,72px) 32px}
+.foot{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px}
+.foot h4{margin:0 0 12px;font:650 12px/1.2 var(--f-ui);letter-spacing:.08em;text-transform:uppercase;color:var(--on-night-2)}
+.foot ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.foot a{display:inline-flex;align-items:center;min-height:36px;text-decoration:none;font-size:15px}
+.foot a:hover{text-decoration:underline;text-underline-offset:4px}
+.foot .logo{color:var(--on-night)}
+.foot p{font-size:14.5px;color:var(--on-night-2);max-width:34ch;margin-top:14px}
+.legal{display:flex;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-top:40px;padding-top:22px;border-top:1px solid rgba(247,249,252,.14);font-size:13px;color:var(--on-night-2)}
+@media (max-width:900px){.foot{grid-template-columns:1fr 1fr}.foot > :first-child{grid-column:1/-1}}
+
+/* ---------- Page heads (shop, finder) ---------- */
+.phead{padding-block:clamp(36px,5vw,64px) clamp(28px,4vw,44px)}
+.phead h1{font-size:clamp(48px,6.4vw,84px);line-height:.95;letter-spacing:-.04em}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font-size:13.5px;color:var(--ink-2);margin-bottom:18px}
+.crumbs a{text-decoration:none;display:inline-flex;align-items:center;min-height:32px}
+.crumbs a:hover{text-decoration:underline}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:26px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:1000px){.grid3,.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.grid3,.grid4{grid-template-columns:1fr 1fr;gap:12px}.pcard h3{font-size:21px}.pcard__body{padding:12px 13px 14px}.qadd span{display:none}.qadd{padding:0 12px}}
+.promo{display:flex;flex-direction:column;justify-content:space-between;gap:24px;padding:28px;border-radius:var(--r-card);min-height:100%}
+.promo h3{font-size:clamp(26px,2.6vw,34px);line-height:1.08}
+.promo p{color:var(--on-night-2);font-size:15px}
+.pcard[hidden]{display:none}
+.subhead{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:clamp(56px,7vw,88px) 0 24px}
+.subhead h2{font-size:clamp(30px,3.4vw,42px)}
+.subhead p{color:var(--ink-2);max-width:56ch;font-size:15px}
+
+/* ---------- Product page ---------- */
+.pdp{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,64px);align-items:start;padding-block:20px clamp(56px,7vw,96px)}
+.gal{position:sticky;top:92px;display:grid;gap:12px}
+.gal__main{position:relative;aspect-ratio:1/1;border-radius:var(--r-card);overflow:hidden;background:var(--mist)}
+.gal__main > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.gal__main > .panel{position:absolute;inset:0;display:grid;align-content:center;gap:16px;padding:8%;background:var(--card)}
+.gal__thumbs{display:flex;gap:10px;overflow-x:auto;padding:2px}
+.gal__thumbs button{flex:none;width:76px;height:92px;border-radius:16px;overflow:hidden;border:0;padding:0;background:var(--mist);box-shadow:0 0 0 1px var(--line);transition:transform .2s,box-shadow .2s}
+.gal__thumbs button[aria-current="true"]{box-shadow:0 0 0 2px var(--night)}
+.gal__thumbs button:hover{transform:translateY(-2px)}
+.gal__thumbs img{width:100%;height:100%;object-fit:cover}
+.gal__thumbs .tt{display:grid;place-items:center;height:100%;background:var(--card);font:700 11px/1.2 var(--f-ui);text-align:center;padding:6px}
+.buy{display:grid;gap:14px}
+.buy h1{font-size:clamp(44px,4.6vw,62px);line-height:.95;letter-spacing:-.04em}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:0 13px;border-radius:999px;background:var(--mist-2);font:650 12.5px/1 var(--f-ui)}
+.pill .icon{width:15px;height:15px}
+.pricebox{display:flex;align-items:baseline;gap:6px 16px;flex-wrap:wrap}
+.pricebox .price{font-size:30px;letter-spacing:-.01em}
+.tiers{display:grid;gap:10px}
+.tier{position:relative;display:grid;grid-template-columns:22px 1fr auto;gap:14px;align-items:center;padding:11px 18px;border-radius:20px;background:var(--card);box-shadow:inset 0 0 0 1.5px var(--line-2);cursor:pointer;transition:box-shadow .2s,background .2s}
+.tier input{position:absolute;inset:0;opacity:0;margin:0;cursor:pointer}
+.tier .dot{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1.5px var(--line-2);display:grid;place-items:center}
+.tier .dot::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--night);transform:scale(0);transition:transform .2s}
+.tier:has(input:checked){box-shadow:inset 0 0 0 2px var(--night);background:#FBFCFE}
+.tier:has(input:checked) .dot{box-shadow:inset 0 0 0 1.5px var(--night)}
+.tier:has(input:checked) .dot::after{transform:scale(1)}
+.tier:has(input:focus-visible){outline:2px solid var(--focus);outline-offset:3px}
+.tier b{display:block;font-weight:650;font-size:15px}
+.tier small{display:block;font-size:13px;color:var(--ink-2)}
+.tier .p{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.tier .p small{font-weight:600;color:var(--dawn-tx)}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.facts li{display:flex;gap:12px;align-items:center;font-size:14.5px}
+.facts .icon{width:22px;height:22px;flex:none}
+.wallets{font-size:13px;color:var(--ink-2);text-align:center}
+.acc .qa summary{min-height:56px;font-size:15.5px}
+.acc .qa .ans{font-size:15px}
+.stick{position:fixed;left:0;right:0;bottom:0;z-index:35;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+.stick.is-on{transform:none}
+.stick .wrap{display:flex;align-items:center;gap:16px;min-height:72px;padding-block:10px}
+.stick img{width:48px;height:56px;border-radius:12px;object-fit:cover;flex:none}
+.stick .nm{font:600 18px/1.1 var(--f-display);font-variation-settings:"SOFT" 100}
+.stick .btn{margin-left:auto}
+@media (max-width:960px){.pdp{grid-template-columns:1fr}.gal{position:static}.gal__main{aspect-ratio:4/5}}
+@media (max-width:520px){.stick .nm small{display:none}.stick img{display:none}}
+.edge{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.edge--scale{grid-template-columns:1fr 1.4fr}
+.edge-cards{display:grid;gap:12px}
+.edge-cards div{padding:20px 22px;border-radius:var(--r-tile);background:var(--card);box-shadow:0 0 0 1px var(--line);display:grid;gap:4px}
+.edge-cards b{font:600 30px/1 var(--f-display);font-variation-settings:"SOFT" 100;letter-spacing:-.02em}
+.edge-cards span{font-size:14.5px;color:var(--ink-2)}
+@media (max-width:900px){.edge{grid-template-columns:1fr}}
+.scale{width:100%;height:auto}
+.scale text{font:600 14px var(--f-ui);fill:var(--ink)}
+.scale .t2{font-weight:500;fill:var(--ink-2)}
+
+/* ---------- Finder ---------- */
+.finder{max-width:760px;margin-inline:auto;background:var(--card);border-radius:var(--r-panel);box-shadow:var(--shadow);padding:clamp(22px,4vw,44px);display:grid;gap:24px}
+.prog{display:flex;align-items:center;gap:14px;font:600 13px/1 var(--f-ui);color:var(--ink-2)}
+.prog .bar{flex:1;height:4px;border-radius:2px;background:var(--mist);overflow:hidden}
+.prog .bar i{display:block;height:100%;background:var(--night);border-radius:2px;transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.finder h2{font-size:clamp(30px,3.6vw,44px)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt{position:relative;display:grid;gap:4px;padding:18px 20px;border-radius:20px;background:var(--cloud);box-shadow:inset 0 0 0 1.5px var(--line);cursor:pointer;transition:box-shadow .2s,transform .2s,background .2s;text-align:left;border:0}
+.opt:hover{box-shadow:inset 0 0 0 1.5px var(--night);transform:translateY(-2px);background:var(--card)}
+.opt b{font:650 16px/1.3 var(--f-ui)}
+.opt span{font-size:14px;color:var(--ink-2)}
+@media (max-width:560px){.opts{grid-template-columns:1fr}}
+.fnav{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.step{animation:rise .45s cubic-bezier(.2,.7,.2,1) both;display:grid;gap:20px}
+.result{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;padding:16px;border-radius:var(--r-card);background:var(--cloud);box-shadow:inset 0 0 0 1px var(--line)}
+.result img{border-radius:20px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.result .body{display:grid;gap:12px}
+.result h3{font-size:34px}
+.why{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px}
+.why li{display:flex;gap:10px}
+.why .icon{width:18px;height:18px;flex:none;margin-top:3px}
+.also{display:flex;align-items:center;gap:16px;padding:14px 16px;border-radius:20px;box-shadow:inset 0 0 0 1px var(--line)}
+.also img{width:64px;height:78px;border-radius:14px;object-fit:cover}
+.also p{font-size:14.5px;color:var(--ink-2)}
+.also b{color:var(--ink)}
+@media (max-width:560px){.result{grid-template-columns:1fr}.result img{max-width:220px}}
+
+/* ---------- Cart drawer ---------- */
+.scrim{position:fixed;inset:0;z-index:60;background:rgba(30,42,58,.34);opacity:0;pointer-events:none;transition:opacity .3s}
+.scrim.is-on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;z-index:61;width:min(440px,100%);background:var(--cloud);display:flex;flex-direction:column;transform:translateX(102%);transition:transform .4s cubic-bezier(.2,.7,.2,1);box-shadow:-24px 0 60px -30px rgba(30,42,58,.45)}
+.drawer.is-on{transform:none}
+.drawer__head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.drawer__head h2{font-size:26px}
+.ship{padding:14px 20px;border-bottom:1px solid var(--line);display:grid;gap:10px;font-size:14px}
+.ship .bar{height:6px;border-radius:3px;background:var(--mist);overflow:hidden}
+.ship .bar i{display:block;height:100%;background:var(--night);border-radius:3px;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.lines{flex:1;overflow-y:auto;padding:8px 20px}
+.line{display:grid;grid-template-columns:72px 1fr auto;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
+.line .th{width:72px;height:88px;border-radius:14px;overflow:hidden;background:var(--mist);position:relative}
+.line .th img{width:100%;height:100%;object-fit:cover}
+.line .th .tile{aspect-ratio:auto;height:100%}
+.line h3{font:650 15px/1.3 var(--f-ui);letter-spacing:0}
+.line small{display:block;font-size:13px;color:var(--ink-2)}
+.qty{display:inline-flex;align-items:center;margin-top:10px;border-radius:999px;box-shadow:inset 0 0 0 1.5px var(--line-2)}
+.qty button{width:40px;height:40px;border:0;background:transparent;border-radius:50%;display:grid;place-items:center}
+.qty button:hover{background:var(--mist-2)}
+.qty span{min-width:22px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.rm{border:0;background:transparent;font-size:13px;color:var(--ink-2);text-decoration:underline;text-underline-offset:3px;min-height:36px;padding:0}
+.line .lp{text-align:right;display:grid;gap:4px;justify-items:end}
+.empty{padding:40px 8px;text-align:center;display:grid;gap:16px;justify-items:center;color:var(--ink-2)}
+.empty h3{color:var(--ink);font-size:24px}
+.upsell{display:flex;align-items:center;gap:14px;padding:14px 20px;border-top:1px solid var(--line);background:var(--card)}
+.upsell img{width:52px;height:52px;border-radius:12px;object-fit:cover}
+.upsell p{flex:1;font-size:14px;line-height:1.4}
+.upsell p small{display:block;color:var(--ink-2)}
+.drawer__foot{padding:18px 20px 20px;border-top:1px solid var(--line);display:grid;gap:12px;background:var(--card)}
+.tot{display:flex;justify-content:space-between;align-items:baseline;font-weight:700;font-size:17px}
+.drawer__foot .note{text-align:center}
+
+.toast{position:fixed;left:50%;bottom:24px;z-index:80;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--night);color:var(--on-night);padding:14px 22px;border-radius:999px;font:600 14px/1.3 var(--f-ui);box-shadow:var(--shadow);transition:opacity .25s,transform .25s;max-width:calc(100% - 32px);text-align:center}
+.toast.is-on{opacity:1;transform:translate(-50%,0)}
+
+.view[hidden]{display:none}
+.lg-defs{position:absolute;width:0;height:0;overflow:hidden}
+.drawer:not(.is-on){visibility:hidden;transition:transform .4s cubic-bezier(.2,.7,.2,1),visibility 0s .4s}
+.stick:not(.is-on){visibility:hidden;transition:transform .35s cubic-bezier(.2,.7,.2,1),visibility 0s .35s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.tile .solo,.tile .c1,.tile .c2,.tile .c3{animation:float 8s ease-in-out infinite}
+.tile .c2{animation-delay:-2.5s}.tile .c3{animation-delay:-5s}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<a class="vh" href="#main" id="skip" onfocus="this.classList.remove('vh')" onblur="this.classList.add('vh')" style="position:fixed;left:16px;top:12px;z-index:100;background:#1E2A3A;color:#F7F9FC;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:600">Skip to content</a>
+
+%%LOGO%%
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/><path d="M9 14.2h1.8a1.2 1.2 0 0 1 0 2.4H9.4m1.4 0a1.2 1.2 0 0 1 0 2.4H9M14.2 14.2h1.2v4.8"/></symbol>
+  <symbol id="i-wash" viewBox="0 0 24 24"><path d="M3.5 7h17l-1.6 11.2a2 2 0 0 1-2 1.8H7.1a2 2 0 0 1-2-1.8z"/><path d="M6.5 11.5c1.2-1 2.3-1 3.5 0s2.3 1 3.5 0 2.3-1 3.5 0"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="3"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11"/></symbol>
+  <symbol id="i-dash" viewBox="0 0 24 24"><path d="M7 12h10"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="2.5" y="8" width="19" height="8" rx="2"/><path d="M6.5 8v3M10.5 8v4M14.5 8v3M18.5 8v4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 4 3 8.5l9 4.5 9-4.5z"/><path d="M3 12.5l9 4.5 9-4.5"/></symbol>
+</svg>
+
+<div class="ann"><div class="wrap"><span>Free shipping on every pillow</span><i aria-hidden="true"></i><span>Thirty nights to decide</span><i aria-hidden="true"></i><span>Ships in 6–10 days</span></div></div>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="logo" href="#/" aria-label="Somnila, home"><svg viewBox="129.3 226.7 1616.4 364.8" aria-hidden="true"><use href="#lg" x="129.3" y="226.7" width="1616.4" height="364.8"/></svg></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#/shop" data-nav="shop">Pillows</a>
+      <a href="#/shop/sets" data-nav="sets">Sets</a>
+      <a href="#/p/neck-01" data-nav="product">Neck 01</a>
+      <a href="#/finder" data-nav="finder">Find your pillow</a>
+      <a href="#/story" data-nav="story">Our story</a>
+    </nav>
+    <div class="hdr-actions">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="mnav"><svg class="icon"><use href="#i-menu"/></svg></button>
+      <button class="icon-btn" id="cartBtn" aria-label="Open cart, 0 items" aria-haspopup="dialog"><svg class="icon"><use href="#i-bag"/></svg><span class="count" id="cartCount" data-n="0">0</span></button>
+    </div>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="Mobile" hidden>
+    <a href="#/shop">Pillows</a><a href="#/shop/sets">Sets</a><a href="#/p/neck-01">Neck 01</a><a href="#/finder">Find your pillow</a><a href="#/story">Our story</a>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- =============================== HOME =============================== -->
+<section class="view" data-view="home">
+
+  <section class="hero" aria-labelledby="h-hero">
+    <div class="hero__img"><picture><source media="(max-width: 900px)" data-srcset="hero45"><img data-img="hero" alt="Neck 01 in Cloud, resting on a pale morning sky" width="1600" height="900"></picture></div>
+    <div class="wrap">
+      <div class="hero__text">
+        <p class="eyebrow">Memory-foam pillows · five shapes</p>
+        <h1 id="h-hero">Sleep well.<span aria-hidden="true"></span></h1>
+        <p class="lede">Pillows shaped for the way you actually lie. Foam that holds its height all night, a cover that goes in the wash, and thirty nights to decide.</p>
+        <form class="qf" id="quick" onsubmit="return false">
+          <fieldset>
+            <legend>How do you usually fall asleep?</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="qpos" id="q-side" value="side"><span>On my side</span></label>
+              <label class="chip"><input type="radio" name="qpos" id="q-back" value="back"><span>On my back</span></label>
+              <label class="chip"><input type="radio" name="qpos" id="q-changes" value="changes"><span>It changes</span></label>
+              <label class="chip"><input type="radio" name="qpos" id="q-sit" value="sitting"><span>Sitting up</span></label>
+            </div>
+          </fieldset>
+          <div class="qf__out" id="qout" aria-live="polite"></div>
+        </form>
+        <p class="proofline">Free shipping<i aria-hidden="true"></i>30 nights<i aria-hidden="true"></i>Cover included</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="proof" aria-label="What comes with every pillow">
+    <div class="wrap">
+      <ul>
+        <li><svg class="icon"><use href="#i-box"/></svg><div><b>Free shipping on every pillow</b><small>Ships within 6–10 days</small></div></li>
+        <li><svg class="icon"><use href="#i-cal"/></svg><div><b>Thirty nights to decide</b><small>If it isn't right, send it back</small></div></li>
+        <li><svg class="icon"><use href="#i-wash"/></svg><div><b>Cover included</b><small>It comes off and goes in the wash</small></div></li>
+        <li><svg class="icon"><use href="#i-lock"/></svg><div><b>Secure checkout</b><small>Card, Shop Pay, Apple Pay, Google Pay</small></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-ev">
+    <div class="wrap">
+      <div class="ev">
+        <div class="ev__text">
+          <p class="eyebrow">The night, measured</p>
+          <span class="hz" aria-hidden="true"></span>
+          <h2 id="h-ev">Most of the night, you're on your side. Then you turn.</h2>
+          <p class="lede">A study fitted 664 working adults with small motion sensors and let them sleep at home. They spent just over half their time in bed on their side, over a third on their back, and changed position about 1.6 times an hour.</p>
+          <p class="src">Source: Skarpsno E. S. et al., “Sleep positions and nocturnal body movements based on free-living accelerometer recordings”, <i>Nature and Science of Sleep</i>, 2017. <a class="link" href="https://www.dovepress.com/sleep-positions-and-nocturnal-body-movements-based-on-free-living-acce-peer-reviewed-fulltext-article-NSS" target="_blank" rel="noopener">Read the study</a></p>
+        </div>
+        <figure class="chart" style="margin:0" aria-labelledby="h-chart">
+          <h3 id="h-chart">Share of time in bed, by position</h3>
+          <div class="stack100" role="img" aria-label="Side 54.1 percent, back 37.5 percent, front 7.3 percent, other 1.1 percent">
+            <span class="s-side" style="width:54.1%"></span><span class="s-back" style="width:37.5%"></span><span class="s-front" style="width:7.3%"></span><span class="s-other" style="width:1.1%"></span>
+          </div>
+          <ul class="legend num">
+            <li><i class="s-side"></i>Side <b>54.1%</b></li>
+            <li><i class="s-back"></i>Back <b>37.5%</b></li>
+            <li><i class="s-front"></i>Front <b>7.3%</b></li>
+            <li class="o"><i class="s-other" style="box-shadow:inset 0 0 0 1px var(--line-2)"></i>Other 1.1%</li>
+          </ul>
+          <hr>
+          <h3>Time on the side, by age</h3>
+          <div class="hbar num"><span>20–34 years</span><div class="track"><div class="fill" style="width:47.7%"></div></div><b>47.7%</b></div>
+          <div class="hbar num"><span>55–65 years</span><div class="track"><div class="fill" style="width:58.3%"></div></div><b>58.3%</b></div>
+          <div class="axis num" aria-hidden="true"><span></span><div><span>0%</span><span>50%</span><span>100%</span></div><span></span></div>
+          <hr>
+          <div class="bignum"><span class="disp num">1.6</span><p>position changes an hour, on average, across the whole group</p></div>
+        </figure>
+      </div>
+      <div class="ev__so">
+        <p>So a pillow has to work on your side and on your back. Neck 01 has two heights for exactly that.</p>
+        <a class="btn btn--ghost" href="#/p/neck-01">See the two heights <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sky" aria-labelledby="h-range" style="padding-top:0;background:linear-gradient(180deg,var(--cloud) 0%,var(--mist-2) 100%)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="stack"><p class="eyebrow">The range</p><h2 id="h-range">Five shapes. Pick the one that matches how you lie.</h2></div>
+        <a class="arrow-link" href="#/shop">All pillows <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="grid5" id="rangeGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-feat" style="background:var(--mist-2)">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature__media">
+          <div class="fimg" id="featImg"><span class="flag"><i aria-hidden="true"></i>Two heights</span><img data-img="neck_cloud" alt="Neck 01 in Cloud" width="900" height="1125"></div>
+        </div>
+        <div class="feature__body">
+          <p class="eyebrow">Start here</p>
+          <h2 id="h-feat">Neck 01</h2>
+          <p class="tagline">Two heights on one pillow. Turn it over until your head lies level.</p>
+          <div id="featProfile"></div>
+          <div>
+            <p class="opt-label" style="margin-bottom:10px">Colour: <b id="featColName">Cloud</b></p>
+            <div class="swatches" id="featSw" role="radiogroup" aria-label="Colour"></div>
+          </div>
+          <dl class="specs num">
+            <dt>Size</dt><dd>62 × 42 cm · 24.4 × 16.5 in</dd>
+            <dt>Heights</dt><dd>13 cm and 11 cm · 5.1 and 4.3 in</dd>
+            <dt>Weight</dt><dd>1.4 kg · 3.1 lb</dd>
+            <dt>Inside</dt><dd>Memory foam</dd>
+            <dt>Cover</dt><dd>Cool-touch, removable, machine-washable. Included.</dd>
+          </dl>
+          <div class="buyrow">
+            <span class="price num">$79.50</span>
+            <button class="btn" id="featAdd" type="button">Add to cart <svg class="icon"><use href="#i-arrow"/></svg></button>
+            <a class="link" href="#/p/neck-01">Full details</a>
+          </div>
+          <p class="note">Free shipping · Thirty nights to decide · Taxes calculated at checkout</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-cmp">
+    <div class="wrap">
+      <div class="sec-head"><div class="stack"><p class="eyebrow">Side by side</p><h2 id="h-cmp">Neck 01, or the pillow you have now?</h2></div></div>
+      <div class="cmp-wrap">
+        <table class="cmp">
+          <thead><tr><th scope="col"><span class="vh">Feature</span></th><th scope="col" class="us">Neck 01</th><th scope="col">A standard fibre pillow</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Heights</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Two: 13 cm and 11 cm</td><td>One</td></tr>
+            <tr><th scope="row">Shape</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Contoured, with a curve for the neck</td><td>Flat</td></tr>
+            <tr><th scope="row">Inside</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Memory foam that keeps its shape</td><td>Loose polyester fibre</td></tr>
+            <tr><th scope="row">Cover</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Included, cool-touch, machine-washable</td><td>You buy a pillowcase</td></tr>
+            <tr><th scope="row">Try it at home</th><td class="us"><svg class="icon"><use href="#i-check"/></svg>Thirty nights</td><td>Depends on the shop</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sky" aria-labelledby="h-trial" style="padding-top:clamp(40px,5vw,72px)">
+    <div class="wrap trial">
+      <div style="display:grid;gap:18px">
+        <p class="eyebrow">The trial</p>
+        <span class="hz" aria-hidden="true"></span>
+        <h2 id="h-trial">Thirty nights to decide.</h2>
+        <p class="lede">A pillow is judged at 3 a.m., not in a shop. So you sleep on it at home first, on both heights and in every position you end up in.</p>
+        <div><a class="btn" href="#/p/neck-01">Start your thirty nights</a></div>
+      </div>
+      <ol class="steps">
+        <li><div><h3>Order</h3><p>Shipping is free on every pillow. Your order leaves within 6–10 days.</p></div></li>
+        <li><div><h3>Sleep on it</h3><p>Up to thirty nights. Try the 13 cm edge, then the 11 cm edge.</p></div></li>
+        <li><div><h3>Keep it, or send it back</h3><p>If it isn't right, one email to support@somnila.com starts the return.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec night mani" aria-labelledby="h-mani">
+    <div class="wrap">
+      <div style="display:grid;gap:18px;max-width:780px">
+        <p class="eyebrow">How we sell</p>
+        <span class="hz" aria-hidden="true"></span>
+        <h2 id="h-mani">What you won't find here.</h2>
+        <p class="lede">We opened in 2026. Reviews will appear on this site once real customers have slept on Somnila for thirty nights. Until then, everything we say can be checked: the size in centimetres and inches, what's inside, and the price you pay.</p>
+      </div>
+      <ul class="refuse">
+        <li><s>A half-price sale that never ends</s><p>The price on the page is the price. Sets cost less because you buy more, and each set shows the saving in dollars.</p></li>
+        <li><s>A countdown to midnight</s><p>No timers, no "only 3 left". Take the time you need, or take thirty nights.</p></li>
+        <li><s>Stars we haven't earned</s><p>No borrowed ratings, no invented reviews. When they come, they will be real.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-sets">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="stack"><p class="eyebrow">Sets</p><h2 id="h-sets">Sets, priced honestly.</h2><p class="lede">Each set costs less than the same pieces bought one by one. The difference is written on every card.</p></div>
+        <a class="arrow-link" href="#/shop/sets">All eight sets <svg class="icon"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="grid4" id="setsGrid"></div>
+    </div>
+  </section>
+
+  <section class="sec" id="story" aria-labelledby="h-story" style="padding-top:0">
+    <div class="wrap">
+      <div class="founder">
+        <div style="display:grid;gap:18px;align-content:start">
+          <p class="eyebrow">From the workshop</p>
+          <blockquote id="h-story">I kept waking up stiff.</blockquote>
+        </div>
+        <div class="text">
+          <p>Not every morning. Enough of them. I went looking for a pillow I would actually want to keep, and found three kinds: the blue hospital kind, the overpriced kind, and the kind that goes flat in three months. Sometimes all three at once.</p>
+          <p>Most people sleep badly and accept it. I didn't want to.</p>
+          <p>So I built the pillow I was looking for. Shaped around the way a body actually lies, made of foam that holds, with a cover you can wash. Priced like an object you keep, not a gadget you replace.</p>
+          <p class="close">Try it for thirty nights. If it isn't right, send it back.</p>
+          <p class="who">The founder of Somnila</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-faq" style="padding-top:0">
+    <div class="wrap faq">
+      <div class="aside">
+        <p class="eyebrow">Questions</p>
+        <h2 id="h-faq">Asked plainly, answered plainly.</h2>
+        <p class="lede" style="font-size:16px">Something else? Write to <a class="link" href="mailto:support@somnila.com">support@somnila.com</a>.</p>
+      </div>
+      <div id="faqHome"></div>
+    </div>
+  </section>
+</section>
+
+<!-- =============================== SHOP =============================== -->
+<section class="view" data-view="shop" hidden>
+  <div class="phead sky">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Shop</span></nav>
+      <h1>Pillows</h1>
+      <p class="lede" style="margin-top:16px">Five shapes, each named for what it does. Every pillow ships free, with its cover, and thirty nights to decide.</p>
+      <div class="filters" role="radiogroup" aria-label="Filter by the way you sleep" id="filters"></div>
+    </div>
+  </div>
+  <div class="wrap" style="padding-block:clamp(28px,4vw,44px) clamp(64px,8vw,104px)">
+    <div class="grid3" id="shopGrid"></div>
+    <div class="subhead" id="sets"><div style="display:grid;gap:10px"><h2>Sets</h2><p>Cheaper than the same pieces bought one by one. The saving is shown in dollars on each set.</p></div></div>
+    <div class="grid4" id="shopSets"></div>
+    <div class="subhead"><div style="display:grid;gap:10px"><h2>For the rest of the night</h2><p>Spare covers exist for every pillow, $19.22 each. Accessories bought on their own ship at the rate shown at checkout.</p></div></div>
+    <div class="grid4" id="shopAcc"></div>
+  </div>
+</section>
+
+<!-- =============================== PRODUCT =============================== -->
+<section class="view" data-view="product" hidden>
+  <div class="wrap" id="pdp"></div>
+  <div id="pdpBelow"></div>
+</section>
+
+<!-- =============================== FINDER =============================== -->
+<section class="view" data-view="finder" hidden>
+  <div class="sky" style="padding-block:clamp(36px,5vw,64px) clamp(64px,8vw,104px)">
+    <div class="wrap">
+      <div style="max-width:760px;margin:0 auto 28px;display:grid;gap:14px;text-align:center;justify-items:center">
+        <p class="eyebrow">Pillow finder</p>
+        <h1 style="font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.035em">Three questions. One pillow.</h1>
+        <p class="lede">We only recommend from what we make, and we say so when none of it fits.</p>
+      </div>
+      <div class="finder" id="finder" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="wrap nl" aria-labelledby="h-nl">
+  <div style="display:grid;gap:6px"><h2 id="h-nl" style="font-size:30px">Notes from the workshop</h2><p style="color:var(--ink-2);font-size:15px">New shapes and what we learn making them. No countdowns.</p></div>
+  <form id="nlForm" novalidate><label class="vh" for="nlEmail">Email address</label><input class="field" id="nlEmail" type="email" placeholder="Email address" autocomplete="email"><button class="btn" type="submit">Subscribe</button></form>
+</section>
+
+<footer class="night">
+  <div class="wrap">
+    <div class="foot">
+      <div><a class="logo" href="#/" aria-label="Somnila, home"><svg viewBox="129.3 226.7 1616.4 364.8" style="width:132px;height:30px" aria-hidden="true"><use href="#lg" x="129.3" y="226.7" width="1616.4" height="364.8"/></svg></a><p>Sleep well. Pillows shaped for the way you actually lie.</p></div>
+      <div><h4>Shop</h4><ul><li><a href="#/shop">Pillows</a></li><li><a href="#/shop/sets">Sets</a></li><li><a href="#/finder">Find your pillow</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#/story">Thirty-night trial</a></li><li><a href="mailto:support@somnila.com">support@somnila.com</a></li><li><a href="#/p/neck-01">Sizes and care</a></li></ul></div>
+      <div><h4>Somnila</h4><ul><li><a href="#/story">Our story</a></li><li><a href="#/shop">All products</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Somnila. Sizes in centimetres and inches.</span><span>Design preview. Prices in US dollars as converted by the store on 24 September 2026.</span></div>
+  </div>
+</footer>
+
+<div class="stick" id="stick" aria-hidden="true"><div class="wrap"><img id="stickImg" alt=""><div><div class="nm" id="stickName">Neck 01</div><div class="price num" id="stickPrice" style="font-size:15px">$79.50</div></div><button class="btn" id="stickAdd" type="button" tabindex="-1">Add to cart</button></div></div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="h-cart" aria-hidden="true" tabindex="-1">
+  <div class="drawer__head"><h2 id="h-cart">Your cart</h2><button class="icon-btn" id="cartClose" aria-label="Close cart"><svg class="icon"><use href="#i-close"/></svg></button></div>
+  <div class="ship" id="ship"></div>
+  <div class="lines" id="lines"></div>
+  <div class="upsell" id="upsell"></div>
+  <div class="drawer__foot">
+    <div class="tot"><span>Subtotal</span><span class="num" id="subtotal">$0.00</span></div>
+    <p class="note" id="shipNote">Taxes calculated at checkout.</p>
+    <button class="btn btn--block" id="checkout" type="button"><svg class="icon"><use href="#i-lock"/></svg>Check out</button>
+    <p class="note">Card, Shop Pay, Apple Pay or Google Pay</p>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const IMG = %%IMGJSON%%;
+const FREE = 62.44; // €54.90 free-shipping threshold, as converted by the store on 24 Sept 2026
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const money = n => '$' + n.toFixed(2);
+const ico = (id, cls = 'icon') => `<svg class="${cls}" aria-hidden="true"><use href="#${id}"/></svg>`;
+
+/* Real catalogue. Prices: Shopify contextual pricing for the US, 24 Sept 2026.
+   Sizes, weights, materials, taglines: the store's own product data. */
+const P = {
+  'neck-01': {name:'Neck 01', type:'Memory-foam pillow', price:79.50, img:'neck_night', for:'Side and back', pos:['side','back'], spec:'Two heights · 13 / 11 cm',
+    tag:'Two heights on one pillow. Turn it over until your head lies level.',
+    colours:[['Night','neck_night','#262B40'],['Cloud','neck_cloud','#ECEEF2'],['Stone','neck_stone','#6A6771'],['Sky','neck_sky','#A8BAD2']],
+    cm:'62 × 42 × 13/11 cm', inch:'24.4 × 16.5 × 5.1/4.3 in', L:62, W:42, weight:'1.4 kg · 3.1 lb',
+    inside:'Memory foam.', cover:'Cool-touch cover. It comes off and goes in the washing machine.', box:'The pillow and its cover. Nothing else.',
+    pills:[['i-layers','Two heights'],['i-wash','Cover included'],['i-box','Free shipping']],
+    tiers:[['neck-01','1 pillow','For one bed'],['for-two','2 pillows','For Two'],['family-set','3 pillows','Family Set']],
+    goes:['cover-neck','mask-01','quiet-01']},
+  'contour-01': {name:'Contour 01', type:'Contoured comfort pillow', price:68.13, img:'contour', for:'Softer and lower', pos:['back','softer'], spec:'10 cm high · 3.9 in',
+    tag:'The softer, lower one. A gentle wave that follows the neck and shoulders.', colourList:'Stone, Cloud, Blue, Blush, Night',
+    cm:'60 × 35 × 10 cm', inch:'23.6 × 13.8 × 3.9 in', L:60, W:35, weight:'1.1 kg · 2.4 lb',
+    inside:'A gentle wave shape, softer and lower than Neck 01.', cover:'Washable cover with a cool-touch surface.', box:'The pillow and its cover.',
+    pills:[['i-wash','Cover included'],['i-box','Free shipping'],['i-cal','30 nights']],
+    tiers:[['contour-01','1 pillow','For one bed'],['contour-for-two','2 pillows','Contour for Two']], goes:['mask-01','quiet-01']},
+  'side-01': {name:'Side 01', type:'Side-sleeper pillow', price:62.44, img:'side', for:'On your side', pos:['side'], spec:'10 cm profile · 3.9 in',
+    tag:'Ten centimetres that keep your head level with your shoulders, all night.', colourList:'Blue, Red, Dark grey',
+    cm:'60 cm long, 10 cm profile', inch:'23.6 in long, 3.9 in profile', weight:null,
+    inside:'Memory foam.', cover:'Cover included.', box:'The pillow and its cover.',
+    pills:[['i-wash','Cover included'],['i-box','Free shipping'],['i-cal','30 nights']], goes:['mask-01','quiet-01']},
+  'body-01': {name:'Body 01', type:'S-shaped body pillow', price:79.50, img:'body', for:'Along the whole body', pos:['side','whole'], spec:'120 cm long · 47.2 in',
+    tag:'One pillow for the knees, the arm and the back at the same time.', colourList:'Sky, Blush, Azure, Stone, Ice, Night, Mint, Apricot',
+    cm:'120 cm long, about 30 cm wide', inch:'47.2 in long, about 11.8 in wide', L:120, W:30, approx:true, weight:'1.8 kg · 4.0 lb',
+    inside:'An S shape that sits between the knees, under the arm and along the back.', cover:'Removable, machine-washable cover in a breathable, cool-touch fabric.', box:'The pillow and its cover.',
+    pills:[['i-wash','Cover included'],['i-box','Free shipping'],['i-cal','30 nights']], goes:['neck-01','mask-01']},
+  'lounge-01': {name:'Lounge 01', type:'Reading pillow', price:62.44, img:'lounge', for:'Sitting up in bed', pos:['sitting'], spec:'23 cm high · 9.1 in',
+    tag:'For the hour before sleep: the book or the phone, held up for you.', colourList:'Sky, Stone, Sand, Blush, Green, Yellow, Black',
+    cm:'60 × 37 × 23 cm', inch:'23.6 × 14.6 × 9.1 in', L:60, W:37, weight:'1.1 kg · 2.4 lb',
+    inside:'A raised back with a ledge for the phone or the book.', cover:'Cover included.', box:'The pillow and its cover.',
+    pills:[['i-wash','Cover included'],['i-box','Free shipping'],['i-cal','30 nights']], goes:['throw-01','mask-01']},
+  /* sets: sep = the same pieces bought separately */
+  'for-two': {name:'For Two', sub:'2 × Neck 01', price:136.38, sep:159.00, comp:{k:'two', a:'cut_neck'}},
+  'family-set': {name:'Family Set', sub:'3 × Neck 01', price:193.25, sep:238.50, comp:{k:'three', a:'cut_neck'}},
+  'neck-01-cover-set': {name:'Neck 01 + Cover', sub:'The pillow and a spare cover', price:87.47, sep:98.72, comp:{k:'plus', a:'cut_neck', t:[['','Spare<br>cover']]}},
+  'sleep-set': {name:'Sleep Set', sub:'Neck 01, Mask 01, Quiet 01', price:113.63, sep:119.08, comp:{k:'plus', a:'cut_neck', t:[['mask'],['quiet']]}},
+  'side-sleeper-set': {name:'Side-Sleeper Set', sub:'Neck 01 + Body 01', price:136.38, sep:159.00, comp:{k:'img', a:'body', t:[['cut_neck']]}},
+  'contour-for-two': {name:'Contour for Two', sub:'2 × Contour 01', price:113.63, sep:136.26, comp:{k:'two', a:'cut_contour'}},
+  'evening-set': {name:'Evening Set', sub:'Lounge 01 + Throw 01', price:107.94, sep:130.57, comp:{k:'plus', a:'cut_lounge', tall:true, t:[['throw']]}},
+  'quiet-night': {name:'Quiet Night', sub:'Mask 01 + Quiet 01', price:34.01, sep:39.58, comp:{k:'duo', t:[['mask'],['quiet']]}},
+  'mask-01': {name:'Mask 01', sub:'Contoured sleep mask', price:22.63, img:'mask'},
+  'quiet-01': {name:'Quiet 01', sub:'Earplugs, 2 pairs with case', price:16.95, img:'quiet'},
+  'cover-neck': {name:'Cover for Neck 01', sub:'A second cover, same fit', price:19.22, img:'neck_cloud'},
+  'throw-01': {name:'Throw 01', sub:'200 × 230 cm throw', price:68.13, img:'throw'},
+};
+const PILLOWS = ['neck-01','contour-01','side-01','body-01','lounge-01'];
+const SETS = ['for-two','family-set','neck-01-cover-set','sleep-set','side-sleeper-set','contour-for-two','evening-set','quiet-night'];
+const ACC = ['mask-01','quiet-01','cover-neck','throw-01'];
+
+/* ---------- visuals ---------- */
+function visual(h, opts = {}) {
+  const p = P[h];
+  if (p.img && !p.comp) return `<img src="${IMG[p.img]}" alt="${opts.alt ?? p.name}" loading="lazy">`;
+  const c = p.comp, alt = opts.alt ?? `${p.name}: ${p.sub}`;
+  const th = (c.t || []).map(([k, label]) => `<span>${k ? `<img src="${IMG[k]}" alt="">` : label}</span>`).join('');
+  let inner = '';
+  if (c.k === 'two') inner = `<img class="c1" src="${IMG[c.a]}" alt=""><img class="c2" src="${IMG[c.a]}" alt="">`;
+  if (c.k === 'three') inner = `<img class="c1" src="${IMG[c.a]}" alt=""><img class="c2" src="${IMG[c.a]}" alt=""><img class="c3" src="${IMG[c.a]}" alt="">`;
+  if (c.k === 'plus') inner = `<img class="solo${c.tall ? ' tall' : ''}" src="${IMG[c.a]}" alt="">`;
+  if (c.k === 'img') inner = `<img class="full" src="${IMG[c.a]}" alt="">`;
+  if (c.k === 'duo') return `<div class="tile sky" role="img" aria-label="${alt}"><div class="duo">${c.t.map(([k]) => `<img src="${IMG[k]}" alt="">`).join('')}</div></div>`;
+  return `<div class="tile sky ${c.k}" role="img" aria-label="${alt}">${inner}${th ? `<div class="thumbs">${th}</div>` : ''}</div>`;
+}
+function card(h, o = {}) {
+  const p = P[h], isPillow = PILLOWS.includes(h);
+  const href = isPillow ? `#/p/${h}` : (SETS.includes(h) ? '#/shop/sets' : '#/shop');
+  const top = isPillow ? p.for : (p.sep ? 'Set' : 'Accessory');
+  const line = isPillow ? p.spec : p.sub;
+  const save = p.sep ? `<p class="save num">Separately ${money(p.sep)} · <b>you save ${money(p.sep - p.price)}</b></p>` : '';
+  return `<article class="pcard" data-h="${h}" ${isPillow ? `data-pos="${p.pos.join(' ')}"` : ''}>
+    <div class="pcard__img">${visual(h)}</div>
+    <div class="pcard__body">
+      <p class="pcard__for">${top}</p>
+      <h3><a href="${href}">${p.name}</a></h3>
+      <p class="pcard__spec num">${line}</p>
+      ${save}
+      <div class="pcard__foot"><span class="price num">${money(p.price)}</span>
+        <button class="qadd" type="button" data-add="${h}" aria-label="Add ${p.name} to cart">${ico('i-plus')}<span>Add</span></button></div>
+    </div></article>`;
+}
+
+/* Side view of Neck 01, to scale on length (62 cm) and on both heights (13 and 11 cm). The curve between is a sketch. */
+function profileSVG(big) {
+  const s = big ? 9 : 7, x0 = 40, base = big ? 176 : 140, L = 62 * s, hA = 13 * s, hB = 11 * s;
+  const x1 = x0 + L, yA = base - hA, yB = base - hB, W = x1 + 100, H = base + 56;
+  const mid = x0 + L * 0.5, dip = base - 10.2 * s;
+  const d = `M${x0} ${base} L${x0} ${yA + 16} Q${x0} ${yA} ${x0 + 18} ${yA} C${x0 + L * .2} ${yA} ${x0 + L * .32} ${dip} ${mid} ${dip} C${x0 + L * .68} ${dip} ${x0 + L * .8} ${yB} ${x1 - 18} ${yB} Q${x1} ${yB} ${x1} ${yB + 16} L${x1} ${base} Z`;
+  return `<svg class="profile" viewBox="-6 ${yA - 34} ${W + 12} ${H - yA + 40}" role="img" aria-label="Side view of Neck 01: 62 centimetres long, 13 centimetres high on one edge and 11 on the other">
+    <path class="body" d="${d}"/>
+    <line class="base" x1="0" x2="${x1 + 100}" y1="${base}" y2="${base}"/>
+    <line class="dim" x1="${x0 - 18}" x2="${x0 - 18}" y1="${yA}" y2="${base}"/><line class="dim" x1="${x0 - 24}" x2="${x0 - 12}" y1="${yA}" y2="${yA}"/>
+    <line class="dim" x1="${x1 + 18}" x2="${x1 + 18}" y1="${yB}" y2="${base}"/><line class="dim" x1="${x1 + 12}" x2="${x1 + 24}" y1="${yB}" y2="${yB}"/>
+    <text x="${x1 + 32}" y="${yB + 24}">11 cm</text><text class="t2" x="${x1 + 32}" y="${yB + 46}">4.3 in</text>
+    <text x="${x0 - 2}" y="${yA - 16}">13 cm</text><text class="t2" x="${x0 + 62}" y="${yA - 16}">5.1 in</text>
+    <text x="${mid - 58}" y="${base + 34}">62 cm</text><text class="t2" x="${mid + 6}" y="${base + 34}">24.4 in</text>
+  </svg>`;
+}
+/* Footprint seen from above, to scale, against a US standard pillow (20 × 26 in, 51 × 66 cm). */
+function scaleSVG(p) {
+  const stdL = 66, stdW = 51, pad = 26, s = 540 / Math.max(stdL, p.L);
+  const maxL = Math.max(stdL, p.L), H = (Math.max(stdW, p.W)) * s + pad * 2 + 30, W = maxL * s + pad * 2 + 10;
+  const baseY = pad + Math.max(stdW, p.W) * s;
+  return `<svg class="scale" viewBox="0 0 ${W} ${H}" role="img" aria-label="${p.name} is ${p.cm.split(' ×').slice(0,2).join(' by')}; a US standard pillow is 66 by 51 centimetres">
+    <rect x="${pad}" y="${baseY - stdW * s}" width="${stdL * s}" height="${stdW * s}" rx="18" fill="none" stroke="var(--slate)" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <rect x="${pad}" y="${baseY - p.W * s}" width="${p.L * s}" height="${p.W * s}" rx="${Math.min(40, p.W * s / 3)}" fill="var(--mist)" stroke="var(--night)" stroke-width="1.5"/>
+    <text x="${pad + 14}" y="${baseY - p.W * s + 26}">${p.name}</text>
+    <text class="t2" x="${pad + 14}" y="${baseY - p.W * s + 44}">${p.approx ? 'about ' : ''}${p.L} × ${p.W} cm</text>
+    <text class="t2" x="${pad + stdL * s - 8}" y="${baseY - stdW * s - 10}" text-anchor="end">US standard pillow · 66 × 51 cm · 26 × 20 in</text>
+    <line x1="${pad}" x2="${pad + maxL * s}" y1="${baseY + 16}" y2="${baseY + 16}" stroke="var(--line-2)"/>
+    ${[0, 20, 40, 60, 80, 100, 120].filter(v => v <= maxL).map(v => `<line x1="${pad + v * s}" x2="${pad + v * s}" y1="${baseY + 12}" y2="${baseY + 20}" stroke="var(--ink-2)"/><text class="t2" x="${pad + v * s}" y="${baseY + 36}" text-anchor="middle" style="font-size:11px">${v}</text>`).join('')}
+  </svg>`;
+}
+
+/* ---------- FAQ (verified answers only) ---------- */
+const FAQ = {
+  height:['Which height should I use?', 'Neck 01 has two edges: 13 cm (5.1 in) and 11 cm (4.3 in). On your side, start on the higher edge. On your back, start on the lower one. Turn it over until your head lies level.'],
+  wash:['Can I wash it?', 'The cover, yes. It comes off and goes in the washing machine. Follow the care label for temperature. A spare cover costs $19.22, so one can be on the pillow while the other is in the wash.'],
+  ship:['How long does delivery take?', 'Every order leaves within 6–10 days. Shipping is free on every pillow and on any order from $62.44. Below that, the rate for your country appears at checkout.'],
+  trial:['How does the thirty-night trial work?', 'Sleep on it for up to thirty nights. If it isn\'t right, write to support@somnila.com and send it back. The exact conditions are in our refund policy.'],
+  where:['Where do you ship?', 'To the United States, Canada, the United Kingdom, the European Union, Australia and most other countries. The cost for your country appears at checkout.'],
+  pay:['How can I pay?', 'By card, Shop Pay, Apple Pay or Google Pay. Checkout is handled by Shopify.'],
+  front:['I sleep on my front. Which one?', 'None of our pillows is shaped for sleeping on the front, and we would rather say so. The lowest we make is Contour 01, at 10 cm (3.9 in).'],
+};
+const qa = ([q, a], open) => `<details class="qa"${open ? ' open' : ''}><summary>${q}<span class="pm" aria-hidden="true">${ico('i-plus')}</span></summary><div class="ans"><p>${a}</p></div></details>`;
+
+/* ---------- Cart ---------- */
+let cart = [];
+function add(h, opt, qty = 1) {
+  const f = cart.find(l => l.h === h && l.opt === opt);
+  f ? f.qty += qty : cart.push({h, opt, qty});
+  renderCart(); openCart(); toast(`${P[h].name} added`);
+}
+function renderCart() {
+  const n = cart.reduce((a, l) => a + l.qty, 0), sub = cart.reduce((a, l) => a + l.qty * P[l.h].price, 0);
+  $('#cartCount').textContent = n; $('#cartCount').dataset.n = n;
+  $('#cartBtn').setAttribute('aria-label', `Open cart, ${n} item${n === 1 ? '' : 's'}`);
+  const left = Math.max(0, FREE - sub);
+  $('#ship').innerHTML = n ? (left > 0
+    ? `<span>Add <b class="num">${money(left)}</b> for free shipping.</span><div class="bar"><i style="width:${Math.min(100, sub / FREE * 100)}%"></i></div>`
+    : `<span><b>Free shipping</b> on this order.</span><div class="bar"><i style="width:100%"></i></div>`)
+    : `<span>Free shipping on every pillow.</span>`;
+  $('#lines').innerHTML = n ? cart.map((l, i) => {
+    const p = P[l.h];
+    return `<div class="line"><div class="th">${visual(l.h, {alt:''})}</div>
+      <div><h3>${p.name}</h3><small>${l.opt ? 'Colour: ' + l.opt : (p.sub || p.type)}</small>
+        <div class="qty" role="group" aria-label="Quantity of ${p.name}"><button type="button" data-q="${i}" data-d="-1" aria-label="One less">${ico('i-minus')}</button><span aria-live="polite">${l.qty}</span><button type="button" data-q="${i}" data-d="1" aria-label="One more">${ico('i-plus')}</button></div></div>
+      <div class="lp"><span class="price num">${money(p.price * l.qty)}</span><button class="rm" type="button" data-rm="${i}">Remove</button></div></div>`;
+  }).join('') : `<div class="empty"><h3>Your cart is empty.</h3><p>Not sure where to start? Three questions and we'll point you to one pillow.</p><a class="btn btn--ghost" href="#/finder" data-close>Find my pillow</a></div>`;
+  const up = ['mask-01', 'quiet-01', 'cover-neck'].find(h => !cart.some(l => l.h === h));
+  const hasPillow = cart.some(l => PILLOWS.includes(l.h) || SETS.includes(l.h));
+  $('#upsell').hidden = !(n && up && hasPillow);
+  if (up) $('#upsell').innerHTML = `<img src="${IMG[P[up].img]}" alt=""><p><b>${P[up].name}</b><small>${P[up].sub}</small></p><button class="qadd" type="button" data-add="${up}">${ico('i-plus')}<span class="num">${money(P[up].price)}</span></button>`;
+  $('#subtotal').textContent = money(sub);
+  $('#shipNote').textContent = n && left === 0 ? 'Shipping: free. Taxes calculated at checkout.' : 'Shipping and taxes calculated at checkout.';
+  $('#checkout').disabled = !n; $('#checkout').style.opacity = n ? 1 : .45;
+}
+let lastFocus = null;
+function openCart() { lastFocus = document.activeElement; $('#drawer').classList.add('is-on'); $('#drawer').setAttribute('aria-hidden', 'false'); $('#scrim').classList.add('is-on'); setTimeout(() => $('#cartClose').focus(), 60); }
+function closeCart() { $('#drawer').classList.remove('is-on'); $('#drawer').setAttribute('aria-hidden', 'true'); $('#scrim').classList.remove('is-on'); lastFocus && lastFocus.focus && lastFocus.focus(); }
+let tt;
+function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('is-on'); clearTimeout(tt); tt = setTimeout(() => t.classList.remove('is-on'), 2200); }
+
+/* ---------- Home ---------- */
+const QUICK = {
+  side:{h:'neck-01', why:'<b>Neck 01.</b> Start on the 13 cm edge, the higher one. If your head tilts up, turn it over.'},
+  back:{h:'neck-01', why:'<b>Neck 01.</b> Start on the 11 cm edge, the lower one. If your head sits too low, turn it over.'},
+  changes:{h:'neck-01', why:'<b>Neck 01.</b> Two heights on one pillow, one for the side and one for the back. You change position about 1.6 times an hour.'},
+  sitting:{h:'lounge-01', why:'<b>Lounge 01.</b> 23 cm high, with a ledge that holds the book or the phone while you read in bed.'},
+};
+function renderQuick(v) {
+  const o = $('#qout');
+  if (!v) { o.innerHTML = `<p class="qf__why">Pick one and we'll point you to the right shape. Or go straight to the one most people start with.</p><div class="qf__row"><a class="btn" href="#/p/neck-01"><span>Shop Neck 01 · <span class="num">$79.50</span></span></a><a class="link" href="#/finder">Take the full finder</a></div>`; return; }
+  const r = QUICK[v], p = P[r.h];
+  o.innerHTML = `<p class="qf__why">${r.why}</p><div class="qf__row"><a class="btn" href="#/p/${r.h}"><span>See ${p.name} · <span class="num">${money(p.price)}</span></span></a><a class="link" href="#/finder">Three questions instead</a></div>`;
+}
+function renderHome() {
+  $('#rangeGrid').innerHTML = PILLOWS.map(h => card(h)).join('');
+  $('#setsGrid').innerHTML = ['for-two', 'family-set', 'neck-01-cover-set', 'sleep-set'].map(h => card(h)).join('');
+  $('#faqHome').innerHTML = ['height', 'trial', 'ship', 'wash', 'where', 'pay', 'front'].map((k, i) => qa(FAQ[k], i === 0)).join('');
+  $('#featProfile').innerHTML = profileSVG(false) + '<p class="caption">Side view, to scale on length and on both heights. The curve between the edges is a sketch.</p>';
+  const cols = P['neck-01'].colours;
+  $('#featSw').innerHTML = cols.map(([n, k, c], i) => `<label class="sw" title="${n}"><input type="radio" name="fcol" id="fcol-${n.toLowerCase()}" value="${n}" ${n === 'Cloud' ? 'checked' : ''}><span style="--c:${c}"></span><span class="vh">${n}</span></label>`).join('');
+  renderQuick(null);
+}
+
+/* ---------- Shop ---------- */
+const FILTERS = [['all','All'],['side','Side'],['back','Back'],['softer','Softer'],['whole','Whole body'],['sitting','Sitting up']];
+function renderShop() {
+  $('#filters').innerHTML = FILTERS.map(([v, l], i) => `<label class="chip"><input type="radio" name="flt" id="flt-${v}" value="${v}" ${i ? '' : 'checked'}><span>${l}</span></label>`).join('');
+  $('#shopGrid').innerHTML = PILLOWS.map(h => card(h)).join('') +
+    `<div class="promo night"><div style="display:grid;gap:14px"><p class="eyebrow">Not sure which?</p><h3>Three questions, thirty seconds, one pillow.</h3><p>We only recommend from what we make, and say so when none of it fits.</p></div><div><a class="btn btn--light" href="#/finder">Find my pillow ${ico('i-arrow')}</a></div></div>`;
+  $('#shopSets').innerHTML = SETS.map(h => card(h)).join('');
+  $('#shopAcc').innerHTML = ACC.map(h => card(h)).join('');
+}
+
+/* ---------- Product page ---------- */
+let cur = {h:'neck-01', col:null, tier:0};
+function renderPDP(h) {
+  const p = P[h]; cur = {h, col:p.colours ? p.colours[0][0] : null, tier:0};
+  const thumbs = [];
+  if (p.colours) p.colours.forEach(([n, k]) => thumbs.push({k, label:n}));
+  else thumbs.push({k:p.img, label:p.name});
+  if (h === 'neck-01') thumbs.push({panel:'profile', label:'Side view'});
+  if (p.L) thumbs.push({panel:'scale', label:'To scale'});
+  const tiers = (p.tiers || [[h, '1 pillow', 'For one bed']]).map(([th, a, b], i) => {
+    const t = P[th], save = t.sep ? t.sep - t.price : 0;
+    return `<label class="tier"><input type="radio" name="tier" id="tier-${th}" value="${i}" ${i ? '' : 'checked'}><span class="dot" aria-hidden="true"></span><span><b>${a}</b><small>${b}</small></span><span class="p num">${money(t.price)}${save ? `<small>save ${money(save)}</small>` : ''}</span></label>`;
+  }).join('');
+  $('#pdp').innerHTML = `<div class="pdp">
+    <div class="gal">
+      <div class="gal__main" id="galMain"><img src="${IMG[thumbs[0].k]}" alt="${p.name}${p.colours ? ' in ' + p.colours[0][0] : ''}"></div>
+      <div class="gal__thumbs" role="list">${thumbs.map((t, i) => `<button type="button" role="listitem" data-g="${i}" aria-current="${i ? 'false' : 'true'}" aria-label="Show ${t.label}">${t.k ? `<img src="${IMG[t.k]}" alt="">` : `<span class="tt">${t.label}</span>`}</button>`).join('')}</div>
+    </div>
+    <div class="buy">
+      <nav class="crumbs" aria-label="Breadcrumb" style="margin:0"><a href="#/">Home</a><span aria-hidden="true">/</span><a href="#/shop">Pillows</a><span aria-hidden="true">/</span><span aria-current="page">${p.name}</span></nav>
+      <p class="eyebrow">${p.type}</p>
+      <h1>${p.name}</h1>
+      <p class="tagline">${p.tag}</p>
+      <div class="pills">${p.pills.map(([i, t]) => `<span class="pill">${ico(i)}${t}</span>`).join('')}</div>
+      <div class="pricebox"><span class="price num" id="pdpPrice">${money(p.price)}</span><span class="note">Free shipping · Taxes calculated at checkout</span></div>
+      ${p.colours ? `<div><p class="opt-label" style="margin-bottom:10px">Colour: <b id="pdpColName">${p.colours[0][0]}</b></p><div class="swatches" role="radiogroup" aria-label="Colour">${p.colours.map(([n, k, c], i) => `<label class="sw" title="${n}"><input type="radio" name="pcol" id="pcol-${n.toLowerCase()}" value="${n}" ${i ? '' : 'checked'}><span style="--c:${c}"></span><span class="vh">${n}</span></label>`).join('')}</div></div>` : `<p class="opt-label">Colours: <b>${p.colourList}</b></p>`}
+      <fieldset style="border:0;margin:0;padding:0;min-width:0"><legend class="opt-label" style="margin-bottom:10px;padding:0">How many?</legend><div class="tiers">${tiers}</div></fieldset>
+      <button class="btn btn--block" id="pdpAdd" type="button" style="min-height:58px;font-size:16px"><span>Add to cart · <span class="num" id="pdpBtnPrice">${money(p.price)}</span></span></button>
+      <p class="wallets">Card, Shop Pay, Apple Pay or Google Pay</p>
+      <ul class="facts">
+        <li>${ico('i-box')}Free shipping. Leaves within 6–10 days.</li>
+        <li>${ico('i-cal')}Thirty nights to decide. If it isn't right, send it back.</li>
+        <li>${ico('i-wash')}${p.cover}</li>
+      </ul>
+      <div class="acc">
+        ${qa(['Size and weight', `${p.cm}<br>${p.inch}${p.weight ? '<br>' + p.weight : ''}`], true)}
+        ${qa(['What it\'s made of', `${p.inside} ${p.cover}`])}
+        ${qa(['In the box', p.box])}
+        ${qa(FAQ.ship)}
+        ${qa(FAQ.trial)}
+      </div>
+    </div>
+  </div>`;
+  let below = '';
+  if (h === 'neck-01') below += `<section class="sec" style="background:var(--mist-2)" aria-labelledby="h-edge"><div class="wrap edge">
+      <div style="display:grid;gap:18px"><p class="eyebrow">Two heights</p><h2 id="h-edge">Which edge is yours?</h2>${profileSVG(true)}<p class="caption">Side view, to scale on length and on both heights. The curve between the edges is a sketch.</p></div>
+      <div class="edge-cards"><div><span>On your side</span><b class="num">13 cm · 5.1 in</b><span>Start on the higher edge.</span></div><div><span>On your back</span><b class="num">11 cm · 4.3 in</b><span>Start on the lower edge.</span></div><div><span>Either way</span><b style="font-size:22px;line-height:1.2">Keep the one where your head lies level.</b></div></div>
+    </div></section>`;
+  if (p.L) below += `<section class="sec" aria-labelledby="h-scale"><div class="wrap edge edge--scale">
+      <div style="display:grid;gap:16px"><p class="eyebrow">To scale</p><h2 id="h-scale">How big is it, really?</h2><p class="lede">Seen from above, against a US standard pillow. The dashed outline is 26 × 20 in. ${p.name} is ${p.inch.split(' ×').slice(0, 2).join(' ×')}${p.approx ? ', approximately' : ''}.</p></div>
+      <div class="chart" style="box-shadow:0 0 0 1px var(--line)">${scaleSVG(p)}</div>
+    </div></section>`;
+  below += `<section class="sec" style="padding-top:${p.L ? 0 : 'var(--sec)'}" aria-labelledby="h-goes"><div class="wrap"><div class="sec-head"><div class="stack"><p class="eyebrow">Goes with it</p><h2 id="h-goes">For the rest of the night</h2></div></div><div class="grid3 rail">${p.goes.map(g => card(g)).join('')}</div></div></section>`;
+  $('#pdpBelow').innerHTML = below;
+  $('#stickImg').src = IMG[thumbs[0].k || p.img]; $('#stickName').innerHTML = `${p.name} <small class="note" style="font-family:var(--f-ui)">${p.type}</small>`; $('#stickPrice').textContent = money(p.price);
+  updateTier();
+}
+function galShow(i) {
+  const p = P[cur.h], t = [];
+  if (p.colours) p.colours.forEach(([n, k]) => t.push({k, alt:`${p.name} in ${n}`})); else t.push({k:p.img, alt:p.name});
+  if (cur.h === 'neck-01') t.push({panel:`${profileSVG(true)}<p class="caption">Side view. To scale on length and on both heights.</p>`});
+  if (p.L) t.push({panel:`${scaleSVG(p)}<p class="caption">Seen from above. Dashed: a US standard pillow, 26 × 20 in.</p>`});
+  const g = t[i]; if (!g) return;
+  $('#galMain').innerHTML = g.k ? `<img src="${IMG[g.k]}" alt="${g.alt}">` : `<div class="panel">${g.panel}</div>`;
+  $$('.gal__thumbs button').forEach((b, j) => b.setAttribute('aria-current', String(i === j)));
+}
+function updateTier() {
+  const p = P[cur.h], tiers = p.tiers || [[cur.h]], th = tiers[cur.tier][0], price = P[th].price;
+  $('#pdpBtnPrice').textContent = money(price); $('#pdpPrice').textContent = money(price); $('#stickPrice').textContent = money(price);
+}
+function addCurrent() { const p = P[cur.h], th = (p.tiers || [[cur.h]])[cur.tier][0]; add(th, cur.col); }
+
+/* ---------- Finder ---------- */
+let F = {};
+function finderStep() {
+  const f = $('#finder');
+  const Q = [
+    {k:'pos', q:'How do you usually fall asleep?', o:[['side','On my side','Knees bent, or one arm under the pillow'],['back','On my back','Face up, most of the night'],['changes','It changes','Side, back, side again'],['front','On my front','Face down or turned to one side'],['sitting','Sitting up','Reading or watching before sleep']]},
+    {k:'feel', q:'How do you like a pillow?', o:[['height','With some height','The head held up, not sinking'],['softer','Softer and lower','Something that gives a little more'],['unsure','Not sure','We\'ll pick the one you can adjust']]},
+    {k:'hug', q:'Do you also hold something at night?', o:[['yes','Yes','A pillow between the knees or along the body'],['no','No','Just the one under my head']]},
+  ];
+  const needs = i => i === 0 || (i === 1 && !['front', 'sitting'].includes(F.pos)) || (i === 2 && ['side', 'changes'].includes(F.pos));
+  const steps = Q.filter((_, i) => needs(i));
+  const i = steps.findIndex(s => !(s.k in F));
+  const total = ['front', 'sitting'].includes(F.pos) ? 1 : (['side', 'changes'].includes(F.pos) ? 3 : (F.pos ? 2 : 3));
+  if (i === -1) return finderResult();
+  const s = steps[i];
+  f.innerHTML = `<div class="prog"><span>Question ${i + 1} of ${total}</span><div class="bar"><i style="width:${(i) / total * 100}%"></i></div></div>
+    <div class="step"><h2 id="fq" tabindex="-1">${s.q}</h2><div class="opts" role="group" aria-labelledby="fq">${s.o.map(([v, a, b]) => `<button class="opt" type="button" data-f="${s.k}" data-v="${v}"><b>${a}</b><span>${b}</span></button>`).join('')}</div></div>
+    <div class="fnav">${i ? `<button class="link" type="button" data-fback style="border:0;background:none;min-height:44px">Back</button>` : '<span></span>'}<span class="note">Your answers stay on this page.</span></div>`;
+}
+function finderResult() {
+  const {pos, feel, hug} = F; let main = 'neck-01', why = [], also = null, alsoWhy = '', honest = '';
+  if (pos === 'sitting') { main = 'lounge-01'; why = ['23 cm high, made for sitting up in bed', 'A ledge holds the book or the phone for you', 'Cover included, free shipping']; }
+  else if (pos === 'front') { main = 'contour-01'; honest = 'None of our pillows is shaped for sleeping on the front. This is the lowest we make.'; why = ['10 cm high, the lowest in the range', 'Softer, with a gentle wave', 'Thirty nights to decide']; also = 'neck-01'; alsoWhy = 'If you end up on your back or side later in the night, its lower edge is 11 cm.'; }
+  else if (feel === 'softer') { main = 'contour-01'; why = ['The softer, lower one: 10 cm high', 'A gentle wave that follows the neck and shoulders', 'Cover with a cool-touch surface, included']; also = pos === 'side' ? 'side-01' : 'neck-01'; alsoWhy = pos === 'side' ? 'Made for side sleeping, with a 10 cm profile.' : 'If you want to try two heights instead of one.'; }
+  else { main = 'neck-01';
+    why = [pos === 'back' ? 'Start on the 11 cm edge, the lower one' : pos === 'side' ? 'Start on the 13 cm edge, the higher one' : 'Two heights for two positions: 13 cm and 11 cm', 'Memory foam that keeps its height all night', 'Cool-touch cover, machine-washable, included'];
+    also = pos === 'side' ? 'side-01' : 'contour-01'; alsoWhy = pos === 'side' ? 'Only ever on your side? A 10 cm profile made for it.' : 'Prefer it softer and lower? 10 cm, with a gentle wave.'; }
+  let setLine = '';
+  if (hug === 'yes' && main === 'neck-01') { main = 'side-sleeper-set'; why = ['Neck 01 for the head, 13 cm edge first', 'Body 01 between the knees and along the back, 120 cm', `Costs ${money(P['side-sleeper-set'].sep - P['side-sleeper-set'].price)} less than both bought separately`]; also = 'neck-01'; alsoWhy = 'Just the pillow for your head.'; }
+  else if (hug === 'yes') { also = 'body-01'; alsoWhy = '120 cm, for the knees, the arm and the back at the same time.'; }
+  if (['neck-01'].includes(main)) setLine = `<p class="note">Sleeping as two? <a class="link" href="#/p/neck-01">For Two</a> is two Neck 01 for ${money(P['for-two'].price)}, ${money(P['for-two'].sep - P['for-two'].price)} less than two bought separately.</p>`;
+  const mp = P[main], img = mp.img || null, href = PILLOWS.includes(main) ? `#/p/${main}` : '#/shop/sets';
+  $('#finder').innerHTML = `<div class="prog"><span>Your pillow</span><div class="bar"><i style="width:100%"></i></div></div>
+    <div class="step">
+      ${honest ? `<p style="padding:14px 18px;border-radius:18px;background:var(--dawn-soft);color:var(--ink);font-weight:600">${honest}</p>` : ''}
+      <div class="result"><div>${img ? `<img src="${IMG[img]}" alt="${mp.name}">` : visual(main)}</div>
+        <div class="body"><p class="eyebrow">${mp.type || 'Set · ' + mp.sub}</p><h3 id="fres" tabindex="-1">${mp.name}</h3>
+          <ul class="why">${why.map(w => `<li>${ico('i-check')}<span>${w}</span></li>`).join('')}</ul>
+          <div class="buyrow"><span class="price num">${money(mp.price)}</span><button class="btn" type="button" data-add="${main}">Add to cart</button><a class="link" href="${href}">Details</a></div></div></div>
+      ${also ? `<div class="also"><img src="${IMG[P[also].img]}" alt=""><p><b>Also consider ${P[also].name}</b> · <span class="num">${money(P[also].price)}</span><br>${alsoWhy}</p><a class="arrow-link" href="#/p/${also}" aria-label="See ${P[also].name}">${ico('i-arrow')}</a></div>` : ''}
+      ${setLine}
+    </div>
+    <div class="fnav"><button class="link" type="button" data-freset style="border:0;background:none;min-height:44px">Start again</button><span class="note">Thirty nights to decide, whichever you choose.</span></div>`;
+  setTimeout(() => $('#fres') && $('#fres').focus({preventScroll:true}), 30);
+}
+
+/* ---------- Router ---------- */
+function route() {
+  const hsh = location.hash.replace(/^#/, '') || '/';
+  let view = 'home', scrollTo = null, nav = 'home';
+  if (hsh.startsWith('/shop')) { view = 'shop'; nav = 'shop'; if (hsh === '/shop/sets') { scrollTo = '#sets'; nav = 'sets'; } }
+  else if (hsh.startsWith('/p/')) { const h = hsh.slice(3); if (P[h] && PILLOWS.includes(h)) { view = 'product'; nav = 'product'; renderPDP(h); } }
+  else if (hsh === '/finder') { view = 'finder'; nav = 'finder'; F = {}; finderStep(); }
+  else if (hsh === '/story') { scrollTo = '#story'; nav = 'story'; }
+  $$('.view').forEach(v => v.hidden = v.dataset.view !== view);
+  $$('.nav a').forEach(a => a.dataset.nav === nav ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+  $('#stick').classList.remove('is-on');
+  $('#mnav').hidden = true; $('#menuBtn').setAttribute('aria-expanded', 'false');
+  if (scrollTo) requestAnimationFrame(() => $(scrollTo).scrollIntoView({behavior:'smooth', block:'start'}));
+  else window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+}
+
+/* ---------- Events ---------- */
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-add]'); if (a) { e.preventDefault(); const h = a.dataset.add; add(h, P[h].colours ? P[h].colours[0][0] : null); return; }
+  const q = e.target.closest('[data-q]'); if (q) { const l = cart[+q.dataset.q]; l.qty += +q.dataset.d; if (l.qty < 1) cart.splice(+q.dataset.q, 1); renderCart(); return; }
+  const rm = e.target.closest('[data-rm]'); if (rm) { cart.splice(+rm.dataset.rm, 1); renderCart(); return; }
+  const g = e.target.closest('[data-g]'); if (g) { galShow(+g.dataset.g); return; }
+  const fo = e.target.closest('[data-f]'); if (fo) { F[fo.dataset.f] = fo.dataset.v; finderStep(); setTimeout(() => $('#fq') && $('#fq').focus({preventScroll:true}), 30); return; }
+  if (e.target.closest('[data-fback]')) { const ks = Object.keys(F); delete F[ks[ks.length - 1]]; finderStep(); return; }
+  if (e.target.closest('[data-freset]')) { F = {}; finderStep(); return; }
+  if (e.target.closest('[data-close]')) closeCart();
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.name === 'qpos') renderQuick(t.value);
+  if (t.name === 'fcol') { const c = P['neck-01'].colours.find(c => c[0] === t.value); const img = $('#featImg img'); img.style.opacity = 0; setTimeout(() => { img.src = IMG[c[1]]; img.alt = `Neck 01 in ${c[0]}`; img.style.opacity = 1; }, 180); $('#featColName').textContent = c[0]; }
+  if (t.name === 'pcol') { cur.col = t.value; $('#pdpColName').textContent = t.value; const i = P[cur.h].colours.findIndex(c => c[0] === t.value); galShow(i); $('#stickImg').src = IMG[P[cur.h].colours[i][1]]; }
+  if (t.name === 'tier') { cur.tier = +t.value; updateTier(); }
+  if (t.name === 'flt') { $$('#shopGrid .pcard').forEach(c => c.hidden = !(t.value === 'all' || c.dataset.pos.split(' ').includes(t.value))); }
+});
+$('#featAdd').addEventListener('click', () => add('neck-01', $('input[name="fcol"]:checked').value));
+document.addEventListener('click', e => { if (e.target.closest('#pdpAdd') || e.target.closest('#stickAdd')) addCurrent(); });
+$('#cartBtn').addEventListener('click', openCart);
+$('#cartClose').addEventListener('click', closeCart);
+$('#scrim').addEventListener('click', closeCart);
+$('#checkout').addEventListener('click', () => toast('Design preview. Checkout opens in the live store.'));
+$('#nlForm').addEventListener('submit', e => { e.preventDefault(); toast('Design preview. Nothing was sent.'); });
+$('#menuBtn').addEventListener('click', () => { const m = $('#mnav'); m.hidden = !m.hidden; $('#menuBtn').setAttribute('aria-expanded', String(!m.hidden)); });
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && $('#drawer').classList.contains('is-on')) closeCart();
+  if (e.key === 'Tab' && $('#drawer').classList.contains('is-on')) {
+    const f = $$('#drawer button:not([disabled]), #drawer a[href]'); if (!f.length) return;
+    if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+    else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+  }
+});
+window.addEventListener('scroll', () => {
+  $('#hdr').classList.toggle('is-scrolled', scrollY > 30);
+  const btn = $('#pdpAdd');
+  if (btn && !$('[data-view="product"]').hidden) { const r = btn.getBoundingClientRect(); const on = r.bottom < 70; $('#stick').classList.toggle('is-on', on); $('#stick').setAttribute('aria-hidden', String(!on)); $('#stickAdd').tabIndex = on ? 0 : -1; }
+}, {passive:true});
+window.addEventListener('hashchange', route);
+
+$$('[data-img]').forEach(i => i.src = IMG[i.dataset.img]);
+$$('[data-srcset]').forEach(s => s.srcset = IMG[s.dataset.srcset]);
+renderHome(); renderShop(); renderCart(); route();
+</script>
+</body>
+</html>
