@@ -1,5 +1,5 @@
 {
- "v7-home-desktop": {
+ "v7-home-mobile": {
   "title": "LIYAN | Biberons & Accessoires Bébé Premium – SOMNILA",
   "themeId": "{\"name\":\"Somnila — build v1\",\"id\":157447585949,\"schema_name\":\"Shrine PRO\",\"schema_version\":\"1.2.3\",\"theme_store_id\":null,\"role\":\"unpublished\"}",
   "h1": "",
@@ -13,23 +13,23 @@
   },
   "sections": [
    "sections--21660694085789__somnila-styles:0",
-   "sections--21660694085789__annonce:33",
-   "sections--21660694085789__header:76",
+   "sections--21660694085789__annonce:28",
+   "sections--21660694085789__header:60",
    "cart-drawer:0",
-   "template--21660693659805__hero:651",
+   "template--21660693659805__hero:765",
    "template--21660693659805__strip:50",
-   "template--21660693659805__figures:185",
-   "template--21660693659805__range:878",
-   "template--21660693659805__trial:567",
-   "template--21660693659805__sets:662",
-   "template--21660693659805__six:827",
-   "template--21660693659805__heights:936",
-   "template--21660693659805__faq:710",
-   "template--21660693659805__cta:457",
+   "template--21660693659805__figures:347",
+   "template--21660693659805__range:1019",
+   "template--21660693659805__trial:935",
+   "template--21660693659805__sets:686",
+   "template--21660693659805__six:1139",
+   "template--21660693659805__heights:1286",
+   "template--21660693659805__faq:620",
+   "template--21660693659805__cta:414",
    "promo-popup:0",
    "scroll-to-top-btn:0",
    "global-music-player:0",
-   "sections--21660694053021__v7foot:565",
+   "sections--21660694053021__v7foot:1062",
    "sections--21660694053021__backtotop:0"
   ],
   "fonts": [
@@ -39,8 +39,8 @@
   "brokenImgs": [
    ""
   ],
-  "height": 6598,
-  "text": "Cookie consent We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our Privacy Policy Manage preferences Accept Decline Ignorer et passer au contenu local_shipping FREE SHIPPING ON EVERY PILLOW schedule SHIPS IN 6–10 DAYS, TRACKED bedtime 30-NIGHT TRIAL ON EVERY PILLOW Pillows Sets Accessories 30-night trial FAQ Our story Connexion Panier MEMORY-FOAM PILLOWS Feel it tonight. Keep it for years. SLEEP WELL. Neck 01 is the memory-foam pillow with two heights, for side and back sleepers. 30-night trial See the terms Shop Neck 01 Compare pillows Neck 01 · $79.49 · free shipping Two heights 13 cm and 11 cm, one pillow FREE SHIPPING ON EVERY PILLOW 30-NIGHT TRIAL SHIPS IN 6–10 DAYS TWO HEIGHTS IN ONE PILLOW WASHABLE COVER INCLUDED SECURE CHECKOUT US · CANADA · UK · EUROPE · AUSTRALIA FREE SHIPPING ON EVERY PILLOW 30-NIGHT TRIAL SHIPS IN 6–10 DAYS TWO HEIGHTS IN ONE PILLOW WASHABLE COVER INCLUDED SECURE CHECKOUT US · CANADA · UK · EUROPE · AUSTRALIA 13 / 11 cm Two heights on Neck 01 30 nights Trial at home 6–10 days Delivery Free Shipping on every pillow THE RANGE Pick your pillow View all pillows Two heights Neck 01 62 × 42 CM Two heights on one pillow. Turn it over until your head lies level. Night Cloud Stone Sky Night 1 pillow 2 pillows −14% $79.49 Free shipping Details Add Softer & l",
+  "height": 8411,
+  "text": "Cookie consent We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our Privacy Policy Manage preferences Accept Decline Ignorer et passer au contenu local_shipping FREE SHIPPING ON EVERY PILLOW schedule SHIPS IN 6–10 DAYS, TRACKED bedtime 30-NIGHT TRIAL ON EVERY PILLOW Panier MEMORY-FOAM PILLOWS Feel it tonight. Keep it for years. SLEEP WELL. Neck 01 is the memory-foam pillow with two heights, for side and back sleepers. 30-night trial See the terms Shop Neck 01 Compare pillows Neck 01 · $79.49 · free shipping Two heights 13 cm and 11 cm, one pillow FREE SHIPPING ON EVERY PILLOW 30-NIGHT TRIAL SHIPS IN 6–10 DAYS TWO HEIGHTS IN ONE PILLOW WASHABLE COVER INCLUDED SECURE CHECKOUT US · CANADA · UK · EUROPE · AUSTRALIA FREE SHIPPING ON EVERY PILLOW 30-NIGHT TRIAL SHIPS IN 6–10 DAYS TWO HEIGHTS IN ONE PILLOW WASHABLE COVER INCLUDED SECURE CHECKOUT US · CANADA · UK · EUROPE · AUSTRALIA 13 / 11 cm Two heights on Neck 01 30 nights Trial at home 6–10 days Delivery Free Shipping on every pillow THE RANGE Pick your pillow View all pillows Two heights Neck 01 62 × 42 CM Night Cloud Stone Sky 1 pillow 2 pillows −14% $79.49 Free shipping Add Softer & lower Contour 01 60 × 35 CM Stone Cloud Blue Blush Night 1 pillow 2 pillows −17% $68.12 Free shipping Add Side sleepers Side 01 60 CM LONG Blue Red",
   "errors": [
    "Failed to load resource: net::ERR_FAILED",
    "TypeError: Failed to fetch\n    at window2.fetch (https://liyan.shop/cdn/shopifycloud/storefront/assets/shop_events_listener-4e26a9ce.js:1:7379)\n    at https://l",
@@ -50,117 +50,10 @@
    "TypeError: Failed to fetch\n    at window2.fetch (https://liyan.shop/cdn/shopifycloud/storefront/assets/shop_events_listener-4e26a9ce.js:1:7379)\n    at https://l"
   ]
  },
- "v7-home-mobile": {
-  "title": "Something went wrong",
-  "themeId": null,
-  "h1": "There was a problem loading this website",
-  "h1font": "\"Helvetica Neue\"",
-  "bodyFont": "\"Helvetica Neue\"",
-  "bodyBg": "rgba(0, 0, 0, 0)",
-  "btn": null,
-  "sections": [],
-  "fonts": [
-   "Helvetica Neue"
-  ],
-  "brokenImgs": [],
-  "height": 844,
-  "text": "There was a problem loading this website Try refreshing the page. If the site still doesn't load, please try again in a few minutes. Refresh Page",
-  "errors": [
-   "Failed to load resource: net::ERR_FAILED",
-   "TypeError: Failed to fetch\n    at window2.fetch (https://liyan.shop/cdn/shopifycloud/storefront/assets/shop_events_listener-4e26a9ce.js:1:7379)\n    at metafield",
-   "Failed to load resource: the server responded with a status of 403 ()",
-   "Refused to display 'https://shop.app/' in a frame because it set 'X-Frame-Options' to 'deny'.",
-   "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
-  ]
- },
- "v7-sets-desktop": {
-  "title": "Sets – SOMNILA",
+ "v7-pillows-mobile": {
+  "title": "Memory-foam pillows – SOMNILA",
   "themeId": "{\"name\":\"Somnila — build v1\",\"id\":157447585949,\"schema_name\":\"Shrine PRO\",\"schema_version\":\"1.2.3\",\"theme_store_id\":null,\"role\":\"unpublished\"}",
-  "h1": "Sets",
-  "h1font": "\"Somnila Serif\"",
-  "bodyFont": "\"Somnila Sans\"",
-  "bodyBg": "rgb(247, 249, 252)",
-  "btn": {
-   "bg": "rgb(30, 42, 58)",
-   "r": "41px",
-   "txt": "Ignorer et passer au contenu"
-  },
-  "sections": [
-   "sections--21660694085789__somnila-styles:0",
-   "sections--21660694085789__annonce:33",
-   "sections--21660694085789__header:76",
-   "cart-drawer:0",
-   "template--21660693397661__main:1568",
-   "template--21660693397661__sets:662",
-   "template--21660693397661__cta:457",
-   "promo-popup:0",
-   "scroll-to-top-btn:0",
-   "global-music-player:0",
-   "sections--21660694053021__v7foot:565",
-   "sections--21660694053021__backtotop:0"
-  ],
-  "fonts": [
-   "Somnila Sans",
-   "Somnila Serif"
-  ],
-  "brokenImgs": [],
-  "height": 3361,
-  "text": "Cookie consent We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our Privacy Policy Manage preferences Accept Decline Ignorer et passer au contenu local_shipping FREE SHIPPING ON EVERY PILLOW schedule SHIPS IN 6–10 DAYS, TRACKED bedtime 30-NIGHT TRIAL ON EVERY PILLOW Pillows Sets Accessories 30-night trial FAQ Our story Connexion Panier Sets Search products Sort by Featured Le plus pertinent Best selling A to Z Z to A Price, low to high Price, high to low Oldest first Newest first Pillows Sets Accessories Covers Shop all 30 NIGHTS 30-night trial Sleep on it at home. If it isn't right, write to us. Trial terms 2+ PILLOWS Sets Two or three pillows cost less as a set. The saving is already in the price. Shop sets 6–10 DAYS Free shipping On every pillow and every set, to the US, Canada, the UK, Europe, Australia and more. Shipping Set Family Set Three Neck 01 pillows for the whole house, each with the cooling cover included. Night Cloud Stone Sky Night $193.21 Free shipping Details Add Set For Two Two Neck 01 pillows, one for each side of the bed. Both with the cooling cover... Night Cloud Stone Sky Night $136.35 Free shipping Details Add Set Evening Set The hour before sleep, sorted: Lounge 01 holds the book or the phone, Throw 01 covers... 7 colours $107.92 Free shipping Details C",
-  "errors": [
-   "Failed to load resource: net::ERR_FAILED",
-   "TypeError: Failed to fetch\n    at metafieldPoly (https://liyan.shop/cdn/shop/t/9/assets/main.js?v=172825406199991023481789065592:1:103645)\n    at https://liyan.",
-   "Failed to load resource: the server responded with a status of 403 ()",
-   "Refused to display 'https://shop.app/' in a frame because it set 'X-Frame-Options' to 'deny'.",
-   "Failed to load resource: net::ERR_FAILED",
-   "TypeError: Failed to fetch\n    at metafieldPoly (https://liyan.shop/cdn/shop/t/9/assets/main.js?v=172825406199991023481789065592:1:103645)\n    at https://liyan."
-  ]
- },
- "v7-set-desktop": {
-  "title": "Neck 01 + spare cover set – SOMNILA",
-  "themeId": "{\"name\":\"Somnila — build v1\",\"id\":157447585949,\"schema_name\":\"Shrine PRO\",\"schema_version\":\"1.2.3\",\"theme_store_id\":null,\"role\":\"unpublished\"}",
-  "h1": "Neck 01 + Cover",
-  "h1font": "\"Somnila Serif\"",
-  "bodyFont": "\"Somnila Sans\"",
-  "bodyBg": "rgb(247, 249, 252)",
-  "btn": {
-   "bg": "rgb(30, 42, 58)",
-   "r": "41px",
-   "txt": "Ignorer et passer au contenu"
-  },
-  "sections": [
-   "sections--21660694085789__somnila-styles:0",
-   "sections--21660694085789__annonce:33",
-   "sections--21660694085789__header:76",
-   "cart-drawer:0",
-   "template--21660827386013__main:1197",
-   "template--21660827386013__details:608",
-   "template--21660827386013__related:904",
-   "promo-popup:0",
-   "scroll-to-top-btn:0",
-   "global-music-player:0",
-   "sections--21660694053021__v7foot:565",
-   "sections--21660694053021__backtotop:0"
-  ],
-  "fonts": [
-   "Somnila Sans",
-   "Somnila Serif"
-  ],
-  "brokenImgs": [],
-  "height": 3383,
-  "text": "Cookie consent We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our Privacy Policy Manage preferences Accept Decline Ignorer et passer au contenu local_shipping FREE SHIPPING ON EVERY PILLOW schedule SHIPS IN 6–10 DAYS, TRACKED bedtime 30-NIGHT TRIAL ON EVERY PILLOW Pillows Sets Accessories 30-night trial FAQ Our story Connexion Panier SHOP ALL NECK 01 + COVER FREE SHIPPING 30-NIGHT TRIAL NECK 01 + COVER Neck 01 + Cover SET In stock Ships in 6–10 days · free shipping Neck 01 with a second cooling cover. One cover on the pillow, one in the wash, no night without. PILLOW COLOUR Night Night Cloud Stone Sky SPARE COVER Cloud Cloud Night QUANTITY $87.45 Free shipping Size Add to cart · $87.45 OR CHECK OUT INSTANTLY Plus de moyens de paiement Ships to the US, Canada, the UK, Europe, Australia and more Ships in 6–10 days · Free shipping 30-night trial on the pillows in the set 1 × Neck 01 1 × Cover for Neck 01 We accept SECURE CHECKOUT Somnila pillows are comfort products, not medical devices. Neck 01 + Cover $87.45 · free shipping Add to cart About Neck 01 + Cover Neck 01 with a second cooling cover. One cover on the pillow, one in the wash, no night without. Details IN THE SET 1 × Neck 01 1 × Cover for Neck 01 PILLOW COLOUR Night, Cloud, Stone, Sky SPARE COVER Cloud, Night SHIPS IN ",
-  "errors": [
-   "Failed to load resource: net::ERR_FAILED",
-   "TypeError: Failed to fetch\n    at window2.fetch (https://liyan.shop/cdn/shopifycloud/storefront/assets/shop_events_listener-4e26a9ce.js:1:7379)\n    at metafield",
-   "Failed to load resource: the server responded with a status of 403 ()",
-   "Refused to display 'https://shop.app/' in a frame because it set 'X-Frame-Options' to 'deny'.",
-   "Refused to display 'https://liyan.shop/' in a frame because it set 'X-Frame-Options' to 'deny'.",
-   "Failed to load resource: net::ERR_FAILED"
-  ]
- },
- "v7-mask-mobile": {
-  "title": "Mask 01 contoured sleep mask – SOMNILA",
-  "themeId": "{\"name\":\"Somnila — build v1\",\"id\":157447585949,\"schema_name\":\"Shrine PRO\",\"schema_version\":\"1.2.3\",\"theme_store_id\":null,\"role\":\"unpublished\"}",
-  "h1": "Mask 01",
+  "h1": "Pillows",
   "h1font": "\"Somnila Serif\"",
   "bodyFont": "\"Somnila Sans\"",
   "bodyBg": "rgb(247, 249, 252)",
@@ -174,9 +67,9 @@
    "sections--21660694085789__annonce:28",
    "sections--21660694085789__header:60",
    "cart-drawer:0",
-   "template--21660827418781__main:1631",
-   "template--21660827418781__details:908",
-   "template--21660827418781__related:947",
+   "template--21660693397661__main:2033",
+   "template--21660693397661__sets:686",
+   "template--21660693397661__cta:414",
    "promo-popup:0",
    "scroll-to-top-btn:0",
    "global-music-player:0",
@@ -187,16 +80,19 @@
    "Somnila Sans",
    "Somnila Serif"
   ],
-  "brokenImgs": [],
-  "height": 4636,
-  "text": "Cookie consent We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our Privacy Policy Manage preferences Accept Decline Ignorer et passer au contenu local_shipping FREE SHIPPING ON EVERY PILLOW schedule SHIPS IN 6–10 DAYS, TRACKED bedtime 30-NIGHT TRIAL ON EVERY PILLOW Panier SHOP ALL MASK 01 MASK 01 — CONTOURED SLEEP MASK Mask 01 SLEEP MASK In stock Ships in 6–10 days Mask 01 is a contoured sleep mask. The eye cups are shaped so nothing presses on the eyelids, and the strap adjusts to fit. COLOUR Black Black Violet Heather grey Light grey Night Blush Cloud QUANTITY $22.63 Free shipping with any pillow Add to cart · $22.63 OR CHECK OUT INSTANTLY Plus de moyens de paiement Ships to the US, Canada, the UK, Europe, Australia and more Ships in 6–10 days · Free shipping with any pillow Returns accepted unused within 14 days We accept SECURE CHECKOUT Mask 01 $22.63 Add to cart About Mask 01 Mask 01 is a contoured sleep mask. The eye cups are shaped so nothing presses on the eyelids, and the strap adjusts to fit. Details SIZE 57 × 8.5 cm SIZE (INCHES) 22.4 × 3.3 in COLOUR Black, Violet, Heather grey, Light grey, Night, Blush, Cloud SHIPS IN 6–10 days Care and returns Mask 01 and covers: hand wash or machine wash cold on a gentle cycle, dry flat. Quiet 01 earplugs: rinse with water, dry b",
+  "brokenImgs": [
+   "",
+   ""
+  ],
+  "height": 4283,
+  "text": "Cookie consent We and our partners, including Shopify, use cookies and other technologies to personalize your experience, show you ads, and perform analytics, and we will not use cookies or other technologies for these purposes unless you accept them. Learn more in our Privacy Policy Manage preferences Accept Decline Ignorer et passer au contenu local_shipping FREE SHIPPING ON EVERY PILLOW schedule SHIPS IN 6–10 DAYS, TRACKED bedtime 30-NIGHT TRIAL ON EVERY PILLOW Panier Pillows Search products Sort by Featured Most relevant Best selling A to Z Z to A Price, low to high Price, high to low Oldest first Newest first Pillows Sets Accessories Covers Shop all 30 NIGHTS 30-night trial Sleep on it at home. If it isn't right, write to us. Trial terms 2+ PILLOWS Sets Two or three pillows cost less as a set. The saving is already in the price. Shop sets 6–10 DAYS Free shipping On every pillow and every set, to the US, Canada, the UK, Europe, Australia and more. Shipping Pillow Neck 01 62 × 42 CM Night Cloud Stone Sky 1 pillow 2 pillows −14% $79.49 Free shipping Add Pillow Lounge 01 60 × 37 CM Sky Stone Sand Blush Green Yellow Black $62.43 Free shipping Add Pillow Body 01 120 CM LONG Sky Blush Azure Stone Ice Night Mint Apricot $79.49 Free shipping Add Pillow Side 01 60 CM LONG Blue Red Dark grey $62.43 Free shipping Add Pillow Contour 01 60 × 35 CM Stone Cloud Blue Blush Night 1 pillow 2 pillows −17% $68.12 Free shipping Add Sets Sleeping in pairs? Save on the set. Two or three Neck 01",
   "errors": [
    "Failed to load resource: net::ERR_FAILED",
-   "TypeError: Failed to fetch\n    at https://liyan.shop/cdn/wpm/bc8540278we853e1abpb62b2c4amde256306m.js:1:82932\n    at window2.fetch (https://liyan.shop/cdn/shopi",
+   "TypeError: Failed to fetch\n    at window2.fetch (https://liyan.shop/cdn/shopifycloud/storefront/assets/shop_events_listener-4e26a9ce.js:1:7379)\n    at metafield",
    "Failed to load resource: the server responded with a status of 403 ()",
    "Refused to display 'https://shop.app/' in a frame because it set 'X-Frame-Options' to 'deny'.",
-   "Refused to display 'https://liyan.shop/' in a frame because it set 'X-Frame-Options' to 'deny'.",
-   "Failed to load resource: net::ERR_FAILED"
+   "Failed to load resource: net::ERR_FAILED",
+   "TypeError: Failed to fetch\n    at window2.fetch (https://liyan.shop/cdn/shopifycloud/storefront/assets/shop_events_listener-4e26a9ce.js:1:7379)\n    at https://l"
   ]
  }
 }

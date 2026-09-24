@@ -57,3 +57,36 @@ identiques à l'accueil · bande des packs · CTA final.
 Le programme de points (Somnila n'en a pas), la vérification d'âge, les mentions de
 recherche. Aucun avis, aucun « most popular » (on n'a pas les ventes pour le dire),
 aucun prix barré inventé : seules les vraies économies des packs sont affichées.
+
+## État au 24 septembre (fin de journée)
+
+En ligne sur le thème non publié : 15 sections `sv7-*`, 4 snippets, `somnila-v7.css`,
+`somnila-v7.js`, les gabarits accueil, collection, produit (oreillers, packs, accessoires),
+l'en-tête (menu `somnila-nav`) et le pied de page v7 (le pied Shrine est désactivé, pas
+supprimé). Captures : `build/preview/v7-*.jpg`.
+
+Vérifié dans l'aperçu : accueil, Pillows et Sets (ordinateur et téléphone), Neck 01,
+Neck 01 + Cover, Mask 01. Prix réels, remises des packs calculées (For Two −14 %,
+Family Set −19 %, Contour for Two −17 %), Neck 01 en tête des collections, aucune erreur
+JavaScript venant du thème.
+
+Nouveau dans la boutique : le menu « Somnila — nav v7 » (`somnila-nav`). Il n'est utilisé
+que par ce thème ; le site en ligne ne change pas.
+
+Retour arrière : les gabarits v6 sont dans `templates/backup-v6/` ; les sections v6 restent
+dans le thème.
+
+## À régler par toi
+
+1. Langue par défaut de la boutique : encore le français. D'où « Acheter avec Shop »,
+   « Plus de moyens de paiement », le tiroir panier et « États-Unis » dans le sélecteur de
+   pays. Paramètres → Langues → mettre l'anglais par défaut.
+2. Essai 30 nuits : les anciens textes disent « on rembourse, pas besoin de renvoyer » à un
+   endroit et « renvoyez-le » à un autre. La v7 dit seulement « les conditions exactes sont
+   dans la politique de remboursement ». Il me faut les vraies conditions.
+3. Suivi du colis : le bandeau du haut dit « tracked ». À confirmer, sinon je l'enlève.
+4. Photos de variantes : les associer à chaque couleur (les packs montrent parfois la
+   photo Cloud alors que Night est choisi).
+5. Titre de la page d'accueil (Préférences) : encore celui de LIYAN (biberons).
+6. Tiroir panier : l'ajout au panier répond bien (bonne variante), mais mon outil de test
+   perd la session d'aperçu. Un clic sur « Add » depuis ton téléphone suffit à confirmer.
