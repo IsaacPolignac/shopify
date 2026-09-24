@@ -45,7 +45,7 @@ CTA = sec("sv7-cta", {
     "text": "Thirty nights at home, free shipping, and a cover you can wash. The only way to know is to sleep on it.",
     "btn_1": "Shop the pillows", "btn_1_url": "shopify://collections/memory-foam-pillows",
     "btn_2": "Read the FAQ", "btn_2_url": "shopify://pages/faq",
-    "image_left": "sv6-cut-neck-01-sky.webp", "image_right": "sv6-cut-neck-01-stone.webp",
+    "image_left": "sv6-cut-neck-01-sky.webp", "image_right": "sv6-cut-neck-01-night.webp",
 })
 
 # ---------------------------------------------------------------- home
@@ -60,7 +60,7 @@ home = template([
         "btn_1": "Shop Neck 01", "btn_1_url": "shopify://products/neck-01",
         "btn_2": "Compare pillows", "btn_2_url": "shopify://collections/memory-foam-pillows",
         "show_price": True, "price_note": "free shipping",
-        "image_asset": "sv6-cut-neck-01-cloud.webp", "image_alt": "Neck 01 memory-foam pillow in Cloud",
+        "image_asset": "sv6-cut-neck-01-night.webp", "image_alt": "Neck 01 memory-foam pillow in Night",
         "badge": "Two heights", "badge_small": "13 cm and 11 cm, one pillow",
     })),
     ("strip", sec("sv7-marquee", {"label": "What you get"}, [
@@ -123,7 +123,7 @@ home = template([
         "why_label": "Tip:",
         "caption": "Side view of Neck 01, to scale", "caption_right": "62 × 42 cm",
         "btn": "Shop Neck 01", "btn_url": "shopify://products/neck-01", "btn_note": "Cover included",
-        "image_asset": "sv6-cut-neck-01-night.webp", "image_alt": "Neck 01 memory-foam pillow in Night",
+        "image_asset": "sv6-cut-neck-01-stone.webp", "image_alt": "Neck 01 memory-foam pillow in Stone",
         "float": "Turn it over", "float_small": "The other edge goes under your neck",
         "card_title": "Compare the pillows", "card_small": "Heights and sizes, side by side", "card_url": "shopify://collections/memory-foam-pillows",
         "only_for_handle": "neck-01",
@@ -141,7 +141,7 @@ write("templates/index.json", home)
 
 # ---------------------------------------------------------------- shop (collection)
 shop = template([
-    ("main", sec("sv7-collection", {"show_description": False, "pills_menu": "somnila-shop", "per_page": 24}, [
+    ("main", sec("sv7-collection", {"show_description": False, "pills_menu": "somnila-shop", "per_page": 24, "lead_handles": "neck-01,for-two,family-set"}, [
         ("info", {"big": "30", "small": "nights", "title": "30-night trial", "text": "Sleep on it at home. If it isn't right, write to us.", "btn": "Trial terms", "btn_url": "shopify://pages/returns-warranty"}),
         ("info", {"big": "2+", "small": "pillows", "title": "Sets", "text": "Two or three pillows cost less as a set. The saving is already in the price.", "btn": "Shop sets", "btn_url": "shopify://collections/sets"}),
         ("info", {"big": "6–10", "small": "days", "title": "Free shipping", "text": "On every pillow and every set, to the US, Canada, the UK, Europe, Australia and more.", "btn": "Shipping", "btn_url": "shopify://pages/shipping-delivery"}),

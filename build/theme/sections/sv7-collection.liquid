@@ -21,7 +21,29 @@
           <label for="sv7-sort-{{ section.id }}" class="visually-hidden">Sort by</label>
           <select id="sv7-sort-{{ section.id }}" data-sv7-sort>
             {%- for option in collection.sort_options -%}
-              <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected{% endif %}>{{ option.name | escape }}</option>
+              {%- liquid
+                case option.value
+                  when 'manual'
+                    assign sort_name = 'Featured'
+                  when 'best-selling'
+                    assign sort_name = 'Best selling'
+                  when 'title-ascending'
+                    assign sort_name = 'A to Z'
+                  when 'title-descending'
+                    assign sort_name = 'Z to A'
+                  when 'price-ascending'
+                    assign sort_name = 'Price, low to high'
+                  when 'price-descending'
+                    assign sort_name = 'Price, high to low'
+                  when 'created-ascending'
+                    assign sort_name = 'Oldest first'
+                  when 'created-descending'
+                    assign sort_name = 'Newest first'
+                  else
+                    assign sort_name = option.name
+                endcase
+              -%}
+              <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected{% endif %}>{{ sort_name }}</option>
             {%- endfor -%}
           </select>
           {% render 'sv7-icon', name: 'chev' %}
@@ -57,9 +79,31 @@
     {%- endif -%}
 
     {%- paginate collection.products by section.settings.per_page -%}
+      {%- liquid
+        assign lead = section.settings.lead_handles | split: ','
+        assign use_lead = false
+        if collection.sort_by == blank and lead.size > 0
+          assign use_lead = true
+        endif
+      -%}
       <div class="sv7-cards sv7-cards--shop">
+        {%- for round in (1..2) -%}
         {%- for p in collection.products -%}
-          {%- unless p.tags contains 'cart-only' -%}
+          {%- liquid
+            assign is_lead = false
+            if use_lead and lead contains p.handle
+              assign is_lead = true
+            endif
+            assign skip = false
+            if use_lead and round == 1 and is_lead == false
+              assign skip = true
+            elsif use_lead and round == 2 and is_lead
+              assign skip = true
+            elsif use_lead == false and round == 2
+              assign skip = true
+            endif
+          -%}
+          {%- unless p.tags contains 'cart-only' or skip -%}
             {%- liquid
               assign pr = nil
               assign pc = ''
@@ -71,15 +115,15 @@
                   assign pl = b.settings.label
                 endif
               endfor
-              assign uid = section.id | append: '-' | append: forloop.index
+              assign uid = section.id | append: '-' | append: round | append: '-' | append: forloop.index
             -%}
             <div class="sv7-cell">
               {%- render 'sv7-card', p: p, uid: uid, tag: p.type, pair: pr, pair_components: pc, single_label: '1 pillow', pair_label: pl -%}
             </div>
           {%- endunless -%}
-        {%- else -%}
-          <p class="sv7-lead">Nothing here yet.</p>
         {%- endfor -%}
+        {%- endfor -%}
+        {%- if collection.products_count == 0 -%}<p class="sv7-lead">Nothing here yet.</p>{%- endif -%}
       </div>
       {%- if paginate.pages > 1 -%}
         <nav class="sv7-pages" aria-label="Pages">
@@ -99,7 +143,8 @@
   "settings": [
     { "type": "checkbox", "id": "show_description", "label": "Show the collection description", "default": false },
     { "type": "link_list", "id": "pills_menu", "label": "Collection pills menu" },
-    { "type": "range", "id": "per_page", "label": "Products per page", "min": 8, "max": 48, "step": 4, "default": 24 }
+    { "type": "range", "id": "per_page", "label": "Products per page", "min": 8, "max": 48, "step": 4, "default": 24 },
+    { "type": "text", "id": "lead_handles", "label": "Show these first (handles, comma separated)", "default": "neck-01,for-two,family-set", "info": "Only when the visitor has not picked a sort order" }
   ],
   "blocks": [
     { "type": "info", "name": "Info card", "limit": 3, "settings": [

@@ -18,8 +18,8 @@
         "btn_2_url": "shopify://collections/memory-foam-pillows",
         "show_price": true,
         "price_note": "free shipping",
-        "image_asset": "sv6-cut-neck-01-cloud.webp",
-        "image_alt": "Neck 01 memory-foam pillow in Cloud",
+        "image_asset": "sv6-cut-neck-01-night.webp",
+        "image_alt": "Neck 01 memory-foam pillow in Night",
         "badge": "Two heights",
         "badge_small": "13 cm and 11 cm, one pillow"
       }
@@ -408,8 +408,8 @@
         "btn": "Shop Neck 01",
         "btn_url": "shopify://products/neck-01",
         "btn_note": "Cover included",
-        "image_asset": "sv6-cut-neck-01-night.webp",
-        "image_alt": "Neck 01 memory-foam pillow in Night",
+        "image_asset": "sv6-cut-neck-01-stone.webp",
+        "image_alt": "Neck 01 memory-foam pillow in Stone",
         "float": "Turn it over",
         "float_small": "The other edge goes under your neck",
         "card_title": "Compare the pillows",
@@ -534,7 +534,7 @@
         "btn_2": "Read the FAQ",
         "btn_2_url": "shopify://pages/faq",
         "image_left": "sv6-cut-neck-01-sky.webp",
-        "image_right": "sv6-cut-neck-01-stone.webp"
+        "image_right": "sv6-cut-neck-01-night.webp"
       }
     }
   },

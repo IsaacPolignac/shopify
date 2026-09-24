@@ -5,7 +5,8 @@
       "settings": {
         "show_description": false,
         "pills_menu": "somnila-shop",
-        "per_page": 24
+        "per_page": 24,
+        "lead_handles": "neck-01,for-two,family-set"
       },
       "blocks": {
         "b1": {
@@ -123,7 +124,7 @@
         "btn_2": "Read the FAQ",
         "btn_2_url": "shopify://pages/faq",
         "image_left": "sv6-cut-neck-01-sky.webp",
-        "image_right": "sv6-cut-neck-01-stone.webp"
+        "image_right": "sv6-cut-neck-01-night.webp"
       }
     }
   },
