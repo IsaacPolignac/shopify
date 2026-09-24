@@ -13,6 +13,18 @@
   assign current = product.selected_or_first_available_variant
   assign cidx = colour_pos | minus: 1
   assign main_img = current.featured_image | default: product.featured_image
+  comment
+    Variants carry no photo in this store; each photo's alt text names its colour ("… in Night …").
+  endcomment
+  if current.featured_image == blank and colour_pos > 0
+    assign needle = 'in ' | append: current.options[cidx]
+    for img in product.images
+      if img.alt contains needle
+        assign main_img = img
+        break
+      endif
+    endfor
+  endif
   assign tagline = product.metafields.somnila.tagline.value | default: product.description | strip_html | truncatewords: 22
   assign form_id = 'sv6-form-' | append: section.id
 -%}
@@ -98,7 +110,18 @@
       {%- comment -%} Offers: this product first, then any offer blocks set for its handle. Each offer knows its variants and the price of the same pieces bought separately. {%- endcomment -%}
       {%- capture offers_json -%}
         [{"handle":{{ product.handle | json }},"title":{{ pname | json }},"variants":[
-          {%- for v in product.variants -%}{"id":{{ v.id }},"colour":{% if colour_pos > 0 %}{{ v.options[cidx] | json }}{% else %}null{% endif %},"available":{{ v.available | json }},"price":{{ v.price | money | json }},"image":{% if v.featured_image %}{{ v.featured_image | image_url: width: 1100 | json }}{% else %}null{% endif %}}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+          {%- for v in product.variants -%}{"id":{{ v.id }},"colour":{% if colour_pos > 0 %}{{ v.options[cidx] | json }}{% else %}null{% endif %},"available":{{ v.available | json }},"price":{{ v.price | money | json }},"image":{%- liquid
+            assign vimg = v.featured_image
+            if vimg == blank and colour_pos > 0
+              assign needle = 'in ' | append: v.options[cidx]
+              for img in product.images
+                if img.alt contains needle
+                  assign vimg = img
+                  break
+                endif
+              endfor
+            endif
+          -%}{% if vimg %}{{ vimg | image_url: width: 1100 | json }}{% else %}null{% endif %}}{% unless forloop.last %},{% endunless %}{%- endfor -%}
         ]}
         {%- for block in section.blocks -%}
           {%- if block.type == 'offer' and block.settings.for_handle == product.handle and block.settings.offer_product != blank -%}

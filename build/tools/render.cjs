@@ -42,9 +42,13 @@ const JOBS=JSON.parse(process.env.JOBS||'[]'); // [{slug,url,mobile?}]
       const url=j.url+sep+`preview_theme_id=${THEME}&_ab=0&_fd=0&_sc=1`;
       // mot de passe boutique (env PW) : POST sur /password via le relais, le cookie storefront_digest est posé sur le contexte
       if(process.env.PW){
-        await p.goto(BASE+'/password',{waitUntil:'load',timeout:90000});
-        const st=await p.evaluate(async(pw)=>{const r=await fetch('/password',{method:'POST',body:new URLSearchParams({form_type:'storefront_password',utf8:'✓',password:pw}),redirect:'follow',credentials:'include'});return r.status+' '+r.url;},process.env.PW);
-        console.log('password:',st); await p.waitForTimeout(800);
+        // connexion côté Node : le 302 de /password pose le cookie storefront_digest, qu'on recopie dans le navigateur
+        const g=await fetch(BASE+'/password',{headers:{'user-agent':UA}}); const jar={};
+        const eat=r=>(r.headers.getSetCookie?r.headers.getSetCookie():[]).forEach(l=>{const[p]=l.split(';');const i=p.indexOf('=');jar[p.slice(0,i).trim()]=p.slice(i+1).trim();});
+        eat(g); await g.arrayBuffer();
+        const r=await fetch(BASE+'/password',{method:'POST',headers:{'user-agent':UA,'content-type':'application/x-www-form-urlencoded',cookie:Object.entries(jar).map(([k,v])=>k+'='+v).join('; ')},body:new URLSearchParams({form_type:'storefront_password',utf8:'✓',password:process.env.PW}),redirect:'manual'});
+        eat(r); console.log('password:',r.status,r.headers.get('location'),Object.keys(jar).join(','));
+        await ctx.addCookies(Object.entries(jar).map(([name,value])=>({name,value,domain:'liyan.shop',path:'/',secure:true})));
       }
       if(process.env.ADD_VARIANT && j.addToCart){ await p.goto(BASE+'/?preview_theme_id='+THEME,{waitUntil:'load',timeout:90000}); const st=await p.evaluate(async(id)=>{const r=await fetch('/cart/add.js',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({items:[{id:Number(id),quantity:1}]})});return r.status;},process.env.ADD_VARIANT); console.log('cart/add:',st); }
       // première requête pour poser le cookie de preview, puis navigation
