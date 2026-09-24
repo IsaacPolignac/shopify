@@ -1,0 +1,31 @@
+{%- liquid
+  assign sv6_hide = false
+  if section.settings.only_for_handle != blank and product != blank and product.handle != section.settings.only_for_handle
+    assign sv6_hide = true
+  endif
+-%}
+{%- unless sv6_hide -%}
+<section class="sv6{% if section.settings.tint %} sv6-tint{% endif %}" aria-labelledby="sv6-h-{{ section.id }}">
+  <div class="sv6-wrap sv6-sec">
+    <div class="sv6-head is-center"><h2 id="sv6-h-{{ section.id }}">{{ section.settings.heading }}</h2></div>
+    <ol class="sv6-expect">
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}><i>{{ block.settings.marker }}</i><b>{{ block.settings.title }}</b><p>{{ block.settings.text }}</p></li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
+{%- endunless -%}
+{% schema %}
+{
+  "name": "Somnila · Timeline",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Your first 30 nights" },
+    { "type": "checkbox", "id": "tint", "label": "Tinted background", "default": false },
+    { "type": "text", "id": "only_for_handle", "label": "On product pages, show only for this product handle" }
+  ],
+  "blocks": [ { "type": "step", "name": "Step", "limit": 4, "settings": [ { "type": "text", "id": "marker", "label": "Marker", "default": "1" }, { "type": "text", "id": "title", "label": "Title" }, { "type": "text", "id": "text", "label": "Text" } ] } ],
+  "presets": [ { "name": "Somnila · Timeline" } ]
+}
+{% endschema %}

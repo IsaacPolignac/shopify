@@ -1,0 +1,18 @@
+{%- comment -%}
+  Sum of the same pieces bought one by one, in the shop's current currency.
+  components: "neck-01*2" or "neck-01*1,mask-01*1,quiet-01*1". Output: an amount in cents, nothing else.
+{%- endcomment -%}
+{%- liquid
+  assign sep = 0
+  assign parts = components | split: ','
+  for part in parts
+    assign kv = part | strip | split: '*'
+    assign ph = kv[0] | strip
+    assign qty = kv[1] | default: '1' | strip | plus: 0
+    if all_products[ph] != blank
+      assign line = all_products[ph].price | times: qty
+      assign sep = sep | plus: line
+    endif
+  endfor
+  echo sep
+-%}

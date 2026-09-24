@@ -1,0 +1,37 @@
+{%- liquid
+  assign sv6_hide = false
+  if section.settings.only_for_handle != blank and product != blank and product.handle != section.settings.only_for_handle
+    assign sv6_hide = true
+  endif
+-%}
+{%- unless sv6_hide -%}
+<section class="sv6{% if section.settings.tint %} sv6-tint{% endif %}" id="faq" aria-labelledby="sv6-h-{{ section.id }}">
+  <div class="sv6-wrap sv6-sec">
+    <div class="sv6-head is-center"><h2 id="sv6-h-{{ section.id }}">{{ section.settings.heading }}</h2></div>
+    <div class="sv6-faq">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign bh = block.settings.for_handle
+          if bh != blank and product != blank and product.handle != bh
+            continue
+          endif
+        -%}
+        <details class="sv6-qa" {{ block.shopify_attributes }}{% if forloop.first %} open{% endif %}><summary>{{ block.settings.question }}<span class="pm" aria-hidden="true">{% render 'sv6-icon', name: 'plus' %}</span></summary><div class="ans">{{ block.settings.answer }}</div></details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endunless -%}
+{% schema %}
+{
+  "name": "Somnila · FAQ",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Questions" },
+    { "type": "checkbox", "id": "tint", "label": "Tinted background", "default": false },
+    { "type": "text", "id": "only_for_handle", "label": "On product pages, show only for this product handle" }
+  ],
+  "blocks": [ { "type": "qa", "name": "Question", "settings": [ { "type": "text", "id": "question", "label": "Question" }, { "type": "richtext", "id": "answer", "label": "Answer" }, { "type": "text", "id": "for_handle", "label": "Only on this product page (handle)" } ] } ],
+  "presets": [ { "name": "Somnila · FAQ" } ]
+}
+{% endschema %}

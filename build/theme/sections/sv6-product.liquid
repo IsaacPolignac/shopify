@@ -1,0 +1,211 @@
+{%- liquid
+  assign pname = product.title | split: ' — ' | first
+  assign ptype = product.title | split: ' — ' | last
+  assign colour_option = nil
+  assign colour_pos = 0
+  for opt in product.options_with_values
+    assign oname = opt.name | downcase
+    if oname == 'colour' or oname == 'color'
+      assign colour_option = opt
+      assign colour_pos = forloop.index
+    endif
+  endfor
+  assign current = product.selected_or_first_available_variant
+  assign cidx = colour_pos | minus: 1
+  assign main_img = current.featured_image | default: product.featured_image
+  assign tagline = product.metafields.somnila.tagline.value | default: product.description | strip_html | truncatewords: 22
+  assign form_id = 'sv6-form-' | append: section.id
+-%}
+<section class="sv6 sv6-product" aria-labelledby="sv6-h1-{{ section.id }}">
+  <div class="sv6-wrap sv6-pdp">
+    <div class="sv6-gal">
+      <div class="sv6-gmain">{%- if main_img -%}<img src="{{ main_img | image_url: width: 1100 }}" alt="{{ main_img.alt | default: product.title | escape }}" width="1100" height="1100" data-sv6-main fetchpriority="high">{%- endif -%}</div>
+      <div class="sv6-gthumbs" role="list">
+        {%- for img in product.images limit: 10 -%}
+          <button type="button" role="listitem" data-sv6-thumb data-src="{{ img | image_url: width: 1100 }}" data-alt="{{ img.alt | default: product.title | escape }}" aria-current="{% if img.id == main_img.id %}true{% else %}false{% endif %}" aria-label="Show image {{ forloop.index }}"><img src="{{ img | image_url: width: 140 }}" alt="" width="66" height="66" loading="lazy"></button>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    <div class="sv6-buy">
+      <div class="sv6-trustline">
+        {%- if section.settings.trust_1 != blank -%}<span>{% render 'sv6-icon', name: 'calendar' %}{{ section.settings.trust_1 }}</span>{%- endif -%}
+        {%- if section.settings.trust_2 != blank -%}<span>{% render 'sv6-icon', name: 'truck' %}{{ section.settings.trust_2 }}</span>{%- endif -%}
+      </div>
+      <h1 id="sv6-h1-{{ section.id }}">{{ pname }}</h1>
+      <p class="sv6-pos">{{ tagline }}</p>
+
+      <ul class="sv6-bul">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'bullet' -%}
+            {%- if block.settings.for_handle == blank or block.settings.for_handle == product.handle -%}
+              <li {{ block.shopify_attributes }}><span class="sv6-ok">{% render 'sv6-icon', name: 'check' %}</span><span>{{ block.settings.title }}<small>{{ block.settings.text }}</small></span></li>
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+
+      {%- if colour_option != nil -%}
+        <div>
+          <p class="sv6-opt" style="margin-bottom:10px">Colour: <b data-sv6-col-name>{{ current.options[cidx] }}</b></p>
+          <div class="sv6-swatches" role="radiogroup" aria-label="Colour">
+            {%- for value in colour_option.values -%}
+              {%- liquid
+                assign vh = value | handleize
+                assign avail = false
+                for v in product.variants
+                  if v.options contains value and v.available
+                    assign avail = true
+                  endif
+                endfor
+                case vh
+                  when 'night'
+                    assign sw = '#262B40'
+                  when 'cloud'
+                    assign sw = '#ECEEF2'
+                  when 'stone'
+                    assign sw = '#6A6771'
+                  when 'sky'
+                    assign sw = '#A8BAD2'
+                  when 'blush'
+                    assign sw = '#F2C9C4'
+                  when 'blue', 'azure'
+                    assign sw = '#5F86C4'
+                  when 'red'
+                    assign sw = '#B3474A'
+                  when 'dark-grey'
+                    assign sw = '#55575E'
+                  when 'sand', 'apricot'
+                    assign sw = '#E9CFAE'
+                  when 'green', 'mint'
+                    assign sw = '#B9D8C4'
+                  when 'yellow'
+                    assign sw = '#F1DC8C'
+                  when 'black'
+                    assign sw = '#222'
+                  when 'ice'
+                    assign sw = '#E4F0F6'
+                  else
+                    assign sw = '#DCE8F2'
+                endcase
+              -%}
+              <label class="sv6-sw{% unless avail %} is-off{% endunless %}" title="{{ value | escape }}"><input type="radio" name="sv6-colour" id="sv6-col-{{ section.id }}-{{ vh }}" value="{{ value | escape }}"{% if current.options contains value %} checked{% endif %}{% unless avail %} disabled{% endunless %}><span style="--c:{{ sw }}"></span><span class="visually-hidden">{{ value }}</span></label>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} Offers: this product first, then any offer blocks set for its handle. Each offer knows its variants and the price of the same pieces bought separately. {%- endcomment -%}
+      {%- capture offers_json -%}
+        [{"handle":{{ product.handle | json }},"title":{{ pname | json }},"variants":[
+          {%- for v in product.variants -%}{"id":{{ v.id }},"colour":{% if colour_pos > 0 %}{{ v.options[cidx] | json }}{% else %}null{% endif %},"available":{{ v.available | json }},"price":{{ v.price | money | json }},"image":{% if v.featured_image %}{{ v.featured_image | image_url: width: 1100 | json }}{% else %}null{% endif %}}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+        ]}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'offer' and block.settings.for_handle == product.handle and block.settings.offer_product != blank -%}
+            {%- assign op = block.settings.offer_product -%}
+            ,{"handle":{{ op.handle | json }},"title":{{ op.title | json }},"variants":[
+              {%- for v in op.variants -%}{"id":{{ v.id }},"colour":{{ v.option1 | json }},"available":{{ v.available | json }},"price":{{ v.price | money | json }},"image":null}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+            ]}
+          {%- endif -%}
+        {%- endfor -%}]
+      {%- endcapture -%}
+      <script type="application/json" data-sv6-offers>{{ offers_json }}</script>
+
+      <fieldset>
+        <legend class="sv6-opt"><b>{{ section.settings.offer_label }}</b></legend>
+        <div class="sv6-tiers">
+          <label class="sv6-tier"><input type="radio" name="sv6-tier" id="sv6-tier-{{ section.id }}-0" value="0" checked><span class="dot" aria-hidden="true"></span><span class="t"><b>{{ section.settings.first_label }}</b><small>{{ section.settings.first_sub }}</small></span><span class="p num"><span data-sv6-tier-price="0">{{ current.price | money }}</span></span></label>
+          {%- assign ti = 0 -%}
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'offer' and block.settings.for_handle == product.handle and block.settings.offer_product != blank -%}
+              {%- liquid
+                assign ti = ti | plus: 1
+                assign op = block.settings.offer_product
+                assign sep = 0
+                if block.settings.components != blank
+                  capture sep_s
+                    render 'sv6-separately', components: block.settings.components
+                  endcapture
+                  assign sep = sep_s | strip | plus: 0
+                endif
+                assign save = sep | minus: op.price
+                assign pct = 0
+                if save > 0
+                  assign pct = save | times: 100.0 | divided_by: sep | round
+                endif
+              -%}
+              <label class="sv6-tier" {{ block.shopify_attributes }}><input type="radio" name="sv6-tier" id="sv6-tier-{{ section.id }}-{{ ti }}" value="{{ ti }}"><span class="dot" aria-hidden="true"></span>
+                <span class="t"><b>{{ block.settings.label }} {% if block.settings.best %}<span class="sv6-badge">Best value</span>{% elsif save > 0 %}<span class="sv6-badge sv6-badge--night">Save {{ pct }}%</span>{% endif %}</b><small>{{ block.settings.sub }}</small></span>
+                <span class="p num"><span data-sv6-tier-price="{{ ti }}">{{ op.price | money }}</span>{% if save > 0 %}<small>Separately {{ sep | money }}</small>{% endif %}</span></label>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </fieldset>
+
+      <product-form id="ProductForm-{{ section.id }}" class="product-form" data-section="{{ section.id }}" data-options="{{ product.options | join: ',' }}" data-main="false">
+        <div class="product-form__error-message-wrapper" role="alert" hidden><span class="product-form__error-message"></span></div>
+        {%- form 'product', product, id: form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+          <div class="hidden product-form__variants" id="product-form-{{ section.id }}__variants" data-values=""></div>
+          <input type="hidden" name="id" value="{{ current.id }}" class="product-variant-id">
+          <div class="product-form__buttons">
+            <button id="ProductSubmitButton-{{ section.id }}" type="submit" name="add" class="sv6-btn sv6-btn--block product-form__submit featured-product-atc-{{ section.id }}" style="min-height:62px;font-size:17px" data-sv6-atc{% unless current.available %} disabled{% endunless %}>
+              <span class="main-atc__label button__label">{{ 'products.product.add_to_cart' | t }} · <span class="num" data-sv6-btn-price>{{ current.price | money }}</span></span>
+              <div class="loading-overlay__spinner hidden"><svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></div>
+            </button>
+          </div>
+        {%- endform -%}
+      </product-form>
+
+      <div class="sv6-pay" style="justify-content:center"><span>Shop Pay</span><span>Apple Pay</span><span>Google Pay</span><span>Card</span></div>
+      <p class="sv6-ship">{% render 'sv6-icon', name: 'truck' %}{{ section.settings.shipping_line }}</p>
+
+      <div class="sv6-acc">
+        {%- liquid
+          assign dcm = product.metafields.somnila.dimensions_cm.value
+          assign din = product.metafields.somnila.dimensions_in.value
+          assign mat = product.metafields.somnila.materials.value
+          assign inc = product.metafields.somnila.includes.value
+        -%}
+        {%- if dcm != blank -%}<details class="sv6-qa"><summary>Size<span class="pm" aria-hidden="true">{% render 'sv6-icon', name: 'plus' %}</span></summary><div class="ans"><p class="num">{{ dcm }}<br>{{ din }}</p></div></details>{%- endif -%}
+        {%- if mat != blank -%}<details class="sv6-qa"><summary>Materials and care<span class="pm" aria-hidden="true">{% render 'sv6-icon', name: 'plus' %}</span></summary><div class="ans"><p>{{ mat }}</p></div></details>{%- endif -%}
+        {%- if inc != blank -%}<details class="sv6-qa"><summary>In the box<span class="pm" aria-hidden="true">{% render 'sv6-icon', name: 'plus' %}</span></summary><div class="ans"><p>{{ inc }}</p></div></details>{%- endif -%}
+        <details class="sv6-qa"><summary>Shipping<span class="pm" aria-hidden="true">{% render 'sv6-icon', name: 'plus' %}</span></summary><div class="ans">{{ section.settings.shipping_text }}</div></details>
+        <details class="sv6-qa"><summary>30-night trial<span class="pm" aria-hidden="true">{% render 'sv6-icon', name: 'plus' %}</span></summary><div class="ans">{{ section.settings.trial_text }}</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="sv6-stick" aria-hidden="true"><div class="sv6-wrap">
+  {%- if main_img -%}<img src="{{ main_img | image_url: width: 120 }}" alt="" width="54" height="54">{%- endif -%}
+  <div class="nm">{{ pname }}<small><span class="num" data-sv6-stick-price>{{ current.price | money }}</span> · Free shipping</small></div>
+  <button class="sv6-btn" type="button" tabindex="-1">{{ 'products.product.add_to_cart' | t }}</button>
+</div></div>
+
+{% schema %}
+{
+  "name": "Somnila · Product",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "trust_1", "label": "Trust line 1", "default": "30-night trial" },
+    { "type": "text", "id": "trust_2", "label": "Trust line 2", "default": "Free shipping" },
+    { "type": "text", "id": "offer_label", "label": "Offer title", "default": "Choose your offer" },
+    { "type": "text", "id": "first_label", "label": "First offer label", "default": "1 pillow" },
+    { "type": "text", "id": "first_sub", "label": "First offer detail", "default": "Free shipping" },
+    { "type": "text", "id": "shipping_line", "label": "Shipping line", "default": "Free shipping. Your order leaves within 6–10 days." },
+    { "type": "richtext", "id": "shipping_text", "label": "Shipping answer", "default": "<p>Every order leaves within 6–10 days. Shipping is free on every pillow.</p>" },
+    { "type": "richtext", "id": "trial_text", "label": "Trial answer", "default": "<p>Sleep on it for up to 30 nights. If it isn't right, write to support@somnila.com and send it back. The exact conditions are in our refund policy.</p>" }
+  ],
+  "blocks": [
+    { "type": "bullet", "name": "Bullet", "settings": [
+      { "type": "text", "id": "for_handle", "label": "Only on this product (handle)", "info": "Empty: every product" },
+      { "type": "text", "id": "title", "label": "Title" }, { "type": "text", "id": "text", "label": "Detail" } ] },
+    { "type": "offer", "name": "Offer", "settings": [
+      { "type": "text", "id": "for_handle", "label": "Show on this product (handle)" },
+      { "type": "product", "id": "offer_product", "label": "Product added to the cart" },
+      { "type": "text", "id": "label", "label": "Label", "default": "2 pillows" },
+      { "type": "text", "id": "sub", "label": "Detail" },
+      { "type": "text", "id": "components", "label": "Same pieces bought separately", "info": "e.g. neck-01*2" },
+      { "type": "checkbox", "id": "best", "label": "Best value badge", "default": false } ] }
+  ]
+}
+{% endschema %}

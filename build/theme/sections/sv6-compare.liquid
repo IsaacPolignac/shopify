@@ -1,0 +1,44 @@
+{%- liquid
+  assign sv6_hide = false
+  if section.settings.only_for_handle != blank and product != blank and product.handle != section.settings.only_for_handle
+    assign sv6_hide = true
+  endif
+-%}
+{%- unless sv6_hide -%}
+<section class="sv6{% if section.settings.tint %} sv6-tint{% endif %}" aria-labelledby="sv6-h-{{ section.id }}">
+  <div class="sv6-wrap sv6-sec">
+    <div class="sv6-head is-center"><h2 id="sv6-h-{{ section.id }}">{{ section.settings.heading }}</h2></div>
+    <div class="sv6-cmp-wrap"><table class="sv6-cmp">
+      <thead><tr><th scope="col"><span class="visually-hidden">Feature</span></th><th scope="col" class="us">{{ section.settings.col_us }}</th><th scope="col">{{ section.settings.col_them }}</th></tr></thead>
+      <tbody>
+        {%- for block in section.blocks -%}
+          <tr {{ block.shopify_attributes }}><th scope="row">{{ block.settings.label }}</th>
+            <td class="us">{% if block.settings.us %}<span class="sv6-ok">{% render 'sv6-icon', name: 'check' %}</span><span class="visually-hidden">Yes</span>{% else %}<span class="sv6-no">{% render 'sv6-icon', name: 'x' %}</span><span class="visually-hidden">No</span>{% endif %}</td>
+            <td>{% if block.settings.them %}<span class="sv6-ok">{% render 'sv6-icon', name: 'check' %}</span><span class="visually-hidden">Yes</span>{% else %}<span class="sv6-no">{% render 'sv6-icon', name: 'x' %}</span><span class="visually-hidden">No</span>{% endif %}</td></tr>
+        {%- endfor -%}
+      </tbody>
+    </table></div>
+    {%- if section.settings.button_label != blank -%}
+      <div class="sv6-cta-row"><a class="sv6-btn" href="{{ section.settings.button_url }}">{{ section.settings.button_label }}{% if section.settings.price_product != blank %} · <span class="num">{{ section.settings.price_product.price | money }}</span>{% endif %}</a></div>
+    {%- endif -%}
+  </div>
+</section>
+{%- endunless -%}
+{% schema %}
+{
+  "name": "Somnila · Comparison",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Neck 01 vs. an ordinary pillow" },
+    { "type": "text", "id": "col_us", "label": "Our column", "default": "Neck 01" },
+    { "type": "text", "id": "col_them", "label": "Other column", "default": "Ordinary pillow" },
+    { "type": "text", "id": "button_label", "label": "Button" },
+    { "type": "url", "id": "button_url", "label": "Button link" },
+    { "type": "product", "id": "price_product", "label": "Show this product's price in the button" },
+    { "type": "checkbox", "id": "tint", "label": "Tinted background", "default": true },
+    { "type": "text", "id": "only_for_handle", "label": "On product pages, show only for this product handle" }
+  ],
+  "blocks": [ { "type": "row", "name": "Row", "limit": 8, "settings": [ { "type": "text", "id": "label", "label": "Feature" }, { "type": "checkbox", "id": "us", "label": "Ours has it", "default": true }, { "type": "checkbox", "id": "them", "label": "Theirs has it", "default": false } ] } ],
+  "presets": [ { "name": "Somnila · Comparison" } ]
+}
+{% endschema %}

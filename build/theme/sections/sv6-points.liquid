@@ -1,0 +1,52 @@
+{%- liquid
+  assign sv6_hide = false
+  if section.settings.only_for_handle != blank and product != blank and product.handle != section.settings.only_for_handle
+    assign sv6_hide = true
+  endif
+-%}
+{%- unless sv6_hide -%}
+<section class="sv6{% if section.settings.tint %} sv6-tint{% endif %}" aria-labelledby="sv6-h-{{ section.id }}">
+  <div class="sv6-wrap sv6-sec">
+    <div class="sv6-head is-center">
+      {%- if section.settings.kick != blank -%}<p class="sv6-kick">{{ section.settings.kick }}</p>{%- endif -%}
+      <h2 id="sv6-h-{{ section.id }}">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="sv6-points">
+      {%- for block in section.blocks -%}
+        <article {{ block.shopify_attributes }}>
+          {%- if section.settings.style == 'problems' -%}
+            <span class="sv6-n">{{ forloop.index | prepend: '0' }}</span>
+            <h3>{{ block.settings.title }}</h3>
+            <p class="sv6-fix"><span class="sv6-ok">{% render 'sv6-icon', name: 'check' %}</span>{{ block.settings.text }}</p>
+          {%- else -%}
+            <span class="sv6-n is-dot">{{ forloop.index }}</span>
+            <h3>{{ block.settings.title }}</h3>
+            <p class="sv6-txt">{{ block.settings.text }}</p>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.button_label != blank -%}
+      <div class="sv6-cta-row"><a class="sv6-btn" href="{{ section.settings.button_url }}">{{ section.settings.button_label }}{% if section.settings.price_product != blank %} · <span class="num">{{ section.settings.price_product.price | money }}</span>{% endif %}</a></div>
+    {%- endif -%}
+  </div>
+</section>
+{%- endunless -%}
+{% schema %}
+{
+  "name": "Somnila · Three points",
+  "tag": "div",
+  "settings": [
+    { "type": "select", "id": "style", "label": "Style", "default": "problems", "options": [ { "value": "problems", "label": "Problem, then answer" }, { "value": "steps", "label": "Numbered steps" } ] },
+    { "type": "text", "id": "kick", "label": "Small title" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "When did a flat pillow start feeling normal?" },
+    { "type": "text", "id": "button_label", "label": "Button" },
+    { "type": "url", "id": "button_url", "label": "Button link" },
+    { "type": "product", "id": "price_product", "label": "Show this product's price in the button" },
+    { "type": "checkbox", "id": "tint", "label": "Tinted background", "default": true },
+    { "type": "text", "id": "only_for_handle", "label": "On product pages, show only for this product handle" }
+  ],
+  "blocks": [ { "type": "point", "name": "Point", "limit": 3, "settings": [ { "type": "text", "id": "title", "label": "Title" }, { "type": "textarea", "id": "text", "label": "Text" } ] } ],
+  "presets": [ { "name": "Somnila · Three points" } ]
+}
+{% endschema %}

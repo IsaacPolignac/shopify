@@ -1,0 +1,30 @@
+<section class="sv6 sv6-dark sv6-guarantee" aria-labelledby="sv6-h-{{ section.id }}">
+  <div class="sv6-wrap sv6-sec sv6-guar">
+    <div class="sv6-seal" aria-hidden="true"><svg viewBox="0 0 170 170"><defs><path id="sv6-ring-{{ section.id }}" d="M85 85 m-66 0 a66 66 0 1 1 132 0 a66 66 0 1 1 -132 0"/></defs><text><textPath href="#sv6-ring-{{ section.id }}">{{ section.settings.ring_text }}</textPath></text></svg><div><b class="num">{{ section.settings.number }}</b><span>{{ section.settings.unit }}</span></div></div>
+    <div style="display:grid;gap:14px">
+      <h2 id="sv6-h-{{ section.id }}">{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}<p class="sv6-sub">{{ section.settings.text }}</p>{%- endif -%}
+      <ol class="sv6-gsteps">
+        {%- for block in section.blocks -%}<li {{ block.shopify_attributes }}><b>{{ forloop.index }}</b>{{ block.settings.text }}</li>{%- endfor -%}
+      </ol>
+    </div>
+    {%- if section.settings.button_label != blank -%}<a class="sv6-btn sv6-btn--light" href="{{ section.settings.button_url }}">{{ section.settings.button_label }}</a>{%- endif -%}
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Somnila · Guarantee",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "number", "label": "Number in the seal", "default": "30" },
+    { "type": "text", "id": "unit", "label": "Word under the number", "default": "nights" },
+    { "type": "text", "id": "ring_text", "label": "Text around the seal", "default": "THIRTY NIGHTS · AT HOME · THIRTY NIGHTS · AT HOME ·" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Try it for thirty nights." },
+    { "type": "textarea", "id": "text", "label": "Text" },
+    { "type": "text", "id": "button_label", "label": "Button" },
+    { "type": "url", "id": "button_url", "label": "Button link" }
+  ],
+  "blocks": [ { "type": "step", "name": "Step", "limit": 3, "settings": [ { "type": "text", "id": "text", "label": "Text" } ] } ],
+  "presets": [ { "name": "Somnila · Guarantee" } ]
+}
+{% endschema %}

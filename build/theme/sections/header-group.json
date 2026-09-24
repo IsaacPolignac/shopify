@@ -1,115 +1,115 @@
 {
-  "name": "t:sections.header.name",
-  "type": "header",
-  "sections": {
-    "somnila-styles": {
-      "type": "custom-liquid",
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<style>\n#shopify-section-{{ section.id }}{height:0;overflow:hidden;padding:0!important;margin:0!important}\n</style>\n{{ 'somnila-brand.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-layout.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-ux.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-brand.js' | asset_url | script_tag }}\n{%- if template.name == 'index' -%}<h1 class=\"visually-hidden\">Somnila memory-foam pillows shaped around the way you actually lie</h1>{%- endif -%}"
-      }
-    },
-    "annonce": {
-      "type": "announcement-bar",
-      "blocks": {
-        "a1": {
-          "type": "announcement",
-          "settings": {
-            "text": "<strong>Free shipping</strong> on every pillow",
-            "text_alignment": "center",
-            "mobile_text_size": 11,
-            "desktop_text_size": 12,
-            "icon": "local_shipping",
-            "filled_icon": false,
-            "mobile_icon_size": 14,
-            "desktop_icon_size": 16,
-            "desktop_layout": "horizontal",
-            "mobile_layout": "horizontal"
-          }
-        },
-        "a2": {
-          "type": "announcement",
-          "settings": {
-            "text": "Ships in <strong>6–10 days</strong>, tracked",
-            "text_alignment": "center",
-            "mobile_text_size": 11,
-            "desktop_text_size": 12,
-            "icon": "schedule",
-            "filled_icon": false,
-            "mobile_icon_size": 14,
-            "desktop_icon_size": 16,
-            "desktop_layout": "horizontal",
-            "mobile_layout": "horizontal"
-          }
-        },
-        "a3": {
-          "type": "announcement",
-          "settings": {
-            "text": "<strong>30-night trial</strong> on every pillow",
-            "text_alignment": "center",
-            "mobile_text_size": 11,
-            "desktop_text_size": 12,
-            "icon": "bedtime",
-            "filled_icon": false,
-            "mobile_icon_size": 14,
-            "desktop_icon_size": 16,
-            "desktop_layout": "horizontal",
-            "mobile_layout": "horizontal"
-          }
-        }
-      },
-      "block_order": [
-        "a1",
-        "a2",
-        "a3"
-      ],
-      "settings": {
-        "columns_desktop": 3,
-        "columns_mobile": 1,
-        "desktop_spacing": 40,
-        "mobile_spacing": 16,
-        "show_separator": false,
-        "color_scheme": "background-2",
-        "slider_mobile": true,
-        "slider_desktop": false,
-        "type": "fade",
-        "autoplay": true,
-        "autoplay_speed": 5,
-        "padding_top": 8,
-        "padding_bottom": 8
-      }
-    },
-    "header": {
-      "type": "header",
-      "settings": {
-        "sticky_header_type": "on-scroll-up",
-        "show_line_separator": false,
-        "color_scheme": "background-1",
-        "logo_link": "/",
-        "logo_position": "middle-left",
-        "menu": "somnila-main",
-        "menu_type_desktop": "dropdown",
-        "highlight_active_link": false,
-        "highlighted_link_color_scheme": "background-2",
-        "products_mega_menu_links": "",
-        "products_mega_menu_display_collection_products": false,
-        "products_mega_menu_display_collection_images": false,
-        "products_mega_menu_display_collection_images_on_mobile": false,
-        "mobile_menu_title": "Menu",
-        "secondary_menu": "",
-        "menu_color_scheme": "background-1",
-        "mobile_logo_position": "center",
-        "display_search": true,
-        "margin_bottom": 0,
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    }
+ "name": "t:sections.header.name",
+ "type": "header",
+ "sections": {
+  "somnila-styles": {
+   "type": "custom-liquid",
+   "settings": {
+    "display_id": false,
+    "visibility": "always-display",
+    "custom_liquid": "<style>\n#shopify-section-{{ section.id }}{height:0;overflow:hidden;padding:0!important;margin:0!important}\n</style>\n{{ 'somnila-brand.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-layout.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-ux.css' | asset_url | stylesheet_tag }}\n{{ 'somnila-brand.js' | asset_url | script_tag }}\n{{ 'somnila-v6.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'somnila-v6.js' | asset_url }}\" defer></script>\n"
+   }
   },
-  "order": [
-    "somnila-styles",
-    "annonce",
-    "header"
-  ]
+  "annonce": {
+   "type": "announcement-bar",
+   "blocks": {
+    "a1": {
+     "type": "announcement",
+     "settings": {
+      "text": "<strong>Free shipping</strong> on every pillow",
+      "text_alignment": "center",
+      "mobile_text_size": 11,
+      "desktop_text_size": 12,
+      "icon": "local_shipping",
+      "filled_icon": false,
+      "mobile_icon_size": 14,
+      "desktop_icon_size": 16,
+      "desktop_layout": "horizontal",
+      "mobile_layout": "horizontal"
+     }
+    },
+    "a2": {
+     "type": "announcement",
+     "settings": {
+      "text": "Ships in <strong>6–10 days</strong>, tracked",
+      "text_alignment": "center",
+      "mobile_text_size": 11,
+      "desktop_text_size": 12,
+      "icon": "schedule",
+      "filled_icon": false,
+      "mobile_icon_size": 14,
+      "desktop_icon_size": 16,
+      "desktop_layout": "horizontal",
+      "mobile_layout": "horizontal"
+     }
+    },
+    "a3": {
+     "type": "announcement",
+     "settings": {
+      "text": "<strong>30-night trial</strong> on every pillow",
+      "text_alignment": "center",
+      "mobile_text_size": 11,
+      "desktop_text_size": 12,
+      "icon": "bedtime",
+      "filled_icon": false,
+      "mobile_icon_size": 14,
+      "desktop_icon_size": 16,
+      "desktop_layout": "horizontal",
+      "mobile_layout": "horizontal"
+     }
+    }
+   },
+   "block_order": [
+    "a1",
+    "a2",
+    "a3"
+   ],
+   "settings": {
+    "columns_desktop": 3,
+    "columns_mobile": 1,
+    "desktop_spacing": 40,
+    "mobile_spacing": 16,
+    "show_separator": false,
+    "color_scheme": "background-2",
+    "slider_mobile": true,
+    "slider_desktop": false,
+    "type": "fade",
+    "autoplay": true,
+    "autoplay_speed": 5,
+    "padding_top": 8,
+    "padding_bottom": 8
+   }
+  },
+  "header": {
+   "type": "header",
+   "settings": {
+    "sticky_header_type": "on-scroll-up",
+    "show_line_separator": false,
+    "color_scheme": "background-1",
+    "logo_link": "/",
+    "logo_position": "middle-left",
+    "menu": "somnila-main",
+    "menu_type_desktop": "dropdown",
+    "highlight_active_link": false,
+    "highlighted_link_color_scheme": "background-2",
+    "products_mega_menu_links": "",
+    "products_mega_menu_display_collection_products": false,
+    "products_mega_menu_display_collection_images": false,
+    "products_mega_menu_display_collection_images_on_mobile": false,
+    "mobile_menu_title": "Menu",
+    "secondary_menu": "",
+    "menu_color_scheme": "background-1",
+    "mobile_logo_position": "center",
+    "display_search": true,
+    "margin_bottom": 0,
+    "padding_top": 16,
+    "padding_bottom": 16
+   }
+  }
+ },
+ "order": [
+  "somnila-styles",
+  "annonce",
+  "header"
+ ]
 }

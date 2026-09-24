@@ -1,0 +1,15 @@
+{%- comment -%} Somnila v6 line icons. Usage: {% render 'sv6-icon', name: 'truck' %} {%- endcomment -%}
+<svg class="sv6-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+{%- case name -%}
+  {%- when 'truck' -%}<path d="M2.5 6.5h11v9h-11zM13.5 9.5h4l3 3v3h-7z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>
+  {%- when 'calendar' -%}<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/>
+  {%- when 'wash' -%}<path d="M3.5 7h17l-1.6 11.2a2 2 0 0 1-2 1.8H7.1a2 2 0 0 1-2-1.8z"/><path d="M6.5 11.5c1.2-1 2.3-1 3.5 0s2.3 1 3.5 0 2.3-1 3.5 0"/>
+  {%- when 'lock' -%}<rect x="4.5" y="10.5" width="15" height="10" rx="3"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"/>
+  {%- when 'arrow' -%}<path d="M5 12h14M13 6l6 6-6 6"/>
+  {%- when 'check' -%}<path d="M5 12.5l4.5 4.5L19 7.5"/>
+  {%- when 'x' -%}<path d="M7 7l10 10M17 7 7 17"/>
+  {%- when 'plus' -%}<path d="M12 5v14M5 12h14"/>
+  {%- when 'layers' -%}<path d="M12 4 3 8.5l9 4.5 9-4.5z"/><path d="M3 12.5l9 4.5 9-4.5"/>
+  {%- else -%}<circle cx="12" cy="12" r="8"/>
+{%- endcase -%}
+</svg>

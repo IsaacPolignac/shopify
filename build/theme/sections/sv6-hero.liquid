@@ -1,0 +1,124 @@
+{%- liquid
+  assign p = section.settings.product
+  assign colour_option = nil
+  if p != blank
+    for opt in p.options_with_values
+      assign oname = opt.name | downcase
+      if oname == 'colour' or oname == 'color'
+        assign colour_option = opt
+      endif
+    endfor
+  endif
+  assign start = section.settings.start_colour
+-%}
+<section class="sv6 sv6-hero" aria-labelledby="sv6-h1-{{ section.id }}">
+  <div class="sv6-wrap sv6-hgrid">
+    <div class="sv6-hcopy">
+      <div class="sv6-trustline">
+        {%- if section.settings.trust_1 != blank -%}<span>{% render 'sv6-icon', name: 'calendar' %}{{ section.settings.trust_1 }}</span>{%- endif -%}
+        {%- if section.settings.trust_2 != blank -%}<span>{% render 'sv6-icon', name: 'truck' %}{{ section.settings.trust_2 }}</span>{%- endif -%}
+      </div>
+      <h1 id="sv6-h1-{{ section.id }}">{{ section.settings.heading }}{% if section.settings.heading_2 != blank %} <span>{{ section.settings.heading_2 }}</span>{% endif %}</h1>
+      {%- if section.settings.subheading != blank -%}<p class="sv6-sub">{{ section.settings.subheading }}</p>{%- endif -%}
+      <ul class="sv6-bul">
+        {%- for block in section.blocks -%}
+          <li {{ block.shopify_attributes }}><span class="sv6-ok">{% render 'sv6-icon', name: 'check' %}</span><span>{{ block.settings.text }}</span></li>
+        {%- endfor -%}
+      </ul>
+      {%- if p != blank -%}
+        <div class="sv6-buyline"><span class="sv6-price num">{{ p.price | money }}</span>{% if section.settings.price_badge != blank %}<span class="sv6-badge sv6-badge--soft">{{ section.settings.price_badge }}</span>{% endif %}</div>
+        <a class="sv6-btn sv6-btn--block" style="max-width:440px" href="{{ p.url }}" data-sv6-cta>{{ section.settings.button_label }} {% render 'sv6-icon', name: 'arrow' %}</a>
+      {%- endif -%}
+      {%- if section.settings.show_pay -%}
+        <div class="sv6-pay" aria-label="Payment methods"><span>Shop Pay</span><span>Apple Pay</span><span>Google Pay</span><span>Card</span></div>
+      {%- endif -%}
+    </div>
+    <div class="sv6-hmedia">
+      <div class="sv6-stage">
+        <div class="sv6-tl">
+          {%- if section.settings.badge_1 != blank -%}<span class="sv6-badge">{{ section.settings.badge_1 }}</span>{%- endif -%}
+          {%- if section.settings.badge_2 != blank -%}<span class="sv6-badge sv6-badge--night">{{ section.settings.badge_2 }}</span>{%- endif -%}
+        </div>
+        {%- liquid
+          assign first_img = ''
+          if p != blank
+            assign first_img = 'sv6-cut-' | append: p.handle | append: '-' | append: start | append: '.webp' | asset_url
+          endif
+        -%}
+        <div class="sv6-flt"><div class="sv6-bob"><img src="{{ first_img }}" alt="{{ p.title | split: ' — ' | first | escape }} in {{ start | capitalize }}" width="544" height="359" data-sv6-hero-img fetchpriority="high"></div><div class="sv6-shadow"></div></div>
+        {%- if section.settings.dims_1 != blank -%}
+          <div class="sv6-br"><b class="num">{{ section.settings.dims_1 }}</b><span class="num">{{ section.settings.dims_2 }}</span></div>
+        {%- endif -%}
+      </div>
+      {%- if colour_option != nil -%}
+        <div class="sv6-hsw">
+          <span class="sv6-opt">Colour: <b data-sv6-colour-name>{{ start | capitalize }}</b></span>
+          <div class="sv6-swatches" role="radiogroup" aria-label="Colour">
+            {%- for value in colour_option.values -%}
+              {%- liquid
+                assign vh = value | handleize
+                assign vid = ''
+                for v in p.variants
+                  if v.options contains value
+                    assign vid = v.id
+                    break
+                  endif
+                endfor
+                case vh
+                  when 'night'
+                    assign sw = '#262B40'
+                  when 'cloud'
+                    assign sw = '#ECEEF2'
+                  when 'stone'
+                    assign sw = '#6A6771'
+                  when 'sky'
+                    assign sw = '#A8BAD2'
+                  else
+                    assign sw = '#DCE8F2'
+                endcase
+                assign cut = 'sv6-cut-' | append: p.handle | append: '-' | append: vh | append: '.webp' | asset_url
+              -%}
+              <label class="sv6-sw" title="{{ value | escape }}"><input type="radio" name="sv6-hero-colour-{{ section.id }}" id="sv6-hc-{{ section.id }}-{{ vh }}" value="{{ value | escape }}" data-sv6-colour data-img="{{ cut }}" data-alt="{{ p.title | split: ' — ' | first | escape }} in {{ value | escape }}" data-url="{{ p.url }}?variant={{ vid }}"{% if vh == start %} checked{% endif %}><span style="--c:{{ sw }}"></span><span class="visually-hidden">{{ value }}</span></label>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{%- if p != blank and section.settings.sticky -%}
+  <div class="sv6-stick" aria-hidden="true"><div class="sv6-wrap">
+    <img src="{{ first_img }}" alt="" width="54" height="54">
+    <div class="nm">{{ p.title | split: ' — ' | first }}<small><span class="num">{{ p.price | money }}</span> · Free shipping</small></div>
+    <a class="sv6-btn" href="{{ p.url }}" tabindex="-1">{{ section.settings.button_label }}</a>
+  </div></div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Somnila · Hero",
+  "tag": "div",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Product" },
+    { "type": "select", "id": "start_colour", "label": "Starting colour", "default": "cloud", "options": [
+      { "value": "night", "label": "Night" }, { "value": "cloud", "label": "Cloud" }, { "value": "stone", "label": "Stone" }, { "value": "sky", "label": "Sky" } ] },
+    { "type": "text", "id": "trust_1", "label": "Trust line 1", "default": "30-night trial" },
+    { "type": "text", "id": "trust_2", "label": "Trust line 2", "default": "Free shipping" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Feel it tonight." },
+    { "type": "text", "id": "heading_2", "label": "Heading, second line", "default": "Keep it for years." },
+    { "type": "textarea", "id": "subheading", "label": "Text" },
+    { "type": "text", "id": "price_badge", "label": "Badge next to the price", "default": "Free shipping" },
+    { "type": "text", "id": "button_label", "label": "Button", "default": "Shop Neck 01" },
+    { "type": "checkbox", "id": "show_pay", "label": "Show payment methods", "default": true },
+    { "type": "text", "id": "badge_1", "label": "Image badge 1", "default": "Two heights" },
+    { "type": "text", "id": "badge_2", "label": "Image badge 2", "default": "Cover included" },
+    { "type": "text", "id": "dims_1", "label": "Size, large", "default": "62 × 42 cm" },
+    { "type": "text", "id": "dims_2", "label": "Size, small", "default": "24.4 × 16.5 in · 13 / 11 cm high" },
+    { "type": "checkbox", "id": "sticky", "label": "Sticky buy bar", "default": true }
+  ],
+  "blocks": [
+    { "type": "bullet", "name": "Bullet", "limit": 4, "settings": [ { "type": "text", "id": "text", "label": "Text" } ] }
+  ],
+  "presets": [ { "name": "Somnila · Hero" } ]
+}
+{% endschema %}

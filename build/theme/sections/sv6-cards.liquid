@@ -1,0 +1,76 @@
+{%- liquid
+  assign sv6_hide = false
+  if section.settings.only_for_handle != blank and product != blank and product.handle != section.settings.only_for_handle
+    assign sv6_hide = true
+  endif
+-%}
+{%- unless sv6_hide -%}
+<section class="sv6{% if section.settings.tint %} sv6-tint{% endif %}" aria-labelledby="sv6-h-{{ section.id }}">
+  <div class="sv6-wrap sv6-sec">
+    <div class="sv6-head is-center">
+      <h2 id="sv6-h-{{ section.id }}">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}<p class="sv6-sub">{{ section.settings.subheading }}</p>{%- endif -%}
+    </div>
+    <div class="sv6-cards{% if section.blocks.size == 3 %} is-3{% endif %}">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign cp = block.settings.product
+          if cp == blank
+            continue
+          endif
+          assign sep = 0
+          if block.settings.components != blank
+            capture sep_s
+              render 'sv6-separately', components: block.settings.components
+            endcapture
+            assign sep = sep_s | strip | plus: 0
+          endif
+          assign save = sep | minus: cp.price
+        -%}
+        <article class="sv6-card" {{ block.shopify_attributes }}>
+          {%- if save > 0 -%}<span class="sv6-badge">Save {{ save | money }}</span>
+          {%- elsif block.settings.badge != blank -%}<span class="sv6-badge sv6-badge--night">{{ block.settings.badge }}</span>{%- endif -%}
+          <div class="sv6-tile">
+            {%- if block.settings.image_asset != blank -%}
+              <img src="{{ block.settings.image_asset | asset_url }}" alt="{{ cp.title | escape }}" width="900" height="900" loading="lazy">
+            {%- elsif cp.featured_image -%}
+              <img src="{{ cp.featured_image | image_url: width: 700 }}" alt="{{ cp.featured_image.alt | default: cp.title | escape }}" width="700" height="700" loading="lazy">
+            {%- endif -%}
+          </div>
+          <div class="sv6-cbody">
+            <p class="sv6-for">{{ block.settings.label }}</p>
+            <h3><a href="{{ cp.url }}">{{ cp.title | split: ' — ' | first }}</a></h3>
+            <p class="sv6-spec num">{% if save > 0 %}Separately {{ sep | money }}{% else %}{{ block.settings.spec }}{% endif %}</p>
+            <div class="sv6-cfoot"><span class="sv6-price num">{{ cp.price | money }}</span><a class="sv6-go" href="{{ cp.url }}" aria-label="Shop {{ cp.title | split: ' — ' | first | escape }}">Shop {% render 'sv6-icon', name: 'arrow' %}</a></div>
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.link_label != blank -%}<div class="sv6-cta-row"><a class="sv6-link" href="{{ section.settings.link_url }}">{{ section.settings.link_label }}</a></div>{%- endif -%}
+  </div>
+</section>
+{%- endunless -%}
+{% schema %}
+{
+  "name": "Somnila · Product cards",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Pick your pillow" },
+    { "type": "text", "id": "subheading", "label": "Text" },
+    { "type": "text", "id": "link_label", "label": "Link below" },
+    { "type": "url", "id": "link_url", "label": "Link URL" },
+    { "type": "checkbox", "id": "tint", "label": "Tinted background", "default": false },
+    { "type": "text", "id": "only_for_handle", "label": "On product pages, show only for this product handle" }
+  ],
+  "blocks": [
+    { "type": "card", "name": "Product", "limit": 8, "settings": [
+      { "type": "product", "id": "product", "label": "Product" },
+      { "type": "text", "id": "label", "label": "Small label", "info": "Example: Side & back sleepers" },
+      { "type": "text", "id": "spec", "label": "Spec line", "info": "Example: Two heights · 13 / 11 cm" },
+      { "type": "text", "id": "badge", "label": "Badge", "info": "Used when there is no saving to show" },
+      { "type": "text", "id": "components", "label": "Same pieces bought separately", "info": "Handles and quantities, e.g. neck-01*2. Shows the real saving." },
+      { "type": "text", "id": "image_asset", "label": "Theme image file", "info": "e.g. sv6-tile-neck-01.webp. Empty: the product's first image." } ] }
+  ],
+  "presets": [ { "name": "Somnila · Product cards" } ]
+}
+{% endschema %}

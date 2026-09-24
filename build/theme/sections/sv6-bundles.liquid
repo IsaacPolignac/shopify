@@ -1,0 +1,66 @@
+<section class="sv6" aria-labelledby="sv6-h-{{ section.id }}">
+  <div class="sv6-wrap sv6-sec">
+    <div class="sv6-head is-center">
+      {%- if section.settings.kick != blank -%}<p class="sv6-kick">{{ section.settings.kick }}</p>{%- endif -%}
+      <h2 id="sv6-h-{{ section.id }}">{{ section.settings.heading }}</h2>
+      {%- if section.settings.subheading != blank -%}<p class="sv6-sub">{{ section.settings.subheading }}</p>{%- endif -%}
+    </div>
+    <div class="sv6-tiers3">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign bp = block.settings.product
+          if bp == blank
+            continue
+          endif
+          assign q = block.settings.qty | default: 1
+          assign each = bp.price | divided_by: q
+          assign sep = 0
+          if block.settings.components != blank
+            capture sep_s
+              render 'sv6-separately', components: block.settings.components
+            endcapture
+            assign sep = sep_s | strip | plus: 0
+          endif
+          assign save = sep | minus: bp.price
+          assign pct = 0
+          if save > 0
+            assign pct = save | times: 100.0 | divided_by: sep | round
+          endif
+        -%}
+        <div class="sv6-tcard{% if block.settings.best %} is-best{% endif %}" {{ block.shopify_attributes }}>
+          {%- if block.settings.best -%}<span class="sv6-badge">Best value</span>{%- elsif save > 0 -%}<span class="sv6-badge sv6-badge--night">Save {{ pct }}%</span>{%- endif -%}
+          <div class="sv6-tile">
+            {%- if block.settings.image_asset != blank -%}<img src="{{ block.settings.image_asset | asset_url }}" alt="{{ bp.title | escape }}" width="900" height="900" loading="lazy">
+            {%- elsif bp.featured_image -%}<img src="{{ bp.featured_image | image_url: width: 700 }}" alt="{{ bp.title | escape }}" width="700" height="700" loading="lazy">{%- endif -%}
+          </div>
+          <h3>{{ block.settings.title }}</h3>
+          <p class="sv6-each num">{{ each | money }} per pillow</p>
+          <span class="sv6-price num">{{ bp.price | money }}</span>
+          {%- if save > 0 -%}<span class="sv6-save num">You save {{ save | money }}{% if block.settings.best %} ({{ pct }}%){% endif %}</span>{%- else -%}<span class="sv6-each">Free shipping</span>{%- endif -%}
+          <a class="sv6-btn sv6-btn--block" href="{{ block.settings.link | default: bp.url }}">{{ block.settings.button_label }}</a>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Somnila · Bundles",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "kick", "label": "Small title", "default": "Sleeping as two?" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "More pillows, more savings" },
+    { "type": "text", "id": "subheading", "label": "Text", "default": "Real savings against buying them one by one. Free shipping on all three." }
+  ],
+  "blocks": [ { "type": "tier", "name": "Offer", "limit": 3, "settings": [
+    { "type": "product", "id": "product", "label": "Product" },
+    { "type": "text", "id": "title", "label": "Title", "default": "1 pillow" },
+    { "type": "number", "id": "qty", "label": "Pillows in the offer", "default": 1 },
+    { "type": "text", "id": "components", "label": "Same pieces bought separately", "info": "e.g. neck-01*2" },
+    { "type": "checkbox", "id": "best", "label": "Best value badge", "default": false },
+    { "type": "text", "id": "image_asset", "label": "Theme image file" },
+    { "type": "url", "id": "link", "label": "Button link", "info": "Empty: the product page" },
+    { "type": "text", "id": "button_label", "label": "Button", "default": "Choose colour" } ] } ],
+  "presets": [ { "name": "Somnila · Bundles" } ]
+}
+{% endschema %}

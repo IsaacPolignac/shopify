@@ -1,0 +1,21 @@
+<section class="sv6 sv6-trust" aria-label="{{ section.settings.label | escape }}">
+  <div class="sv6-wrap"><ul>
+    {%- for block in section.blocks -%}
+      <li {{ block.shopify_attributes }}>{% render 'sv6-icon', name: block.settings.icon %}{{ block.settings.text }}</li>
+    {%- endfor -%}
+  </ul></div>
+</section>
+{% schema %}
+{
+  "name": "Somnila · Trust bar",
+  "tag": "div",
+  "settings": [ { "type": "text", "id": "label", "label": "Label for screen readers", "default": "Our promises" } ],
+  "blocks": [
+    { "type": "item", "name": "Promise", "limit": 4, "settings": [
+      { "type": "select", "id": "icon", "label": "Icon", "default": "truck", "options": [
+        { "value": "truck", "label": "Truck" }, { "value": "calendar", "label": "Calendar" }, { "value": "wash", "label": "Washable" }, { "value": "lock", "label": "Lock" }, { "value": "layers", "label": "Layers" } ] },
+      { "type": "text", "id": "text", "label": "Text" } ] }
+  ],
+  "presets": [ { "name": "Somnila · Trust bar" } ]
+}
+{% endschema %}
