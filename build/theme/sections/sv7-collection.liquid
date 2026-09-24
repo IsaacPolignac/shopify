@@ -1,0 +1,116 @@
+{%- comment -%} Somnila v7 shop page (PurePeptide "Shop"): title, search, sort, collection pills, three info cards, card grid. {%- endcomment -%}
+{%- liquid
+  assign sort_by = collection.sort_by | default: collection.default_sort_by
+  assign pairs = section.blocks | where: 'type', 'pair'
+-%}
+<section class="sv7 sv7-shop" aria-labelledby="sv7-shop-{{ section.id }}">
+  <div class="sv7-shop-bar">
+    <div class="sv7-wrap sv7-shop-bar-in">
+      <div>
+        <h1 id="sv7-shop-{{ section.id }}">{{ collection.title }}</h1>
+        {%- if section.settings.show_description and collection.description != blank -%}<div class="sv7-lead">{{ collection.description }}</div>{%- endif -%}
+      </div>
+      <div class="sv7-shop-tools">
+        <form action="{{ routes.search_url }}" method="get" role="search" class="sv7-search">
+          <label for="sv7-q-{{ section.id }}" class="visually-hidden">Search products</label>
+          {% render 'sv7-icon', name: 'search' %}
+          <input id="sv7-q-{{ section.id }}" type="search" name="q" placeholder="Search products…" autocomplete="off">
+          <input type="hidden" name="type" value="product">
+        </form>
+        <div class="sv7-sort">
+          <label for="sv7-sort-{{ section.id }}" class="visually-hidden">Sort by</label>
+          <select id="sv7-sort-{{ section.id }}" data-sv7-sort>
+            {%- for option in collection.sort_options -%}
+              <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected{% endif %}>{{ option.name | escape }}</option>
+            {%- endfor -%}
+          </select>
+          {% render 'sv7-icon', name: 'chev' %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sv7-wrap sv7-shop-body">
+    {%- assign nav = section.settings.pills_menu -%}
+    {%- if nav != blank -%}
+      <nav class="sv7-cpills" aria-label="Collections">
+        {%- for link in nav.links -%}
+          <a href="{{ link.url }}"{% if link.url == collection.url or link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
+        {%- endfor -%}
+      </nav>
+    {%- endif -%}
+
+    {%- assign infos = section.blocks | where: 'type', 'info' -%}
+    {%- if infos.size > 0 -%}
+      <ul class="sv7-infos">
+        {%- for block in infos -%}
+          <li {{ block.shopify_attributes }}>
+            <span class="badge"><b class="num">{{ block.settings.big }}</b><small>{{ block.settings.small }}</small></span>
+            <div>
+              <h2>{{ block.settings.title }}</h2>
+              <p>{{ block.settings.text }}</p>
+              {%- if block.settings.btn != blank -%}<a class="sv7-btn sv7-btn--sm" href="{{ block.settings.btn_url }}">{{ block.settings.btn }}</a>{%- endif -%}
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- paginate collection.products by section.settings.per_page -%}
+      <div class="sv7-cards sv7-cards--shop">
+        {%- for p in collection.products -%}
+          {%- unless p.tags contains 'cart-only' -%}
+            {%- liquid
+              assign pr = nil
+              assign pc = ''
+              assign pl = ''
+              for b in pairs
+                if b.settings.for_handle == p.handle and b.settings.pair != blank
+                  assign pr = b.settings.pair
+                  assign pc = b.settings.components
+                  assign pl = b.settings.label
+                endif
+              endfor
+              assign uid = section.id | append: '-' | append: forloop.index
+            -%}
+            <div class="sv7-cell">
+              {%- render 'sv7-card', p: p, uid: uid, tag: p.type, pair: pr, pair_components: pc, single_label: '1 pillow', pair_label: pl -%}
+            </div>
+          {%- endunless -%}
+        {%- else -%}
+          <p class="sv7-lead">Nothing here yet.</p>
+        {%- endfor -%}
+      </div>
+      {%- if paginate.pages > 1 -%}
+        <nav class="sv7-pages" aria-label="Pages">
+          {%- if paginate.previous -%}<a href="{{ paginate.previous.url }}">Previous</a>{%- endif -%}
+          <span class="num">Page {{ paginate.current_page }} of {{ paginate.pages }}</span>
+          {%- if paginate.next -%}<a href="{{ paginate.next.url }}">Next</a>{%- endif -%}
+        </nav>
+      {%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Shop grid",
+  "tag": "div",
+  "settings": [
+    { "type": "checkbox", "id": "show_description", "label": "Show the collection description", "default": false },
+    { "type": "link_list", "id": "pills_menu", "label": "Collection pills menu" },
+    { "type": "range", "id": "per_page", "label": "Products per page", "min": 8, "max": 48, "step": 4, "default": 24 }
+  ],
+  "blocks": [
+    { "type": "info", "name": "Info card", "limit": 3, "settings": [
+      { "type": "text", "id": "big", "label": "Round badge, big" }, { "type": "text", "id": "small", "label": "Round badge, small" },
+      { "type": "text", "id": "title", "label": "Title" }, { "type": "textarea", "id": "text", "label": "Text" },
+      { "type": "text", "id": "btn", "label": "Button" }, { "type": "url", "id": "btn_url", "label": "Button link" } ] },
+    { "type": "pair", "name": "Pair offer on a card", "settings": [
+      { "type": "text", "id": "for_handle", "label": "Product handle" },
+      { "type": "product", "id": "pair", "label": "Pair set" },
+      { "type": "text", "id": "components", "label": "Pair set bought separately", "info": "e.g. neck-01*2" },
+      { "type": "text", "id": "label", "label": "Pair label", "default": "2 pillows" } ] }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,310 @@
+{%- comment -%}
+  Somnila v7 product page (PurePeptide anatomy): breadcrumb, picture card with chips, and a buy card with
+  options, quantity, "bundle & save" tiles, add-on, express checkout and an info list.
+  Add to cart goes through Shrine's <product-form>, so the theme's cart drawer opens as usual.
+{%- endcomment -%}
+{%- liquid
+  assign pname = product.title | split: ' — ' | first
+  assign current = product.selected_or_first_available_variant
+  assign tiles = 'neck-01,contour-01,side-01,body-01,lounge-01,for-two,family-set,contour-for-two,side-sleeper-set,sleep-set,neck-01-cover-set,evening-set' | split: ','
+
+  assign cpos = 0
+  for opt in product.options_with_values
+    assign on = opt.name | downcase
+    if on contains 'colour' or on contains 'color'
+      assign cpos = forloop.index
+      break
+    endif
+  endfor
+  assign cidx = cpos | minus: 1
+
+  assign main_img = current.featured_image | default: product.featured_image
+  if current.featured_image == blank and cpos > 0
+    assign needle = 'in ' | append: current.options[cidx]
+    for img in product.images
+      if img.alt contains needle
+        assign main_img = img
+        break
+      endif
+    endfor
+  endif
+
+  assign line = product.metafields.somnila.tagline.value
+  if line == blank
+    assign line = product.description | strip_html | truncatewords: 26
+  endif
+  assign delivery = product.metafields.somnila.delivery.value | default: section.settings.delivery_default
+  assign includes = product.metafields.somnila.includes.value
+  assign contents = product.metafields.somnila.contents.value
+
+  assign free = false
+  if product.type == 'Pillow' or product.type == 'Set' or product.type == 'Blanket'
+    assign free = true
+  endif
+  if product.tags contains 'cart-only'
+    assign free = false
+  endif
+
+  assign offers = section.blocks | where: 'type', 'offer'
+  assign n_offers = 0
+  for b in offers
+    if b.settings.for_handle == product.handle and b.settings.offer_product != blank
+      assign n_offers = n_offers | plus: 1
+    endif
+  endfor
+
+  assign form_id = 'sv7-form-' | append: section.id
+  assign crumb = collection
+  if crumb == blank
+    assign crumb = collections[section.settings.crumb_collection]
+  endif
+-%}
+<section class="sv7 sv7-pdp" aria-labelledby="sv7-h1-{{ section.id }}">
+  <div class="sv7-wrap sv7-pdp-wrap">
+    <nav class="sv7-crumb" aria-label="Breadcrumb">
+      <ol>
+        {%- if crumb != blank -%}<li><a href="{{ crumb.url }}">{{ crumb.title }}</a></li>{%- endif -%}
+        <li aria-current="page">{{ pname }}</li>
+      </ol>
+    </nav>
+
+    <div class="sv7-pdp-grid">
+      <div class="sv7-pdp-media">
+        <div class="sv7-media-card">
+          {%- if main_img -%}<img src="{{ main_img | image_url: width: 1200 }}" alt="{{ main_img.alt | default: product.title | escape }}" width="1200" height="1200" data-sv7-main fetchpriority="high">{%- endif -%}
+          <ul class="sv7-media-chips">
+            {%- if free -%}<li><span class="dot" aria-hidden="true"></span>{{ section.settings.chip_free }}</li>{%- endif -%}
+            {%- if section.settings.chip_trial != blank -%}<li>{{ section.settings.chip_trial }}</li>{%- endif -%}
+            {%- if includes != blank -%}<li>{{ includes }}</li>{%- endif -%}
+          </ul>
+        </div>
+        {%- if product.images.size > 1 -%}
+          <div class="sv7-thumbs" role="list">
+            {%- for img in product.images limit: 12 -%}
+              <button type="button" role="listitem" data-sv7-thumb data-src="{{ img | image_url: width: 1200 }}" data-alt="{{ img.alt | default: product.title | escape }}" aria-current="{% if img.id == main_img.id %}true{% else %}false{% endif %}" aria-label="Show picture {{ forloop.index }}"><img src="{{ img | image_url: width: 160 }}" alt="" width="72" height="72" loading="lazy"></button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="sv7-buycard">
+        <p class="sv7-eyebrow sv7-eyebrow--muted">{{ product.title }}</p>
+        <h1 id="sv7-h1-{{ section.id }}">{{ pname }}</h1>
+        <div class="sv7-buy-meta">
+          {%- if product.type != blank -%}<span class="sv7-tag sv7-tag--line">{{ product.type }}</span>{%- endif -%}
+          <span class="sv7-stock{% unless current.available %} is-out{% endunless %}" data-sv7-stock>{% if current.available %}In stock{% else %}Sold out{% endif %}</span>
+          <span class="sv7-meta-tx">Ships in <b>{{ delivery }}</b>{% if free %} · free shipping{% endif %}</span>
+        </div>
+        <p class="sv7-buy-line">{{ line }}</p>
+        <hr>
+
+        {%- for opt in product.options_with_values -%}
+          {%- assign oi = forloop.index0 -%}
+          {%- assign on = opt.name | downcase -%}
+          <fieldset class="sv7-optgroup">
+            <legend class="sv7-optlabel">{{ opt.name }} <b data-sv7-optname="{{ oi }}">{{ current.options[oi] }}</b></legend>
+            <div class="sv7-optchips">
+              {%- for value in opt.values -%}
+                {%- liquid
+                  assign avail = false
+                  for v in product.variants
+                    if v.options[oi] == value and v.available
+                      assign avail = true
+                    endif
+                  endfor
+                -%}
+                <label class="sv7-opt{% unless avail %} is-off{% endunless %}"><input type="radio" name="sv7-opt-{{ oi }}" id="sv7-opt-{{ section.id }}-{{ oi }}-{{ forloop.index }}" value="{{ value | escape }}"{% if current.options[oi] == value %} checked{% endif %}>{% if on contains 'colour' or on contains 'color' or on contains 'cover' %}<span class="sw" style="--c:{% render 'sv7-swatch', value: value %}"></span>{% endif %}<span>{{ value }}</span></label>
+              {%- endfor -%}
+            </div>
+          </fieldset>
+        {%- endfor -%}
+
+        <div class="sv7-optgroup">
+          <span class="sv7-optlabel" id="sv7-qty-l-{{ section.id }}">Quantity</span>
+          <div class="sv7-qty" role="group" aria-labelledby="sv7-qty-l-{{ section.id }}">
+            <button type="button" data-sv7-qty="-1" aria-label="One less">{% render 'sv7-icon', name: 'minus' %}</button>
+            <input type="number" inputmode="numeric" min="1" max="20" value="1" id="sv7-qty-{{ section.id }}" aria-label="Quantity" data-sv7-qty-input>
+            <button type="button" data-sv7-qty="1" aria-label="One more">{% render 'sv7-icon', name: 'plus' %}</button>
+          </div>
+        </div>
+
+        {%- capture offers_json -%}
+          [{"handle":{{ product.handle | json }},"url":{{ product.url | json }},"variants":[
+            {%- for v in product.variants -%}{"id":{{ v.id }},"o":{{ v.options | json }},"a":{{ v.available | json }},"m":{{ v.price | money | json }},"img":{%- liquid
+              assign vimg = v.featured_image
+              if vimg == blank and cpos > 0
+                assign needle = 'in ' | append: v.options[cidx]
+                for img in product.images
+                  if img.alt contains needle
+                    assign vimg = img
+                    break
+                  endif
+                endfor
+              endif
+            -%}{% if vimg %}{{ vimg | image_url: width: 1200 | json }}{% else %}null{% endif %}}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+          ],"unit":{% if free %}{{ section.settings.free_note | json }}{% else %}{{ section.settings.addon_ship_note | json }}{% endif %}}
+          {%- for b in offers -%}
+            {%- if b.settings.for_handle == product.handle and b.settings.offer_product != blank -%}
+              {%- liquid
+                assign op = b.settings.offer_product
+                assign parts = b.settings.components | split: ','
+                assign unit = ''
+                if parts.size == 1
+                  assign q = parts[0] | split: '*' | last | plus: 0
+                  if q > 1
+                    assign unit = op.price | divided_by: q | money | append: ' per pillow · free shipping'
+                  endif
+                endif
+                if unit == ''
+                  assign unit = 'Free shipping'
+                endif
+              -%}
+              ,{"handle":{{ op.handle | json }},"url":{{ op.url | json }},"variants":[
+                {%- for v in op.variants -%}{"id":{{ v.id }},"o":{{ v.options | json }},"a":{{ v.available | json }},"m":{{ v.price | money | json }},"img":null}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+              ],"unit":{{ unit | json }}}
+            {%- endif -%}
+          {%- endfor -%}]
+        {%- endcapture -%}
+        <script type="application/json" data-sv7-offers>{{ offers_json }}</script>
+
+        {%- if n_offers > 0 -%}
+          <fieldset class="sv7-optgroup">
+            <legend class="sv7-optlabel">{{ section.settings.bundle_label }}</legend>
+            <div class="sv7-tiles sv7-tiles--{{ n_offers | plus: 1 }}">
+              <label class="sv7-tileopt"><input type="radio" name="sv7-tier" id="sv7-tier-{{ section.id }}-0" value="0" checked>
+                <span class="im">{% if tiles contains product.handle %}<img src="{{ 'sv6-tile-' | append: product.handle | append: '.webp' | asset_url }}" alt="" width="64" height="64" loading="lazy">{% endif %}</span>
+                <span class="tx"><b>{{ section.settings.first_label }}</b><small class="num">{{ product.price | money }}</small></span>
+              </label>
+              {%- assign ti = 0 -%}
+              {%- for b in offers -%}
+                {%- if b.settings.for_handle == product.handle and b.settings.offer_product != blank -%}
+                  {%- liquid
+                    assign ti = ti | plus: 1
+                    assign op = b.settings.offer_product
+                    assign pct = 0
+                    if b.settings.components != blank
+                      capture s
+                        render 'sv6-separately', components: b.settings.components
+                      endcapture
+                      assign sep = s | strip | plus: 0
+                      assign save = sep | minus: op.price
+                      if save > 0 and sep > 0
+                        assign pct = save | times: 100.0 | divided_by: sep | round
+                      endif
+                    endif
+                  -%}
+                  <label class="sv7-tileopt" {{ b.shopify_attributes }}><input type="radio" name="sv7-tier" id="sv7-tier-{{ section.id }}-{{ ti }}" value="{{ ti }}">
+                    {%- if b.settings.best -%}<span class="flag flag--dawn">Best value</span>{%- elsif pct > 0 -%}<span class="flag">Save {{ pct }}%</span>{%- endif -%}
+                    <span class="im">{% if tiles contains op.handle %}<img src="{{ 'sv6-tile-' | append: op.handle | append: '.webp' | asset_url }}" alt="" width="64" height="64" loading="lazy">{% endif %}</span>
+                    <span class="tx"><b>{{ b.settings.label }}</b>{% if pct > 0 %}<em class="num">−{{ pct }}%</em>{% endif %}<small class="num">{{ op.price | money }}</small></span>
+                  </label>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </fieldset>
+        {%- endif -%}
+
+        <div class="sv7-buy-price">
+          <b class="num" data-sv7-price>{{ current.price | money }}</b>
+          <small data-sv7-unit>{% if free %}{{ section.settings.free_note }}{% else %}{{ section.settings.addon_ship_note }}{% endif %}</small>
+        </div>
+
+        <product-form id="ProductForm-{{ section.id }}" class="product-form" data-section="{{ section.id }}" data-options="{{ product.options | join: ',' }}" data-main="false">
+          <div class="product-form__error-message-wrapper" role="alert" hidden><span class="product-form__error-message"></span></div>
+          {%- form 'product', product, id: form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+            <input type="hidden" name="id" value="{{ current.id }}" class="product-variant-id">
+            <input type="hidden" name="quantity" value="1" data-sv7-qty-field>
+            <div class="sv7-buy-actions">
+              <a class="sv7-btn sv7-btn--ghost" href="#details">{% render 'sv7-icon', name: 'ruler' %}{{ section.settings.size_label }}</a>
+              <button id="ProductSubmitButton-{{ section.id }}" type="submit" name="add" class="sv7-btn product-form__submit" data-sv7-atc{% unless current.available %} disabled{% endunless %}>
+                <span class="button__label">{{ section.settings.atc_label }} · <span class="num" data-sv7-btn-price>{{ current.price | money }}</span></span>
+                <div class="loading-overlay__spinner hidden"><svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" width="20" height="20"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></div>
+              </button>
+            </div>
+            {%- if section.settings.show_express -%}
+              <p class="sv7-or"><span>{{ section.settings.express_label }}</span></p>
+              <div class="sv7-express">{{ form | payment_button }}</div>
+            {%- endif -%}
+          {%- endform -%}
+        </product-form>
+
+        {%- for b in section.blocks -%}
+          {%- if b.type == 'addon' and b.settings.for_handle == product.handle and b.settings.product != blank -%}
+            {%- assign ap = b.settings.product -%}
+            {%- assign auid = section.id | append: '-addon' -%}
+            {%- assign afid = 'sv7-af-' | append: section.id -%}
+            <div class="sv7-addon" data-sv7-addon {{ b.shopify_attributes }}>
+              <span class="ic">{% render 'sv7-icon', name: 'layers' %}</span>
+              <span class="tx">{{ b.settings.label }}<small>{{ ap.title | split: ' — ' | first }} · <span data-sv7-addon-colour>{{ ap.selected_or_first_available_variant.title }}</span></small></span>
+              <b class="num">{{ ap.price | money }}</b>
+              <product-form id="ProductForm-{{ auid }}" class="product-form" data-section="{{ auid }}" data-options="{{ ap.options | join: ',' }}" data-main="false">
+                <div class="product-form__error-message-wrapper" role="alert" hidden><span class="product-form__error-message"></span></div>
+                {%- form 'product', ap, id: afid, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                  <input type="hidden" name="id" value="{{ ap.selected_or_first_available_variant.id }}" class="product-variant-id">
+                  <button id="ProductSubmitButton-{{ auid }}" type="submit" name="add" class="sv7-btn sv7-btn--sm sv7-btn--light product-form__submit"><span class="button__label">Add</span><div class="loading-overlay__spinner hidden"><svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" width="16" height="16"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></div></button>
+                {%- endform -%}
+              </product-form>
+              <script type="application/json" data-sv7-addon-data>[{%- for v in ap.variants -%}{"id":{{ v.id }},"c":{{ v.option1 | json }},"a":{{ v.available | json }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]</script>
+            </div>
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        <ul class="sv7-infolist">
+          {%- if section.settings.countries != blank -%}<li>{% render 'sv7-icon', name: 'globe' %}<span>{{ section.settings.countries }}</span></li>{%- endif -%}
+          <li>{% render 'sv7-icon', name: 'clock' %}<span>Ships in {{ delivery }}{% if free %} · Free shipping{% else %} · {{ section.settings.addon_ship_note }}{% endif %}</span></li>
+          {%- if section.settings.trial_line != blank -%}<li>{% render 'sv7-icon', name: 'calendar' %}<span>{{ section.settings.trial_line }}</span></li>{%- endif -%}
+          {%- if contents != blank -%}<li>{% render 'sv7-icon', name: 'box' %}<span>{{ contents | newline_to_br }}</span></li>{%- elsif includes != blank -%}<li>{% render 'sv7-icon', name: 'box' %}<span>{{ includes }}</span></li>{%- endif -%}
+          <li class="pay">
+            <span class="lab">We accept</span>
+            <span class="sec">{% render 'sv7-icon', name: 'lock' %}Secure checkout</span>
+            <span class="icons">{%- for type in shop.enabled_payment_types -%}{{ type | payment_type_svg_tag: class: 'sv7-payicon' }}{%- endfor -%}</span>
+          </li>
+        </ul>
+        {%- if section.settings.disclaimer != blank -%}<p class="sv7-fine">{{ section.settings.disclaimer }}</p>{%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sv7 sv7-stick" aria-hidden="true"><div class="sv7-wrap">
+  {%- if main_img -%}<img src="{{ main_img | image_url: width: 120 }}" alt="" width="52" height="52" data-sv7-stick-img>{%- endif -%}
+  <div class="nm">{{ pname }}<small><span class="num" data-sv7-stick-price>{{ current.price | money }}</span>{% if free %} · free shipping{% endif %}</small></div>
+  <button class="sv7-btn sv7-btn--sm" type="button" tabindex="-1" data-sv7-stick-btn>{{ section.settings.atc_label }}</button>
+</div></div>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Product",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "crumb_collection", "label": "Breadcrumb collection handle", "default": "shop-all" },
+    { "type": "text", "id": "chip_free", "label": "Picture chip, free shipping", "default": "Free shipping" },
+    { "type": "text", "id": "chip_trial", "label": "Picture chip 2", "default": "30-night trial" },
+    { "type": "text", "id": "delivery_default", "label": "Delivery time if the product has none", "default": "6–10 days" },
+    { "type": "text", "id": "bundle_label", "label": "Sets title", "default": "Bundle & save" },
+    { "type": "text", "id": "first_label", "label": "First tile", "default": "1 pillow" },
+    { "type": "text", "id": "free_note", "label": "Under the price, free shipping", "default": "Free shipping" },
+    { "type": "text", "id": "addon_ship_note", "label": "Shipping note for small items", "default": "Free shipping with any pillow" },
+    { "type": "text", "id": "size_label", "label": "Size button", "default": "Size" },
+    { "type": "text", "id": "atc_label", "label": "Add to cart button", "default": "Add to cart" },
+    { "type": "checkbox", "id": "show_express", "label": "Show express checkout", "default": true },
+    { "type": "text", "id": "express_label", "label": "Express checkout label", "default": "Or check out instantly" },
+    { "type": "text", "id": "countries", "label": "Countries line", "default": "Ships to the US, Canada, the UK, Europe, Australia and more" },
+    { "type": "text", "id": "trial_line", "label": "Trial line", "default": "30-night trial: sleep on it, then decide" },
+    { "type": "text", "id": "disclaimer", "label": "Small print", "default": "Somnila pillows are comfort products, not medical devices." }
+  ],
+  "blocks": [
+    { "type": "offer", "name": "Set tile", "settings": [
+      { "type": "text", "id": "for_handle", "label": "Show on this product (handle)" },
+      { "type": "product", "id": "offer_product", "label": "Set added to the cart" },
+      { "type": "text", "id": "label", "label": "Label", "default": "2 pillows" },
+      { "type": "text", "id": "components", "label": "Same pieces bought separately", "info": "e.g. neck-01*2" },
+      { "type": "checkbox", "id": "best", "label": "Best value flag", "default": false } ] },
+    { "type": "addon", "name": "Add-on line", "settings": [
+      { "type": "text", "id": "for_handle", "label": "Show on this product (handle)" },
+      { "type": "product", "id": "product", "label": "Add-on product" },
+      { "type": "text", "id": "label", "label": "Label", "default": "Pairs with a spare cover" } ] }
+  ]
+}
+{% endschema %}

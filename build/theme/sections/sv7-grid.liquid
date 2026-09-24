@@ -1,0 +1,45 @@
+<section class="sv7 sv7-sec sv7-grid-sec" aria-labelledby="sv7-g-{{ section.id }}">
+  <div class="sv7-wrap">
+    <div class="sv7-head sv7-head--row">
+      <div>
+        {%- if section.settings.eyebrow != blank -%}<p class="sv7-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+        <h2 id="sv7-g-{{ section.id }}">{{ section.settings.heading }}</h2>
+      </div>
+      {%- if section.settings.link_label != blank -%}<a class="sv7-more" href="{{ section.settings.link_url }}">{{ section.settings.link_label }}{% render 'sv7-icon', name: 'arrow' %}</a>{%- endif -%}
+    </div>
+    <div class="sv7-cards">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.product != blank -%}
+          {%- assign uid = section.id | append: '-' | append: forloop.index -%}
+          <div class="sv7-cell" {{ block.shopify_attributes }}>
+            {%- render 'sv7-card', p: block.settings.product, uid: uid, tag: block.settings.tag, image_asset: block.settings.image_asset, pair: block.settings.pair, pair_components: block.settings.pair_components, single_label: block.settings.single_label, pair_label: block.settings.pair_label -%}
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Product grid",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small title", "default": "The range" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Pick your pillow" },
+    { "type": "text", "id": "link_label", "label": "Link", "default": "View all pillows" },
+    { "type": "url", "id": "link_url", "label": "Link target" }
+  ],
+  "blocks": [
+    { "type": "card", "name": "Product card", "limit": 8, "settings": [
+      { "type": "product", "id": "product", "label": "Product" },
+      { "type": "text", "id": "tag", "label": "Tag on the picture" },
+      { "type": "text", "id": "image_asset", "label": "Picture (theme asset file name)", "info": "Empty: the product's own picture" },
+      { "type": "product", "id": "pair", "label": "Pair set (optional)", "info": "Adds a 1 / 2 pillows choice with the real saving" },
+      { "type": "text", "id": "pair_components", "label": "Pair set bought separately", "info": "e.g. neck-01*2" },
+      { "type": "text", "id": "single_label", "label": "Single label", "default": "1 pillow" },
+      { "type": "text", "id": "pair_label", "label": "Pair label", "default": "2 pillows" } ] }
+  ],
+  "presets": [ { "name": "Somnila v7 · Product grid" } ]
+}
+{% endschema %}

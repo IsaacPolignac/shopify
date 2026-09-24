@@ -1,0 +1,58 @@
+{%- liquid
+  assign p = section.settings.product
+-%}
+<section class="sv7 sv7-hero" aria-labelledby="sv7-h1-{{ section.id }}">
+  <div class="sv7-wrap sv7-hero-grid">
+    <div class="sv7-hero-copy">
+      {%- if section.settings.eyebrow != blank -%}<p class="sv7-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h1 id="sv7-h1-{{ section.id }}"><span class="l1">{{ section.settings.heading_1 }}</span> <span class="l2">{{ section.settings.heading_2 }}<i aria-hidden="true">.</i></span></h1>
+      {%- if section.settings.tagline != blank -%}<p class="sv7-spaced">{{ section.settings.tagline }}</p>{%- endif -%}
+      {%- if section.settings.text != blank -%}<p class="sv7-lead">{{ section.settings.text }}</p>{%- endif -%}
+      {%- if section.settings.chip_label != blank -%}
+        <a class="sv7-proof" href="{{ section.settings.chip_url }}"><span class="dot" aria-hidden="true"></span><b>{{ section.settings.chip_label }}</b><span>{{ section.settings.chip_link }}</span>{% render 'sv7-icon', name: 'arrow' %}</a>
+      {%- endif -%}
+      <div class="sv7-actions">
+        {%- if section.settings.btn_1 != blank -%}<a class="sv7-btn" href="{{ section.settings.btn_1_url | default: p.url }}">{{ section.settings.btn_1 }}{% render 'sv7-icon', name: 'arrow' %}</a>{%- endif -%}
+        {%- if section.settings.btn_2 != blank -%}<a class="sv7-btn sv7-btn--ghost" href="{{ section.settings.btn_2_url }}">{{ section.settings.btn_2 }}</a>{%- endif -%}
+      </div>
+      {%- if p != blank and section.settings.show_price -%}
+        <p class="sv7-hero-price">{{ p.title | split: ' — ' | first }} · <b class="num">{{ p.price | money }}</b> · {{ section.settings.price_note }}</p>
+      {%- endif -%}
+    </div>
+    <div class="sv7-hero-media">
+      {%- if section.settings.image_asset != blank -%}
+        <img src="{{ section.settings.image_asset | asset_url }}" alt="{{ section.settings.image_alt | escape }}" width="1088" height="718" fetchpriority="high">
+      {%- endif -%}
+      {%- if section.settings.badge != blank -%}<span class="sv7-float sv7-float--tr">{% render 'sv7-icon', name: 'check' %}<span><b>{{ section.settings.badge }}</b><small>{{ section.settings.badge_small }}</small></span></span>{%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Hero",
+  "tag": "div",
+  "settings": [
+    { "type": "product", "id": "product", "label": "Product" },
+    { "type": "text", "id": "eyebrow", "label": "Small title", "default": "Memory-foam pillows" },
+    { "type": "text", "id": "heading_1", "label": "Heading, line 1", "default": "Feel it tonight." },
+    { "type": "text", "id": "heading_2", "label": "Heading, line 2 (a dot is added)", "default": "Keep it for years" },
+    { "type": "text", "id": "tagline", "label": "Spaced line", "default": "Sleep well." },
+    { "type": "textarea", "id": "text", "label": "Text" },
+    { "type": "text", "id": "chip_label", "label": "Proof chip, bold part", "default": "30-night trial" },
+    { "type": "text", "id": "chip_link", "label": "Proof chip, link part", "default": "See the terms" },
+    { "type": "url", "id": "chip_url", "label": "Proof chip link" },
+    { "type": "text", "id": "btn_1", "label": "Button 1", "default": "Shop Neck 01" },
+    { "type": "url", "id": "btn_1_url", "label": "Button 1 link" },
+    { "type": "text", "id": "btn_2", "label": "Button 2", "default": "Compare pillows" },
+    { "type": "url", "id": "btn_2_url", "label": "Button 2 link" },
+    { "type": "checkbox", "id": "show_price", "label": "Show the product price", "default": true },
+    { "type": "text", "id": "price_note", "label": "Next to the price", "default": "free shipping" },
+    { "type": "text", "id": "image_asset", "label": "Picture (theme asset file name)", "default": "sv6-cut-neck-01-cloud.webp" },
+    { "type": "text", "id": "image_alt", "label": "Picture description", "default": "Neck 01 memory-foam pillow in Cloud" },
+    { "type": "text", "id": "badge", "label": "Floating badge", "default": "Two heights" },
+    { "type": "text", "id": "badge_small", "label": "Floating badge detail", "default": "13 cm and 11 cm, one pillow" }
+  ],
+  "presets": [ { "name": "Somnila v7 · Hero" } ]
+}
+{% endschema %}

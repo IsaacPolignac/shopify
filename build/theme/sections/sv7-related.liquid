@@ -1,0 +1,50 @@
+{%- comment -%} Product page: related cards (PurePeptide "Continue your research"). Picks the products listed for this handle, else a collection. {%- endcomment -%}
+{%- liquid
+  assign list = nil
+  for b in section.blocks
+    if b.settings.for_handle == product.handle and b.settings.products != blank
+      assign list = b.settings.products
+    endif
+  endfor
+  if list == nil
+    assign src = collections[section.settings.fallback_collection]
+    assign list = src.products
+  endif
+  assign shown = 0
+-%}
+<section class="sv7 sv7-sec sv7-related" aria-labelledby="sv7-r-{{ section.id }}">
+  <div class="sv7-wrap sv7-pdp-wrap">
+    <div class="sv7-head">
+      {%- if section.settings.eyebrow != blank -%}<p class="sv7-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h2 id="sv7-r-{{ section.id }}">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="sv7-cards sv7-cards--3">
+      {%- for p in list -%}
+        {%- if p.handle != product.handle and shown < 3 -%}
+          {%- unless p.tags contains 'cart-only' -%}
+            {%- assign shown = shown | plus: 1 -%}
+            {%- assign uid = section.id | append: '-' | append: forloop.index -%}
+            <div class="sv7-cell">{%- render 'sv7-card', p: p, uid: uid, tag: p.type -%}</div>
+          {%- endunless -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Related",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small title", "default": "Complete your night" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Goes well with it" },
+    { "type": "text", "id": "fallback_collection", "label": "Collection handle when nothing is set", "default": "memory-foam-pillows" }
+  ],
+  "blocks": [
+    { "type": "list", "name": "Products for one page", "settings": [
+      { "type": "text", "id": "for_handle", "label": "Product handle" },
+      { "type": "product_list", "id": "products", "label": "Products", "limit": 6 } ] }
+  ]
+}
+{% endschema %}

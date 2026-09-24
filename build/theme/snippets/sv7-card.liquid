@@ -1,0 +1,148 @@
+{%- comment -%}
+  Somnila v7 product card (PurePeptide anatomy): tag, picture, name + size, one line, colour dots,
+  optional 1 / 2 pillow chips with the set's real saving, price, Details + Add.
+  Params: p (product), uid (unique string), tag, image_asset, pair (product), pair_components ("neck-01*2"),
+  single_label, pair_label.
+  Add goes through Shrine's <product-form>, so the theme's cart drawer opens as usual.
+  Products with more than one option link to their page instead of adding a silent choice.
+{%- endcomment -%}
+{%- liquid
+  assign name = p.title | split: ' — ' | first
+  assign tiles = 'neck-01,contour-01,side-01,body-01,lounge-01,for-two,family-set,contour-for-two,side-sleeper-set,sleep-set,neck-01-cover-set,evening-set' | split: ','
+
+  assign cpos = 0
+  for opt in p.options_with_values
+    assign on = opt.name | downcase
+    if on contains 'colour' or on contains 'color'
+      assign cpos = forloop.index
+      assign copt = opt
+      break
+    endif
+  endfor
+  assign cidx = cpos | minus: 1
+
+  assign direct = true
+  if p.options.size > 1
+    assign direct = false
+  endif
+
+  assign spec = ''
+  assign dcm = p.metafields.somnila.dimensions_cm.value | default: ''
+  if dcm != blank
+    assign spec = dcm | split: ',' | first | strip
+    if spec contains ' × '
+      assign sp = spec | remove: ' cm' | split: ' × '
+      assign spec = sp[0] | append: ' × ' | append: sp[1] | append: ' cm'
+    endif
+  endif
+
+  assign line = p.metafields.somnila.tagline.value
+  if line == blank
+    assign line = p.description | strip_html | truncatewords: 16
+  endif
+
+  assign free = false
+  if p.type == 'Pillow' or p.type == 'Set' or p.type == 'Blanket'
+    assign free = true
+  endif
+  if p.tags contains 'cart-only'
+    assign free = false
+  endif
+
+  assign cur = p.selected_or_first_available_variant
+  assign fid = 'sv7-f-' | append: uid
+
+  assign has_pair = false
+  if pair != blank and direct
+    assign has_pair = true
+    capture sep_s
+      render 'sv6-separately', components: pair_components
+    endcapture
+    assign sep = sep_s | strip | plus: 0
+    assign save = sep | minus: pair.price
+    assign pct = 0
+    if save > 0 and sep > 0
+      assign pct = save | times: 100.0 | divided_by: sep | round
+    endif
+    assign pqty = pair_components | split: '*' | last | plus: 0
+    if pqty < 2
+      assign pqty = 2
+    endif
+    assign each = pair.price | divided_by: pqty
+  endif
+-%}
+<article class="sv7-card" data-sv7-card>
+  <a class="sv7-card-media" href="{{ p.url }}" tabindex="-1" aria-hidden="true" data-sv7-link>
+    {%- if image_asset != blank -%}
+      <img src="{{ image_asset | asset_url }}" alt="" width="900" height="900" loading="lazy">
+    {%- elsif tiles contains p.handle -%}
+      <img src="{{ 'sv6-tile-' | append: p.handle | append: '.webp' | asset_url }}" alt="" width="900" height="900" loading="lazy">
+    {%- elsif p.featured_image -%}
+      <img src="{{ p.featured_image | image_url: width: 700 }}" alt="" width="700" height="700" loading="lazy" class="is-photo">
+    {%- endif -%}
+    {%- if tag != blank -%}<span class="sv7-tag">{{ tag }}</span>{%- endif -%}
+  </a>
+  <div class="sv7-card-body">
+    <div class="sv7-card-top">
+      <h3><a href="{{ p.url }}" data-sv7-link>{{ name }}</a></h3>
+      {%- if spec != blank -%}<span class="sv7-card-spec num">{{ spec }}</span>{%- endif -%}
+    </div>
+    <p class="sv7-card-line">{{ line }}</p>
+
+    {%- if cpos > 0 and direct -%}
+      <div class="sv7-dots" role="radiogroup" aria-label="Colour">
+        {%- for value in copt.values -%}
+          {%- liquid
+            assign avail = false
+            for v in p.variants
+              if v.options[cidx] == value and v.available
+                assign avail = true
+              endif
+            endfor
+          -%}
+          <label class="sv7-dot{% unless avail %} is-off{% endunless %}" title="{{ value | escape }}"><input type="radio" name="sv7-c-{{ uid }}" id="sv7-c-{{ uid }}-{{ forloop.index }}" value="{{ value | escape }}"{% if cur.options[cidx] == value %} checked{% endif %}{% unless avail %} disabled{% endunless %}><span style="--c:{% render 'sv7-swatch', value: value %}"></span><span class="visually-hidden">{{ value }}</span></label>
+        {%- endfor -%}
+        <span class="sv7-dots-name" data-sv7-cname>{{ cur.options[cidx] }}</span>
+      </div>
+    {%- elsif cpos > 0 -%}
+      <p class="sv7-card-note">{{ copt.values.size }} colours</p>
+    {%- endif -%}
+
+    {%- if has_pair -%}
+      <div class="sv7-chips" role="radiogroup" aria-label="How many">
+        <label class="sv7-chip"><input type="radio" name="sv7-q-{{ uid }}" id="sv7-q-{{ uid }}-1" value="0" checked><span>{{ single_label | default: '1 pillow' }}</span></label>
+        <label class="sv7-chip"><input type="radio" name="sv7-q-{{ uid }}" id="sv7-q-{{ uid }}-2" value="1"><span>{{ pair_label | default: '2 pillows' }}</span>{% if pct > 0 %}<em>−{{ pct }}%</em>{% endif %}</label>
+      </div>
+    {%- endif -%}
+
+    <div class="sv7-card-price">
+      <b class="num" data-sv7-price>{{ cur.price | money }}</b>
+      <small data-sv7-unit data-single="{% if free %}Free shipping{% endif %}"{% if has_pair %} data-pair="{{ each | money | escape }} each · free shipping"{% endif %}>{% if free %}Free shipping{% endif %}</small>
+    </div>
+
+    <div class="sv7-card-actions">
+      <a class="sv7-btn sv7-btn--ghost sv7-btn--sm" href="{{ p.url }}" data-sv7-link>Details</a>
+      {%- if direct -%}
+        <product-form id="ProductForm-{{ uid }}" class="product-form" data-section="{{ uid }}" data-options="{{ p.options | join: ',' }}" data-main="false">
+          <div class="product-form__error-message-wrapper" role="alert" hidden><span class="product-form__error-message"></span></div>
+          {%- form 'product', p, id: fid, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+            <input type="hidden" name="id" value="{{ cur.id }}" class="product-variant-id">
+            <button id="ProductSubmitButton-{{ uid }}" type="submit" name="add" class="sv7-btn sv7-btn--sm product-form__submit" data-sv7-add{% unless cur.available %} disabled{% endunless %}>
+              <span class="button__label">{% render 'sv7-icon', name: 'plus' %}Add</span>
+              <div class="loading-overlay__spinner hidden"><svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" width="18" height="18"><circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle></svg></div>
+            </button>
+          {%- endform -%}
+        </product-form>
+      {%- else -%}
+        <a class="sv7-btn sv7-btn--sm" href="{{ p.url }}">Choose</a>
+      {%- endif -%}
+    </div>
+  </div>
+  {%- if direct -%}
+  <script type="application/json" data-sv7-card-data>{"urls":[{{ p.url | json }}{% if has_pair %},{{ pair.url | json }}{% endif %}],"sets":[[
+    {%- for v in p.variants -%}{"id":{{ v.id }},"c":{% if cpos > 0 %}{{ v.options[cidx] | json }}{% else %}null{% endif %},"a":{{ v.available | json }},"m":{{ v.price | money | json }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+  ]{%- if has_pair -%},[
+    {%- for v in pair.variants -%}{"id":{{ v.id }},"c":{{ v.option1 | json }},"a":{{ v.available | json }},"m":{{ v.price | money | json }}}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+  ]{%- endif -%}]}</script>
+  {%- endif -%}
+</article>

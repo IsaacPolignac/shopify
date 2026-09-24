@@ -1,0 +1,25 @@
+{%- comment -%} Echoes the dot colour for a colour value, e.g. {% render 'sv7-swatch', value: 'Night' %} {%- endcomment -%}
+{%- assign vh = value | handleize -%}
+{%- case vh -%}
+  {%- when 'night' -%}#262B40
+  {%- when 'cloud' -%}#ECEEF2
+  {%- when 'stone' -%}#6A6771
+  {%- when 'sky' -%}#A8BAD2
+  {%- when 'blush' -%}#F2C9C4
+  {%- when 'blue', 'azure' -%}#5F86C4
+  {%- when 'red' -%}#B3474A
+  {%- when 'dark-grey' -%}#55575E
+  {%- when 'heather-grey' -%}#8D8F96
+  {%- when 'light-grey' -%}#C9CBD1
+  {%- when 'sand', 'apricot' -%}#E9CFAE
+  {%- when 'cream', 'butter' -%}#F3E9CF
+  {%- when 'green', 'mint', 'sage' -%}#B9D8C4
+  {%- when 'lime' -%}#D5E3A0
+  {%- when 'slate' -%}#6B7D90
+  {%- when 'salmon' -%}#F0A994
+  {%- when 'violet' -%}#8C7BB8
+  {%- when 'yellow' -%}#F1DC8C
+  {%- when 'black' -%}#222222
+  {%- when 'ice' -%}#E4F0F6
+  {%- else -%}#DCE8F2
+{%- endcase -%}

@@ -1,0 +1,32 @@
+<section class="sv7 sv7-stats-sec" aria-label="{{ section.settings.label | escape }}">
+  <div class="sv7-wrap">
+    <ul class="sv7-stats">
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}>
+          <span class="ic">{% render 'sv7-icon', name: block.settings.icon %}</span>
+          <span><b class="num">{{ block.settings.value }}</b><small>{{ block.settings.label }}</small></span>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Key figures",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Label for screen readers", "default": "Key figures" }
+  ],
+  "blocks": [
+    { "type": "stat", "name": "Figure", "limit": 4, "settings": [
+      { "type": "select", "id": "icon", "label": "Icon", "default": "ruler", "options": [
+        { "value": "ruler", "label": "Ruler" }, { "value": "calendar", "label": "Calendar" }, { "value": "clock", "label": "Clock" },
+        { "value": "truck", "label": "Truck" }, { "value": "moon", "label": "Moon" }, { "value": "wash", "label": "Wash" },
+        { "value": "shield", "label": "Shield" }, { "value": "globe", "label": "Globe" } ] },
+      { "type": "text", "id": "value", "label": "Figure" },
+      { "type": "text", "id": "label", "label": "Label" } ] }
+  ],
+  "presets": [ { "name": "Somnila v7 · Key figures" } ]
+}
+{% endschema %}

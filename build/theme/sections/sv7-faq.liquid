@@ -1,0 +1,39 @@
+<section class="sv7 sv7-sec sv7-faq{% if section.settings.tint %} is-tint{% endif %}" id="faq" aria-labelledby="sv7-q-{{ section.id }}">
+  <div class="sv7-wrap sv7-faq-in">
+    <div class="sv7-head is-center">
+      {%- if section.settings.eyebrow != blank -%}<p class="sv7-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h2 id="sv7-q-{{ section.id }}">{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}<p class="sv7-lead">{{ section.settings.text }}</p>{%- endif -%}
+    </div>
+    <div class="sv7-qas">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.for_handle == blank or product == blank or block.settings.for_handle == product.handle -%}
+          <details class="sv7-qa" {{ block.shopify_attributes }}>
+            <summary>{{ block.settings.question }}<span class="chev" aria-hidden="true">{% render 'sv7-icon', name: 'chev' %}</span></summary>
+            <div class="ans">{{ block.settings.answer }}</div>
+          </details>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · FAQ",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small title", "default": "FAQ" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Frequently asked questions" },
+    { "type": "text", "id": "text", "label": "Text", "default": "Everything you need to know before ordering." },
+    { "type": "checkbox", "id": "tint", "label": "Tinted background", "default": false }
+  ],
+  "blocks": [
+    { "type": "qa", "name": "Question", "settings": [
+      { "type": "text", "id": "question", "label": "Question" },
+      { "type": "richtext", "id": "answer", "label": "Answer" },
+      { "type": "text", "id": "for_handle", "label": "On product pages, only for this handle" } ] }
+  ],
+  "presets": [ { "name": "Somnila v7 · FAQ" } ]
+}
+{% endschema %}

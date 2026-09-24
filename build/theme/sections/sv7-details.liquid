@@ -1,0 +1,96 @@
+{%- comment -%} Product page, below the buy card (PurePeptide "About / Details / Research context"). {%- endcomment -%}
+{%- liquid
+  assign pname = product.title | split: ' — ' | first
+  assign dcm = product.metafields.somnila.dimensions_cm.value
+  assign din = product.metafields.somnila.dimensions_in.value
+  assign mat = product.metafields.somnila.materials.value
+  assign inc = product.metafields.somnila.includes.value
+  assign con = product.metafields.somnila.contents.value
+  assign dly = product.metafields.somnila.delivery.value
+  assign howto = nil
+  for b in section.blocks
+    if b.type == 'howto' and b.settings.for_handle == product.handle
+      assign howto = b
+    endif
+  endfor
+  assign n_points = 0
+  for b in section.blocks
+    if b.type == 'point' and b.settings.for_handle == product.handle
+      assign n_points = n_points | plus: 1
+    endif
+  endfor
+-%}
+<section class="sv7 sv7-sec sv7-details" id="details" aria-labelledby="sv7-d-{{ section.id }}">
+  <div class="sv7-wrap sv7-pdp-wrap">
+    {%- if product.description != blank -%}
+      <div class="sv7-about">
+        <h2 id="sv7-d-{{ section.id }}">{{ section.settings.about_label }} {{ pname }}</h2>
+        <div class="sv7-rte">{{ product.description }}</div>
+      </div>
+    {%- else -%}
+      <h2 id="sv7-d-{{ section.id }}" class="visually-hidden">{{ section.settings.details_label }}</h2>
+    {%- endif -%}
+
+    <div class="sv7-dcards">
+      <div class="sv7-dcard">
+        <h3>{{ section.settings.details_label }}</h3>
+        <dl class="sv7-spec">
+          {%- if dcm != blank -%}<div><dt>Size</dt><dd class="num">{{ dcm }}</dd></div>{%- endif -%}
+          {%- if din != blank -%}<div><dt>Size (inches)</dt><dd class="num">{{ din }}</dd></div>{%- endif -%}
+          {%- if mat != blank -%}<div><dt>Materials</dt><dd>{{ mat }}</dd></div>{%- endif -%}
+          {%- if con != blank -%}<div><dt>In the set</dt><dd>{{ con | newline_to_br }}</dd></div>{%- elsif inc != blank -%}<div><dt>In the box</dt><dd>{{ inc }}</dd></div>{%- endif -%}
+          {%- if product.options.size > 0 and product.has_only_default_variant == false -%}
+            {%- for opt in product.options_with_values -%}<div><dt>{{ opt.name }}</dt><dd>{{ opt.values | join: ', ' }}</dd></div>{%- endfor -%}
+          {%- endif -%}
+          {%- if dly != blank -%}<div><dt>Ships in</dt><dd class="num">{{ dly }}</dd></div>{%- endif -%}
+        </dl>
+      </div>
+      <div class="sv7-dcard">
+        {%- if howto != nil -%}
+          <h3>{{ howto.settings.title }}</h3>
+          <div class="sv7-rte">{{ howto.settings.text }}</div>
+        {%- else -%}
+          <h3>{{ section.settings.fallback_title }}</h3>
+          <div class="sv7-rte">{{ section.settings.fallback_text }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- if n_points > 0 -%}
+      <div class="sv7-dcard sv7-dcard--wide">
+        <h3>{{ section.settings.points_label }}</h3>
+        <ul class="sv7-points">
+          {%- for b in section.blocks -%}
+            {%- if b.type == 'point' and b.settings.for_handle == product.handle -%}
+              <li {{ b.shopify_attributes }}><b>{{ b.settings.title }}</b> {{ b.settings.text }}</li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Product details",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "about_label", "label": "About heading, before the name", "default": "About" },
+    { "type": "text", "id": "details_label", "label": "Details card title", "default": "Details" },
+    { "type": "text", "id": "points_label", "label": "Bullet card title", "default": "Good to know" },
+    { "type": "text", "id": "fallback_title", "label": "Second card title when no how-to", "default": "Shipping and trial" },
+    { "type": "richtext", "id": "fallback_text", "label": "Second card text when no how-to", "default": "<p>Every order leaves within 6–10 days. Shipping is free on every pillow. Sleep on it for up to 30 nights; the exact conditions are in our refund policy.</p>" }
+  ],
+  "blocks": [
+    { "type": "howto", "name": "How to use", "settings": [
+      { "type": "text", "id": "for_handle", "label": "Product handle" },
+      { "type": "text", "id": "title", "label": "Title", "default": "How to use it" },
+      { "type": "richtext", "id": "text", "label": "Text" } ] },
+    { "type": "point", "name": "Bullet", "settings": [
+      { "type": "text", "id": "for_handle", "label": "Product handle" },
+      { "type": "text", "id": "title", "label": "Bold part" },
+      { "type": "text", "id": "text", "label": "Rest" } ] }
+  ]
+}
+{% endschema %}

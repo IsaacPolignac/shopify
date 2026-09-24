@@ -1,0 +1,167 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 24,
+        "columns_desktop": 3,
+        "stretch_cards": false,
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "badges": "disabled",
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "swatches_option_name": "Colour",
+        "swatches_position": "bottom",
+        "enable_filtering": false,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 24,
+        "padding_bottom": 56
+      }
+    },
+    "trust": {
+      "type": "icon-bar",
+      "blocks": {
+        "t1": {
+          "type": "column",
+          "settings": {
+            "icon": "local_shipping",
+            "filled_icon": false,
+            "title": "Free shipping",
+            "text": "<p>On every pillow and every set, to the US, Canada, the UK, Europe and Australia.</p>"
+          }
+        },
+        "t2": {
+          "type": "column",
+          "settings": {
+            "icon": "schedule",
+            "filled_icon": false,
+            "title": "6–10 days, tracked",
+            "text": "<p>Tracking number by email the day it ships.</p>"
+          }
+        },
+        "t3": {
+          "type": "column",
+          "settings": {
+            "icon": "bedtime",
+            "filled_icon": false,
+            "title": "30-night trial",
+            "text": "<p>Sleep on it. If it isn't right, one email and we refund it.</p>"
+          }
+        },
+        "t4": {
+          "type": "column",
+          "settings": {
+            "icon": "local_laundry_service",
+            "filled_icon": false,
+            "title": "Cover included",
+            "text": "<p>Removable and machine washable, on every pillow.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "title": "",
+        "title_highlight_color": "#1E2A3A",
+        "heading_size": "h2",
+        "text": "",
+        "color_scheme": "background-2",
+        "icon_layout": "horizontal",
+        "icon_size": "small",
+        "icon_color": "accent-1",
+        "cards_color_scheme": "background-1",
+        "type": "slide",
+        "autoplay": false,
+        "desktop_full_page": false,
+        "columns_desktop": 4,
+        "slider_desktop": false,
+        "desktop_spacing": 16,
+        "desktop_side_padding": 0,
+        "desktop_padding_calc": true,
+        "desktop_adaptive_height": false,
+        "desktop_dots_position": "hidden",
+        "desktop_arrows_position": "hidden",
+        "columns_mobile": "1",
+        "slider_mobile": true,
+        "mobile_dots_position": "under",
+        "mobile_arrows_position": "hidden",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "newsletter": {
+      "type": "newsletter",
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "title": "Notes from the workshop",
+            "title_highlight_color": "#1E2A3A",
+            "heading_size": "h1"
+          }
+        },
+        "p": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>One email a month at most: what we are making, what we refused to make. No countdowns, no fake sales.</p>"
+          }
+        },
+        "f": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "h",
+        "p",
+        "f"
+      ],
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "button_type": "arrow",
+        "button_label": "Sign up",
+        "button_style_secondary": false,
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "crumbs": {
+      "type": "custom-liquid",
+      "settings": {
+        "display_id": false,
+        "visibility": "always-display",
+        "custom_liquid": "<nav class=\"somnila-crumbs page-width\" aria-label=\"Breadcrumb\"><ol><li><a href=\"{{ routes.root_url }}\">Home</a></li><li><span aria-current=\"page\">{{ collection.title }}</span></li></ol></nav>",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "crumbs",
+    "banner",
+    "grid",
+    "trust",
+    "newsletter"
+  ]
+}

@@ -1,0 +1,28 @@
+{%- comment -%} Somnila v7 line icons. Usage: {% render 'sv7-icon', name: 'truck' %} {%- endcomment -%}
+<svg class="sv7-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+{%- case name -%}
+  {%- when 'truck' -%}<path d="M2.5 6.5h11v9h-11zM13.5 9.5h4l3 3v3h-7z"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>
+  {%- when 'calendar' -%}<rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/>
+  {%- when 'moon' -%}<path d="M19.5 14.6A8 8 0 1 1 9.4 4.5a6.5 6.5 0 0 0 10.1 10.1z"/>
+  {%- when 'wash' -%}<path d="M3.5 7h17l-1.6 11.2a2 2 0 0 1-2 1.8H7.1a2 2 0 0 1-2-1.8z"/><path d="M6.5 11.5c1.2-1 2.3-1 3.5 0s2.3 1 3.5 0 2.3-1 3.5 0"/>
+  {%- when 'lock' -%}<rect x="4.5" y="10.5" width="15" height="10" rx="3"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5M12 14.5v2.5"/>
+  {%- when 'shield' -%}<path d="M12 3.5 5 6v5.5c0 4.2 2.9 7.6 7 9 4.1-1.4 7-4.8 7-9V6z"/><path d="M9 12l2.2 2.2L15.5 10"/>
+  {%- when 'globe' -%}<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.2 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.2-3.5-8.5S9.6 5.9 12 3.5z"/>
+  {%- when 'clock' -%}<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>
+  {%- when 'box' -%}<path d="M3.5 7.5 12 3.5l8.5 4v9L12 20.5l-8.5-4z"/><path d="M3.5 7.5 12 11.5l8.5-4M12 11.5v9"/>
+  {%- when 'ruler' -%}<rect x="2.5" y="8" width="19" height="8" rx="2"/><path d="M6.5 8v3M10 8v4M13.5 8v3M17 8v4"/>
+  {%- when 'layers' -%}<path d="M12 4 3 8.5l9 4.5 9-4.5z"/><path d="M3 12.5l9 4.5 9-4.5"/>
+  {%- when 'turn' -%}<path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5"/><path d="M20 4v4.5h-4.5"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5"/><path d="M4 20v-4.5h4.5"/>
+  {%- when 'feather' -%}<path d="M19 5c-6 0-11 5-11 11v3"/><path d="M8 16c5 0 9-3 11-8"/><path d="M5 19l3-3"/>
+  {%- when 'chat' -%}<path d="M4.5 5.5h15v10h-8l-4.5 3.5v-3.5h-2.5z"/>
+  {%- when 'tag' -%}<path d="M3.5 12.2V4.5a1 1 0 0 1 1-1h7.7l8.3 8.3a1 1 0 0 1 0 1.4l-7.3 7.3a1 1 0 0 1-1.4 0z"/><circle cx="8" cy="8" r="1.5"/>
+  {%- when 'search' -%}<circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.3-4.3"/>
+  {%- when 'arrow' -%}<path d="M5 12h14M13 6l6 6-6 6"/>
+  {%- when 'chev' -%}<path d="M6 9.5l6 6 6-6"/>
+  {%- when 'check' -%}<path d="M5 12.5l4.5 4.5L19 7.5"/>
+  {%- when 'plus' -%}<path d="M12 5v14M5 12h14"/>
+  {%- when 'minus' -%}<path d="M5 12h14"/>
+  {%- when 'info' -%}<circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.8v.4"/>
+  {%- else -%}<circle cx="12" cy="12" r="8"/>
+{%- endcase -%}
+</svg>

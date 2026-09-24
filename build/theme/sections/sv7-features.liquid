@@ -1,0 +1,46 @@
+<section class="sv7 sv7-sec sv7-features" aria-labelledby="sv7-f-{{ section.id }}">
+  <div class="sv7-wrap">
+    <div class="sv7-head is-center">
+      {%- if section.settings.eyebrow != blank -%}<p class="sv7-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h2 id="sv7-f-{{ section.id }}">{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}<p class="sv7-lead">{{ section.settings.text }}</p>{%- endif -%}
+    </div>
+    <ul class="sv7-fgrid">
+      {%- for block in section.blocks -%}
+        <li class="sv7-fcard" {{ block.shopify_attributes }}>
+          <span class="ic ic--{{ block.settings.tone }}">{% render 'sv7-icon', name: block.settings.icon %}</span>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+          {%- if block.settings.link_label != blank -%}<a class="sv7-more sv7-more--sm" href="{{ block.settings.link_url }}">{{ block.settings.link_label }}{% render 'sv7-icon', name: 'arrow' %}</a>{%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Six cards",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small title" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Everything your night needs, in one place." },
+    { "type": "textarea", "id": "text", "label": "Text" }
+  ],
+  "blocks": [
+    { "type": "card", "name": "Card", "limit": 6, "settings": [
+      { "type": "select", "id": "icon", "label": "Icon", "default": "turn", "options": [
+        { "value": "turn", "label": "Turn over" }, { "value": "wash", "label": "Wash" }, { "value": "layers", "label": "Layers" },
+        { "value": "calendar", "label": "Calendar" }, { "value": "truck", "label": "Truck" }, { "value": "lock", "label": "Lock" },
+        { "value": "chat", "label": "Chat" }, { "value": "moon", "label": "Moon" }, { "value": "globe", "label": "Globe" },
+        { "value": "feather", "label": "Feather" }, { "value": "tag", "label": "Tag" }, { "value": "box", "label": "Box" } ] },
+      { "type": "select", "id": "tone", "label": "Icon tile", "default": "mist", "options": [
+        { "value": "mist", "label": "Mist" }, { "value": "dawn", "label": "Dawn" } ] },
+      { "type": "text", "id": "title", "label": "Title" },
+      { "type": "textarea", "id": "text", "label": "Text" },
+      { "type": "text", "id": "link_label", "label": "Link" },
+      { "type": "url", "id": "link_url", "label": "Link target" } ] }
+  ],
+  "presets": [ { "name": "Somnila v7 · Six cards" } ]
+}
+{% endschema %}

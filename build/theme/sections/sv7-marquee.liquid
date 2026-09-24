@@ -1,0 +1,31 @@
+<section class="sv7 sv7-marquee" aria-label="{{ section.settings.label | escape }}">
+  <div class="sv7-marquee-track">
+    {%- for i in (1..2) -%}
+      <ul class="sv7-marquee-list"{% if i == 2 %} aria-hidden="true"{% endif %}>
+        {%- for block in section.blocks -%}
+          <li {{ block.shopify_attributes }}>{% render 'sv7-icon', name: block.settings.icon %}{{ block.settings.text }}</li>
+        {%- endfor -%}
+      </ul>
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Moving strip",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Label for screen readers", "default": "What you get" }
+  ],
+  "blocks": [
+    { "type": "item", "name": "Item", "settings": [
+      { "type": "select", "id": "icon", "label": "Icon", "default": "truck", "options": [
+        { "value": "truck", "label": "Truck" }, { "value": "calendar", "label": "Calendar" }, { "value": "moon", "label": "Moon" },
+        { "value": "wash", "label": "Wash" }, { "value": "lock", "label": "Lock" }, { "value": "shield", "label": "Shield" },
+        { "value": "globe", "label": "Globe" }, { "value": "clock", "label": "Clock" }, { "value": "box", "label": "Box" },
+        { "value": "turn", "label": "Turn over" }, { "value": "layers", "label": "Layers" } ] },
+      { "type": "text", "id": "text", "label": "Text" } ] }
+  ],
+  "presets": [ { "name": "Somnila v7 · Moving strip" } ]
+}
+{% endschema %}

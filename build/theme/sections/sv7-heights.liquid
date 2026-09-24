@@ -1,0 +1,96 @@
+{%- liquid
+  assign hide = false
+  if section.settings.only_for_handle != blank and product != blank and product.handle != section.settings.only_for_handle
+    assign hide = true
+  endif
+-%}
+{%- unless hide -%}
+<section class="sv7 sv7-sec sv7-heights" id="how-it-works" aria-labelledby="sv7-hh-{{ section.id }}">
+  <div class="sv7-wrap sv7-heights-grid">
+    <div class="sv7-heights-copy">
+      {%- if section.settings.eyebrow != blank -%}<p class="sv7-eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h2 id="sv7-hh-{{ section.id }}">{{ section.settings.heading }}</h2>
+      {%- if section.settings.text != blank -%}<p class="sv7-lead">{{ section.settings.text }}</p>{%- endif -%}
+      <dl class="sv7-inline-stats">
+        {%- if section.settings.s1 != blank -%}<div><dt class="num">{{ section.settings.s1 }}</dt><dd>{{ section.settings.s1_label }}</dd></div>{%- endif -%}
+        {%- if section.settings.s2 != blank -%}<div><dt class="num">{{ section.settings.s2 }}</dt><dd>{{ section.settings.s2_label }}</dd></div>{%- endif -%}
+        {%- if section.settings.s3 != blank -%}<div><dt class="num">{{ section.settings.s3 }}</dt><dd>{{ section.settings.s3_label }}</dd></div>{%- endif -%}
+      </dl>
+      <div class="sv7-tabs" role="tablist" aria-label="{{ section.settings.heading | escape }}">
+        {%- for block in section.blocks -%}
+          <button type="button" role="tab" id="sv7-tab-{{ block.id }}" aria-controls="sv7-panel-{{ block.id }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}" data-state="{{ block.settings.state }}" {{ block.shopify_attributes }}>{% render 'sv7-icon', name: block.settings.icon %}{{ block.settings.label }}</button>
+        {%- endfor -%}
+      </div>
+      <div class="sv7-panel-card">
+        {%- for block in section.blocks -%}
+          <div class="sv7-panel" role="tabpanel" id="sv7-panel-{{ block.id }}" aria-labelledby="sv7-tab-{{ block.id }}"{% unless forloop.first %} hidden{% endunless %}>
+            <h3>{{ block.settings.title }}{% if block.settings.badge != blank %} <span class="sv7-okpill">{% render 'sv7-icon', name: 'check' %}{{ block.settings.badge }}</span>{% endif %}</h3>
+            <p>{{ block.settings.text }}</p>
+            {%- if block.settings.why != blank -%}<p class="sv7-why"><b>{{ section.settings.why_label }}</b> {{ block.settings.why }}</p>{%- endif -%}
+          </div>
+        {%- endfor -%}
+        <figure class="sv7-fig" data-state="side">
+          {%- render 'sv7-profile' -%}
+          <figcaption><span>{{ section.settings.caption }}</span><b class="num">{{ section.settings.caption_right }}</b></figcaption>
+        </figure>
+      </div>
+      {%- if section.settings.btn != blank -%}
+        <div class="sv7-actions">
+          <a class="sv7-btn" href="{{ section.settings.btn_url }}">{{ section.settings.btn }}{% render 'sv7-icon', name: 'arrow' %}</a>
+          {%- if section.settings.btn_note != blank -%}<span class="sv7-note">{% render 'sv7-icon', name: 'check' %}{{ section.settings.btn_note }}</span>{%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="sv7-heights-media">
+      {%- if section.settings.image_asset != blank -%}<img src="{{ section.settings.image_asset | asset_url }}" alt="{{ section.settings.image_alt | escape }}" width="1088" height="718" loading="lazy">{%- endif -%}
+      {%- if section.settings.float != blank -%}<span class="sv7-float sv7-float--tr">{% render 'sv7-icon', name: 'check' %}<span><b>{{ section.settings.float }}</b><small>{{ section.settings.float_small }}</small></span></span>{%- endif -%}
+      {%- if section.settings.card_title != blank -%}
+        <a class="sv7-linkcard" href="{{ section.settings.card_url }}"><span class="ic">{% render 'sv7-icon', name: 'ruler' %}</span><span><b>{{ section.settings.card_title }}</b><small>{{ section.settings.card_small }}</small></span>{% render 'sv7-icon', name: 'arrow' %}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+{%- endunless -%}
+
+{% schema %}
+{
+  "name": "Somnila v7 · Two heights",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Small title", "default": "How it works" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Two heights. Turn it over." },
+    { "type": "textarea", "id": "text", "label": "Text" },
+    { "type": "text", "id": "s1", "label": "Figure 1", "default": "13 cm" }, { "type": "text", "id": "s1_label", "label": "Figure 1 label", "default": "High edge" },
+    { "type": "text", "id": "s2", "label": "Figure 2", "default": "11 cm" }, { "type": "text", "id": "s2_label", "label": "Figure 2 label", "default": "Low edge" },
+    { "type": "text", "id": "s3", "label": "Figure 3", "default": "62 cm" }, { "type": "text", "id": "s3_label", "label": "Figure 3 label", "default": "Long" },
+    { "type": "text", "id": "why_label", "label": "Label before the tip", "default": "Tip:" },
+    { "type": "text", "id": "caption", "label": "Diagram caption", "default": "Side view of Neck 01, to scale" },
+    { "type": "text", "id": "caption_right", "label": "Diagram caption, right", "default": "13 / 11 cm" },
+    { "type": "text", "id": "btn", "label": "Button", "default": "Shop Neck 01" },
+    { "type": "url", "id": "btn_url", "label": "Button link" },
+    { "type": "text", "id": "btn_note", "label": "Note next to the button", "default": "Cover included" },
+    { "type": "text", "id": "image_asset", "label": "Picture (theme asset file name)", "default": "sv6-cut-neck-01-night.webp" },
+    { "type": "text", "id": "image_alt", "label": "Picture description", "default": "Neck 01 memory-foam pillow in Night" },
+    { "type": "text", "id": "float", "label": "Floating badge", "default": "Turn it over" },
+    { "type": "text", "id": "float_small", "label": "Floating badge detail", "default": "The other edge is under your neck" },
+    { "type": "text", "id": "card_title", "label": "Link card title", "default": "Compare the pillows" },
+    { "type": "text", "id": "card_small", "label": "Link card detail", "default": "Heights and sizes, side by side" },
+    { "type": "url", "id": "card_url", "label": "Link card target" },
+    { "type": "text", "id": "only_for_handle", "label": "On product pages, show only for this product handle", "default": "neck-01" }
+  ],
+  "blocks": [
+    { "type": "tab", "name": "Tab", "limit": 5, "settings": [
+      { "type": "text", "id": "label", "label": "Tab label" },
+      { "type": "select", "id": "icon", "label": "Icon", "default": "moon", "options": [
+        { "value": "moon", "label": "Moon" }, { "value": "turn", "label": "Turn over" }, { "value": "wash", "label": "Wash" },
+        { "value": "layers", "label": "Layers" }, { "value": "feather", "label": "Feather" }, { "value": "ruler", "label": "Ruler" } ] },
+      { "type": "select", "id": "state", "label": "Diagram", "default": "keep", "options": [
+        { "value": "side", "label": "High edge under the neck" }, { "value": "back", "label": "Low edge under the neck" }, { "value": "keep", "label": "No change" } ] },
+      { "type": "text", "id": "title", "label": "Title" },
+      { "type": "text", "id": "badge", "label": "Badge" },
+      { "type": "textarea", "id": "text", "label": "Text" },
+      { "type": "textarea", "id": "why", "label": "Tip" } ] }
+  ],
+  "presets": [ { "name": "Somnila v7 · Two heights" } ]
+}
+{% endschema %}

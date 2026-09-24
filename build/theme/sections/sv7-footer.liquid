@@ -1,0 +1,97 @@
+<footer class="sv7 sv7-foot" aria-label="Footer">
+  <div class="sv7-wrap">
+    <div class="sv7-foot-top">
+      <div class="sv7-foot-brand">
+        {%- if section.settings.logo != blank -%}
+          {{ section.settings.logo | image_url: width: 320 | image_tag: alt: shop.name, width: 140, loading: 'lazy' }}
+        {%- else -%}
+          <a class="sv7-word" href="{{ routes.root_url }}">somnila</a>
+        {%- endif -%}
+        {%- if section.settings.tagline != blank -%}<p>{{ section.settings.tagline }}</p>{%- endif -%}
+      </div>
+      {%- for i in (1..4) -%}
+        {%- liquid
+          assign mk = 'menu_' | append: i
+          assign tk = 'title_' | append: i
+          assign m = section.settings[mk]
+        -%}
+        {%- if m != blank and m.links.size > 0 -%}
+          <nav class="sv7-foot-col" aria-label="{{ section.settings[tk] | default: m.title | escape }}">
+            <p class="sv7-foot-h">{{ section.settings[tk] | default: m.title }}</p>
+            <ul>
+              {%- for link in m.links -%}<li><a href="{{ link.url }}">{{ link.title }}</a></li>{%- endfor -%}
+            </ul>
+          </nav>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.note_text != blank -%}
+      <aside class="sv7-foot-note">
+        <span class="ic">{% render 'sv7-icon', name: 'info' %}</span>
+        <div>
+          <p class="sv7-foot-h">{{ section.settings.note_title }}</p>
+          <p>{{ section.settings.note_text }}</p>
+          {%- if section.settings.note_link != blank -%}<a href="{{ section.settings.note_url }}">{{ section.settings.note_link }} →</a>{%- endif -%}
+        </div>
+      </aside>
+    {%- endif -%}
+
+    {%- if section.settings.show_pay -%}
+      <div class="sv7-foot-pay">
+        <span>{{ section.settings.pay_label }}</span>
+        <ul class="sv7-payicons" role="list">
+          {%- for type in shop.enabled_payment_types -%}<li>{{ type | payment_type_svg_tag: class: 'sv7-payicon' }}</li>{%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+
+    <div class="sv7-foot-bottom">
+      <p>© {{ 'now' | date: '%Y' }} {{ section.settings.brand_name | default: shop.name }}. {{ section.settings.bottom_text }}</p>
+      <ul class="sv7-foot-trust">
+        {%- if section.settings.trust_1 != blank -%}<li>{% render 'sv7-icon', name: 'lock' %}{{ section.settings.trust_1 }}</li>{%- endif -%}
+        {%- if section.settings.trust_2 != blank -%}<li>{% render 'sv7-icon', name: 'calendar' %}{{ section.settings.trust_2 }}</li>{%- endif -%}
+        {%- if section.settings.trust_3 != blank -%}<li>{% render 'sv7-icon', name: 'truck' %}{{ section.settings.trust_3 }}</li>{%- endif -%}
+      </ul>
+      {%- if section.settings.show_country and localization.available_countries.size > 1 -%}
+        {%- form 'localization', id: 'sv7-loc', class: 'sv7-loc', data-sv7-loc: '' -%}
+          <label for="sv7-loc-select" class="visually-hidden">Country or region</label>
+          {% render 'sv7-icon', name: 'globe' %}
+          <select id="sv7-loc-select" name="country_code">
+            {%- for c in localization.available_countries -%}
+              <option value="{{ c.iso_code }}"{% if c.iso_code == localization.country.iso_code %} selected{% endif %}>{{ c.name }} ({{ c.currency.iso_code }} {{ c.currency.symbol }})</option>
+            {%- endfor -%}
+          </select>
+          <noscript><button type="submit">Update</button></noscript>
+        {%- endform -%}
+      {%- endif -%}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Footer",
+  "tag": "div",
+  "settings": [
+    { "type": "image_picker", "id": "logo", "label": "Logo for dark background" },
+    { "type": "text", "id": "brand_name", "label": "Brand name in the copyright", "default": "Somnila" },
+    { "type": "textarea", "id": "tagline", "label": "Line under the logo" },
+    { "type": "link_list", "id": "menu_1", "label": "Column 1 menu" }, { "type": "text", "id": "title_1", "label": "Column 1 title" },
+    { "type": "link_list", "id": "menu_2", "label": "Column 2 menu" }, { "type": "text", "id": "title_2", "label": "Column 2 title" },
+    { "type": "link_list", "id": "menu_3", "label": "Column 3 menu" }, { "type": "text", "id": "title_3", "label": "Column 3 title" },
+    { "type": "link_list", "id": "menu_4", "label": "Column 4 menu" }, { "type": "text", "id": "title_4", "label": "Column 4 title" },
+    { "type": "text", "id": "note_title", "label": "Note title", "default": "Comfort, not medicine" },
+    { "type": "textarea", "id": "note_text", "label": "Note text" },
+    { "type": "text", "id": "note_link", "label": "Note link" },
+    { "type": "url", "id": "note_url", "label": "Note link target" },
+    { "type": "checkbox", "id": "show_pay", "label": "Show payment methods", "default": true },
+    { "type": "text", "id": "pay_label", "label": "Payment label", "default": "We accept" },
+    { "type": "text", "id": "bottom_text", "label": "Bottom line" },
+    { "type": "text", "id": "trust_1", "label": "Bottom trust 1", "default": "Secure checkout" },
+    { "type": "text", "id": "trust_2", "label": "Bottom trust 2", "default": "30-night trial" },
+    { "type": "text", "id": "trust_3", "label": "Bottom trust 3", "default": "Free shipping on every pillow" },
+    { "type": "checkbox", "id": "show_country", "label": "Show the country selector", "default": true }
+  ]
+}
+{% endschema %}

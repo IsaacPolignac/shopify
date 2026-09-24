@@ -1,0 +1,63 @@
+<section class="sv7 sv7-trial" aria-labelledby="sv7-t-{{ section.id }}">
+  <div class="sv7-trial-grid">
+    <div class="sv7-trial-copy">
+      {%- if section.settings.pill != blank -%}<p class="sv7-pill sv7-pill--dark"><i>{{ section.settings.pill_em }}</i> · {{ section.settings.pill }}</p>{%- endif -%}
+      <h2 id="sv7-t-{{ section.id }}">{{ section.settings.heading }} <span class="hl">{{ section.settings.heading_hl }}</span></h2>
+      {%- if section.settings.text != blank -%}<p class="sv7-lead">{{ section.settings.text }}</p>{%- endif -%}
+      <ul class="sv7-checks">
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'point' -%}
+            <li {{ block.shopify_attributes }}><span class="ok">{% render 'sv7-icon', name: 'check' %}</span>{{ block.settings.text }}{% if block.settings.small != blank %} <small>({{ block.settings.small }})</small>{% endif %}</li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+      <div class="sv7-actions">
+        {%- if section.settings.btn != blank -%}<a class="sv7-btn sv7-btn--light" href="{{ section.settings.btn_url }}">{{ section.settings.btn }}</a>{%- endif -%}
+        {%- if section.settings.note != blank -%}<span class="sv7-note">{{ section.settings.note }}</span>{%- endif -%}
+      </div>
+    </div>
+    <div class="sv7-trial-side">
+      <div class="sv7-plan">
+        <p class="sv7-plan-title">{{ section.settings.card_title }}</p>
+        <ol>
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'step' -%}
+              <li class="{% if block.settings.strong %}is-strong{% endif %}" {{ block.shopify_attributes }}><span><b>{{ block.settings.title }}</b><small>{{ block.settings.text }}</small></span><em class="num">{{ block.settings.side }}</em></li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ol>
+        {%- if section.settings.card_foot != blank -%}<p class="sv7-plan-foot">{{ section.settings.card_foot }}</p>{%- endif -%}
+        {%- if section.settings.seal != blank -%}<span class="sv7-seal"><b class="num">{{ section.settings.seal }}</b><small>{{ section.settings.seal_small }}</small></span>{%- endif -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Somnila v7 · Trial band",
+  "tag": "div",
+  "settings": [
+    { "type": "text", "id": "pill_em", "label": "Pill, first word", "default": "Try" },
+    { "type": "text", "id": "pill", "label": "Pill", "default": "30-night trial" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Sleep on it for" },
+    { "type": "text", "id": "heading_hl", "label": "Heading, highlighted end", "default": "30 nights." },
+    { "type": "textarea", "id": "text", "label": "Text" },
+    { "type": "text", "id": "btn", "label": "Button", "default": "Read the trial terms" },
+    { "type": "url", "id": "btn_url", "label": "Button link" },
+    { "type": "text", "id": "note", "label": "Note next to the button" },
+    { "type": "text", "id": "card_title", "label": "Card title", "default": "How the trial works" },
+    { "type": "text", "id": "card_foot", "label": "Card footnote" },
+    { "type": "text", "id": "seal", "label": "Round seal, big", "default": "30" },
+    { "type": "text", "id": "seal_small", "label": "Round seal, small", "default": "nights" }
+  ],
+  "blocks": [
+    { "type": "point", "name": "Check point", "settings": [
+      { "type": "text", "id": "text", "label": "Text" }, { "type": "text", "id": "small", "label": "Small note" } ] },
+    { "type": "step", "name": "Card row", "settings": [
+      { "type": "text", "id": "title", "label": "Title" }, { "type": "text", "id": "text", "label": "Detail" },
+      { "type": "text", "id": "side", "label": "Right side" }, { "type": "checkbox", "id": "strong", "label": "Highlight", "default": false } ] }
+  ],
+  "presets": [ { "name": "Somnila v7 · Trial band" } ]
+}
+{% endschema %}

@@ -1,0 +1,380 @@
+{
+ "sections": {
+  "hero": {
+   "type": "sv6-hero",
+   "settings": {
+    "product": "neck-01",
+    "start_colour": "cloud",
+    "subheading": "Neck 01 is the memory-foam pillow with two heights, for side and back sleepers."
+   },
+   "blocks": {
+    "b1": {
+     "type": "bullet",
+     "settings": {
+      "text": "Two heights: 13 cm for your side, 11 cm for your back"
+     }
+    },
+    "b2": {
+     "type": "bullet",
+     "settings": {
+      "text": "Memory foam that holds its shape all night"
+     }
+    },
+    "b3": {
+     "type": "bullet",
+     "settings": {
+      "text": "Cool-touch cover that goes in the wash"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3"
+   ]
+  },
+  "trust": {
+   "type": "sv6-trust",
+   "settings": {},
+   "blocks": {
+    "b1": {
+     "type": "item",
+     "settings": {
+      "icon": "truck",
+      "text": "Free shipping on every pillow"
+     }
+    },
+    "b2": {
+     "type": "item",
+     "settings": {
+      "icon": "calendar",
+      "text": "30 nights to decide"
+     }
+    },
+    "b3": {
+     "type": "item",
+     "settings": {
+      "icon": "wash",
+      "text": "Washable cover included"
+     }
+    },
+    "b4": {
+     "type": "item",
+     "settings": {
+      "icon": "lock",
+      "text": "Secure checkout"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ]
+  },
+  "cards": {
+   "type": "sv6-cards",
+   "settings": {
+    "heading": "Pick your pillow",
+    "subheading": "One for each way you sleep. Every pillow ships free.",
+    "link_label": "Shop all pillows and sets",
+    "link_url": "shopify://collections/shop-all"
+   },
+   "blocks": {
+    "b1": {
+     "type": "card",
+     "settings": {
+      "product": "neck-01",
+      "label": "Side & back sleepers",
+      "spec": "Two heights · 13 / 11 cm",
+      "badge": "Two heights",
+      "image_asset": "sv6-tile-neck-01.webp"
+     }
+    },
+    "b2": {
+     "type": "card",
+     "settings": {
+      "product": "for-two",
+      "label": "2 × Neck 01",
+      "components": "neck-01*2",
+      "image_asset": "sv6-tile-for-two.webp"
+     }
+    },
+    "b3": {
+     "type": "card",
+     "settings": {
+      "product": "body-01",
+      "label": "Hug it all night",
+      "spec": "120 cm long · 47.2 in",
+      "image_asset": "sv6-tile-body-01.webp"
+     }
+    },
+    "b4": {
+     "type": "card",
+     "settings": {
+      "product": "contour-01",
+      "label": "Softer & lower",
+      "spec": "10 cm high · 3.9 in",
+      "image_asset": "sv6-tile-contour-01.webp"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4"
+   ]
+  },
+  "problems": {
+   "type": "sv6-points",
+   "settings": {
+    "style": "problems",
+    "heading": "When did a flat pillow start feeling normal?",
+    "button_label": "Shop Neck 01",
+    "button_url": "shopify://products/neck-01",
+    "price_product": "neck-01",
+    "tint": true
+   },
+   "blocks": {
+    "b1": {
+     "type": "point",
+     "settings": {
+      "title": "It goes flat.",
+      "text": "Neck 01 is memory foam. It holds its shape all night."
+     }
+    },
+    "b2": {
+     "type": "point",
+     "settings": {
+      "title": "One height for every position.",
+      "text": "Neck 01 has two: 13 cm for your side, 11 cm for your back."
+     }
+    },
+    "b3": {
+     "type": "point",
+     "settings": {
+      "title": "You can't try it first.",
+      "text": "Sleep on Neck 01 for 30 nights. If it isn't right, send it back."
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3"
+   ]
+  },
+  "heights": {
+   "type": "sv6-heights",
+   "settings": {}
+  },
+  "compare": {
+   "type": "sv6-compare",
+   "settings": {
+    "button_label": "Shop Neck 01",
+    "button_url": "shopify://products/neck-01",
+    "price_product": "neck-01",
+    "tint": true
+   },
+   "blocks": {
+    "b1": {
+     "type": "row",
+     "settings": {
+      "label": "Two heights (13 & 11 cm)",
+      "us": true,
+      "them": false
+     }
+    },
+    "b2": {
+     "type": "row",
+     "settings": {
+      "label": "Holds its shape all night",
+      "us": true,
+      "them": false
+     }
+    },
+    "b3": {
+     "type": "row",
+     "settings": {
+      "label": "Shaped for the neck",
+      "us": true,
+      "them": false
+     }
+    },
+    "b4": {
+     "type": "row",
+     "settings": {
+      "label": "Washable cover included",
+      "us": true,
+      "them": false
+     }
+    },
+    "b5": {
+     "type": "row",
+     "settings": {
+      "label": "30 nights to try at home",
+      "us": true,
+      "them": false
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5"
+   ]
+  },
+  "bundles": {
+   "type": "sv6-bundles",
+   "settings": {},
+   "blocks": {
+    "b1": {
+     "type": "tier",
+     "settings": {
+      "product": "neck-01",
+      "title": "1 pillow",
+      "qty": 1,
+      "image_asset": "sv6-tile-neck-01.webp",
+      "link": "/products/neck-01",
+      "button_label": "Choose colour"
+     }
+    },
+    "b2": {
+     "type": "tier",
+     "settings": {
+      "product": "for-two",
+      "title": "2 pillows",
+      "qty": 2,
+      "components": "neck-01*2",
+      "image_asset": "sv6-tile-for-two.webp",
+      "link": "/products/neck-01?offer=for-two",
+      "button_label": "Get 2 pillows"
+     }
+    },
+    "b3": {
+     "type": "tier",
+     "settings": {
+      "product": "family-set",
+      "title": "3 pillows",
+      "qty": 3,
+      "components": "neck-01*3",
+      "best": true,
+      "image_asset": "sv6-tile-family-set.webp",
+      "link": "/products/neck-01?offer=family-set",
+      "button_label": "Get 3 pillows"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3"
+   ]
+  },
+  "guarantee": {
+   "type": "sv6-guarantee",
+   "settings": {
+    "text": "A pillow is judged at 3 a.m., not in a shop. If it isn't right, send it back.",
+    "button_label": "Start your 30 nights",
+    "button_url": "shopify://products/neck-01"
+   },
+   "blocks": {
+    "b1": {
+     "type": "step",
+     "settings": {
+      "text": "Order. It ships free within 6–10 days."
+     }
+    },
+    "b2": {
+     "type": "step",
+     "settings": {
+      "text": "Sleep on it for up to 30 nights."
+     }
+    },
+    "b3": {
+     "type": "step",
+     "settings": {
+      "text": "Keep it, or write to support@somnila.com."
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3"
+   ]
+  },
+  "faq": {
+   "type": "sv6-faq",
+   "settings": {},
+   "blocks": {
+    "b1": {
+     "type": "qa",
+     "settings": {
+      "question": "Which height should I use?",
+      "answer": "<p>Neck 01 has two edges: 13 cm (5.1 in) and 11 cm (4.3 in). On your side, start on the higher edge. On your back, the lower one. Keep the edge where your head lies level.</p>"
+     }
+    },
+    "b2": {
+     "type": "qa",
+     "settings": {
+      "question": "How does the 30-night trial work?",
+      "answer": "<p>Sleep on it for up to 30 nights. If it isn't right, write to support@somnila.com and send it back. The exact conditions are in our refund policy.</p>"
+     }
+    },
+    "b3": {
+     "type": "qa",
+     "settings": {
+      "question": "How long does delivery take?",
+      "answer": "<p>Every order leaves within 6–10 days. Shipping is free on every pillow.</p>"
+     }
+    },
+    "b4": {
+     "type": "qa",
+     "settings": {
+      "question": "Can I wash it?",
+      "answer": "<p>The cover comes off and goes in the washing machine. Spare covers are sold separately.</p>"
+     }
+    },
+    "b5": {
+     "type": "qa",
+     "settings": {
+      "question": "How can I pay?",
+      "answer": "<p>Card, Shop Pay, Apple Pay or Google Pay. Checkout is handled by Shopify.</p>"
+     }
+    }
+   },
+   "block_order": [
+    "b1",
+    "b2",
+    "b3",
+    "b4",
+    "b5"
+   ]
+  },
+  "final": {
+   "type": "sv6-final",
+   "settings": {
+    "product": "neck-01",
+    "text": "Thirty nights at home, free shipping, and a cover you can wash. The only way to know is to sleep on it.",
+    "image_asset": "sv6-cut-neck-01-night.webp"
+   }
+  }
+ },
+ "order": [
+  "hero",
+  "trust",
+  "cards",
+  "problems",
+  "heights",
+  "compare",
+  "bundles",
+  "guarantee",
+  "faq",
+  "final"
+ ]
+}

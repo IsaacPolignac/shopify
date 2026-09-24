@@ -73,8 +73,7 @@
         "margin_top": 0,
         "padding_top": 56,
         "padding_bottom": 32
-      },
-      "disabled": true
+      }
     },
     "backtotop": {
       "type": "ss-back-to-top-button",
@@ -90,35 +89,10 @@
         "horizontal_dst_to_edge": 20,
         "vertical_dst_to_edge": 20
       }
-    },
-    "v7foot": {
-      "type": "sv7-footer",
-      "settings": {
-        "brand_name": "Somnila",
-        "tagline": "Memory-foam pillows shaped around the way you lie. Two heights, a washable cover, thirty nights to decide.",
-        "menu_1": "somnila-shop",
-        "title_1": "Shop",
-        "menu_2": "somnila-help",
-        "title_2": "Help",
-        "menu_3": "somnila-legal",
-        "title_3": "Legal",
-        "note_title": "Comfort, not medicine",
-        "note_text": "Somnila pillows are comfort products, not medical devices. For any health question, ask a professional.",
-        "note_link": "Our story",
-        "note_url": "shopify://pages/about",
-        "show_pay": true,
-        "pay_label": "We accept",
-        "bottom_text": "Sleep well.",
-        "trust_1": "Secure checkout",
-        "trust_2": "30-night trial",
-        "trust_3": "Free shipping on every pillow",
-        "show_country": true
-      }
     }
   },
   "order": [
     "footer",
-    "v7foot",
     "backtotop"
   ]
 }

@@ -1,453 +1,428 @@
 {
- "sections": {
-  "crumbs": {
-   "type": "custom-liquid",
-   "settings": {
-    "display_id": false,
-    "visibility": "always-display",
-    "custom_liquid": "<nav class=\"somnila-crumbs page-width\" aria-label=\"Breadcrumb\"><ol><li><a href=\"{{ routes.root_url }}\">Home</a></li>{%- assign cb = collection -%}{%- unless cb -%}{%- assign cb = product.collections.first -%}{%- endunless -%}{%- if cb and cb.handle != 'frontpage' -%}<li><a href=\"{{ cb.url }}\">{{ cb.title }}</a></li>{%- endif -%}<li><span aria-current=\"page\">{{ product.title }}</span></li></ol></nav>",
-    "padding_top": 0,
-    "padding_bottom": 0
-   }
-  },
-  "main": {
-   "type": "sv6-product",
-   "settings": {},
-   "blocks": {
-    "b1": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "neck-01",
-      "title": "Two heights",
-      "text": "13 cm for your side, 11 cm for your back"
-     }
+  "sections": {
+    "main": {
+      "type": "sv7-product",
+      "settings": {
+        "crumb_collection": "shop-all",
+        "chip_free": "Free shipping",
+        "chip_trial": "30-night trial",
+        "bundle_label": "Bundle & save",
+        "first_label": "1 pillow",
+        "free_note": "Free shipping",
+        "addon_ship_note": "Free shipping with any pillow",
+        "size_label": "Size",
+        "atc_label": "Add to cart",
+        "show_express": true,
+        "express_label": "Or check out instantly",
+        "countries": "Ships to the US, Canada, the UK, Europe, Australia and more",
+        "trial_line": "30-night trial: sleep on it, then decide",
+        "disclaimer": "Somnila pillows are comfort products, not medical devices."
+      },
+      "blocks": {
+        "b1": {
+          "type": "offer",
+          "settings": {
+            "for_handle": "neck-01",
+            "offer_product": "for-two",
+            "label": "2 pillows",
+            "components": "neck-01*2"
+          }
+        },
+        "b2": {
+          "type": "offer",
+          "settings": {
+            "for_handle": "neck-01",
+            "offer_product": "family-set",
+            "label": "3 pillows",
+            "components": "neck-01*3",
+            "best": true
+          }
+        },
+        "b3": {
+          "type": "offer",
+          "settings": {
+            "for_handle": "contour-01",
+            "offer_product": "contour-for-two",
+            "label": "2 pillows",
+            "components": "contour-01*2"
+          }
+        },
+        "b4": {
+          "type": "offer",
+          "settings": {
+            "for_handle": "body-01",
+            "offer_product": "side-sleeper-set",
+            "label": "+ Neck 01",
+            "components": "body-01*1,neck-01*1"
+          }
+        },
+        "b5": {
+          "type": "offer",
+          "settings": {
+            "for_handle": "lounge-01",
+            "offer_product": "evening-set",
+            "label": "+ Throw 01",
+            "components": "lounge-01*1,throw-01*1"
+          }
+        },
+        "b6": {
+          "type": "addon",
+          "settings": {
+            "for_handle": "neck-01",
+            "product": "cover-neck",
+            "label": "Pairs with a spare cover"
+          }
+        },
+        "b7": {
+          "type": "addon",
+          "settings": {
+            "for_handle": "contour-01",
+            "product": "cover-contour",
+            "label": "Pairs with a spare cover"
+          }
+        },
+        "b8": {
+          "type": "addon",
+          "settings": {
+            "for_handle": "side-01",
+            "product": "cover-side",
+            "label": "Pairs with a spare cover"
+          }
+        },
+        "b9": {
+          "type": "addon",
+          "settings": {
+            "for_handle": "body-01",
+            "product": "cover-body",
+            "label": "Pairs with a spare cover"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8",
+        "b9"
+      ]
     },
-    "b2": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "neck-01",
-      "title": "Memory foam",
-      "text": "Holds its shape all night"
-     }
+    "details": {
+      "type": "sv7-details",
+      "settings": {
+        "fallback_title": "Shipping and trial",
+        "fallback_text": "<p>Every order ships in 6–10 days. Shipping is free on every pillow. Sleep on it for up to 30 nights; the exact conditions are in our refund policy.</p>"
+      },
+      "blocks": {
+        "b1": {
+          "type": "howto",
+          "settings": {
+            "for_handle": "neck-01",
+            "title": "Which edge?",
+            "text": "<p>Neck 01 has two edges: 13 cm (5.1 in) and 11 cm (4.3 in). On your side, start on the higher edge. On your back, the lower one. Keep the edge where your head lies level.</p>"
+          }
+        },
+        "b2": {
+          "type": "point",
+          "settings": {
+            "for_handle": "neck-01",
+            "title": "Two heights:",
+            "text": "13 cm for your side, 11 cm for your back."
+          }
+        },
+        "b3": {
+          "type": "point",
+          "settings": {
+            "for_handle": "neck-01",
+            "title": "Memory foam:",
+            "text": "holds its shape all night."
+          }
+        },
+        "b4": {
+          "type": "point",
+          "settings": {
+            "for_handle": "neck-01",
+            "title": "Cool-touch cover:",
+            "text": "comes off, goes in the wash."
+          }
+        },
+        "b5": {
+          "type": "point",
+          "settings": {
+            "for_handle": "contour-01",
+            "title": "10 cm high:",
+            "text": "the softer, lower one in the range."
+          }
+        },
+        "b6": {
+          "type": "point",
+          "settings": {
+            "for_handle": "contour-01",
+            "title": "Gentle wave shape:",
+            "text": "follows the neck and shoulders."
+          }
+        },
+        "b7": {
+          "type": "point",
+          "settings": {
+            "for_handle": "contour-01",
+            "title": "Cool-touch cover:",
+            "text": "washable, included."
+          }
+        },
+        "b8": {
+          "type": "point",
+          "settings": {
+            "for_handle": "side-01",
+            "title": "10 cm profile:",
+            "text": "made for sleeping on your side."
+          }
+        },
+        "b9": {
+          "type": "point",
+          "settings": {
+            "for_handle": "side-01",
+            "title": "Memory foam:",
+            "text": "holds that height all night."
+          }
+        },
+        "b10": {
+          "type": "point",
+          "settings": {
+            "for_handle": "side-01",
+            "title": "Cover included.",
+            "text": ""
+          }
+        },
+        "b11": {
+          "type": "point",
+          "settings": {
+            "for_handle": "body-01",
+            "title": "120 cm, S-shaped:",
+            "text": "knees, arm and back at the same time."
+          }
+        },
+        "b12": {
+          "type": "point",
+          "settings": {
+            "for_handle": "body-01",
+            "title": "Breathable cover:",
+            "text": "cool to the touch, machine-washable."
+          }
+        },
+        "b13": {
+          "type": "point",
+          "settings": {
+            "for_handle": "body-01",
+            "title": "Cover included.",
+            "text": ""
+          }
+        },
+        "b14": {
+          "type": "point",
+          "settings": {
+            "for_handle": "lounge-01",
+            "title": "23 cm high:",
+            "text": "made for sitting up in bed."
+          }
+        },
+        "b15": {
+          "type": "point",
+          "settings": {
+            "for_handle": "lounge-01",
+            "title": "Phone and book ledge:",
+            "text": "nothing to hold up."
+          }
+        },
+        "b16": {
+          "type": "point",
+          "settings": {
+            "for_handle": "lounge-01",
+            "title": "Cover included.",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8",
+        "b9",
+        "b10",
+        "b11",
+        "b12",
+        "b13",
+        "b14",
+        "b15",
+        "b16"
+      ]
     },
-    "b3": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "neck-01",
-      "title": "Cool-touch cover",
-      "text": "Comes off, goes in the wash"
-     }
+    "heights": {
+      "type": "sv7-heights",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "Two heights. Turn it over.",
+        "text": "Neck 01 has two edges. Put the one that keeps your head level under your neck.",
+        "s1": "13 cm",
+        "s1_label": "High edge",
+        "s2": "11 cm",
+        "s2_label": "Low edge",
+        "s3": "62 cm",
+        "s3_label": "Long",
+        "why_label": "Tip:",
+        "caption": "Side view of Neck 01, to scale",
+        "caption_right": "62 × 42 cm",
+        "btn": "",
+        "btn_url": "shopify://products/neck-01",
+        "btn_note": "Cover included",
+        "image_asset": "sv6-cut-neck-01-night.webp",
+        "image_alt": "Neck 01 memory-foam pillow in Night",
+        "float": "Turn it over",
+        "float_small": "The other edge goes under your neck",
+        "card_title": "",
+        "card_small": "Heights and sizes, side by side",
+        "card_url": "shopify://collections/memory-foam-pillows",
+        "only_for_handle": "neck-01"
+      },
+      "blocks": {
+        "b1": {
+          "type": "tab",
+          "settings": {
+            "label": "On your side",
+            "icon": "moon",
+            "state": "side",
+            "title": "On your side",
+            "badge": "13 cm",
+            "text": "Start on the higher edge: 13 cm (5.1 in).",
+            "why": "Keep the edge where your head lies level."
+          }
+        },
+        "b2": {
+          "type": "tab",
+          "settings": {
+            "label": "On your back",
+            "icon": "turn",
+            "state": "back",
+            "title": "On your back",
+            "badge": "11 cm",
+            "text": "Use the lower edge: 11 cm (4.3 in).",
+            "why": "Changed position? Turn the pillow and use the other edge."
+          }
+        },
+        "b3": {
+          "type": "tab",
+          "settings": {
+            "label": "Cover",
+            "icon": "wash",
+            "state": "keep",
+            "title": "The cover",
+            "badge": "Included",
+            "text": "Cool to the touch. It comes off and goes in the washing machine. Spare covers are sold separately."
+          }
+        },
+        "b4": {
+          "type": "tab",
+          "settings": {
+            "label": "Foam",
+            "icon": "feather",
+            "state": "keep",
+            "title": "Memory foam",
+            "text": "It holds its shape all night."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ]
     },
-    "b4": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "contour-01",
-      "title": "10 cm high",
-      "text": "The softer, lower one in the range"
-     }
-    },
-    "b5": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "contour-01",
-      "title": "Gentle wave shape",
-      "text": "Follows the neck and shoulders"
-     }
-    },
-    "b6": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "contour-01",
-      "title": "Cool-touch cover",
-      "text": "Washable, included"
-     }
-    },
-    "b7": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "side-01",
-      "title": "10 cm profile",
-      "text": "Made for sleeping on your side"
-     }
-    },
-    "b8": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "side-01",
-      "title": "Memory foam",
-      "text": "Holds that height all night"
-     }
-    },
-    "b9": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "side-01",
-      "title": "Cover included",
-      "text": "Free shipping"
-     }
-    },
-    "b10": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "body-01",
-      "title": "120 cm, S-shaped",
-      "text": "Knees, arm and back at the same time"
-     }
-    },
-    "b11": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "body-01",
-      "title": "Breathable cover",
-      "text": "Cool to the touch, machine-washable"
-     }
-    },
-    "b12": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "body-01",
-      "title": "Cover included",
-      "text": "Free shipping"
-     }
-    },
-    "b13": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "lounge-01",
-      "title": "23 cm high",
-      "text": "Made for sitting up in bed"
-     }
-    },
-    "b14": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "lounge-01",
-      "title": "Phone and book ledge",
-      "text": "Nothing to hold up"
-     }
-    },
-    "b15": {
-     "type": "bullet",
-     "settings": {
-      "for_handle": "lounge-01",
-      "title": "Cover included",
-      "text": "Free shipping"
-     }
-    },
-    "b16": {
-     "type": "offer",
-     "settings": {
-      "for_handle": "neck-01",
-      "offer_product": "for-two",
-      "label": "2 pillows",
-      "sub": "For Two · free shipping",
-      "components": "neck-01*2",
-      "best": false
-     }
-    },
-    "b17": {
-     "type": "offer",
-     "settings": {
-      "for_handle": "neck-01",
-      "offer_product": "family-set",
-      "label": "3 pillows",
-      "sub": "Family Set · free shipping",
-      "components": "neck-01*3",
-      "best": true
-     }
-    },
-    "b18": {
-     "type": "offer",
-     "settings": {
-      "for_handle": "contour-01",
-      "offer_product": "contour-for-two",
-      "label": "2 pillows",
-      "sub": "Contour for Two · free shipping",
-      "components": "contour-01*2",
-      "best": false
-     }
-    },
-    "b19": {
-     "type": "offer",
-     "settings": {
-      "for_handle": "body-01",
-      "offer_product": "side-sleeper-set",
-      "label": "Body 01 + Neck 01",
-      "sub": "Side-Sleeper Set · free shipping",
-      "components": "body-01*1,neck-01*1",
-      "best": false
-     }
-    },
-    "b20": {
-     "type": "offer",
-     "settings": {
-      "for_handle": "lounge-01",
-      "offer_product": "evening-set",
-      "label": "Lounge 01 + Throw 01",
-      "sub": "Evening Set · free shipping",
-      "components": "lounge-01*1,throw-01*1",
-      "best": false
-     }
+    "related": {
+      "type": "sv7-related",
+      "settings": {
+        "eyebrow": "Complete your night",
+        "heading": "Goes well with it",
+        "fallback_collection": "memory-foam-pillows"
+      },
+      "blocks": {
+        "b1": {
+          "type": "list",
+          "settings": {
+            "for_handle": "neck-01",
+            "products": [
+              "cover-neck",
+              "sleep-set",
+              "body-01"
+            ]
+          }
+        },
+        "b2": {
+          "type": "list",
+          "settings": {
+            "for_handle": "contour-01",
+            "products": [
+              "cover-contour",
+              "contour-for-two",
+              "mask-01"
+            ]
+          }
+        },
+        "b3": {
+          "type": "list",
+          "settings": {
+            "for_handle": "side-01",
+            "products": [
+              "cover-side",
+              "neck-01",
+              "mask-01"
+            ]
+          }
+        },
+        "b4": {
+          "type": "list",
+          "settings": {
+            "for_handle": "body-01",
+            "products": [
+              "cover-body",
+              "side-sleeper-set",
+              "neck-01"
+            ]
+          }
+        },
+        "b5": {
+          "type": "list",
+          "settings": {
+            "for_handle": "lounge-01",
+            "products": [
+              "throw-01",
+              "evening-set",
+              "mask-01"
+            ]
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
     }
-   },
-   "block_order": [
-    "b1",
-    "b2",
-    "b3",
-    "b4",
-    "b5",
-    "b6",
-    "b7",
-    "b8",
-    "b9",
-    "b10",
-    "b11",
-    "b12",
-    "b13",
-    "b14",
-    "b15",
-    "b16",
-    "b17",
-    "b18",
-    "b19",
-    "b20"
-   ]
   },
-  "how": {
-   "type": "sv6-points",
-   "settings": {
-    "style": "steps",
-    "heading": "How it works",
-    "tint": true,
-    "only_for_handle": "neck-01"
-   },
-   "blocks": {
-    "b1": {
-     "type": "point",
-     "settings": {
-      "title": "Pick your edge",
-      "text": "13 cm if you sleep on your side, 11 cm on your back."
-     }
-    },
-    "b2": {
-     "type": "point",
-     "settings": {
-      "title": "Lie down",
-      "text": "The memory foam holds your head at that height all night."
-     }
-    },
-    "b3": {
-     "type": "point",
-     "settings": {
-      "title": "Turn it over",
-      "text": "Changed position? Turn the pillow and use the other edge."
-     }
-    }
-   },
-   "block_order": [
-    "b1",
-    "b2",
-    "b3"
-   ]
-  },
-  "expect": {
-   "type": "sv6-timeline",
-   "settings": {
-    "only_for_handle": "neck-01"
-   },
-   "blocks": {
-    "b1": {
-     "type": "step",
-     "settings": {
-      "marker": "1",
-      "title": "Night 1",
-      "text": "Start on the edge for how you fall asleep."
-     }
-    },
-    "b2": {
-     "type": "step",
-     "settings": {
-      "marker": "2",
-      "title": "Night 2",
-      "text": "Try the other edge. Compare."
-     }
-    },
-    "b3": {
-     "type": "step",
-     "settings": {
-      "marker": "7",
-      "title": "Week 1",
-      "text": "Keep the edge where your head lies level."
-     }
-    },
-    "b4": {
-     "type": "step",
-     "settings": {
-      "marker": "30",
-      "title": "Night 30",
-      "text": "Keep it, or send it back."
-     }
-    }
-   },
-   "block_order": [
-    "b1",
-    "b2",
-    "b3",
-    "b4"
-   ]
-  },
-  "compare": {
-   "type": "sv6-compare",
-   "settings": {
-    "tint": true,
-    "only_for_handle": "neck-01"
-   },
-   "blocks": {
-    "b1": {
-     "type": "row",
-     "settings": {
-      "label": "Two heights (13 & 11 cm)",
-      "us": true,
-      "them": false
-     }
-    },
-    "b2": {
-     "type": "row",
-     "settings": {
-      "label": "Holds its shape all night",
-      "us": true,
-      "them": false
-     }
-    },
-    "b3": {
-     "type": "row",
-     "settings": {
-      "label": "Shaped for the neck",
-      "us": true,
-      "them": false
-     }
-    },
-    "b4": {
-     "type": "row",
-     "settings": {
-      "label": "Washable cover included",
-      "us": true,
-      "them": false
-     }
-    },
-    "b5": {
-     "type": "row",
-     "settings": {
-      "label": "30 nights to try at home",
-      "us": true,
-      "them": false
-     }
-    }
-   },
-   "block_order": [
-    "b1",
-    "b2",
-    "b3",
-    "b4",
-    "b5"
-   ]
-  },
-  "more": {
-   "type": "sv6-cards",
-   "settings": {
-    "heading": "Complete your night"
-   },
-   "blocks": {
-    "b1": {
-     "type": "card",
-     "settings": {
-      "product": "cover-neck",
-      "label": "Spare cover",
-      "spec": "Same fit as the one included"
-     }
-    },
-    "b2": {
-     "type": "card",
-     "settings": {
-      "product": "mask-01",
-      "label": "Sleep mask",
-      "spec": "Nothing presses on the eyelids"
-     }
-    },
-    "b3": {
-     "type": "card",
-     "settings": {
-      "product": "quiet-01",
-      "label": "Earplugs",
-      "spec": "2 pairs with a case"
-     }
-    }
-   },
-   "block_order": [
-    "b1",
-    "b2",
-    "b3"
-   ]
-  },
-  "faq": {
-   "type": "sv6-faq",
-   "settings": {
-    "tint": true
-   },
-   "blocks": {
-    "b1": {
-     "type": "qa",
-     "settings": {
-      "question": "Which height should I use?",
-      "answer": "<p>Neck 01 has two edges: 13 cm (5.1 in) and 11 cm (4.3 in). On your side, start on the higher edge. On your back, the lower one. Keep the edge where your head lies level.</p>",
-      "for_handle": "neck-01"
-     }
-    },
-    "b2": {
-     "type": "qa",
-     "settings": {
-      "question": "How does the 30-night trial work?",
-      "answer": "<p>Sleep on it for up to 30 nights. If it isn't right, write to support@somnila.com and send it back. The exact conditions are in our refund policy.</p>"
-     }
-    },
-    "b3": {
-     "type": "qa",
-     "settings": {
-      "question": "How long does delivery take?",
-      "answer": "<p>Every order leaves within 6–10 days. Shipping is free on every pillow.</p>"
-     }
-    },
-    "b4": {
-     "type": "qa",
-     "settings": {
-      "question": "Can I wash it?",
-      "answer": "<p>The cover comes off and goes in the washing machine. Spare covers are sold separately.</p>"
-     }
-    },
-    "b5": {
-     "type": "qa",
-     "settings": {
-      "question": "How can I pay?",
-      "answer": "<p>Card, Shop Pay, Apple Pay or Google Pay. Checkout is handled by Shopify.</p>"
-     }
-    }
-   },
-   "block_order": [
-    "b1",
-    "b2",
-    "b3",
-    "b4",
-    "b5"
-   ]
-  }
- },
- "order": [
-  "crumbs",
-  "main",
-  "how",
-  "expect",
-  "compare",
-  "more",
-  "faq"
- ]
+  "order": [
+    "main",
+    "details",
+    "heights",
+    "related"
+  ]
 }

@@ -1,167 +1,135 @@
 {
   "sections": {
-    "banner": {
-      "type": "main-collection-banner",
+    "main": {
+      "type": "sv7-collection",
       "settings": {
-        "show_collection_description": true,
-        "show_collection_image": false,
-        "color_scheme": "background-1"
-      }
-    },
-    "grid": {
-      "type": "main-collection-product-grid",
-      "settings": {
-        "products_per_page": 24,
-        "columns_desktop": 3,
-        "stretch_cards": false,
-        "image_ratio": "square",
-        "show_secondary_image": true,
-        "badges": "disabled",
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": true,
-        "swatches_option_name": "Colour",
-        "swatches_position": "bottom",
-        "enable_filtering": false,
-        "filter_type": "horizontal",
-        "enable_sorting": true,
-        "columns_mobile": "2",
-        "padding_top": 24,
-        "padding_bottom": 56
-      }
-    },
-    "trust": {
-      "type": "icon-bar",
+        "show_description": false,
+        "pills_menu": "somnila-shop",
+        "per_page": 24
+      },
       "blocks": {
-        "t1": {
-          "type": "column",
+        "b1": {
+          "type": "info",
           "settings": {
-            "icon": "local_shipping",
-            "filled_icon": false,
-            "title": "Free shipping",
-            "text": "<p>On every pillow and every set, to the US, Canada, the UK, Europe and Australia.</p>"
-          }
-        },
-        "t2": {
-          "type": "column",
-          "settings": {
-            "icon": "schedule",
-            "filled_icon": false,
-            "title": "6–10 days, tracked",
-            "text": "<p>Tracking number by email the day it ships.</p>"
-          }
-        },
-        "t3": {
-          "type": "column",
-          "settings": {
-            "icon": "bedtime",
-            "filled_icon": false,
+            "big": "30",
+            "small": "nights",
             "title": "30-night trial",
-            "text": "<p>Sleep on it. If it isn't right, one email and we refund it.</p>"
+            "text": "Sleep on it at home. If it isn't right, write to us.",
+            "btn": "Trial terms",
+            "btn_url": "shopify://pages/returns-warranty"
           }
         },
-        "t4": {
-          "type": "column",
+        "b2": {
+          "type": "info",
           "settings": {
-            "icon": "local_laundry_service",
-            "filled_icon": false,
-            "title": "Cover included",
-            "text": "<p>Removable and machine washable, on every pillow.</p>"
+            "big": "2+",
+            "small": "pillows",
+            "title": "Sets",
+            "text": "Two or three pillows cost less as a set. The saving is already in the price.",
+            "btn": "Shop sets",
+            "btn_url": "shopify://collections/sets"
+          }
+        },
+        "b3": {
+          "type": "info",
+          "settings": {
+            "big": "6–10",
+            "small": "days",
+            "title": "Free shipping",
+            "text": "On every pillow and every set, to the US, Canada, the UK, Europe, Australia and more.",
+            "btn": "Shipping",
+            "btn_url": "shopify://pages/shipping-delivery"
+          }
+        },
+        "b4": {
+          "type": "pair",
+          "settings": {
+            "for_handle": "neck-01",
+            "pair": "for-two",
+            "components": "neck-01*2",
+            "label": "2 pillows"
+          }
+        },
+        "b5": {
+          "type": "pair",
+          "settings": {
+            "for_handle": "contour-01",
+            "pair": "contour-for-two",
+            "components": "contour-01*2",
+            "label": "2 pillows"
           }
         }
       },
       "block_order": [
-        "t1",
-        "t2",
-        "t3",
-        "t4"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "title": "",
-        "title_highlight_color": "#1E2A3A",
-        "heading_size": "h2",
-        "text": "",
-        "color_scheme": "background-2",
-        "icon_layout": "horizontal",
-        "icon_size": "small",
-        "icon_color": "accent-1",
-        "cards_color_scheme": "background-1",
-        "type": "slide",
-        "autoplay": false,
-        "desktop_full_page": false,
-        "columns_desktop": 4,
-        "slider_desktop": false,
-        "desktop_spacing": 16,
-        "desktop_side_padding": 0,
-        "desktop_padding_calc": true,
-        "desktop_adaptive_height": false,
-        "desktop_dots_position": "hidden",
-        "desktop_arrows_position": "hidden",
-        "columns_mobile": "1",
-        "slider_mobile": true,
-        "mobile_dots_position": "under",
-        "mobile_arrows_position": "hidden",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ]
     },
-    "newsletter": {
-      "type": "newsletter",
+    "sets": {
+      "type": "sv7-volume",
+      "settings": {
+        "pill": "Sets",
+        "heading": "Sleeping in pairs?",
+        "heading_hl": "Save on the set.",
+        "text": "Two or three Neck 01 cost less as a set than one by one. The saving is already in the price.",
+        "example": "family-set",
+        "example_components": "neck-01*3",
+        "example_image": "sv6-tile-family-set.webp",
+        "example_count": "×3",
+        "btn": "Shop the sets",
+        "btn_url": "shopify://collections/sets",
+        "note": "No code needed. The set price already includes the saving."
+      },
       "blocks": {
-        "h": {
-          "type": "heading",
+        "b1": {
+          "type": "chip",
           "settings": {
-            "title": "Notes from the workshop",
-            "title_highlight_color": "#1E2A3A",
-            "heading_size": "h1"
+            "label": "2 pillows",
+            "product": "for-two",
+            "components": "neck-01*2"
           }
         },
-        "p": {
-          "type": "paragraph",
+        "b2": {
+          "type": "chip",
           "settings": {
-            "text": "<p>One email a month at most: what we are making, what we refused to make. No countdowns, no fake sales.</p>"
+            "label": "3 pillows",
+            "product": "family-set",
+            "components": "neck-01*3"
           }
         },
-        "f": {
-          "type": "email_form",
-          "settings": {}
+        "b3": {
+          "type": "chip",
+          "settings": {
+            "label": "Free shipping on every set"
+          }
         }
       },
       "block_order": [
-        "h",
-        "p",
-        "f"
-      ],
-      "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "button_type": "arrow",
-        "button_label": "Sign up",
-        "button_style_secondary": false,
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 64,
-        "padding_bottom": 64
-      }
+        "b1",
+        "b2",
+        "b3"
+      ]
     },
-    "crumbs": {
-      "type": "custom-liquid",
+    "cta": {
+      "type": "sv7-cta",
       "settings": {
-        "display_id": false,
-        "visibility": "always-display",
-        "custom_liquid": "<nav class=\"somnila-crumbs page-width\" aria-label=\"Breadcrumb\"><ol><li><a href=\"{{ routes.root_url }}\">Home</a></li><li><span aria-current=\"page\">{{ collection.title }}</span></li></ol></nav>",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "heading": "Your next 30 nights start here.",
+        "text": "Thirty nights at home, free shipping, and a cover you can wash. The only way to know is to sleep on it.",
+        "btn_1": "Shop the pillows",
+        "btn_1_url": "shopify://collections/memory-foam-pillows",
+        "btn_2": "Read the FAQ",
+        "btn_2_url": "shopify://pages/faq",
+        "image_left": "sv6-cut-neck-01-sky.webp",
+        "image_right": "sv6-cut-neck-01-stone.webp"
       }
     }
   },
   "order": [
-    "crumbs",
-    "banner",
-    "grid",
-    "trust",
-    "newsletter"
+    "main",
+    "sets",
+    "cta"
   ]
 }
