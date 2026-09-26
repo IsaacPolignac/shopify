@@ -1,0 +1,253 @@
+{
+ "job": {
+  "slug": "histoire-d",
+  "url": "https://soya-paris.com/pages/notre-histoire",
+  "mobile": false,
+  "pdp": 0
+ },
+ "loadMs": 2997,
+ "info": {
+  "title": "Notre histoire",
+  "h1": "Notre histoire",
+  "h1s": {
+   "ff": "Roboto, sans-serif",
+   "fs": "56px",
+   "fw": "500",
+   "lh": "61.6px",
+   "ls": "1.4px",
+   "tt": "none",
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 62,
+   "w": 720
+  },
+  "h2s": {
+   "ff": "Roboto, sans-serif",
+   "fs": "44px",
+   "fw": "500",
+   "lh": "48.4px",
+   "ls": "1.1px",
+   "tt": "none",
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 97,
+   "w": 680
+  },
+  "body": {
+   "ff": "Roboto, sans-serif",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "25.6px",
+   "ls": "normal",
+   "tt": "none",
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255, 255, 255)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 6680,
+   "w": 1440
+  },
+  "p": {
+   "ff": "Arial, sans-serif",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "25.6px",
+   "ls": "normal",
+   "tt": "none",
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 26,
+   "w": 680
+  },
+  "btn": {
+   "ff": "Roboto, sans-serif",
+   "fs": "14px",
+   "fw": "400",
+   "lh": "23.8px",
+   "ls": "normal",
+   "tt": "none",
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "4px 40px 4px 24px",
+   "h": 0,
+   "w": 0
+  },
+  "header": {
+   "ff": "Roboto, sans-serif",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "25.6px",
+   "ls": "normal",
+   "tt": "none",
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 115,
+   "w": 1440
+  },
+  "ann": "",
+  "nav": [
+   "Recherche",
+   "Accueil",
+   "Nouveau : Oreiller Soya 3.0",
+   "Best Seller : Oreiller Soya 2.0",
+   "Nos Best Sellers",
+   "Contact",
+   "Suivre votre commande",
+   "SOYA PARIS",
+   "Recherche",
+   "Connexion",
+   "Panier 0",
+   "Accueil",
+   "Nouveau : Oreiller Soya 3.0",
+   "Best Seller : Oreiller Soya 2.0",
+   "Nos Best Sellers",
+   "Contact",
+   "Suivre votre commande",
+   "Compte"
+  ],
+  "secs": [
+   {
+    "id": "sections--32068952785228__header",
+    "y": 58,
+    "h": 115,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "",
+    "text": "Accueil Nouveau : Oreiller Soya 3.0 Best Seller : Oreiller Soya 2.0 Nos Best Sellers Contact Suivre votre commande SOYA PARIS EUR € Recherche Connexion Panier 0"
+   },
+   {
+    "id": "sections--32068952817996__cart-drawer",
+    "y": 174,
+    "h": 0,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "",
+    "text": ""
+   },
+   {
+    "id": "sections--32068952817996__search-drawer",
+    "y": 174,
+    "h": 0,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "",
+    "text": ""
+   },
+   {
+    "id": "template--32068952457548__main",
+    "y": 174,
+    "h": 5702,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "Notre histoire",
+    "text": "Notre histoire Pourquoi avons-nous créé SOYA ? Une vision simple, mais essentielle Chez SOYA, nous pensons qu’un bon sommeil n’est pas un luxe, c’est une nécessité. Et pourtant, combien d’entre nous se réveillent chaque matin avec des douleurs cervicales, lombaires, de la fatigue chronique… ou simplement la sensation de ne jamais vraiment récupérer ? Combien souffrent en silence d’une posture mal alignée, de nuits agitées, de journées gâchées ? Nous croyons que tout le monde mérite un repos profond, réparateur, et un quotidien libéré des douleurs. Notre déclic : une frustration devenue moteur Comme vous, nous avons testé tous les oreillers du marché. Oreillers trop mous qui s’affaissent après quelques semaines, trop fermes qui génèrent de nouvelles douleurs, oreillers qui tiennent chaud, inconfortables ou inefficaces sur la durée. Après avoir dépensé temps et argent sans jamais trouver s"
+   },
+   {
+    "id": "sections--32068952752460__text-with-icons",
+    "y": 5876,
+    "h": 264,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "",
+    "text": "Livraison gratuite Garantie 30 jours Service client 7j/7 Paiements 100% sécurisés"
+   },
+   {
+    "id": "sections--32068952752460__footer",
+    "y": 6140,
+    "h": 541,
+    "bg": "rgb(4, 33, 70)",
+    "head": "",
+    "text": "Inscrivez-vous à notre newsletter pour des offres exclusives et des promotions ! E-mail S'inscrire Qui sommes-nous ? Soya a été fondée par des passionnés du bien-être, conscients du manque de solutions efficaces pour un sommeil réparateur. Leur mission : offrir des produits innovants, durables et orthopédiques pour un repos optimal. Soya allie confort, innovation et bien-être pour transformer vos nuits... En savoir plus Nos politiques Conditions Générales de Vente Politique de confidentialité Retours & Remboursements Your Privacy Choices Mentions légales France (EUR €) © 2026, SOYA PARIS. © 2026"
+   }
+  ],
+  "kf": [
+   "shopify-rotator",
+   "shopify-dash",
+   "acceleratedCheckoutLoadingSkeleton",
+   "pulse",
+   "translateFull",
+   "ping"
+  ],
+  "btns": [
+   "EUR €",
+   "S'inscrire",
+   "France (EUR €)"
+  ],
+  "imgs": 4,
+  "vids": [],
+  "fonts": [
+   "Roboto 500 normal",
+   "Roboto 400 normal",
+   "Roboto 700 normal"
+  ],
+  "vars": {
+   "--text-color": "",
+   "--background": "",
+   "--primary-button-background": "",
+   "--accent": "4 33 70",
+   "--heading-font-family": "Roboto, sans-serif",
+   "--text-font-family": "Roboto, sans-serif",
+   "--button-border-radius": "",
+   "--rounded-button": "0.625rem",
+   "--heading-font-weight": "500",
+   "--container-max-width": "1600px"
+  },
+  "nodes": 1096,
+  "reveal": 0,
+  "H": 6680,
+  "perf": {
+   "dcl": 1740,
+   "load": 2993,
+   "transfer": 203290
+  }
+ },
+ "anims": [],
+ "scrollAnims": [],
+ "reqCount": 326,
+ "bytes": 16286521,
+ "byType": {
+  "document": 203721,
+  "stylesheet": 562311,
+  "script": 5587285,
+  "image": 4283681,
+  "font": 152934,
+  "xhr": 204277,
+  "ping": -672,
+  "fetch": 202023,
+  "other": 5090961
+ },
+ "third": {
+  "api.config-security.com": 2,
+  "conf.config-security.com": 1,
+  "static.klaviyo.com": 25,
+  "shop.app": 2,
+  "cdn.starapps.studio": 1,
+  "translate.freshify.click": 1,
+  "otlp-http-production.shopifysvc.com": 4,
+  "5xfyfp-ti.myshopify.com": 2,
+  "static-tracking.klaviyo.com": 4,
+  "connect.facebook.net": 2,
+  "www.googletagmanager.com": 3,
+  "ct.pinterest.com": 1,
+  "sc-static.net": 1,
+  "analytics.tiktok.com": 2,
+  "fast.a.klaviyo.com": 1,
+  "essential-apps-analytics.herokuapp.com": 1,
+  "fonts.googleapis.com": 1,
+  "www.googleadservices.com": 2,
+  "fonts.gstatic.com": 2,
+  "a.klaviyo.com": 3,
+  "static-forms.klaviyo.com": 1,
+  "tr.snapchat.com": 2,
+  "www.facebook.com": 1,
+  "loox.io": 1,
+  "extensions.shopifycdn.com": 1,
+  "stats.g.doubleclick.net": 1,
+  "d3k81ch9hvuctc.cloudfront.net": 1
+ },
+ "errs": []
+}

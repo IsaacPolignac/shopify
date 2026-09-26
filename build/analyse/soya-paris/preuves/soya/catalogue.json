@@ -1,0 +1,1508 @@
+[
+ {
+  "handle": "housse-doreiller-de-rechange-enfant",
+  "title": "Housse d'oreiller de rechange enfant",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2026-05-09",
+  "updated": "2026-09-25",
+  "published": "2026-05-09",
+  "tags": [
+   "via_enabled"
+  ],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Bleu",
+     "Rose",
+     "Jaune"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Bleu",
+    "price_eur": "29.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rose",
+    "price_eur": "29.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Jaune",
+    "price_eur": "29.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 3,
+  "image_count": 6,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Conçue spécialement pour l’Oreiller Soya Enfant, cette housse de rechange allie douceur, fraîcheur et praticité pour accompagner les nuits de votre enfant au quotidien. Fabriquée à partir de matières respirantes et hypoallergéniques, elle aide à maintenir un environnement de sommeil plus sain et plus confortable, nuit après nuit. Son effet soie glacée, inspiré des matières ice silk, procure une sensation de fraîcheur agréable tout en limitant la transpiration pendant le sommeil. Facile à retirer grâce à sa fermeture discrète, elle est lavable en machine pour un entretien simple et rapide. Pensée pour s’adapter parfaitement à l’oreiller SOYA Enfant, elle permet de conserver un confort optimal tout au long de sa croissance."
+ },
+ {
+  "handle": "oreiller-soya-enfant",
+  "title": "Oreiller Soya enfant",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2026-05-09",
+  "updated": "2026-09-25",
+  "published": "2026-05-09",
+  "tags": [
+   "via_enabled"
+  ],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Bleu",
+     "Rose",
+     "Jaune"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Bleu",
+    "price_eur": "99.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rose",
+    "price_eur": "99.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Jaune",
+    "price_eur": "99.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 3,
+  "image_count": 21,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Accompagnez ses nuits avec l’Oreiller Soya Enfant Conçu spécialement pour les enfants de 4 à 12 ans, cet oreiller ergonomique évolutif offre un soutien adapté à chaque étape de leur croissance, pour des nuits plus sereines et un réveil tout en légèreté. Réveil plus confortable, sans tensions : Grâce à sa mousse à mémoire de forme adaptée, l’oreiller épouse délicatement la tête et la nuque de votre enfant. Il aide à réduire les points de pression pour un sommeil plus profond et un réveil sans gêne. Alignement naturel en pleine croissance : Sa conception ergonomique favorise un bon alignement de la tête et du cou, essentiel pendant les années de développement. Chaque zone est pensée pour accompagner sa posture, quelle que soit sa position de sommeil. Fraîcheur & hygiène au quotidien : Sa housse respirante et hypoallergénique régule la température pendant la nuit et limite la transpiration. Son effet soie glacée, inspiré des matières ice silk, procure une sensation de fraîcheur immédiate pour un sommeil plus agréable. Confort évolutif : Parce que chaque enfant est différent, l’oreiller s’adapte facilement à sa morphologie grâce à son système ajustable. Vous pouvez modifier la hauteur pour lui offrir un soutien parfaitement adapté, année après année. Pensé pour bien grandir, nuit après nuit : L’Oreiller Soya Enfant accompagne votre enfant dans ses nuits comme dans sa croissance, en alliant confort, soutien et sérénité."
+ },
+ {
+  "handle": "oreiller-de-voyage-ergonomique-soya",
+  "title": "Oreiller de Voyage Ergonomique Soya",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Gris",
+     "Bleu marine",
+     "Rouge",
+     "Vert"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Gris",
+    "price_eur": "24.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu marine",
+    "price_eur": "24.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rouge",
+    "price_eur": "24.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Vert",
+    "price_eur": "24.90",
+    "compare_at_eur": "0.00",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 4,
+  "image_count": 7,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Voyagez dans le confort total avec l’ Oreiller de Voyage Soya . Conçu pour offrir un soutien personnalisé à votre cou et votre dos, il s’adapte parfaitement à vos besoins grâce à sa mousse à mémoire de forme et son design ajustable. Soutien Personnalisé : Offrez à votre cou et dos un soutien optimal avec sa mousse qui épouse vos formes. Confort Ajustable : Modifiez facilement la forme de l’oreiller pour un soutien sur mesure, quel que soit votre position. Tissu Doux et Respirant : Profitez d’un tissu agréable et respirant, parfait pour garder la fraîcheur pendant vos trajets. Compact et Pratique : Léger et facilement compressible pour un transport sans encombrement. Parfait pour vos déplacements, l’ Oreiller de Voyage Soya assure confort et soutien à chaque étape de votre voyage !"
+ },
+ {
+  "handle": "draps-en-soie-naturelle-soya",
+  "title": "Draps en Soie Naturelle Soya",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Blanc",
+     "Rose",
+     "Bleu",
+     "Beige",
+     "Gris",
+     "Bleu marine",
+     "Vert",
+     "Or"
+    ]
+   },
+   {
+    "name": "Taille",
+    "values": [
+     "90x190cm",
+     "120x200cm",
+     "140x190cm",
+     "160x200cm",
+     "180x200cm",
+     "200x200 cm"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Blanc / 90x190cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 120x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 140x190cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 160x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 180x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 200x200 cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rose / 90x190cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rose / 120x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rose / 140x190cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rose / 160x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rose / 180x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Rose / 200x200 cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / 90x190cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / 120x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / 140x190cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / 160x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / 180x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / 200x200 cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige / 90x190cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige / 120x200cm",
+    "price_eur": "49.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 48,
+  "image_count": 10,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Les draps en soie naturelle de mûrier Soya sont conçus pour transformer votre sommeil en une expérience de confort ultime. Leur texture douce et soyeuse est idéale pour ceux qui cherchent à allier luxe et bien-être, tout en prenant soin de leur peau et de leurs cheveux. Ultra-Douceur et Confort Naturel : La soie de mûrier, reconnue pour sa douceur exceptionnelle, glisse délicatement sur la peau et réduit les frictions. Un choix idéal pour préserver la jeunesse de votre peau et la santé de vos cheveux. Thermorégulation : Parfaites pour toutes les saisons, les fibres de soie naturelle Soya régulent la température de votre corps, gardant votre lit frais en été et agréablement chaud en hiver. Hypoallergénique et Respirant : Naturellement hypoallergéniques, nos draps en soie repoussent les acariens et minimisent les risques d’allergies. Le tissu respirant offre une aération optimale, assurant un sommeil sain et confortable. Élégance et Durabilité : Confectionnés avec des coutures solides et une finition raffinée, ces draps apportent une touche d’élégance intemporelle à votre chambre, tout en offrant une grande résistance à l’usure. Optez pour les draps en soie naturelle Soya et faites de votre lit un véritable sanctuaire de luxe et de bien-être."
+ },
+ {
+  "handle": "housse-de-couette-en-soie-naturelle-soya",
+  "title": "Housse de Couette en Soie Naturelle Soya",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Blanc",
+     "Gris",
+     "Beige",
+     "Vert",
+     "Noir",
+     "Rose",
+     "Rouge",
+     "Bleu"
+    ]
+   },
+   {
+    "name": "Taille",
+    "values": [
+     "140x200cm",
+     "150x200cm",
+     "160x200cm",
+     "160x220cm",
+     "180x200cm",
+     "180x220cm",
+     "200x200cm",
+     "200x220cm",
+     "200x240cm",
+     "220x200cm",
+     "220x240cm",
+     "240x260cm"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Blanc / 140x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 150x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 160x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 160x220cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 180x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 180x220cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 200x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 200x220cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 200x240cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 220x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 220x240cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / 240x260cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / 140x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / 150x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / 160x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / 160x220cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / 180x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / 180x220cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / 200x200cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / 200x220cm",
+    "price_eur": "44.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 96,
+  "image_count": 10,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Offrez-vous un confort luxueux avec la housse de couette en soie naturelle de mûrier de Soya. Conçue à partir de soie de mûrier de qualité supérieure, cette housse de couette est la solution idéale pour ceux qui recherchent à la fois élégance et bien-être. Disponible en plusieurs tailles, elle s’adapte parfaitement aux lits simples, doubles et king size, tout en ajoutant une touche de sophistication à votre chambre. Soie Naturelle de Mûrier : Fabriquée à partir de la soie la plus pure et la plus douce, cette housse de couette offre une sensation de légèreté et de confort inégalée. Parfait pour réguler la température, la soie est respirante, gardant votre corps au frais en été et au chaud en hiver. Design Élégant et Intemporel : Son design uni en couleurs classiques ajoute une touche de raffinement à tout type de décoration, créant ainsi une atmosphère apaisante et luxueuse. Hypoallergénique et Sain : Idéale pour les personnes ayant des allergies ou une peau sensible, la soie naturelle de mûrier est naturellement hypoallergénique et aide à prévenir les irritations cutanées, garantissant un sommeil sain et paisible. Entretien Facile : Dotée d'une finition soignée et de coutures renforcées, cette housse de couette est conçue pour durer. Sa fermeture à glissière invisible permet de changer facilement votre couette tout en assurant un ajustement parfait. Disponible en Plusieurs Tailles : Que ce soit pour un lit simple, double ou king size, cette housse de couette en soie Soya est disponible dans une gamme de tailles pour s’adapter parfaitement à votre confort. Transformez vos nuits en une expérience de luxe avec la housse de couette en soie Soya, conçue pour vous offrir douceur, confort et élégance tout au long de l’année."
+ },
+ {
+  "handle": "housse-d-oreiller-en-soie-naturelle-soya",
+  "title": "Housse d’Oreiller en Soie Naturelle Soya",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Blanc",
+     "Bleu",
+     "Bleu marine",
+     "Rose"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Blanc",
+    "price_eur": "29.90",
+    "compare_at_eur": "69.90",
+    "available": true,
+    "sku": "SOY_HOS_BLA",
+    "grams": 0
+   },
+   {
+    "title": "Bleu",
+    "price_eur": "29.90",
+    "compare_at_eur": "69.90",
+    "available": true,
+    "sku": "SOY_HOS_BLE",
+    "grams": 0
+   },
+   {
+    "title": "Bleu marine",
+    "price_eur": "29.90",
+    "compare_at_eur": "69.90",
+    "available": true,
+    "sku": "SOY_HOS_BLM",
+    "grams": 0
+   },
+   {
+    "title": "Rose",
+    "price_eur": "29.90",
+    "compare_at_eur": "69.90",
+    "available": true,
+    "sku": "SOY_HOS_ROS",
+    "grams": 0
+   }
+  ],
+  "variant_count": 4,
+  "image_count": 6,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "La housse d’oreiller en soie naturelle de Soya est parfaitement compatible avec l’Oreiller Orthopédique Soya 2.0, offrant ainsi une expérience de sommeil ultime. Apportez une touche de luxe à vos nuits avec cette taie d'oreiller fabriquée à partir de la meilleure soie de mûrier. Sa texture douce et soyeuse est conçue pour offrir un confort supérieur tout en prenant soin de votre peau et de vos cheveux. Caractéristiques : Ultra Douceur et Confort : La soie naturelle de mûrier est réputée pour sa texture lisse et douce qui réduit les frictions, aidant ainsi à prévenir les frisottis et les pointes fourchues. Soin de la Peau : Grâce à ses propriétés hypoallergéniques et respirantes, la soie aide à maintenir l’hydratation naturelle de la peau, réduisant ainsi l’apparition des rides et des plis. Température Régulée : Idéale pour toutes les saisons, cette taie d'oreiller reste fraîche en été et chaude en hiver. Durabilité et Élégance : Conçue avec des coutures renforcées et une finition raffinée, elle apporte une touche d'élégance à votre lit tout en offrant une résistance à l'usure. Dimensions : Standard : 50 x 66 cm Transformez votre sommeil en une expérience de luxe avec la housse d’oreiller en soie Soya. Ajoutez-la à votre oreiller orthopédique Soya 2.0 pour maximiser votre confort nocturne et profitez d’un sommeil réparateur et de réveils en pleine forme."
+ },
+ {
+  "handle": "oreiller-soya-2-0",
+  "title": "Oreiller Soya 2.0",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "119.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": "SOY_PIL_2.0",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 9,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Transformez vos nuits avec l’Oreiller Soya 2.0 L’oreiller ergonomique pensé pour aligner votre corps, soulager vos douleurs et vous offrir enfin un vrai sommeil réparateur. Réveil sans douleur : Dès les premières nuits, les tensions disparaissent. La mousse à mémoire de forme épouse vos courbes et soulage cou, nuque et trapèzes — pour un réveil léger, sans raideur. Alignement orthopédique validé : Sa forme unique en “papillon” suit la courbe naturelle de votre colonne vertébrale. Résultat : meilleure posture, moins de douleurs, confort optimisé dans toutes les positions. Alignement Orthopédique : La conception innovante de Soya assure un alignement parfait de la colonne vertébrale. Son centre « Encoche Orthopédique » ultra-doux est idéal pour les dormeurs sur le dos, et ses contours latéraux accueillent confortablement les bras des dormeurs sur le côté. Fraîcheur & hygiène maximale : Sa housse respirante enrichie en ions d’argent garde votre oreiller frais, propre et hypoallergénique toute la nuit. Confort sur-mesure : Adapté à toutes les morphologies, il soutient parfaitement la tête, les cervicales et les bras, même en mouvement. Plus de 10 0 000 dormeurs ont déjà transformé leurs nuits avec l’Oreiller Soya. Pourquoi pas vous ?"
+ },
+ {
+  "handle": "couette-rafraichissante-soyafresh",
+  "title": "Couette rafraîchissante SoyaFresh",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Blanc",
+     "Beige",
+     "Gris",
+     "Bleu",
+     "Bleu marine"
+    ]
+   },
+   {
+    "name": "Taille",
+    "values": [
+     "Twin 150x200cm",
+     "Queen 180x200cm",
+     "King 200x230cm"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Blanc / Twin 150x200cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "99.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / Queen 180x200cm",
+    "price_eur": "89.90",
+    "compare_at_eur": "119.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / King 200x230cm",
+    "price_eur": "99.90",
+    "compare_at_eur": "129.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige / Twin 150x200cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "99.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige / Queen 180x200cm",
+    "price_eur": "89.90",
+    "compare_at_eur": "119.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige / King 200x230cm",
+    "price_eur": "99.90",
+    "compare_at_eur": "129.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / Twin 150x200cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "99.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / Queen 180x200cm",
+    "price_eur": "89.90",
+    "compare_at_eur": "119.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / King 200x230cm",
+    "price_eur": "99.90",
+    "compare_at_eur": "129.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / Twin 150x200cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "99.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / Queen 180x200cm",
+    "price_eur": "89.90",
+    "compare_at_eur": "119.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / King 200x230cm",
+    "price_eur": "99.90",
+    "compare_at_eur": "129.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu marine / Twin 150x200cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "99.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu marine / Queen 180x200cm",
+    "price_eur": "89.90",
+    "compare_at_eur": "119.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu marine / King 200x230cm",
+    "price_eur": "99.90",
+    "compare_at_eur": "129.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 15,
+  "image_count": 10,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Transformez vos nuits avec SoyaFresh Pensés pour les dormeurs exigeants, nos textiles rafraîchissants combinent innovation, douceur et respirabilité — pour un confort maximal, même en plein été. Fraîcheur immédiate et durable: Grâce à sa technologie thermorégulatrice avancée, le tissu SoyaFresh absorbe l’excès de chaleur et procure une sensation de fraîcheur dès que vous vous glissez au lit. Un vrai soulagement pour les nuits chaudes ou agitées. Douceur nuageuse et confort respirant : Sa texture soyeuse et légère glisse sur la peau sans coller, tout en laissant l’air circuler librement. Fini les réveils en sueur ou les draps étouffants. Hygiène parfaite et entretien facile : Hypoallergéniques, lavables en machine et certifiés OEKO-TEX®, nos draps et couettes SoyaFresh résistent à l’humidité, aux odeurs et conservent leur fraîcheur lavage après lavage. Conçu pour les nuits complètes, sans interruption : La technologie anti-humidité garde votre corps au sec et à température stable. Résultat : un endormissement plus rapide, moins de réveils nocturnes… et un vrai sommeil réparateur. Déjà adoptés par des milliers de dormeurs en quête de fraîcheur — les produits SoyaFresh changent les règles du confort nocturne"
+ },
+ {
+  "handle": "draps-rafraichissants-soyafresh",
+  "title": "Draps rafraîchissants SoyaFresh",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Blanc",
+     "Beige",
+     "Gris",
+     "Bleu",
+     "Bleu marine"
+    ]
+   },
+   {
+    "name": "Taille",
+    "values": [
+     "Twin 150x200cm",
+     "Queen 180x200cm",
+     "King 200x230cm"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Blanc / Twin 150x200cm",
+    "price_eur": "54.90",
+    "compare_at_eur": "79.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / Queen 180x200cm",
+    "price_eur": "69.90",
+    "compare_at_eur": "89.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc / King 200x230cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "100.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige / Twin 150x200cm",
+    "price_eur": "54.90",
+    "compare_at_eur": "79.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige / Queen 180x200cm",
+    "price_eur": "69.90",
+    "compare_at_eur": "89.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige / King 200x230cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "100.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / Twin 150x200cm",
+    "price_eur": "54.90",
+    "compare_at_eur": "79.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / Queen 180x200cm",
+    "price_eur": "69.90",
+    "compare_at_eur": "89.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris / King 200x230cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "100.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / Twin 150x200cm",
+    "price_eur": "54.90",
+    "compare_at_eur": "79.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / Queen 180x200cm",
+    "price_eur": "69.90",
+    "compare_at_eur": "89.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu / King 200x230cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "100.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu marine / Twin 150x200cm",
+    "price_eur": "54.90",
+    "compare_at_eur": "79.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu marine / Queen 180x200cm",
+    "price_eur": "69.90",
+    "compare_at_eur": "89.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu marine / King 200x230cm",
+    "price_eur": "79.90",
+    "compare_at_eur": "100.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 15,
+  "image_count": 9,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Transformez vos nuits avec SoyaFresh Pensés pour les dormeurs exigeants, nos textiles rafraîchissants combinent innovation, douceur et respirabilité — pour un confort maximal, même en plein été. Fraîcheur immédiate et durable: Grâce à sa technologie thermorégulatrice avancée, le tissu SoyaFresh absorbe l’excès de chaleur et procure une sensation de fraîcheur dès que vous vous glissez au lit. Un vrai soulagement pour les nuits chaudes ou agitées. Douceur nuageuse et confort respirant : Sa texture soyeuse et légère glisse sur la peau sans coller, tout en laissant l’air circuler librement. Fini les réveils en sueur ou les draps étouffants. Hygiène parfaite et entretien facile : Hypoallergéniques, lavables en machine et certifiés OEKO-TEX®, nos draps et couettes SoyaFresh résistent à l’humidité, aux odeurs et conservent leur fraîcheur lavage après lavage. Conçu pour les nuits complètes, sans interruption : La technologie anti-humidité garde votre corps au sec et à température stable. Résultat : un endormissement plus rapide, moins de réveils nocturnes… et un vrai sommeil réparateur. Déjà adoptés par des milliers de dormeurs en quête de fraîcheur — les produits SoyaFresh changent les règles du confort nocturne"
+ },
+ {
+  "handle": "oreiller-soya-3-0",
+  "title": "Oreiller Soya 3.0",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [
+   "via_enabled"
+  ],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Blanc",
+     "Bleu",
+     "Gris",
+     "Beige"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Blanc",
+    "price_eur": "139.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Bleu",
+    "price_eur": "139.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris",
+    "price_eur": "139.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige",
+    "price_eur": "139.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 4,
+  "image_count": 48,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Transformez vos nuits avec l’Oreiller Soya 3.0 L’évolution ultime de notre oreiller ergonomique, conçu pour offrir un soutien encore plus précis, une fraîcheur durable et un confort sur-mesure. Réveil sans douleur renforcé : Grâce à sa nouvelle mousse à mémoire de forme haute densité 3.0, l’oreiller épouse vos courbes avec encore plus de précision. Cou, nuque et trapèzes sont parfaitement soutenus, pour un réveil léger, sans tension ni raideur. Alignement orthopédique optimisé : Sa conception revisitée améliore le maintien de la colonne vertébrale. Le centre « Encoche Orthopédique 3.0 » offre un accueil ultra-doux pour les dormeurs sur le dos, tandis que ses ailettes latérales élargies soutiennent mieux les bras et les épaules des dormeurs sur le côté. Fraîcheur & hygiène nouvelle génération : Sa housse premium enrichie en fibres respirantes et ions d’argent 3.0 régule encore mieux la température, limite la transpiration et reste hypoallergénique nuit après nuit. Confort évolutif : Plus adaptable que jamais, le Soya 3.0 s’ajuste naturellement à toutes les morphologies et positions de sommeil. Sa nouvelle structure anti-pression permet un relâchement total, même en cas de mouvements nocturnes. Déjà adopté par des dizaines de milliers de dormeurs, le Soya 3.0 repousse les limites du confort et de la santé du sommeil."
+ },
+ {
+  "handle": "housse-d-oreiller-de-rechange-soya-3-0",
+  "title": "Housse d’Oreiller de Rechange Soya 3.0",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [
+   "via_enabled"
+  ],
+  "options": [
+   {
+    "name": "Couleur",
+    "values": [
+     "Bleu",
+     "Blanc",
+     "Gris",
+     "Beige"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Bleu",
+    "price_eur": "17.90",
+    "compare_at_eur": "39.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Blanc",
+    "price_eur": "17.90",
+    "compare_at_eur": "39.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Gris",
+    "price_eur": "17.90",
+    "compare_at_eur": "39.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   },
+   {
+    "title": "Beige",
+    "price_eur": "17.90",
+    "compare_at_eur": "39.90",
+    "available": true,
+    "sku": null,
+    "grams": 0
+   }
+  ],
+  "variant_count": 4,
+  "image_count": 16,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Offrez une nouvelle vie à votre oreiller SOYA 3.0 avec nos Housses de Rechange SOYA , conçues sur mesure pour s’adapter parfaitement à votre oreiller. Disponibles en blanc, bleu et beige , elles allient élégance, confort et praticité. Matière Premium & Hypoallergénique : Douces au toucher et adaptées aux peaux sensibles, elles assurent un confort sain nuit après nuit. Durabilité Renforcée : Fermeture éclair solide et coutures soignées pour une housse qui dure dans le temps. Entretien Facile : Amovibles et lavables en machine, elles restent propres et fraîches sans effort. Dimensions Parfaites : Conçues pour épouser les contours précis du SOYA 3.0 (60 x 40 cm, deux hauteurs intégrées). 3 Coloris Élégants : Blanc intemporel, Bleu apaisant, Beige naturel — pour harmoniser votre literie selon vos envies. Un accessoire indispensable pour prolonger la durée de vie de votre SOYA 3.0, et personnaliser vos nuits avec une touche de fraîcheur et d’élégance."
+ },
+ {
+  "handle": "oreiller-soya-1-0",
+  "title": "Oreiller Soya 1.0",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "34.90",
+    "compare_at_eur": "49.90",
+    "available": true,
+    "sku": "SOY_PIL_1.0",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 5,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Profitez d’un confort absolu avec l’oreiller ergonomique en mousse à mémoire de forme Soya 1.0. Conçu pour offrir un soutien optimal à votre tête et à votre cou, cet oreiller est parfait pour garantir un sommeil réparateur chaque nuit. Soutien Ergonomique Optimal : Grâce à sa mousse à mémoire de forme de haute qualité, cet oreiller épouse parfaitement la forme de votre tête et de votre cou, offrant ainsi un soutien adapté pour chaque position de sommeil et réduisant les points de pression. Confort Adapté à Toutes les Positions : Que vous dormiez sur le côté, sur le dos ou sur le ventre, l’oreiller Soya 1.0 vous procure un confort constant et aide à maintenir un alignement parfait de la colonne vertébrale. Conception Pratique et Hygiénique : Sa housse amovible et lavable en machine permet de maintenir l’oreiller propre et frais, tout en vous garantissant un sommeil sain. Design Moderne et Élégant : Disponible dans une couleur neutre et chic, l’oreiller Soya 1.0 s’adapte à toutes les chambres, apportant confort et style à votre espace de repos. L’oreiller Soya 1.0 est la solution idéale pour soulager les tensions au niveau du cou et améliorer votre posture pendant votre sommeil. Offrez-vous un confort sans compromis avec cet oreiller ergonomique de qualité."
+ },
+ {
+  "handle": "masque-de-sommeil-en-soie",
+  "title": "Masque de Sommeil en Soie Naturelle",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "29.90",
+    "compare_at_eur": "59.90",
+    "available": true,
+    "sku": "SOY_MSK_SOI",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 3,
+  "image_alts": [
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Améliorez la qualité de votre sommeil où que vous soyez avec le masque de sommeil en soie naturelle SOYA. Doux, rembourré et parfaitement ajusté, il bloque efficacement la lumière pour vous offrir un sommeil ininterrompu. Idéal pour les voyages, les siestes de l'après-midi, ou simplement pour se détendre, ce masque de sommeil en soie réduit la pression sur les yeux tout en offrant une sensation de confort ultime. Faites l'expérience d'un sommeil profond et réparateur avec le masque de sommeil en soie de SOYA."
+ },
+ {
+  "handle": "housse-d-oreiller-de-rechange-soya-1",
+  "title": "Housse d’Oreiller de Rechange Soya 2.0",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "11.90",
+    "compare_at_eur": "29.90",
+    "available": true,
+    "sku": "SOY_HOR",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 4,
+  "image_alts": [
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Offrez à votre oreiller Soya un nouveau souffle avec la Housse d’Oreiller de Rechange Soya, conçue pour s’adapter parfaitement à l’Oreiller Orthopédique Soya. Idéale pour remplacer votre taie d’origine ou disposer d’une option supplémentaire, cette housse allie durabilité, confort et facilité d’entretien. Caractéristiques : Matériau de Haute Qualité : Fabriquée à partir d’un mélange hypoallergénique de rayon et de polyester, cette housse est douce, résistante et adaptée aux peaux sensibles. Durabilité Renforcée : Avec une fermeture éclair solide et des coutures renforcées, elle est pensée pour durer et conserver sa qualité au fil du temps. Facilité d’Entretien : Amovible et lavable en machine, elle reste propre et fraîche en toute simplicité. Dimensions Parfaites : Conçue pour s’adapter aux oreillers Soya 60 x 40 x 11/13 cm, elle garantit un ajustement impeccable. Compatibilité : Cette housse est un complément idéal pour votre oreiller Soya, mais n’inclut pas le noyau en mousse à mémoire de forme. Ajoutez une touche de fraîcheur à vos nuits avec la Housse d’Oreiller de Rechange Soya. Sa qualité et son confort en font l’accessoire parfait pour prolonger la vie de votre oreiller tout en améliorant votre expérience de sommeil."
+ },
+ {
+  "handle": "ensemble-de-coussins-orthopediques",
+  "title": "Ensemble de Coussins de siège Orthopédiques",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "39.90",
+    "compare_at_eur": "49.90",
+    "available": true,
+    "sku": "SOY_ECO",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 4,
+  "image_alts": [
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "L'ensemble de coussins orthopédiques en mousse à mémoire de forme Soya est conçu pour offrir un soutien optimal et un confort supérieur, que ce soit au bureau, en voiture, ou à la maison. Parfait pour ceux qui passent de longues heures assis, cet ensemble combine un coussin de soutien pour le coccyx et un coussin lombaire pour soulager la pression sur le bas du dos et améliorer la posture. Soutien Ergonomique pour le Coccyx : Le coussin de siège en mousse à mémoire de forme réduit la pression sur le coccyx, favorisant ainsi une posture correcte et soulageant les douleurs au bas du dos et aux hanches. Coussin Lombaire pour un Confort Maximal : Le coussin de soutien lombaire s’adapte parfaitement à la courbe naturelle de votre colonne vertébrale, offrant un support supplémentaire pour le dos et soulageant la fatigue musculaire. Matériaux de Qualité Supérieure : Fabriqué en mousse à mémoire de forme durable et hypoallergénique, cet ensemble s'adapte aux contours de votre corps tout en maintenant un soutien ferme. Polyvalence et Utilisation Multiple : Idéal pour les chaises de bureau, les sièges de voiture, les fauteuils roulants et même à la maison, cet ensemble est parfait pour les personnes cherchant un soulagement des douleurs dues à une position assise prolongée. Design Antidérapant et Housse Lavable : Chaque coussin est doté d’une base antidérapante pour une utilisation sécurisée, et sa housse amovible est facile à retirer et à laver en machine. Transformez n'importe quel siège en un espace de confort ergonomique avec cet ensemble de coussins Soya, votre allié pour un soutien de qualité et un bien-être durable tout au long de la journée."
+ },
+ {
+  "handle": "ensemble-doreillers-reglables",
+  "title": "Ensemble d'Oreillers Réglables",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "69.90",
+    "compare_at_eur": "74.90",
+    "available": true,
+    "sku": "SOY_EOR",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 3,
+  "image_alts": [
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Découvrez un confort de luxe avec l’ensemble d'oreillers réglables Soya, conçu pour offrir un soutien orthopédique optimal pour le dos, le cou et les jambes. Que vous dormiez, soyez assis ou que vous cherchiez à soulager des conditions comme le reflux acide, cet ensemble est la solution idéale. Soutien Orthopédique Complet : Grâce à la mousse à mémoire de forme de qualité supérieure, chaque oreiller épouse les contours de votre corps pour un soutien personnalisé, soulageant les tensions et les douleurs musculaires. Inclinaison Réglable : Les oreillers sont spécialement conçus pour vous permettre de personnaliser l’inclinaison, favorisant une meilleure posture que vous soyez allongé ou assis. Soulagement des Maux : Cet ensemble est parfait pour les personnes souffrant de douleurs chroniques, de reflux acide ou d'autres troubles, en maintenant votre corps dans une position optimale pour un confort et un soulagement prolongés. Tissu Respirant et Facile à Transporter : Recouverts d'un tissu respirant et doux, ces oreillers vous garantissent une fraîcheur pendant la nuit. De plus, la poignée portable intégrée facilite le transport pour un usage à la maison ou en déplacement. Polyvalence Ultime : Utilisez cet ensemble pour dormir, vous détendre, lire ou même pour améliorer votre circulation sanguine en surélevant vos jambes. L’ensemble d'oreillers réglables Soya est conçu pour améliorer votre qualité de vie, en vous offrant un soutien optimal et un confort exceptionnel."
+ },
+ {
+  "handle": "couverture-lestee-therapeutique",
+  "title": "Couverture Lestée Anti-Stress & Thérapeutique",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "79.90",
+    "compare_at_eur": "158.90",
+    "available": true,
+    "sku": "SOY_BLK_GRI_150x200",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 3,
+  "image_alts": [
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Couverture lestée Soya – Confort et Bien-être au Quotidien Découvrez l’expérience unique de la couverture lestée Soya, conçue pour apporter une sensation enveloppante et apaisante. Fabriquée avec des matériaux doux et premium, elle procure une agréable sensation de réconfort tout au long de la journée et de la nuit. Un confort ultime : Grâce à sa surface en flanelle douce et sa face réversible en polaire Sherpa, cette couverture vous enveloppe d’une chaleur agréable et d’un toucher ultra-doux. Une sensation de bien-être naturel : Son poids réparti uniformément crée une pression douce et apaisante, offrant un confort optimal et une détente profonde. Une expérience de sommeil améliorée : Idéale pour favoriser une atmosphère relaxante et une nuit paisible, elle accompagne votre routine pour un repos plus agréable. Polyvalente et cosy : Que ce soit pour un moment cocooning sur le canapé ou pour profiter d’une nuit confortable, la couverture lestée Soya s’adapte à tous vos instants de détente. Facile à entretenir : Conçue pour un usage quotidien, elle est durable et lavable, garantissant fraîcheur et confort à chaque utilisation. Transformez chaque instant de repos en un véritable moment de douceur et de bien-être avec la couverture lestée Soya. Un essentiel pour profiter d’un confort absolu jour après jour."
+ },
+ {
+  "handle": "coussin-lombaire-ergonomique-soya",
+  "title": "Coussin Lombaire Ergonomique Soya",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "49.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": "SOY_CLE",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 5,
+  "image_alts": [
+   "",
+   "",
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Offrez à votre dos un soutien digne de ce nom avec le Coussin Lombaire Ergonomique Soya . Conçu pour stabiliser le corps et améliorer la posture, ce coussin innovant est l’accessoire idéal pour soulager les tensions lombaires et garantir un confort optimal tout au long de la journée. Alignement Naturel : Grâce à sa mousse à mémoire de forme de haute qualité, le coussin épouse parfaitement la courbure de votre dos, assurant un alignement naturel de la colonne vertébrale. Ce soutien ergonomique aide à maintenir une posture idéale, réduisant ainsi les douleurs lombaires et cervicales. Soutien du Corps : Le coussin Soya stabilise votre corps, empêchant toute torsion ou rotation indésirable de la colonne vertébrale. Son design unique offre un soutien pelvien optimal, permettant une relaxation maximale de votre bas du dos et une répartition équilibrée des pressions. Confort Pelvien Ergonomique : Le coussin est spécialement conçu pour soulager la pression sur la région pelvienne et lombaire, offrant ainsi un confort exceptionnel. Il est idéal pour les personnes ayant des douleurs chroniques ou une posture incorrecte en position assise ou allongée. Polyvalence d’Utilisation : Que vous soyez assis sur votre fauteuil de bureau, dans votre voiture ou en train de vous détendre dans votre canapé, le coussin lombaire Soya s’adapte à toutes les positions, apportant un soutien constant pour votre dos. Il est également parfait pour soulager les douleurs après une longue journée de travail. Design Pratique et Élégant : Avec sa housse douce et lavable, le coussin lombaire Soya combine confort et facilité d’entretien. Son design moderne s’intègre discrètement à votre espace, apportant une touche de raffinement tout en restant pratique et fonctionnel. Un Confort Inégalé : Ne laissez pas les douleurs lombaires gêner votre quotidien. Avec le Coussin Lombaire Ergonomique Soya , offrez à votre dos un soutien personnalisé et une posture optimale pour profiter pleinement de vos journées."
+ },
+ {
+  "handle": "coussin-ergonomique-avec-tete-de-lit",
+  "title": "Coussin Ergonomique avec Tête de Lit",
+  "vendor": "SOYA PARIS",
+  "type": "",
+  "created": "2025-10-19",
+  "updated": "2026-09-25",
+  "published": "2025-10-19",
+  "tags": [],
+  "options": [
+   {
+    "name": "Title",
+    "values": [
+     "Default Title"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "title": "Default Title",
+    "price_eur": "42.90",
+    "compare_at_eur": null,
+    "available": true,
+    "sku": "SOY_CET",
+    "grams": 0
+   }
+  ],
+  "variant_count": 1,
+  "image_count": 3,
+  "image_alts": [
+   "",
+   "",
+   ""
+  ],
+  "description_text": "Profitez d'un confort absolu avec le coussin ergonomique en mousse à mémoire de forme de Soya. Parfait pour le soutien du dos, des jambes et des genoux, ce coussin est idéal pour les moments de détente ou de lecture au lit. Soutien Ergonomique Complet : Grâce à sa mousse à mémoire de forme de haute qualité, ce coussin épouse parfaitement les courbes de votre dos et de vos jambes, offrant un soutien optimal et réduisant les points de pression. Polyvalence : Que ce soit pour la lecture, le repos ou pour soulager les tensions dans le dos, les genoux ou les jambes, ce coussin s’adapte à vos besoins pour un confort prolongé. Conception Pratique : Ce coussin est équipé d'une tête de lit pour un soutien supplémentaire, améliorant ainsi votre posture lorsque vous êtes assis dans votre lit. Housse Lavable : Facile à entretenir, la housse douce en tissu est amovible et lavable en machine, garantissant une hygiène et une fraîcheur durable. Design Élégant : Disponible en gris, il s’intègre parfaitement à tout type de décoration intérieure, apportant une touche de modernité et de confort à votre chambre. Le coussin ergonomique Soya est l’accessoire parfait pour améliorer votre posture et votre confort tout en lisant ou en vous relaxant dans votre lit."
+ }
+]

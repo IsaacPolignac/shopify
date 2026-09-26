@@ -1,0 +1,2666 @@
+{
+ "storefrontAccessToken": "35ae968f95ebbb8da1da57996ff7cc9f",
+ "shopDomain": "5xfyfp-ti.myshopify.com",
+ "moneyFormat": "€{{amount_with_comma_separator}}",
+ "productId": 15152158212428,
+ "productImageUrl": "//soya-paris.com/cdn/shop/files/18.png?v=1771635093&width=800",
+ "collectionIds": [],
+ "collectionId": null,
+ "liquidLocale": "fr",
+ "marketId": 95483724108,
+ "customCss": "",
+ "popups": [
+  {
+   "popupId": "505c21d9-7a23-4be5-8ade-490d511af684",
+   "createdAt": "2026-06-18T20:41:07.388Z",
+   "settings": {
+    "teaser": {
+     "enabled": false,
+     "direction": "column",
+     "horizontalAlign": "center",
+     "verticalAlign": "center",
+     "reverseOrder": false,
+     "gap": 0,
+     "placement": "bottom-left",
+     "padding": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0,
+      "linked": true
+     },
+     "margin": {
+      "top": 0,
+      "right": 0,
+      "bottom": 16,
+      "left": 16,
+      "linked": false
+     },
+     "colors": {
+      "closeButton": "#737373",
+      "closeButtonEnabled": true,
+      "closeButtonType": "plain",
+      "closeButtonSize": 16,
+      "closeButtonOutside": false
+     },
+     "background": {
+      "layers": [
+       {
+        "id": "b8e997aecc73c954",
+        "opacity": 100,
+        "visible": true,
+        "type": "color",
+        "color": "#FFFFFF"
+       }
+      ]
+     },
+     "border": {
+      "style": "none",
+      "color": "#D6D6D6",
+      "thickness": 1,
+      "cornerRadius": {
+       "topLeft": 0,
+       "topRight": 0,
+       "bottomLeft": 0,
+       "bottomRight": 0,
+       "linked": true
+      }
+     },
+     "dropShadow": {
+      "color": "#00000024",
+      "colorEnabled": true,
+      "blur": 24,
+      "spread": 4
+     },
+     "overlay": {
+      "color": "#00000066",
+      "colorEnabled": true,
+      "backgroundBlur": 0,
+      "hideOverlay": true
+     },
+     "width": {
+      "mode": "custom",
+      "value": 200
+     },
+     "height": {
+      "mode": "custom",
+      "value": 56
+     },
+     "blocks": [
+      {
+       "id": "rd5qo9l5ch",
+       "type": "flex",
+       "hidden": false,
+       "direction": "row",
+       "horizontalAlign": "center",
+       "verticalAlign": "center",
+       "gap": 0,
+       "padding": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "background": {
+        "layers": [
+         {
+          "id": "d9cb25a435b2a327",
+          "opacity": 100,
+          "visible": false,
+          "type": "color",
+          "color": "#FFFFFF"
+         }
+        ]
+       },
+       "border": {
+        "style": "none",
+        "color": "#D6D6D6",
+        "thickness": 1,
+        "cornerRadius": {
+         "topLeft": 0,
+         "topRight": 0,
+         "bottomLeft": 0,
+         "bottomRight": 0,
+         "linked": true
+        }
+       },
+       "width": {
+        "mode": "fill"
+       },
+       "height": {
+        "mode": "fill"
+       },
+       "blocks": []
+      }
+     ],
+     "animation": {
+      "enter": {
+       "type": "none",
+       "duration": 300,
+       "delay": 0,
+       "easing": "ease"
+      },
+      "exit": {
+       "type": "none",
+       "duration": 300,
+       "delay": 0,
+       "easing": "ease"
+      }
+     }
+    },
+    "followUp": {
+     "direction": "column",
+     "horizontalAlign": "center",
+     "verticalAlign": "center",
+     "reverseOrder": false,
+     "gap": 8,
+     "placement": "top-center",
+     "padding": {
+      "top": 16,
+      "right": 16,
+      "bottom": 16,
+      "left": 16,
+      "linked": true
+     },
+     "margin": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0,
+      "linked": true
+     },
+     "colors": {
+      "closeButton": "#737373",
+      "closeButtonEnabled": true,
+      "closeButtonType": "plain",
+      "closeButtonSize": 16,
+      "closeButtonOutside": false
+     },
+     "background": {
+      "layers": [
+       {
+        "id": "0a93b264281e2623",
+        "opacity": 100,
+        "visible": true,
+        "type": "color",
+        "color": "#FFFFFF"
+       }
+      ]
+     },
+     "border": {
+      "style": "none",
+      "color": "#D6D6D6",
+      "thickness": 1,
+      "cornerRadius": {
+       "topLeft": 0,
+       "topRight": 0,
+       "bottomLeft": 0,
+       "bottomRight": 0,
+       "linked": true
+      }
+     },
+     "dropShadow": {
+      "color": "#00000024",
+      "colorEnabled": true,
+      "blur": 24,
+      "spread": 4
+     },
+     "overlay": {
+      "color": "#00000066",
+      "colorEnabled": true,
+      "backgroundBlur": 0,
+      "hideOverlay": true
+     },
+     "width": {
+      "mode": "fill"
+     },
+     "height": {
+      "mode": "hug"
+     },
+     "blocks": [
+      {
+       "id": "7xour4vofb",
+       "type": "flex",
+       "hidden": false,
+       "direction": "row",
+       "horizontalAlign": "center",
+       "verticalAlign": "center",
+       "gap": 0,
+       "padding": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "background": {
+        "layers": [
+         {
+          "id": "36d6b0ea32b50150",
+          "opacity": 100,
+          "visible": false,
+          "type": "color",
+          "color": "#FFFFFF"
+         }
+        ]
+       },
+       "border": {
+        "style": "none",
+        "color": "#D6D6D6",
+        "thickness": 1,
+        "cornerRadius": {
+         "topLeft": 0,
+         "topRight": 0,
+         "bottomLeft": 0,
+         "bottomRight": 0,
+         "linked": true
+        }
+       },
+       "width": {
+        "mode": "fill"
+       },
+       "height": {
+        "mode": "fill"
+       },
+       "blocks": []
+      }
+     ],
+     "animation": {
+      "enter": {
+       "type": "none",
+       "duration": 300,
+       "delay": 0,
+       "easing": "ease"
+      },
+      "exit": {
+       "type": "none",
+       "duration": 300,
+       "delay": 0,
+       "easing": "ease"
+      }
+     }
+    },
+    "triggers": {
+     "exitIntent": {
+      "enabled": false,
+      "conditions": []
+     },
+     "timer": {
+      "enabled": false,
+      "delay": 0,
+      "conditions": []
+     },
+     "scroll": {
+      "enabled": false,
+      "scrollPercentage": 0,
+      "conditions": []
+     },
+     "addToCart": {
+      "enabled": true,
+      "conditions": []
+     },
+     "startCheckout": {
+      "enabled": false,
+      "conditions": []
+     }
+    },
+    "visibility": {
+     "target": "specificProducts",
+     "productIds": [
+      "gid://shopify/Product/15152158212428"
+     ]
+    },
+    "markets": {
+     "target": "all"
+    },
+    "displayFrequency": {
+     "type": "custom",
+     "days": 1
+    },
+    "states": [
+     {
+      "id": "3esno2takh",
+      "name": "State #1",
+      "layout": {
+       "mode": "modal",
+       "direction": "row",
+       "horizontalAlign": "center",
+       "verticalAlign": "start",
+       "reverseOrder": false,
+       "gap": 0,
+       "placement": "center-center",
+       "padding": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "colors": {
+        "closeButton": "#000000",
+        "closeButtonEnabled": true,
+        "closeButtonType": "plain",
+        "closeButtonSize": 16,
+        "closeButtonOutside": false
+       },
+       "background": {
+        "layers": [
+         {
+          "id": "7201f8091d4aac30",
+          "opacity": 100,
+          "visible": true,
+          "type": "color",
+          "color": "#FFFFFF"
+         }
+        ]
+       },
+       "border": {
+        "style": "none",
+        "color": "#000000",
+        "thickness": 0,
+        "cornerRadius": {
+         "topLeft": 30,
+         "topRight": 30,
+         "bottomLeft": 30,
+         "bottomRight": 30,
+         "linked": true
+        }
+       },
+       "dropShadow": {
+        "color": "#000000",
+        "colorEnabled": false,
+        "blur": 0,
+        "spread": 0
+       },
+       "overlay": {
+        "color": "#000000b3",
+        "colorEnabled": true,
+        "backgroundBlur": 0,
+        "hideOverlay": false
+       },
+       "width": {
+        "mode": "custom",
+        "value": 400
+       },
+       "height": {
+        "mode": "hug"
+       }
+      },
+      "blocks": [
+       {
+        "id": "m8qt3m70qh",
+        "type": "flex",
+        "hidden": false,
+        "direction": "row",
+        "horizontalAlign": "center",
+        "verticalAlign": "start",
+        "gap": 0,
+        "padding": {
+         "top": 0,
+         "right": 0,
+         "bottom": 0,
+         "left": 0,
+         "linked": true
+        },
+        "margin": {
+         "top": 0,
+         "right": 0,
+         "bottom": 0,
+         "left": 0,
+         "linked": true
+        },
+        "background": {
+         "layers": [
+          {
+           "id": "38ffa5431ce4f4c4",
+           "opacity": 100,
+           "visible": false,
+           "type": "color",
+           "color": "#ffffff"
+          }
+         ]
+        },
+        "border": {
+         "style": "none",
+         "color": "#000000",
+         "thickness": 0,
+         "cornerRadius": {
+          "topLeft": 0,
+          "topRight": 0,
+          "bottomLeft": 0,
+          "bottomRight": 0,
+          "linked": true
+         }
+        },
+        "width": {
+         "mode": "fill"
+        },
+        "height": {
+         "mode": "hug"
+        },
+        "blocks": [
+         {
+          "id": "3arjepvcdx",
+          "type": "product",
+          "hidden": false,
+          "productId": "gid://shopify/Product/15152116302156",
+          "selectedVariantIds": [
+           "gid://shopify/ProductVariant/53641388097868"
+          ],
+          "width": {
+           "mode": "fill"
+          },
+          "height": {
+           "mode": "hug"
+          },
+          "direction": "row",
+          "horizontalAlign": "start",
+          "verticalAlign": "start",
+          "gap": 8,
+          "reverseOrder": false,
+          "padding": {
+           "top": 0,
+           "right": 0,
+           "bottom": 0,
+           "left": 0,
+           "linked": true
+          },
+          "margin": {
+           "top": 0,
+           "right": 0,
+           "bottom": 0,
+           "left": 0,
+           "linked": true
+          },
+          "blocks": [
+           {
+            "id": "a7hs880r18",
+            "type": "productMedia",
+            "hidden": true,
+            "customUrl": "https://cdn.shopify.com/s/files/1/0935/5054/3180/files/kaching-popup-0bd0d5889728be8a.webp?v=1781815331",
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "custom",
+             "value": 360
+            },
+            "imageSize": 100,
+            "placement": "center-center",
+            "border": {
+             "style": "none",
+             "color": "#D6D6D6",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 10,
+              "topRight": 10,
+              "bottomLeft": 10,
+              "bottomRight": 10,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 12,
+             "right": 12,
+             "bottom": 12,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 3,
+             "left": 0,
+             "linked": false
+            },
+            "mobile": {
+             "height": {
+              "mode": "custom",
+              "value": 360
+             },
+             "border": {
+              "thickness": 0,
+              "cornerRadius": {
+               "topLeft": 20,
+               "topRight": 20,
+               "bottomLeft": 20,
+               "bottomRight": 20,
+               "linked": true
+              }
+             },
+             "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0,
+              "linked": false
+             }
+            }
+           },
+           {
+            "id": "hbrid4nj4v",
+            "type": "media",
+            "hidden": false,
+            "url": "https://cdn.shopify.com/s/files/1/0935/5054/3180/files/kaching-popup-70abda8e50d08eca.webp?v=1788988675",
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "custom",
+             "value": 360
+            },
+            "imageSize": 100,
+            "placement": "center-center",
+            "border": {
+             "style": "none",
+             "color": "#D6D6D6",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 10,
+              "topRight": 10,
+              "bottomLeft": 10,
+              "bottomRight": 10,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 12,
+             "right": 12,
+             "bottom": 12,
+             "left": 12,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 3,
+             "left": 0,
+             "linked": false
+            }
+           },
+           {
+            "id": "rm7qi67ftz",
+            "type": "heading",
+            "hidden": false,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "FÉLICITATIONS, VOUS AVEZ DÉBLOQUÉ -60% SUR NOTRE NOUVEL OREILLER LOMBAIRE !",
+            "fontSize": 16,
+            "color": "#000000",
+            "textAlign": "center",
+            "bold": true,
+            "italic": false,
+            "underline": false,
+            "background": "#F5F5F5",
+            "backgroundEnabled": false,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "mobile": {
+             "fontSize": 15,
+             "textAlign": "center"
+            }
+           },
+           {
+            "id": "4eqmqq5dz4",
+            "type": "productTitle",
+            "hidden": true,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "",
+            "fontSize": 20,
+            "color": "#000000",
+            "textAlign": "left",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            }
+           },
+           {
+            "id": "tnu07omz2u",
+            "type": "productDescription",
+            "hidden": true,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "",
+            "fontSize": 14,
+            "color": "#616161",
+            "textAlign": "left",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            }
+           },
+           {
+            "id": "a9irtnsocg",
+            "type": "productPrice",
+            "hidden": false,
+            "discountType": "percentage",
+            "discountValue": 60,
+            "badgeText": "-{{saved_percentage}}% jusqu'à ce soir, minuit !",
+            "useProductCompareAtPrice": true,
+            "applyOnlyWithOriginal": true,
+            "applyRounding": true,
+            "rounding": ".90",
+            "hideDiscountBadge": false,
+            "showOriginalPriceFirst": false,
+            "direction": "column",
+            "gap": 8,
+            "reverseOrder": false,
+            "strikethroughStyle": {
+             "color": "#ff0000b3",
+             "fontSize": 14,
+             "bold": false,
+             "italic": false,
+             "underline": false
+            },
+            "priceStyle": {
+             "color": "#042146ff",
+             "fontSize": 20,
+             "bold": false,
+             "italic": false,
+             "underline": false
+            },
+            "badgeStyle": {
+             "color": "#042146ff",
+             "fontSize": 14,
+             "bold": false,
+             "italic": false,
+             "underline": false
+            },
+            "badgeBackground": "#0085ff33",
+            "badgeBorderEnabled": false,
+            "badgeBorderColor": "#000000",
+            "badgeBorderRadius": 52,
+            "padding": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "mobile": {
+             "applyOnlyWithOriginal": true,
+             "showOriginalPriceFirst": false,
+             "gap": 10,
+             "margin": {
+              "top": 0,
+              "right": 12,
+              "bottom": 0,
+              "left": 12,
+              "linked": false
+             }
+            }
+           },
+           {
+            "id": "xu99fzczl1",
+            "type": "productVariants",
+            "hidden": false,
+            "hideLabels": false,
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "hug"
+            },
+            "direction": "column",
+            "gap": 8,
+            "reverseOrder": false,
+            "swatch": {
+             "configs": {},
+             "style": "circle"
+            },
+            "labelStyle": {
+             "fontSize": 13,
+             "color": "#5F5F5F",
+             "bold": false,
+             "italic": false
+            },
+            "variantStyle": {
+             "fontSize": 14,
+             "color": "#000000",
+             "bold": false,
+             "italic": false
+            },
+            "background": "#FFFFFF",
+            "backgroundEnabled": true,
+            "icon": "#737373",
+            "iconEnabled": true,
+            "border": {
+             "style": "solid",
+             "color": "#E5E5E5",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 8,
+              "topRight": 8,
+              "bottomLeft": 8,
+              "bottomRight": 8,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": false
+            }
+           },
+           {
+            "id": "w9ap1w61cw",
+            "type": "productSellingPlans",
+            "hidden": true,
+            "hideLabel": false,
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "hug"
+            },
+            "labelStyle": {
+             "fontSize": 13,
+             "color": "#5F5F5F",
+             "bold": false,
+             "italic": false
+            },
+            "variantStyle": {
+             "fontSize": 14,
+             "color": "#000000",
+             "bold": false,
+             "italic": false
+            },
+            "background": "#FFFFFF",
+            "backgroundEnabled": true,
+            "icon": "#737373",
+            "iconEnabled": true,
+            "border": {
+             "style": "solid",
+             "color": "#E5E5E5",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 8,
+              "topRight": 8,
+              "bottomLeft": 8,
+              "bottomRight": 8,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": false
+            }
+           },
+           {
+            "id": "4f86gk786w",
+            "type": "paragraph",
+            "hidden": false,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "Soulagez toutes vos douleurs et retrouvez (enfin) un sommeil réparateur. Parfait avec l'oreiller Soya 3.0.",
+            "fontSize": 14,
+            "color": "#737373",
+            "textAlign": "left",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "background": "#F5F5F5",
+            "backgroundEnabled": false,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "mobile": {
+             "fontSize": 14,
+             "textAlign": "left",
+             "margin": {
+              "top": 0,
+              "right": 12,
+              "bottom": 0,
+              "left": 12,
+              "linked": false
+             }
+            }
+           },
+           {
+            "id": "hyeo192jqf",
+            "type": "productQuantity",
+            "hidden": true,
+            "min": 1,
+            "max": 100,
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "hug"
+            },
+            "variantStyle": {
+             "fontSize": 14,
+             "color": "#000000",
+             "bold": false,
+             "italic": false
+            },
+            "background": "#FFFFFF",
+            "backgroundEnabled": true,
+            "iconActive": "#737373",
+            "iconActiveEnabled": true,
+            "iconDisabled": "#D6D6D6",
+            "iconDisabledEnabled": true,
+            "border": {
+             "style": "solid",
+             "color": "#E5E5E5",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 8,
+              "topRight": 8,
+              "bottomLeft": 8,
+              "bottomRight": 8,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": false
+            }
+           },
+           {
+            "id": "td4lbmefxw",
+            "type": "list",
+            "hidden": false,
+            "listType": "bullet",
+            "iconSize": 20,
+            "iconColor": "#7F56D9",
+            "horizontalGap": 8,
+            "verticalGap": 8,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "blocks": [
+             {
+              "id": "g2kzgbq4tc",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Réduit fortement les douleurs lombaires & hanches",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             },
+             {
+              "id": "nrgkkvk43f",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Soutien constant pour le dos",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             },
+             {
+              "id": "7blhkl1va5",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Relaxation maximale du bas du dos",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             },
+             {
+              "id": "ju2olhzpyg",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Traite les douleurs chroniques & mauvaises postures",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             },
+             {
+              "id": "qsc78igx1x",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Super complémentaire avec l'Oreiller Soya 3.0",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             }
+            ],
+            "mobile": {
+             "margin": {
+              "top": 0,
+              "right": 12,
+              "bottom": 0,
+              "left": 12,
+              "linked": false
+             }
+            }
+           },
+           {
+            "id": "5f3rbsapp8",
+            "type": "productAddToCart",
+            "hidden": false,
+            "replaceProductIfAccepted": false,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "Profiter de l'offre (-60%)",
+            "fontSize": 18,
+            "color": "#ffffffff",
+            "textAlign": "center",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "background": "#042146ff",
+            "backgroundEnabled": true,
+            "border": {
+             "style": "none",
+             "color": "#D6D6D6",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 10,
+              "topRight": 10,
+              "bottomLeft": 10,
+              "bottomRight": 10,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 10,
+             "right": 12,
+             "bottom": 10,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 15,
+             "right": 12,
+             "bottom": 15,
+             "left": 12,
+             "linked": false
+            },
+            "mobile": {
+             "border": {
+              "cornerRadius": {
+               "topLeft": 10,
+               "topRight": 10,
+               "bottomLeft": 10,
+               "bottomRight": 10,
+               "linked": true
+              }
+             },
+             "margin": {
+              "top": 15,
+              "right": 12,
+              "bottom": 12,
+              "left": 12,
+              "linked": false
+             }
+            }
+           }
+          ]
+         },
+         {
+          "id": "290vx1fyoo",
+          "type": "button",
+          "hidden": false,
+          "width": {
+           "mode": "fill"
+          },
+          "text": "Non merci, je n'aime pas les cadeaux",
+          "fontSize": 14,
+          "color": "#737373",
+          "textAlign": "center",
+          "bold": true,
+          "italic": false,
+          "underline": true,
+          "background": "#00000000",
+          "backgroundEnabled": true,
+          "border": {
+           "style": "none",
+           "color": "#D6D6D6",
+           "thickness": 1,
+           "cornerRadius": {
+            "topLeft": 0,
+            "topRight": 0,
+            "bottomLeft": 0,
+            "bottomRight": 0,
+            "linked": true
+           }
+          },
+          "padding": {
+           "top": 0,
+           "right": 0,
+           "bottom": 12,
+           "left": 0,
+           "linked": false
+          },
+          "margin": {
+           "top": 0,
+           "right": 0,
+           "bottom": 10,
+           "left": 0,
+           "linked": false
+          },
+          "mobile": {
+           "fontSize": 14,
+           "color": "#C1B8B8",
+           "underline": true,
+           "background": "#00000000",
+           "border": {
+            "cornerRadius": {
+             "topLeft": 0,
+             "topRight": 0,
+             "bottomLeft": 0,
+             "bottomRight": 0,
+             "linked": true
+            }
+           },
+           "padding": {
+            "top": 0,
+            "right": 0,
+            "bottom": 12,
+            "left": 0,
+            "linked": false
+           },
+           "margin": {
+            "top": 0,
+            "right": 0,
+            "bottom": 10,
+            "left": 0,
+            "linked": false
+           }
+          }
+         }
+        ],
+        "mobile": {}
+       }
+      ]
+     }
+    ],
+    "workflow": [
+     {
+      "id": "yos3iwzoc1",
+      "stateId": "3esno2takh",
+      "nextNodeId": null,
+      "actions": {
+       "290vx1fyoo": "close",
+       "5f3rbsapp8": "submit"
+      },
+      "onClose": "showNothing",
+      "disableRedirectToCart": true,
+      "redirectToCheckout": false
+     }
+    ],
+    "customCss": "",
+    "animation": {
+     "enter": {
+      "type": "none",
+      "duration": 300,
+      "delay": 0,
+      "easing": "ease"
+     },
+     "exit": {
+      "type": "none",
+      "duration": 300,
+      "delay": 0,
+      "easing": "ease"
+     }
+    },
+    "stateTransition": true,
+    "customerTags": [],
+    "applyDiscountToCart": false
+   },
+   "translations": [],
+   "abTest": null,
+   "variantA": null,
+   "variantB": null,
+   "variantC": null,
+   "variantD": null
+  },
+  {
+   "popupId": "9ecc6a40-6a7c-4c57-bfa3-ac1146236541",
+   "createdAt": "2026-06-10T12:55:26.860Z",
+   "settings": {
+    "teaser": {
+     "enabled": false,
+     "direction": "column",
+     "horizontalAlign": "center",
+     "verticalAlign": "center",
+     "reverseOrder": false,
+     "gap": 0,
+     "placement": "bottom-left",
+     "padding": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0,
+      "linked": true
+     },
+     "margin": {
+      "top": 0,
+      "right": 0,
+      "bottom": 16,
+      "left": 16,
+      "linked": false
+     },
+     "colors": {
+      "closeButton": "#737373",
+      "closeButtonEnabled": true,
+      "closeButtonType": "plain",
+      "closeButtonSize": 16,
+      "closeButtonOutside": false
+     },
+     "background": {
+      "layers": [
+       {
+        "id": "9c7951c1b3df06be",
+        "opacity": 100,
+        "visible": true,
+        "type": "color",
+        "color": "#FFFFFF"
+       }
+      ]
+     },
+     "border": {
+      "style": "none",
+      "color": "#D6D6D6",
+      "thickness": 1,
+      "cornerRadius": {
+       "topLeft": 0,
+       "topRight": 0,
+       "bottomLeft": 0,
+       "bottomRight": 0,
+       "linked": true
+      }
+     },
+     "dropShadow": {
+      "color": "#00000024",
+      "colorEnabled": true,
+      "blur": 24,
+      "spread": 4
+     },
+     "overlay": {
+      "color": "#00000066",
+      "colorEnabled": true,
+      "backgroundBlur": 0,
+      "hideOverlay": true
+     },
+     "width": {
+      "mode": "custom",
+      "value": 200
+     },
+     "height": {
+      "mode": "custom",
+      "value": 56
+     },
+     "blocks": [
+      {
+       "id": "nqx5by8efz",
+       "type": "flex",
+       "hidden": false,
+       "direction": "row",
+       "horizontalAlign": "center",
+       "verticalAlign": "center",
+       "gap": 0,
+       "padding": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "background": {
+        "layers": [
+         {
+          "id": "56f06f6269e12a7e",
+          "opacity": 100,
+          "visible": false,
+          "type": "color",
+          "color": "#FFFFFF"
+         }
+        ]
+       },
+       "border": {
+        "style": "none",
+        "color": "#D6D6D6",
+        "thickness": 1,
+        "cornerRadius": {
+         "topLeft": 0,
+         "topRight": 0,
+         "bottomLeft": 0,
+         "bottomRight": 0,
+         "linked": true
+        }
+       },
+       "width": {
+        "mode": "fill"
+       },
+       "height": {
+        "mode": "fill"
+       },
+       "blocks": []
+      }
+     ],
+     "animation": {
+      "enter": {
+       "type": "none",
+       "duration": 300,
+       "delay": 0,
+       "easing": "ease"
+      },
+      "exit": {
+       "type": "none",
+       "duration": 300,
+       "delay": 0,
+       "easing": "ease"
+      }
+     }
+    },
+    "followUp": {
+     "direction": "column",
+     "horizontalAlign": "center",
+     "verticalAlign": "center",
+     "reverseOrder": false,
+     "gap": 8,
+     "placement": "top-center",
+     "padding": {
+      "top": 16,
+      "right": 16,
+      "bottom": 16,
+      "left": 16,
+      "linked": true
+     },
+     "margin": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0,
+      "linked": true
+     },
+     "colors": {
+      "closeButton": "#737373",
+      "closeButtonEnabled": true,
+      "closeButtonType": "plain",
+      "closeButtonSize": 16,
+      "closeButtonOutside": false
+     },
+     "background": {
+      "layers": [
+       {
+        "id": "ae9825973c94306e",
+        "opacity": 100,
+        "visible": true,
+        "type": "color",
+        "color": "#FFFFFF"
+       }
+      ]
+     },
+     "border": {
+      "style": "none",
+      "color": "#D6D6D6",
+      "thickness": 1,
+      "cornerRadius": {
+       "topLeft": 0,
+       "topRight": 0,
+       "bottomLeft": 0,
+       "bottomRight": 0,
+       "linked": true
+      }
+     },
+     "dropShadow": {
+      "color": "#00000024",
+      "colorEnabled": true,
+      "blur": 24,
+      "spread": 4
+     },
+     "overlay": {
+      "color": "#00000066",
+      "colorEnabled": true,
+      "backgroundBlur": 0,
+      "hideOverlay": true
+     },
+     "width": {
+      "mode": "fill"
+     },
+     "height": {
+      "mode": "hug"
+     },
+     "blocks": [
+      {
+       "id": "cy7iu5hjb0",
+       "type": "flex",
+       "hidden": false,
+       "direction": "row",
+       "horizontalAlign": "center",
+       "verticalAlign": "center",
+       "gap": 0,
+       "padding": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "background": {
+        "layers": [
+         {
+          "id": "7e9ddd4b32c666a8",
+          "opacity": 100,
+          "visible": false,
+          "type": "color",
+          "color": "#FFFFFF"
+         }
+        ]
+       },
+       "border": {
+        "style": "none",
+        "color": "#D6D6D6",
+        "thickness": 1,
+        "cornerRadius": {
+         "topLeft": 0,
+         "topRight": 0,
+         "bottomLeft": 0,
+         "bottomRight": 0,
+         "linked": true
+        }
+       },
+       "width": {
+        "mode": "fill"
+       },
+       "height": {
+        "mode": "fill"
+       },
+       "blocks": []
+      }
+     ],
+     "animation": {
+      "enter": {
+       "type": "none",
+       "duration": 300,
+       "delay": 0,
+       "easing": "ease"
+      },
+      "exit": {
+       "type": "none",
+       "duration": 300,
+       "delay": 0,
+       "easing": "ease"
+      }
+     }
+    },
+    "triggers": {
+     "exitIntent": {
+      "enabled": false,
+      "conditions": []
+     },
+     "timer": {
+      "enabled": false,
+      "delay": 0,
+      "conditions": []
+     },
+     "scroll": {
+      "enabled": false,
+      "scrollPercentage": 0,
+      "conditions": []
+     },
+     "addToCart": {
+      "enabled": true,
+      "conditions": []
+     },
+     "startCheckout": {
+      "enabled": false,
+      "conditions": []
+     }
+    },
+    "visibility": {
+     "target": "specificProducts",
+     "productIds": [
+      "gid://shopify/Product/15152183443788"
+     ]
+    },
+    "markets": {
+     "target": "all"
+    },
+    "displayFrequency": {
+     "type": "custom",
+     "days": 1
+    },
+    "states": [
+     {
+      "id": "c4a8d394-35c0-47bd-8e9b-f0a6aa4dcdc4",
+      "name": "State #1",
+      "layout": {
+       "mode": "modal",
+       "direction": "row",
+       "horizontalAlign": "center",
+       "verticalAlign": "start",
+       "reverseOrder": false,
+       "gap": 0,
+       "placement": "center-center",
+       "padding": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0,
+        "linked": true
+       },
+       "colors": {
+        "closeButton": "#000000",
+        "closeButtonEnabled": true,
+        "closeButtonType": "plain",
+        "closeButtonSize": 16,
+        "closeButtonOutside": false
+       },
+       "background": {
+        "layers": [
+         {
+          "id": "6b9b2ec52d4b03d1",
+          "opacity": 100,
+          "visible": true,
+          "type": "color",
+          "color": "#FFFFFF"
+         }
+        ]
+       },
+       "border": {
+        "style": "none",
+        "color": "#000000",
+        "thickness": 0,
+        "cornerRadius": {
+         "topLeft": 30,
+         "topRight": 30,
+         "bottomLeft": 30,
+         "bottomRight": 30,
+         "linked": true
+        }
+       },
+       "dropShadow": {
+        "color": "#000000",
+        "colorEnabled": false,
+        "blur": 0,
+        "spread": 0
+       },
+       "overlay": {
+        "color": "#000000b3",
+        "colorEnabled": true,
+        "backgroundBlur": 0,
+        "hideOverlay": false
+       },
+       "width": {
+        "mode": "custom",
+        "value": 400
+       },
+       "height": {
+        "mode": "hug"
+       }
+      },
+      "blocks": [
+       {
+        "id": "924c5591-ad81-488c-9ebc-3d9fa24dd7cd",
+        "type": "flex",
+        "hidden": false,
+        "direction": "row",
+        "horizontalAlign": "center",
+        "verticalAlign": "start",
+        "gap": 0,
+        "padding": {
+         "top": 0,
+         "right": 0,
+         "bottom": 0,
+         "left": 0,
+         "linked": true
+        },
+        "margin": {
+         "top": 0,
+         "right": 0,
+         "bottom": 0,
+         "left": 0,
+         "linked": true
+        },
+        "background": {
+         "layers": [
+          {
+           "id": "4252a0c8e53618df",
+           "opacity": 100,
+           "visible": false,
+           "type": "color",
+           "color": "#ffffff"
+          }
+         ]
+        },
+        "border": {
+         "style": "none",
+         "color": "#000000",
+         "thickness": 0,
+         "cornerRadius": {
+          "topLeft": 0,
+          "topRight": 0,
+          "bottomLeft": 0,
+          "bottomRight": 0,
+          "linked": true
+         }
+        },
+        "width": {
+         "mode": "fill"
+        },
+        "height": {
+         "mode": "hug"
+        },
+        "blocks": [
+         {
+          "id": "4ca0d0c6-b2a7-4c01-93c1-1c41dd5f0020",
+          "type": "product",
+          "hidden": false,
+          "productId": "gid://shopify/Product/15152116302156",
+          "selectedVariantIds": [
+           "gid://shopify/ProductVariant/53641388097868"
+          ],
+          "width": {
+           "mode": "fill"
+          },
+          "height": {
+           "mode": "hug"
+          },
+          "direction": "row",
+          "horizontalAlign": "start",
+          "verticalAlign": "start",
+          "gap": 8,
+          "reverseOrder": false,
+          "padding": {
+           "top": 0,
+           "right": 0,
+           "bottom": 0,
+           "left": 0,
+           "linked": true
+          },
+          "margin": {
+           "top": 0,
+           "right": 0,
+           "bottom": 0,
+           "left": 0,
+           "linked": true
+          },
+          "blocks": [
+           {
+            "id": "2f711e40-2532-4a97-8569-ef4810b1cdb6",
+            "type": "productMedia",
+            "hidden": true,
+            "customUrl": "https://cdn.shopify.com/s/files/1/0935/5054/3180/files/kaching-popup-40e987960689b16c_b2835ecb-019b-4227-8e43-f631318dcc49.webp?v=1788982074",
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "custom",
+             "value": 360
+            },
+            "imageSize": 100,
+            "placement": "center-center",
+            "border": {
+             "style": "none",
+             "color": "#D6D6D6",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 10,
+              "topRight": 10,
+              "bottomLeft": 10,
+              "bottomRight": 10,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 12,
+             "right": 12,
+             "bottom": 12,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 3,
+             "left": 0,
+             "linked": false
+            },
+            "mobile": {
+             "height": {
+              "mode": "custom",
+              "value": 360
+             },
+             "border": {
+              "thickness": 0,
+              "cornerRadius": {
+               "topLeft": 20,
+               "topRight": 20,
+               "bottomLeft": 20,
+               "bottomRight": 20,
+               "linked": true
+              }
+             },
+             "margin": {
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0,
+              "linked": false
+             }
+            }
+           },
+           {
+            "id": "ghpfs75phi",
+            "type": "media",
+            "hidden": false,
+            "url": "https://cdn.shopify.com/s/files/1/0935/5054/3180/files/kaching-popup-0f4368455133910d.webp?v=1788988644",
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "custom",
+             "value": 360
+            },
+            "imageSize": 100,
+            "placement": "center-center",
+            "border": {
+             "style": "none",
+             "color": "#D6D6D6",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 10,
+              "topRight": 10,
+              "bottomLeft": 10,
+              "bottomRight": 10,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 12,
+             "right": 12,
+             "bottom": 12,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 3,
+             "left": 0,
+             "linked": false
+            }
+           },
+           {
+            "id": "bcn8ll8zu2",
+            "type": "heading",
+            "hidden": false,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "FÉLICITATIONS, VOUS AVEZ DÉBLOQUÉ -60% SUR NOTRE NOUVEL OREILLER LOMBAIRE !",
+            "fontSize": 16,
+            "color": "#000000",
+            "textAlign": "center",
+            "bold": true,
+            "italic": false,
+            "underline": false,
+            "background": "#F5F5F5",
+            "backgroundEnabled": false,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "mobile": {
+             "fontSize": 15,
+             "textAlign": "center"
+            }
+           },
+           {
+            "id": "00b39753-8881-46c0-9054-d9f6dc4eb4f7",
+            "type": "productTitle",
+            "hidden": true,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "",
+            "fontSize": 20,
+            "color": "#000000",
+            "textAlign": "left",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            }
+           },
+           {
+            "id": "f10fa440-9042-4b86-a44a-40667d554902",
+            "type": "productDescription",
+            "hidden": true,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "",
+            "fontSize": 14,
+            "color": "#616161",
+            "textAlign": "left",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            }
+           },
+           {
+            "id": "d0764823-9a4e-4de6-9d7b-fbc63e0f46e8",
+            "type": "productPrice",
+            "hidden": false,
+            "discountType": "percentage",
+            "discountValue": 60,
+            "badgeText": "-{{saved_percentage}}% jusqu'à ce soir, minuit !",
+            "useProductCompareAtPrice": true,
+            "applyOnlyWithOriginal": true,
+            "applyRounding": true,
+            "rounding": ".90",
+            "hideDiscountBadge": false,
+            "showOriginalPriceFirst": false,
+            "direction": "column",
+            "gap": 8,
+            "reverseOrder": false,
+            "strikethroughStyle": {
+             "color": "#ff0000b3",
+             "fontSize": 14,
+             "bold": false,
+             "italic": false,
+             "underline": false
+            },
+            "priceStyle": {
+             "color": "#042146ff",
+             "fontSize": 20,
+             "bold": false,
+             "italic": false,
+             "underline": false
+            },
+            "badgeStyle": {
+             "color": "#042146ff",
+             "fontSize": 14,
+             "bold": false,
+             "italic": false,
+             "underline": false
+            },
+            "badgeBackground": "#0085ff33",
+            "badgeBorderEnabled": false,
+            "badgeBorderColor": "#000000",
+            "badgeBorderRadius": 52,
+            "padding": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "mobile": {
+             "applyOnlyWithOriginal": true,
+             "showOriginalPriceFirst": false,
+             "gap": 10,
+             "margin": {
+              "top": 0,
+              "right": 12,
+              "bottom": 0,
+              "left": 12,
+              "linked": false
+             }
+            }
+           },
+           {
+            "id": "75ea7ce4-9a2e-4297-9776-1b850f7846db",
+            "type": "productVariants",
+            "hidden": false,
+            "hideLabels": false,
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "hug"
+            },
+            "direction": "column",
+            "gap": 8,
+            "reverseOrder": false,
+            "swatch": {
+             "configs": {},
+             "style": "circle"
+            },
+            "labelStyle": {
+             "fontSize": 13,
+             "color": "#5F5F5F",
+             "bold": false,
+             "italic": false
+            },
+            "variantStyle": {
+             "fontSize": 14,
+             "color": "#000000",
+             "bold": false,
+             "italic": false
+            },
+            "background": "#FFFFFF",
+            "backgroundEnabled": true,
+            "icon": "#737373",
+            "iconEnabled": true,
+            "border": {
+             "style": "solid",
+             "color": "#E5E5E5",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 8,
+              "topRight": 8,
+              "bottomLeft": 8,
+              "bottomRight": 8,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": false
+            }
+           },
+           {
+            "id": "ab060cba-75f3-4b03-a357-b37d35eebb05",
+            "type": "productSellingPlans",
+            "hidden": true,
+            "hideLabel": false,
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "hug"
+            },
+            "labelStyle": {
+             "fontSize": 13,
+             "color": "#5F5F5F",
+             "bold": false,
+             "italic": false
+            },
+            "variantStyle": {
+             "fontSize": 14,
+             "color": "#000000",
+             "bold": false,
+             "italic": false
+            },
+            "background": "#FFFFFF",
+            "backgroundEnabled": true,
+            "icon": "#737373",
+            "iconEnabled": true,
+            "border": {
+             "style": "solid",
+             "color": "#E5E5E5",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 8,
+              "topRight": 8,
+              "bottomLeft": 8,
+              "bottomRight": 8,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": false
+            }
+           },
+           {
+            "id": "amci53xnhw",
+            "type": "paragraph",
+            "hidden": false,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "Soulagez toutes vos douleurs et retrouvez (enfin) un sommeil réparateur. Parfait avec l'oreiller Soya 2.0.",
+            "fontSize": 14,
+            "color": "#737373",
+            "textAlign": "left",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "background": "#F5F5F5",
+            "backgroundEnabled": false,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": true
+            },
+            "margin": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "mobile": {
+             "fontSize": 14,
+             "textAlign": "left",
+             "margin": {
+              "top": 0,
+              "right": 12,
+              "bottom": 0,
+              "left": 12,
+              "linked": false
+             }
+            }
+           },
+           {
+            "id": "337e7bb2-541d-402f-b008-c93132cb06cb",
+            "type": "productQuantity",
+            "hidden": true,
+            "min": 1,
+            "max": 100,
+            "width": {
+             "mode": "fill"
+            },
+            "height": {
+             "mode": "hug"
+            },
+            "variantStyle": {
+             "fontSize": 14,
+             "color": "#000000",
+             "bold": false,
+             "italic": false
+            },
+            "background": "#FFFFFF",
+            "backgroundEnabled": true,
+            "iconActive": "#737373",
+            "iconActiveEnabled": true,
+            "iconDisabled": "#D6D6D6",
+            "iconDisabledEnabled": true,
+            "border": {
+             "style": "solid",
+             "color": "#E5E5E5",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 8,
+              "topRight": 8,
+              "bottomLeft": 8,
+              "bottomRight": 8,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": false
+            }
+           },
+           {
+            "id": "bn9ryslowo",
+            "type": "list",
+            "hidden": false,
+            "listType": "bullet",
+            "iconSize": 20,
+            "iconColor": "#7F56D9",
+            "horizontalGap": 8,
+            "verticalGap": 8,
+            "padding": {
+             "top": 0,
+             "right": 0,
+             "bottom": 0,
+             "left": 0,
+             "linked": false
+            },
+            "margin": {
+             "top": 0,
+             "right": 12,
+             "bottom": 0,
+             "left": 12,
+             "linked": false
+            },
+            "blocks": [
+             {
+              "id": "m94a7q0mev",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Réduit fortement les douleurs lombaires & hanches",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             },
+             {
+              "id": "107fqsip3e",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Soutien constant pour le dos",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             },
+             {
+              "id": "iskz515ed3",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Relaxation maximale du bas du dos",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             },
+             {
+              "id": "ewo97xk01m",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Traite les douleurs chroniques & mauvaises postures",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             },
+             {
+              "id": "oswi05m6m5",
+              "type": "listItem",
+              "hidden": false,
+              "icon": "cart",
+              "text": "Super complémentaire avec l'Oreiller Soya 2.0",
+              "fontSize": 12,
+              "color": "#000000",
+              "textAlign": "left",
+              "bold": false,
+              "italic": false,
+              "underline": false,
+              "padding": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "margin": {
+               "top": 0,
+               "right": 0,
+               "bottom": 0,
+               "left": 0,
+               "linked": true
+              },
+              "mobile": {
+               "bold": false
+              }
+             }
+            ],
+            "mobile": {
+             "margin": {
+              "top": 0,
+              "right": 12,
+              "bottom": 0,
+              "left": 12,
+              "linked": false
+             }
+            }
+           },
+           {
+            "id": "f95c38b8-ad73-41a2-ae7d-c931800b574a",
+            "type": "productAddToCart",
+            "hidden": false,
+            "replaceProductIfAccepted": false,
+            "width": {
+             "mode": "fill"
+            },
+            "text": "Profiter de l'offre (-60%)",
+            "fontSize": 18,
+            "color": "#ffffffff",
+            "textAlign": "center",
+            "bold": false,
+            "italic": false,
+            "underline": false,
+            "background": "#042146ff",
+            "backgroundEnabled": true,
+            "border": {
+             "style": "none",
+             "color": "#D6D6D6",
+             "thickness": 1,
+             "cornerRadius": {
+              "topLeft": 10,
+              "topRight": 10,
+              "bottomLeft": 10,
+              "bottomRight": 10,
+              "linked": true
+             }
+            },
+            "padding": {
+             "top": 10,
+             "right": 12,
+             "bottom": 10,
+             "left": 12,
+             "linked": false
+            },
+            "margin": {
+             "top": 15,
+             "right": 12,
+             "bottom": 15,
+             "left": 12,
+             "linked": false
+            },
+            "mobile": {
+             "border": {
+              "cornerRadius": {
+               "topLeft": 10,
+               "topRight": 10,
+               "bottomLeft": 10,
+               "bottomRight": 10,
+               "linked": true
+              }
+             },
+             "margin": {
+              "top": 15,
+              "right": 12,
+              "bottom": 12,
+              "left": 12,
+              "linked": false
+             }
+            }
+           }
+          ]
+         },
+         {
+          "id": "bw22yjh8mi",
+          "type": "button",
+          "hidden": false,
+          "width": {
+           "mode": "fill"
+          },
+          "text": "Non merci, je n'aime pas les cadeaux",
+          "fontSize": 14,
+          "color": "#737373",
+          "textAlign": "center",
+          "bold": true,
+          "italic": false,
+          "underline": true,
+          "background": "#00000000",
+          "backgroundEnabled": true,
+          "border": {
+           "style": "none",
+           "color": "#D6D6D6",
+           "thickness": 1,
+           "cornerRadius": {
+            "topLeft": 0,
+            "topRight": 0,
+            "bottomLeft": 0,
+            "bottomRight": 0,
+            "linked": true
+           }
+          },
+          "padding": {
+           "top": 0,
+           "right": 0,
+           "bottom": 12,
+           "left": 0,
+           "linked": false
+          },
+          "margin": {
+           "top": 0,
+           "right": 0,
+           "bottom": 10,
+           "left": 0,
+           "linked": false
+          },
+          "mobile": {
+           "fontSize": 14,
+           "color": "#C1B8B8",
+           "underline": true,
+           "background": "#00000000",
+           "border": {
+            "cornerRadius": {
+             "topLeft": 0,
+             "topRight": 0,
+             "bottomLeft": 0,
+             "bottomRight": 0,
+             "linked": true
+            }
+           },
+           "padding": {
+            "top": 0,
+            "right": 0,
+            "bottom": 12,
+            "left": 0,
+            "linked": false
+           },
+           "margin": {
+            "top": 0,
+            "right": 0,
+            "bottom": 10,
+            "left": 0,
+            "linked": false
+           }
+          }
+         }
+        ],
+        "mobile": {}
+       }
+      ]
+     }
+    ],
+    "workflow": [
+     {
+      "id": "07a8b351-b94c-41ee-b3d7-fbf04aab7265",
+      "stateId": "c4a8d394-35c0-47bd-8e9b-f0a6aa4dcdc4",
+      "nextNodeId": null,
+      "actions": {
+       "bw22yjh8mi": "close",
+       "f95c38b8-ad73-41a2-ae7d-c931800b574a": "close"
+      },
+      "onClose": "showNothing",
+      "disableRedirectToCart": true,
+      "redirectToCheckout": false
+     }
+    ],
+    "customCss": "",
+    "animation": {
+     "enter": {
+      "type": "none",
+      "duration": 300,
+      "delay": 0,
+      "easing": "ease"
+     },
+     "exit": {
+      "type": "none",
+      "duration": 300,
+      "delay": 0,
+      "easing": "ease"
+     }
+    },
+    "stateTransition": true,
+    "customerTags": [],
+    "applyDiscountToCart": false
+   },
+   "translations": [],
+   "abTest": null,
+   "variantA": null,
+   "variantB": null,
+   "variantC": null,
+   "variantD": null
+  }
+ ]
+}

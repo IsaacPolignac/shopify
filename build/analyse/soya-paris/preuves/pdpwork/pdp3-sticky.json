@@ -1,0 +1,504 @@
+{
+ "desktop": {
+  "form": {
+   "tag": "FORM",
+   "y": 1347,
+   "h": 60,
+   "disp": "block"
+  },
+  "steps": [
+   {
+    "sy": 300,
+    "vis": false,
+    "op": "0",
+    "top": 770,
+    "h": 114,
+    "text": ""
+   },
+   {
+    "sy": 600,
+    "vis": false,
+    "op": "0",
+    "top": 770,
+    "h": 114,
+    "text": ""
+   },
+   {
+    "sy": 900,
+    "vis": false,
+    "op": "0",
+    "top": 770,
+    "h": 114,
+    "text": ""
+   },
+   {
+    "sy": 1200,
+    "vis": false,
+    "op": "0",
+    "top": 770,
+    "h": 114,
+    "text": ""
+   },
+   {
+    "sy": 1500,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 1800,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 2100,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 2400,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 2700,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 3000,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 3300,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 3600,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 3900,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 4200,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 4500,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 4800,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 5100,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 5400,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 5700,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 6000,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 6300,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 6600,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 6900,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 7200,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 7500,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 7800,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 8100,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 8400,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 8700,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   },
+   {
+    "sy": 9000,
+    "vis": true,
+    "op": "1",
+    "top": 770,
+    "h": 114,
+    "text": "Oreiller Soya 3.0 Prix de vente €139,90 Ajouter au panier"
+   }
+  ],
+  "shot": 1500
+ },
+ "mobile": {
+  "form": {
+   "tag": "FORM",
+   "y": 1782,
+   "h": 54,
+   "disp": "block"
+  },
+  "steps": [
+   {
+    "sy": 300,
+    "vis": false,
+    "op": "0",
+    "top": 766,
+    "h": 88,
+    "text": ""
+   },
+   {
+    "sy": 600,
+    "vis": false,
+    "op": "0",
+    "top": 766,
+    "h": 88,
+    "text": ""
+   },
+   {
+    "sy": 900,
+    "vis": false,
+    "op": "0",
+    "top": 766,
+    "h": 88,
+    "text": ""
+   },
+   {
+    "sy": 1200,
+    "vis": false,
+    "op": "0",
+    "top": 766,
+    "h": 88,
+    "text": ""
+   },
+   {
+    "sy": 1500,
+    "vis": false,
+    "op": "0",
+    "top": 766,
+    "h": 88,
+    "text": ""
+   },
+   {
+    "sy": 1800,
+    "vis": false,
+    "op": "0",
+    "top": 766,
+    "h": 88,
+    "text": ""
+   },
+   {
+    "sy": 2100,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 2400,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 2700,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 3000,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 3300,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 3600,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 3900,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 4200,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 4500,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 4800,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 5100,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 5400,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 5700,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 6000,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 6300,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 6600,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 6900,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 7200,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 7500,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 7800,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 8100,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 8400,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 8700,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   },
+   {
+    "sy": 9000,
+    "vis": true,
+    "op": "1",
+    "top": 756,
+    "h": 88,
+    "text": "Ajouter au panier"
+   }
+  ],
+  "shot": 2100
+ }
+}

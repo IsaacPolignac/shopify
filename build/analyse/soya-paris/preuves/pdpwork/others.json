@@ -1,0 +1,710 @@
+{
+ "enfant-d": {
+  "mediaTotal": 28,
+  "mediaVisible": 7,
+  "firstMedia": {
+   "x": 160,
+   "y": 222,
+   "w": 601,
+   "h": 606
+  },
+  "thumb0": {
+   "x": 48,
+   "y": 222,
+   "w": 64,
+   "h": 71
+  },
+  "rating": {
+   "x": 897,
+   "y": 225,
+   "w": 75,
+   "h": 19
+  },
+  "h1": {
+   "x": 809,
+   "y": 291,
+   "w": 583,
+   "h": 38
+  },
+  "h1t": "Oreiller Soya enfant",
+  "eyebrow": null,
+  "kaching": {
+   "x": 809,
+   "y": 547,
+   "w": 583,
+   "h": 402
+  },
+  "kText": "1x Oreiller | Livraison rapide offerte | €49,90 | €99,90 | Couleur | Bleu | +1 Housse de Rechange | Bleu | €14,90 | €29,90 | Pack Duo | 2x Oreillers | Livraison rapide et cadeaux offerts | €89,90 | €199,80 | +1 Housse de Rechange | €14,90 | €29,90 | +1 Housse de Rechange | €14,90 | €29,90",
+  "price": null,
+  "priceT": null,
+  "atc": [
+   {
+    "x": 809,
+    "y": 959,
+    "w": 583,
+    "h": 60
+   }
+  ],
+  "stock": {
+   "x": 1021,
+   "y": 1041,
+   "w": 178,
+   "h": 22
+  },
+  "stockT": "En stock – Prêt à l’expédition",
+  "info": {
+   "x": 809,
+   "y": 222,
+   "w": 583,
+   "h": 1628
+  },
+  "infoText": "Noté 4,8/5 – 15 637 avis parents\nL’OREILLER ÉVOLUTIF AJUSTABLE DÈS 4 ANS\nOreiller Soya enfant\nOreiller évolutif ajustable dès 4 ans pour accompagner sa croissance\nHauteur ajustable pour un confort adapté à sa morphologie\nFavorise un alignement naturel de la tête et du cou\nEffet soie glacée respirant pour des nuits plus fraîches et confortables\nFRENCH DAYS | JUSQU'À -60%\n1x Oreiller\nLivraison rapide offerte\n€49,90\n€99,90\nCouleur\nBleu\n+1 Housse de Rechange\nBleu\n€14,90\n€29,90\nPack Duo\n2x Oreillers\nLivraison rapide et cadeaux offerts\n€89,90\n€199,80\n+1 Housse de Rechange\n€14,90\n€29,90\n+1 Housse de Rechange\n€14,90\n€29,90\nAjouter au panier\nEn stock – Prêt à l’expédition\nAccompagnez ses nuits avec l’Oreiller Soya Enfant\nConçu spécialement pour les enfants de 4 à 12 ans, cet oreiller ergonomique évolutif offre un soutien adapté à chaque étape de leur croissance, pour des nuits plus sereines et un réveil tout en légèreté.\nRéveil plus confortable, sans tensions : Grâce à sa mousse à mémoire de forme adaptée, l’oreiller épouse délicatement la tête et la nuque de votre enfant. Il aide à réduire les points de pression pour un sommeil plus profond et un réveil sans gêne.\nAlignement naturel en pleine croissance : Sa conception ergonomique favorise un bon alignement de la tête et du cou, essentiel pendant les années de développement. Chaque zone est pensée pour accompagner sa posture, quelle que soit sa position de sommeil.\nFraîcheur & hygiène au quotidien : Sa housse respirante et hypoallergénique régule la température pendant la nuit et limite la transpiration. Son effet soie glacée, inspiré des matières ice silk, procure une sensation de fraîcheur immédiate pour un sommeil plus agréable.\nConfort évolutif : Parce que chaque enfant est différent, l’oreiller s’adapte facilement à sa morphologie grâce à son système ajustable. Vous pouvez modifier la hauteur pour lui offrir un soutien parfaitement adapté, année après année.\nPensé pour bien grandir, nuit après nuit : L’Oreiller Soya Enfant accompagne votre enfant dans ses nuits comme dans sa croissance, en alliant confort, soutien et sérénité.",
+  "secs": [
+   {
+    "id": "sections--32068952785228__header",
+    "y": 58,
+    "h": 115,
+    "head": ""
+   },
+   {
+    "id": "main",
+    "y": 174,
+    "h": 1724,
+    "head": "Oreiller Soya enfant"
+   },
+   {
+    "id": "media_with_text_gU76JV",
+    "y": 1898,
+    "h": 678,
+    "head": "Nouveauté : SOYA 3.0 est arrivé"
+   },
+   {
+    "id": "media_with_text_bLhpa9",
+    "y": 2576,
+    "h": 704,
+    "head": "Découvrez notre Best-Seller : L’Oreiller Soya 2.0"
+   },
+   {
+    "id": "related_products_ncp9TM",
+    "y": 3281,
+    "h": 818,
+    "head": ""
+   },
+   {
+    "id": "1744316970a52016e4",
+    "y": 4099,
+    "h": 6335,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__text-with-icons",
+    "y": 10434,
+    "h": 168,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__footer",
+    "y": 10602,
+    "h": 541,
+    "head": ""
+   }
+  ],
+  "H": 11142,
+  "stories": 0,
+  "sticky": {
+   "sy": 1200,
+   "vis": true,
+   "text": "Oreiller Soya enfant Prix de vente €99,90 Ajouter au panier"
+  }
+ },
+ "enfant-m": {
+  "mediaTotal": 28,
+  "mediaVisible": 7,
+  "firstMedia": {
+   "x": 0,
+   "y": 101,
+   "w": 390,
+   "h": 394
+  },
+  "thumb0": {
+   "x": 20,
+   "y": 515,
+   "w": 56,
+   "h": 62
+  },
+  "rating": {
+   "x": 108,
+   "y": 600,
+   "w": 66,
+   "h": 16
+  },
+  "h1": {
+   "x": 20,
+   "y": 654,
+   "w": 350,
+   "h": 26
+  },
+  "h1t": "Oreiller Soya enfant",
+  "eyebrow": null,
+  "kaching": {
+   "x": 20,
+   "y": 951,
+   "w": 350,
+   "h": 437
+  },
+  "kText": "1x Oreiller | Livraison rapide offerte | €49,90 | €99,90 | Couleur | Bleu | +1 Housse de Rechange | Bleu | €14,90 | €29,90 | Pack Duo | 2x Oreillers | Livraison rapide et cadeaux offerts | €89,90 | €199,80 | +1 Housse de Rechange | €14,90 | €29,90 | +1 Housse de Rechange | €14,90 | €29,90",
+  "price": null,
+  "priceT": null,
+  "atc": [
+   {
+    "x": 20,
+    "y": 1398,
+    "w": 350,
+    "h": 54
+   }
+  ],
+  "stock": {
+   "x": 126,
+   "y": 1467,
+   "w": 156,
+   "h": 19
+  },
+  "stockT": "En stock – Prêt à l’expédition",
+  "info": {
+   "x": 20,
+   "y": 597,
+   "w": 350,
+   "h": 1699
+  },
+  "infoText": "Noté 4,8/5 – 15 637 avis parents\nL’OREILLER ÉVOLUTIF AJUSTABLE DÈS 4 ANS\nOreiller Soya enfant\nOreiller évolutif ajustable dès 4 ans pour accompagner sa croissance\nHauteur ajustable pour un confort adapté à sa morphologie\nFavorise un alignement naturel de la tête et du cou\nEffet soie glacée respirant pour des nuits plus fraîches et confortables\nFRENCH DAYS | JUSQU'À -60%\n1x Oreiller\nLivraison rapide offerte\n€49,90\n€99,90\nCouleur\nBleu\n+1 Housse de Rechange\nBleu\n€14,90\n€29,90\nPack Duo\n2x Oreillers\nLivraison rapide et cadeaux offerts\n€89,90\n€199,80\n+1 Housse de Rechange\n€14,90\n€29,90\n+1 Housse de Rechange\n€14,90\n€29,90\nAjouter au panier\nEn stock – Prêt à l’expédition\nAccompagnez ses nuits avec l’Oreiller Soya Enfant\nConçu spécialement pour les enfants de 4 à 12 ans, cet oreiller ergonomique évolutif offre un soutien adapté à chaque étape de leur croissance, pour des nuits plus sereines et un réveil tout en légèreté.\nRéveil plus confortable, sans tensions : Grâce à sa mousse à mémoire de forme adaptée, l’oreiller épouse délicatement la tête et la nuque de votre enfant. Il aide à réduire les points de pression pour un sommeil plus profond et un réveil sans gêne.\nAlignement naturel en pleine croissance : Sa conception ergonomique favorise un bon alignement de la tête et du cou, essentiel pendant les années de développement. Chaque zone est pensée pour accompagner sa posture, quelle que soit sa position de sommeil.\nFraîcheur & hygiène au quotidien : Sa housse respirante et hypoallergénique régule la température pendant la nuit et limite la transpiration. Son effet soie glacée, inspiré des matières ice silk, procure une sensation de fraîcheur immédiate pour un sommeil plus agréable.\nConfort évolutif : Parce que chaque enfant est différent, l’oreiller s’adapte facilement à sa morphologie grâce à son système ajustable. Vous pouvez modifier la hauteur pour lui offrir un soutien parfaitement adapté, année après année.\nPensé pour bien grandir, nuit après nuit : L’Oreiller Soya Enfant accompagne votre enfant dans ses nuits comme dans sa croissance, en alliant confort, soutien et sérénité.",
+  "secs": [
+   {
+    "id": "sections--32068952785228__header",
+    "y": 50,
+    "h": 51,
+    "head": ""
+   },
+   {
+    "id": "main",
+    "y": 101,
+    "h": 2243,
+    "head": "Oreiller Soya enfant"
+   },
+   {
+    "id": "media_with_text_gU76JV",
+    "y": 2344,
+    "h": 794,
+    "head": "Nouveauté : SOYA 3.0 est arrivé"
+   },
+   {
+    "id": "media_with_text_bLhpa9",
+    "y": 3137,
+    "h": 796,
+    "head": "Découvrez notre Best-Seller : L’Oreiller Soya 2.0"
+   },
+   {
+    "id": "related_products_ncp9TM",
+    "y": 3933,
+    "h": 544,
+    "head": ""
+   },
+   {
+    "id": "1744316970a52016e4",
+    "y": 4477,
+    "h": 7211,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__text-with-icons",
+    "y": 11688,
+    "h": 152,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__footer",
+    "y": 11840,
+    "h": 970,
+    "head": ""
+   }
+  ],
+  "H": 12811,
+  "stories": 0,
+  "sticky": {
+   "sy": 1500,
+   "vis": true,
+   "text": "Ajouter au panier"
+  }
+ },
+ "soie-d": {
+  "mediaTotal": 10,
+  "mediaVisible": 10,
+  "firstMedia": {
+   "x": -1090,
+   "y": 222,
+   "w": 601,
+   "h": 601
+  },
+  "thumb0": {
+   "x": 48,
+   "y": 222,
+   "w": 64,
+   "h": 70
+  },
+  "rating": {
+   "x": 897,
+   "y": 225,
+   "w": 75,
+   "h": 19
+  },
+  "h1": {
+   "x": 809,
+   "y": 263,
+   "w": 583,
+   "h": 38
+  },
+  "h1t": "Draps en Soie Naturelle Soya",
+  "eyebrow": null,
+  "kaching": null,
+  "kText": "",
+  "price": {
+   "x": 809,
+   "y": 318,
+   "w": 59,
+   "h": 32
+  },
+  "priceT": "Prix de vente €49,90",
+  "atc": [
+   {
+    "x": 809,
+    "y": 703,
+    "w": 583,
+    "h": 60
+   }
+  ],
+  "stock": {
+   "x": 1021,
+   "y": 785,
+   "w": 178,
+   "h": 22
+  },
+  "stockT": "En stock – Prêt à l’expédition",
+  "info": {
+   "x": 809,
+   "y": 222,
+   "w": 583,
+   "h": 1272
+  },
+  "infoText": "Noté 4,8/5 – 15 637 avis clients\nDraps en Soie Naturelle Soya\nPrix de vente\n€49,90\nPrix normal\n€59,90\nEconomisez €10,00\nCouleur:\nBlanc\nBlanc\nRose\nBleu\nBeige\nGris\nBleu marine\nVert\nOr\nTaille:\n90x190cm\n90x190cm\nQuantité:\nAjouter au panier\nEn stock – Prêt à l’expédition\nLes draps en soie naturelle de mûrier Soya sont conçus pour transformer votre sommeil en une expérience de confort ultime. Leur texture douce et soyeuse est idéale pour ceux qui cherchent à allier luxe et bien-être, tout en prenant soin de leur peau et de leurs cheveux.\nUltra-Douceur et Confort Naturel : La soie de mûrier, reconnue pour sa douceur exceptionnelle, glisse délicatement sur la peau et réduit les frictions. Un choix idéal pour préserver la jeunesse de votre peau et la santé de vos cheveux.\nThermorégulation : Parfaites pour toutes les saisons, les fibres de soie naturelle Soya régulent la température de votre corps, gardant votre lit frais en été et agréablement chaud en hiver.\nHypoallergénique et Respirant : Naturellement hypoallergéniques, nos draps en soie repoussent les acariens et minimisent les risques d’allergies. Le tissu respirant offre une aération optimale, assurant un sommeil sain et confortable.\nÉlégance et Durabilité : Confectionnés avec des coutures solides et une finition raffinée, ces draps apportent une touche d’élégance intemporelle à votre chambre, tout en offrant une grande résistance à l’usure.\nOptez pour les draps en soie naturelle Soya et faites de votre lit un véritable sanctuaire de luxe et de bien-être.",
+  "secs": [
+   {
+    "id": "sections--32068952785228__header",
+    "y": 58,
+    "h": 115,
+    "head": ""
+   },
+   {
+    "id": "main",
+    "y": 174,
+    "h": 1368,
+    "head": "Draps en Soie Naturelle Soya"
+   },
+   {
+    "id": "media_with_text_gU76JV",
+    "y": 1541,
+    "h": 678,
+    "head": "Nouveauté : SOYA 3.0 est arrivé"
+   },
+   {
+    "id": "media_with_text_bLhpa9",
+    "y": 2220,
+    "h": 704,
+    "head": "Découvrez notre Best-Seller : L’Oreiller Soya 2.0"
+   },
+   {
+    "id": "related_products_ncp9TM",
+    "y": 2924,
+    "h": 818,
+    "head": ""
+   },
+   {
+    "id": "1744316970a52016e4",
+    "y": 3742,
+    "h": 6335,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__text-with-icons",
+    "y": 10077,
+    "h": 168,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__footer",
+    "y": 10245,
+    "h": 541,
+    "head": ""
+   }
+  ],
+  "H": 10786,
+  "stories": 0,
+  "sticky": {
+   "sy": 900,
+   "vis": true,
+   "text": "Draps en Soie Naturelle Soya Prix de vente €49,90 Prix normal €59,90 Ajouter au panier"
+  }
+ },
+ "couette-m": {
+  "mediaTotal": 10,
+  "mediaVisible": 10,
+  "firstMedia": {
+   "x": 0,
+   "y": 101,
+   "w": 390,
+   "h": 390
+  },
+  "thumb0": {
+   "x": 20,
+   "y": 511,
+   "w": 56,
+   "h": 62
+  },
+  "rating": {
+   "x": 108,
+   "y": 596,
+   "w": 66,
+   "h": 16
+  },
+  "h1": {
+   "x": 20,
+   "y": 623,
+   "w": 350,
+   "h": 53
+  },
+  "h1t": "Couette rafraîchissante SoyaFresh",
+  "eyebrow": null,
+  "kaching": null,
+  "kText": "",
+  "price": {
+   "x": 20,
+   "y": 684,
+   "w": 54,
+   "h": 29
+  },
+  "priceT": "Prix de vente €79,90",
+  "atc": [
+   {
+    "x": 20,
+    "y": 1031,
+    "w": 350,
+    "h": 54
+   }
+  ],
+  "stock": {
+   "x": 126,
+   "y": 1100,
+   "w": 156,
+   "h": 19
+  },
+  "stockT": "En stock – Prêt à l’expédition",
+  "info": {
+   "x": 20,
+   "y": 593,
+   "w": 350,
+   "h": 1291
+  },
+  "infoText": "Noté 4,8/5 – 15 637 avis clients\nCouette rafraîchissante SoyaFresh\nPrix de vente\n€79,90\nPrix normal\n€99,90\nEconomisez €20,00\nCouleur:\nBlanc\nBlanc\nBeige\nGris\nBleu\nBleu marine\nTaille:\nTwin 150x200cm\nTwin 150x200cm\nQuantité:\nAjouter au panier\nEn stock – Prêt à l’expédition\nTransformez vos nuits avec SoyaFresh\nPensés pour les dormeurs exigeants, nos textiles rafraîchissants combinent innovation, douceur et respirabilité — pour un confort maximal, même en plein été.\nFraîcheur immédiate et durable: Grâce à sa technologie thermorégulatrice avancée, le tissu SoyaFresh absorbe l’excès de chaleur et procure une sensation de fraîcheur dès que vous vous glissez au lit. Un vrai soulagement pour les nuits chaudes ou agitées.\nDouceur nuageuse et confort respirant : Sa texture soyeuse et légère glisse sur la peau sans coller, tout en laissant l’air circuler librement. Fini les réveils en sueur ou les draps étouffants.\nHygiène parfaite et entretien facile : Hypoallergéniques, lavables en machine et certifiés OEKO-TEX®, nos draps et couettes SoyaFresh résistent à l’humidité, aux odeurs et conservent leur fraîcheur lavage après lavage.\nConçu pour les nuits complètes, sans interruption : La technologie anti-humidité garde votre corps au sec et à température stable. Résultat : un endormissement plus rapide, moins de réveils nocturnes… et un vrai sommeil réparateur.\nDéjà adoptés par des milliers de dormeurs en quête de fraîcheur — les produits SoyaFresh changent les règles du confort nocturne",
+  "secs": [
+   {
+    "id": "sections--32068952785228__header",
+    "y": 50,
+    "h": 51,
+    "head": ""
+   },
+   {
+    "id": "main",
+    "y": 101,
+    "h": 1831,
+    "head": "Couette rafraîchissante SoyaFresh"
+   },
+   {
+    "id": "media_with_text_gU76JV",
+    "y": 1932,
+    "h": 794,
+    "head": "Nouveauté : SOYA 3.0 est arrivé"
+   },
+   {
+    "id": "media_with_text_bLhpa9",
+    "y": 2725,
+    "h": 796,
+    "head": "Découvrez notre Best-Seller : L’Oreiller Soya 2.0"
+   },
+   {
+    "id": "related_products_ncp9TM",
+    "y": 3521,
+    "h": 544,
+    "head": ""
+   },
+   {
+    "id": "1744316970a52016e4",
+    "y": 4065,
+    "h": 7211,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__text-with-icons",
+    "y": 11276,
+    "h": 152,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__footer",
+    "y": 11428,
+    "h": 970,
+    "head": ""
+   }
+  ],
+  "H": 12399,
+  "stories": 0,
+  "sticky": {
+   "sy": 1200,
+   "vis": true,
+   "text": "Ajouter au panier"
+  }
+ },
+ "v1-d": {
+  "mediaTotal": 5,
+  "mediaVisible": 5,
+  "firstMedia": {
+   "x": 160,
+   "y": 222,
+   "w": 601,
+   "h": 601
+  },
+  "thumb0": {
+   "x": 48,
+   "y": 222,
+   "w": 64,
+   "h": 70
+  },
+  "rating": {
+   "x": 897,
+   "y": 225,
+   "w": 75,
+   "h": 19
+  },
+  "h1": {
+   "x": 809,
+   "y": 263,
+   "w": 583,
+   "h": 38
+  },
+  "h1t": "Oreiller Soya 1.0",
+  "eyebrow": null,
+  "kaching": null,
+  "kText": "",
+  "price": {
+   "x": 809,
+   "y": 318,
+   "w": 59,
+   "h": 32
+  },
+  "priceT": "Prix de vente €34,90",
+  "atc": [
+   {
+    "x": 809,
+    "y": 496,
+    "w": 583,
+    "h": 60
+   }
+  ],
+  "stock": {
+   "x": 1021,
+   "y": 578,
+   "w": 178,
+   "h": 22
+  },
+  "stockT": "En stock – Prêt à l’expédition",
+  "info": {
+   "x": 809,
+   "y": 222,
+   "w": 583,
+   "h": 1090
+  },
+  "infoText": "Noté 4,8/5 – 15 637 avis clients\nOreiller Soya 1.0\nPrix de vente\n€34,90\nPrix normal\n€49,90\nEconomisez €15,00\nQuantité:\nAjouter au panier\nEn stock – Prêt à l’expédition\nProfitez d’un confort absolu avec l’oreiller ergonomique en mousse à mémoire de forme Soya 1.0. Conçu pour offrir un soutien optimal à votre tête et à votre cou, cet oreiller est parfait pour garantir un sommeil réparateur chaque nuit.\nSoutien Ergonomique Optimal : Grâce à sa mousse à mémoire de forme de haute qualité, cet oreiller épouse parfaitement la forme de votre tête et de votre cou, offrant ainsi un soutien adapté pour chaque position de sommeil et réduisant les points de pression.\nConfort Adapté à Toutes les Positions : Que vous dormiez sur le côté, sur le dos ou sur le ventre, l’oreiller Soya 1.0 vous procure un confort constant et aide à maintenir un alignement parfait de la colonne vertébrale.\nConception Pratique et Hygiénique : Sa housse amovible et lavable en machine permet de maintenir l’oreiller propre et frais, tout en vous garantissant un sommeil sain.\nDesign Moderne et Élégant : Disponible dans une couleur neutre et chic, l’oreiller Soya 1.0 s’adapte à toutes les chambres, apportant confort et style à votre espace de repos.\nL’oreiller Soya 1.0 est la solution idéale pour soulager les tensions au niveau du cou et améliorer votre posture pendant votre sommeil. Offrez-vous un confort sans compromis avec cet oreiller ergonomique de qualité.",
+  "secs": [
+   {
+    "id": "sections--32068952785228__header",
+    "y": 58,
+    "h": 115,
+    "head": ""
+   },
+   {
+    "id": "main",
+    "y": 174,
+    "h": 1186,
+    "head": "Oreiller Soya 1.0"
+   },
+   {
+    "id": "media_with_text_gU76JV",
+    "y": 1360,
+    "h": 678,
+    "head": "Nouveauté : SOYA 3.0 est arrivé"
+   },
+   {
+    "id": "media_with_text_bLhpa9",
+    "y": 2038,
+    "h": 704,
+    "head": "Découvrez notre Best-Seller : L’Oreiller Soya 2.0"
+   },
+   {
+    "id": "related_products_ncp9TM",
+    "y": 2742,
+    "h": 818,
+    "head": ""
+   },
+   {
+    "id": "1744316970a52016e4",
+    "y": 3560,
+    "h": 6335,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__text-with-icons",
+    "y": 9895,
+    "h": 168,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__footer",
+    "y": 10063,
+    "h": 541,
+    "head": ""
+   }
+  ],
+  "H": 10604,
+  "stories": 0,
+  "sticky": {
+   "sy": 600,
+   "vis": true,
+   "text": "Oreiller Soya 1.0 Prix de vente €34,90 Prix normal €49,90 Ajouter au panier"
+  }
+ },
+ "v1-m": {
+  "mediaTotal": 5,
+  "mediaVisible": 5,
+  "firstMedia": {
+   "x": 0,
+   "y": 101,
+   "w": 390,
+   "h": 390
+  },
+  "thumb0": {
+   "x": 20,
+   "y": 511,
+   "w": 56,
+   "h": 62
+  },
+  "rating": {
+   "x": 108,
+   "y": 596,
+   "w": 66,
+   "h": 16
+  },
+  "h1": {
+   "x": 20,
+   "y": 623,
+   "w": 350,
+   "h": 26
+  },
+  "h1t": "Oreiller Soya 1.0",
+  "eyebrow": null,
+  "kaching": null,
+  "kText": "",
+  "price": {
+   "x": 20,
+   "y": 657,
+   "w": 54,
+   "h": 29
+  },
+  "priceT": "Prix de vente €34,90",
+  "atc": [
+   {
+    "x": 20,
+    "y": 812,
+    "w": 350,
+    "h": 54
+   }
+  ],
+  "stock": {
+   "x": 126,
+   "y": 880,
+   "w": 156,
+   "h": 19
+  },
+  "stockT": "En stock – Prêt à l’expédition",
+  "info": {
+   "x": 20,
+   "y": 593,
+   "w": 350,
+   "h": 1037
+  },
+  "infoText": "Noté 4,8/5 – 15 637 avis clients\nOreiller Soya 1.0\nPrix de vente\n€34,90\nPrix normal\n€49,90\nEconomisez €15,00\nQuantité:\nAjouter au panier\nEn stock – Prêt à l’expédition\nProfitez d’un confort absolu avec l’oreiller ergonomique en mousse à mémoire de forme Soya 1.0. Conçu pour offrir un soutien optimal à votre tête et à votre cou, cet oreiller est parfait pour garantir un sommeil réparateur chaque nuit.\nSoutien Ergonomique Optimal : Grâce à sa mousse à mémoire de forme de haute qualité, cet oreiller épouse parfaitement la forme de votre tête et de votre cou, offrant ainsi un soutien adapté pour chaque position de sommeil et réduisant les points de pression.\nConfort Adapté à Toutes les Positions : Que vous dormiez sur le côté, sur le dos ou sur le ventre, l’oreiller Soya 1.0 vous procure un confort constant et aide à maintenir un alignement parfait de la colonne vertébrale.\nConception Pratique et Hygiénique : Sa housse amovible et lavable en machine permet de maintenir l’oreiller propre et frais, tout en vous garantissant un sommeil sain.\nDesign Moderne et Élégant : Disponible dans une couleur neutre et chic, l’oreiller Soya 1.0 s’adapte à toutes les chambres, apportant confort et style à votre espace de repos.\nL’oreiller Soya 1.0 est la solution idéale pour soulager les tensions au niveau du cou et améliorer votre posture pendant votre sommeil. Offrez-vous un confort sans compromis avec cet oreiller ergonomique de qualité.",
+  "secs": [
+   {
+    "id": "sections--32068952785228__header",
+    "y": 50,
+    "h": 51,
+    "head": ""
+   },
+   {
+    "id": "main",
+    "y": 101,
+    "h": 1577,
+    "head": "Oreiller Soya 1.0"
+   },
+   {
+    "id": "media_with_text_gU76JV",
+    "y": 1678,
+    "h": 794,
+    "head": "Nouveauté : SOYA 3.0 est arrivé"
+   },
+   {
+    "id": "media_with_text_bLhpa9",
+    "y": 2472,
+    "h": 796,
+    "head": "Découvrez notre Best-Seller : L’Oreiller Soya 2.0"
+   },
+   {
+    "id": "related_products_ncp9TM",
+    "y": 3268,
+    "h": 544,
+    "head": ""
+   },
+   {
+    "id": "1744316970a52016e4",
+    "y": 3812,
+    "h": 7220,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__text-with-icons",
+    "y": 11032,
+    "h": 152,
+    "head": ""
+   },
+   {
+    "id": "sections--32068952752460__footer",
+    "y": 11184,
+    "h": 970,
+    "head": ""
+   }
+  ],
+  "H": 12154,
+  "stories": 0,
+  "sticky": {
+   "sy": 900,
+   "vis": true,
+   "text": "Ajouter au panier"
+  }
+ }
+}

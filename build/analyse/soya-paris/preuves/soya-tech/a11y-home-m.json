@@ -1,0 +1,1424 @@
+{
+ "texts": [
+  {
+   "t": "FRENCH DAYS 🇫🇷",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 10
+  },
+  {
+   "t": "Jusqu’à -60% sur tout le site !",
+   "fs": 11,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 27
+  },
+  {
+   "t": "22",
+   "fs": 16,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 10
+  },
+  {
+   "t": "50",
+   "fs": 16,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 10
+  },
+  {
+   "t": "33",
+   "fs": 16,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 10
+  },
+  {
+   "t": "Heures",
+   "fs": 8,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 31
+  },
+  {
+   "t": "Mins",
+   "fs": 8,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 31
+  },
+  {
+   "t": "Secs",
+   "fs": 8,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 31
+  },
+  {
+   "t": "Passer au contenu",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 49
+  },
+  {
+   "t": "Menu",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 63
+  },
+  {
+   "t": "Recherche",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 63
+  },
+  {
+   "t": "SOYA PARIS",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 61
+  },
+  {
+   "t": "Panier",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 63
+  },
+  {
+   "t": "L’oreiller ergonomique N°1, recommandé par les ostéopathes",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1128
+  },
+  {
+   "t": "Nouveauté : SOYA 3.0 est arrivé",
+   "fs": 28,
+   "fw": 500,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 3,
+   "fail": false,
+   "y": 1189
+  },
+  {
+   "t": "Après le succès du",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1271
+  },
+  {
+   "t": "SOYA 2.0",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1274
+  },
+  {
+   "t": "et plus de",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1271
+  },
+  {
+   "t": "100 000 dormeurs conquis",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1274
+  },
+  {
+   "t": ", nous avons écouté vos retours et travaillé main dans la main avec pl",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1271
+  },
+  {
+   "t": "Le résultat :",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1394
+  },
+  {
+   "t": "SOYA 3.0",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1397
+  },
+  {
+   "t": ", une nouvelle génération d’oreiller, encore plus ergonomique, durable",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 1394
+  },
+  {
+   "t": "Découvrir",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 1486
+  },
+  {
+   "t": "Découvrez notre Best-Seller : L’Oreiller Soya 2.0",
+   "fs": 28,
+   "fw": 500,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 3,
+   "fail": false,
+   "y": 1922
+  },
+  {
+   "t": "L’Oreiller Soya 2.0 est notre produit phare, offrant un soutien ergono",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(248,248,248)",
+   "ratio": 16.39,
+   "need": 4.5,
+   "fail": false,
+   "y": 2034
+  },
+  {
+   "t": "Nos best sellers",
+   "fs": 28,
+   "fw": 500,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 3,
+   "fail": false,
+   "y": 2422
+  },
+  {
+   "t": "Découvrir",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2472
+  },
+  {
+   "t": "Oreiller Soya 2.0",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "Prix de vente",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2854
+  },
+  {
+   "t": "€119,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Economisez €18,00",
+   "fs": 9,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(73,116,202)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2535
+  },
+  {
+   "t": "Housse d’Oreiller de Rechange Soya 2.0",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "Prix de vente",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2854
+  },
+  {
+   "t": "€11,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Prix normal",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2854
+  },
+  {
+   "t": "€29,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Coussin Lombaire Ergonomique Soya",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€49,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Promo",
+   "fs": 9,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(73,116,202)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2535
+  },
+  {
+   "t": "Couette rafraîchissante SoyaFresh",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "A partir de €79,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "€99,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Couleur",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "Blanc",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "Beige",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "Gris",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "Bleu",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "+1",
+   "fs": 10,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2882
+  },
+  {
+   "t": "Draps rafraîchissants SoyaFresh",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "A partir de €54,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "€79,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Economisez €10,00",
+   "fs": 9,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(73,116,202)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2535
+  },
+  {
+   "t": "Ensemble de Coussins de siège Orthopédiques",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€39,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2876
+  },
+  {
+   "t": "Economisez €15,00",
+   "fs": 9,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(73,116,202)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2535
+  },
+  {
+   "t": "Oreiller Soya 1.0",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€34,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Oreiller de Voyage Ergonomique Soya",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€24,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Bleu marine",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "Rouge",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "Vert",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "Housse de Couette en Soie Naturelle Soya",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€44,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "€59,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "+4",
+   "fs": 10,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2882
+  },
+  {
+   "t": "Draps en Soie Naturelle Soya",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€49,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Rose",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 2892
+  },
+  {
+   "t": "Economisez €79,00",
+   "fs": 9,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(73,116,202)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2535
+  },
+  {
+   "t": "Couverture Lestée Anti-Stress & Thérapeutique",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€79,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2876
+  },
+  {
+   "t": "€158,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2876
+  },
+  {
+   "t": "Coussin Ergonomique avec Tête de Lit",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€42,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Economisez €5,00",
+   "fs": 9,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(73,116,202)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2535
+  },
+  {
+   "t": "Ensemble d'Oreillers Réglables",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2834
+  },
+  {
+   "t": "€69,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "€74,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 6.1,
+   "need": 4.5,
+   "fail": false,
+   "y": 2855
+  },
+  {
+   "t": "Economisez €30,00",
+   "fs": 9,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(73,116,202)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2535
+  },
+  {
+   "t": "Masque de Sommeil en Soie Naturelle",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 2828
+  },
+  {
+   "t": "€29,90",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(73, 116, 202)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 4.53,
+   "need": 4.5,
+   "fail": false,
+   "y": 2849
+  },
+  {
+   "t": "Nous avons demandé à nos clients, voici ce qu'ils nous ont dit...",
+   "fs": 28,
+   "fw": 500,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 17.4,
+   "need": 3,
+   "fail": false,
+   "y": 2975
+  },
+  {
+   "t": "Ces données sont issues d'un questionnaire envoyé à l'ensemble des cli",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 17.4,
+   "need": 4.5,
+   "fail": false,
+   "y": 3090
+  },
+  {
+   "t": "96%",
+   "fs": 32,
+   "fw": 500,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 17.4,
+   "need": 3,
+   "fail": false,
+   "y": 3166
+  },
+  {
+   "t": "des utilisateurs ont constaté un soulagement durable de la douleur cer",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 17.4,
+   "need": 4.5,
+   "fail": false,
+   "y": 3218
+  },
+  {
+   "t": "91%",
+   "fs": 32,
+   "fw": 500,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 17.4,
+   "need": 3,
+   "fail": false,
+   "y": 3333
+  },
+  {
+   "t": "des utilisateurs se réveillent plus reposés et revitalisés. Ils affirm",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 17.4,
+   "need": 4.5,
+   "fail": false,
+   "y": 3384
+  },
+  {
+   "t": "87%",
+   "fs": 32,
+   "fw": 500,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 17.4,
+   "need": 3,
+   "fail": false,
+   "y": 3499
+  },
+  {
+   "t": "des utilisateurs ont noté une amélioration de leur posture et une plus",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(26, 26, 26)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 17.4,
+   "need": 4.5,
+   "fail": false,
+   "y": 3550
+  },
+  {
+   "t": "Livraison gratuite",
+   "fs": 16,
+   "fw": 500,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 3687
+  },
+  {
+   "t": "Garantie 30 jours",
+   "fs": 16,
+   "fw": 500,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 3687
+  },
+  {
+   "t": "Service client 7j/7",
+   "fs": 16,
+   "fw": 500,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 3687
+  },
+  {
+   "t": "Paiements 100% sécurisés",
+   "fs": 16,
+   "fw": 500,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255,255,255)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 3687
+  },
+  {
+   "t": "Aller à l'élément 1",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 1,
+   "need": 4.5,
+   "fail": true,
+   "y": 3743
+  },
+  {
+   "t": "Aller à l'élément 2",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 1,
+   "need": 4.5,
+   "fail": true,
+   "y": 3743
+  },
+  {
+   "t": "Aller à l'élément 3",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 1,
+   "need": 4.5,
+   "fail": true,
+   "y": 3743
+  },
+  {
+   "t": "Aller à l'élément 4",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 1,
+   "need": 4.5,
+   "fail": true,
+   "y": 3743
+  },
+  {
+   "t": "Inscrivez-vous à notre newsletter pour des offres exclusives et des pr",
+   "fs": 18,
+   "fw": 500,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 3843
+  },
+  {
+   "t": "E-mail",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 3943
+  },
+  {
+   "t": "S'inscrire",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(29,55,89)",
+   "ratio": 12.03,
+   "need": 4.5,
+   "fail": false,
+   "y": 3968
+  },
+  {
+   "t": "Qui sommes-nous ?",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 4035
+  },
+  {
+   "t": "Soya a été fondée par des passionnés du bien-être, conscients du manqu",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(255, 255, 255, 0.7)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 8.38,
+   "need": 4.5,
+   "fail": false,
+   "y": 4073
+  },
+  {
+   "t": "En savoir plus",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgba(255, 255, 255, 0.7)",
+   "bg": "gradient",
+   "ratio": null,
+   "need": 4.5,
+   "fail": false,
+   "y": 4211
+  },
+  {
+   "t": "Nos politiques",
+   "fs": 14,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 4270
+  },
+  {
+   "t": "Conditions Générales de Vente",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 4308
+  },
+  {
+   "t": "Politique de confidentialité",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 4365
+  },
+  {
+   "t": "Retours & Remboursements",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 4422
+  },
+  {
+   "t": "Your Privacy Choices",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 4479
+  },
+  {
+   "t": "Mentions légales",
+   "fs": 14,
+   "fw": 400,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 4513
+  },
+  {
+   "t": "France (EUR €)",
+   "fs": 12,
+   "fw": 700,
+   "color": "rgb(255, 255, 255)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 16.02,
+   "need": 4.5,
+   "fail": false,
+   "y": 4576
+  },
+  {
+   "t": "© 2026, SOYA PARIS.",
+   "fs": 12,
+   "fw": 400,
+   "color": "rgba(255, 255, 255, 0.7)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 8.38,
+   "need": 4.5,
+   "fail": false,
+   "y": 4724
+  },
+  {
+   "t": "© 2026",
+   "fs": 12,
+   "fw": 400,
+   "color": "rgba(255, 255, 255, 0.7)",
+   "bg": "rgb(4,33,70)",
+   "ratio": 8.38,
+   "need": 4.5,
+   "fail": false,
+   "y": 4726
+  }
+ ],
+ "imgsNoAlt": 0,
+ "btnNoName": [
+  "<a href=\"/\" class=\"group block w-full\">\n                  <span><span class=\"reversed-link\">Accueil</span></span>\n      ",
+  "<a href=\"/products/oreiller-soya-3-0\" class=\"group block w-full\">\n                  <span><span class=\"reversed-link\">No",
+  "<a href=\"/products/oreiller-soya-2-0\" class=\"group block w-full\">\n                  <span><span class=\"reversed-link\">Be",
+  "<a href=\"/collections/nos-best-sellers\" class=\"group block w-full\">\n                  <span><span class=\"reversed-link\">",
+  "<a href=\"/pages/contact\" class=\"group block w-full\">\n                  <span><span class=\"reversed-link\">Contact</span><",
+  "<a href=\"/apps/parcelpanel\" class=\"group block w-full\">\n                  <span><span class=\"reversed-link\">Suivre votre",
+  "<a href=\"/account\" class=\"panel-footer__account-link bold text-sm\">Compte</a>",
+  "<a class=\"button button--xl\" href=\"/collections/all\">Explorer nos produits</a>",
+  "<button type=\"reset\" class=\"text-subdued\">Effacer</button>",
+  "<button type=\"button\" is=\"close-button\">\n        <span class=\"sr-only\">Fermer</span><svg role=\"presentation\" stroke-widt",
+  "<a id=\"block-image_tgd6Dn\" href=\"/products/oreiller-soya-3-0\" class=\"slideshow__slide is-selected\" data-slide-type=\"imag",
+  "<button is=\"prev-button\" class=\"circle-button circle-button--fill border group\" aria-controls=\"scroll-area-template--320",
+  "<button is=\"next-button\" class=\"circle-button circle-button--fill border group\" aria-controls=\"scroll-area-template--320"
+ ],
+ "inputsNoLabel": [],
+ "smallTargets": [
+  {
+   "h": "Passer au contenu",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "Menu",
+   "w": 22,
+   "hh": 22
+  },
+  {
+   "h": "Recherche",
+   "w": 22,
+   "hh": 22
+  },
+  {
+   "h": "Panier\n0",
+   "w": 22,
+   "hh": 22
+  },
+  {
+   "h": "Changer de pays ou de devise",
+   "w": 81,
+   "hh": 20
+  },
+  {
+   "h": "A",
+   "w": 47,
+   "hh": 19
+  },
+  {
+   "h": "BUTTON",
+   "w": 40,
+   "hh": 19
+  },
+  {
+   "h": "Oreiller Soya 2.0",
+   "w": 109,
+   "hh": 16
+  },
+  {
+   "h": "Housse d’Oreiller de Rechange ",
+   "w": 265,
+   "hh": 16
+  },
+  {
+   "h": "Coussin Lombaire Ergonomique S",
+   "w": 252,
+   "hh": 16
+  },
+  {
+   "h": "Couette rafraîchissante SoyaFr",
+   "w": 232,
+   "hh": 16
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "+1",
+   "w": 29,
+   "hh": 21
+  },
+  {
+   "h": "Draps rafraîchissants SoyaFres",
+   "w": 219,
+   "hh": 16
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  },
+  {
+   "h": "+1",
+   "w": 29,
+   "hh": 21
+  },
+  {
+   "h": "Oreiller Soya 1.0",
+   "w": 109,
+   "hh": 16
+  },
+  {
+   "h": "Oreiller de Voyage Ergonomique",
+   "w": 253,
+   "hh": 16
+  },
+  {
+   "h": "INPUT",
+   "w": 1,
+   "hh": 1
+  }
+ ],
+ "headings": [
+  "H1: SOYA PARIS",
+  "H2: ",
+  "H2: "
+ ],
+ "fakeHeadings": 6,
+ "lang": "fr",
+ "vp": "width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0",
+ "autoplay": [],
+ "marquee": 0,
+ "fontSizes": {
+  "8": 3,
+  "9": 7,
+  "10": 2,
+  "11": 1,
+  "12": 3,
+  "14": 83,
+  "16": 7,
+  "18": 1,
+  "28": 4,
+  "32": 3
+ }
+}

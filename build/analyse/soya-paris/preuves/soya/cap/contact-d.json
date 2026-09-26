@@ -1,0 +1,240 @@
+{
+ "job": {
+  "slug": "contact-d",
+  "url": "https://soya-paris.com/pages/contact",
+  "mobile": false,
+  "pdp": 0
+ },
+ "loadMs": 2573,
+ "info": {
+  "title": "Contact",
+  "h1": "",
+  "h1s": null,
+  "h2s": {
+   "ff": "Roboto, sans-serif",
+   "fs": "44px",
+   "fw": "500",
+   "lh": "48.4px",
+   "ls": "1.1px",
+   "tt": "none",
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 48,
+   "w": 636
+  },
+  "body": {
+   "ff": "Roboto, sans-serif",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "25.6px",
+   "ls": "normal",
+   "tt": "none",
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgb(255, 255, 255)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 1532,
+   "w": 1440
+  },
+  "p": {
+   "ff": "Roboto, sans-serif",
+   "fs": "16px",
+   "fw": "700",
+   "lh": "25.6px",
+   "ls": "normal",
+   "tt": "none",
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 26,
+   "w": 636
+  },
+  "btn": {
+   "ff": "Roboto, sans-serif",
+   "fs": "14px",
+   "fw": "400",
+   "lh": "23.8px",
+   "ls": "normal",
+   "tt": "none",
+   "color": "rgba(4, 33, 70, 0.7)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "4px 40px 4px 24px",
+   "h": 0,
+   "w": 0
+  },
+  "header": {
+   "ff": "Roboto, sans-serif",
+   "fs": "16px",
+   "fw": "400",
+   "lh": "25.6px",
+   "ls": "normal",
+   "tt": "none",
+   "color": "rgb(4, 33, 70)",
+   "bg": "rgba(0, 0, 0, 0)",
+   "br": "0px",
+   "pad": "0px",
+   "h": 115,
+   "w": 1440
+  },
+  "ann": "",
+  "nav": [
+   "Recherche",
+   "Accueil",
+   "Nouveau : Oreiller Soya 3.0",
+   "Best Seller : Oreiller Soya 2.0",
+   "Nos Best Sellers",
+   "Contact",
+   "Suivre votre commande",
+   "SOYA PARIS",
+   "Recherche",
+   "Connexion",
+   "Panier 0",
+   "Accueil",
+   "Nouveau : Oreiller Soya 3.0",
+   "Best Seller : Oreiller Soya 2.0",
+   "Nos Best Sellers",
+   "Contact",
+   "Suivre votre commande",
+   "Compte"
+  ],
+  "secs": [
+   {
+    "id": "sections--32068952785228__header",
+    "y": 58,
+    "h": 115,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "",
+    "text": "Accueil Nouveau : Oreiller Soya 3.0 Best Seller : Oreiller Soya 2.0 Nos Best Sellers Contact Suivre votre commande SOYA PARIS EUR € Recherche Connexion Panier 0"
+   },
+   {
+    "id": "sections--32068952817996__cart-drawer",
+    "y": 174,
+    "h": 0,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "",
+    "text": ""
+   },
+   {
+    "id": "sections--32068952817996__search-drawer",
+    "y": 174,
+    "h": 0,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "",
+    "text": ""
+   },
+   {
+    "id": "template--32068952392012__contact",
+    "y": 174,
+    "h": 650,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "Avez-vous une question ?",
+    "text": "Nous sommes là pour vous aider. Avez-vous une question ? Une question, un doute, un besoin d’assistance ? Notre équipe est à votre écoute. Que ce soit pour en savoir plus sur nos produits, suivre votre commande ou simplement nous laisser un message, nous serons ravis d’échanger avec vous. Écrivez-nous à : info@soya-paris.com. Nous répondons généralement sous 24 heures, du lundi au samedi. Vous pouvez également remplir le formulaire ci-dessous, nous reviendrons vers vous dans les plus brefs délais. Bonne nouvelle : une ligne téléphonique dédiée au service client sera bientôt disponible, pour encore plus de proximité et de réactivité. Nom Email Message Envoyer"
+   },
+   {
+    "id": "sections--32068952752460__text-with-icons",
+    "y": 824,
+    "h": 168,
+    "bg": "rgba(0, 0, 0, 0)",
+    "head": "",
+    "text": "Livraison gratuite Garantie 30 jours Service client 7j/7 Paiements 100% sécurisés"
+   },
+   {
+    "id": "sections--32068952752460__footer",
+    "y": 992,
+    "h": 541,
+    "bg": "rgb(4, 33, 70)",
+    "head": "",
+    "text": "Inscrivez-vous à notre newsletter pour des offres exclusives et des promotions ! E-mail S'inscrire Qui sommes-nous ? Soya a été fondée par des passionnés du bien-être, conscients du manque de solutions efficaces pour un sommeil réparateur. Leur mission : offrir des produits innovants, durables et orthopédiques pour un repos optimal. Soya allie confort, innovation et bien-être pour transformer vos nuits... En savoir plus Nos politiques Conditions Générales de Vente Politique de confidentialité Retours & Remboursements Your Privacy Choices Mentions légales France (EUR €) © 2026, SOYA PARIS. © 2026"
+   }
+  ],
+  "kf": [
+   "shopify-rotator",
+   "shopify-dash",
+   "acceleratedCheckoutLoadingSkeleton",
+   "pulse",
+   "translateFull",
+   "ping"
+  ],
+  "btns": [
+   "EUR €",
+   "Envoyer",
+   "S'inscrire",
+   "France (EUR €)"
+  ],
+  "imgs": 1,
+  "vids": [],
+  "fonts": [
+   "Roboto 500 normal",
+   "Roboto 400 normal",
+   "Roboto 700 normal"
+  ],
+  "vars": {
+   "--text-color": "",
+   "--background": "",
+   "--primary-button-background": "",
+   "--accent": "4 33 70",
+   "--heading-font-family": "Roboto, sans-serif",
+   "--text-font-family": "Roboto, sans-serif",
+   "--button-border-radius": "",
+   "--rounded-button": "0.625rem",
+   "--heading-font-weight": "500",
+   "--container-max-width": "1600px"
+  },
+  "nodes": 1046,
+  "reveal": 0,
+  "H": 1532,
+  "perf": {
+   "dcl": 1301,
+   "load": 2566,
+   "transfer": 198738
+  }
+ },
+ "anims": [],
+ "scrollAnims": [],
+ "reqCount": 313,
+ "bytes": 11646349,
+ "byType": {
+  "document": 199167,
+  "stylesheet": 478300,
+  "font": 152934,
+  "script": 5311069,
+  "image": 70740,
+  "ping": -696,
+  "xhr": 203999,
+  "fetch": 202282,
+  "other": 5028554
+ },
+ "third": {
+  "static.klaviyo.com": 18,
+  "api.config-security.com": 2,
+  "conf.config-security.com": 1,
+  "shop.app": 2,
+  "translate.freshify.click": 1,
+  "otlp-http-production.shopifysvc.com": 5,
+  "5xfyfp-ti.myshopify.com": 2,
+  "static-tracking.klaviyo.com": 4,
+  "cdn.starapps.studio": 1,
+  "connect.facebook.net": 2,
+  "fast.a.klaviyo.com": 1,
+  "a.klaviyo.com": 1,
+  "essential-apps-analytics.herokuapp.com": 1,
+  "www.googletagmanager.com": 3,
+  "fonts.googleapis.com": 1,
+  "sc-static.net": 1,
+  "analytics.tiktok.com": 2,
+  "ct.pinterest.com": 1,
+  "fonts.gstatic.com": 2,
+  "static-forms.klaviyo.com": 1,
+  "www.googleadservices.com": 2,
+  "tr.snapchat.com": 2,
+  "www.facebook.com": 1,
+  "loox.io": 1,
+  "extensions.shopifycdn.com": 1,
+  "stats.g.doubleclick.net": 1
+ },
+ "errs": []
+}

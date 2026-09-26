@@ -1,0 +1,256 @@
+{
+ "home-m": {
+  "Document HTML": [
+   1,
+   52048,
+   321598
+  ],
+  "Thème (CSS/JS)": [
+   5,
+   152000,
+   517726
+  ],
+  "App: EZ Translate": [
+   2,
+   9004,
+   43256
+  ],
+  "App: Kaching (bundles+popup)": [
+   7,
+   204465,
+   874323
+  ],
+  "Shopify: autres scripts plateforme": [
+   37,
+   119806,
+   395053
+  ],
+  "Polices (autres)": [
+   3,
+   98940,
+   98940
+  ],
+  "Autre: cdn.shopify.com": [
+   2,
+   65117,
+   71922
+  ],
+  "Images (hors SVG)": [
+   19,
+   210353,
+   210353
+  ],
+  "Shopify: préchargement checkout": [
+   158,
+   1050731,
+   4177114
+  ],
+  "Tiers: config-security.com": [
+   3,
+   55532,
+   161571
+  ],
+  "Autre: soya-paris.com": [
+   19,
+   121922,
+   763937
+  ],
+  "App: StarApps (Variant Image)": [
+   2,
+   9173,
+   32611
+  ],
+  "App: Klaviyo": [
+   35,
+   338406,
+   1149456
+  ],
+  "App: AfterSell": [
+   1,
+   910,
+   2075
+  ],
+  "App: Countdown Timer": [
+   2,
+   11192,
+   48575
+  ],
+  "Shopify: sandbox pixels (WPM)": [
+   21,
+   145751,
+   462766
+  ],
+  "Pub: Meta": [
+   3,
+   254566,
+   939638
+  ],
+  "Pub: Google (gtag/Ads)": [
+   11,
+   509259,
+   1621415
+  ],
+  "Pub: TikTok": [
+   5,
+   47103,
+   144717
+  ],
+  "Pub: Snapchat": [
+   3,
+   25046,
+   59411
+  ],
+  "Pub: Pinterest": [
+   3,
+   302,
+   509
+  ],
+  "Polices Google": [
+   2,
+   54212,
+   54212
+  ],
+  "Autre: e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws": [
+   1,
+   0,
+   0
+  ],
+  "App: Loox (avis)": [
+   1,
+   26374,
+   95700
+  ]
+ },
+ "pdp3-m": {
+  "Document HTML": [
+   1,
+   86229,
+   624388
+  ],
+  "Thème (CSS/JS)": [
+   5,
+   152000,
+   517726
+  ],
+  "App: EZ Translate": [
+   2,
+   9004,
+   43256
+  ],
+  "App: Kaching (bundles+popup)": [
+   9,
+   375723,
+   1632239
+  ],
+  "Shopify: autres scripts plateforme": [
+   45,
+   121045,
+   398292
+  ],
+  "Polices (autres)": [
+   4,
+   134548,
+   134548
+  ],
+  "Images (hors SVG)": [
+   49,
+   1264144,
+   1280955
+  ],
+  "Autre: cdn.shopify.com": [
+   2,
+   65117,
+   71922
+  ],
+  "Tiers: config-security.com": [
+   3,
+   55532,
+   161571
+  ],
+  "Shopify: préchargement checkout": [
+   158,
+   1050731,
+   4177114
+  ],
+  "Autre: soya-paris.com": [
+   21,
+   48859,
+   274746
+  ],
+  "App: Klaviyo": [
+   35,
+   338413,
+   1149553
+  ],
+  "App: StarApps (Variant Image)": [
+   2,
+   9173,
+   32611
+  ],
+  "App: AfterSell": [
+   1,
+   910,
+   2075
+  ],
+  "App: Countdown Timer": [
+   2,
+   11192,
+   48575
+  ],
+  "Galerie SVG (base64)": [
+   33,
+   22871245,
+   22871245
+  ],
+  "Shopify: sandbox pixels (WPM)": [
+   21,
+   145751,
+   462766
+  ],
+  "Vidéo (non mesurée ici)": [
+   5,
+   0,
+   0
+  ],
+  "Pub: Meta": [
+   4,
+   254569,
+   939638
+  ],
+  "Pub: Google (gtag/Ads)": [
+   14,
+   558685,
+   1803670
+  ],
+  "Pub: TikTok": [
+   6,
+   47102,
+   144717
+  ],
+  "Pub: Snapchat": [
+   3,
+   25046,
+   59411
+  ],
+  "Pub: Pinterest": [
+   4,
+   302,
+   509
+  ],
+  "Polices Google": [
+   3,
+   95960,
+   95960
+  ],
+  "Autre: e1-0850197d5e074be58352ddc860645af6.ecs.us-east-1.on.aws": [
+   2,
+   0,
+   0
+  ],
+  "App: Loox (avis)": [
+   28,
+   587769,
+   915162
+  ]
+ }
+}

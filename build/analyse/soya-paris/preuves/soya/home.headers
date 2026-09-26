@@ -1,0 +1,40 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 103 
+link: <https://cdn.shopify.com>; rel=preconnect, <https://cdn.shopify.com>; crossorigin; rel=preconnect, <//soya-paris.com/cdn/shop/t/29/assets/theme.css?v=151159139448717063861789712056>; as=style; rel=preload, <https://cdn.shopify.com/extensions/01a0d46b-a952-7e12-9608-a167dbf336f0/ez-product-image-translate-408/assets/algo_translation_3.js?v=soya-paris.com>; as=script; rel=preload, <https://cdn.shopify.com/extensions/01a0d242-678e-73e5-bffd-00230e3bfc44/kaching-popup-469/assets/kaching-popup-v2.css>; as=style; rel=preload, <https://soya-paris.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=style; crossorigin; rel=preload
+
+HTTP/2 200 
+date: Fri, 25 Sep 2026 21:16:00 GMT
+content-type: text/html; charset=utf-8
+x-download-options: noopen
+cf-cache-status: DYNAMIC
+set-cookie: localization=FR; path=/; expires=Sat, 25 Sep 2027 21:16:00 GMT; SameSite=Lax
+set-cookie: cart_currency=EUR; path=/; expires=Fri, 09 Oct 2026 21:16:00 GMT; SameSite=Lax
+set-cookie: _shopify_essential=:AaDabNUjAAEAJkYPfZtDrOOrEHNIyroAOeH1DwaIQSGB_3gqr9DWtJPtOASZEZ9qBCn3sb7B94MGek85q7nuPqXgTGEXDGsb1pWTe6mitLunAYKXbL3YlvV5z6CAMao5AYXnx3qXuspoZuu9uXD8nTv8W_CkDMrxrEqJt-XC82_MFiu1P_8-McEVrJQnTQwlMaYxv6cXVTQH9acITn-qNUyE9DNV-X6_H9seod4JVhYcA6NK-C88SiLidLukCCzxU9yVThxDUZ-xq_mCXsqJplS2URy-3aIgKZpJgzMRXefAcxOKLiebrNZqFNy5PEJIMKN0EG7_1mN20SEr:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_analytics=:AaDabNX7AAEA9jHJPmd7Pzxm1PStTdNZSU-0hmlbArIlCZ0XxJe6B4ARmwlOU7BJ2UVkjuHksts-7NzbRSpoPQiP7zBQtZ1SdbmSBnUvs53g_8qfHB-RBWC2MDOiM5xc-egK8CKH13ClbsrQo1KKioDqmTg:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_marketing=:AaDabNX8AAEAqNZTraWfQZRVQQgxzkJVjs1VS1BbnMbS7_9o_rx-3XKrDGNRBurzl7dSbIlt59teMTKIy9QkK4J26-Xp5AOdESJx1V5WLdwbKsFYhr9Zx1ZVAPQy_RClrpYPJs1DMJJw1fy5UImsQbe3fmE:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//soya-paris.com/cdn/shop/t/29/assets/theme.css?v=151159139448717063861789712056>; as="style"; rel="preload", <https://cdn.shopify.com/extensions/01a0d46b-a952-7e12-9608-a167dbf336f0/ez-product-image-translate-408/assets/algo_translation_3.js?v=soya-paris.com>; as="script"; rel="preload", <https://cdn.shopify.com/extensions/01a0d242-678e-73e5-bffd-00230e3bfc44/kaching-popup-469/assets/kaching-popup-v2.css>; as="style"; rel="preload", <https://soya-paris.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as="style"; rel="preload"; crossorigin, </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+x-permitted-cross-domain-policies: none
+etag: W/"page_cache:93550543180:IndexController:d1566d69d86f35ed589ccb70f305a7f9:ecc531a6c50db4a738cac212edf6d64d"
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+shopify-complexity-score: 228
+shopify-complexity-score-v2: 228
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+vary: Accept
+vary: accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr-FR
+accept-ch: Sec-CH-Viewport-Width
+powered-by: Shopify
+server-timing: processing;dur=235;desc="gc:3", db;dur=47, db_async;dur=96.456, render;dur=99, asn;desc="396982", edge;desc="IAD", country;desc="US", theme;desc="205977846092", pageType;desc="index", servedBy;desc="gp5g", requestID;desc="df8c889b-42c0-4684-82da-c06de9fb8be9-1790370960", _y;desc="72c34cfb-6e2f-4107-92f4-3c111aeedb25", _s;desc="dd6e66d8-c1e3-4e79-b37c-4087715832c8", _cmp;desc="3.AMPS_US_f_t_WBD8sUADT4qrhZzVRcVB5Q", _cta;desc="1", _ye;desc="1821928560", _se;desc="1790372760", compressionLevel;desc="5", compressionTime;dur=8.784, earlyhints
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-xss-protection: 1; mode=block
+alt-svc: h3=":443"; ma=86400
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=aQe6RUiAZCvLNsgBtibLQfPXSi8DtX1pYbOek5dJcX0hAL7bQGspgFd3YyS6WfpYjaulSsRb3Un06dSICIYNMvfXcefFbAZMG3v0iJMqTr4%2Bp8R7k05RAp3DirL9%2ByHe"}]}
+x-content-type-options: nosniff
+x-request-id: df8c889b-42c0-4684-82da-c06de9fb8be9-1790370960
+cf-ray: a40d0c27ad25c948-IAD
+

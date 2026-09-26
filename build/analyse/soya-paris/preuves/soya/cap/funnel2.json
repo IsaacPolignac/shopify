@@ -1,0 +1,19 @@
+{
+ "timer": {
+  "m": "23:58:56",
+  "utc": "2026-09-25T22:00:05.376Z"
+ },
+ "btns": [
+  "<button type=\"submit\" class=\"button button--xl\" is=\"custom-button\"><div>Ajouter au panier</div><span class=\"button__loader\">\n        <span></span>\n        <span></span>\n        <span></span>\n      </s"
+ ],
+ "cart": {
+  "count": 0,
+  "total": 0,
+  "orig": 0,
+  "disc": 0,
+  "cur": "EUR",
+  "items": []
+ },
+ "drawer": "",
+ "url": "https://soya-paris.com/products/oreiller-soya-3-0"
+}
