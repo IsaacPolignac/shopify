@@ -1,0 +1,809 @@
+{
+  "results": [
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.com"
+        },
+        "page": {
+          "url": "soya-paris.com"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2026-09-21T06:16:11.268Z",
+        "uuid": "01a0c29b-608b-709d-9adb-8e9f9eafbc26",
+        "url": "http://soya-paris.com/"
+      },
+      "stats": {
+        "uniqIPs": 26,
+        "uniqCountries": 4,
+        "dataLength": 6957000,
+        "encodedDataLength": 3628006,
+        "requests": 325
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.73",
+        "apexDomainAgeDays": 2033,
+        "language": "fr",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.com/",
+        "tlsValidDays": 89,
+        "tlsAgeDays": 24,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 2033,
+        "tlsValidFrom": "2026-08-28T01:01:35.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET - Cloudflare, Inc., US",
+        "asn": "AS13335",
+        "tlsIssuer": "YE2",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "01a0c29b-608b-709d-9adb-8e9f9eafbc26",
+      "_score": null,
+      "sort": [
+        1789971371268,
+        "01a0c29b-608b-709d-9adb-8e9f9eafbc26"
+      ],
+      "result": "https://urlscan.io/api/v1/result/01a0c29b-608b-709d-9adb-8e9f9eafbc26/",
+      "screenshot": "https://urlscan.io/screenshots/01a0c29b-608b-709d-9adb-8e9f9eafbc26.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.com"
+        },
+        "page": {
+          "url": "soya-paris.com"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2026-08-19T09:48:38.828Z",
+        "uuid": "01a0196c-1022-720f-aa23-320eb2be9f62",
+        "url": "http://soya-paris.com/"
+      },
+      "stats": {
+        "uniqIPs": 25,
+        "uniqCountries": 4,
+        "dataLength": 6474400,
+        "encodedDataLength": 3165024,
+        "requests": 267
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.73",
+        "apexDomainAgeDays": 2000,
+        "language": "fr",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.com/",
+        "tlsValidDays": 89,
+        "tlsAgeDays": 50,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 2000,
+        "tlsValidFrom": "2026-06-29T20:06:36.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET - Cloudflare, Inc., US",
+        "asn": "AS13335",
+        "tlsIssuer": "YE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "01a0196c-1022-720f-aa23-320eb2be9f62",
+      "_score": null,
+      "sort": [
+        1787132918828,
+        "01a0196c-1022-720f-aa23-320eb2be9f62"
+      ],
+      "result": "https://urlscan.io/api/v1/result/01a0196c-1022-720f-aa23-320eb2be9f62/",
+      "screenshot": "https://urlscan.io/screenshots/01a0196c-1022-720f-aa23-320eb2be9f62.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "account.soya-paris.com"
+        },
+        "page": {
+          "url": "soya-paris.com"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "account.soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2026-05-21T16:40:24.574Z",
+        "uuid": "019e4b68-a7d3-7549-b58c-3b96f2dcba69",
+        "url": "https://account.soya-paris.com/"
+      },
+      "stats": {
+        "uniqIPs": 25,
+        "uniqCountries": 4,
+        "dataLength": 5965095,
+        "encodedDataLength": 3024711,
+        "requests": 212
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "sub-domain",
+        "ip": "23.227.38.73",
+        "apexDomainAgeDays": 1910,
+        "language": "fr",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.com/",
+        "tlsValidDays": 89,
+        "tlsAgeDays": 20,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 1910,
+        "tlsValidFrom": "2026-04-30T20:57:35.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET - Cloudflare, Inc., US",
+        "asn": "AS13335",
+        "tlsIssuer": "E8",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019e4b68-a7d3-7549-b58c-3b96f2dcba69",
+      "_score": null,
+      "sort": [
+        1779381624574,
+        "019e4b68-a7d3-7549-b58c-3b96f2dcba69"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019e4b68-a7d3-7549-b58c-3b96f2dcba69/",
+      "screenshot": "https://urlscan.io/screenshots/019e4b68-a7d3-7549-b58c-3b96f2dcba69.png"
+    },
+    {
+      "canonical": {
+        "task": {
+          "url": "soya-paris.com/products/oreiller-soya-3-0"
+        },
+        "page": {
+          "url": "soya-paris.com/products/oreiller-soya-3-0"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "manual",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2026-04-03T16:42:27.738Z",
+        "uuid": "019d5439-2f25-71a4-83c7-2293c67d277b",
+        "url": "http://soya-paris.com/products/oreiller-soya-3-0"
+      },
+      "stats": {
+        "uniqIPs": 31,
+        "uniqCountries": 5,
+        "dataLength": 106928667,
+        "encodedDataLength": 24090840,
+        "requests": 338
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.73",
+        "apexDomainAgeDays": 1997,
+        "language": "fr",
+        "mimeType": "text/html",
+        "title": "Oreiller Soya 3.0",
+        "url": "https://soya-paris.com/products/oreiller-soya-3-0",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 43,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 1997,
+        "tlsValidFrom": "2026-02-18T20:05:55.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET - Cloudflare, Inc., US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019d5439-2f25-71a4-83c7-2293c67d277b",
+      "_score": null,
+      "sort": [
+        1775234547738,
+        "019d5439-2f25-71a4-83c7-2293c67d277b"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019d5439-2f25-71a4-83c7-2293c67d277b/",
+      "screenshot": "https://urlscan.io/screenshots/019d5439-2f25-71a4-83c7-2293c67d277b.png"
+    },
+    {
+      "canonical": {
+        "task": {
+          "url": "soya-paris.com"
+        },
+        "page": {
+          "url": "soya-paris.com"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "manual",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2026-04-03T15:09:43.820Z",
+        "uuid": "019d53e3-fd4a-7310-b13a-72c274693eb4",
+        "url": "http://soya-paris.com/"
+      },
+      "stats": {
+        "uniqIPs": 26,
+        "uniqCountries": 5,
+        "dataLength": 5128556,
+        "encodedDataLength": 3007864,
+        "requests": 205
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.73",
+        "apexDomainAgeDays": 1997,
+        "language": "fr",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.com/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 43,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 1997,
+        "tlsValidFrom": "2026-02-18T20:05:55.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET - Cloudflare, Inc., US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019d53e3-fd4a-7310-b13a-72c274693eb4",
+      "_score": null,
+      "sort": [
+        1775228983820,
+        "019d53e3-fd4a-7310-b13a-72c274693eb4"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019d53e3-fd4a-7310-b13a-72c274693eb4/",
+      "screenshot": "https://urlscan.io/screenshots/019d53e3-fd4a-7310-b13a-72c274693eb4.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.com"
+        },
+        "page": {
+          "url": "soya-paris.com"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2026-03-17T17:39:30.666Z",
+        "uuid": "019cfce1-739a-740a-840d-5a9609686fa2",
+        "url": "https://soya-paris.com/"
+      },
+      "stats": {
+        "uniqIPs": 26,
+        "uniqCountries": 5,
+        "dataLength": 5340982,
+        "encodedDataLength": 2828133,
+        "requests": 191
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "ip": "23.227.38.73",
+        "apexDomainAgeDays": 1845,
+        "language": "fr",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.com/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 26,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 1845,
+        "tlsValidFrom": "2026-02-18T20:05:55.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET - Cloudflare, Inc., US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019cfce1-739a-740a-840d-5a9609686fa2",
+      "_score": null,
+      "sort": [
+        1773769170666,
+        "019cfce1-739a-740a-840d-5a9609686fa2"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019cfce1-739a-740a-840d-5a9609686fa2/",
+      "screenshot": "https://urlscan.io/screenshots/019cfce1-739a-740a-840d-5a9609686fa2.png"
+    },
+    {
+      "canonical": {
+        "task": {
+          "url": "soya-paris.com"
+        },
+        "page": {
+          "url": "soya-paris.com"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "manual",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2026-02-20T23:49:59.262Z",
+        "uuid": "019c7d75-8927-7019-b116-199ec083f45b",
+        "url": "https://soya-paris.com/"
+      },
+      "stats": {
+        "uniqIPs": 23,
+        "uniqCountries": 5,
+        "dataLength": 5278725,
+        "encodedDataLength": 2786418,
+        "requests": 173
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "ip": "23.227.38.73",
+        "apexDomainAgeDays": 1820,
+        "language": "fr",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.com/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 2,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 1820,
+        "tlsValidFrom": "2026-02-18T20:05:55.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET - Cloudflare, Inc., US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019c7d75-8927-7019-b116-199ec083f45b",
+      "_score": null,
+      "sort": [
+        1771631399262,
+        "019c7d75-8927-7019-b116-199ec083f45b"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019c7d75-8927-7019-b116-199ec083f45b/",
+      "screenshot": "https://urlscan.io/screenshots/019c7d75-8927-7019-b116-199ec083f45b.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.us"
+        },
+        "page": {
+          "url": "soya-paris.us"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "time": "2025-12-21T16:39:27.504Z",
+        "uuid": "019b41c7-8f62-77ac-a4b4-939cb83a2472",
+        "url": "http://soya-paris.us/"
+      },
+      "stats": {
+        "uniqIPs": 21,
+        "uniqCountries": 5,
+        "dataLength": 5083154,
+        "encodedDataLength": 2689191,
+        "requests": 155
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.65",
+        "apexDomainAgeDays": 257,
+        "language": "en",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.us/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 3,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 257,
+        "tlsValidFrom": "2025-12-17T16:46:15.000Z",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "asnname": "CLOUDFLARENET, US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019b41c7-8f62-77ac-a4b4-939cb83a2472",
+      "_score": null,
+      "sort": [
+        1766335167504,
+        "019b41c7-8f62-77ac-a4b4-939cb83a2472"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019b41c7-8f62-77ac-a4b4-939cb83a2472/",
+      "screenshot": "https://urlscan.io/screenshots/019b41c7-8f62-77ac-a4b4-939cb83a2472.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.us"
+        },
+        "page": {
+          "url": "soya-paris.us"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "time": "2025-12-20T16:34:40.575Z",
+        "uuid": "019b3c9c-d20d-77cd-afef-8f8525d4d4e5",
+        "url": "http://soya-paris.us/"
+      },
+      "stats": {
+        "uniqIPs": 22,
+        "uniqCountries": 5,
+        "dataLength": 5082034,
+        "encodedDataLength": 2715438,
+        "requests": 155
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.65",
+        "apexDomainAgeDays": 256,
+        "language": "en",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.us/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 2,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 256,
+        "tlsValidFrom": "2025-12-17T16:46:15.000Z",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "asnname": "CLOUDFLARENET, US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019b3c9c-d20d-77cd-afef-8f8525d4d4e5",
+      "_score": null,
+      "sort": [
+        1766248480575,
+        "019b3c9c-d20d-77cd-afef-8f8525d4d4e5"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019b3c9c-d20d-77cd-afef-8f8525d4d4e5/",
+      "screenshot": "https://urlscan.io/screenshots/019b3c9c-d20d-77cd-afef-8f8525d4d4e5.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.com"
+        },
+        "page": {
+          "url": "soya-paris.com"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2025-12-05T00:44:14.810Z",
+        "uuid": "019aebf7-5163-7082-8f5f-b96c4db0599c",
+        "url": "http://soya-paris.com/"
+      },
+      "stats": {
+        "uniqIPs": 22,
+        "uniqCountries": 5,
+        "dataLength": 5065878,
+        "encodedDataLength": 2667321,
+        "requests": 151
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.73",
+        "apexDomainAgeDays": 1742,
+        "language": "fr",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.com/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 42,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 1742,
+        "tlsValidFrom": "2025-10-23T17:12:50.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET, US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019aebf7-5163-7082-8f5f-b96c4db0599c",
+      "_score": null,
+      "sort": [
+        1764895454810,
+        "019aebf7-5163-7082-8f5f-b96c4db0599c"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019aebf7-5163-7082-8f5f-b96c4db0599c/",
+      "screenshot": "https://urlscan.io/screenshots/019aebf7-5163-7082-8f5f-b96c4db0599c.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.us"
+        },
+        "page": {
+          "url": "soya-paris.us"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "time": "2025-11-06T15:59:03.857Z",
+        "uuid": "019a59e4-5f39-75bf-b3a5-9d7b2712fe11",
+        "url": "http://soya-paris.us/"
+      },
+      "stats": {
+        "uniqIPs": 26,
+        "uniqCountries": 5,
+        "dataLength": 4969013,
+        "encodedDataLength": 2674403,
+        "requests": 159
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.65",
+        "apexDomainAgeDays": 212,
+        "language": "en",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.us/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 18,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 212,
+        "tlsValidFrom": "2025-10-19T13:32:46.000Z",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "asnname": "CLOUDFLARENET, US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019a59e4-5f39-75bf-b3a5-9d7b2712fe11",
+      "_score": null,
+      "sort": [
+        1762444743857,
+        "019a59e4-5f39-75bf-b3a5-9d7b2712fe11"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019a59e4-5f39-75bf-b3a5-9d7b2712fe11/",
+      "screenshot": "https://urlscan.io/screenshots/019a59e4-5f39-75bf-b3a5-9d7b2712fe11.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.us"
+        },
+        "page": {
+          "url": "soya-paris.us"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "time": "2025-11-05T18:31:02.294Z",
+        "uuid": "019a5549-3ba3-73fe-a522-f13ff40bff1b",
+        "url": "http://soya-paris.us/"
+      },
+      "stats": {
+        "uniqIPs": 23,
+        "uniqCountries": 5,
+        "dataLength": 4976883,
+        "encodedDataLength": 2709775,
+        "requests": 160
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.65",
+        "apexDomainAgeDays": 211,
+        "language": "en",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.us/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 17,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 211,
+        "tlsValidFrom": "2025-10-19T13:32:46.000Z",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "asnname": "CLOUDFLARENET, US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019a5549-3ba3-73fe-a522-f13ff40bff1b",
+      "_score": null,
+      "sort": [
+        1762367462294,
+        "019a5549-3ba3-73fe-a522-f13ff40bff1b"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019a5549-3ba3-73fe-a522-f13ff40bff1b/",
+      "screenshot": "https://urlscan.io/screenshots/019a5549-3ba3-73fe-a522-f13ff40bff1b.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.us"
+        },
+        "page": {
+          "url": "soya-paris.us"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "time": "2025-11-05T17:01:26.526Z",
+        "uuid": "019a54f7-225a-7315-b313-0bb52a98586c",
+        "url": "http://soya-paris.us/"
+      },
+      "stats": {
+        "uniqIPs": 24,
+        "uniqCountries": 5,
+        "dataLength": 5032414,
+        "encodedDataLength": 2740805,
+        "requests": 160
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "redirected": "https-only",
+        "ip": "23.227.38.65",
+        "apexDomainAgeDays": 211,
+        "language": "en",
+        "mimeType": "text/html",
+        "title": "SOYA Paris - Confort & Bien-être pour un Sommeil Réparateur",
+        "url": "https://soya-paris.us/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 17,
+        "ptr": "myshopify.com",
+        "domainAgeDays": 211,
+        "tlsValidFrom": "2025-10-19T13:32:46.000Z",
+        "domain": "soya-paris.us",
+        "apexDomain": "soya-paris.us",
+        "asnname": "CLOUDFLARENET, US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "019a54f7-225a-7315-b313-0bb52a98586c",
+      "_score": null,
+      "sort": [
+        1762362086526,
+        "019a54f7-225a-7315-b313-0bb52a98586c"
+      ],
+      "result": "https://urlscan.io/api/v1/result/019a54f7-225a-7315-b313-0bb52a98586c/",
+      "screenshot": "https://urlscan.io/screenshots/019a54f7-225a-7315-b313-0bb52a98586c.png"
+    },
+    {
+      "submitter": {},
+      "canonical": {
+        "task": {
+          "url": "soya-paris.com"
+        },
+        "page": {
+          "url": "soya-paris.com"
+        }
+      },
+      "task": {
+        "visibility": "public",
+        "method": "api",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "time": "2024-09-21T17:01:51.175Z",
+        "uuid": "7cab18e4-4668-4c47-a2e9-0446cddbfdb7",
+        "url": "https://soya-paris.com/"
+      },
+      "stats": {
+        "uniqIPs": 11,
+        "uniqCountries": 4,
+        "dataLength": 13506757,
+        "encodedDataLength": 691010,
+        "requests": 68
+      },
+      "page": {
+        "country": "CA",
+        "server": "cloudflare",
+        "ip": "23.227.38.73",
+        "mimeType": "text/html",
+        "title": "SOYA PARIS",
+        "url": "https://soya-paris.com/",
+        "tlsValidDays": 90,
+        "tlsAgeDays": 16,
+        "tlsValidFrom": "2024-09-05T07:57:53.000Z",
+        "domain": "soya-paris.com",
+        "apexDomain": "soya-paris.com",
+        "asnname": "CLOUDFLARENET, US",
+        "asn": "AS13335",
+        "tlsIssuer": "WE1",
+        "status": "200"
+      },
+      "labels": [],
+      "_id": "7cab18e4-4668-4c47-a2e9-0446cddbfdb7",
+      "_score": null,
+      "sort": [
+        1726938111175,
+        "7cab18e4-4668-4c47-a2e9-0446cddbfdb7"
+      ],
+      "result": "https://urlscan.io/api/v1/result/7cab18e4-4668-4c47-a2e9-0446cddbfdb7/",
+      "screenshot": "https://urlscan.io/screenshots/7cab18e4-4668-4c47-a2e9-0446cddbfdb7.png"
+    }
+  ],
+  "total": 14,
+  "took": 304,
+  "has_more": false
+}

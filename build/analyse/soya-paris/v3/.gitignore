@@ -1,0 +1,8 @@
+# Jamais dans le dépôt public : fichiers lourds ou pouvant contenir des cookies et des données personnelles
+node_modules/
+*.har
+*.har.gz
+exterieur/videos/
+*.mp4
+*.mov
+*.webm
