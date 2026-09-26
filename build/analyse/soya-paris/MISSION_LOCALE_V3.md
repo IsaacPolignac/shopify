@@ -54,7 +54,7 @@
 
 **« Digne de la CIA », ici, veut dire** : rigueur, traçabilité et hiérarchie des preuves. Pas d'intrusion : tout vient de sources publiques ou de ce qu'une visiteuse anonyme voit.
 
-**Les 10 questions clés** (chaque mission sert au moins l'une d'elles) :
+**Les 11 questions clés** (chaque mission sert au moins l'une d'elles) :
 
 | KIQ | Question |
 |---|---|
@@ -98,8 +98,8 @@
 5. **En français** : rapports, questions à l'utilisateur, fichiers de synthèse. (Les exemples de textes publicitaires pour Somnila sont en anglais, puisque la boutique l'est.)
 6. **Budget serré.** Aucun outil payant, aucune application payante, aucun compte à créer. SimilarWeb, Semrush et les autres outils s'utilisent en vue publique gratuite, ou avec un compte **déjà existant** de l'utilisateur, s'il le décide.
    - Semrush exige une inscription, et les outils gratuits d'Ahrefs posent un captcha : sans compte existant, ne les utilise pas.
-   - L'API PageSpeed sans clé a répondu 429 depuis le cloud : utilise l'interface pagespeed.web.dev.
-   - Playwright, ffmpeg et Whisper sont gratuits, mais leur installation demande un accord (question i de M0). **N'installe aucun logiciel (Homebrew, ffmpeg, Whisper, Playwright, paquets pip) sans accord.**
+   - L'API PageSpeed sans clé a répondu 429 depuis le cloud : en local, `psi.sh` (M13) peut l'essayer ; sur 429, utilise l'interface pagespeed.web.dev.
+   - Playwright, ffmpeg et Whisper sont gratuits, mais leur installation demande un accord (question i de M0). **N'installe aucun logiciel (Homebrew, Node.js, ffmpeg, Whisper, Playwright, Pillow, Lighthouse, paquets pip) sans accord.**
 7. **Règle d'origine : une phase à la fois, rapport court, attendre le « ok ».** Adaptation pour cette mission : fais un point d'étape court entre deux grands blocs **seulement** si une décision de l'utilisateur est requise ; sinon, avance. Toute action hors de cette mission, ou qui touche Somnila : attendre le « ok ».
 8. **Le dépôt est PUBLIC.** Aucun mot de passe, aucune clé, aucun jeton dans les fichiers. Aucune donnée personnelle de l'utilisateur dans les captures versées : floute ou recadre.
 
@@ -111,22 +111,24 @@
   - coller une **URL publique** dans un outil tiers qui l'exige (PageSpeed, TinEye, recherche d'image Bing) : ce n'est pas une donnée personnelle ;
   - sur les bandeaux de cookies des **sites tiers** (Google.fr « Avant d'accéder à Google », YouTube, Facebook, Instagram, TikTok, Amazon, Trustpilot, SimilarWeb…) : clique « Tout refuser » ou « Cookies essentiels uniquement ». C'est un choix de cookies, pas une saisie ;
   - sur soya-paris.com : ne clique rien sur la bannière avant la fin de M1 ; M1 fixe ce qu'on y clique ; après M1, « Refuser » si elle réapparaît ;
-  - « Your Privacy Choices » : lecture seule, aucun interrupteur.
+  - « Your Privacy Choices » : lecture seule, aucun interrupteur ;
+  - sur soya-paris.com, us.soya-paris.com et les boutiques de M11 : coloris, cartes d'offre, case housse, « Ajouter au panier », +/− et suppression d'une ligne du panier, par clic visible (liste fermée de `PROTOCOLE_DEMONTAGE.md` § 1.2, sauf le repli du récapitulatif au paiement : zéro clic, M2 PAN-5). Jamais un champ de texte.
 - **Sites à risque** (Temu, AliExpress, Coupert, iGraal, Poulpeo…) : ferme les popups par la croix ; n'installe aucune extension proposée ; notifications sur « Bloquer » ; ne passe jamais outre un avertissement de navigation sécurisée ; ne télécharge rien.
 - **Règles plus strictes sur soya-paris.com** (`v3/PROTOCOLE_DEMONTAGE.md` § 1.1 et § 1.2, qui s'ajoutent à celles-ci) :
   - aucune saisie de texte dans aucun champ du site ;
   - aucun script qui écrit : pas de `.value =`, pas de `.submit()`, pas d'écriture dans `localStorage` ou `document.cookie`, **pas de `fetch` en POST** ;
   - les clics se font avec l'outil de clic de l'extension, visibles et tracés, jamais par `el.click()` en JavaScript ;
   - le sélecteur de pays ou de devise s'ouvre pour lire la liste, mais on n'y choisit **jamais** de valeur : c'est un envoi POST vers `/localization`. Pour une autre devise, voir M2 (lecture par `curl` avec un cookie `localization`).
+- **Effacer les données d'un site** se fait par l'interface de Chrome (cadenas > « Cookies et données de site »). Si l'extension ne peut pas l'ouvrir, l'utilisateur le fait à ta demande. Jamais par script (`document.cookie`, `localStorage.clear()`).
 - **Pas de compte ni d'achat.** Aucun compte créé, nulle part : ni chez SOYA, ni chez Semrush, SimilarWeb, Milled, Meta for Developers ou Shopify Partners. Aucun achat.
 - **Aucun contact** avec SOYA, ses clones, ses fournisseurs ou ses clientes : pas de message, de commentaire, de « J'aime », d'abonnement, de signalement, d'inscription à une newsletter ou aux SMS. Ni vote « utile », ni « Écrire un avis ».
-- **Paiement.** Arrête-toi avant toute saisie. Ne clique jamais dans un champ de la page de paiement. Ne clique **jamais** un bouton de paiement express : Shop Pay, PayPal, Apple Pay, Google Pay, Amazon Pay, Klarna, Alma, Scalapay, Oney. Aucune exception : PAN-6 et PUB-8 ne sont faits que par l'utilisateur lui-même (M2, § 4 « Angles morts P3 »). Si Chrome propose un remplissage automatique : Échap, rien de sélectionné, puis arrêt et rapport.
+- **Paiement.** Arrête-toi avant toute saisie. Ne clique jamais dans un champ de la page de paiement. Ne clique **jamais** un bouton de paiement express : Shop Pay, PayPal, Apple Pay, Google Pay, Amazon Pay, Klarna, Alma, Scalapay, Oney. Aucune exception : PAN-6 et PUB-8 ne sont faits que par l'utilisateur lui-même (M2, § 4 « Angles morts P3 »). Si Chrome propose un remplissage automatique : Échap, rien de sélectionné, puis arrêt et rapport. La page de paiement s'ouvre toujours par lien direct (`/checkout`), jamais par le bouton « Paiement » du tiroir, du panier ou de la barre collante. Cela vaut aussi pour M11 (Derila) et M13 (P27). Cette règle remplace le « Clic Paiement » de `PROTOCOLE_DEMONTAGE.md` § 9.5 et la procédure PAN-5 de `ANGLES_MORTS.md` l. 305.
 - **Ne touche à rien de la boutique Shopify de Somnila** (lecture seule de fichiers du dépôt uniquement). Aucune permission de site pour admin.shopify.com, *.myshopify.com, accounts.google.com, mail.google.com, paypal.com ni les banques.
 - **Aucun appel aux connecteurs MCP** (Shopify, Gmail, Notion…), même en lecture. Si l'extension propose une connexion par 1Password ou par un gestionnaire de mots de passe : refuse ; l'utilisateur se connecte lui-même.
-- **Ne clique jamais sur une annonce Google** : le clic est facturé à l'annonceur. Utilise le menu « ⋮ » > « À propos de cet annonceur ». Même règle pour une annonce sponsorisée dans un fil social : jamais de clic.
+- **Ne clique jamais sur une annonce payante, quelle que soit la plateforme** : Google (Search, Shopping, YouTube, Display), Bing, les résultats « Sponsorisé » d'Amazon, Cdiscount, Temu, AliExpress et TikTok Shop, les épingles sponsorisées Pinterest, les publications sponsorisées Facebook, Instagram, TikTok et Reddit. Ne clique pas non plus un lien d'affiliation (M8 : lis son `href`). Le clic est facturé à l'annonceur. Sur Google, utilise « ⋮ » > « À propos de cet annonceur ».
 - **Captcha.** Ne résous jamais un captcha. Arrête-toi, espace les requêtes (30 minutes), ou demande à l'utilisateur de le faire lui-même.
 - **Personnes privées.** N'identifie pas les présentateurs de vidéos, les commentateurs, les auteurs d'avis ni les dirigeants personnes physiques. Pas de reconnaissance faciale : aucune recherche d'image (Lens, Bing) sur un visage ; seul TinEye, en correspondance exacte, est permis (M8). Les commentaires et avis sont cités anonymisés (« une cliente, 1★, 14/09/2026 »). Ne recopie jamais une donnée de santé attachée à un nom.
-- **Personnes physiques dans les registres et les bibliothèques.** Si le payeur ou le bénéficiaire d'une annonce (Meta, TikTok) est un particulier : écris « personne physique (nom non reproduit) » et floute la capture. Même règle pour Companies House (`/officers`, PSC), l'annuaire des entreprises (dirigeants), l'USPTO et TMview.
+- **Personnes physiques dans les registres et les bibliothèques.** Si le payeur ou le bénéficiaire d'une annonce (Meta, TikTok) est un particulier : écris « personne physique (nom non reproduit) » et floute la capture. Même règle pour Companies House (`/officers`, PSC), l'annuaire et l'API des entreprises (dirigeants et entrepreneurs individuels), le registre du Wyoming (agent enregistré), RDAP/WHOIS (M11), l'adresse DMARC `rua` si c'est une boîte personnelle (M6), l'USPTO et TMview.
 - **Formulation.** Décris des faits et des **risques**, jamais des qualifications définitives (« risque au regard de L121-4 », et non « illégal » ou « arnaque »). Seul un juge qualifie une infraction.
 - **Réseaux sociaux, connecté ou non.**
   - Jamais de double-clic sur une publication Instagram ou une vidéo TikTok : double-clic = J'aime.
@@ -139,7 +141,7 @@
 - utiliser l'un de ses comptes existants : Facebook, Instagram, TikTok, Trustpilot, SimilarWeb, Semrush, Ahrefs, Google (Ads, « Mon Centre publicitaire ») ;
 - continuer sur la page de paiement si Shop Pay, un code SMS, un e-mail pré-rempli ou un remplissage automatique Chrome apparaît ;
 - toute action qui laisse chez SOYA une trace **identifiable** : visite de soya-paris.com depuis un profil connecté à Facebook, Instagram ou TikTok. (PAN-6 et PUB-8 ne sont pas des actions de la session : l'utilisateur les fait lui-même, s'il le veut.) ;
-- installer une tâche planifiée macOS (agent launchd) ou un logiciel (ffmpeg, Whisper, Playwright, outils Xcode) ;
+- installer une tâche planifiée macOS (agent launchd) ou un logiciel (ffmpeg, Whisper, Node.js, Playwright et son Chromium, Pillow, Lighthouse, outils Xcode) ;
 - modifier ou anonymiser un fichier existant hors de `v3/` (voir l'alerte B10 en M0) ;
 - pousser (`git push`) tant que B10 n'est pas tranché (voir § 7) ;
 - intégrer la Partie III dans `DOSSIER_SOYA_PARIS.md` si la question B10 n'est pas tranchée.
@@ -166,7 +168,8 @@ build/analyse/soya-paris/v3/          (dépôt public)
   SYNTHESE_V3.md             synthèse finale
   30_plan_somnila.md         plan pour Somnila
   (déjà présents, lecture seule : PROTOCOLE_DEMONTAGE.md, PROTOCOLE_EXTERIEUR.md,
-   INVENTAIRE_SITE.md, preuves_cloud/ ; .gitignore : voir M0)
+   INVENTAIRE_SITE.md, ANGLES_MORTS.md, CIBLES_AUDIT_V2.md, MARKETING_SOURCES.md,
+   CONTEXTE_SOMNILA.md, preuves_cloud/ ; .gitignore : voir M0)
 
 ~/soya-veille/               (hors dépôt, jamais versé)
   brut/<mission>/            texte brut des pages où figurent des tiers ou le compte de l'utilisateur
@@ -175,7 +178,7 @@ build/analyse/soya-paris/v3/          (dépôt public)
 $TMPDIR/soya_tar/            pages HTML extraites du tar (hors dépôt)
 $TMPDIR/soya_run/            copies des scripts v2 à rejouer (hors dépôt)
 ```
-Ne modifie pas `DOSSIER_SOYA_PARIS.md`, `v2/` ni `preuves/v2/` avant la phase S (synthèse). Ne crée ni `v3/ads/`, ni `v3/exterieur/`, ni `v3/local.md` (voir § 3.0). `v3/site/` est réservé à M13 : son arborescence est celle de `PROTOCOLE_DEMONTAGE.md` § 2 et § 12 (`cap/`, `data/`, `reseau/` pour les résumés seulement, `anim/`, `telephone/`, `textes/`, un fichier `Pxx.md` par page). Les HAR bruts et les vidéos restent hors dépôt (`v3/.gitignore`).
+Ne modifie pas `DOSSIER_SOYA_PARIS.md`, `v2/` ni `preuves/v2/` avant la phase S (synthèse). Ne crée ni `v3/ads/`, ni `v3/exterieur/`, ni `v3/local.md` (voir § 3.0). `v3/site/` est réservé à M13 : son arborescence est celle de `PROTOCOLE_DEMONTAGE.md` § 2 et § 12 (`cap/`, `data/`, `reseau/` pour les résumés seulement, `anim/`, `telephone/`, `textes/`, un fichier `Pxx_<nom>.md` par page ; nommage des captures selon le protocole § 6.3, qui remplace dans `v3/site/` le seul nommage du § 2.2 : le reste du § 2.2, dont le masquage et le texte brut hors dépôt, s'applique). Les HAR bruts et les vidéos restent hors dépôt (`v3/.gitignore`).
 
 ### 2.2 Nommage, captures, copies texte
 - Nom de fichier : `AAAAMMJJ-HHMMZ_<objet-court>.jpg`, par exemple `20260926-1932Z_meta-page-transparence.jpg`.
@@ -210,7 +213,7 @@ Ne modifie pas `DOSSIER_SOYA_PARIS.md`, `v2/` ni `preuves/v2/` avant la phase S 
   - **Texte brut d'une page où figurent des tiers ou le compte de l'utilisateur** (Facebook, Instagram, TikTok, Trustpilot, commentaires, Reddit, avis) : **hors dépôt**, dans `~/soya-veille/brut/<mission>/`.
   - Dans `v3/`, seulement une version **expurgée** : noms remplacés par « auteur 1 », « auteur 2 »… ; pour toute citation qui touche à la santé, le mois sans le jour (une citation exacte plus sa date permet de retrouver l'auteur).
   - Pages connectées : jamais le texte intégral (la colonne Contacts et le nom de l'utilisateur y figurent) ; extraction ciblée du seul conteneur utile. Jamais de journal réseau d'une page connectée.
-  - **Masquage avant tout JSON ou TXT versé** : valeurs de `_fbp`, `_ga`, `__kla_id`, `_shopify_y`, `_shopify_s`, jetons de panier (`"token"` de `/cart.js`), jetons de paiement (`/checkouts/cn/<jeton>`), chemins `/Users/<nom>`. Garde le nom du cookie, son domaine, son expiration et la longueur de la valeur.
+  - **Masquage avant tout JSON ou TXT versé** : valeurs de `_fbp`, `_ga`, `__kla_id`, `_shopify_y`, `_shopify_s`, jetons de panier (`"token"` de `/cart.js`), jetons de paiement (`/checkouts/cn/<jeton>`), chemins `/Users/<nom>`, identifiants dans les URL des requêtes de pixels (`fbp`, `fbc`, `cid`, `_gid`, `ttp`, `external_id`, `ud[…]`, `uid`, `sid`), adresse IP publique de l'utilisateur, lignes « Chemin du profil » et « Ligne de commande » de `chrome://version`. Garde le nom du cookie, son domaine, son expiration et la longueur de la valeur.
 - **Taille.** Tout fichier HTML de plus de 1 Mo : compresse-le en `.xz`.
 
 ### 2.3 Journal (`v3/JOURNAL.md`)
@@ -250,13 +253,13 @@ Le commit 575b279 a créé dans `v3/` : `PROTOCOLE_DEMONTAGE.md` (1 596 lignes),
 - **Ce fichier fait foi.** Les fichiers v3 existants sont des annexes en **lecture seule** ; la session cloud peut encore y pousser. Ne les modifie pas.
 - **Usages :**
   - `INVENTAIRE_SITE.md` : liste des URL pour M2.
-  - `PROTOCOLE_DEMONTAGE.md` § 1 : ses règles, plus strictes, s'ajoutent aux tiennes (reprises au § 1.2). Son § 3.2 sert à obtenir les largeurs de 390 px. Il s'exécute **en entier** dans la mission M13 (P1) : pages P00 à P37 et pages d'atterrissage P40+. Son § 10 (extérieur, E01 à E10) n'est pas exécuté dans M13 : il est couvert par M3, M4, M5 et M8. Ses modules se citent **D-M1 à D-M19**, pour ne pas les confondre avec tes missions M1 à M12.
+  - `PROTOCOLE_DEMONTAGE.md` § 1 : ses règles, plus strictes, s'ajoutent aux tiennes (reprises au § 1.2). Son § 3.2 sert à obtenir les largeurs de 390 px. Il s'exécute **en entier** dans la mission M13 (P1) : pages P00 à P37 et pages d'atterrissage P40+. Son § 10 (extérieur, E01 à E10) n'est pas exécuté dans M13 : il est couvert par M3, M4, M5 et M8. Ses modules se citent **D-M1 à D-M19**, pour ne pas les confondre avec tes missions M1 à M13.
   - `PROTOCOLE_EXTERIEUR.md` : § 1 = référence des champs de chaque bibliothèque ; § 3 à § 7 = détail des champs ; § 4 (étape B, pages d'atterrissage) s'exécute dans M3a (étape 2 bis).
 - **Leurs chemins de sortie sont remplacés par ceux du § 2.1.** Ne crée ni `v3/ads/`, ni `v3/exterieur/`, ni `v3/local.md`, ni un second `JOURNAL.md` ou `inventaire.tsv`. Seule exception : `v3/site/`, pour M13.
 - **Annexes de préparation (lecture seule, même règle de lecture ciblée)** :
   - `v3/ANGLES_MORTS.md` : le détail de chaque angle mort de la matrice (ID-1 à ID-8, PUB-1 à PUB-8, RS-1 à RS-5, PAN-1 à PAN-7, CON-1, SEO-1 à SEO-4, TRA-1 à TRA-3, VEN-1 à VEN-4, SRC-1 à SRC-6, VOC-1 à VOC-5, CRM-1 à CRM-3, AUT-1 à AUT-5), avec sections du dossier, URL et procédure ;
   - `v3/CIBLES_AUDIT_V2.md` : les affirmations à fort enjeu et les faiblesses de méthode, base de A1 ;
-  - `v3/MARKETING_SOURCES.md` : ce que le dossier couvre déjà en marketing, ce qui manque, les sources et les cadres d'analyse, base de M3 à M5, A3 et A4 ;
+  - `v3/MARKETING_SOURCES.md` : ce que le dossier couvre déjà en marketing, ce qui manque, les sources et les cadres d'analyse, base de M3 à M5, A1 (§ 2.0), A3 et A4 ;
   - `v3/CONTEXTE_SOMNILA.md` : avatar, marque, prix, marchés et questions ouvertes de Somnila, avec références de lignes, base de A3 et A5.
 - **Profils** : « Enquête Soya » = « Analyse Soya » = profil « Veille ».
 - **Lecture ciblée** : `grep -n '^## \|^### ' <fichier>`, puis seulement la section utile. Jamais en entier.
@@ -312,7 +315,7 @@ Le dossier fait 3 563 lignes : ne le lis pas en entier d'un coup.
 ## 4. Missions
 
 **Organisation.**
-- Les missions navigateur (M1 à M11, puis M13) se font **en séquence**, dans la session principale : il n'y a qu'un seul Chrome. Les captures automatiques de M13 (Playwright, `capture.mjs`) ouvrent leur propre navigateur : elles peuvent tourner dans le Terminal pendant qu'un sous-agent rédige, mais jamais en même temps qu'une passe dans Chrome sur soya-paris.com.
+- Les missions navigateur (dans l'ordre des sessions du § 9 : M1 à M3, M13-1, M4 à M8, M13-2, M9 à M11, M13-3) se font **en séquence**, dans la session principale : il n'y a qu'un seul Chrome. Les captures automatiques de M13 (Playwright, `capture.mjs`, si i) = oui) ouvrent leur propre navigateur : elles peuvent tourner dans le Terminal pendant qu'un sous-agent rédige, mais jamais en même temps qu'une passe dans Chrome sur soya-paris.com.
 - Les missions d'analyse (A1 à A5) ne demandent que le dépôt. Si l'outil de sous-agents (Agent ou Task) existe, **lance A1, A2 et A3 en arrière-plan dès M0.6**, avant le message de départ.
 - **Chaque sous-agent** reçoit dans sa consigne :
   - les règles des §§ 1 et 2 de ce fichier ;
@@ -328,22 +331,22 @@ Le dossier fait 3 563 lignes : ne le lis pas en entier d'un coup.
   - Une boîte de dialogue JavaScript (alerte, confirmation) bloque le navigateur : arrête-toi, l'utilisateur la ferme.
 - **Points d'étape** : en fin de mission, jamais au milieu d'une passe navigateur.
 
-**Priorité.** P1 = indispensable ; P2 = important ; P3 = si le temps le permet. Les durées sont des plafonds indicatifs. Le découpage en 3 sessions et le parcours minimal sont au § 9.
+**Priorité.** P1 = indispensable ; P2 = important ; P3 = si le temps le permet. Les durées sont des plafonds indicatifs. Le découpage en sessions et le parcours minimal sont au § 9.
 
 ### M0 — Mise en place, questions de départ, veille J0 (P1, 45 min)
 1. **Synchronise le dépôt.**
    - `R=$(git rev-parse --show-toplevel)`.
    - `git status` : si des changements locaux existent, arrête-toi et demande.
    - `git pull --rebase origin claude/pilloway-shopify-shrine-bwge6y`.
-   - `ls -a "$R/build/analyse/soya-paris/v3"` : il contient déjà `PROTOCOLE_DEMONTAGE.md`, `PROTOCOLE_EXTERIEUR.md`, `INVENTAIRE_SITE.md`, `.gitignore` et `preuves_cloud/`. Complète-le sans rien écraser (§ 3.0).
+   - `ls -a "$R/build/analyse/soya-paris/v3"` : il contient déjà `PROTOCOLE_DEMONTAGE.md`, `PROTOCOLE_EXTERIEUR.md`, `INVENTAIRE_SITE.md`, `ANGLES_MORTS.md`, `CIBLES_AUDIT_V2.md`, `MARKETING_SOURCES.md`, `CONTEXTE_SOMNILA.md`, `.gitignore` et `preuves_cloud/`. Complète-le sans rien écraser (§ 3.0).
    - `python3 --version`. Si macOS propose d'installer les outils de développement Xcode, n'accepte pas : demande à l'utilisateur.
    - Identité git : ne change rien avant la réponse à g).
 2. **Crée l'arborescence** : `v3/preuves/`, `v3/donnees/`, `v3/outils/`, `v3/JOURNAL.md` (en-tête du § 2.3), `v3/outils/cap.sh` (§ 2.2), `~/soya-veille/brut/`.
-   - **`.gitignore`** : la racine du dépôt ignore `*.csv` [constaté le 26/09 : `git check-ignore -v`]. Ajoute la ligne `!donnees/*.csv` à `v3/.gitignore` (seule modification permise de ce fichier), puis vérifie avec `git check-ignore -v build/analyse/soya-paris/v3/donnees/test.csv` : la sortie doit citer `v3/.gitignore` et la règle `!donnees/*.csv`. `.DS_Store` est déjà ignoré à la racine.
+   - **`.gitignore`** : la racine du dépôt ignore `*.csv` [constaté le 26/09 : `git check-ignore -v`]. Ajoute la ligne `!donnees/*.csv` à `v3/.gitignore` (seule modification permise de ce fichier en M0 ; M13 y ajoute ses exclusions, § 7), puis vérifie avec `git check-ignore -v build/analyse/soya-paris/v3/donnees/test.csv` : la sortie doit citer `v3/.gitignore` et la règle `!donnees/*.csv`. `.DS_Store` est déjà ignoré à la racine.
    - Teste une capture (méthode 1, sinon 2) de la page d'accueil de wikipedia.org, puis ouvre l'image.
 3. **Navigateur.** Charge le skill Claude in Chrome (par exemple `chrome-browser`) s'il est listé, puis fais le point sur les onglets.
    - **Ne détermine pas le profil en ouvrant un site.** N'ouvre aucun site Meta, Google ou TikTok dans « Veille » avant la fin de M1 : cela y déposerait des cookies (`datr`, `fr`…) et fausserait le test de consentement. Demande à l'utilisateur quel profil est au premier plan (question a).
-   - Si l'extension ne pilote qu'un profil à la fois, travaille en **deux passes** : passe « Veille » (M1 à M4, M6 à M11) ; passe « Réseaux » (M5, et la fin de M3 si la connexion est exigée), seulement après accord (b). Demande à l'utilisateur de basculer au bon moment (`/chrome` > « Select browser… »).
+   - Si l'extension ne pilote qu'un profil à la fois, travaille en **deux passes** : passe « Veille » (M1 à M4, M6 à M11, M13) ; passe « Réseaux » (M5, et la fin de M3 si la connexion est exigée), seulement après accord (b). Demande à l'utilisateur de basculer au bon moment (`/chrome` > « Select browser… »).
 4. **Relevé J0 des compteurs**, sans modifier le système :
    ```bash
    R=$(git rev-parse --show-toplevel)
@@ -353,7 +356,7 @@ Le dossier fait 3 563 lignes : ne le lis pas en entier d'un coup.
    Le script écrit `inv/snap-<date>.json` dans le dossier courant. Lis sa sortie : une fiche sans compteur signale une page réduite ; relance 10 minutes plus tard.
    **Quelle que soit la réponse à d)**, relance cette commande au début de chaque mission, environ toutes les 2 heures : tu obtiens une série sur la durée de la session.
 5. **Offres.** Écris `v3/outils/offre.py` maintenant (spécification en M12), pour qu'il puisse rejoindre la tâche planifiée.
-6. **Lance d'abord A1 (4 parties), A2 et A3 en arrière-plan.** Puis **envoie UN seul message** à l'utilisateur, avec les questions a) à i), et **attends sa réponse** (envoyer un message termine ton tour : rien ne tourne pendant l'attente, sauf les sous-agents). L'utilisateur est devant l'écran au lancement. S'il répond « défauts », applique les valeurs entre parenthèses.
+6. **Lance d'abord A1 (4 parties), A2 et A3 en arrière-plan.** Puis **envoie UN seul message** à l'utilisateur, avec les questions a) à i), et **attends sa réponse** (envoyer un message termine ton tour : rien ne tourne pendant l'attente, sauf les sous-agents). L'utilisateur est devant l'écran au lancement. S'il répond « défauts », applique les valeurs entre parenthèses. Recopie les réponses a) à i), datées, dans l'en-tête de `JOURNAL.md` : elles valent pour toutes les sessions suivantes. Le dépôt est public : pour g), n'y écris aucune adresse, seulement « adresse noreply fournie » ou « adresse actuelle acceptée ». Si d) = oui, installe tout de suite la tâche planifiée de M12 (elle s'arrête le 04/10).
    - a) Le profil « Veille » est-il prêt (sans compte Google, sans données de remplissage automatique, sans bloqueur) ? Quel profil Chrome est au premier plan en ce moment ? (Sinon, attendre.)
    - b) Puis-je utiliser en **lecture seule** tes comptes Facebook, Instagram et TikTok, dans le profil « Réseaux » ? Pour TikTok, désactive d'abord « Historique des vues de profil » et « Historique des vues des publications ». Stories Instagram à la une : oui ou non ? (Défaut : non, vue publique seulement ; stories à la une : non.)
    - c) Comptes existants utilisables : Trustpilot, SimilarWeb, Semrush, Ahrefs, Google Ads (Planificateur de mots-clés), compte Google pour lire « Mon Centre publicitaire » ? (Défaut : non. Le menu « ⋮ » des annonces Google.fr reste lu sans compte, en M4.)
@@ -366,7 +369,7 @@ Le dossier fait 3 563 lignes : ne le lis pas en entier d'un coup.
      (Défaut : je n'ajoute aucune donnée nominative dans `v3/`, je ne pousse rien d'autre que ce que permet le § 7, et je n'intègre la Partie III qu'après ta réponse.)
    - g) Identité git : les commits cloud sont signés `Claude <noreply@anthropic.com>`. Sur ton Mac, `git config user.email` publierait ton adresse dans un dépôt public. Veux-tu me donner ton adresse noreply GitHub, que je règle pour ce dépôt seulement (sans `--global`), ou acceptes-tu ton adresse actuelle ? (Défaut : aucun commit poussé avant ta réponse.)
    - h) Même dans « Veille », ton IP résidentielle part chez SOYA, Shopify et Meta (API de conversions côté serveur). Option gratuite : le partage de connexion 4G/5G de ton téléphone pendant M1 et M2. (Défaut : ta box.)
-   - i) Puis-je installer des outils gratuits si besoin : ffmpeg et Whisper (vidéos, M3), Playwright ? (Défaut : non ; je me replie sur les méthodes sans installation.)
+   - i) Puis-je installer des outils gratuits si besoin : ffmpeg et Whisper (vidéos, M3) ; pour M13 : Node.js s'il manque, Playwright et son Chromium (dans `v3/outils/`), Pillow, Lighthouse ? (Défaut : non ; je me replie sur les méthodes sans installation : M13 se fait alors au seul moteur A (Claude in Chrome, méthode 1 du § 2.2), et PageSpeed par l'interface web.)
 7. **Commit local** : `v3 : mise en place, relevé J0 des compteurs`. Push seulement selon le § 7.
 
 ### M1 — Consentement cookies et pixels, vue d'une visiteuse française (P1, 45 min)
@@ -387,7 +390,7 @@ Le dossier fait 3 563 lignes : ne le lis pas en entier d'un coup.
    - `JSON.stringify({r: Shopify.customerPrivacy?.getRegion?.(), b: Shopify.customerPrivacy?.shouldShowBanner?.(), c: Shopify.customerPrivacy?.currentVisitorConsent?.()})` ;
    - **si le résultat est `undefined`**, l'API n'est pas chargée (elle se charge à la demande) : ce n'est **pas** « pas de région ». Lance `Shopify.loadFeatures([{name:'consent-tracking-api',version:'0.1'}], e=>{window.__ctapi = e ? String(e) : 'ok'})`, attends 2 s, puis relis la même expression et `window.__ctapi`. Charger l'API ne donne aucun consentement ;
    - `document.cookie` : cherche `_fbp`, `_ttp`, `_scid`, `_pin_unauth`, `_gcl_au`, `_ga`, `__kla_id`, `_tw*` (garde les noms, masque les valeurs, § 2.2) ;
-   - `performance.getEntriesByType('resource').map(e=>[Math.round(e.startTime), e.name]).filter(x=>/facebook|fbevents|tiktok|snapchat|sc-static|pinimg|pinterest|googletagmanager|google-analytics|doubleclick|googleadservices|klaviyo|triplewhale|parcelpanel/.test(x[1]))` ;
+   - `performance.getEntriesByType('resource').map(e=>[Math.round(e.startTime), e.name]).filter(x=>/facebook|fbevents|tiktok|snapchat|sc-static|pinimg|pinterest|googletagmanager|google-analytics|doubleclick|googleadservices|klaviyo|triplewhale|parcelpanel|bat\.bing|clarity\.ms|ads-twitter|analytics\.twitter|redditstatic|alb\.reddit|taboola|outbrain|criteo|applovin|hotjar/.test(x[1]))` ;
    - les requêtes réseau vues par l'extension. Elles incluent celles des iframes « web-pixels », que `performance` ne voit pas.
    Sauvegarde tout en JSON (valeurs de cookies et identifiants masqués).
 3. Relève si la popup Klaviyo (12 s) apparaît avant tout consentement. Relève aussi le lien « Your Privacy Choices » (lecture seule) et la politique de confidentialité en français.
@@ -426,7 +429,7 @@ Tout se passe dans le profil « Veille ». **Après chaque étape**, lis le pani
   Le motif `15.{0,3}637` tolère une espace insécable comme séparateur de milliers. Refais 3 fois à 10 minutes d'écart ; compresse chaque HTML en `.xz` s'il dépasse 1 Mo.
 - **PAN-1, offre 1x.**
   1. Choisis le coloris **Blanc**, garde l'offre 1x et la case housse telle qu'elle est, puis clique « Ajouter au panier ».
-  2. Capture la popup Kaching « lombaire » et son délai d'apparition, puis clique « Non merci… ».
+  2. Capture la popup Kaching « lombaire » et son délai d'apparition, puis clique le « Non merci » **de la popup Kaching**. Jamais celui de Klaviyo : si elle est ouverte, ferme-la d'abord par la croix.
   3. Capture le tiroir panier et `/cart.js`.
   4. Vide le panier. Refais avec **Gris**, puis **Beige**.
   - **À relever** : le coloris de la housse ajoutée. Il suit l'oreiller, ou il est Bleu par défaut (indice du § 18.7) ?
@@ -471,7 +474,7 @@ Tout se passe dans le profil « Veille ». **Après chaque étape**, lis le pani
   - Panier 1x, puis `https://us.soya-paris.com/checkout` par lien direct, zéro clic : devise et domaine de la première page de paiement. Ferme l'onglet, efface les données du site.
 - **Contrôle de mise en page** (P2, 30 min ; reprend D-M18, tableau T18, pour P01 et P02 seulement) : accueil et fiche 3.0, en 1 440 × 900 et en 390 × 844 (méthode de `PROTOCOLE_DEMONTAGE` § 3.2 pour obtenir 390 px), 3 positions de défilement chacune, en euros ; 2 animations filmées en GIF, comparées au § 20. Chaque valeur : confirmé (± 2 px), corrigé ou nouveau. Sert la notation des § 3, 4, 5, 10 et 20 par A1.
 - **Minuteur** (AUT-4, P3) : si la session tourne entre 23:55 et 00:02, heure de Paris, capture la fiche 3.0 avant et après minuit.
-- **Popup Klaviyo** : capture l'écran 1 seulement. Ne clique pas « Ventre / Côté / Dos » : c'est un champ de formulaire. Ferme par la croix.
+- **Popup Klaviyo** : capture l'écran 1 seulement. Ne clique ni « Ventre / Côté / Dos », ni « Pour moi / Pour un proche », ni « Non merci, je ne veux pas être VIP » : ces boutons envoient le formulaire. Ferme par la croix ou Échap.
 - **Livrables :**
   - `v3/02_tunnel.md` (avec la matrice Q5) ;
   - `donnees/paniers.csv` (chemin, coloris, offre, lignes, prix affiché fiche, prix panier, total, housse et coloris, cadeaux, fichier JSON) ;
@@ -522,7 +525,7 @@ Les dépenses ne sont publiées que pour les annonces politiques.
    - Relève les annonceurs tiers : affiliés (oreillerpillow.com, bestoffersfinder `aff_id=71241`), clones (`soyaparisfrance.com`, `soyaparisfr.store`, `soyaparisoreillerergonomique.com`, `soyapariscoussinergonomique.com`, `soyaparisconfortclothing.com` : qui paie ?), créateurs.
 7. **Pays.** Refais le compteur de la page avec `country=BE`, `CH`, `ALL`, puis `US`, `GB`, `CA`, `AU`. Hors UE, seules les annonces actives apparaissent, sans portée : c'est la vue utile à Somnila (AUT-2).
 8. **Contenu de marque.** Cherche « Soya Paris » comme partenaire dans la recherche de contenu de marque de la bibliothèque, si elle est accessible.
-9. **API `ads_archive`.** Elle exige une vérification d'identité et une application développeur. Elle est **hors mission**, sauf si l'utilisateur la met en place lui-même ; dans ce cas, aucun jeton dans le dépôt.
+9. **API `ads_archive`.** Elle exige une vérification d'identité et une application développeur. Elle est **hors mission**. Même si l'utilisateur crée l'application, tu ne manipules aucun jeton ni clé. Écris seulement, dans `03_publicite.md`, la requête prête à l'emploi qu'il lancera lui-même.
 
 **3b. Google Ads Transparency** (ID-1, PUB-2, PUB-7) — **le relevé qui tranche l'annonceur vérifié.** Depuis le cloud : 429 et captcha. En local, captcha = arrêt (§ 1.2).
 1. `https://adstransparency.google.com/?region=FR&domain=soya-paris.com`, puis `region=anywhere`. Refais avec `us.soya-paris.com` et `soya-paris.us`.
@@ -552,6 +555,7 @@ Les dépenses ne sont publiées que pour les annonces politiques.
 - Pinterest : `https://ads.pinterest.com/ads-repository/`, recherche « soya », UE, 12 mois. La balise 2613625264959 est installée sur le site.
 - Amazon : `https://www.amazon.de/adlibrary` (essaie aussi `amazon.fr/adlibrary`), recherches « soya », « SWZEC ».
 - Microsoft : 0 annonce le 26/09 depuis le cloud. Ne pas refaire. Pièces : réponses brutes déjà dans `v3/preuves_cloud/v3ads/` (`msft_*.json`, et `urlscan_domain.json`) : cite-les.
+- X et LinkedIn : `https://ads.x.com/ads-repository` (UE ; ancien `ads.twitter.com/ads-repository`) et `https://www.linkedin.com/ad-library/`, sans connexion. Recherches « soya » et « LUXERY ». Si une connexion est exigée : « fermé sans compte », avec capture.
 
 **Livrables :**
 - `v3/03_publicite.md` ;
@@ -650,8 +654,10 @@ Puis les registres (règle « personnes physiques » du § 1.2) :
   - Pour LUXERY SERVICE LTD (16489223), ouvre `/officers` et `/persons-with-significant-control`. Note **seulement** l'existence d'un lien avec une autre entité du dossier : nationalité déclarée, adresse de service partagée, société mère. Ne reproduis aucun nom de particulier ; floute les captures.
 - **ID-7, entreprises françaises** : l'annuaire web renvoie une page quasi vide ; utilise l'API publique gratuite, sans la clé `dirigeants` :
   ```bash
-  curl -s 'https://recherche-entreprises.api.gouv.fr/search?q=SOYA%20PARIS' | python3 -c "import json,sys; d=json.load(sys.stdin); [r.pop('dirigeants',None) for r in d.get('results',[])]; print(json.dumps(d,ensure_ascii=False,indent=1))" > "$R/build/analyse/soya-paris/v3/preuves/m06_identite/$(date -u +%Y%m%d-%H%MZ)_api_soya-paris.json"
+  R=$(git rev-parse --show-toplevel); mkdir -p "$R/build/analyse/soya-paris/v3/preuves/m06_identite"
+  curl -s 'https://recherche-entreprises.api.gouv.fr/search?q=SOYA%20PARIS' | python3 -c "import json,sys; d=json.load(sys.stdin); r=d.get('results',[]); [x.pop('dirigeants',None) for x in r]; d['results']=[{'nature_juridique':'1000','nom_complet':'personne physique (nom non reproduit)'} if x.get('nature_juridique')=='1000' or (x.get('complements') or {}).get('est_entrepreneur_individuel') else x for x in r]; print(json.dumps(d,ensure_ascii=False,indent=1))" > "$R/build/analyse/soya-paris/v3/preuves/m06_identite/$(date -u +%Y%m%d-%H%MZ)_api_soya-paris.json"
   ```
+  Les entrepreneurs individuels (nom, adresse du domicile) sont remplacés par « personne physique (nom non reproduit) ». JSON brut, s'il est gardé : `~/soya-veille/brut/m06/` seulement.
   Puis « MERCURE PARIS », « FREYJA » (3 s entre deux appels ; 429 depuis le cloud, en principe accessible en local).
 - **ID-8, DNS** (Terminal) : `dig +short TXT soya-paris.com`, `dig +short TXT _dmarc.soya-paris.com`, `dig +short MX soya-paris.com`. Relève :
   - le fournisseur de messagerie ;
@@ -685,19 +691,21 @@ Pour chaque pièce, indique +, − ou neutre pour chaque hypothèse.
   - Ouvre dans le navigateur un échantillon de 15 seulement, pour vérifier une date ou une note modifiée. Classe : 404, en ligne, en ligne avec une date ou une note modifiée.
   - Le « ≥ 85 disparus » du v2 vient d'un calcul par différence, pas d'identifiants : seuls ces 42 identifiants se testent un par un. Dis-le.
 - **VOC-1** (seulement avec le compte Trustpilot existant, sur accord) : `…?stars=1&sort=recency&page=11` et les pages suivantes, puis `stars=2`. Texte brut hors dépôt (§ 2.2).
-- **VOC-3.** `https://www.signal-arnaques.com/scam/view/805026` (nombre de signalements, dates, thèmes). Puis Reddit (`https://www.reddit.com/search/?q=%22soya%20paris%22`), Dealabs, forums Doctissimo, `https://warning-trading.com/consommation/soya-paris-com-avis-escroquerie/`.
+- **VOC-3.** `https://www.signal-arnaques.com/scam/view/805026` (nombre de signalements, dates, thèmes). Puis Reddit (`https://www.reddit.com/search/?q=%22soya%20paris%22`), Dealabs, forums Doctissimo, `https://warning-trading.com/consommation/soya-paris-com-avis-escroquerie/`, puis signal-arnaques 895436, 820336, 821207, 822832 et forum 6843 ; avis-verifies.com, franceverif.fr, scamsandbox.com, scamdoc ; fiche Google Maps « Soya Paris » (existe ou non).
 - **VOC-4.** Widget Loox affiché sur la fiche 3.0 : ordre des avis, filtres, badges « Vérifié », part des avis avec photo, 1★ visibles, tri par date.
 - **VEN-3, numéros de commande** (nouvelle piste). Les 7 numéros déjà trouvés dans `preuves/v2/avis/avis_classes.tsv` :
 
-  | Plateforme | Date de l'avis | Numéro | Indication de date de commande |
+  | Plateforme | Mois de l'avis | Numéro (arrondi) | Indication de date de commande |
   |---|---|---|---|
-  | Loox | 23/03/2026 | #336869 | seconde commande, pas encore reçue |
-  | Trustpilot | 20/09/2026 | n°360892 | retour demandé en juin 2026 |
-  | Trustpilot | 15/09/2026 | #363631 | — |
-  | Trustpilot | 14/09/2026 | #366871 | — |
-  | Trustpilot | 11/08/2026 | n° 373325 | commande déjà reçue |
-  | Trustpilot | 07/09/2026 | #386799 | passée en août |
-  | Trustpilot | 21/09/2026 | #393634 | — |
+  | Loox | 03/2026 | #3368xx | seconde commande, pas encore reçue |
+  | Trustpilot | 09/2026 | n°3608xx | retour demandé en juin 2026 |
+  | Trustpilot | 09/2026 | #3636xx | — |
+  | Trustpilot | 09/2026 | #3668xx | — |
+  | Trustpilot | 08/2026 | n° 3733xx | commande déjà reçue |
+  | Trustpilot | 09/2026 | #3867xx | passée en août |
+  | Trustpilot | 09/2026 | #3936xx | — |
+
+  Numéros et dates arrondis ici, comme dans le CSV versé. Les valeurs exactes se lisent dans `preuves/v2/avis/avis_classes.tsv` et vont seulement dans `~/soya-veille/brut/m07/`.
 
   Cherche-en d'autres, avec leur date :
   - dans le texte intégral Loox (`preuves/v2/avis/loox_reviews.json`) ;
@@ -712,7 +720,7 @@ Pour chaque pièce, indique +, − ou neutre pour chaque hypothèse.
 
 **Livrables :**
 - `v3/07_voix_client.md` ;
-- `donnees/numeros_commande.csv` (`source, date_avis, numero, date_commande_min, date_commande_max, indice_texte, fiabilite`, sans nom d'auteur ; `indice_texte` expurgé) ;
+- `donnees/numeros_commande.csv` (`source, date_avis, numero, date_commande_min, date_commande_max, indice_texte, fiabilite`, sans nom d'auteur ; `indice_texte` expurgé). Dans le CSV versé : `numero` arrondi à la centaine (ex. `3608xx`) ; `date_avis`, `date_commande_min` et `date_commande_max` au mois (la borne haute vaut souvent la date exacte de l'avis). Numéros et dates exacts seulement dans `~/soya-veille/brut/m07/`, où se fait l'ajustement ;
 - `donnees/trustpilot_disparitions.csv` (`id, publie_le, code_http, verifie_navigateur_oui_non, constat`) ;
 - `preuves/m07_voc/`.
 
@@ -728,7 +736,7 @@ Pour chaque pièce, indique +, − ou neutre pour chaque hypothèse.
   - photos d'avis qui ressemblent au 3.0 (cornes, point central froncé, bourrelet nervuré).
 - **SRC-3, recherche d'image sur les produits** (jamais sur un visage).
   - Récupère les URL des images dans `https://soya-paris.com/products/oreiller-soya-3-0.json`, puis `oreiller-soya-enfant.json` et `coussin-lombaire-ergonomique-soya.json`.
-  - Passe chaque image dans `https://lens.google.com/uploadbyurl?url=<URL encodée>`.
+  - Passe dans `https://lens.google.com/uploadbyurl?url=<URL encodée>` seulement les images **sans aucune personne visible**. Contrôle la miniature avant : pas de mannequin, pas de visage, pas d'avatar « Dr. Marc R. » ni « Christine R. ». Même filtre pour Bing.
   - Bing : bouton « Rechercher par image » sur bing.com/images, en y collant l'URL publique de l'image. (L'URL `bing.com/images/search?…&q=imgurl:` renvoie vers l'accueil, testé depuis le cloud.)
   - **Pour Somnila (audit n° 37) :** Lens sur l'image CDN de `https://soya-paris.com/products/coussin-ergonomique-avec-tete-de-lit.json`. Google Lens ne lit pas une image locale (le téléversement passe par une boîte de dialogue que l'extension ne pilote pas). Compare ensuite à l'œil, en planche, avec les photos du Lounge 01 dans `build/images/source/01-oreiller-telephone/` : même annonce fournisseur ?
 - **Matrice Q8, origine des envois** (dans `08_sourcing_presse.md`, format du § 2.4) : H1 stock en Europe (≈ 19 000 unités réassorties sous `deny`, B2) ; H2 envoi direct depuis la Chine (ParcelPanel `sensitive_world`, délais) ; H3 mixte. Pièces : compteurs, délais des avis, ParcelPanel, politiques de livraison, places de marché.
@@ -754,7 +762,7 @@ Pour chaque pièce, indique +, − ou neutre pour chaque hypothèse.
 **Livrable :** `v3/09_email_sms.md`.
 
 ### M10 — Trafic et performance (P2, 30 min)
-**Sert :** TRA-1, TRA-3, VEN-4, audit n° 24 et 42.
+**Sert :** TRA-1, VEN-4, audit n° 24 (TRA-3 et audit n° 42 : repris par M13).
 - **TRA-1.** `https://www.similarweb.com/website/soya-paris.com/` dans le navigateur. Relève :
   - le libellé exact (« Total Visits » d'un mois ou de 3 mois : c'est l'audit n° 24) ;
   - la courbe mensuelle, les pays, les canaux, et la démographie par âge et par sexe si elle est affichée (utile à l'avatar) ;
@@ -764,7 +772,7 @@ Pour chaque pièce, indique +, − ou neutre pour chaque hypothèse.
 - **Nomenclature des campagnes (Display, natif, réseaux).** Cherche dans les archives CDX, par `curl` :
   `https://web.archive.org/cdx/search/cdx?url=soya-paris.com/&matchType=prefix&fl=original&collapse=urlkey`
   les paramètres `utm_`, `tw_`, `tblci` (Taboola), `obOrigUrl` (Outbrain), `ttclid`, `fbclid`, `gclid`. Compte-les par source et par campagne : c'est la reconstitution de la nomenclature de SOYA. Enregistre la liste dans `donnees/cdx_parametres.tsv`.
-- **TRA-3.** `https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsoya-paris.com%2Fproducts%2Foreiller-soya-3-0` (interface ; l'API sans clé répond 429) : LCP, INP et CLS des vrais utilisateurs, et poids transféré (audit n° 42).
+- **TRA-3** : repris par M13, qui fait PageSpeed sur toutes les pages ; M10 ne le refait pas. Pour mémoire, la mesure attendue : `https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fsoya-paris.com%2Fproducts%2Foreiller-soya-3-0` (interface ; l'API sans clé répond 429) : LCP, INP et CLS des vrais utilisateurs, et poids transféré (audit n° 42).
 - **VEN-4.** Deux lectures de la fiche à 5 secondes d'écart, avec `?_=<horodatage>` : compare les en-têtes `etag`, `server-timing` et les compteurs (`curl -sI` puis `curl -s`, depuis le Terminal).
 
 **Livrable :** `v3/10_trafic.md`.
@@ -772,7 +780,7 @@ Pour chaque pièce, indique +, − ou neutre pour chaque hypothèse.
 ### M11 — Concurrents français et équivalents américains utiles à Somnila (P2 ; 30 min par marque, Derila 1 h ; 7 marques au plus)
 **Marques** : Wopilo, Tediber, **Derila** (fr.derilashop.com et la version US), Pilloway, Cloudii, un acteur américain du format double hauteur (ZGMCX ou Comfy Sleepers), et **Somnilys**.
 
-**Redirections.** Les sites américains redirigent souvent une IP française vers leur version UE. Si c'est le cas, utilise leur sélecteur de pays (réglage d'affichage sur un site concurrent, sans saisie de donnée) et étiquette [indice]. Sur soya-paris.com, la règle du § 1.2 reste : jamais de sélecteur.
+**Redirections.** Les sites américains redirigent souvent une IP française vers leur version UE. Si c'est le cas, lis leur version américaine par `curl` avec `-H 'Cookie: localization=US; cart_currency=USD'` (même méthode que PAN-US en M2), ou par une adresse de pays si le site en publie une, et étiquette [indice]. Ne valide aucun sélecteur de pays, même chez un concurrent : sur une boutique Shopify, c'est un envoi de formulaire. Sur soya-paris.com, la règle du § 1.2 reste : jamais de sélecteur.
 
 **Pour chaque marque :**
 - bibliothèque Meta : `country=FR` pour les marques françaises, `country=US` pour les américaines (actives seulement, sans portée) ;
@@ -846,14 +854,14 @@ Vise 150 verbatims. Le classement est fait par A3 bis.
 **Livrable :** `v3/12_veille.md` (J0 et série de session faits, tâche active ou non, procédure J+7, matrice Q2).
 
 ### M13 — Démontage complet du site, élément par élément (P1 ; environ 25 h en 3 sessions)
-**Pourquoi.** Demande explicite de l'utilisateur : « il faut qu'il analyse vraiment tout : fiche produit, carrousels, disposition, bref que tout soit analysé ». **Sert :** Q11, Q5, Q6, AUT-5, audit A1 (contrôle des mesures du dossier). **Référence complète :** `v3/PROTOCOLE_DEMONTAGE.md` (1 596 lignes) ; lis-le section par section (`grep -n '^## \|^### '`), jamais en entier. Liste des URL : son § 4 et `v3/INVENTAIRE_SITE.md`.
+**Pourquoi.** Demande explicite de l'utilisateur : « il faut qu'il analyse vraiment tout : fiche produit, carrousels, disposition, bref que tout soit analysé ». **Sert :** Q11, Q5, Q6, AUT-5, TRA-3, SITE-1 à SITE-6, audit n° 42, audit A1 (contrôle des mesures du dossier). **Référence complète :** `v3/PROTOCOLE_DEMONTAGE.md` (1 596 lignes) ; lis-le section par section (`grep -n '^## \|^### '`), jamais en entier. Liste des URL : son § 4 et `v3/INVENTAIRE_SITE.md`.
 
 **Ce qui est démonté.** Toutes les pages P00 à P37 du protocole (§ 4), plus P40+ (pages d'atterrissage trouvées par M3) :
 - P00 gabarit commun (bandeau, en-tête, menu, tiroirs, pied de page, popups) ; P01 accueil ;
 - P02 à P20 : les 19 fiches produit (P02 Soya 3.0, P03 Soya 2.0, P04 enfant, P05 lombaire, P06 housse 3.0 en N1 ; les autres en N2) ;
 - P21 à P25 : collections et recherche ; P26 et P27 : panier et première page du paiement ; P28 à P35 : pages, blog, politiques, suivi, compte, 404 ; P36 : us.soya-paris.com ; P37 : fichiers techniques.
 
-**Pour chaque page, aux 4 largeurs (390, 768, 1024, 1440)**, les modules D-M1 à D-M19 du protocole (§ 7) :
+**Pour chaque page, 4 largeurs relevées (390, 768, 1024, 1440)** ; modules D-M1 à D-M19 du protocole (§ 7) rédigés en entier pour N1, par différence pour N2 et N3 :
 - structure et ordre des sections, hauteurs en px, cm et écrans, premier écran, grille, marges, alignements ;
 - **chaque carrousel** (une fiche T4 par carrousel) : type, nombre de slides, contenu de chaque slide à l'identique et nature de l'image, défilement automatique et durée, flèches, pastilles, glisser au doigt, boucle, comportement mobile ;
 - micro-textes à l'identique, typographie, couleurs (hex), images et icônes (nature : packshot, lifestyle, infographie, IA), espacements ;
@@ -871,24 +879,31 @@ Vise 150 verbatims. Le classement est fait par A3 bis.
 - le widget Loox **rendu** (nombre, tri, photos, filtres ; resté blanc pour la session cloud), ventes croisées, récemment vus.
 
 **Coordination avec les autres missions.**
-- P00 cookies = **M1** ; P26 et P27 (panier et paiement) = **M2** fait foi pour les prix et les paniers. Dans M13, exécute seulement les scénarios S0 à S10 du protocole (§ 9.4) que M2 n'a pas couverts, puis la mise en page du tiroir, de `/cart` et du paiement aux 4 largeurs. Mêmes interdits : aucune saisie, jamais de paiement express.
-- PageSpeed : M13 le fait sur toutes les pages ; M10 garde SimilarWeb, CrUX et les en-têtes.
+- P00 cookies = **M1** ; P26 et P27 (panier et paiement) = **M2** fait foi pour les prix et les paniers. Dans M13, exécute seulement les scénarios de panier D-S0 à D-S10 du protocole (§ 9.4), distincts des phases S0 à S3, que M2 n'a pas couverts, puis la mise en page du tiroir et de `/cart` aux 4 largeurs. Mêmes interdits : aucune saisie, jamais de paiement express ; P27 s'ouvre par lien direct `/checkout` (M2 PAN-5).
+- P27 (paiement) comme en M2 PAN-5 : lien direct, zéro clic sur la page, contrairement au protocole § 9.5 (ni « Paiement », ni repli du récapitulatif) ; largeurs 390 et 1440 seulement.
+- Contrôle de mise en page de M2 : M13 reprend ses valeurs T18 pour P01 et P02 en 1440 et 390 sans les remesurer, et ajoute 768, 1024 et les autres pages.
+- PageSpeed : M13 le fait sur toutes les pages, P02 comprise (sert TRA-3 et l'audit n° 42) ; M10 ne refait pas PageSpeed et garde SimilarWeb, CDX et VEN-4.
 - Le protocole utilise « Enquête Soya » ou « Analyse Soya » pour le profil Chrome : c'est ton profil « Veille ».
 - Les règles du protocole (§ 1) s'ajoutent aux tiennes. En particulier : **pixels publicitaires bloqués** dans les captures Playwright (sauf D-M13 performance et D-M17 traceurs), aucune saisie, sélecteur de pays ouvert mais jamais validé.
 
 **Mise en route (1 h, en début de première session M13).**
-1. Protocole § 2 : dossiers `v3/site/…` et `v3/outils/`, Playwright (`npm i playwright`, gratuit), Pillow.
-2. Les scripts des annexes A à E du protocole (`demontage.js`, `capture.mjs`, `glisser.mjs`, `assemble.py`, `har_resume.py`, `psi.sh`, `resume_json.py`) sont **proposés mais non testés**. Écris-les dans `v3/outils/`, teste-les d'abord sur P01 en 1440 (protocole § 2, étape 10 : EUR attendu, page d'environ 4 730 px), puis corrige **tes copies** dans `v3/outils/`, jamais le protocole. Note chaque correction dans le journal.
-3. HAR : `content: 'omit'` comme dans le protocole ; seuls les résumés `.md` vont dans le dépôt (les `.har` sont exclus par `v3/.gitignore`).
+1. Protocole § 2, avec ces adaptations :
+   - dossiers : `mkdir -p "$R/build/analyse/soya-paris/v3/site/"{cap,data,reseau,anim,telephone,textes}` seulement, sans `v3/exterieur/` ;
+   - **seulement si i) = oui** : Playwright et son Chromium, en sous-shell : `( cd "$R/build/analyse/soya-paris/v3/outils" && npm init -y && npm i playwright && npx playwright install chromium )`, et Pillow (`pip install --user pillow`). Si `node -v` échoue, c'est l'utilisateur qui installe Node.js (paquet officiel de nodejs.org, avec son mot de passe Mac) ; tu ne saisis aucun mot de passe et n'installes pas Homebrew ;
+   - lance tous les scripts depuis `$R` ;
+   - en moteur A, la méthode 1 du § 2.2 remplace `screencapture` (étape 8 et § 6.2 du protocole).
+   **Si i) = non** : moteur A seul (extension ; mode appareil ouvert par l'utilisateur pour 390 et 768), PageSpeed par l'interface web, et « [non testé : règle] » pour le reste.
+2. Les scripts des annexes A à E du protocole (`demontage.js`, `capture.mjs`, `glisser.mjs`, `assemble.py`, `har_resume.py`, `couleurs_pixels.py`, `psi.sh`, `psi_resume.py`, `resume_json.py`) sont **proposés mais non testés**. Écris-les dans `v3/outils/`, teste-les d'abord sur P01 en 1440 (protocole § 2, étape 10 : EUR attendu, page d'environ 4 730 px), puis corrige **tes copies** dans `v3/outils/`, jamais le protocole. Note chaque correction dans le journal.
+3. HAR : `content: 'omit'` comme dans le protocole ; seuls les résumés `.md` vont dans le dépôt (les `.har` sont exclus par `v3/.gitignore`). Ajoute à `v3/.gitignore` les lignes `site/cap/**/*-tr-*.jpg` et `site/cap/**/*.png` (tranches et pleines pages hors dépôt ; seul ajout permis en M13, § 7).
 
 **Ordre** (protocole § 13, adapté) :
-- **M13-1** (≈ 8 h) : P02 complet aux 4 largeurs (C01 à C31, tous les carrousels, galerie rendue, Loox rendu, stories) ; P01 ; P03 à P06.
+- **M13-1** (≈ 8 h) : P00 (gabarit commun ; cookies = M1) ; P02 complet aux 4 largeurs (C01 à C31, tous les carrousels, galerie rendue, Loox rendu, stories) ; P01 ; P03 à P06.
 - **M13-2** (≈ 8 h) : P26 et P27 (compléments de M2) ; P07 à P20 en N2 ; P21 à P25.
-- **M13-3** (≈ 8 h) : P28 à P37 ; P36 en N1 ; PSI et Lighthouse sur toutes les pages ; pages d'atterrissage P40+ ; module téléphone avec l'utilisateur (environ 40 min, s'il est d'accord) ; puis `98_contre-verification.md` (30 lignes tirées au hasard, 30 de plus si plus de 3 corrigées) et `99_synthese.md`.
+- **M13-3** (≈ 8 h) : P28 à P37 ; P36 en N1 ; PSI et Lighthouse sur toutes les pages ; pages d'atterrissage P40+ ; module téléphone avec l'utilisateur (environ 40 min, s'il est d'accord). Conditions : onglet de navigation privée Safari, sans session Shop, Facebook ni Instagram ; pas de page de paiement ; pas de formulaire Klaviyo ; captures recadrées sous la barre d'état, sans notification, relues avant `git add` ; `.mov` hors dépôt. Puis `98_contre-verification.md` (30 lignes tirées au hasard, 30 de plus si plus de 3 corrigées) et `99_synthese.md`.
 
-**Livrables** : `v3/site/Pxx.md` (gabarit du protocole § 12.2), `v3/site/00_INDEX.md` (matrice page × largeur × module, tenue à jour après chaque page), `v3/site/98_contre-verification.md`, `v3/site/99_synthese.md` : design system reconstitué, inventaire de tous les carrousels, inventaire des leviers de persuasion avec leur statut, parcours du prix de la fiche au paiement, mobile face au desktop, performance, **les 30 verdicts Somnila les plus utiles**, écarts avec le dossier v2.
+**Livrables** : `v3/site/Pxx_<nom>.md` (gabarit du protocole § 12.2), `v3/site/00_INDEX.md` (matrice page × largeur × module, tenue à jour après chaque page), `v3/site/98_contre-verification.md`, `v3/site/99_synthese.md` : design system reconstitué, inventaire de tous les carrousels, inventaire des leviers de persuasion avec leur statut, parcours du prix de la fiche au paiement, mobile face au desktop, performance, **les 30 verdicts Somnila les plus utiles**, écarts avec le dossier v2.
 
-**Fin de mission** : toutes les pages N1 rédigées aux 4 largeurs ; N2 et N3 au niveau du protocole ; `00_INDEX.md` sans case vide non justifiée ; contre-vérification faite ; commit par page ou par groupe de pages.
+**Fin de mission** : toutes les pages N1 rédigées aux 4 largeurs (P27 : 390 et 1440 seulement) ; N2 et N3 au niveau du protocole ; `00_INDEX.md` sans case vide non justifiée ; contre-vérification faite ; commit par page ou par groupe de pages.
 
 ### Angles morts P3 ou abandonnés (décision écrite)
 Chacun reçoit un statut dans la matrice de couverture : fait, P3 non fait (temps), ou abandonné (raison).
@@ -903,7 +918,7 @@ Chacun reçoit un statut dans la matrice de couverture : fait, P3 non fait (temp
 - **Bing.fr sur les requêtes de marque** (P3, M4 ; audit n° 23).
 
 ### Matrice de couverture (à recopier dans `JOURNAL.md`, à tenir à jour, à reprendre dans S1)
-Statut initial : « à faire ». Le détail de chaque ligne (sections du dossier, URL, procédure) est dans `v3/ANGLES_MORTS.md`, sous le même identifiant.
+Statut initial : « à faire ». Le détail de chaque ligne (sections du dossier, URL, procédure) est dans `v3/ANGLES_MORTS.md`, sous le même identifiant, sauf SITE-1 à SITE-6 (M13 et `PROTOCOLE_DEMONTAGE.md`).
 
 | Angle mort | Objet | Mission | Priorité | Statut |
 |---|---|---|---|---|
@@ -920,7 +935,7 @@ Statut initial : « à faire ». Le détail de chaque ligne (sections du dossier
 | PUB-3 | bibliothèque TikTok | M3c | P1 | à faire |
 | PUB-4 | budget par la portée | A4 | P1 | à faire |
 | PUB-5 | annonces Google.fr sur la marque | M4 | P1 | à faire |
-| PUB-6 | Snap, Pinterest, Amazon, Microsoft | M3d | P3 | à faire |
+| PUB-6 | Snap, Pinterest, Amazon, Microsoft, X, LinkedIn | M3d | P3 | à faire |
 | PUB-7 | Google : formats, régions, campagne Search | M3b | P1 | à faire |
 | PUB-8 | reciblage | hors session (E09) | — | abandonné pour la session |
 | RS-1 | Instagram | M5 | P1 | à faire |
@@ -942,7 +957,7 @@ Statut initial : « à faire ». Le détail de chaque ligne (sections du dossier
 | SEO-4 | pages indexées | M4 | P3 | à faire |
 | TRA-1 | SimilarWeb, Display | M10 | P2 | à faire |
 | TRA-2 | Trends FR et US | M4 | P1 | à faire |
-| TRA-3 | PageSpeed | M10 | P2 | à faire |
+| TRA-3 | PageSpeed | M13 | P1 | à faire |
 | VEN-1 | relevés des compteurs pendant 7 jours ou plus | M12 | P1 | à faire |
 | VEN-2 | offres (`offre.py`) | M12 | P1 | à faire |
 | VEN-3 | numéros de commande | M7 | P2 | à faire |
@@ -955,7 +970,7 @@ Statut initial : « à faire ». Le détail de chaque ligne (sections du dossier
 | SRC-6 | Amazon.com, ZGMCX | M8 | P2 | à faire |
 | VOC-1 | Trustpilot 1-2★ au-delà de la page 10 | M7 | P2 (compte sur accord) | à faire |
 | VOC-2 | transparence Trustpilot | M7 | P2 | à faire |
-| VOC-3 | signal-arnaques, Reddit, forums | M7 | P2 | à faire |
+| VOC-3 | signal-arnaques, Reddit, forums, sites d'avis tiers (E8) | M7 | P2 | à faire |
 | VOC-4 | widget Loox affiché | M7 | P2 | à faire |
 | VOC-5 | « tirage au sort » et lien d'avis envoyé avant la livraison (§ 19.9, § 19.13) | M7 | P3 | citations publiques seulement (il faudrait recevoir les e-mails de SOYA) |
 | CRM-1 | Milled | M9 | P2 | à faire |
@@ -984,7 +999,7 @@ Statut initial : « à faire ». Le détail de chaque ligne (sections du dossier
 
 **Indépendance (B1).** Recompte à l'aveugle : pour les n° 2, 4, 18, 19, 27 et 28, le sous-agent recalcule à partir des données brutes et de l'énoncé du test, **sans lire le chiffre du v2**, puis compare. Écris le résultat aveugle avant la comparaison.
 
-**1. Les 42 affirmations à plus fort enjeu.** Type A = accusation contre SOYA ; D = décision pour Somnila. Les tests « en direct » viennent des missions M1 à M12 ; le sous-agent fait les tests « dépôt » et reporte ensuite les résultats du navigateur.
+**1. Les 42 affirmations à plus fort enjeu.** Type A = accusation contre SOYA ; D = décision pour Somnila. Les tests « en direct » viennent des missions M1 à M13 ; le sous-agent fait les tests « dépôt » et reporte ensuite les résultats du navigateur.
 
 | n° | Affirmation v2 (§) | Type | Test décisif |
 |---|---|---|---|
@@ -1029,13 +1044,13 @@ Statut initial : « à faire ». Le détail de chaque ligne (sections du dossier
 | 39 | Pixels chargés sans consentement (§ 11) | A | M1 |
 | 40 | Clones sans lien avec Soya (§ 15.9) | A | M6 + mots-clés Meta (M3) |
 | 41 | Aucune rétention (§ 8.6) | D | M9 |
-| 42 | Fiche 3.0 : 27,48 Mo sur mobile (§ 10.2) | A | M10 (PageSpeed) |
+| 42 | Fiche 3.0 : 27,48 Mo sur mobile (§ 10.2) | A | M13 (PSI de P02) |
 
 **Procédures particulières.**
 - **n° 14.** N'installe aucun logiciel (Homebrew, ffmpeg) sans accord (i). Avec ffmpeg : `ffmpeg -ss 18.5 -i avis.mp4 -frames:v 1 "$TMPDIR/avis_18s.jpg"` sur la vidéo du CDN (bloc `liquid_GDmj3c` de la fiche 3.0). Sans ffmpeg (repli, par la session principale) : ouvre la vidéo du CDN dans Chrome, place `document.querySelector('video').currentTime=18.5` par JavaScript, puis capture. **Cette image reste hors dépôt** (`$TMPDIR`). Dans `v3/`, seulement le décompte : N commentaires nommés, M mentions de pathologie. Rappel : `preuves/v2/pub/vid/hr_avis_comments.jpg` est déjà dans le dépôt (B10).
 - **n° 16.** Calibration sur 2 boutiques Shopify publiques dont les domaines sont connus (vérifiés par crt.sh) : lecture par `curl` de `/cdn/fonts/` dans leur HTML, décodage base64 de h1 à h5. Pas la boutique Somnila, que le § 1.2 exclut.
 - **n° 36.** Les 2 ou 3 boutiques trouvées en M4 par `"apps/parcelpanel"` : lis leur `/apps/parcelpanel` par `curl` et cherche `sensitive_world`.
-- **Annexe B.** Vérifie que ses URL s'ouvrent toujours : `curl -s -o /dev/null -w '%{http_code}'`, 3 s entre deux appels. Les échecs vont dans la liste « à ouvrir par la session principale ».
+- **Annexe B.** Vérifie que ses URL s'ouvrent toujours : `curl -s -o /dev/null -w '%{http_code}'`, 3 s entre deux appels. Exclus `checkout.soyaparisfrance.com` et toute URL contenant `checkout`, `/cart`, `aclk`, `l.php` ou un paramètre d'affiliation : note-les « non appelée (règle) ». Les échecs vont dans la liste « à ouvrir par la session principale ».
 
 **2. Faiblesses de méthode à trancher** (une réponse écrite pour chacune) :
 - **B1. Biais d'ensemble.**
@@ -1127,7 +1142,7 @@ git -C "$R" status --short build/analyse/soya-paris/preuves/v2/   # doit être v
 - **Règles :**
   - F ≤ 2 → « ne pas utiliser pour décider ».
   - Verdict : Garder, Corriger, Refaire ou Retirer.
-  - § 3, 4, 5, 10 et 20 : note F à partir du contrôle de mise en page de M2 (3 positions en 1 440 et 390 px, en euros ; 2 animations refilmées).
+  - § 3, 4, 5, 10 et 20 : note F à partir du contrôle de mise en page de M2 (3 positions en 1 440 et 390 px, en euros ; 2 animations refilmées), complétée par les T18 de M13.
 
 | Chapitre | F | C | U | Note | Verdict | Affirmations testées | Point de vigilance |
 |---|---|---|---|---|---|---|---|
@@ -1141,7 +1156,7 @@ git -C "$R" status --short build/analyse/soya-paris/preuves/v2/   # doit être v
 | § 7 Catalogue et prix | | | | | | | Historique des prix (n° 9) |
 | § 8 Marketing et CRM | | | | | | | Stratégie déduite sans les bibliothèques |
 | § 9 Parcours d'achat | | | | | | | Jamais fait avant M2 |
-| § 10 Technique, SEO | | | | | | | Mesures depuis un centre de données ; contrôle M2 et M10 |
+| § 10 Technique, SEO | | | | | | | Mesures depuis un centre de données ; contrôle M2 et M13 (PSI) |
 | § 11 Légal | | | | | | | Cadre français seulement |
 | § 12 Forces et menaces | | | | | | | Menace 2 à refaire par marché |
 | § 13 Plan d'action | | | | | | | Actions françaises (B7) |
@@ -1155,6 +1170,8 @@ git -C "$R" status --short build/analyse/soya-paris/preuves/v2/   # doit être v
 | Annexes A à D | | | | | | | D = auto-contrôle ; les URL de B s'ouvrent-elles ? |
 
 **5. Liste des corrections** : `§ x.y — texte actuel (court) — correction — preuve — statut « à reporter corrigé v3 »`.
+
+**6. Les 22 points faibles marketing** de `v3/MARKETING_SOURCES.md` § 2.0 : un verdict chacun (confirmé, corrigé, non étayé), avec la mission qui le tranche et la preuve, dans `20_audit_v2.md`.
 
 ### A2 — Vérifications juridiques : France et marchés de Somnila (P2)
 Écris dans `v3/21_juridique.md`. Pour chaque article, donne la version en vigueur au 26/09/2026, l'URL Légifrance (ou EUR-Lex, ou la source officielle) et ce qu'il change au dossier. **Le sous-agent n'a pas Chrome** : les URL qu'il n'a pas pu lire vont dans une section « Échecs » en fin de fichier ; la session principale les ouvre après M11.
@@ -1256,7 +1273,7 @@ Le v2 avait 55 % de constats corrigés à sa relecture. Avant S1, **un sous-agen
 La session principale corrige, puis reporte le taux d'erreur dans SYNTHESE.
 
 ### S1. `v3/SYNTHESE_V3.md` (200 lignes au plus)
-1. Les réponses aux 10 questions clés : réponse, étiquette, confiance, pièces.
+1. Les réponses aux 11 questions clés (Q11 : renvoi à `v3/site/99_synthese.md`) : réponse, étiquette, confiance, pièces.
 2. Ce qui est **confirmé**, **corrigé**, **découvert**.
 3. Tableau de notation des chapitres (A1).
 4. La **matrice de couverture** finale (§ 4), avec le statut de chaque angle mort.
@@ -1343,19 +1360,19 @@ La session principale corrige, puis reporte le taux d'erreur dans SYNTHESE.
 - **Tant que B10 n'est pas tranché : commits locaux seulement, aucun push.** Exception : un commit qui ne touche que `v3/outils/` et `v3/preuves/veille/` peut être poussé s'il est le seul commit non poussé (`git log origin/claude/pilloway-shopify-shrine-bwge6y..HEAD --oneline` n'en montre qu'un). Pousse le reste après la réponse. Et aucun push avant la réponse à g) (identité).
 - **Si `git push` demande des identifiants : arrêt.** L'utilisateur s'en charge.
 - **Conflit de rebase hors de `v3/`** : `git rebase --abort`, arrêt, question à l'utilisateur. (Exception : annexe D.3 et `preuves/v2/inv/` en S2, § 6.)
-- **Ne modifie jamais** : l'annexe D.3, `preuves/v2/inv/`, `v3/PROTOCOLE_*`, `v3/INVENTAIRE_SITE.md`, `v3/ANGLES_MORTS.md`, `v3/CIBLES_AUDIT_V2.md`, `v3/MARKETING_SOURCES.md`, `v3/CONTEXTE_SOMNILA.md`, `v3/preuves_cloud/`. Dans `v3/.gitignore`, seulement l'ajout de M0.
+- **Ne modifie jamais** : l'annexe D.3, `preuves/v2/inv/`, `v3/PROTOCOLE_*`, `v3/INVENTAIRE_SITE.md`, `v3/ANGLES_MORTS.md`, `v3/CIBLES_AUDIT_V2.md`, `v3/MARKETING_SOURCES.md`, `v3/CONTEXTE_SOMNILA.md`, `v3/preuves_cloud/`. Dans `v3/.gitignore`, seulement l'ajout de M0 et celui de M13 (`site/cap/**/*-tr-*.jpg`, `site/cap/**/*.png`).
 - **Ajout** : relis `git status --short`, puis `git add build/analyse/soya-paris/v3/<fichier ou dossier de mission>/`. Jamais `git add -A` ni `git add .`.
 - **CSV** : la racine ignore `*.csv` ; sans la ligne `!donnees/*.csv` de M0, tes CSV ne partent pas. Contrôle avec `git status --short build/analyse/soya-paris/v3/donnees/`.
 - **Avant chaque commit**, contrôle :
   ```bash
   git diff --cached --stat
-  git diff --cached | grep -nEi 'password|mot de passe|token|api[_-]?key|secret|bearer|@gmail|@icloud|@hotmail|sessionid|c_user=|fb_dtsg|__user=|jazoest|lsd=|csrftoken|ds_user_id|msToken|ttwid|sid_tt|SAPISID|_fbp=|_ga=|/Users/' || echo "rien de sensible"
+  git diff --cached | grep -nEi 'password|mot de passe|token|api[_-]?key|secret|bearer|@gmail|@icloud|@hotmail|sessionid|c_user=|fb_dtsg|__user=|jazoest|lsd=|csrftoken|ds_user_id|msToken|ttwid|sid_tt|SAPISID|_fbp=|_ga=|/Users/|[?&](fbp|fbc|cid|ttp|external_id)=|(^|[^0-9.])[0-9]{1,3}(\.[0-9]{1,3}){3}([^0-9.]|$)' || echo "rien de sensible"
   ```
   Chaque résultat se lit : un nom de cookie sans valeur est permis, une valeur ne l'est pas. Relis chaque image de page connectée et de `cap.sh` avant de l'ajouter (§ 2.2).
 - **Pas de secrets.** Aucun cookie, aucun en-tête de session, aucun jeton ni mot de passe, dans aucun fichier. Masquage du § 2.2 appliqué à tout JSON et TXT.
 - **Pas de données personnelles** : texte brut des tiers hors dépôt (§ 2.2).
 - **Pas d'identifiant de modèle** dans le texte des fichiers ni dans le corps des messages de commit. Les lignes d'attribution que ton environnement ajoute automatiquement ne sont pas concernées.
-- **Taille.** Pas de vidéo dans le dépôt. Aucun fichier de plus de 50 Mo. Garde `v3/preuves/` sous 150 Mo ; au-delà, compresse ou archive en `.tar.xz`.
+- **Taille.** Pas de vidéo dans le dépôt. Aucun fichier de plus de 50 Mo. Garde `v3/preuves/` sous 150 Mo ; au-delà, compresse ou archive en `.tar.xz`. Dans `v3/site/cap/`, ne verse que les images citées dans un `Pxx_<nom>.md`, en JPEG ≤ 1 600 px (`sips`) ; les tranches restent hors dépôt.
 - **Commits** petits et fréquents, au moins un par mission, messages en **français** (par exemple `v3 M3 : inventaire bibliothèque Meta, 47 annonces actives`).
 
 ---
@@ -1368,7 +1385,7 @@ La session principale corrige, puis reporte le taux d'erreur dans SYNTHESE.
 3. une connexion exigée (M3, M5, M7, M10) sans accord préalable ;
 4. un captcha (Wyoming, Google, Trustpilot…) ;
 5. un conflit git hors de `v3/`, ou un `git push` qui demande des identifiants ;
-6. la bascule de profil Chrome (« Veille » vers « Réseaux ») ;
+6. la bascule de profil Chrome (« Veille » vers « Réseaux », et retour avant M6) ;
 7. l'intégration au dossier (S2) si B10 n'est pas tranché, ou si le push cloud manque à 23:00 UTC.
 
 Pour tout le reste, avance.
@@ -1397,23 +1414,24 @@ Pour tout le reste, avance.
 6. **M5** : réseaux, commentaires (profil « Réseaux », sur accord).
 7. **M6** : identité et registres.
 8. **M7** à **M11**, dans cet ordre, en respectant les plafonds de temps. Puis A3 bis.
-9. **M12** : tâche planifiée (si « ok »), procédure J+7 écrite.
-10. **M13** : démontage complet du site (M13-1, M13-2, M13-3), après M3 pour disposer des pages d'atterrissage.
+9. **M12** : la tâche planifiée s'installe dès la réponse d) = oui (fin de M0, session S-A) ; ici, seulement la procédure J+7.
+10. **M13** : démontage complet du site : M13-1 après M3 (pages d'atterrissage disponibles), M13-2 après M8, M13-3 après M11 (sessions ci-dessous).
 11. Angles morts P3, selon le temps.
-11. **A1** terminé avec les résultats du navigateur ; **A3** complété avec la démographie DSA.
-12. **S0**, **S1**, **S2**, **S3**.
-13. Rapport final.
+12. **A1** terminé avec les résultats du navigateur ; **A3** complété avec la démographie DSA.
+13. **S0**, **S1**, **S2**, **S3**.
+14. Rapport final.
 
-**Durée.** Les plafonds cumulés font environ 23 h (navigateur et phase S) plus environ 25 h pour M13, sans les P3 : impossible dans un seul contexte. Découpe en **6 sessions** ; chacune repart du tableau d'avancement, de `v3/site/00_INDEX.md` et du journal :
-- **S-A** : M0 à M3 (environ 7 h) ;
-- **S-B** : M13-1, fiche 3.0 complète et pages principales (environ 8 h) ;
+**Durée.** Les plafonds cumulés font environ 23 h (navigateur et phase S) plus environ 25 h pour M13, sans les P3 : impossible dans un seul contexte. Découpe en **7 sessions** ; chacune repart du tableau d'avancement, de `v3/site/00_INDEX.md` et du journal :
+- **S-A** : M0 (plus la tâche planifiée de M12 si d) = oui) à M3 (environ 7 h) ;
+- **S-B** : M13-1, fiche 3.0 complète et pages principales (environ 9 h, dont 1 h de mise en route) ;
 - **S-C** : M4 à M8 (environ 8 h) ;
 - **S-D** : M13-2 (environ 8 h) ;
-- **S-E** : M9 à M12, A3 bis, M13-3 (environ 9 h) ;
-- **S-F** : angles morts P3 si le temps le permet, puis la phase S (environ 6 h).
-À la fin de chaque mission : commit local et tableau d'avancement. Vers 60 % du contexte : commit, journal, `/compact`. Pour changer de session : `claude --chrome` neuf, avec la consigne d'une ligne de « Comment lancer ».
+- **S-E** : M9 à M11, A3 bis, procédure J+7 de M12 (environ 6 h) ;
+- **S-F** : M13-3 (environ 8 h) ;
+- **S-G** : angles morts P3 si le temps le permet, puis la phase S (environ 6 h).
+À la fin de chaque mission : commit local et tableau d'avancement. Vers 60 % du contexte : commit, journal, `/compact`. Pour changer de session : `claude --chrome` neuf, avec la consigne « Lis build/analyse/soya-paris/MISSION_LOCALE_V3.md et build/analyse/soya-paris/v3/JOURNAL.md, puis reprends à la première mission non terminée du tableau d'avancement. M0 est fait : n'en refais que la synchronisation git (M0.1), le contrôle du profil Chrome (M0.3 : demande quel profil est au premier plan, sans ouvrir de site) et le relevé inv.py (M0.4). Ne recrée aucun fichier existant ; ne relance un sous-agent que si son fichier de sortie manque ou est inachevé ; ne repose pas les autres questions a) à i) : leurs réponses, dans le journal, restent valables ».
 
-**Parcours minimal d'environ 5 h** (si le temps manque) :
+**Parcours minimal d'environ 8 h** (5 h hors M13 ; suppose i) = oui ; si le temps manque) :
 - M0 ;
 - M1 ;
 - M2 : PAN-1 Blanc et PAN-5 ;
@@ -1423,4 +1441,4 @@ Pour tout le reste, avance.
 - M6 : Wyoming, Companies House, DNS ;
 - M13 : P02 (fiche 3.0) en 390 et 1440 seulement : galerie rendue, carrousels, bloc d'offres, Loox rendu, verdicts Somnila.
 
-**Ordre de coupe** (ce qu'on retire en premier) : les angles morts P3, puis les pages N3 de M13, M11, M9, M10, M8, puis les pages N2 de M13. Les pages N1 de M13 ne se coupent pas : c'est la demande explicite de l'utilisateur.
+**Ordre de coupe** (ce qu'on retire en premier) : les angles morts P3, puis les pages N3 de M13, M11, M9, M10, M8, puis les pages N2 de M13. Hors parcours minimal, les pages N1 de M13 ne se coupent pas : c'est la demande explicite de l'utilisateur.
