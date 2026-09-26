@@ -1,0 +1,29 @@
+{
+ "genere": "2026-09-26",
+ "noeuds": {
+  "SOYA_shop_93550543180": {"myshopify": "5xfyfp-ti", "domaines": ["soya-paris.com","us.soya-paris.com","account.soya-paris.com","soya-paris.us"], "periode": "31/10/2025 -> 26/09/2026", "preuve": "soya/home.html ; wayback/w_20251031190852.html (h-list polices)"},
+  "SOYA_shop_68045897928": {"myshopify": "vxg4tp-y8", "domaines": ["soya-paris.com","soyaparis.store","soya-paris.us","account.soya-paris.com"], "periode": "01/03/2025 -> 12/10/2025", "etat": "fermee (meta.json 404)", "preuve": "wayback/w_20250301121207.hdr ; pdp2_20250419.html ; pdp_20251012.hdr ; shops/meta_vxg4tp-y8.json"},
+  "SOYA_shop_88419959133": {"myshopify": "989ff1-c5", "periode": "01/01/2025", "etat": "fermee", "preuve": "wayback/h_20250101123745.txt ; w_20250101123745.html"},
+  "SOYA_shop_74445094946": {"myshopify": "9a3bc8-01", "domaines": ["freyjaparis.fr (24/07/2024 et 22/01/2025)","soya-paris.com (21/09/2024)"], "etat": "fermee", "preuve": "wayback/freyja2_20240724.hdr ; w_20240921201431.hdr ; cdx2_9a3bc8-01.myshopify.com.txt"},
+  "SOYA_shop_84122730826": {"myshopify": "f3a2ff-d8", "periode": "05/09/2024", "etat": "fermee", "preuve": "wayback/w_20240905110535.hdr"},
+  "CLONE_A_a2bu6h-c5": {"shopId": 71078019242, "domaine": "soyaparisoreillerergonomique.com", "preuve": "home_soyaparisoreillerergonomique.com.html ; ../soya_prix/old_meta.json"},
+  "CLONE_A_dagbdz-xc": {"shopId": 75777507463, "domaine": "soyapariscoussinergonomique.com", "preuve": "domaines/b_soyapariscoussinergonomique.com.html ; meta_ ; products_"},
+  "CLONE_A_1a5h62-ai": {"shopId": 84395491547, "domaine": "soyaparisconfortclothing.com", "preuve": "domaines/meta_soyaparisconfortclothing.com.json ; products_"},
+  "CLONE_B_p1wru0-tg": {"shopId": 96363217276, "domaine": "soyaparisfrance.com", "preuve": "domaines/b_soyaparisfrance.com.html ; monstre_checkout_soyaparisfrance.js"},
+  "CLONE_B_sx6cbu-0q": {"shopId": 109255983429, "domaine": "soyaparisfr.store", "preuve": "domaines/b_soyaparisfr.store.html"},
+  "MILARIS_220fa5-3": {"shopId": 84130595157, "domaine": "milaris.co", "preuve": "../../milaris.html ; home_milaris.co.html"},
+  "JUVILOR_zfdzaj-px": {"shopId": 77492191483, "domaine": "juvilor.com", "preuve": "home_juvilor.com.html ; p_juvilor.com_products_oreiller.html ; avatars/"}
+ },
+ "liens": [
+  ["SOYA_shop_* (5 boutiques)", "meme operateur", "fort", "Meta 1581609639439558 + Klaviyo XuYmmR + Snap fd7f04c9-aabf-42d7-ad18-c53b61724f19 + GT-K5MKJXW8/AW-16655023754 communs, domaine soya-paris.com servi successivement"],
+  ["SOYA_shop_74445094946", "FREYJA (freyjaparis.fr)", "fort", "meme boutique Shopify avant (07/2024) et apres (01/2025) Soya"],
+  ["FREYJA", "heylashes.fr", "faible", "theme nomme theme-export-heylashes-fr-theme-export-heylash"],
+  ["SOYA_shop_68045897928", "avatars 0680/4589/7928 + section ev_review_8Lp6Dy", "fort (identite)", "x-shopid 68045897928 sur soya-paris.com ; meme id de section dans la fiche 2.0 du 19/04/2025"],
+  ["CLONE_A_*", "SOYA", "copie (pas meme operateur)", "catalogue copie, hotlink de 10 fichiers soya-paris.com, commentaires portugais, aucun identifiant commun"],
+  ["CLONE_B_*", "SOYA", "copie (pas meme operateur)", "catalogue copie, checkout externe, aucun identifiant commun"],
+  ["CLONE_A_a2bu6h-c5", "CLONE_A_dagbdz-xc", "fort", "memes 10 fichiers hotlinkes, commentaires portugais, Shrine PRO 1.6.1, Sheridan WY, nom Soya Paris"],
+  ["CLONE_B_p1wru0-tg", "CLONE_B_sx6cbu-0q", "fort", "meme script FUNNELZ/monstre, memes NS Cloudflare, meme registrar et date, memes CGV"],
+  ["JUVILOR", "SOYA", "copie", "avatars 88/89/90 identiques au pixel pres, textes adaptes (OrthoDream), 15/09/2025"],
+  ["MILARIS", "SOYA", "copie", "textes des 4 temoignages, Merci Milaris, publie ~15/11/2025"]
+ ]
+}

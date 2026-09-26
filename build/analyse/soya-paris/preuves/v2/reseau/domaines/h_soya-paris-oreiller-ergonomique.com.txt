@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 423 
+date: Sat, 26 Sep 2026 09:57:12 GMT
+content-type: text/html; charset=utf-8
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+shopify-complexity-score: 56
+shopify-complexity-score-v2: 56
+set-cookie: _shopify_essential=:AaDdJbsLAAEAwYrQkItOyPdhN7nc29cyJcfM8g_CINhO_2Yw29MM4EHnXDlUhMxKQ_Kzp2Slpvub0GsfBRBxCVVsLGp_Feu7-KM34pyqWOq6KNTmbYVloDBBsRYOdhPEUZ7NX2pLyZ6CkvsFu6XUlIiFupvpWJNIgn0kZVDy0LiuodcP6P-JnaPlTQJXAa1-OG2i7nWY3URpDEtDL9QFvvp10dD_XNL5JrXOgxvIrEHKqiBNRQ:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=B%2FMgYrMweWWn9I5hArsczStmsteAp63wFkc4y9yIX5ATMsqpj4qn565kmpekEOxjFFyajW%2BU1D2DObsaTdVtflmbnXhXY67E5BRvceQi%2B2BZ%2BX4MercXeadJFl4pULC4RY0v3ovV46kge%2F%2F1IjUZ9%2FOkA%2BiM"}]}
+vary: Accept,accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr
+cache-control: private, no-store
+link: </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+powered-by: Shopify
+server-timing: processing;dur=31;desc="gc:1", db;dur=3, db_async;dur=10.192, asn;desc="396982", edge;desc="IAD", country;desc="US", pageType;desc="index", servedBy;desc="f7kp", requestID;desc="58cc1838-76c4-49e0-ba38-b388141cc7e3-1790416632", _y;desc="52dcb0b8-343e-4bf2-8d66-406bfc0095f3", _s;desc="bddf9b0e-45a3-483b-a4d3-5cfcd618d3cd", _cmp;desc="3.AMPS_US_f_f_7YoWAWmkSFKPFuB5FjJGWA", _cta;desc="1", _ye;desc="1821974232", _se;desc="1790418432"
+x-download-options: noopen
+x-xss-protection: 1; mode=block
+cf-cache-status: DYNAMIC
+server: cloudflare
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=86400
+x-permitted-cross-domain-policies: none
+x-request-id: 58cc1838-76c4-49e0-ba38-b388141cc7e3-1790416632
+cf-ray: a41167315d71071c-IAD
+

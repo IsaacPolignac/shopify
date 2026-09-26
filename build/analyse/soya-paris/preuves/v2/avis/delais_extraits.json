@@ -1,0 +1,1042 @@
+[
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-25",
+"cat": "attente (pas encore recu)",
+"jours": 30,
+"phrase": "cela fait bientot 1 mois que j'ai passe ma commande aucune nouvelle, le suivi indique une nouvelle ville d'europe toute les semaines, j'espere recevoir ma commande",
+"id": "6ab67dd822a35807c42c94fd",
+"nom": "Jeremie Cros"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-25",
+"cat": "attente (pas encore recu)",
+"jours": 6,
+"phrase": "commande passe il y a 6 jours",
+"id": "6ab65738bb2442db801cb233",
+"nom": "Sonja"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-25",
+"cat": "attente (pas encore recu)",
+"jours": 6,
+"phrase": "commande passe il y a 6 jours, encaisse immediatement, mais le statut n'a pas change depuis \"votre colis va bientot nous etre confie\"",
+"id": "6ab65738bb2442db801cb233",
+"nom": "Sonja"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-24",
+"cat": "promis",
+"jours": 13,
+"phrase": "- la livraison que vous indiquez rapide : 13 jours, rapide",
+"id": "6ab57b0977fa02a61516a6f6",
+"nom": "Cath"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-24",
+"cat": "attente (pas encore recu)",
+"jours": 14,
+"phrase": "soit deux semaines sans aucune nouvelle de ma commande et de son etat de la livraison",
+"id": "6ab4aa383a3142e1bcdd21c7",
+"nom": "Indy Merea"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-21",
+"cat": "promis",
+"jours": 21,
+"phrase": "je suis toute les etapes et on me dit qu'il peut y avoir un delai de 3 semaines d'attente",
+"id": "6ab12e2a6722b45963575a35",
+"nom": "Manon Delort"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-15",
+"cat": "attente (pas encore recu)",
+"jours": 30,
+"phrase": "j'ai passe une commande il y a un mois et je n'ai rien recu",
+"id": "6aa97410f5f819cc5f42f9db",
+"nom": "Melissa"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-14",
+"cat": "recu",
+"jours": 4,
+"phrase": "j'ai commande sur ce site en aout avec une promesse de livraison sous 4 jours",
+"id": "6aa7ddeddfedfd04bf245865",
+"nom": "TESSORE Sandrine"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-12",
+"cat": "recu",
+"jours": 12,
+"phrase": "colis recu 12j apres la commande au lieu des 5j ouvres",
+"id": "6aa55287b78b7755fb9ef0be",
+"nom": "virginie"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-12",
+"cat": "promis",
+"jours": 7,
+"phrase": "colis recu 12j apres la commande au lieu des 5j ouvres",
+"id": "6aa55287b78b7755fb9ef0be",
+"nom": "virginie"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-11",
+"cat": "promis",
+"jours": 3,
+"phrase": "pas du tout pro, mensonge sur la livraison qui devait etre de 3 a 4 jours, et qui dure depuis plus de 10 jours",
+"id": "6aa37db7a8056770a751ea75",
+"nom": "Amina"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-11",
+"cat": "promis",
+"jours": 10,
+"phrase": "pas du tout pro, mensonge sur la livraison qui devait etre de 3 a 4 jours, et qui dure depuis plus de 10 jours",
+"id": "6aa37db7a8056770a751ea75",
+"nom": "Amina"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-10",
+"cat": "promis",
+"jours": 4,
+"phrase": "le delai de livraison annonce etait de 3 jours ouvres",
+"id": "6aa26cf35de8f4dcb64ddbd1",
+"nom": "jade sersot"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-10",
+"cat": "attente (pas encore recu)",
+"jours": 7,
+"phrase": "1 semaine plus tard la commande n'a toujours pas ete expediee et la seule reaction du service client est : « merci de votre comprehension »",
+"id": "6aa26cf35de8f4dcb64ddbd1",
+"nom": "jade sersot"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-10",
+"cat": "promis",
+"jours": 10,
+"phrase": "ils annonce une livraison pas avant 10 jours apres commande contre 3 jours annonces",
+"id": "6aa26cf35de8f4dcb64ddbd1",
+"nom": "jade sersot"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-10",
+"cat": "recu",
+"jours": 3,
+"phrase": "ils annonce une livraison pas avant 10 jours apres commande contre 3 jours annonces",
+"id": "6aa26cf35de8f4dcb64ddbd1",
+"nom": "jade sersot"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-07",
+"cat": "promis",
+"jours": 3,
+"phrase": "commande #386799 passee en aout, toujours pas livree… c est dommage, de memoire le site promet 3 a 5 jours en terme de delai pourtant",
+"id": "6a9f049027534a0208858f53",
+"nom": "daddou daddou"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-07",
+"cat": "promis",
+"jours": 1,
+"phrase": "le site indique que l'expedition se fait sous un jour ouvrable et la livraison sous 3 a 5 jours ouvrables",
+"id": "6a9ea935543d54253636b3f8",
+"nom": "Settembrini Samanta"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-07",
+"cat": "recu",
+"jours": 4,
+"phrase": "le site indique que l'expedition se fait sous un jour ouvrable et la livraison sous 3 a 5 jours ouvrables",
+"id": "6a9ea935543d54253636b3f8",
+"nom": "Settembrini Samanta"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-07",
+"cat": "attente (pas encore recu)",
+"jours": 7,
+"phrase": "cela fait une semaine et mon colis n'a toujours pas ete expedie",
+"id": "6a9ea935543d54253636b3f8",
+"nom": "Settembrini Samanta"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-07",
+"cat": "attente (pas encore recu)",
+"jours": 90,
+"phrase": "je n ai jamais recu les oreillers depuis 3 mois",
+"id": "6a9e8a2de538f420eeb41ffb",
+"nom": "kino"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-04",
+"cat": "promis",
+"jours": 7,
+"phrase": "commande passee le 12 aout avec une livraison promise en 5 jours ouvres",
+"id": "6a9a70c1cbe6b0b98d5a2ebe",
+"nom": "MaxY"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-04",
+"cat": "indetermine",
+"jours": 22,
+"phrase": "resultat : 16 jours ouvres d'attente (3 semaines), un colis jamais expedie malgre la creation d'une fausse etiquette le 18 aout pour me faire patienter, et des mensonges ",
+"id": "6a9a70c1cbe6b0b98d5a2ebe",
+"nom": "MaxY"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-04",
+"cat": "indetermine",
+"jours": 21,
+"phrase": "resultat : 16 jours ouvres d'attente (3 semaines), un colis jamais expedie malgre la creation d'une fausse etiquette le 18 aout pour me faire patienter, et des mensonges ",
+"id": "6a9a70c1cbe6b0b98d5a2ebe",
+"nom": "MaxY"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-01",
+"cat": "promis",
+"jours": 3,
+"phrase": "livraison annoncee 3 a 5 jours, recu apres 10 jours",
+"id": "6a96a1c41d31f70d3ac45c7a",
+"nom": "B.tls"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-09-01",
+"cat": "promis",
+"jours": 10,
+"phrase": "livraison annoncee 3 a 5 jours, recu apres 10 jours",
+"id": "6a96a1c41d31f70d3ac45c7a",
+"nom": "B.tls"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-08-17",
+"cat": "recu",
+"jours": 60,
+"phrase": "deux mois et demi pour recuperer son argent, malgre des engagements ecrits et plusieurs echeances annoncees, c'est tout simplement inadmissible",
+"id": "6a830697344cf024578e2684",
+"nom": "robin HERRADA"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-08-08",
+"cat": "recu",
+"jours": 5,
+"phrase": "apres 5 jours, on demande a l'expediteur ce qu'il se passe",
+"id": "6a770449b78c44874fef2bdf",
+"nom": "yvesb"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-08-08",
+"cat": "recu",
+"jours": 14,
+"phrase": "ma commande a mis deux semaines pour me parvenir",
+"id": "6a770449b78c44874fef2bdf",
+"nom": "yvesb"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-08-07",
+"cat": "recu",
+"jours": 2,
+"phrase": "update: enfin recu et aussi tot essayer pendant deux jours et j'ai un mal atroce au niveau des cervicales ainsi qu'une migraine atroce donc j'ai donc depenser 50€ dans le",
+"id": "6a758e1d95b9236ba5f039b4",
+"nom": "Soleil"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-08-06",
+"cat": "indetermine",
+"jours": 5,
+"phrase": "commande passee le 26/07, expediee le 31/07, 5j pour preparer le colis c'est deja un long",
+"id": "6a7452286060b7efe033061c",
+"nom": "Client"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-09-22",
+"cat": "recu",
+"jours": 1,
+"phrase": "tout d'abord je passe la commande en payant un supplement pour avoir le colis  plus rapidement ( 1 a 2 jours ouvres soit disant … ) la commande est d'arrivee au final 8 j",
+"id": "6ab210525ecbba09a4233030",
+"nom": "Natacha Biehler"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-09-22",
+"cat": "recu",
+"jours": 8,
+"phrase": "tout d'abord je passe la commande en payant un supplement pour avoir le colis  plus rapidement ( 1 a 2 jours ouvres soit disant … ) la commande est d'arrivee au final 8 j",
+"id": "6ab210525ecbba09a4233030",
+"nom": "Natacha Biehler"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-09-19",
+"cat": "promis",
+"jours": 21,
+"phrase": "maj colis recu plus de 3 semaines apres paiement",
+"id": "6aae6f83a2b4fcbb12ed3f54",
+"nom": "Audrey"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-09-19",
+"cat": "recu",
+"jours": 21,
+"phrase": "3 semaines apres toujours aucun colis de recu",
+"id": "6aae6f83a2b4fcbb12ed3f54",
+"nom": "Audrey"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-08-29",
+"cat": "promis",
+"jours": 15,
+"phrase": "par contre , j'ai commande 4 taies pour faire un roulement, l'une d'entre elles a perdu sa pression au bout de 15 jours,et le service client me dit: c'est de l'usure",
+"id": "6a9316d0b4286e1bdc00cecc",
+"nom": "Marjorie Delattre"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-08-05",
+"cat": "attente (pas encore recu)",
+"jours": 1,
+"phrase": "ils disent sur leur site 1 a 2 jours ouvres cela fait maintenant 8 jours ouvres et j'ai seulement le numero de colis cree et marque sur le site de la poste que le colis n",
+"id": "6a72fc8191152b3332e4a668",
+"nom": "ALEXANDRE MARIE"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-08-05",
+"cat": "attente (pas encore recu)",
+"jours": 11,
+"phrase": "ils disent sur leur site 1 a 2 jours ouvres cela fait maintenant 8 jours ouvres et j'ai seulement le numero de colis cree et marque sur le site de la poste que le colis n",
+"id": "6a72fc8191152b3332e4a668",
+"nom": "ALEXANDRE MARIE"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-07-18",
+"cat": "indetermine",
+"jours": 7,
+"phrase": "mais delai de livraison pas tenus, plus d'une semaine de retard",
+"id": "6a5b17dbd3d1dea23f71d36e",
+"nom": "O leviel"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-05-08",
+"cat": "indetermine",
+"jours": 8,
+"phrase": "8 jours que j'ai commande 2 oreillers",
+"id": "69fdf8a77aa41c76ed26f859",
+"nom": "Olivier Leviel"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-05-08",
+"cat": "indetermine",
+"jours": 8,
+"phrase": "8 jours que j'ai commande 2 oreillers",
+"id": "69fdf8a77aa41c76ed26f859",
+"nom": "Olivier Leviel"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-04-21",
+"cat": "attente (pas encore recu)",
+"jours": 30,
+"phrase": "je n'arrive pas a me debarrasser de la tres mauvais odeur suite au deballage il y a deja un mois , meme en laissant l'oreiller dehors",
+"id": "69e7f2bde942e85b2c1164d2",
+"nom": "Stephanie"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-03-31",
+"cat": "attente (pas encore recu)",
+"jours": 14,
+"phrase": "je n'ai toujours pas recu ma commande apres deux semaines, je n'ai pas un suivi d'envoi,",
+"id": "69caf55f555873f3d2c7d613",
+"nom": "redouane fellouh"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-03-18",
+"cat": "indetermine",
+"jours": 8,
+"phrase": "deux commandes passees a 8 ou 9 jours d'intervalles et a part la confirmation de commande aucune info",
+"id": "69ba60f30775526ceb1588e0",
+"nom": "zoukzouking972"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-03-10",
+"cat": "indetermine",
+"jours": 17,
+"phrase": "17 jours d'attente",
+"id": "69afce2c6fd64741730cba0c",
+"nom": "Murielle Amon"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-03-10",
+"cat": "promis",
+"jours": 4,
+"phrase": "j'ai recu ma 1iere commande 4 jours apres l'avoir faite",
+"id": "69afce2c6fd64741730cba0c",
+"nom": "Murielle Amon"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-03-10",
+"cat": "recu",
+"jours": 7,
+"phrase": "rien au bout d'une semaine, pas de n° pour vous joindre et je vous avais recommande a 3 amis qui ce sont retrouves dans la meme situation",
+"id": "69afce2c6fd64741730cba0c",
+"nom": "Murielle Amon"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-03-10",
+"cat": "recu",
+"jours": 5,
+"phrase": "je recois suite a cela un mail comme quoi ma commande est en train d'etre preparee et 5 jours apres je recois enfin ma commande",
+"id": "69afce2c6fd64741730cba0c",
+"nom": "Murielle Amon"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-03-10",
+"cat": "indetermine",
+"jours": 17,
+"phrase": "17 jours d'attente cependant l'encaissement s'est fait le jour de la commande",
+"id": "69afce2c6fd64741730cba0c",
+"nom": "Murielle Amon"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2026-02-16",
+"cat": "promis",
+"jours": 14,
+"phrase": "un gros probleme de livraison, j'ai recu ma commande deux semaine apres",
+"id": "6992f2d27123c729e481846a",
+"nom": "Cris Mirville"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2025-12-03",
+"cat": "promis",
+"jours": 60,
+"phrase": "apres plus de deux mois et demi d'attente et de belles promesses",
+"id": "692f9a28d2386f1e652c7865",
+"nom": "Coulot Stephanie"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2025-09-21",
+"cat": "recu",
+"jours": 8,
+"phrase": "j'ai recue un mail de confirmation et puis le 8 j'ai recue un mail comme quoi mon colis est en transit",
+"id": "68d0134e217c1157acbeebfa",
+"nom": "klara Meral"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2025-01-21",
+"cat": "indetermine",
+"jours": 7,
+"phrase": "une semaine plus tard, aucune trace de ma commande sur mon profil : pas de numero, pas d'historique, absolument rien",
+"id": "678fae3b657e471ab2e8718e",
+"nom": "Elena Zueva"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2025-01-15",
+"cat": "recu",
+"jours": 30,
+"phrase": "livraison en 1 mois alors qu'annoncee 9…",
+"id": "6787e7c42e92d06c4fa33da3",
+"nom": "Emilie DA COSTA"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2025-01-15",
+"cat": "recu",
+"jours": 30,
+"phrase": "livraison en 1 mois alors qu'annoncee 9 jours",
+"id": "6787e7c42e92d06c4fa33da3",
+"nom": "Emilie DA COSTA"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2025-01-15",
+"cat": "promis",
+"jours": 9,
+"phrase": "livraison en 1 mois alors qu'annoncee 9 jours",
+"id": "6787e7c42e92d06c4fa33da3",
+"nom": "Emilie DA COSTA"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2025-01-12",
+"cat": "promis",
+"jours": 6,
+"phrase": "j'ai commande un oreiller le 01/01/25 avec un delai prevu max de 6 jours",
+"id": "67843a4b89671713aecff51c",
+"nom": "Michael Georges"
+},
+{
+"plat": "TP",
+"note": 2,
+"date": "2024-11-05",
+"cat": "recu",
+"jours": 30,
+"phrase": "commande en provenance de chine recu au bout d un mois par contre les taies d oreillers sont en jersey et non en soie (l'etiquette parle d elle meme )",
+"id": "6729bf98534663dec23351a3",
+"nom": "Angelique Hardy"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-09-11",
+"cat": "recu",
+"jours": 30,
+"phrase": "commender le 18 aout resu le 10 septembre presque 1 mois d'attente   arriver de chine",
+"id": "6aa3312639966456cddb37d0",
+"nom": "Marie-océane Perro"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-09-10",
+"cat": "promis",
+"jours": 10,
+"phrase": "je suis circonspect sur la provenance du produit car il n'y a aucune etiquette de \"made in\" et la livraison de plus de 10 jours fait penser a une chinoiserie",
+"id": "6aa267988b2ba8936a6917f5",
+"nom": "Didier GIMEL"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-09-08",
+"cat": "attente (pas encore recu)",
+"jours": 5,
+"phrase": "oreillers recu, il y a 5 jours, oreillers de qualite et conforme aux photos, mais malheureusement nous ne supportons pas sa rigidite et sa hauteur",
+"id": "6aa06e9acef2a3f2ce6e6cd8",
+"nom": "Mme ANNE LISE LEFEBVRE"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-08-01",
+"cat": "promis",
+"jours": 21,
+"phrase": "bon produit mais livraison longue de trois semaines et pas d'etiquettes sur la composition et la provenance des materiaux ce qui fait soupconner des produits chinois",
+"id": "6a6ddc25ce1aafd875fb7814",
+"nom": "du Roulier"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-07-31",
+"cat": "indetermine",
+"jours": 42,
+"phrase": "la livraison \"rapide\" promise sur le site de vente n'etait pas rapide du tout (6 semaines entre paiement et livraison)",
+"id": "6a6c47bee456fb1614099110",
+"nom": "Marie"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-05-29",
+"cat": "attente (pas encore recu)",
+"jours": 90,
+"phrase": "bref ca fait 3 mois que j'attends et que j'envoie des mails",
+"id": "6a19767901d99e508f542a20",
+"nom": "Rachel Filippi"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-03-30",
+"cat": "promis",
+"jours": 21,
+"phrase": "article finalement recu apres plus de 3 semaines et plusieurs mails de menace",
+"id": "69ca29d081202de360e0c3a8",
+"nom": "Emmanuelle MENDIL"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-03-01",
+"cat": "recu",
+"jours": 2,
+"phrase": "seul bemol, j'ai paye les frais pour etre livrer plus rapidement sous 2jours malheureusement cela n'a pas tenu la promesse livraison au bout d'une semaine",
+"id": "69a45610127f3e85852b03ef",
+"nom": "Antoine Maloisel"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2026-03-01",
+"cat": "recu",
+"jours": 7,
+"phrase": "seul bemol, j'ai paye les frais pour etre livrer plus rapidement sous 2jours malheureusement cela n'a pas tenu la promesse livraison au bout d'une semaine",
+"id": "69a45610127f3e85852b03ef",
+"nom": "Antoine Maloisel"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2025-12-25",
+"cat": "promis",
+"jours": 14,
+"phrase": "pour une commande en livraison express, la livraison a dure plus de 14 jours…",
+"id": "694d52123af1ee361fd79128",
+"nom": "Lena"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2025-12-15",
+"cat": "recu",
+"jours": 8,
+"phrase": "oreiller soya 3 recu en 8 jours",
+"id": "693fbd78f59acf025de22545",
+"nom": "Séverine Lamy"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2025-12-10",
+"cat": "recu",
+"jours": 4,
+"phrase": "j'ai commande sur d'autres revendeurs le meme jour et j'ai tout recu en 3-4 jours ouvres",
+"id": "6939244e24618a35003ec90a",
+"nom": "David"
+},
+{
+"plat": "TP",
+"note": 3,
+"date": "2025-10-04",
+"cat": "recu",
+"jours": 21,
+"phrase": "produit recu apres 3 semaines d'echanges de mails",
+"id": "68e135d74a110dfd4d3a9482",
+"nom": "Isabelle Costessèque"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-24",
+"cat": "promis",
+"jours": 10,
+"phrase": "commande recu au jour de 10 jours",
+"id": "6ab50131c46183d09147a43f",
+"nom": "HEQUET Maeva"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-24",
+"cat": "recu",
+"jours": 7,
+"phrase": "produit recu sous 5 jours ouvres",
+"id": "6ab4c022b403c516d598c2d9",
+"nom": "Zmair"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-22",
+"cat": "recu",
+"jours": 15,
+"phrase": "je les ai recu 15 jours apres",
+"id": "6ab232fe8e116c4cee15b8a5",
+"nom": "Caroline"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-19",
+"cat": "attente (pas encore recu)",
+"jours": 10,
+"phrase": "le produit a l'air top mais j'attends depuis 10 jours la livraison qui n'arrive pas",
+"id": "6aae3317a0a5de223e1a35aa",
+"nom": "Jean David BIGONI"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-16",
+"cat": "recu",
+"jours": 10,
+"phrase": "et livraison en 10 jours",
+"id": "6aaa73603e5fa1c8e1958b7e",
+"nom": "Kim Tran"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-16",
+"cat": "promis",
+"jours": 4,
+"phrase": "le delai de livraison annonce de 4 a 5 jours n'a pas ete respecte",
+"id": "6aaa4c3119e1218bfa3644da",
+"nom": "Norbert CHAVES"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-13",
+"cat": "promis",
+"jours": 15,
+"phrase": "livraison en moins de 15 jours",
+"id": "6aa680f7917f20dcc8e267c6",
+"nom": "Tiphaine Magliocchetti"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-13",
+"cat": "recu",
+"jours": 14,
+"phrase": "l'oreiller est cool , juste la commande en express m'as etait envoye 2 semaine apres",
+"id": "6aa66f52c8f76f69b8938261",
+"nom": "Corentin Pipault"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-13",
+"cat": "recu",
+"jours": 14,
+"phrase": "oreiller recu tres confortable, par contre paye plus cher pour une livraison rapide et malheureusement cela sont arrives en deux semaines",
+"id": "6aa64c94ce02ebf2eeb33969",
+"nom": "Cédric Leterrier"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-09-12",
+"cat": "recu",
+"jours": 7,
+"phrase": "ma commande de deux oreillers soya 2 est arrivee au bout d'une semaine",
+"id": "6aa5a27974c8bcc861a00300",
+"nom": "Nicolas Taris"
+},
+{
+"plat": "TP",
+"note": 5,
+"date": "2026-09-24",
+"cat": "recu",
+"jours": 7,
+"phrase": "livraison sous 1 semaine environ, colis livre dans la boite aux lettres bien emballe",
+"id": "6ab4cf360dac94fa476e5f34",
+"nom": "Melanie MULLER"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2025-08-21",
+"cat": "promis",
+"jours": 5,
+"phrase": "effectivement j'ai pas recu le colis dans le delai de 5 jours comme indique sur le site",
+"id": "68a76872ab705c6439960613",
+"nom": "Cedric"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2025-08-21",
+"cat": "promis",
+"jours": 14,
+"phrase": "les delais de livraison ont ete plus longs que prevus (2 bonnes semaines vs 3 a 5 jours selon le site web)",
+"id": "68a71ec0fcaa0fae00947cb8",
+"nom": "Marie Rougier Chemel"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2025-08-21",
+"cat": "promis",
+"jours": 3,
+"phrase": "les delais de livraison ont ete plus longs que prevus (2 bonnes semaines vs 3 a 5 jours selon le site web)",
+"id": "68a71ec0fcaa0fae00947cb8",
+"nom": "Marie Rougier Chemel"
+},
+{
+"plat": "TP",
+"note": 5,
+"date": "2025-08-21",
+"cat": "indetermine",
+"jours": 2,
+"phrase": "delais de livraison respecte, produits de bonne qualite, cela ne fais que deux jours, mais on voit deja la difference",
+"id": "68a6eaba6abdd2290db0d7b0",
+"nom": "Jérôme Dupriez"
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-03-15",
+"cat": "recu",
+"jours": 30,
+"phrase": "un peu de delai pour la reception mais pas non plus 1 mois",
+"id": "69b6a19617962b157f640389",
+"nom": "Yannick"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-03-15",
+"cat": "promis",
+"jours": 15,
+"phrase": "societe pas serieuse et toujours pas livre voila plus de 15 jours que j attends ma…",
+"id": "69b69dce41940cab16d35f62",
+"nom": "Bousquet"
+},
+{
+"plat": "TP",
+"note": 1,
+"date": "2026-03-15",
+"cat": "promis",
+"jours": 15,
+"phrase": "voila plus de 15 jours que j attends ma commande",
+"id": "69b69dce41940cab16d35f62",
+"nom": "Bousquet"
+},
+{
+"plat": "TP",
+"note": 5,
+"date": "2026-03-14",
+"cat": "indetermine",
+"jours": 5,
+"phrase": "vous  mettez dans votre offre  une livraison standard  entre 3 et 5 jours",
+"id": "69b53480759a702ad9ceb6ba",
+"nom": "Verriez "
+},
+{
+"plat": "TP",
+"note": 4,
+"date": "2026-03-12",
+"cat": "promis",
+"jours": 10,
+"phrase": "bon produit cependant la livraison etait beaucoup plus longue que prevue (10 jours au lieux de 5) mais sinon tres bien",
+"id": "69b2b2ed9d3f85411933f677",
+"nom": "Jade Gueroult"
+},
+{
+"plat": "LOOX",
+"note": 5,
+"date": "2025-12-19",
+"cat": "recu",
+"jours": 8,
+"phrase": "recu en 8 jours",
+"id": "ZQw0VSMA0f",
+"nom": "Maelys A."
+},
+{
+"plat": "LOOX",
+"note": 3,
+"date": "2025-11-15",
+"cat": "attente (pas encore recu)",
+"jours": 3,
+"phrase": "0 recu il y a 3 jours",
+"id": "q64Zjag0d",
+"nom": "Jennifer"
+},
+{
+"plat": "LOOX",
+"note": 5,
+"date": "2025-10-02",
+"cat": "recu",
+"jours": 21,
+"phrase": "j'ai perdu espoir de recevoir mes coussins mais 3 semaines plus tard j'ai les recu",
+"id": "noOG_2s7YHg",
+"nom": "Larange Z."
+},
+{
+"plat": "LOOX",
+"note": 5,
+"date": "2025-09-05",
+"cat": "indetermine",
+"jours": 14,
+"phrase": "petit point noir pour la compagnie de transport on l'a attendu 2 semaines (annoncer sur le site 3 a 5 jours ) mais soya est tres reactif et repond tres vite merci 🙏 on pa",
+"id": "0kgIWcZxuvf",
+"nom": "Magali C."
+},
+{
+"plat": "LOOX",
+"note": 5,
+"date": "2025-09-05",
+"cat": "promis",
+"jours": 3,
+"phrase": "petit point noir pour la compagnie de transport on l'a attendu 2 semaines (annoncer sur le site 3 a 5 jours ) mais soya est tres reactif et repond tres vite merci 🙏 on pa",
+"id": "0kgIWcZxuvf",
+"nom": "Magali C."
+},
+{
+"plat": "LOOX",
+"note": 5,
+"date": "2025-08-31",
+"cat": "attente (pas encore recu)",
+"jours": 7,
+"phrase": "nous sommes ravis cela fait 1 semaine que nous avons recu nos oreillers ( probleme de livraison mais l equipe de soya paris a ete tres efficace et tres reactive et tres d",
+"id": "u3bf7NmKRzF",
+"nom": "Laurence S."
+},
+{
+"plat": "LOOX",
+"note": 5,
+"date": "2025-06-20",
+"cat": "recu",
+"jours": 9,
+"phrase": "je suis tellement ravie de cet oreiller que je viens de recevoir le deuxieme pour laisser sur mon lieu de vacances ,livraison rapide sous 9jours",
+"id": "YNZEE8tb2G",
+"nom": "Frederique P."
+},
+{
+"plat": "LOOX",
+"note": 1,
+"date": "2026-08-28",
+"cat": "promis",
+"jours": 10,
+"phrase": "commande toujours en attente encaisse depuis plus de 10 jours toujours pas de colis",
+"id": "5v_zj-vGO",
+"nom": "Arnaud L."
+},
+{
+"plat": "LOOX",
+"note": 1,
+"date": "2026-08-13",
+"cat": "attente (pas encore recu)",
+"jours": 21,
+"phrase": "nous avons passe commande il y'a quasi 3 semaines et n'avons toujours rien recu",
+"id": "N54MbpmRm",
+"nom": "Angélique"
+},
+{
+"plat": "LOOX",
+"note": 2,
+"date": "2026-08-10",
+"cat": "promis",
+"jours": 21,
+"phrase": "en plus plus de 3 semaines pour la reception",
+"id": "Js22FSZjmG",
+"nom": "Claudia D."
+},
+{
+"plat": "LOOX",
+"note": 5,
+"date": "2026-07-07",
+"cat": "indetermine",
+"jours": 7,
+"phrase": "commander la semaine dernier donc 1 semaine de delai",
+"id": "Cek57UI2X_",
+"nom": "Sophie"
+},
+{
+"plat": "LOOX",
+"note": 1,
+"date": "2026-06-29",
+"cat": "attente (pas encore recu)",
+"jours": 30,
+"phrase": "je ne l'ai toujours pas recu, ca fait 1 mois et demi que j'attends ce produit \"formidable\"",
+"id": "ILaxPBBHOB",
+"nom": "Fabien"
+},
+{
+"plat": "LOOX",
+"note": 5,
+"date": "2026-05-26",
+"cat": "recu",
+"jours": 10,
+"phrase": "pas trop haut, soutien bien la nuque et les epaules , il a mis 10 jours pour arriver",
+"id": "doEAnAbLu",
+"nom": "Magali B."
+}
+]

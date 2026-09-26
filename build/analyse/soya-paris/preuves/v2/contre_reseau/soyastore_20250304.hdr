@@ -1,0 +1,57 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 301 
+server: nginx
+date: Sat, 26 Sep 2026 11:57:08 GMT
+content-type: text/html; charset=utf-8
+content-length: 0
+x-archive-orig-date: Tue, 04 Mar 2025 21:22:48 GMT
+x-archive-orig-content-length: 0
+x-archive-orig-connection: close
+x-archive-orig-x-sorting-hat-podid: 199
+x-archive-orig-x-sorting-hat-shopid: 68045897928
+x-archive-orig-x-storefront-renderer-rendered: 1
+location: https://web.archive.org/web/20250304212248id_/https://soya-paris.com/
+x-archive-orig-x-redirect-reason: primary_domain_redirection
+x-archive-orig-x-frame-options: DENY
+x-archive-orig-content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+x-archive-orig-strict-transport-security: max-age=7889238
+x-archive-orig-x-shopid: 68045897928
+x-archive-orig-x-shardid: 199
+x-archive-orig-alt-svc: h3=":443"; ma=86400
+x-archive-orig-powered-by: Shopify
+x-archive-orig-server-timing: processing;dur=8, db;dur=2, db_async;dur=1.514, asn;desc="7941", edge;desc="SJC", country;desc="US", knownbot, pageType;desc="index", servedBy;desc="9lpw", requestID;desc="7bbdc555-a556-4746-8560-8d05f56fbb13-1741123368"
+x-archive-orig-x-dc: gcp-us-west1,gcp-us-west1,gcp-us-west1
+x-archive-orig-x-request-id: 7bbdc555-a556-4746-8560-8d05f56fbb13-1741123368
+x-archive-orig-cf-cache-status: DYNAMIC
+x-archive-orig-report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=WVRLUPinqaR4wnHC0pABCIc%2FnbEQuYkIZwO7dUb%2BY2KimyQpKvCGps2dGbTZe16%2BgZwtgIoBn%2F1U3KSLxMLxOahPAGvYpcfVrPzf36bKGH5uKBNOa1R%2FNYX0Wz1ITBt8hA%3D%3D"}],"group":"cf-nel","max_age":604800}
+x-archive-orig-nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+x-archive-orig-server-timing: cfRequestDuration;dur=52.999973
+x-archive-orig-x-xss-protection: 1; mode=block
+x-archive-orig-x-content-type-options: nosniff
+x-archive-orig-x-permitted-cross-domain-policies: none
+x-archive-orig-x-download-options: noopen
+x-archive-orig-server: cloudflare
+x-archive-orig-cf-ray: 91b46e5a3c75cfb8-SJC
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Tue, 04 Mar 2025 21:22:48 GMT
+link: <https://soyaparis.store/>; rel="original", <https://web.archive.org/web/timemap/link/https://soyaparis.store/>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://soyaparis.store/>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: CT-20250304192230-crawl917/CT-20250304204337-00188.warc.gz
+server-timing: captures_list;dur=0.450880, exclusion.robots;dur=0.040776, exclusion.robots.policy;dur=0.033211, esindex;dur=0.008049, cdx.remote;dur=5.170144, LoadShardBlock;dur=213.342981, PetaboxLoader3.datanode;dur=155.121747, load_resource;dur=129.379848, PetaboxLoader3.resolve;dur=51.012699
+x-app-server: wwwb-app233-dc8
+x-ts: 301
+x-tr: 366
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=0
+set-cookie: wb-p-SERVER=wwwb-app233; path=/
+cache-control: private
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

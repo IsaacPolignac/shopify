@@ -1,0 +1,14 @@
+variantes 3.0 : Blanc Bleu Gris Beige ; housses 3.0 : Bleu Blanc Gris Beige (ordre products.json)
+25/09 22:12 {'v3': ([-3888, -1999, -2431, -1401], 9719), 'h3': ([-1312, -741, -1135, -760], 3948), 'lomb': ([-13908], 13908), 'v2': ([-51191], 51191), 'h2': ([-41513], 41513)}
+2026-09-26T09480 {'v3': ([-3928, -2006, -2442, -1418], 9794), 'h3': ([-1329, -752, -1153, -773], 4007), 'lomb': ([-13923], 13923), 'v2': ([-51226], 51226), 'h2': ([-41537], 41537)}
+2026-09-26T11490 {'v3': ([-3968, -2021, -2457, -1433], 9879), 'h3': ([-1356, -756, -1167, -784], 4063), 'lomb': ([-13937], 13937), 'v2': ([-51270], 51270), 'h2': ([-41576], 41576)}
+25/09 22:12 -> 2026-09-26T09480 {'v3': [40, 7, 11, 17], 'h3': [17, 11, 18, 13], 'lomb': [15], 'v2': [35], 'h2': [24]} housses/oreillers 3.0 = 79 % lombaire/papillons = 14 %
+2026-09-26T09480 -> 2026-09-26T11490 {'v3': [40, 15, 15, 15], 'h3': [27, 4, 14, 11], 'lomb': [14], 'v2': [44], 'h2': [39]} housses/oreillers 3.0 = 66 % lombaire/papillons = 11 %
+TOTAL {'v3': [80, 22, 26, 32], 'h3': [44, 15, 32, 24], 'lomb': [29], 'v2': [79], 'h2': [63]} housses/oreillers 3.0 = 71.9 % lombaire/papillons = 12.1 %
+cumul par coloris (housse / oreiller) : {'Blanc': '741/3888 = 19 %', 'Bleu': '1312/1999 = 66 %', 'Gris': '1135/2431 = 47 %', 'Beige': '760/1401 = 54 %'}
+parts oreillers {'Blanc': '40 %', 'Bleu': '21 %', 'Gris': '25 %', 'Beige': '14 %'} parts housses {'Bleu': '33 %', 'Blanc': '19 %', 'Gris': '29 %', 'Beige': '19 %'}
+Famille TVA reversee droit 3 -> cout max par oreiller 19.24 EUR
+Famille TVA reversee droit 0 -> cout max par oreiller 19.99 EUR
+Famille TVA non reversee droit 3 -> cout max par oreiller 25.07 EUR
+Famille TVA non reversee droit 0 -> cout max par oreiller 25.82 EUR
+Envoi direct express, entrees du chapitre : FOB 7,60-8,80 + express 12,50-15,00 = 20.1 - 23.8 EUR avant droit de 3 EUR

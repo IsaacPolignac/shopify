@@ -1,0 +1,37 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+date: Sat, 26 Sep 2026 09:53:24 GMT
+content-type: text/html; charset=utf-8
+x-download-options: noopen
+cf-cache-status: DYNAMIC
+set-cookie: localization=CA; path=/; expires=Sun, 26 Sep 2027 09:53:24 GMT; SameSite=Lax
+set-cookie: cart_currency=CAD; path=/; expires=Sat, 10 Oct 2026 09:53:24 GMT; SameSite=Lax
+set-cookie: _shopify_essential=:AaDdIj_-AAEADCBVuKIKXSZO9DfE2ZknD9STUd88Nxjbq6i2pn7CTYjnppP1WDLyuYU0RDHO9RNkOmwuq7mNKaSNF0rSWuMvpfrdP7hJkBozo6vtmv8MN1oYNtsTho-8P10bpNyVY8kLJpvU8_Bhqt8qSDAyUR8omnzCXS3WtNDvFL4dG_kLm47J3YBjyv_DPocsjrMsxy28LGU0_sdr5vnoaHCUhqbyTuJA7-pWquzG0A7wey-nmgveSqQaRm53grCHGhI-9QU64zksPOcYxORpKtPZPYqnwRLYB0YeuCa5s5df6jkWzmUjNA66ZKSoczp7ZG4UiIyZXw:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_analytics=:AaDdIkCRAAEAU9YvQSgbHvNHLrrT2HdMT13hjSkUk5YcnGeYLEximv-OYxWkXyWZkHatc2tQCsIXhpBZPwCoH06ORP67ncEdrAl-fACoMqeCYG0s6hJnGUrJz4WRMX0IBmYtD_f4JPXBqg_tUafWnCLx54o:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_marketing=:AaDdIkCSAAEAcpVYh6Z43_TA-szbY0PktzJyPFjTShAtyK6Xq4IO_vDIu5x7qOvt4QU-fg0A0knd-yycBlasgZUmpaPJMC88W0PELbn8goZHJidy35vbavA7jyddOhBOfl36fx-JNCJYc9WXPqb9GbPabR4:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <https://storefront-agent-server.shopify.ai>; rel="preconnect", <https://fonts.googleapis.com>; rel="preconnect", <//juvilor.com/cdn/shop/t/2/assets/base.css?v=26772236713295269761757677773>; as="style"; rel="preload", <//juvilor.com/cdn/shop/t/2/assets/blocky-lys.css?v=42973654463803942751757677773>; as="style"; rel="preload", <https://fonts.googleapis.com/icon?family=Material+Icons>; as="style"; rel="preload", <https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:FILL@0..1>; as="style"; rel="preload", <https://cdn.shopify.com/extensions/019fb59d-9df2-7baf-b963-1873e42336bd/blocky-apps-196/assets/blocky.css>; as="style"; rel="preload", <https://juvilor.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as="style"; rel="preload"; crossorigin, <//juvilor.com/cdn/shop/t/2/compiled_assets/styles.css?v=25487149230671191771774494955>; as="style"; rel="preload", <//juvilor.com/cdn/shop/files/Sans_titre_1250_x_417_px_3.png?v=1758220544&width=600>; as="image"; rel="preload"; imagesrcset="//juvilor.com/cdn/shop/files/Sans_titre_1250_x_417_px_3.png?v=1758220544&width=210 210w, //juvilor.com/cdn/shop/files/Sans_titre_1250_x_417_px_3.png?v=1758220544&width=315 315w, //juvilor.com/cdn/shop/files/Sans_titre_1250_x_417_px_3.png?v=1758220544&width=420 420w"; imagesizes="(max-width: 420px) 50vw, 210px", </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+x-permitted-cross-domain-policies: none
+etag: W/"page_cache:77492191483:IndexController:3fa2eb44f8c98efb764d36fdd842cfb5:424a1cc3eaf697c896794dabd85a56ef"
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+shopify-complexity-score: 157
+shopify-complexity-score-v2: 157
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+vary: Accept
+vary: accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr-CA
+accept-ch: Sec-CH-Viewport-Width
+powered-by: Shopify
+server-timing: processing;dur=165;desc="gc:1", db;dur=37, db_async;dur=33.133, parse;dur=5, render;dur=61, asn;desc="396982", edge;desc="IAD", country;desc="US", theme;desc="153684738299", pageType;desc="index", servedBy;desc="24h5", requestID;desc="d2c52a66-6b36-48ad-aac4-f91160a3b90f-1790416404", _y;desc="72fbb0ee-bb83-439e-850f-cd80f54d425f", _s;desc="350f48ff-622c-4794-a5d9-a225efbdafa7", _cmp;desc="3.AMPS_US_f_f_Oe1*DTThS5aK*ygxKM63UA", _cta;desc="1", _ye;desc="1821974004", _se;desc="1790418204", compressionLevel;desc="5", compressionTime;dur=9.284
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-xss-protection: 1; mode=block
+alt-svc: h3=":443"; ma=86400
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=OjtPZVzP%2FBuvNTCSrkMlylRa9lGr0V%2F3XkVl5TgxRu8p%2Bxvf14Ax5dLDSRyvPWuP%2BFaqs8G%2Bwhpg0SwFvoT8GcVOQk6qU7nuJ8i%2Fgk7yMtKrT1XdVjcu%2FrJXO%2FtS"}]}
+x-content-type-options: nosniff
+x-request-id: d2c52a66-6b36-48ad-aac4-f91160a3b90f-1790416404
+cf-ray: a411619fbc0dffc6-IAD
+

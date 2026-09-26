@@ -1,0 +1,75 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 301 
+date: Sat, 26 Sep 2026 11:57:59 GMT
+content-type: text/html; charset=utf-8
+content-length: 0
+location: https://ecdf-france.com/
+x-download-options: noopen
+x-redirect-reason: primary_domain_redirection
+shopify-complexity-score: 22
+shopify-complexity-score-v2: 22
+set-cookie: _shopify_essential=:AaDdlE37AAEAmsVHurecxQQBPvL_tosk9oqyC9VRc0PXZgC1vnbgOPM7kikWQZtbTuTwUb4qKDJJNwzT4iumaHmlO-8R5aNeft0PKc_pthUvCh2zfSa2q0Wj_oZHFjl4MGG2OE44QB7e3zAXdGamEjVYxnAVD9cnV3ciAeCqtB1SviahmaHNGT6T3RyPPEX0MJV_hePsCWEzvoJveckfriDGcCa7gi_Lh9NHs5I4yWpPfXGylH4DDQ:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=jXaKmx05unYnu8rw1XjF4jE34JXz7%2FQUmZ%2B25CFBxyZn%2FFGM0iz%2F%2BXFaHyeyzi4nxBWfI8yXCX%2BKD%2FuctIFpPl94eBKYaEvv%2B%2FjGvGWVwFkNiLI0gaPIqS5fDyZF7WWP1A%3D%3D"}]}
+vary: Accept
+cdn-cache-control: no-cache, no-store
+cache-control: private, no-store
+link: </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+powered-by: Shopify
+server-timing: processing;dur=29;desc="gc:1", db;dur=5, db_async;dur=8.527, asn;desc="396982", edge;desc="IAD", country;desc="US", pageType;desc="index", servedBy;desc="hjl8", requestID;desc="f1b0c56c-6a03-4c5c-90a5-ee0ea31e8330-1790423879", _y;desc="efe631d9-53af-4179-b5b1-8f008b111b7b", _s;desc="d20ef165-a492-4629-86f3-de80e1a63efb", _cmp;desc="3.AMPS_US_f_f_j-efXiZXRwKkMjNk1-hieA", _cta;desc="1", _ye;desc="1821981479", _se;desc="1790425679"
+server: cloudflare
+cf-cache-status: DYNAMIC
+alt-svc: h3=":443"; ma=86400
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-permitted-cross-domain-policies: none
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-request-id: f1b0c56c-6a03-4c5c-90a5-ee0ea31e8330-1790423879
+cf-ray: a412181c7fb33e81-IAD
+
+HTTP/1.1 200 Connection Established
+
+HTTP/2 103 
+link: <https://cdn.shopify.com>; rel=preconnect, <https://cdn.shopify.com>; crossorigin; rel=preconnect, <//ecdf-france.com/cdn/shop/t/11/assets/base.css?v=76279458980208555051756849771>; as=style; rel=preload, <https://ecdf-france.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=style; crossorigin; rel=preload
+
+HTTP/2 200 
+date: Sat, 26 Sep 2026 11:57:59 GMT
+content-type: text/html; charset=utf-8
+content-length: 53953
+x-download-options: noopen
+cf-cache-status: DYNAMIC
+set-cookie: localization=FR; path=/; expires=Sun, 26 Sep 2027 11:57:59 GMT; SameSite=Lax
+set-cookie: cart_currency=EUR; path=/; expires=Sat, 10 Oct 2026 11:57:59 GMT; SameSite=Lax
+set-cookie: _shopify_essential=:AaDdlFAFAAEARPt4D4Q8Ipm03WcP-jv8QUuSSVIIyY4VHy41Up_hjNddyoW-_EU7B97NgzUglt8Gm8ljp7qeXIW0atESLi8mvTyBkJM8dvetzRMK15vPq1WXu1xO36GQev5PSbtpX5Q_mbur_wm5PsDC-4gbnhm1N7Twn-u4TD2B9ggYp_Gc6ILM1UvC0Yv9B0-sgkkBBg5uZMpXRitocw0l54W8yzfOr4AEE_pc6OuACwQDhnBZzrbYs-w6KJq6E-XZOqzTghUU9qj8IwLZNP2_vemLq3Wdlj7ft5fsh3OQxWuP3g7fJbBmLtcUiLzAKY017DGSV8gZdg:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_analytics=:AaDdlFC-AAEAlWy6rV3jwUDvEp04vVjyhscAzgcwdfQnLSd9sthinL4y9JnbbtkCWPfxtOgWzHLQp_R5MUGySS6zCIerXvO77T3iXgUGpdKhU1bhlIWOHP_tS_tswWt-wHAS-nVeXvGfKAulnMudkhMAKJM:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_marketing=:AaDdlFC-AAEAA_iv3_RZeqGuFGaGqwMbB2UFTx0derbJGD28OwVNDvKuR7PHLTzZLfX5i-beHoLa5iKP8eirk4XfihA3S4neNeOouAfa6ViyPBaydnJ2QW6pxX4eVBSLYQ0QjE6bB8d4aJ9c4S_mBGiV8sQ:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//ecdf-france.com/cdn/shop/t/11/assets/base.css?v=76279458980208555051756849771>; as="style"; rel="preload", <https://ecdf-france.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as="style"; rel="preload"; crossorigin, </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+etag: "page_cache:78043447619:IndexController:4fa2b7ab32a73a68c61ef70b107bb9ba:70e9293fda6a3a874f88c2ce2612cf5b"
+content-encoding: br
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+shopify-complexity-score: 191
+shopify-complexity-score-v2: 191
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+vary: Accept
+vary: accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr-FR
+accept-ch: Sec-CH-Viewport-Width
+powered-by: Shopify
+server-timing: processing;dur=198;desc="gc:6", db;dur=20, db_async;dur=52.017, render;dur=59, asn;desc="396982", edge;desc="IAD", country;desc="US", theme;desc="181252456771", pageType;desc="index", servedBy;desc="fllt", requestID;desc="a90f8ae6-9a5f-4215-a020-285781274ebb-1790423879", _y;desc="00e16511-bae4-4265-ae92-759f7bc86b7b", _s;desc="2e0c9f0d-90c0-4e07-99d7-d18e0a338694", _cmp;desc="3.AMPS_US_f_f_ogOX08nTT7a*uS37zfLbHw", _cta;desc="1", _ye;desc="1821981479", _se;desc="1790425679", compressionLevel;desc="5", compressionTime;dur=8.14, earlyhints
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-xss-protection: 1; mode=block
+alt-svc: h3=":443"; ma=86400
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Y68X8dxbd%2BJdpRpqLUuYihW%2FT5Cdv6mlz0UX7HdRauXC%2FEhoFOQ1DTiHzYN8qb9s7RbPhVFpllUei7i3Y31lPeaC%2FuwY4XH3lNJj1KeuVOb4YmBoGfhF6PSxgd%2BxkERNqQ%3D%3D"}]}
+x-content-type-options: nosniff
+x-request-id: a90f8ae6-9a5f-4215-a020-285781274ebb-1790423879
+x-permitted-cross-domain-policies: none
+cf-ray: a412181fcb14c1cf-IAD
+

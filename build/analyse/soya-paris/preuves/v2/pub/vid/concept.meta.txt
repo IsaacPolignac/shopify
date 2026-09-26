@@ -1,0 +1,8 @@
+    major_brand     : qt  
+    creation_time   : 2025-11-08T22:01:43.000000Z
+  Duration: 00:00:45.20, start: 0.000000, bitrate: 8224 kb/s
+  Stream #0:0[0x1](und): Video: hevc (Main) (hvc1 / 0x31637668), yuv420p(tv, bt709), 1080x1920, 8051 kb/s, 30 fps, 30 tbr, 600 tbn (default)
+        creation_time   : 2025-11-08T22:01:43.000000Z
+        encoder         : HEVC
+  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 167 kb/s (default)
+        creation_time   : 2025-11-08T22:01:43.000000Z

@@ -1,0 +1,26 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+date: Sat, 26 Sep 2026 10:07:54 GMT
+content-type: text/html; charset=utf-8
+server: cloudflare
+set-cookie: PHPSESSID=607cda204f34550d51429f5cd14c251a; expires=Sat, 03 Oct 2026 10:07:54 GMT; Max-Age=604800; path=/; secure; SameSite=None
+set-cookie: csid3=607cda204f34550d51429f5cd14c251a; expires=Sun, 26 Sep 2027 10:07:54 GMT; Max-Age=31536000; path=/; secure; SameSite=None
+set-cookie: PHPSESSID=607cda204f34550d51429f5cd14c251a; expires=Sun, 27 Sep 2026 10:07:54 GMT; Max-Age=86400; path=/; secure; SameSite=None
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate
+pragma: no-cache
+x-robots-tag: noindex, noarchive, nofollow
+p3p: CP="This is not a P3P policy"
+x-frame-options: SAMEORIGIN
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+referrer-policy: no-referrer-when-downgrade
+strict-transport-security: max-age=31536000; includeSubDomains
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=MctQHlLtc7MJfAPvy8qW5LyPU4f9gefZTurQoQRi%2B24eAQkCQfUpfZ3B%2FTpPYlPOtBsml%2FPsdk687na4p%2FMYKQb9D7LTl%2BAlzrPdx%2BVLmj%2FSuchsVvSs4myScpZYcKmaxoya9Nlmwgn3x4L%2Bql8%3D"}]}
+cf-cache-status: DYNAMIC
+vary: accept-encoding
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+cf-ray: a41176dc6a55d6c0-IAD
+alt-svc: h3=":443"; ma=86400
+

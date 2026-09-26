@@ -1,0 +1,41 @@
+Extraits Trustpilot lus le 26/09/2026 vers 10:40 UTC via WebFetch (résumé et citations extraits par un modèle ; curl direct bloqué par AWS WAF, voir p1.html).
+URL ouvertes : https://fr.trustpilot.com/review/soya-paris.com?stars=1 ; ?page=2&stars=1 ; ?stars=2 ; ?stars=3 ; ?stars=4 ; https://fr.trustpilot.com/review/soya-paris.com
+Totaux affichés : 6 279 avis (page stars=1), 6 278 (page d'accueil), 4,3/5 ; répartition 65 % 5*, 16 % 4*, 2 % 3*, 1 % 2*, 16 % 1*. Profil : « Pays : France », revendiqué octobre 2024, abonnement payant, réponse à 4 % des avis négatifs.
+
+ORIGINE / DROPSHIPPING
+- Ludovic Baron, 1*, « il y a 17 heures » (≈ 25/09/2026) : « Oreiller made in china (probablement du dropshipping, le packaging indique la provenance de Chine) »
+- TESSORE Sandrine, 1*, 14/09/2026 : « colis est bloqué en Chine » ; « site prétend s'appeler 'Paris' mais est en réalité basé aux États-Unis »
+- Marie-océane Perro, 3*, 11/09/2026 : « Commender le 18 aout resu le 10 septembre presque 1 mois d'attente arriver de chine »
+- Didier GIMEL, 3*, 10/09/2026 : « la livraison a été trop longue » / « plus de 10 jours » ; « il n'y a aucune étiquette de 'made in' » / « une chinoiserie »
+- O leviel, 2*, 18/07/2026 : « plus d'une semaine de retard » ; « c'est du produit chinois » ; « taies sont très synthétiques »
+- Alexandre M, 1*, 15/09/2026 : « Dropshipping. Oreiller à 12€ sur Temu »
+- Seb M., 1*, « il y a 4 jours » : « l'entreprise est située au US, ils font du dropshipping »
+- Dimitri, 1*, 13/09/2026 : « escroquerie de dropshipping »
+- Helene Milan, 1*, « il y a 5 jours » : « c'est du POLYESTER bas de gamme chinois »
+
+DÉLAIS
+- Cath, 1*, « il y a 2 jours » : « la livraison que vous indiquez rapide : 13 jours, rapide ? »
+- virginie, 1*, 12/09/2026 : « Colis reçu 12j après la commande au lieu des 5j ouvrés »
+- Caroline, 4*, « il y a 4 jours » : « Je les ai reçu 15 jours après »
+- HEQUET Maeva, 4*, « il y a 2 jours » : « Commande reçu au jour de 10 jours »
+- Zmair, 4*, « il y a 2 jours » : « Produit reçu sous 5 jours ouvrés »
+- Lançon Stéphane, 4*, « il y a 3 jours » : « Livraison rapide »
+- Natacha Biehler, 2*, « il y a 4 jours » : « 8 jours après » contre « 1 a 2 jours ouvrés » promis
+- ALEXANDRE MARIE, 2*, 05/08/2026 : « 8 jours ouvrés » contre « 1 à 2 jours ouvrés » ; « colis n'est pas encore pris en charge »
+- Audrey, 2*, actualisé « il y a 3 jours » : « plus de 3 semaines après paiement » ; « numéro colissimo non pris en charge »
+- Indy Merea, 1*, « il y a 2 jours » : commande du 09/09 (150 €) non livrée, « soit deux semaines »
+- Jeremie Cros, 1* : « Cela fait bientôt 1 mois que j'ai passé ma commande aucune nouvelle »
+- Nadia Aouak, 1* : commande du 31 août jamais reçue
+- Marie Bonafe, 3*, 15/09/2026 : « La livraison a tardée par manque de production »
+- Thomas Poulet, 3*, 11/09/2026 : « Delai de livraison très long par rapport à ce qui était annoncé »
+- Tagliabue stephane, 1*, « il y a 7 jours » : Chronopost cité, colis retourné à l'expéditeur
+
+EMBALLAGE / PRODUIT
+- « cliente », 3*, « il y a 5 jours » : « Colis bien compressé dans boîte aux lettres »
+- Celine Duchaussoy, 5*, 04/09/2026 : « il était si compact que je pensais m'être fait avoir »
+- Regis B, 1* : « Très mauvaise odeur de plastique au déballage de l'oreiller »
+- TTN, 3*, 13/09/2026 : « une odeur forte de produits chimiques provient de la mousse »
+
+RETOURS / REMBOURSEMENTS
+- Pauline, 3*, « il y a 7 jours » : « Leur système de retour n'existe pas » ; « une adresse d'un entrepôt à Paris »
+- Nombreux 1* : remboursement attendu 2 à 4 mois après retour (Cathy Scheerens, Franny, Lionel Michaud, Manon Delort, Sophie Damamme, Yoan, Marion, simon, Melina Tirard, Brai Christian, Julene Ledu, Raphaël Ghisalberti, Vicky Saillard) ; Nicolas : « 6 mois » ; Sophie Vandamme : « renvoyés à mes frais ».

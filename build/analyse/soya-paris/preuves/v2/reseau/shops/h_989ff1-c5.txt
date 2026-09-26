@@ -1,0 +1,32 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 404 
+date: Sat, 26 Sep 2026 10:13:12 GMT
+content-type: application/json; charset=utf-8
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+shopify-complexity-score: 164
+shopify-complexity-score-v2: 164
+set-cookie: _shopify_essential=:AaDdNGBrAAEANl-6Kg3LFOXdxDtswMIfX4p2Y23ziPe6oqFRrjF7g9ZdrLbHxPhWJC2gZK_3NR1xp1Rk6MWKD3qDQHda8lAQQOaUX7G5BphTGnmsXvdyx2ctvmXRfItciwCUAvUBlDfSgxpNZ6p01eXhsN1dlBiYQ6hXSAsrJ0xq2syaDwaSL3m_AtkGCMA3g17-BgAnrKe6O-Ducf6_IdsWCIBbJtZw0W2t9q2pPaekjEFZvg:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+access-control-allow-origin: *
+strict-transport-security: max-age=7889238
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=nCo%2FXdtsV93BfEOshL2wUr2pMkrdzCTKlD6cAWRPMMqqlqxzv8dKZIj%2FNaTTTl5z3uCJBHRi15Qd%2BDnTEwGnYYKQqBV4n5VXTWQS6yOGEI6ymmLBYC4u944zO0UfKhbPsD9qOa%2BkB%2Brp"}]}
+vary: Accept,accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr
+cache-control: private, no-store
+link: </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+powered-by: Shopify
+server-timing: processing;dur=93, db;dur=27, db_async;dur=15.33, asn;desc="396982", edge;desc="IAD", country;desc="US", servedBy;desc="q2vt", requestID;desc="bfccb015-752c-4604-8fdd-070371bb8f58-1790417592", _y;desc="3b16f5bd-13f7-4000-95a4-fb893ea60b35", _s;desc="923ca4a7-3204-430c-9692-5775fa3f639e", _cmp;desc="3.AMPS_US_f_t_T4MX3rqJS4eE-PVFe*xQcQ", _cta;desc="1", _ye;desc="1821975192", _se;desc="1790419392"
+x-download-options: noopen
+x-xss-protection: 1; mode=block
+cf-cache-status: DYNAMIC
+x-request-id: bfccb015-752c-4604-8fdd-070371bb8f58-1790417592
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=86400
+x-permitted-cross-domain-policies: none
+cf-ray: a4117ea009b16665-IAD
+

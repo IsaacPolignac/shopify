@@ -1,0 +1,71 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+server: nginx
+date: Sat, 26 Sep 2026 10:08:35 GMT
+content-type: text/html; charset=utf-8
+x-archive-orig-date: Sat, 19 Apr 2025 04:19:32 GMT
+x-archive-orig-transfer-encoding: chunked
+x-archive-orig-connection: close
+x-archive-orig-x-sorting-hat-podid: 199
+x-archive-orig-x-sorting-hat-shopid: 68045897928
+x-archive-orig-x-storefront-renderer-rendered: 1
+x-archive-orig-set-cookie: secure_customer_sig=; path=/; expires=Sun, 19 Apr 2026 04:19:32 GMT; secure; HttpOnly; SameSite=Lax
+x-archive-orig-set-cookie: localization=FR; path=/; expires=Sun, 19 Apr 2026 04:19:32 GMT; SameSite=Lax
+x-archive-orig-set-cookie: cart_currency=EUR; path=/; expires=Sat, 03 May 2025 04:19:32 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_y=E87084F2-72bd-4475-b2c5-abf3620fc23e; domain=soya-paris.com; path=/; expires=Sun, 19 Apr 2026 10:19:32 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_s=46A8E99A-ae80-40BB-803d-89b518d7d12f; domain=soya-paris.com; path=/; expires=Sat, 19 Apr 2025 04:49:32 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _tracking_consent=%7B%22con%22%3A%7B%22CMP%22%3A%7B%22a%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A%22%22%2C%22s%22%3A%22%22%7D%7D%2C%22v%22%3A%222.1%22%2C%22region%22%3A%22USCA%22%2C%22reg%22%3A%22%22%2C%22purposes%22%3A%7B%22a%22%3Atrue%2C%22p%22%3Atrue%2C%22m%22%3Atrue%2C%22t%22%3Atrue%7D%2C%22display_banner%22%3Afalse%2C%22sale_of_data_region%22%3Atrue%2C%22consent_id%22%3A%22FC42187F-3ab1-44C0-b05a-f686381c38af%22%7D; domain=soya-paris.com; path=/; expires=Sun, 19 Apr 2026 04:19:32 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _orig_referrer=; domain=soya-paris.com; path=/; expires=Sat, 03 May 2025 04:19:32 GMT; HttpOnly; SameSite=Lax
+x-archive-orig-set-cookie: _landing_page=%2Fproducts%2Foreiller-soya-2-0; domain=soya-paris.com; path=/; expires=Sat, 03 May 2025 04:19:32 GMT; HttpOnly; SameSite=Lax
+x-archive-orig-link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//soya-paris.com/cdn/shop/t/3/assets/theme.css?v=151159139448717063861737755291>; as="style"; rel="preload"
+x-archive-orig-etag: W/"cacheable:4f186be462ab338f33b202cfc1c6608b"
+x-archive-orig-x-cache: miss
+x-archive-orig-x-frame-options: DENY
+x-archive-orig-content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+x-archive-orig-access-control-allow-origin: *
+x-archive-orig-strict-transport-security: max-age=7889238
+x-archive-orig-x-shopid: 68045897928
+x-archive-orig-x-shardid: 199
+x-archive-orig-content-language: fr-FR
+x-archive-orig-powered-by: Shopify
+x-archive-orig-server-timing: processing;dur=369;desc="gc:32", db;dur=80, db_async;dur=10.569, render;dur=238, asn;desc="7941", edge;desc="SJC", country;desc="US", knownbot, theme;desc="140769263816", pageType;desc="product", servedBy;desc="sn26", requestID;desc="e2e0da55-3112-4cdf-80af-fc2789ace306-1745036371"
+x-archive-orig-shopify-complexity-score: 0
+x-archive-orig-x-dc: gcp-us-west1,gcp-us-west1,gcp-us-west1
+x-archive-orig-x-request-id: e2e0da55-3112-4cdf-80af-fc2789ace306-1745036371
+x-archive-orig-alt-svc: h3=":443"; ma=86400
+x-archive-orig-cf-cache-status: DYNAMIC
+x-archive-orig-vary: accept-encoding
+x-archive-orig-report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=48R%2F11oCq4vIjzsIwDoe1jZU14KJgNV7qMlkKgS5ihUjpZedHBEiVUG7XubwtqOR0ItI6ua%2F1uyhwRnoA0WMjIa0tGxQ07B7lPIR%2Bh9LhWKU%2BFuahIZZD8YB6wOWyd8K"}],"group":"cf-nel","max_age":604800}
+x-archive-orig-nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+x-archive-orig-server-timing: cfRequestDuration;dur=413.999796
+x-archive-orig-x-xss-protection: 1; mode=block
+x-archive-orig-x-content-type-options: nosniff
+x-archive-orig-x-permitted-cross-domain-policies: none
+x-archive-orig-x-download-options: noopen
+x-archive-orig-shopify-edge-ip: 23.227.38.73
+x-archive-orig-server: cloudflare
+x-archive-orig-cf-ray: 93299aacaccd7aeb-SJC
+content-encoding: gzip
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Sat, 19 Apr 2025 04:19:31 GMT
+link: <https://soya-paris.com/products/oreiller-soya-2-0>; rel="original", <https://web.archive.org/web/timemap/link/https://soya-paris.com/products/oreiller-soya-2-0>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://soya-paris.com/products/oreiller-soya-2-0>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: SPNOUTLINKS-20250419041826-crawl900/SPNOUTLINKS-20250419041826-05561.warc.gz
+server-timing: captures_list;dur=0.440790, exclusion.robots;dur=0.043260, exclusion.robots.policy;dur=0.035060, esindex;dur=0.005992, cdx.remote;dur=43.165687, LoadShardBlock;dur=215.676191, PetaboxLoader3.datanode;dur=271.870099, PetaboxLoader3.resolve;dur=64.868271, load_resource;dur=195.785409
+x-app-server: wwwb-app266-dc8
+x-ts: 200
+x-tr: 479
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=0
+set-cookie: wb-p-SERVER=wwwb-app266; path=/
+cache-control: private
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

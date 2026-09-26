@@ -1,0 +1,10 @@
+# API https://archive.org/wayback/available (26/09/2026 ~10:45 UTC). Contenu des captures NON lu : web.archive.org, archive.ph et index.commoncrawl.org
+# sont bloqués par la politique réseau de cet environnement ("Blocked by egress policy" / connexion réinitialisée).
+# Captures existantes les plus proches des dates demandées (horodatage Wayback AAAAMMJJhhmmss) :
+oreiller-soya-3-0                    20251028063620  20260108120343  20260219161510  20260907200640
+oreiller-soya-2-0                    20251028095749  20260420150801
+housse-d-oreiller-de-rechange-soya-1 20251104121000  20260907200640
+coussin-lombaire-ergonomique-soya    20251029133938  20251229101428  20260215212334  20260606224404  20260907200640
+# Page d'accueil, /collections/all, /products.json : aucune capture renvoyée.
+# URL type à ouvrir (depuis un poste sans filtre) : https://web.archive.org/web/20251028095749id_/https://soya-paris.com/products/oreiller-soya-2-0
+# puis chercher "inventoryQuantity" dans le code source (bloc kaching-bundles-deal-block-settings / JSON du thème).

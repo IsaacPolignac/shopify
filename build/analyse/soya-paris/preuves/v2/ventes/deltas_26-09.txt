@@ -1,0 +1,53 @@
+== snapshot 2026-09-26T09:48:03Z
+  Oreiller Soya 3.0         75 u en 11.60 h  [40, 7, 11, 17]
+  Housse 3.0                59 u en 11.59 h  [17, 11, 18, 13]
+  Oreiller Soya 2.0         35 u en 11.60 h  [35]
+  Housse 2.0                24 u en 11.59 h  [24]
+  Coussin lombaire          15 u en 11.59 h  [15]
+  Oreiller enfant            0 u en 11.59 h  [0, 0, 0]
+  Housse enfant              0 u en 11.59 h  [0, 0, 0]
+  Oreiller 1.0               0 u en 11.59 h  [0]
+  Housse oreiller soie       4 u en 11.59 h  [2, 0, 1, 1]
+  Draps soie                 0 u en 11.59 h  
+  Housse couette soie        0 u en 11.59 h  
+  Couette SoyaFresh          0 u en 11.59 h  
+  Draps SoyaFresh            0 u en 11.59 h  
+  Coussin siège              1 u en 11.59 h  
+  Oreiller voyage            1 u en 11.59 h  
+  Masque soie                0 u en 11.59 h  
+  Couverture lestée          0 u en 11.59 h  
+  Oreillers réglables        0 u en 11.59 h  
+  Coussin tête de lit        0 u en 11.58 h  
+== snapshot 2026-09-26T10:48:54Z
+  Housse 3.0               110 u en 12.60 h  [40, 15, 31, 24]
+  Oreiller Soya 2.0         70 u en 12.61 h  [70]
+  Housse 2.0                52 u en 12.60 h  [52]
+  Housse enfant              0 u en 12.60 h  [0, 0, 0]
+  Housse oreiller soie       7 u en 12.60 h  [3, 0, 1, 3]
+  Draps soie                 0 u en 12.61 h  
+  Housse couette soie        0 u en 12.60 h  
+  Couette SoyaFresh          0 u en 12.61 h  
+  Coussin siège              1 u en 12.60 h  
+  Oreiller voyage            1 u en 12.60 h  
+  Couverture lestée          0 u en 12.60 h  
+  Coussin tête de lit        0 u en 12.60 h  
+== snapshot 2026-09-26T11:49:02Z
+  Oreiller Soya 3.0        160 u en 13.61 h  [80, 22, 26, 32]
+  Housse 3.0               115 u en 13.60 h  [44, 15, 32, 24]
+  Oreiller Soya 2.0         79 u en 13.61 h  [79]
+  Housse 2.0                63 u en 13.60 h  [63]
+  Coussin lombaire          29 u en 13.60 h  [29]
+  Oreiller enfant            0 u en 13.61 h  [0, 0, 0]
+  Housse enfant              0 u en 13.61 h  [0, 0, 0]
+  Oreiller 1.0               2 u en 13.61 h  [2]
+  Housse oreiller soie       7 u en 13.61 h  [3, 0, 1, 3]
+  Draps soie                 0 u en 13.61 h  
+  Housse couette soie        0 u en 13.61 h  
+  Couette SoyaFresh          0 u en 13.61 h  
+  Draps SoyaFresh            0 u en 13.60 h  
+  Coussin siège              1 u en 13.60 h  
+  Oreiller voyage            1 u en 13.61 h  
+  Masque soie                0 u en 13.60 h  
+  Couverture lestée          0 u en 13.60 h  
+  Oreillers réglables        0 u en 13.60 h  
+  Coussin tête de lit        0 u en 13.60 h  

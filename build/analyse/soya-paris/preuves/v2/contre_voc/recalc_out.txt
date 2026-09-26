@@ -1,0 +1,26 @@
+== Avis publiés au plus tard fin août 2025 encore présents le 15/03/2026 (total 15/03 - mois sept. 2025 à mars 2026 de la page transparence)
+one 22/08/2025 : 405 | survivants <= 31/08/2025 au 15/03/2026 : 410 | écart : 5
+two 22/08/2025 : 15 | survivants <= 31/08/2025 au 15/03/2026 : 13 | écart : -2
+three 22/08/2025 : 24 | survivants <= 31/08/2025 au 15/03/2026 : 23 | écart : -1
+four 22/08/2025 : 57 | survivants <= 31/08/2025 au 15/03/2026 : 32 | écart : -25
+five 22/08/2025 : 241 | survivants <= 31/08/2025 au 15/03/2026 : 179 | écart : -62
+total 22/08/2025 742 | survivants 657
+== Loox : textes identiques (>25 car.) : 59 textes, 151 avis
+   groupes 100 % importés : 56 textes / 144 avis ; noms distincts dans ces groupes : 144
+   9 x 'je n’utilise plus que cet oreiller maintenant.' [('Nadia.m', '2025-06-05', 'V'), ('Emma.l', '2025-03-12', '-'), ('Marc.m', '2025-03-07', '-'), ('Lucas.r', '2025-02-28', '-'), ('Nathalie.d', '2025-02-24', '-'), ('Léa.b', '2025-02-19', '-'), ('Camille.d', '2024-08-01', 'V'), ('Léa.l', '2024-08-01', 'V'), ('Claire.f', '2024-08-01', 'V')]
+   6 x 'livraison rapide et produit bien emballé.' [('Lucas.b', '2025-09-18', 'V'), ('David.m', '2025-09-18', 'V'), ('Mélanie.p', '2025-03-11', '-'), ('Lucas.l', '2025-03-05', '-'), ('Sophie.m', '2025-02-22', '-'), ('Claire.m', '2024-08-01', 'V')]
+   6 x 'mon kiné m’a dit de le garder, ça veut tout dire !' [('Sarah.m', '2025-03-15', 'V'), ('Nadia.s', '2025-03-13', 'V'), ('Chloé.l', '2025-03-09', '-'), ('Léa.d', '2025-03-01', '-'), ('David.f', '2025-02-21', '-'), ('Léa.r', '2024-08-01', 'V')]
+   4 x 'je suis très content, je dors bien mieux qu’avant.' [('Hugo.s', '2025-09-18', 'V'), ('Sylvain.s', '2025-03-14', '-'), ('Mélanie.g', '2025-02-27', '-'), ('Sophie.b', '2025-02-17', '-')]
+   4 x 'je dors enfin d’une seule traite sans me réveiller.' [('Pauline.m', '2025-09-18', 'V'), ('Vincent.l', '2025-06-05', 'V'), ('Élodie.d', '2025-03-03', '-'), ('Pauline.d', '2025-02-26', '-')]
+   3 x 'produit chinois qui essaie de masquer sa provenance' [('Florent P.', '2026-09-23', 'V'), ('Florent P.', '2026-09-23', 'V'), ('Florent P.', '2026-09-23', 'V')]
+   groupes horodatés : [('produit chinois qui essaie de masquer sa provenanc', [('Florent P.', '2026-09-23T11:27'), ('Florent P.', '2026-09-23T11:27'), ('Florent P.', '2026-09-23T11:27')]), ('housse vraiment parfaite pour cet oreiller.', [('Etienne N.', '2026-02-10T17:10'), ('Etienne N.', '2026-02-10T17:10')]), ('pas bon pour ma morphologie, dommage.', [('Mohamed', '2026-08-14T06:30'), ('Mohamed', '2026-08-14T06:29')])]
+== Avis antérieurs au 05/09/2024 : 494 dont citant SOYA : 60
+   premier avis horodaté (collecte Loox) : 2025-04-10T03:57:22Z
+== Prénom masculin + accord féminin : 15 | importés 14 [('Julien D.', '2026-09-25'), ('Florian.r', '2026-07-25'), ('Julien.r', '2026-06-15'), ('Damien.l', '2025-04-16'), ('Quentin R.', '2024-12-13'), ('Sylvain J.', '2024-09-20'), ('Olivier.p', '2024-08-01'), ('Alexandre T.', '2024-02-15'), ('Alexandre M.', '2023-12-28'), ('Maxime T.', '2023-05-25'), ('Florian D.', '2023-05-16'), ('Quentin N.', '2023-03-13'), ('Quentin T.', '2023-01-05'), ('Maxime.c', '2026-08-04'), ('Hugo.v', '2026-06-26')]
+== 3.0 T3 2026 avec doublon 134 [21, 15, 14, 16, 68] moy 3.71 1-2* 26.9 %
+== 3.0 T3 2026 sans doublon 133 [20, 15, 14, 16, 68] moy 3.73 1-2* 26.3 %
+== Remboursement : n 44 médiane 60.0 quartiles (exclusif) [33.75, 60.0, 90.0] (inclusif) [41.25, 60.0, 90.0] >=90 j 15
+== TP 1-2* (196) produit étroit (enquêteur) service seul 113 produit seul 12 les deux 55 aucun 16
+== TP 1-2* (196) produit large (+douleurs, confort, adaptation, emballage) service seul 97 produit seul 17 les deux 71 aucun 11
+== Composition TP 1-2* par période (période, note) : [(('S1-2026', 1), 6), (('S1-2026', 2), 33), (('S2-2025', 1), 4), (('S2-2025', 2), 20), (('T3-2026', 1), 104), (('T3-2026', 2), 17), (('avant', 1), 1), (('avant', 2), 11)]
+== Avis BasicLink écrits colis non reçu : 8 [('Indy Merea', 1, '2026-09-24'), ('Ludivine Murzeau', 2, '2026-07-02'), ('redouane fellouh', 2, '2026-03-31'), ('Cristobal Corro', 3, '2026-09-12'), ('Guillaume Daraspe', 3, '2026-03-18'), ('David', 3, '2025-12-10'), ('Nigel CARTHERY', 4, '2026-09-23'), ('Jean David BIGONI', 4, '2026-09-19')]

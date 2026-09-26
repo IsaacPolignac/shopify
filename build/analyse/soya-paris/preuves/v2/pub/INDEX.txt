@@ -1,0 +1,27 @@
+Preuves brutes — mission « publicité et réseaux » (26/09/2026, ~09:50-10:30 UTC)
+
+BIBLIOTHEQUES PUBLICITAIRES
+- raw_2c80ea8d.html, fb_adlib.html, verify_hdr.txt : Meta Ad Library -> 403 + défi JS ; le POST de vérification renvoie 302 vers /login.
+- metalib.* : même page rendue par Playwright via relais (render.cjs) : boucle de défi, rien d'affiché.
+- raw_d86fc6e8.html, gat_sugg.json : Google Ads Transparency -> 429 / 302 vers google.com/sorry (captcha), page et RPC.
+- ttlib*.{txt,jpg,net.json}, tt_search_soya.json, tt_hdr.txt : TikTok Commercial Content Library. Page chargée, mais l'API POST /api/v1/search répond 421 « system busy » (curl et navigateur) ; le « Total des annonces : 0 » affiché est un artefact de l'échec de l'appel.
+- snapgal.*, snap_soya.json, snap_SOYA_PARIS.json, snap_all_soya.json, snap_all_LUXERY*.json : Snap Ads Gallery (API publique adsapi.snapchat.com/v1/ads_library/ads/search) : fonctionne. Aucun annonceur payeur « SOYA PARIS » ; « soya » UE 12 mois = 2 annonceurs sans rapport.
+- g_ads.pinterest.com.html : Pinterest Ads Repository (page chargée, non interrogée : formulaire JS) ; pin_src_r.* : pages domaine Pinterest -> redirection /ideas (connexion).
+
+RESEAUX
+- tt_profile_0926.{html,json} : profil TikTok @soya.paris le 26/09 09:59 UTC (5 070 abonnés, 2 699 j'aime, 0 vidéo, id 7670608818355012630 = 05/08/2026 17:59:48 UTC).
+- tt_content_avis.{html,json}, tt_content_r.* : page TikTok « avis oreiller soya paris » (createTime 1776094667 = 13/04/2026) ; vidéos non chargées (404 au rendu).
+- ig_*.json, ig_page_*.html, ig_embed_*.html : Instagram -> 401 require_login / page de connexion.
+- fb_page.hdr : facebook.com/61565502837799 -> 302 /login.
+- fb_videos_webfetch.md : textes des vidéos de la page Facebook 61565502837799 restitués par WebFetch.
+- yt_*.html, yt_rss_luxery.xml : YouTube ; vidéo lYesKPGUuCI « Oreiller Soya 2 0 3 » (17 s, 1 425 vues) de la chaîne LUXERY SERVICE LTD (UC86268FR0iH5YN-Fwr_oLMw), chaîne créée le 06/09/2025 02:14:28 UTC, vidéo publiée 02:17:06 UTC.
+- ch_luxery.html, ch_16489223.html : Companies House, LUXERY SERVICE LTD n° 16489223.
+- so_*.html : sondes Pinterest / Snapchat / YouTube par identifiant (404 ou sans rapport).
+
+VIDEOS « STORIES » DE LA FICHE SOYA 3.0 (cdn.shopify.com/videos/c/o/v/<id>.mp4)
+- vid/concept.mp4 (5225b5d7…, 45,2 s), vid/lequel.mp4 (54be73ec…, 49,1 s), vid/avis.mp4 (d5b60bf2…, 36,5 s), vid/faq.mp4 (47cc5748…, 110,7 s) ; 1080x1920 HEVC, creation_time 08/11/2025 22:01-22:05 UTC (vid/*.meta.txt).
+- vid/*.transcript.txt : transcription automatique (faster-whisper small, fr) ; erreurs de reconnaissance possibles.
+- vid/sheet_*.jpg : une image toutes les 2 s (4 s pour faq) ; vid/hr_*.jpg, hc_*.jpg : agrandissements ; vid/montage_videos_stories.jpg.
+- vid/poster_643a.jpg : vignette de la vidéo HD de la fiche (plan d'hôtel, type banque d'images).
+
+OUTILS : render.cjs (relais fetch + curl pour les POST, vidéos et polices bloquées), vid/frames.sh, vid/transcribe.py, snapq.sh.

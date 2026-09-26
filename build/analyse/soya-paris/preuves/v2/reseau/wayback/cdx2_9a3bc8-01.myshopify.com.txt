@@ -1,0 +1,16 @@
+20241119195630 https://9a3bc8-01.myshopify.com/ 302
+20250122194027 https://9a3bc8-01.myshopify.com/--header-scroll-tracker-offset,%2010px 302
+20250122194027 https://9a3bc8-01.myshopify.com/cdn 302
+20250122194027 http://9a3bc8-01.myshopify.com/cdn/fonts/futura/futura_n5.5632c6d8a6da9141ef40e51d14264a007bcae7e5.woff2?h1=OWEzYmM4LTAxLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=ZnJleWphcGFyaXMuZnI&hmac=c701b37fb778b79ecb7de747a7a05f0344af2b39c9062c67cfadeb3168d40f40 -
+20250122194027 http://9a3bc8-01.myshopify.com/cdn/fonts/futura/futura_n7.711e9243b3eccc2745ecf4731eba61651a122376.woff?h1=OWEzYmM4LTAxLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=ZnJleWphcGFyaXMuZnI&hmac=1d0460eef4b7755ca4fd3deecb5302d128163f8d38af7168d340f90567af3647 -
+20250122194027 http://9a3bc8-01.myshopify.com/cdn/fonts/futura/futura_o5.2374ce1c635b408a1f07994a3de4a936fc50f767.woff2?h1=OWEzYmM4LTAxLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=ZnJleWphcGFyaXMuZnI&hmac=270477f265193e0976941475286f0f431bc7efc8483290c1b68887a403fa97e8 -
+20250122194027 https://9a3bc8-01.myshopify.com/cdn/shop/files/15_ce21ad7a-8585-4c7c-b641-fce49552c315.png?v=1727464564&width=180 200
+20250122194027 http://9a3bc8-01.myshopify.com/cdn/shop/t/11/assets/checkmark.svg?v=77552481021870063511727336627 -
+20250122194027 http://9a3bc8-01.myshopify.com/cdn/shop/t/11/assets/cursor-zoom-in.svg?v=112480252220988712521727336627 -
+20250122194027 https://9a3bc8-01.myshopify.com/cdn/shop/t/11/assets/theme.css?v=152395863496400111471727336627 200
+20250122194027 https://9a3bc8-01.myshopify.com/cdn/shop/t/11/assets/theme.js?v=142005980277301565331727336627 200
+20250122194027 https://9a3bc8-01.myshopify.com/cdn/shop/t/11/assets/vendor.min.js?v=90848652276903619941727336627 -
+20250122194027 https://9a3bc8-01.myshopify.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-1.1.0.min.js -
+20250122194027 https://9a3bc8-01.myshopify.com/cdn/shopifycloud/shopify/assets/storefront/load_feature-1060834584ef204397b1179782a1b090047ee4397cb627244ab89e03f65c4307.js -
+20250122194027 https://9a3bc8-01.myshopify.com/checkouts/internal/preloads.js?locale=fr-FR 200
+20241119195630 https://9a3bc8-01.myshopify.com/password 200

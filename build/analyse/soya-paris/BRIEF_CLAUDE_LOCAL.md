@@ -48,7 +48,7 @@ Shopify comme Meta bloquent ce type de navigateur.
 
 6. **Veille dans la durée.**
    - Lance `python3 build/analyse/soya-paris/outils/inv.py` une fois par jour pendant 7 jours, par exemple avec une tâche planifiée. Il relève les compteurs de stock publics.
-   - Deux relevés espacés donnent les unités vendues entre les deux : c'est la base de l'estimation du chiffre d'affaires du dossier.
+   - Deux relevés espacés donnent les unités vendues entre les deux, **à comparer variante par variante** (clé `variants`, ou `propres` par fiche) : la fiche 3.0 contient aussi les compteurs des housses 3.0. C'est la base de l'estimation du chiffre d'affaires du dossier.
 
 ## Pourquoi cette répartition
 

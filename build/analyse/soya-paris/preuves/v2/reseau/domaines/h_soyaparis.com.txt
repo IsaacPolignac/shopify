@@ -1,0 +1,33 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 301 
+date: Sat, 26 Sep 2026 09:56:54 GMT
+content-type: text/html; charset=utf-8
+content-length: 0
+location: https://www.ateliersoya.com/
+x-download-options: noopen
+x-redirect-reason: primary_domain_redirection
+shopify-complexity-score: 15
+shopify-complexity-score-v2: 15
+set-cookie: _shopify_essential=:AaDdJXOOAAEAuzIG-LFeYelWLvQ81UKuSjDA9YHTr5nF3VoryzqhlqKR_sMXGqrv41c39pZiy_5F6pygDjkSOs3Gzh7jlDtKzBvOC_8uP6Y2shR0VwYKZCmwUXBndolDm_cmvC0jxg5yTBsIBRWBqockgsPccNE_LF2LXxOK97KI8Vqaxydfpa6JazmSQl8mITerrCIMgz23foavw17SfTnfgIoTBppQY_Du9iXY4R-TaJNdhqrF1A:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=ttlbxfKvHgEYvqDBJBbdohYg6GoCevdzAGFoad%2B3MYRXP2SB72O72NVqDxrBlcKbEYLny%2Fy9MvFKzS92WaZXgzE2Md%2BfgoSCmkn6lfgV6JoFB66e7sMxiWiwQocW2vE%3D"}]}
+vary: Accept
+cdn-cache-control: no-cache, no-store
+cache-control: private, no-store
+link: </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+powered-by: Shopify
+server-timing: processing;dur=18;desc="gc:1", db;dur=3, db_async;dur=3.409, asn;desc="396982", edge;desc="IAD", country;desc="US", pageType;desc="index", servedBy;desc="cg7w", requestID;desc="9a95d266-fae5-40c3-bfd5-afa5202dfae3-1790416614", _y;desc="f4f7bfc0-7640-4f9b-9a2f-0e18d077b0fd", _s;desc="784ab654-7f0f-45c0-878c-cec4c782b5fc", _cmp;desc="3.AMPS_US_f_f_l8jVs9LOS5iXq*lcyyOQ5w", _cta;desc="1", _ye;desc="1821974214", _se;desc="1790418414"
+server: cloudflare
+cf-cache-status: DYNAMIC
+alt-svc: h3=":443"; ma=86400
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+x-permitted-cross-domain-policies: none
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-request-id: 9a95d266-fae5-40c3-bfd5-afa5202dfae3-1790416614
+cf-ray: a41166bf0cda73a3-IAD
+

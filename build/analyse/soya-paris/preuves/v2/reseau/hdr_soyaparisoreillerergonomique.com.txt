@@ -1,0 +1,40 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 103 
+link: <https://cdn.shopify.com>; rel=preconnect, <https://cdn.shopify.com>; crossorigin; rel=preconnect, <//soyaparisoreillerergonomique.com/cdn/shop/t/2/assets/base.css?v=12306032551326734671779905967>; as=style; rel=preload
+
+HTTP/2 200 
+date: Sat, 26 Sep 2026 09:53:30 GMT
+content-type: text/html; charset=utf-8
+x-download-options: noopen
+cf-cache-status: DYNAMIC
+set-cookie: localization=US; path=/; expires=Sun, 26 Sep 2027 09:53:30 GMT; SameSite=Lax
+set-cookie: cart_currency=USD; path=/; expires=Sat, 10 Oct 2026 09:53:30 GMT; SameSite=Lax
+set-cookie: _shopify_essential=:AaDdIlT6AAEAYWapIeNn55i2P70Bl4j20hmBZyRlI03gOi3n4nexVXjGaEW-6jcwQrmU71qbWXWFlGwUo0u1Q5mBwDWgAOG1BUMnO7cwIzhV5QOru2SzoqJJoNahB3UPuBmpJ6WjP0rF9ZAvL0huGe_-PfTeJOG3U-WLOUGfQy1RsWyGml9BkmM84QBzc3Syqdzf6MgX44US9mpgV6K1QMq0UgQSNEq03U9eseMM-1wkEoJZlfZMZvgyTBzeV3_BlETorHvdgMxoLWsKoa6wUbDa-B67_pQzEYb-Psw6jookh6rcfb4SVODMTYHRE2DZE_vQzgTLthvp5g:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_analytics=:AaDdIlaIAAEAY90wWiGQp7ZQZlZGM9J9t5ahUkT2tEq_F0tHWe_GN_PY-oO4o3u8KDVkKO3DdDIDopwvzakrotmyn2M8ezOQo1BuXmfz-QyF0fu6sbXRnXwMOtBtmHyArlJqkovey0ovZvniBfBgO9wcp_M:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_marketing=:AaDdIlaIAAEAEL0j6kWinsxRP34_lj-fOWmW6rt-s9HmmSoxwaajIw1B4Zgo4BEJgRz5qOlsCrh2FSdGCFbA-I9kKzcET3zkDVxy-owyejEfll6NnuXpP7rrORkVhWMPLQtb5T7awNxLQEJ6WJHB3FHpaDI:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//soyaparisoreillerergonomique.com/cdn/shop/t/2/assets/base.css?v=12306032551326734671779905967>; as="style"; rel="preload", </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+x-permitted-cross-domain-policies: none
+etag: W/"page_cache:71078019242:IndexController:cf9a5b5f653ed82ef57537a65e6d17d3:0c550de34f60708ec386f2a526b08a25"
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+shopify-complexity-score: 502
+shopify-complexity-score-v2: 502
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+vary: Accept
+vary: accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr-US
+accept-ch: Sec-CH-Viewport-Width
+powered-by: Shopify
+server-timing: processing;dur=510;desc="gc:16", db;dur=143, db_async;dur=79.295, parse;dur=1, render;dur=117, asn;desc="396982", edge;desc="IAD", country;desc="US", theme;desc="146122113194", pageType;desc="index", servedBy;desc="8q4f", requestID;desc="9aa32e62-dd31-4487-89d6-13880cd58359-1790416409", _y;desc="7f089da0-fa3c-4af0-aa1a-558741a4455d", _s;desc="20d456c3-99f9-4967-9060-ca280a9cbb6f", _cmp;desc="3.AMPS_US_f_f_CVCRZp1gS-eyPteyKi3I7g", _cta;desc="1", _ye;desc="1821974010", _se;desc="1790418210", compressionLevel;desc="5", compressionTime;dur=7.288, earlyhints
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-xss-protection: 1; mode=block
+alt-svc: h3=":443"; ma=86400
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=DSDem7BnR%2FsONNEj1RxP%2FUyMNU7A1%2F9vVLo1ZYExyKmW%2FEnk6btgnDUxTtR5h5tDzmkoKWhM3jpbPHh%2F5g%2FjpMmUX5JmyCnb270%2Fxt7OjfQ5s2FSFnH%2FDCTFzvAo51wJkS9Ho99RPOf9ijj8MvSAN%2B%2Fo"}]}
+x-content-type-options: nosniff
+x-request-id: 9aa32e62-dd31-4487-89d6-13880cd58359-1790416409
+cf-ray: a41161c0aed3d7de-IAD
+

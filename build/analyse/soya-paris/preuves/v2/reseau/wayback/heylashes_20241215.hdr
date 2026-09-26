@@ -1,0 +1,53 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 404 
+server: nginx
+date: Sat, 26 Sep 2026 10:19:11 GMT
+content-type: text/html; charset=utf-8
+x-archive-orig-date: Sun, 15 Dec 2024 01:27:58 GMT
+x-archive-orig-transfer-encoding: chunked
+x-archive-orig-connection: close
+x-archive-orig-x-sorting-hat-podid: -1
+x-archive-orig-x-storefront-renderer-rendered: 1
+x-archive-orig-vary: Accept-Encoding
+x-archive-orig-x-frame-options: DENY
+x-archive-orig-content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+x-archive-orig-x-shopid: 
+x-archive-orig-x-shardid: -1
+x-archive-orig-powered-by: Shopify
+x-archive-orig-server-timing: processing;dur=5, asn;desc="7941", edge;desc="SJC", country;desc="US", knownbot, pageType;desc="index", servedBy;desc="wkq5", requestID;desc="e52ec57b-3077-4379-a876-3bf791163b15-1734226078"
+x-archive-orig-x-dc: gcp-us-west1,gcp-us-central1,gcp-us-central1
+x-archive-orig-x-request-id: e52ec57b-3077-4379-a876-3bf791163b15-1734226078
+content-encoding: gzip
+x-archive-orig-alt-svc: h3=":443"; ma=86400
+x-archive-orig-cf-cache-status: DYNAMIC
+x-archive-orig-report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=wMu94rwuiUGjXV0NAQ6QAgtKhDt2L4RTtAexCers6sTN1H2u5w6LkUA%2FfWb91LvIqKdpqf5X2G5Yrxq8MZBn6AWwPxPG%2BLApxnw8XiB0Gm%2BIAnm%2FA6trXoc1SaybFQ%3D%3D"}],"group":"cf-nel","max_age":604800}
+x-archive-orig-nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+x-archive-orig-server-timing: cfRequestDuration;dur=113.999844
+x-archive-orig-x-xss-protection: 1; mode=block
+x-archive-orig-x-content-type-options: nosniff
+x-archive-orig-x-permitted-cross-domain-policies: none
+x-archive-orig-x-download-options: noopen
+x-archive-orig-server: cloudflare
+x-archive-orig-cf-ray: 8f22a77f4d80cf13-SJC
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Sun, 15 Dec 2024 01:27:58 GMT
+link: <https://heylashes.fr/>; rel="original", <https://web.archive.org/web/timemap/link/https://heylashes.fr/>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://heylashes.fr/>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: CT-20241215000955-crawl917/CT-20241215012046-00304.warc.gz
+server-timing: captures_list;dur=0.403711, exclusion.robots;dur=0.028041, exclusion.robots.policy;dur=0.020278, esindex;dur=0.005507, cdx.remote;dur=8.939953, LoadShardBlock;dur=333.976248, PetaboxLoader3.resolve;dur=108.554146, PetaboxLoader3.datanode;dur=217.740399, load_resource;dur=85.403762
+x-app-server: wwwb-app220-dc8
+x-ts: 404
+x-tr: 457
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=2
+set-cookie: wb-p-SERVER=wwwb-app220; path=/
+cache-control: private
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

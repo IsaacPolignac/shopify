@@ -1,0 +1,6 @@
+20250815224638 https://vxg4tp-y8.myshopify.com/ 301
+20250815204907 https://vxg4tp-y8.myshopify.com/admin 303
+20250815220223 https://vxg4tp-y8.myshopify.com/admin/auth/login 200
+20251012083106 https://vxg4tp-y8.myshopify.com/api/2025-01/graphql.json 200
+20250826075051 https://vxg4tp-y8.myshopify.com/api/2025-07/graphql.json?operation_name=FetchDealBlocks 200
+20250826075050 https://vxg4tp-y8.myshopify.com/api/2025-07/graphql.json?operation_name=FetchProducts 200

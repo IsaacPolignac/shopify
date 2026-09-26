@@ -1,0 +1,6 @@
+20250815192102 https://soya-paris.com/pages/contact 200
+20250424050337 https://soya-paris.com/pages/data-sale-opt-out 200
+20250904154704 https://soya-paris.com/pages/data-sharing-opt-out 200
+20251226042139 https://soya-paris.com/pages/notre-histoire 200
+20250828151416 https://soya-paris.com/pages/notre-histoire-pourquoi-nous-avons-cree-soya 200
+20250508171419 https://www.soya-paris.com/pages/privacy-policy 301

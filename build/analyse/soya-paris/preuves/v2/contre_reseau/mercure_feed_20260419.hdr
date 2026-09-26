@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+server: nginx
+date: Sat, 26 Sep 2026 11:52:00 GMT
+content-type: text/html
+content-length: 114
+x-archive-orig-date: Sun, 19 Apr 2026 07:11:00 GMT
+x-archive-orig-content-length: 114
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Sun, 19 Apr 2026 07:11:00 GMT
+link: <http://mercure-paris.com/feed/>; rel="original", <https://web.archive.org/web/timemap/link/http://mercure-paris.com/feed/>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/http://mercure-paris.com/feed/>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: spn2-20260419074117/spn2-20260419030246-wwwb-spn35.us.archive.org-8005.warc.gz
+server-timing: captures_list;dur=0.362851, exclusion.robots;dur=0.035403, exclusion.robots.policy;dur=0.028246, esindex;dur=0.006650, cdx.remote;dur=14.592847, LoadShardBlock;dur=110.177304, PetaboxLoader3.datanode;dur=102.538479, PetaboxLoader3.resolve;dur=56.383524, load_resource;dur=190.979771
+x-app-server: wwwb-app241-dc8
+x-ts: 200
+x-tr: 330
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=0
+set-cookie: wb-p-SERVER=wwwb-app241; path=/
+cache-control: private
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

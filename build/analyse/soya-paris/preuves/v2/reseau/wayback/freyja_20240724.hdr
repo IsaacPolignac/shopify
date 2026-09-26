@@ -1,0 +1,24 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 302 
+server: nginx
+date: Sat, 26 Sep 2026 10:18:26 GMT
+content-type: text/plain; charset=utf-8
+content-length: 0
+x-archive-redirect-reason: found capture at 20240724205744
+location: https://web.archive.org/web/20240724205744id_/https://freyjaparis.fr/
+server-timing: captures_list;dur=0.541774, exclusion.robots;dur=0.052150, exclusion.robots.policy;dur=0.040324, esindex;dur=0.010186, cdx.remote;dur=16.263831, LoadShardBlock;dur=150.957556, PetaboxLoader3.resolve;dur=31.216854, PetaboxLoader3.datanode;dur=47.642611
+x-app-server: wwwb-app244-dc8
+x-ts: 302
+x-tr: 185
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=0
+set-cookie: wb-p-SERVER=wwwb-app244; path=/
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

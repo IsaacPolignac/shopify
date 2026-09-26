@@ -1,0 +1,62 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+server: nginx
+date: Sat, 26 Sep 2026 11:51:13 GMT
+content-type: text/html; charset=utf-8
+x-archive-orig-date: Mon, 03 Aug 2026 09:45:46 GMT
+x-archive-orig-transfer-encoding: chunked
+x-archive-orig-connection: close
+x-archive-orig-x-permitted-cross-domain-policies: none
+x-archive-orig-report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=NBDhg1d5FU7nnFQhVEcKcznfabcZODkIC0b18DzKDwyVTabjR09NB2nV1YcHt8umifZubrzgkymhmBLwNgK9MmEc67ZKyeftBCN5Q6eeBp%2BzOKYkrzrfE7WX8mhTH%2BwD"}]}
+x-archive-orig-x-content-type-options: nosniff
+x-archive-orig-link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//soya-paris.com/cdn/shop/t/20/assets/theme.css?v=151159139448717063861780956492>; as="style"; rel="preload", <https://cdn.shopify.com/extensions/019faf5e-ad46-78d1-927b-7e097aff11e6/ez-product-image-translate-371/assets/algo_translation_3.js?v=soya-paris.com>; as="script"; rel="preload", <https://cdn.shopify.com/extensions/019fa7f2-9187-7a35-a805-da9bbc3aae6d/kaching-popup-413/assets/kaching-popup-v2.css>; as="style"; rel="preload", <https://soya-paris.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as="style"; rel="preload"; crossorigin
+x-archive-orig-set-cookie: localization=FR; path=/; expires=Tue, 03 Aug 2027 09:45:46 GMT
+x-archive-orig-set-cookie: cart_currency=EUR; path=/; expires=Mon, 17 Aug 2026 09:45:46 GMT
+x-archive-orig-set-cookie: _shopify_y=f73b48e8-497e-42a0-b532-bffd78c4aec2; domain=soya-paris.com; path=/; expires=Tue, 03 Aug 2027 15:45:46 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_s=e2e9b033-af40-43ee-87f5-0f745450e1f3; domain=soya-paris.com; path=/; expires=Mon, 03 Aug 2026 10:15:46 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_essential=:AZ_HA9pWAAEADOQ-0k_SPMzPXPbdbARfpf5_VIUvysMK40Qz2Pl2q32bK7pj-WBOr9_mwMTFYHVV9RYp5eafC4swJ5ajqmUM4qrV2a1Qqg8AAHAOG5taQcYNQUGdm8AyiqM-VHXnwM9927HjUuAC68QBXDQbzGSDlWLogN0XNrZG1_JBf6l5goBBtIUDHk0GhDzrDoMZ3bJZNbkr9qPtVuQgcai1GPoxI-5bYYijKg2KfygoqwUYcNnmnYJ2YE6lNR8eEJTCOz5nkJSC0OmS6EuZ7Z6RU_PRwHOb7oOR_ID0nPZMgRpsWQvsI3LF4nxEuAxZ2zzeHW8Q470OT5_eKyRVVKTQsFAB3iiJFbTBrfToFs9gmx63umYG8V7Hzg91oVOYxX00E30J6gvZ2iwv9JucQHPHXTY9WBpEDde3Zs2kC8W7-S_uEmQlylAf8aGLfYjq-uMkxp47ybAz5HhqYWAXaRApwt8UAQzig4rnQsEQ-04dlp7P6xxuMmo:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_analytics=:AZ_HA9ppAAEAUoyqqe_9ur6BjDbvypuBsbgkW0Nbos_4U-ddsm1Lg9WLOhlqAxCu6saGjx9JEgcx1b_T_2sAHyoeY7CU9MRml3a3t-8:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_marketing=:AZ_HA9ppAAEAzkeikOydTJXo8LSPvOXoCAxfx7Yg5KIlZ8IO7NuHEzFD7-E47OAbTU6xWsNmtEDBrARiLgvxpO4XrrM:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-archive-orig-nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-archive-orig-shopify-complexity-score: 0
+x-archive-orig-shopify-complexity-score-v2: 28
+x-archive-orig-x-frame-options: DENY
+x-archive-orig-content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+x-archive-orig-strict-transport-security: max-age=7889238
+x-archive-orig-vary: accept-encoding
+x-archive-orig-x-request-id: f4064945-52ab-4189-9ee5-52ae652b12f7-1785750346
+x-archive-orig-alt-svc: h3=":443"; ma=86400
+x-archive-orig-content-language: fr-FR
+x-archive-orig-powered-by: Shopify
+x-archive-orig-server-timing: processing;dur=33;desc="gc:1", db;dur=9, asn;desc="399784", edge;desc="SEA", country;desc="CA", knownbot, theme;desc="200307966284", pageType;desc="index", servedBy;desc="bfz9", requestID;desc="f4064945-52ab-4189-9ee5-52ae652b12f7-1785750346", _y;desc="f73b48e8-497e-42a0-b532-bffd78c4aec2", _s;desc="e2e9b033-af40-43ee-87f5-0f745450e1f3", _cmp;desc="3.AMPS_CA_f_f_ka2rENpqS6me0eHCMfgTNg", compressionLevel;desc="5"
+x-archive-orig-x-download-options: noopen
+x-archive-orig-x-dc: gcp-us-west1,gcp-us-east1,gcp-us-east1
+x-archive-orig-x-xss-protection: 1; mode=block
+x-archive-orig-cf-cache-status: DYNAMIC
+x-archive-orig-server: cloudflare
+x-archive-orig-etag: W/"page_cache:93550543180:IndexController:33887c53a55be9e5447322af50992432"
+content-encoding: gzip
+x-archive-orig-cf-ray: a254643029ce227a-SEA
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Mon, 03 Aug 2026 09:45:46 GMT
+link: <https://soya-paris.com/>; rel="original", <https://web.archive.org/web/timemap/link/https://soya-paris.com/>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://soya-paris.com/>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: SPNOUTLINKS-20260803081106869-00101-zeno-k8s-spn-outlinks-158/SPNOUTLINKS-20260803081106869-00101-zeno-k8s-spn-outlinks-crawl.warc.gz
+server-timing: captures_list;dur=0.535458, exclusion.robots;dur=0.047516, exclusion.robots.policy;dur=0.035119, esindex;dur=0.010114, cdx.remote;dur=6.908308, LoadShardBlock;dur=99.033714, PetaboxLoader3.datanode;dur=117.696154, PetaboxLoader3.resolve;dur=82.961199, load_resource;dur=155.154543
+x-app-server: wwwb-app253-dc8
+x-ts: 200
+x-tr: 282
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=1
+set-cookie: wb-p-SERVER=wwwb-app253; path=/
+cache-control: private
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

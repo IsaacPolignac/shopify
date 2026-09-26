@@ -1,0 +1,69 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+server: nginx
+date: Sat, 26 Sep 2026 10:18:32 GMT
+content-type: text/html; charset=utf-8
+x-archive-orig-date: Wed, 24 Jul 2024 20:57:44 GMT
+x-archive-orig-transfer-encoding: chunked
+x-archive-orig-connection: close
+x-archive-orig-x-sorting-hat-podid: 33
+x-archive-orig-x-sorting-hat-shopid: 74445094946
+x-archive-orig-x-storefront-renderer-rendered: 1
+x-archive-orig-etag: W/"cacheable:47cc38f2510673a852abf82b0e82b758"
+x-archive-orig-link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//freyjaparis.fr/cdn/shop/t/2/assets/theme.css?v=152395863496400111471721839913>; as="style"; rel="preload"
+x-archive-orig-x-shopify-nginx-no-cookies: 0
+x-archive-orig-set-cookie: secure_customer_sig=; path=/; expires=Thu, 24 Jul 2025 20:57:44 GMT; secure; HttpOnly; SameSite=Lax
+x-archive-orig-set-cookie: localization=FR; path=/; expires=Thu, 24 Jul 2025 20:57:44 GMT
+x-archive-orig-set-cookie: cart_currency=EUR; path=/; expires=Wed, 07 Aug 2024 20:57:44 GMT
+x-archive-orig-set-cookie: _tracking_consent=%7B%22con%22%3A%7B%22CMP%22%3A%7B%22a%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A%22%22%2C%22s%22%3A%22%22%7D%7D%2C%22v%22%3A%222.1%22%2C%22region%22%3A%22US%22%2C%22reg%22%3A%22%22%7D; domain=freyjaparis.fr; path=/; expires=Thu, 24 Jul 2025 20:57:44 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _cmp_a=%7B%22purposes%22%3A%7B%22a%22%3Atrue%2C%22p%22%3Atrue%2C%22m%22%3Atrue%2C%22t%22%3Atrue%7D%2C%22display_banner%22%3Afalse%2C%22sale_of_data_region%22%3Afalse%7D; domain=freyjaparis.fr; path=/; expires=Thu, 25 Jul 2024 20:57:44 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_y=afaf1072-6d0b-432e-a3d5-a76d6af6cdbc; Expires=Thu, 24-Jul-25 20:57:44 GMT; Domain=freyjaparis.fr; Path=/; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_s=f504053b-08a5-4940-898c-82a5962c09a8; Expires=Wed, 24-Jul-24 21:27:44 GMT; Domain=freyjaparis.fr; Path=/; SameSite=Lax
+x-archive-orig-set-cookie: _orig_referrer=http%3A%2F%2Fwww.freyjaparis.fr; Expires=Wed, 07-Aug-24 20:57:44 GMT; Domain=freyjaparis.fr; Path=/; HttpOnly; SameSite=Lax
+x-archive-orig-set-cookie: _landing_page=%2F; Expires=Wed, 07-Aug-24 20:57:44 GMT; Domain=freyjaparis.fr; Path=/; HttpOnly; SameSite=Lax
+x-archive-orig-x-cache: hit, server
+x-archive-orig-x-frame-options: DENY
+x-archive-orig-content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+x-archive-orig-strict-transport-security: max-age=7889238
+x-archive-orig-x-shopid: 74445094946
+x-archive-orig-x-shardid: 33
+x-archive-orig-content-language: fr
+x-archive-orig-powered-by: Shopify
+x-archive-orig-server-timing: processing;dur=12, db;dur=3, asn;desc="7941", edge;desc="SJC", country;desc="US", knownbot, theme;desc="165377343522", pageType;desc="index", servedBy;desc="sq8r", requestID;desc="19553f89-4c3d-403e-bd0a-b5a8f1f6ae26-1721854664"
+x-archive-orig-x-dc: gcp-us-west2,gcp-us-west1,gcp-us-west1
+x-archive-orig-x-request-id: 19553f89-4c3d-403e-bd0a-b5a8f1f6ae26-1721854664
+x-archive-orig-cf-cache-status: DYNAMIC
+x-archive-orig-report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=MZR%2BjFfCHp51eCm1Zey6yjTYJvf7uqix1Cwphui04CnQuFtbLFywJEbtnJOU7r%2FsuFKLG1%2BaZyxHek5UMz3jV%2B0mgwbHQ4fhQO3hQqOtnpNJsFnxCuhfcSo60xJnodDY"}],"group":"cf-nel","max_age":604800}
+x-archive-orig-nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+x-archive-orig-server-timing: cfRequestDuration;dur=72.999954
+x-archive-orig-x-xss-protection: 1; mode=block
+x-archive-orig-x-content-type-options: nosniff
+x-archive-orig-x-permitted-cross-domain-policies: none
+x-archive-orig-x-download-options: noopen
+x-archive-orig-server: cloudflare
+x-archive-orig-cf-ray: 8a86d3043d0e643b-SJC
+content-encoding: gzip
+x-archive-orig-alt-svc: h3=":443"; ma=86400
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Wed, 24 Jul 2024 20:57:44 GMT
+link: <https://freyjaparis.fr/>; rel="original", <https://web.archive.org/web/timemap/link/https://freyjaparis.fr/>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://freyjaparis.fr/>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: CT-20240724184732-crawl346/CT-20240724205349-00048.warc.gz
+server-timing: captures_list;dur=0.785233, exclusion.robots;dur=0.079966, exclusion.robots.policy;dur=0.064485, esindex;dur=0.010675, cdx.remote;dur=54.163280, LoadShardBlock;dur=147.275092, PetaboxLoader3.datanode;dur=89.445568, PetaboxLoader3.resolve;dur=130.287039, load_resource;dur=90.745446
+x-app-server: wwwb-app267-dc8
+x-ts: 200
+x-tr: 317
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=0
+set-cookie: wb-p-SERVER=wwwb-app267; path=/
+cache-control: private
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

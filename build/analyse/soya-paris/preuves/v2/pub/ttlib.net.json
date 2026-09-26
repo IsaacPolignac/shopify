@@ -1,0 +1,264 @@
+{
+ "url": "https://library.tiktok.com/ads?region=FR&adv_name=soya&start_time=1735689600000&end_time=1790380800000&sort_type=last_shown_date,desc",
+ "final": "https://library.tiktok.com/ads?region=FR&start_time=1735689600000&end_time=1790380800000&adv_name=soya&adv_biz_ids=&query_type=&sort_type=last_shown_date,desc&ad_type=0&ad_status=1&ages=all&ad_reach=all&gender=ALL",
+ "at": "2026-09-26T09:53:23.736Z",
+ "log": [
+  {
+   "m": "GET",
+   "u": "https://library.tiktok.com/ads?region=FR&adv_name=soya&start_time=1735689600000&end_time=1790380800000&sort_type=last_shown_date,desc",
+   "s": 200,
+   "ct": "text/html; charset=utf-8",
+   "n": 38787,
+   "rt": "document"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_privacy_protection_framework/loader/1.0.0.951/index.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 163087,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_privacy_protection_framework/loader/1.0.0.951/core.js?globalName=__PNS_RUNTIME__",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 113947,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/js/lib-router.40e42c9408.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 22850,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/js/lib-polyfill.57fdea83a7.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 209295,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok_privacy_protection_framework/loader/1.0.0.951/devtools.js?globalName=__PNS_RUNTIME__&__PNS_SW_CACHE__=1&__PNS_SW_CACHE_KEY__=to-json-schema",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 61102,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/css/511.7c76551b6d.css",
+   "s": 200,
+   "ct": "text/css; charset=utf-8",
+   "n": 556579,
+   "rt": "stylesheet"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/css/main.bb990ba1ad.css",
+   "s": 200,
+   "ct": "text/css; charset=utf-8",
+   "n": 68010,
+   "rt": "stylesheet"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/js/argus-builder-strategy.44139372fe.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 17894,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/js/lib-react.44a3615bd2.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 132383,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/js/main.dca63c3069.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 1682851,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/js/511.1d51af9287.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 6895542,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://library.tiktok.com/api/v1/web-cookie-privacy/config?locale=fr&appId=1988&theme=default&tea=0",
+   "s": 200,
+   "ct": "application/json; charset=utf-8",
+   "n": 3571,
+   "rt": "xhr",
+   "body": "{\"statusCode\":200,\"body\":{\"i18n\":{\"cookieBannerTitle\":\"Accepter les cookies de TikTok sur ce navigateur ?\",\"cookieBannerSubTitle\":\"TikTok utilise des cookies et des technologies similaires pour fournir, améliorer, protéger et analyser ses services. Les cookies essentiels sont indispensables pour que notre site fonctionne comme prévu. En sélectionnant « Tout autoriser », tu nous permets d'utiliser des cookies facultatifs à des fins supplémentaires, comme pour mesurer l'efficacité et la pertinence des annonces, notamment des annonces personnalisées sur TikTok.com, selon tes paramètres. Les cookies facultatifs nous aident également à faire d'autres choses, comme mieux mesurer la performance de nos campagnes publicitaires sur TikTok.com. Pour en savoir plus sur la manière dont nous utilisons les cookies et gérer tes choix, consulte notre <a href=\\\"https://www.tiktok.com/legal/tiktok-website-cookies-policy?lang=fr\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Politique relative aux cookies</a>.\",\"cookieBannerBtnAccept\":\"Tout autoriser\",\"cookieBannerBtnDecline\":\"Décliner les cookies facultatifs\",\"cookieBannerSaveToast\":\"Enregistré !\",\"cookieSettingSaveBtn\":\"Enregistrer\",\"cookieSettingsTitle\":\"Gérer les cookies\",\"cookieSettingsSubTitle\":\"Modifie tes paramètres de cookies pour autoriser ou refuser les cookies facultatifs.\",\"cookieSettingsFooter\":\"Consulte notre <a href=\\\"https://www.tiktok.com/legal/tiktok-website-cookies-policy?lang=fr\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Politique relative aux cookies</a> pour en savoir plus\"},\"appProps\":{\"region\":\"US\",\"user\":{\"ftcUser\":false,\"region\":\"\"},\"idcRegion\":\"ALL_SG\"},\"cookieBanner\":{\"resource\":{\"esm\":\"/pns/tiktok-cookie-banner/1.0.0.285/default.no-tea.esm.js\",\"nomodule\":\"/pns/tiktok-cookie-banner/1.0.0.285/default.no-tea.js\",\"baseUrl\":\"https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static\",\"version\":\"1.0.0.285\"},\"settings\":[{\"groupName\":\"Cookies facultatifs\",\"groupDescription\":\"Avec ton consentement, nous utilisons des cookies facultatifs à des fins supplémentaires, comme pour mesurer l'efficacité et la pertinence des annonces, notamment des annonces personnalisées sur TikTok.com, selon tes paramètres. Les cookies facultatifs nous aident également à mieux mesurer la performance de nos campagnes publicitaires sur TikTok.com.\",\"disabled\":false,\"items\":{},\"groupEntityKeys\":[{\"entityKey\":\"optional\"},{\"entityKey\":\"ga\"},{\"entityKey\":\"af\"},{\"entityKey\":\"fbp\"},{\"entityKey\":\"lip\"},{\"entityKey\":\"bing\"},{\"entityKey\":\"ttads\"},{\"entityKey\":\"reddit\"},{\"entityKey\":\"hubspot\"}]},{\"groupName\":\"Cookies essentiels\",\"groupDescription\":\"Les cookies essentiels sont indispensables pour que TikTok fonctionne comme prévu. Cela comprend les cookies nécessaires pour fournir, améliorer, protéger et analyser nos services.\",\"disabled\":true,\"items\":{}}],\"disabled\":false,\"isEffective\":false,\"version\":\"v10\",\"disabledAccessKeys\":[{\"path\":\".\",\"accessKeys\":[\"*\"]}]},\"consent\":{\"domain\":\"https://www.tiktok.com\",\"appId\":1988,\"entityKeys\":{\"optional\":[\"data-cookie-optional\"]},\"mode\":\"production\",\"fetchDataAtInit\":false,\"api\":{\"consent\":{\"fetch\":{\"version\":\"v2\"},\"update\":{\"version\":\"v2\"}}},\"wid\":\"\",\"collectionPointId\":\"737326081028\"},\"tea\":{\"channel\":\"sg\",\"channel_type\":\"tcpy\",\"channel_domain\":\"https://mcs-sg.tiktokv.com\"},\"tenantId\":\"paas_tiktok\",\"monitorConfig\":{\"slardar\":{\"domain\":\"https://mon.tiktokv.com\",\"pluginPathPrefix\":\"https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/slardar/fe/sdk-web/plugins\"}}}}"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/pns/tiktok-cookie-banner/1.0.0.285/default.no-tea.esm.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 560611,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/slardar/fe/sdk-web/plugins/common-monitors.1.14.5.js",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 24129,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://library.tiktok.com/api/v1/location",
+   "s": 200,
+   "ct": "application/json; charset=utf-8",
+   "n": 56,
+   "rt": "xhr",
+   "body": "{\"region\":{\"code\":\"US\",\"name\":\"United States\"},\"code\":0}"
+  },
+  {
+   "m": "GET",
+   "u": "https://library.tiktok.com/api/v1/support-regions?lang=fr-FR",
+   "s": 200,
+   "ct": "application/json; charset=utf-8",
+   "n": 1310,
+   "rt": "xhr",
+   "body": "{\"regions\":[{\"code\":\"AT\",\"name\":\"Autriche\"},{\"code\":\"BE\",\"name\":\"Belgique\"},{\"code\":\"BG\",\"name\":\"Bulgarie\"},{\"code\":\"CH\",\"name\":\"Suisse\"},{\"code\":\"CY\",\"name\":\"Chypre\"},{\"code\":\"CZ\",\"name\":\"Tchéquie\"},{\"code\":\"DE\",\"name\":\"Allemagne\"},{\"code\":\"DK\",\"name\":\"Danemark\"},{\"code\":\"EE\",\"name\":\"Estonie\"},{\"code\":\"ES\",\"name\":\"Espagne\"},{\"code\":\"FI\",\"name\":\"Finlande\"},{\"code\":\"FR\",\"name\":\"France\"},{\"code\":\"GB\",\"name\":\"Royaume-Uni\"},{\"code\":\"GR\",\"name\":\"Grèce\"},{\"code\":\"HR\",\"name\":\"Croatie\"},{\"code\":\"HU\",\"name\":\"Hongrie\"},{\"code\":\"IE\",\"name\":\"Irlande\"},{\"code\":\"IS\",\"name\":\"Islande\"},{\"code\":\"IT\",\"name\":\"Italie\"},{\"code\":\"LI\",\"name\":\"Liechtenstein\"},{\"code\":\"LT\",\"name\":\"Lithuanie\"},{\"code\":\"LU\",\"name\":\"Luxembourg\"},{\"code\":\"LV\",\"name\":\"Lettonie\"},{\"code\":\"MT\",\"name\":\"Malte\"},{\"code\":\"NL\",\"name\":\"Pays-Bas\"},{\"code\":\"NO\",\"name\":\"Norvège\"},{\"code\":\"PL\",\"name\":\"Pologne\"},{\"code\":\"PT\",\"name\":\"Portugal\"},{\"code\":\"RO\",\"name\":\"Roumanie\"},{\"code\":\"SE\",\"name\":\"Suède\"},{\"code\":\"SI\",\"name\":\"Slovénie\"},{\"code\":\"SK\",\"name\":\"Slovaquie\"},{\"code\":\"TR\",\"name\":\"Turquie\"}],\"config_str\":\"CKldOowDrXov8NwRanVrXqEZQNxX3dlgkaA1I1N9NIpCacKCQDSEJxJjWIc2s2g+sZRXqQ9aH4ELiSEeh0xyd1g1lr0b1zqUHoA9qM6qd7dNrz/VKlPJ/5LbPIvVANZ7VGzIj4hT0McnRltyrR5hHsAlgE2qhNTAcIPaty6XC8KnlB/3+Gmao++FeqHAVAYu7NBnzT716gzqPqBg+fGQh73NRTHjklg=\",\"code\":0}"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/image/ad-library-landing-hero.176c765663.png",
+   "s": 200,
+   "ct": "image/png",
+   "n": 44409,
+   "rt": "image"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf16-website.neutral.ttwstatic.com/obj/tiktok_web_static/gtm/txpgqqnh/gtm.js?v=1989351",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 227827,
+   "rt": "script"
+  },
+  {
+   "m": "GET",
+   "u": "https://sf16-website.neutral.ttwstatic.com/obj/tiktok_web_static/gtm/txpgqqnh/gtag.G-TEQXTT9FE4.js?v=1989351",
+   "s": 200,
+   "ct": "application/javascript",
+   "n": 343440,
+   "rt": "script"
+  },
+  {
+   "err": "TypeError: fetch failed",
+   "u": "https://library.tiktok.com/api/v1/search?region=FR&type=1&start_time=1735689600&end_time=1790380800"
+  },
+  {
+   "m": "GET",
+   "u": "https://mon.tiktokv.com/monitor_web/settings/browser-settings?bid=pns_consent_system&store=1",
+   "s": 200,
+   "ct": "application/json; charset=utf-8",
+   "n": 1863,
+   "rt": "xhr",
+   "body": "{\"data\":{\"sample\":{\"sample_rate\":1,\"include_users\":[],\"sample_granularity\":\"session\",\"rules\":[{\"name\":\"js_error\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"http\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"performance\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"resource_error\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"resource\",\"enable\":true,\"sample_rate\":0.1,\"conditional_sample_rules\":[]},{\"name\":\"custom\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[{\"sample_rate\":0,\"filter\":{\"type\":\"and\",\"children\":[{\"type\":\"rule\",\"field\":\"payload.name\",\"op\":\"neq\",\"groupKey\":\"pns_compliance\",\"values\":[\"pns_cuj\"]}]}},{\"sample_rate\":0.1,\"filter\":{\"type\":\"and\",\"children\":[{\"type\":\"and\",\"children\":[{\"type\":\"rule\",\"field\":\"payload.name\",\"op\":\"eq\",\"groupKey\":\"\",\"values\":[\"pns_cuj\"]},{\"type\":\"rule\",\"field\":\"common.pid\",\"op\":\"eq\",\"groupKey\":\"\",\"values\":[\"tiktok-cookie-banner\"]}]}]}},{\"sample_rate\":1,\"filter\":{\"type\":\"and\",\"children\":[{\"type\":\"rule\",\"field\":\"payload.name\",\"op\":\"eq\",\"groupKey\":\"\",\"values\":[\"pns_cuj\"]}]}}]},{\"name\":\"performance_timing\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"performance_longtask\",\"enable\":true,\"sample_rate\":0.01,\"conditional_sample_rules\":[]},{\"name\":\"pageview\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"action\",\"enable\":true,\"sample_rate\":0.01,\"conditional_sample_rules\":[]},{\"name\":\"blank_screen\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]}]},\"user_id\":\"b44e75f0-3111-abae-c5d2-1f442883410d\",\"plugins\":{\"heatmap\":{\"open_list\":[],\"url\":\"https://sf16-short-va.bytedapm.com/slardar/heatmap/resource/heatmap.maliva.js\"}},\"quota_rate\":1,\"timestamp\":1790416389050,\"refresh_after\":86400,\"updated_at\":1757733517000},\"errmsg\":\"success\",\"errno\":200}"
+  },
+  {
+   "m": "GET",
+   "u": "https://mon.tiktokv.com/monitor_web/settings/browser-settings?bid=pns_cookie_banner_slardar&store=1",
+   "s": 200,
+   "ct": "application/json; charset=utf-8",
+   "n": 1445,
+   "rt": "xhr",
+   "body": "{\"data\":{\"sample\":{\"sample_rate\":1,\"include_users\":[],\"sample_granularity\":\"session\",\"rules\":[{\"name\":\"js_error\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"http\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"performance\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"resource_error\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"resource\",\"enable\":true,\"sample_rate\":0.1,\"conditional_sample_rules\":[]},{\"name\":\"custom\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[{\"sample_rate\":1,\"filter\":{\"type\":\"and\",\"children\":[{\"type\":\"rule\",\"field\":\"payload.name\",\"op\":\"eq\",\"groupKey\":\"\",\"values\":[\"pns_cuj\"]}]}}]},{\"name\":\"performance_timing\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"performance_longtask\",\"enable\":true,\"sample_rate\":0.01,\"conditional_sample_rules\":[]},{\"name\":\"pageview\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]},{\"name\":\"action\",\"enable\":true,\"sample_rate\":0.01,\"conditional_sample_rules\":[]},{\"name\":\"blank_screen\",\"enable\":true,\"sample_rate\":1,\"conditional_sample_rules\":[]}]},\"user_id\":\"ff67e616-1efb-5470-d762-83e2b56f48ed\",\"plugins\":{\"heatmap\":{\"open_list\":[],\"url\":\"https://sf16-short-va.bytedapm.com/slardar/heatmap/resource/heatmap.maliva.js\"}},\"quota_rate\":1,\"timestamp\":1790416389105,\"refresh_after\":86400,\"updated_at\":1774576809000},\"errmsg\":\"success\",\"errno\":200}"
+  },
+  {
+   "m": "POST",
+   "u": "https://mon.tiktokv.com/monitor_browser/collect/batch/?bid=tiktok_pns_web_runtime",
+   "s": 204,
+   "ct": "application/json; charset=utf-8",
+   "n": 0,
+   "rt": "ping"
+  },
+  {
+   "m": "GET",
+   "u": "https://www.googletagmanager.com/td?id=G-TEQXTT9FE4&v=3&t=t&pid=2079058247&dl=library.tiktok.com%2Fads&tdp=G-TEQXTT9FE4;97257732;1;6;0&frm=0&rtg=171443548&slo=11&hlo=0&lst=2&pcid=171443548&z=0",
+   "s": 204,
+   "ct": "text/plain",
+   "n": 0,
+   "rt": "image"
+  },
+  {
+   "m": "GET",
+   "u": "https://www.tiktok.com/sgtm/g/collect?v=2&tid=G-TEQXTT9FE4&gtm=45je4cc1v897257732z89171443548za204zb9171443548&_p=1790416388768&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&tag_exp=101925629~102067555~102067808~102081485~102198178&cid=1399677010.1790416389&ecid=676447935&ul=fr-fr&sr=1440x1000&_fplc=0&ur=CN",
+   "s": 200,
+   "ct": "text/plain; charset=utf-8",
+   "n": 190,
+   "rt": "fetch",
+   "body": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\nevent: message\ndata: {\"sgtm\":[{\"event_name\":\"ad_list_query\",\"event_type\":\"ga\",\"idx\":0,\"code\":\"80000\",\"message\":\"success\"}]}\n\n"
+  },
+  {
+   "m": "GET",
+   "u": "https://www.tiktok.com/sgtm/g/collect?v=2&tid=G-TEQXTT9FE4&gtm=45je4cc1v897257732za204zb9171443548&_p=1790416388768&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&tag_exp=101925629~102067555~102067808~102081485~102198178&cid=1399677010.1790416389&ecid=676447935&ul=fr-fr&sr=1440x1000&are=1&frm=0&pscdl=noapi&_",
+   "s": 200,
+   "ct": "text/plain; charset=utf-8",
+   "n": 190,
+   "rt": "fetch",
+   "body": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\nevent: message\ndata: {\"sgtm\":[{\"event_name\":\"ad_list_query\",\"event_type\":\"ga\",\"idx\":0,\"code\":\"80000\",\"message\":\"success\"}]}\n\n"
+  },
+  {
+   "m": "GET",
+   "u": "https://www.tiktok.com/sgtm/g/collect?v=2&tid=G-TEQXTT9FE4&gtm=45je4cc1v897257732z89171443548za204zb9171443548&_p=1790416388768&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&tag_exp=101925629~102067555~102067808~102081485~102198178&cid=1399677010.1790416389&ecid=676447935&ul=fr-fr&sr=1440x1000&_fplc=0&ur=CN",
+   "s": 200,
+   "ct": "text/plain; charset=utf-8",
+   "n": 186,
+   "rt": "fetch",
+   "body": "event: message\ndata: {\"response\":{\"status_code\":200,\"body\":\"\"}}\n\nevent: message\ndata: {\"sgtm\":[{\"event_name\":\"page_view\",\"event_type\":\"ga\",\"idx\":0,\"code\":\"80000\",\"message\":\"success\"}]}\n\n"
+  },
+  {
+   "m": "POST",
+   "u": "https://mon.tiktokv.com/monitor_browser/collect/batch/?biz_id=pns_cookie_banner_slardar",
+   "s": 204,
+   "ct": "application/json; charset=utf-8",
+   "n": 0,
+   "rt": "xhr",
+   "body": "",
+   "post": "{\"ev_type\":\"batch\",\"list\":[{\"ev_type\":\"custom\",\"payload\":{\"name\":\"pns_cuj\",\"type\":\"event\",\"metrics\":{\"timestamp\":3898,\"duration\":0},\"categories\":{\"status\":\"START\",\"name\":\"load_cookie_banner\",\"stepName\":\"FINISH\",\"error\":\"\",\"detail\":\"\",\"appId\":\"1988\",\"appVersion\":\"1.0.0.285\",\"tenant\":\"paas_tiktok\"}},\"common\":{\"bid\":\"pns_cookie_banner_slardar\",\"user_id\":\"ad265077-8e9b-40af-8a49-cf1d9f02fcfd\",\"device_id\":\"dfa69e8f-7b89-41cf-8d53-a0e6f7a9ffd2\",\"session_id\":\"a91ab435-2ad7-4ed5-aede-acf7b466af78\",\"release\":\"0.0.0\",\"env\":\"production\",\"url\":\"https://library.tiktok.com/ads?region=FR&adv_name=soya&start_time=1735689600000&end_time=1790380800000&sort_type=last_shown_date,desc\",\"timestamp\":1790416388048,\"sdk_version\":\"1.14.5\",\"sdk_name\":\"SDK_SLARDAR_WEB\",\"pid\":\"https://library.tiktok.com/ads?region=FR&adv_name=soya&start_time=1735689600000&end_time=1790380800000&sort_type=last_shown_date,desc\",\"view_id\":\"__1790416388043\",\"context\":{\"appId\":\"1988\",\"appVersion\":\"1.0.0.285\",\"tenant\":\"paas_tiktok\"},\"network_type\":\"4g\",\"sample_rate\":1}}]}"
+  },
+  {
+   "m": "POST",
+   "u": "https://mon.tiktokv.com/monitor_browser/collect/batch/?bid=tiktok_pns_web_runtime",
+   "s": 204,
+   "ct": "application/json; charset=utf-8",
+   "n": 0,
+   "rt": "fetch",
+   "body": "",
+   "post": "{\"ev_type\":\"batch\",\"list\":[{\"ev_type\":\"http\",\"payload\":{\"api\":\"xhr\",\"request\":{\"method\":\"get\",\"url\":\"https://general_fetch\",\"timestamp\":1790416388794,\"body\":\"{\\\"region\\\":\\\"sg\\\",\\\"sw_version\\\":\\\"\\\",\\\"request_content_type\\\":\\\"\\\",\\\"request_json_body\\\":\\\"\\\",\\\"request_form_keys\\\":\\\"\\\",\\\"request_host\\\":\\\"sf-ttem.tiktokstaticb.com\\\",\\\"request_url\\\":\\\"https://sf-ttem.tiktokstaticb.com/obj/ttads-events-manager-sg/adlibrary/static/image/ad-library-landing-hero.176c765663.png\\\",\\\"header_map\\\":\\\"{}\\\",\\\"request_path\\\":\\\"/obj/ttads-events-manager-sg/adlibrary/static/image/ad-library-landing-hero.176c765663.png\\\",\\\"method\\\":\\\"UNKNOWN\\\",\\\"source\\\":\\\"2\\\",\\\"initiator_type\\\":\\\"img\\\",\\\"resp_status\\\":\\\"0\\\",\\\"perf_buf\\\":\\\"0\\\",\\\"sw_ready\\\":\\\"0\\\",\\\"header_names\\\":\\\"\\\",\\\"__business__\\\":\\\"goofy-deploy-app-31199\\\"}\"},\"response\":{\"status\":200,\"is_custom_error\":false,\"timestamp\":1790416388794},\"duration\":0,\"extra\":{\"count\":\"1\"}},\"common\":{\"bid\":\"tiktok_pns_web_runtime\",\"user_id\":\"b45805a0-f8a1-4621-b2a9-1daf206ecb99\",\"release\":\"1.0.0.951\",\"device_id\":\"d82981da-7a28-407e-a558-40b63c4420d6\",\"session_id\":\"1a38696d-b424-44e1-86e3-4e0f6a71555b\",\"env\":\"production\",\"sample_rate\":0.03,\"domain\":\"library.tiktok.com\",\"business\":\"goofy-deploy-app-31199\",\"url\":\"https://library.tiktok.com/ads\",\"protocol\":\"https\",\"path\":\"/ads\",\"query\":\"region=FR&start_time=1735689600000&end_time=1790380800000&adv_name=soya&adv_biz_ids=&query_type=&sort_type=last_shown_date,desc&ad_type=0&ad_status=1&ages=all&ad_reach=all&gender=ALL\",\"pid\":\"/ads\",\"view_id\":\"__1790416388794\",\"timestamp\":1790416388794,\"sdk_version\":\"0.0.1\",\"sdk_name\":\"SDK_SLARDAR_WEB\",\"context\":{\"cb_enabled\":\"0\"}}}]}"
+  },
+  {
+   "m": "GET",
+   "u": "https://www.tiktok.com/sgtm/g/collect?v=2&tid=G-TEQXTT9FE4&gtm=45je4cc1v897257732za204zb9171443548&_p=1790416388768&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&tag_exp=101925629~102067555~102067808~102081485~102198178&cid=1399677010.1790416389&ecid=676447935&ul=fr-fr&sr=1440x1000&_fplc=0&ur=CN-11&uaa=x86&",
+   "s": 200,
+   "ct": "text/plain; charset=utf-8",
+   "n": 118,
+   "rt": "fetch",
+   "body": "event: message\ndata: {\"sgtm\":[{\"event_name\":\"scroll\",\"event_type\":\"ga\",\"idx\":0,\"code\":\"80000\",\"message\":\"success\"}]}\n\n"
+  }
+ ]
+}

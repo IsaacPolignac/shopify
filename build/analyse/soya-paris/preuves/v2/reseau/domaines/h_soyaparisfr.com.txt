@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 402 
+date: Sat, 26 Sep 2026 09:57:05 GMT
+content-type: text/html; charset=utf-8
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+shopify-complexity-score: 90
+shopify-complexity-score-v2: 90
+set-cookie: _shopify_essential=:AaDdJZ6LAAEAgTXQ92Uq8BKTC3YFdIZl9DTox5s2IePVySusbmPntbb1zMQvcDevoBLhcK-n6Fx5zuMi4gbj4LAphsytEvb3DrPEQKSfdqyJg0QESKPnt61c36fYugYpNCXXoUiD2vyJUBGg68KYa7oe_go8rFnq-q6ONVxojBPNSf4IxIQE83gkPVj35tzTKCcNVON5DWMsNfTErIZ_JrSupgMccgmK8kac_cPXJhWtBtvm_A:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=LdLMtMJWl6JbDgvxtap7cUhM66XtmgIeyFuFcvx5tZL3pqZBw8d1kM0709YFtHYa4bCCfI1923ICexW1mpk2LnibnuYYQeZZl1kidTWKjXo9VEvKj3CMhNedGc5CBuftPQ%3D%3D"}]}
+vary: Accept,accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr
+cache-control: private, no-store
+link: </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+powered-by: Shopify
+server-timing: processing;dur=49;desc="gc:1", db;dur=17, db_async;dur=11.689, asn;desc="396982", edge;desc="IAD", country;desc="US", pageType;desc="index", servedBy;desc="m24m", requestID;desc="559bd3e3-55d5-4455-b95a-569e3d4d3fdf-1790416625", _y;desc="8a98c194-0593-4f74-8098-345b9f5b9c36", _s;desc="4f2fc083-8b02-4f00-bd19-3d89671fc0a7", _cmp;desc="3.AMPS_US_f_f_XQ5jcGuTQBKCLNQy2K63ZA", _cta;desc="1", _ye;desc="1821974225", _se;desc="1790418425"
+x-download-options: noopen
+x-xss-protection: 1; mode=block
+cf-cache-status: DYNAMIC
+server: cloudflare
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=86400
+x-permitted-cross-domain-policies: none
+x-request-id: 559bd3e3-55d5-4455-b95a-569e3d4d3fdf-1790416625
+cf-ray: a4116703ab964078-IAD
+

@@ -1,0 +1,37 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+date: Sat, 26 Sep 2026 09:57:07 GMT
+content-type: text/html; charset=utf-8
+x-download-options: noopen
+cf-cache-status: DYNAMIC
+set-cookie: localization=FR; path=/; expires=Sun, 26 Sep 2027 09:57:06 GMT; SameSite=Lax
+set-cookie: cart_currency=EUR; path=/; expires=Sat, 10 Oct 2026 09:57:06 GMT; SameSite=Lax
+set-cookie: _shopify_essential=:AaDdJaQWAAEAajfvrd8LjSaSWUOk-wmR_qQnQs36mzEKTYt-RzOiyJcki1tVU49QRPDYm9ufvBLgk18-K8dplpwFOM4AqtGN0ngN9TCnmdsQuqBqPlAii2IlSK1RmgNQDETTsiprUjsunRcS_fK0wKC2kL0AAs91ZINTfHis294-76pseGYSAKPYrs8mLYQzzLXtFlm45fzBG4YsRsKq_ImY-12s13Dg4StETzGjsYIsz9rlBNpzve7IptRPlaIyDVLdPaaepbd48TJ44iQ67ub_3ssjHVDQVOeJ2ryANeu6P-a_LXDishdeXE49cbnTxkmxAPng_rAkvQ:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_analytics=:AaDdJaU9AAEAg1Z-_jItHxuYzy0L7gbE7eVSUN4iAx9GzD36VSQ2OXff5-tsMN_R_PuFoRviel-_x6o4RVCetZ0LPckt2jb5XZFPC22Ccw0qR3IKtvU4w_p4byv3Mx_0_iJDYWnL_fdz5SbdPssl8_GbkeU:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_marketing=:AaDdJaU9AAEAn0WynTda07fNfhNV5RfJUyX4KDjMm8ACyQV5UPn6iXKnpGA4xl5vd0IxN3rYerdj-m2SMPJR6ozJb8pRE3XqTvT02pxt3K76Bzs-tDCTAipNV0HCgo2A18ZLoikNGT41e9fkJ9yJx8zuu58:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//soyaparisfr.store/cdn/shop/t/2/assets/base.css?v=132492467252896707531788242029>; as="style"; rel="preload", <//soyaparisfr.store/cdn/shop/t/2/assets/overflow-list.css?v=16727044177065489451788241881>; as="style"; rel="preload", <//soyaparisfr.store/cdn/shop/t/2/compiled_assets/styles.css?v=141741089378290890271788242254>; as="style"; rel="preload", <//soyaparisfr.store/cdn/fonts/inter/inter_n4.b2a3f24c19b4de56e8871f609e73ca7f6d2e2bb9.woff2>; as="font"; type="font/woff2"; fetchpriority="low"; crossorigin; rel="preload", <//soyaparisfr.store/cdn/fonts/inter/inter_n5.d7101d5e168594dd06f56f290dd759fba5431d97.woff2>; as="font"; type="font/woff2"; fetchpriority="low"; crossorigin; rel="preload", <//soyaparisfr.store/cdn/fonts/inter/inter_n7.02711e6b374660cfc7915d1afc1c204e633421e4.woff2>; as="font"; type="font/woff2"; fetchpriority="low"; crossorigin; rel="preload", </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+x-permitted-cross-domain-policies: none
+etag: W/"page_cache:109255983429:IndexController:e4fc3dcfe6fad2691c4fdb8dc897e335:f0191a9102565ed77dbffc744e48bffc"
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+shopify-complexity-score: 362
+shopify-complexity-score-v2: 362
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+vary: Accept
+vary: accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr-FR
+accept-ch: Sec-CH-Viewport-Width
+powered-by: Shopify
+server-timing: processing;dur=370;desc="gc:4", db;dur=115, db_async;dur=39.849, parse;dur=2, render;dur=76, asn;desc="396982", edge;desc="IAD", country;desc="US", theme;desc="205511819589", pageType;desc="index", servedBy;desc="2htx", requestID;desc="f46e954a-52ce-4171-8e50-7ab75a8680b7-1790416626", _y;desc="5cc1a0b0-b939-4915-bc46-5e624fb9e462", _s;desc="4f42bca7-067a-4f2f-8530-0dc98096d899", _cmp;desc="3.AMPS_US_f_f_5CV9ZLUsSxCnl*1i9Rqicw", _cta;desc="1", _ye;desc="1821974227", _se;desc="1790418427", compressionLevel;desc="5", compressionTime;dur=7.316
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-xss-protection: 1; mode=block
+alt-svc: h3=":443"; ma=86400
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=IQ69wjoIYBEKdUiqfOl0lkir%2F8mwCXPTLF1Z2xUEPXwkJuG34Q5J6VcO2HHRo3peWyINtKTs6LJb4DJdrm2co2iugIUti2A9YJImq47DfaUO8nrW8q%2BaRWqplo1dhLXk%2FA0D"}]}
+x-content-type-options: nosniff
+x-request-id: f46e954a-52ce-4171-8e50-7ab75a8680b7-1790416626
+cf-ray: a411670c49c3e605-IAD
+

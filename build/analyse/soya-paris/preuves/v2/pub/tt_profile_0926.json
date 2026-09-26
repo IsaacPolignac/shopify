@@ -1,0 +1,77 @@
+{
+ "userInfo": {
+  "user": {
+   "id": "7670608818355012630",
+   "shortId": "",
+   "uniqueId": "soya.paris",
+   "nickname": "Soya Paris",
+   "avatarLarger": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/a7453d2227df348141ec70ac1d65c842~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=9640&refresh_token=a7e0aead&x-expires=1790586000&x-signature=jtykOd%2BVn1LPg5hN%2BrF3Ko%2BYakQ%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+   "avatarMedium": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/a7453d2227df348141ec70ac1d65c842~tplv-tiktokx-cropcenter:720:720.jpeg?dr=9640&refresh_token=bc50a23a&x-expires=1790586000&x-signature=4n6%2BWMcBKIuP0Rj3%2Fn2WclRgjbM%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+   "avatarThumb": "https://p16-common-sign.tiktokcdn-us.com/tos-maliva-avt-0068/a7453d2227df348141ec70ac1d65c842~tplv-tiktokx-cropcenter:100:100.jpeg?dr=9640&refresh_token=28b796a5&x-expires=1790586000&x-signature=gBWjI4MZgb38EFY8Hngd%2FlXA26A%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=useast8",
+   "signature": "✨ Soya | Le confort réinventé pour vous \n💙 Shop maintenant : www.soya-paris.com",
+   "createTime": 1785953061,
+   "verified": false,
+   "secUid": "MS4wLjABAAAAjqlWR5eYbbJ2rF8mumqGBs79WRuUz8vBaQybFmc_ONeyHGvJEIrLnhHm9yimpnpc",
+   "ftc": false,
+   "relation": 0,
+   "openFavorite": false,
+   "commentSetting": 0,
+   "commerceUserInfo": {
+    "commerceUser": false
+   },
+   "duetSetting": 0,
+   "stitchSetting": 0,
+   "privateAccount": false,
+   "secret": false,
+   "isADVirtual": false,
+   "roomId": "",
+   "uniqueIdModifyTime": 0,
+   "ttSeller": false,
+   "downloadSetting": 0,
+   "profileTab": {
+    "showMusicTab": false,
+    "showQuestionTab": false,
+    "showPlayListTab": false
+   },
+   "followingVisibility": 1,
+   "recommendReason": "",
+   "nowInvitationCardUrl": "",
+   "nickNameModifyTime": 1785953314,
+   "isEmbedBanned": false,
+   "canExpPlaylist": true,
+   "profileEmbedPermission": 1,
+   "language": "fr",
+   "eventList": [],
+   "suggestAccountBind": false,
+   "isOrganization": 0,
+   "UserStoryStatus": 0,
+   "shortDramaCreator": {}
+  },
+  "stats": {
+   "followerCount": 5070,
+   "followingCount": 0,
+   "heart": 2699,
+   "heartCount": 2699,
+   "videoCount": 0,
+   "diggCount": 0,
+   "friendCount": 0
+  },
+  "statsV2": {
+   "followerCount": "5070",
+   "followingCount": "0",
+   "heart": "2699",
+   "heartCount": "2699",
+   "videoCount": "0",
+   "diggCount": "0",
+   "friendCount": "0"
+  },
+  "itemList": []
+ },
+ "shareMeta": {
+  "title": "Soya Paris sur TikTok",
+  "desc": "@soya.paris 5070 abonnés, 0 abonnements, 2699 j'aime - Regarde des vidéos courtes géniales créées par Soya Paris"
+ },
+ "statusCode": 0,
+ "statusMsg": "",
+ "needFix": false
+}

@@ -1,0 +1,6 @@
+Lecture par WebFetch (résumé par modèle, pas de copie brute : curl direct renvoie 403 Cloudflare), 26/09/2026 vers 12:00 UTC
+1) https://opencorporates.com/companies?q=soya+paris&jurisdiction_code=us_wy&type=companies
+   -> "Your search - soya paris - did not match any companies" (0 résultat)
+2) https://opencorporates.com/companies?q=soya&jurisdiction_code=us_wy&type=companies
+   -> 2 résultats : SOYA GROUP LLC, Wyoming, n° 2022-001180246, Inactive, 30 N. Gould St Ste R, Sheridan, WY 82801
+                    SoyA&R LLC, Wyoming, n° 2022-001160970, Active, 1309 Coffeen Avenue Ste 1200, Sheridan, WY 82801

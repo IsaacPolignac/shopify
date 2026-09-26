@@ -1,0 +1,30 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 421 
+content-type: text/plain; charset=utf-8
+content-length: 11
+x-tt-logid: 2026092617555879B9D50C3D36FF818850
+x-tt-agw-login: 0
+strict-transport-security: max-age=31536000;includeSubDomains
+access-control-expose-headers: x-tt-traceflag,x-tt-logid
+x-tt-trace-host: 0196dcc7c950eb92928bc7b0cc3ba766bde57a18698501d70422a1b304f900a224abd0ed21aa39af137bb922d58ce3fbd8b1dcff88da7492e95e2939a7a5c092be58fd48ddf791484e4d9c3397e0d469a1d31ca5fb1a1fd104e90a94a351849a192390183cfb698bf29fa1e98d3216da51b5e263e65023d6a9752146e0aad32f35
+x-tt-trace-id: 00-26092617555879B9D50C3D36FF818850-4148B1423891F7F0-00
+server: TLB
+access-control-allow-origin: *
+access-control-allow-credentials: true
+access-control-allow-methods: *
+access-control-allow-headers: *
+x-origin-response-time: 38,23.44.214.17
+x-akamai-request-id: 21d74209.58ada8b1.8f7331
+x-parent-response-time: 197,23.219.77.145
+expires: Sat, 26 Sep 2026 09:55:58 GMT
+cache-control: max-age=0, no-cache, no-store
+pragma: no-cache
+date: Sat, 26 Sep 2026 09:55:58 GMT
+x-cache: TCP_MISS from a23-64-113-10.deploy.akamaitechnologies.com (AkamaiGHost/22.6.4-888a2d21768272d5e2d80e9762941e76) (-)
+x-cache-remote: TCP_MISS from a23-219-77-145.deploy.akamaitechnologies.com (AkamaiGHost/22.6.3-da071da6976b6d633b0b37bcfe65c0fc) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+server-timing: cdn-cache; desc=MISS, edge; dur=233, origin; dur=38
+server-timing: inner; dur=33,tt_agw; dur=10
+x-parent-response-time: 270,23.64.113.10
+

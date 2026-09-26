@@ -1,0 +1,369 @@
+{
+ "url": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=FR&q=soya%20paris&search_type=keyword_unordered",
+ "final": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=FR&q=soya%20paris&search_type=keyword_unordered",
+ "at": "2026-09-26T09:57:24.867Z",
+ "log": [
+  {
+   "m": "GET",
+   "u": "https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=FR&q=soya%20paris&search_type=keyword_unordered",
+   "s": 403,
+   "ct": "text/html; charset=utf-8",
+   "n": 481,
+   "rt": "document"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 200,
+   "ct": "text/plain",
+   "n": 0,
+   "rt": "fetch",
+   "body": "",
+   "post": ""
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 200,
+   "ct": "text/plain",
+   "n": 0,
+   "rt": "fetch",
+   "body": "",
+   "post": ""
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 429,
+   "ct": "text/plain",
+   "n": 0,
+   "rt": "fetch",
+   "body": "",
+   "post": ""
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 429,
+   "ct": "text/plain",
+   "n": 0,
+   "rt": "fetch",
+   "body": "",
+   "post": ""
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 429,
+   "ct": "text/plain",
+   "n": 0,
+   "rt": "fetch",
+   "body": "",
+   "post": ""
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  },
+  {
+   "m": "POST",
+   "u": "https://www.facebook.com/__rd_verify_Q_6hBQS5gYmRe-guo2OL4lj8uQ--yVJFQBMiNGte2wPw30FnoA?challenge=3",
+   "s": 302,
+   "ct": "text/html; charset=\"utf-8\"",
+   "n": 0,
+   "rt": "fetch"
+  }
+ ]
+}

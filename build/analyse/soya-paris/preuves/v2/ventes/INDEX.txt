@@ -1,0 +1,26 @@
+Mission "ventes et trafic" (26/09/2026) — preuves brutes
+=========================================================
+COMPTEURS DU JOUR
+- ref_variants.json : compteurs de référence extraits de soya/pdp3.html (25/09 21:31:55 UTC) et soya/web/p_*.html (25/09 22:12 UTC) ; heures confirmées par le "reqid" Shopify intégré au HTML (suffixe = horodatage Unix).
+- ../inv/snap-*.json : relevés horaires (script ../inv.py, lancé par l'orchestrateur ; 10:48 : 8 fiches sur 19 bloquées, page de 8,8 ko).
+- samples.jsonl : relevés légers fiche 3.0 + fiche 2.0 (10:31 -> 11:15 UTC ; 10:51 bloqué) ; p3_1.html (10:30:53), tmp.html (10:31:16, avec ?cb=), p3_2.html (10:52:38) + en-têtes h_p3_*.txt.
+- analyse.py -> deltas_26-09.txt : unités parties par produit entre la référence et chaque relevé horaire.
+- fenetres.py -> fenetres_26-09.txt : série fenêtre par fenêtre (3.0, housses 3.0, 2.0, housse 2.0, lombaire).
+- kaching_pdp3.json : configuration Kaching de la fiche 3.0 (quantités 1/2/4, housses pré-cochées).
+- ca_modele.py : modèle prix x unités (hypothèses basse / centrale / haute).
+HISTORIQUE (Wayback Machine, contenu brut "id_")
+- wayback/*.html : 45 captures des fiches 2.0, 3.0, housse 2.0, housse 3.0, lombaire (avril 2025 -> 7 septembre 2026) ; wayback/cdx_*.txt : index des captures.
+- wayback/serie.py -> wayback/serie.json : compteur par variante et par date (reqid), prix, politique deny/continue.
+- rythmes_wayback.py -> rythmes_wayback.tsv : unités parties par jour entre captures.
+- Monnaie des captures : USD pour p20_20260217, p30_20260127/0208/0217/0219/0224, h20_20260127, lomb_20260606 (prix convertis ; compteurs non affectés).
+AVIS
+- avis/trustpilot_webfetch_2026-09-26.md (WebFetch ; curl = 403 AWS WAF : avis/tp_p1.html)
+- avis/loox_*_newest_p*.html : widget Loox trié par date (2.0 = produit 15152183443788 ; 3.0 = 15152158212428), dates en data-time (ms).
+TRAFIC
+- trafic/similarweb_webfetch_2026-09-26.md (SimilarWeb via WebFetch + comparables Wopilo, Tediber, Derila ; HypeStat)
+- trafic/hypestat_text.txt, trafic/tranco-list.eu_*.html (rangs Tranco 17/08 -> 25/09/2026), trafic/crux/*.csv.gz (listes CrUX mensuelles, dépôt zakird/crux-top-lists)
+- trafic/wayback/disponibilites.txt, trafic/*.html (Ahrefs, Semrush, Ubersuggest, websiteseochecker, statshow, siteworthtraffic : sans données exploitables)
+SEO
+- seo/websearch_2026-09-26.tsv : 23 requêtes WebSearch (outil US, pas Google.fr)
+AUTRES
+- miroirs/ : soyaconfort.com (boutique Shopify ktkdz6-ya) ; deux boutiques miroirs en 429.

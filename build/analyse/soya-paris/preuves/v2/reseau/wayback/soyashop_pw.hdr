@@ -1,0 +1,68 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+server: nginx
+date: Sat, 26 Sep 2026 10:19:20 GMT
+content-type: text/html; charset=utf-8
+x-archive-orig-date: Sat, 22 Feb 2025 09:34:17 GMT
+x-archive-orig-transfer-encoding: chunked
+x-archive-orig-connection: close
+x-archive-orig-x-sorting-hat-podid: 382
+x-archive-orig-x-sorting-hat-shopid: 90497417599
+x-archive-orig-x-storefront-renderer-rendered: 1
+x-archive-orig-etag: W/"cacheable:47d164b1c1931988ee59520b227644bc"
+x-archive-orig-link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin
+x-archive-orig-set-cookie: secure_customer_sig=; path=/; expires=Sun, 22 Feb 2026 09:34:17 GMT; secure; HttpOnly; SameSite=Lax
+x-archive-orig-set-cookie: localization=FR; path=/; expires=Sun, 22 Feb 2026 09:34:17 GMT
+x-archive-orig-set-cookie: _shopify_y=79A3580C-983c-4B69-8ee0-c51067ae001b; domain=soyaparis.shop; path=/; expires=Sun, 22 Feb 2026 15:34:17 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_s=9F3C4A9D-9409-4150-a4ac-f9ca59ba6262; domain=soyaparis.shop; path=/; expires=Sat, 22 Feb 2025 10:04:17 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _tracking_consent=%7B%22con%22%3A%7B%22CMP%22%3A%7B%22a%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A%22%22%2C%22s%22%3A%22%22%7D%7D%2C%22v%22%3A%222.1%22%2C%22region%22%3A%22USCA%22%2C%22reg%22%3A%22%22%2C%22purposes%22%3A%7B%22a%22%3Atrue%2C%22p%22%3Atrue%2C%22m%22%3Atrue%2C%22t%22%3Atrue%7D%2C%22display_banner%22%3Afalse%2C%22sale_of_data_region%22%3Afalse%2C%22consent_id%22%3A%22B13BB511-6f1c-494C-b66d-cd85c779905e%22%7D; domain=soyaparis.shop; path=/; expires=Sun, 22 Feb 2026 09:34:17 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _orig_referrer=; domain=soyaparis.shop; path=/; expires=Sat, 08 Mar 2025 09:34:17 GMT; HttpOnly; SameSite=Lax
+x-archive-orig-set-cookie: _landing_page=%2Fpassword; domain=soyaparis.shop; path=/; expires=Sat, 08 Mar 2025 09:34:17 GMT; HttpOnly; SameSite=Lax
+x-archive-orig-x-robots-tag: nofollow
+x-archive-orig-x-cache: hit, server
+x-archive-orig-x-frame-options: DENY
+x-archive-orig-content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+x-archive-orig-strict-transport-security: max-age=7889238
+x-archive-orig-x-shopid: 90497417599
+x-archive-orig-x-shardid: 382
+x-archive-orig-content-language: fr-FR
+x-archive-orig-powered-by: Shopify
+x-archive-orig-server-timing: processing;dur=48;desc="gc:11", db;dur=4, db_async;dur=1.32, asn;desc="7941", edge;desc="SJC", country;desc="US", knownbot, theme;desc="178006557055", pageType;desc="password", servedBy;desc="z2xg", requestID;desc="9b31919e-474c-43d8-9ac7-aca6be72f3a2-1740216857"
+x-archive-orig-x-dc: gcp-us-central1,gcp-europe-west4,gcp-europe-west4
+x-archive-orig-x-request-id: 9b31919e-474c-43d8-9ac7-aca6be72f3a2-1740216857
+x-archive-orig-alt-svc: h3=":443"; ma=86400
+x-archive-orig-cf-cache-status: DYNAMIC
+x-archive-orig-vary: accept-encoding
+x-archive-orig-report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=XTv4%2FGtmSF2XtaEokBnX7nTlgIdrrXC9BN0KeEvzU1HTXSapa%2BKbKrxbwqAAfZs%2BXNmHBhLFeHQZGqR9aIQ1UNOzEn27ZPXDI5IZsc3FlXOtBG8vk0%2BVSt77i2FAQYG3"}],"group":"cf-nel","max_age":604800}
+x-archive-orig-nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+x-archive-orig-server-timing: cfRequestDuration;dur=213.000059
+x-archive-orig-x-xss-protection: 1; mode=block
+x-archive-orig-x-content-type-options: nosniff
+x-archive-orig-x-permitted-cross-domain-policies: none
+x-archive-orig-x-download-options: noopen
+x-archive-orig-server: cloudflare
+x-archive-orig-cf-ray: 915dfabf5c5febf3-SJC
+content-encoding: gzip
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Sat, 22 Feb 2025 09:34:17 GMT
+link: <https://soyaparis.shop/password>; rel="original", <https://web.archive.org/web/timemap/link/https://soyaparis.shop/password>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://soyaparis.shop/password>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: CT-20250222073113-crawl919/CT-20250222091955-00058.warc.gz
+server-timing: captures_list;dur=0.550397, exclusion.robots;dur=0.044333, exclusion.robots.policy;dur=0.033639, esindex;dur=0.009369, cdx.remote;dur=8.144845, LoadShardBlock;dur=79.156572, PetaboxLoader3.datanode;dur=62.625641, PetaboxLoader3.resolve;dur=38.075313, load_resource;dur=82.998404
+x-app-server: wwwb-app218-dc8
+x-ts: 200
+x-tr: 191
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=1
+set-cookie: wb-p-SERVER=wwwb-app218; path=/
+cache-control: private
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

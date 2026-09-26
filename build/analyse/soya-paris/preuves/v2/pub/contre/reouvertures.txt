@@ -1,0 +1,15 @@
+Contre-enquête « publicité et réseaux » — URL rouvertes le 26/09/2026 entre 11:30 et 11:45 UTC (WebFetch, restitution par un petit modèle : citations possiblement normalisées)
+
+1) https://www.facebook.com/61565502837799/videos/livraison-gratuite-d%C3%A9j%C3%A0-100-000-clients-satisfaits/1223428729960782/
+   -> « 🚀 Le SOYA 3.0 est enfin là ! Après des mois de développement, des dizaines de prototypes et vos retours sur le SOYA 2.0, nous avons créé l'oreiller le plus abouti jamais conçu. » ; 5 puces dont « Soulagement immédiat des douleurs cervicales, dorsales et épaules » et « Conçu avec +200 praticiens de santé pour respecter l'alignement naturel du corps » ; « Résultat ? Des nuits vraiment réparatrices, un réveil sans douleurs… » ; « OFFRE DE LANCEMENT EXCEPTIONNELLE » ; source : Soya Paris. Aucune date, vue ni réaction exposée.
+2) https://www.facebook.com/61565502837799/videos/livraison-gratuite/672030032315793/
+   -> « Élu Meilleur Oreiller Orthopédique 2024, l'Oreiller SOYA 2.0 soulage efficacement vos douleurs cervicales et améliore votre posture dès la première nuit. »
+3) https://www.facebook.com/61565502837799/videos/3015555038626220/  (ID cité par l'enquêteur mais absent de fb_videos_webfetch.md)
+   -> page « Soya Paris » ; « Élu Meilleur Oreiller Orthopédique 2024, l'Oreiller SOYA 2.0 soulage efficacement vos douleurs cervicales et améliore votre posture dès la première nuit. » ; « Alignement cervical parfait ✔️ Réveil sans douleurs ✔️ Sommeil profond et réparateur ✔️ Mousse à mémoire de forme hypoallergénique » ; « -30 % sur le 2ème ».
+4) https://www.facebook.com/357304574142341  (identifiant « id= » de l'URL story.php?story_fbid=122111526512516761 citée en annexe B.2 du dossier) -> page de connexion, rien de lisible. WebSearch "357304574142341" : aucun résultat pertinent.
+5) WebSearch « "Soya Paris" facebook videos "livraison gratuite" oreiller » : 2 ID vidéo nouveaux sur la page 61565502837799, titres de résultats seulement :
+   - 942531044896326 (slug livraison-gratuite-déjà-100-000-clients-satisfaits) : « Élu Meilleur Oreiller Orthopédique 2025  Le SOYA 3.0 est ... »
+   - 1766409657383022 (même slug) : « Le SOYA 3.0 est enfin là ! Après des mois de développement ... »
+6) https://www.inc-conso.fr/content/soldes-dete-ca-commencera-le-mercredi-24-juin-2026-8-heures-y-compris-sur-internet
+   -> soldes d'été 2026 : du mercredi 24/06/2026 8 h au mardi 28/07/2026 (prolongation exceptionnelle d'une semaine par arrêté du 03/07/2026, canicule) ; Corse : 08/07 -> 04/08/2026.
+   (economie.gouv.fr : 403.) Soldes d'été 2025 : 25/06 -> 22/07/2025 (Corse 09/07 -> 05/08/2025) selon titres et résumés WebSearch (moneyvox, lsa-conso) [non ouvert].

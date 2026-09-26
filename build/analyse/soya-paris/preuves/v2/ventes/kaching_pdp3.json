@@ -1,0 +1,505 @@
+{
+ "blockTitle": "FRENCH DAYS | JUSQU'À -60%",
+ "blockVisibility": "selected-products",
+ "discountName": "FRENCH DAYS | JUSQU'À -60%",
+ "excludeB2bCustomers": false,
+ "blockLayout": "vertical",
+ "differentVariantsEnabled": true,
+ "hideVariantPicker": true,
+ "disableVariantOptionSync": false,
+ "hideUnavailableOptions": false,
+ "showPricesPerItem": false,
+ "showBothPrices": false,
+ "unitLabel": "",
+ "useProductCompareAtPrice": true,
+ "showPricesWithoutDecimals": false,
+ "priceRounding": true,
+ "priceRoundingPrecision": ".90",
+ "updateNativePrice": false,
+ "updateNativePriceType": "item",
+ "showTotalPriceInAddToCartButton": false,
+ "skipCart": false,
+ "lowStockAlertEnabled": false,
+ "lowStockAlert": null,
+ "showVariantsForSingleQuantity": true,
+ "preselectedDealBarId": "d196a7d1-ee65-499b-a01a-2878ad7e9f65",
+ "dealBars": [
+  {
+   "id": "d196a7d1-ee65-499b-a01a-2878ad7e9f65",
+   "title": "1x Oreiller",
+   "subtitle": "Livraison rapide offerte",
+   "label": "",
+   "badgeStyle": "simple",
+   "badgeText": "",
+   "badgeImageGID": null,
+   "mediaImageGID": null,
+   "featuredMediaGID": null,
+   "featuredProductGID": null,
+   "featuredImages": [],
+   "freeGifts": [],
+   "freeGiftsSummary": null,
+   "multipleGiftsSelectors": [],
+   "upsells": [
+    {
+     "id": "O2oB",
+     "productSource": "selected",
+     "productGID": "gid://shopify/Product/15152140517708",
+     "variantGIDs": null,
+     "defaultVariantGID": null,
+     "mediaImageGID": null,
+     "discountType": "specific",
+     "discountValue": 14.9,
+     "text": "+1 Housse de Rechange",
+     "imageSize": 30,
+     "quantity": 1,
+     "preselected": true,
+     "visibleOnlyWhenDealBarSelected": false,
+     "sellAsSubscription": false,
+     "subscriptionEnabled": true,
+     "subscriptionType": "deal"
+    }
+   ],
+   "productPersonalisation": null,
+   "highlights": null,
+   "sellingPlanEnabled": false,
+   "sellingPlanGid": null,
+   "hideBehindScratchOff": false,
+   "showAsSoldOutEnabled": false,
+   "showAsSoldOut": null,
+   "requireVariantSelectionEnabled": false,
+   "dealBarType": "quantity-break",
+   "quantity": 1,
+   "quantitySelector": false,
+   "discountType": "specific",
+   "discountValue": 69.9
+  },
+  {
+   "id": "8578de4c-8569-4127-bfd3-fea7bed80b7f",
+   "title": "2x Oreillers",
+   "subtitle": "Livraison rapide et cadeaux offerts",
+   "label": "",
+   "badgeStyle": "simple",
+   "badgeText": "Pack Duo",
+   "badgeImageGID": null,
+   "mediaImageGID": null,
+   "featuredMediaGID": null,
+   "featuredProductGID": null,
+   "featuredImages": [],
+   "freeGifts": [],
+   "freeGiftsSummary": null,
+   "multipleGiftsSelectors": [],
+   "upsells": [
+    {
+     "id": "9xtt",
+     "productSource": "selected",
+     "productGID": "gid://shopify/Product/15152140517708",
+     "variantGIDs": null,
+     "defaultVariantGID": null,
+     "mediaImageGID": null,
+     "discountType": "percentage",
+     "discountValue": 20,
+     "text": "+1 Housse de Rechange",
+     "imageSize": 30,
+     "quantity": 1,
+     "preselected": true,
+     "visibleOnlyWhenDealBarSelected": false,
+     "sellAsSubscription": false,
+     "subscriptionEnabled": true,
+     "subscriptionType": "deal"
+    },
+    {
+     "id": "Z1gp",
+     "productSource": "selected",
+     "productGID": "gid://shopify/Product/15152140517708",
+     "variantGIDs": null,
+     "defaultVariantGID": null,
+     "mediaImageGID": null,
+     "discountType": "specific",
+     "discountValue": 14.9,
+     "text": "+1 Housse de Rechange",
+     "imageSize": 30,
+     "quantity": 1,
+     "preselected": true,
+     "visibleOnlyWhenDealBarSelected": false,
+     "sellAsSubscription": false,
+     "subscriptionEnabled": true,
+     "subscriptionType": "deal"
+    }
+   ],
+   "productPersonalisation": null,
+   "highlights": null,
+   "sellingPlanEnabled": false,
+   "sellingPlanGid": null,
+   "hideBehindScratchOff": false,
+   "showAsSoldOutEnabled": false,
+   "showAsSoldOut": null,
+   "requireVariantSelectionEnabled": false,
+   "dealBarType": "quantity-break",
+   "quantity": 2,
+   "quantitySelector": false,
+   "discountType": "specific",
+   "discountValue": 98.9
+  },
+  {
+   "id": "2TW6",
+   "title": "3x Oreillers +1 Offert",
+   "subtitle": "Livraison rapide et cadeaux offerts",
+   "label": "",
+   "badgeStyle": "simple",
+   "badgeText": "Pack Famille",
+   "badgeImageGID": null,
+   "mediaImageGID": null,
+   "featuredMediaGID": null,
+   "featuredProductGID": null,
+   "featuredImages": [],
+   "freeGifts": [],
+   "freeGiftsSummary": null,
+   "multipleGiftsSelectors": [],
+   "upsells": [
+    {
+     "id": "55j2",
+     "productSource": "selected",
+     "productGID": "gid://shopify/Product/15152140517708",
+     "variantGIDs": null,
+     "defaultVariantGID": null,
+     "mediaImageGID": null,
+     "discountType": "specific",
+     "discountValue": 14.9,
+     "text": "+2 Housses de Rechange",
+     "imageSize": 30,
+     "quantity": 2,
+     "preselected": true,
+     "visibleOnlyWhenDealBarSelected": false,
+     "sellAsSubscription": false,
+     "subscriptionEnabled": true,
+     "subscriptionType": "deal"
+    },
+    {
+     "id": "YOwY",
+     "productSource": "selected",
+     "productGID": "gid://shopify/Product/15152140517708",
+     "variantGIDs": null,
+     "defaultVariantGID": null,
+     "mediaImageGID": null,
+     "discountType": "specific",
+     "discountValue": 14.9,
+     "text": "+2 Housses de Rechange",
+     "imageSize": 30,
+     "quantity": 2,
+     "preselected": true,
+     "visibleOnlyWhenDealBarSelected": false,
+     "sellAsSubscription": false,
+     "subscriptionEnabled": true,
+     "subscriptionType": "deal"
+    }
+   ],
+   "productPersonalisation": null,
+   "highlights": null,
+   "sellingPlanEnabled": false,
+   "sellingPlanGid": null,
+   "hideBehindScratchOff": false,
+   "showAsSoldOutEnabled": false,
+   "showAsSoldOut": null,
+   "requireVariantSelectionEnabled": false,
+   "dealBarType": "quantity-break",
+   "quantity": 4,
+   "quantitySelector": false,
+   "discountType": "specific",
+   "discountValue": 139.9
+  }
+ ],
+ "badgesEnabled": true,
+ "badges": [
+  {
+   "id": "legacy-8578de4c-8569-4127-bfd3-fea7bed80b7f",
+   "attachedTo": {
+    "type": "dealBar",
+    "dealBarId": "8578de4c-8569-4127-bfd3-fea7bed80b7f"
+   },
+   "text": "Pack Duo",
+   "colors": {
+    "text": {
+     "red": 255,
+     "green": 255,
+     "blue": 255,
+     "alpha": 1
+    },
+    "background": {
+     "red": 4,
+     "green": 33,
+     "blue": 70,
+     "alpha": 1
+    }
+   },
+   "badgeType": "simple",
+   "textSize": 12
+  },
+  {
+   "id": "legacy-2TW6",
+   "attachedTo": {
+    "type": "dealBar",
+    "dealBarId": "2TW6"
+   },
+   "text": "Pack Famille",
+   "colors": {
+    "text": {
+     "red": 255,
+     "green": 255,
+     "blue": 255,
+     "alpha": 1
+    },
+    "background": {
+     "red": 4,
+     "green": 33,
+     "blue": 70,
+     "alpha": 1
+    }
+   },
+   "badgeType": "simple",
+   "textSize": 12
+  }
+ ],
+ "cornerRadius": 13,
+ "spacing": 1,
+ "colors": {
+  "background": {
+   "red": 248,
+   "green": 248,
+   "blue": 248,
+   "alpha": 1
+  },
+  "selectedBackground": {
+   "red": 255,
+   "green": 255,
+   "blue": 255,
+   "alpha": 1
+  },
+  "border": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 1
+  },
+  "blockTitle": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 1
+  },
+  "title": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 1
+  },
+  "subtitle": {
+   "red": 85,
+   "green": 85,
+   "blue": 85,
+   "alpha": 1
+  },
+  "price": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 1
+  },
+  "fullPrice": {
+   "red": 255,
+   "green": 77,
+   "blue": 77,
+   "alpha": 1
+  },
+  "labelBackground": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 1
+  },
+  "label": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 1
+  },
+  "badgeBackground": {
+   "red": 4,
+   "green": 33,
+   "blue": 70,
+   "alpha": 1
+  },
+  "badgeText": {
+   "red": 255,
+   "green": 255,
+   "blue": 255,
+   "alpha": 1
+  },
+  "freeGiftBackground": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 0.3081856343283582
+  },
+  "freeGiftText": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 1
+  },
+  "freeGiftSelectedBackground": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 1
+  },
+  "freeGiftSelectedText": {
+   "red": 255,
+   "green": 255,
+   "blue": 255,
+   "alpha": 1
+  },
+  "upsellBackground": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 0.300722947761194
+  },
+  "upsellText": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 1
+  },
+  "upsellSelectedBackground": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 0.300722947761194
+  },
+  "upsellSelectedText": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 1
+  },
+  "progressiveGiftsLabelBackground": {
+   "red": 73,
+   "green": 116,
+   "blue": 202,
+   "alpha": 1
+  },
+  "pillBackground": {
+   "red": 255,
+   "green": 255,
+   "blue": 255,
+   "alpha": 1
+  },
+  "pillText": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 1
+  },
+  "pillBorder": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 0.3
+  },
+  "pillSelectedBackground": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 1
+  },
+  "pillSelectedText": {
+   "red": 255,
+   "green": 255,
+   "blue": 255,
+   "alpha": 1
+  },
+  "pillSelectedBorder": {
+   "red": 0,
+   "green": 0,
+   "blue": 0,
+   "alpha": 1
+  }
+ },
+ "fonts": {
+  "fontFamily": null,
+  "blockTitle": {
+   "size": 14,
+   "style": "bold"
+  },
+  "title": {
+   "size": 16,
+   "style": "bold"
+  },
+  "subtitle": {
+   "size": 12,
+   "style": "regular"
+  },
+  "label": {
+   "size": 12,
+   "style": "regular"
+  },
+  "freeGift": {
+   "size": 13,
+   "style": "bold"
+  },
+  "upsell": {
+   "size": 13,
+   "style": "bold"
+  },
+  "unitLabel": {
+   "size": 14,
+   "style": "regular"
+  },
+  "pill": {
+   "size": 14,
+   "style": "regular"
+  }
+ },
+ "customStylesEnabled": false,
+ "customStyles": "",
+ "swatchOptions": [],
+ "swatchSize": 18,
+ "swatchShape": "circle",
+ "pillCornerRadius": null,
+ "showSelectedSwatchName": false,
+ "imageSize": 48,
+ "imageCornerRadius": 6,
+ "collectionBreaksEnabled": false,
+ "collectionBreaks": null,
+ "chooseProductModal": null,
+ "timerEnabled": false,
+ "scratchOffEnabled": false,
+ "scratchOff": null,
+ "subscriptionsEnabled": false,
+ "subscriptions": null,
+ "currency": null,
+ "stickyAtcEnabled": false,
+ "stickyAtc": null,
+ "progressiveGiftsEnabled": false,
+ "checkboxUpsellsEnabled": false,
+ "savingsSummaryEnabled": false,
+ "savingsSummary": null,
+ "excludedProductIds": [],
+ "excludedCollectionIds": [],
+ "selectedProductIds": [
+  15152158212428
+ ],
+ "selectedCollectionIds": [],
+ "marketId": null,
+ "excludedMarketIds": [],
+ "timer": null,
+ "progressiveGifts": null,
+ "checkboxUpsells": null,
+ "defaultVariantsV2": [],
+ "id": "560e1bc0-5292-48db-aa0a-039edda139c7",
+ "nanoId": "bEaf",
+ "versionId": "dbf0faea-b502-44c6-94b2-0d57ebf7283d",
+ "otherProductHandles": [
+  "housse-d-oreiller-de-rechange-soya-3-0"
+ ]
+}

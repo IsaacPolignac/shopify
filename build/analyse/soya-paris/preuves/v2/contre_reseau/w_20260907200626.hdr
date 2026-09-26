@@ -1,0 +1,66 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 200 
+server: nginx
+date: Sat, 26 Sep 2026 11:51:29 GMT
+content-type: text/html; charset=utf-8
+x-archive-orig-date: Mon, 07 Sep 2026 20:06:27 GMT
+x-archive-orig-transfer-encoding: chunked
+x-archive-orig-connection: keep-alive
+x-archive-orig-x-download-options: noopen
+x-archive-orig-set-cookie: _shopify_y=fa320990-074a-47aa-b72f-5ce4783bcefe; domain=soya-paris.com; path=/; expires=Wed, 08 Sep 2027 02:06:26 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_s=cb2f9bef-8006-4343-be13-daab599d0a75; domain=soya-paris.com; path=/; expires=Mon, 07 Sep 2026 20:36:26 GMT; SameSite=Lax
+x-archive-orig-set-cookie: localization=US; path=/; expires=Tue, 07 Sep 2027 20:06:27 GMT; SameSite=Lax
+x-archive-orig-set-cookie: cart_currency=USD; path=/; expires=Mon, 21 Sep 2026 20:06:27 GMT; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_essential=:AaB9eq2fAAEAOMJ_j8KwwjjSGTbE3BQwgjD23lnG3hajfutNqsblUcmMUUoP6G5RofG_G4PIvjEpBsc6oQ6aGwZx_D6K3pCNjNIBygBmX5YyFSIM79ihXdopQU3knxy7yu0izYLVtNdyNBvs5gY6kf3Q2cHyos5r_7LIZAkmT4one_1xwOa3GcLdiMq_2lnFRvYNpJF3pgvsUV6R9saDcBS7u2hTL3hEMvkqqA9cJqc1xqwW6ow_CffjZq0mUaCsqLzqEH-jsCrOLhY57E5m3Vme9FYBKRS8EtzHA5PXYvAy0v2fmRfhJMshOdM0fAeWFgsxsJzEQECqw2MG9CHfJWklpZUOHezUL2bUpxPI404PUfh62NmffIlyrdsXVpYZxeGtGGyaiLxW86jdjAjLKN6cewnI0jMWxipI4igKDrAVhVfSYWdjxk1wvx2ysir7UtJ7AewZHt8UNi5CKtuuF2ujv3kXA0OaI--BolUV8wGHh_l4zfyKSCCPTvb8Uz4kEm32mVK1ITw:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_analytics=:AaB9eq4fAAEAAUHBiZ0ji8eO22Ny-PIhtRjHrUQc9OSkDSedvU4vdlKNZouC_GW5Xj16V6Nez_LJvUXTyAUrrAS_PquV4fa-V2VUhHCXn7qMUs8XRD_3sTmuRuU:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-archive-orig-set-cookie: _shopify_marketing=:AaB9eq4fAAEAF6qEAEUhuoFYMlkq51A8wd5ADzQRMiAORUHXdp0c7x00rlXcnlIrGz2cdT6mcyVpXp5D5znz-ZDtT3aJVrkc_nLdAROM9PzRpmfjB_D1y4cgA8s:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-archive-orig-cf-cache-status: DYNAMIC
+x-archive-orig-link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//soya-paris.com/cdn/shop/t/28/assets/theme.css?v=151159139448717063861788210375>; as="style"; rel="preload", <https://cdn.shopify.com/extensions/01a07bf8-ceb4-7e22-b7b4-fdf3234fbfc1/ez-product-image-translate-403/assets/algo_translation_3.js?v=soya-paris.com>; as="script"; rel="preload", <https://cdn.shopify.com/extensions/01a06e2c-1216-7f29-9821-c21ac7d62bb2/kaching-popup-442/assets/kaching-popup-v2.css>; as="style"; rel="preload", <https://soya-paris.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as="style"; rel="preload"; crossorigin
+x-archive-orig-speculation-rules: "/cdn/shopifycloud/storefront/assets/storefront/storefronts.moderate.specrules-eb468f32.json"
+x-archive-orig-x-content-type-options: nosniff
+x-archive-orig-x-request-id: 50554b14-90c3-4ac0-b47b-a6ab139b8a04-1788811586
+x-archive-orig-nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-archive-orig-shopify-complexity-score: 0
+x-archive-orig-shopify-complexity-score-v2: 129
+x-archive-orig-x-frame-options: DENY
+x-archive-orig-content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+x-archive-orig-strict-transport-security: max-age=7889238
+x-archive-orig-x-permitted-cross-domain-policies: none
+x-archive-orig-vary: Accept
+x-archive-orig-vary: accept-encoding
+x-archive-orig-cdn-cache-control: no-cache, no-store
+x-archive-orig-content-language: fr-US
+x-archive-orig-accept-ch: Sec-CH-Viewport-Width
+x-archive-orig-powered-by: Shopify
+x-archive-orig-server-timing: processing;dur=134;desc="gc:3", db;dur=27, db_async;dur=8.997, render;dur=51, asn;desc="7941", edge;desc="SJC", country;desc="US", theme;desc="204819398988", pageType;desc="index", servedBy;desc="ss2t", requestID;desc="50554b14-90c3-4ac0-b47b-a6ab139b8a04-1788811586", _y;desc="fa320990-074a-47aa-b72f-5ce4783bcefe", _s;desc="cb2f9bef-8006-4343-be13-daab599d0a75", _cmp;desc="3.AMPS_USCA_f_t_wWd58XduTbCnRnYjQ7iCbg", compressionLevel;desc="5", compressionTime;dur=5.723
+x-archive-orig-x-dc: gcp-us-west1,gcp-us-west1,gcp-us-west1
+x-archive-orig-x-xss-protection: 1; mode=block
+x-archive-orig-alt-svc: h3=":443"; ma=86400
+x-archive-orig-server: cloudflare
+x-archive-orig-report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=0U0VJZm6sKl1m9xjSUAdEZhen5%2BzXKIMKKyO%2BnqNPaKRjQK0nncQvpWhc1j6aNGqglV0OKyPdoX1ILVExds6W9vsHLbk1yIV3dsCC2otmPaydYVgCGp9DpX%2BQFS5rvjF"}]}
+x-archive-orig-etag: W/"page_cache:93550543180:IndexController:603ba3ad8406e56edb2036043609c44a:c92a1d53ed430dfaf54b134cc0056dd7"
+content-encoding: gzip
+x-archive-orig-cf-ray: a37855825e04f3db-SJC
+cache-control: max-age=1800
+accept-ranges: bytes
+memento-datetime: Mon, 07 Sep 2026 20:06:26 GMT
+link: <https://soya-paris.com/>; rel="original", <https://web.archive.org/web/timemap/link/https://soya-paris.com/>; rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://soya-paris.com/>; rel="timegate"
+content-security-policy: default-src 'self' 'unsafe-eval' 'unsafe-inline' data: blob: archive.org web.archive.org web-static.archive.org wayback-api.archive.org athena.archive.org analytics.archive.org pragma.archivelab.org wwwb-events.archive.org
+x-archive-src: spn2-20260907205431/spn2-20260907171808-wwwb-spn37.us.archive.org-8000.warc.gz
+server-timing: captures_list;dur=0.339000, exclusion.robots;dur=0.029186, exclusion.robots.policy;dur=0.021990, esindex;dur=0.007195, cdx.remote;dur=12.722284, LoadShardBlock;dur=211.019109, PetaboxLoader3.datanode;dur=165.764073, PetaboxLoader3.resolve;dur=127.055143, load_resource;dur=112.361204
+x-app-server: wwwb-app206-dc6
+x-ts: 200
+x-tr: 353
+server-timing: TR;dur=0,Tw;dur=0,Tc;dur=1
+set-cookie: wb-p-SERVER=wwwb-app206; path=/
+cache-control: private
+x-location: All
+x-rl: 0
+x-na: 0
+x-page-cache: MISS
+server-timing: MISS
+referrer-policy: no-referrer-when-downgrade
+permissions-policy: interest-cohort=()
+x-sd: 0
+

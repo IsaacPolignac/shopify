@@ -1,0 +1,51 @@
+
+==== TVA reversee (20 %) ====
+offre                                  TTC | bas: cout / marge avt pub  | central                    | haut                      
+1x sans housse                       69.90 | 13.00+0.00+1.30+2.10 ->  41.85 | 19.00+3.00+2.46+3.50 ->  30.30 | 25.00+0.00+3.51+6.99 ->  22.75
+1x + housse pre-cochee               84.80 | 15.50+0.00+1.52+2.54 ->  51.10 | 22.50+6.00+2.92+4.24 ->  35.01 | 29.00+0.00+4.19+8.48 ->  29.00
+Duo sans housse                      98.90 | 26.00+0.00+1.73+2.97 ->  51.72 | 38.00+3.00+3.36+4.95 ->  33.12 | 50.00+0.00+4.84+9.89 ->  17.69
+Duo + 2 housses pre-cochees         128.70 | 31.00+0.00+2.18+3.86 ->  70.21 | 45.00+6.00+4.28+6.43 ->  45.54 | 58.00+0.00+6.21+12.87 ->  30.17
+Famille (4) sans housse             139.90 | 52.00+0.00+2.35+4.20 ->  58.04 | 76.00+3.00+4.63+7.00 ->  25.96 | 100.00+0.00+6.73+13.99 ->  -4.13
+Famille + 4 housses pre-cochees     169.70 | 62.00+0.00+2.80+5.09 ->  71.53 | 90.00+6.00+5.55+8.48 ->  31.38 | 116.00+0.00+8.10+16.97 ->   0.35
+Housse seule en ajout (marginal)     14.90 |  2.50+0.00+0.22+0.45 ->   9.25 |  3.50+3.00+0.46+0.75 ->   4.71 |  4.00+0.00+0.69+1.49 ->   6.24
+Popup lombaire (marginal)            19.90 |  4.00+0.00+0.30+0.60 ->  11.69 |  5.50+0.00+0.62+0.99 ->   9.47 |  8.00+0.00+0.92+1.99 ->   5.68
+1x + housse + lombaire              104.70 | 19.50+0.00+1.82+3.14 ->  62.79 | 28.00+6.00+3.54+5.24 ->  44.48 | 37.00+0.00+5.11+10.47 ->  34.67
+
+==== TVA NON reversee (indice taxable:false) ====
+offre                                  TTC | bas: cout / marge avt pub  | central                    | haut                      
+1x sans housse                       69.90 | 13.00+0.00+1.30+2.10 ->  53.50 | 19.00+3.00+2.46+3.50 ->  41.95 | 25.00+0.00+3.51+6.99 ->  34.40
+1x + housse pre-cochee               84.80 | 15.50+0.00+1.52+2.54 ->  65.23 | 22.50+6.00+2.92+4.24 ->  49.14 | 29.00+0.00+4.19+8.48 ->  43.13
+Duo sans housse                      98.90 | 26.00+0.00+1.73+2.97 ->  68.20 | 38.00+3.00+3.36+4.95 ->  49.60 | 50.00+0.00+4.84+9.89 ->  34.17
+Duo + 2 housses pre-cochees         128.70 | 31.00+0.00+2.18+3.86 ->  91.66 | 45.00+6.00+4.28+6.43 ->  66.99 | 58.00+0.00+6.21+12.87 ->  51.62
+Famille (4) sans housse             139.90 | 52.00+0.00+2.35+4.20 ->  81.35 | 76.00+3.00+4.63+7.00 ->  49.28 | 100.00+0.00+6.73+13.99 ->  19.18
+Famille + 4 housses pre-cochees     169.70 | 62.00+0.00+2.80+5.09 ->  99.81 | 90.00+6.00+5.55+8.48 ->  59.66 | 116.00+0.00+8.10+16.97 ->  28.63
+Housse seule en ajout (marginal)     14.90 |  2.50+0.00+0.22+0.45 ->  11.73 |  3.50+3.00+0.46+0.75 ->   7.19 |  4.00+0.00+0.69+1.49 ->   8.72
+Popup lombaire (marginal)            19.90 |  4.00+0.00+0.30+0.60 ->  15.00 |  5.50+0.00+0.62+0.99 ->  12.79 |  8.00+0.00+0.92+1.99 ->   8.99
+1x + housse + lombaire              104.70 | 19.50+0.00+1.82+3.14 ->  80.24 | 28.00+6.00+3.54+5.24 ->  61.93 | 37.00+0.00+5.11+10.47 ->  52.12
+
+==== Synthese TVA reversee : marge avant pub (bas / central / haut) et marge apres pub ====
+1x sans housse                     TTC  69.90 HT  58.25 | cout+droits 13.00-25.00 (c 22.00) | paiement 2.46 | retours 3.50 | marge avt pub  41.85 /  30.30 /  22.75 | apres CAC 15/25/40 (central)  15.30   5.30  -9.70 | point mort CAC  22.8- 41.9
+1x + housse pre-cochee             TTC  84.80 HT  70.67 | cout+droits 15.50-29.00 (c 28.50) | paiement 2.92 | retours 4.24 | marge avt pub  51.10 /  35.01 /  29.00 | apres CAC 15/25/40 (central)  20.01  10.01  -4.99 | point mort CAC  29.0- 51.1
+Duo sans housse                    TTC  98.90 HT  82.42 | cout+droits 26.00-50.00 (c 41.00) | paiement 3.36 | retours 4.95 | marge avt pub  51.72 /  33.12 /  17.69 | apres CAC 15/25/40 (central)  18.12   8.12  -6.88 | point mort CAC  17.7- 51.7
+Duo + 2 housses pre-cochees        TTC 128.70 HT 107.25 | cout+droits 31.00-58.00 (c 51.00) | paiement 4.28 | retours 6.43 | marge avt pub  70.21 /  45.54 /  30.17 | apres CAC 15/25/40 (central)  30.54  20.54   5.54 | point mort CAC  30.2- 70.2
+Famille (4) sans housse            TTC 139.90 HT 116.58 | cout+droits 52.00-100.00 (c 79.00) | paiement 4.63 | retours 7.00 | marge avt pub  58.04 /  25.96 /  -4.13 | apres CAC 15/25/40 (central)  10.96   0.96 -14.04 | point mort CAC  -4.1- 58.0
+Famille + 4 housses pre-cochees    TTC 169.70 HT 141.42 | cout+droits 62.00-116.00 (c 96.00) | paiement 5.55 | retours 8.48 | marge avt pub  71.53 /  31.38 /   0.35 | apres CAC 15/25/40 (central)  16.38   6.38  -8.62 | point mort CAC   0.4- 71.5
+Housse seule en ajout (marginal)   TTC  14.90 HT  12.42 | cout+droits  2.50- 4.00 (c  6.50) | paiement 0.46 | retours 0.75 | marge avt pub   9.25 /   4.71 /   6.24
+Popup lombaire (marginal)          TTC  19.90 HT  16.58 | cout+droits  4.00- 8.00 (c  5.50) | paiement 0.62 | retours 0.99 | marge avt pub  11.69 /   9.47 /   5.68
+1x + housse + lombaire             TTC 104.70 HT  87.25 | cout+droits 19.50-37.00 (c 34.00) | paiement 3.54 | retours 5.24 | marge avt pub  62.79 /  44.48 /  34.67 | apres CAC 15/25/40 (central)  29.48  19.48   4.48 | point mort CAC  34.7- 62.8
+
+==== Autres produits (TVA reversee, central, avant pub) ====
+Soya 2.0 1x (housse incluse)   TTC  59.90 | cout 11.00-23.00 | marge avt pub  35.97 /  24.77 /  17.88
+Soya 2.0 Duo                   TTC  89.90 | cout 22.00-46.00 | marge avt pub  48.62 /  30.34 /  15.50
+Soya 2.0 Famille (4)           TTC 129.90 | cout 44.00-92.00 | marge avt pub  58.15 /  26.44 /  -3.01
+Enfant 1x                      TTC  49.90 | cout  9.00-20.00 | marge avt pub  30.09 /  20.25 /  14.01
+Enfant Duo                     TTC  89.90 | cout 18.00-40.00 | marge avt pub  52.62 /  36.34 /  21.50
+Lombaire seul (catalogue)      TTC  49.90 | cout  6.00-14.00 | marge avt pub  33.09 /  25.25 /  20.01
+
+==== Illustration panier moyen et marge ponderee (TVA reversee) ====
+housse gardee 41 % | bas     | panier moyen TTC  96.94 | marge avant pub  53.17 | apres CAC 25  28.17 | point mort CAC  53.17
+housse gardee 41 % | central | panier moyen TTC  96.94 | marge avant pub  34.94 | apres CAC 25   9.94 | point mort CAC  34.94
+housse gardee 41 % | haut    | panier moyen TTC  96.94 | marge avant pub  22.60 | apres CAC 25  -2.40 | point mort CAC  22.60
+housse gardee 79 % | bas     | panier moyen TTC 104.87 | marge avant pub  57.90 | apres CAC 25  32.90 | point mort CAC  57.90
+housse gardee 79 % | central | panier moyen TTC 104.87 | marge avant pub  37.64 | apres CAC 25  12.64 | point mort CAC  37.64
+housse gardee 79 % | haut    | panier moyen TTC 104.87 | marge avant pub  25.61 | apres CAC 25   0.61 | point mort CAC  25.61

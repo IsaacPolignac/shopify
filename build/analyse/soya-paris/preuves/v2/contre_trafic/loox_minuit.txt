@@ -1,0 +1,24 @@
+# Horodatages Loox (data-time, ms) : part des avis à 00:00:00.000 UTC exactement, par page (tri « newest », 20 avis par page)
+2.0 p1.html 20 à minuit : 5 | du 2026-09-08 au 2026-09-25
+2.0 p5.html 20 à minuit : 11 | du 2026-06-30 au 2026-07-19
+2.0 p10.html 20 à minuit : 3 | du 2026-01-09 au 2026-02-07
+2.0 p12.html 20 à minuit : 10 | du 2025-10-17 au 2025-12-18
+2.0 p14.html 20 à minuit : 20 | du 2025-09-18 au 2025-09-18
+2.0 p16.html 20 à minuit : 17 | du 2025-06-05 au 2025-06-27
+2.0 p18.html 20 à minuit : 20 | du 2025-06-05 au 2025-06-05
+2.0 p20.html 20 à minuit : 20 | du 2025-06-05 au 2025-06-05
+2.0 p25.html 20 à minuit : 20 | du 2025-03-13 au 2025-03-13
+2.0 p30.html 20 à minuit : 20 | du 2025-01-31 au 2025-02-12
+2.0 p35.html 20 à minuit : 20 | du 2024-10-21 au 2024-11-14
+2.0 p40.html 20 à minuit : 20 | du 2024-08-11 au 2024-08-19
+2.0 p45.html 20 à minuit : 20 | du 2024-06-30 au 2024-07-08
+2.0 p50.html 20 à minuit : 20 | du 2024-02-19 au 2024-03-17
+2.0 p55.html 20 à minuit : 20 | du 2023-08-26 au 2023-10-19
+2.0 p60.html 20 à minuit : 20 | du 2023-03-25 au 2023-04-17
+2.0 p63.html 16 à minuit : 16 | du 2023-01-01 au 2023-01-22
+3.0 p1.html 20 à minuit : 3 | du 2026-09-17 au 2026-09-25
+3.0 p3.html 20 à minuit : 5 | du 2026-09-01 au 2026-09-08
+3.0 p6.html 20 à minuit : 2 | du 2026-08-05 au 2026-08-13
+3.0 p10.html 20 à minuit : 7 | du 2026-06-16 au 2026-06-29
+3.0 p14.html 20 à minuit : 0 | du 2026-02-17 au 2026-04-01
+3.0 p17.html 19 à minuit : 4 | du 2025-10-31 au 2025-12-30

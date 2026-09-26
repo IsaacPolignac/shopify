@@ -1,0 +1,41 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 103 
+link: <https://cdn.shopify.com>; rel=preconnect, <https://cdn.shopify.com>; crossorigin; rel=preconnect, <//soya-paris.com/cdn/shop/t/29/assets/theme.css?v=151159139448717063861789712056>; as=style; rel=preload, <https://cdn.shopify.com/extensions/01a0d46b-a952-7e12-9608-a167dbf336f0/ez-product-image-translate-408/assets/algo_translation_3.js?v=soya-paris.com>; as=script; rel=preload, <https://cdn.shopify.com/extensions/01a0d242-678e-73e5-bffd-00230e3bfc44/kaching-popup-469/assets/kaching-popup-v2.css>; as=style; rel=preload, <https://soya-paris.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=style; crossorigin; rel=preload
+
+HTTP/2 200 
+date: Sat, 26 Sep 2026 10:52:38 GMT
+content-type: text/html; charset=utf-8
+x-download-options: noopen
+cf-cache-status: DYNAMIC
+set-cookie: localization=FR; path=/; expires=Sun, 26 Sep 2027 10:52:38 GMT; SameSite=Lax
+set-cookie: cart_currency=EUR; path=/; expires=Sat, 10 Oct 2026 10:52:38 GMT; SameSite=Lax
+set-cookie: _shopify_essential=:AaDdWHmuAAEAl8CPcRLTg0z-mOEWTmf0lTDVrEiWxsXd4OD6XOCHXUzmMXHQja4IJq2vsan3qxHgVKUweiqUVBrJ6eeza2oACBD29zVEEqOFUUM3ADkrfXvfCjtu5gagP1Etz5fC6yo1bO-fipJNo_C_r2EfweAPHnSZG0XK-Ob5AUaHA3KWUxGpeeV9tw3GPWeEU_wVQcyshAXRnDaAjwdNKQ0yYFUGDe2GLlbywaFmBIh-eemnY1445jMAc773ZQ-DwB82-cBVll-9tuADxGf5jN5YWxMsYlUpE_-DfHQ2TA_hH_9MTF4HZ_O_VXlnuom9nD4fDZHIzT72:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_analytics=:AaDdWHqIAAEA36LW3M6NtLFoR1UgPQRL0VAFV2luR3yt2q-nO01kM9K6ZA2MUnnbMhFjB50Zn1XaH_ouuu4kaPdz_3yt1qzfLGHpSJI6_ktIYjJs2YubOaQvH8nPIDKPOrXU2Ly0SuDR10qMgbYLedcE-fo:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_marketing=:AaDdWHqIAAEAcqpZodGpZAGoasZgXAmQCLbGqe4yhKJhSQyrUFFWSIeOzCQTVBuTIdyT8ak_S3d4dVZ1onisec3JprFgpamOKMvFG6W1s0jl8i9BRS5ylHhwu3ThtYj6nKaWxekup8VChvpnVMdm_kiRp_E:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+link: </cart/53641646866764:1?ucp/version=2026-08-25&context/payment/0/handler=dev.shopify.shop_pay>; rel="buy"; payment="dev.shopify.shop_pay com.google.pay dev.shopify.card", <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//soya-paris.com/cdn/shop/t/29/assets/theme.css?v=151159139448717063861789712056>; as="style"; rel="preload", <https://cdn.shopify.com/extensions/01a0d46b-a952-7e12-9608-a167dbf336f0/ez-product-image-translate-408/assets/algo_translation_3.js?v=soya-paris.com>; as="script"; rel="preload", <https://cdn.shopify.com/extensions/01a0d242-678e-73e5-bffd-00230e3bfc44/kaching-popup-469/assets/kaching-popup-v2.css>; as="style"; rel="preload", <https://soya-paris.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as="style"; rel="preload"; crossorigin, </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+x-permitted-cross-domain-policies: none
+etag: W/"page_cache:93550543180:ProductDetailsController:06b7e754cc6f07c6fdba4d93b8bf255b:3ddfe8b17dd4f48413920791be3f569c"
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+shopify-complexity-score: 226
+shopify-complexity-score-v2: 226
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+access-control-allow-origin: *
+strict-transport-security: max-age=7889238
+vary: Accept
+vary: accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr-FR
+accept-ch: Sec-CH-Viewport-Width
+powered-by: Shopify
+server-timing: processing;dur=234;desc="gc:6", db;dur=22, db_async;dur=37.693, render;dur=123, asn;desc="396982", edge;desc="IAD", country;desc="US", theme;desc="205977846092", pageType;desc="product", servedBy;desc="kzfz", requestID;desc="e9f2a581-f513-4d2c-9e54-2882981d2f02-1790419958", _y;desc="34a0d4bc-20e7-46f2-8f0e-038401b98313", _s;desc="8fdb3d2e-2a38-4066-87cb-a42059c10efc", _cmp;desc="3.AMPS_US_f_t_hIo0zsT3QsqcEtomA5D5Nw", _cta;desc="1", _ye;desc="1821977558", _se;desc="1790421758", compressionLevel;desc="5", compressionTime;dur=15.534, earlyhints
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-xss-protection: 1; mode=block
+alt-svc: h3=":443"; ma=86400
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=%2BuzEf%2Be%2BIqNGwSB2JAbMYwlCbeSTsW7QYtaLguA2LIgAAWVY7Bb672kc47QotUo3lBWxjhdQ0VYZ8MpJRzVjKTAe9wDcHEuoni%2Fn2srFXknQwfs%2BARPWy7tGZCvaH%2FFr"}]}
+x-content-type-options: nosniff
+x-request-id: e9f2a581-f513-4d2c-9e54-2882981d2f02-1790419958
+cf-ray: a411b8626a209de2-IAD
+

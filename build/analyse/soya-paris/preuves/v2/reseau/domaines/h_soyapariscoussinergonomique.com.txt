@@ -1,0 +1,40 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 103 
+link: <https://cdn.shopify.com>; rel=preconnect, <https://cdn.shopify.com>; crossorigin; rel=preconnect, <//soyapariscoussinergonomique.com/cdn/shop/t/2/assets/base.css?v=12306032551326734671785976118>; as=style; rel=preload, <https://soyapariscoussinergonomique.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as=style; crossorigin; rel=preload
+
+HTTP/2 200 
+date: Sat, 26 Sep 2026 09:57:01 GMT
+content-type: text/html; charset=utf-8
+x-download-options: noopen
+cf-cache-status: DYNAMIC
+set-cookie: localization=US; path=/; expires=Sun, 26 Sep 2027 09:57:01 GMT; SameSite=Lax
+set-cookie: cart_currency=USD; path=/; expires=Sat, 10 Oct 2026 09:57:01 GMT; SameSite=Lax
+set-cookie: _shopify_essential=:AaDdJY1RAAEANQGNIuhv6ow8-SuzcsUq_1NxLO55tpEICV6JH3rMoyga9eiYupXw8aaUlxKVzTx7kMUJJuFXbpIQD8R7en_ejw2s-PaJ-YuXl70UAWFJ1ObOcaHuHPSJ8Y57NVnxsogNW0wsBcJ9B26fRr1pE33-SIrGIkuTRTvzdlYeP15oaVRHxW6KfCrpUqXE17xWz3wJtNk6FS34eZ9pU5_QeRIbXFkJRJkB055T6trZpquWrwTjG6QQqKOgQZxyQBW5Rcsw-LgiP_uMydLDm9z0HgxVHocamPrWPZ3tFAGIz4GBcSuSyudk5C6EqrgKxnexLQ3q-Q:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_analytics=:AaDdJY6nAAEAjWuutWSqaEN2pvRR7Ikp7MaHLPxFzqUs5grBYZhYVGV_fobAB1spITptavmoNWFE3cfSh_paRgg7kNjMIlNSpvriLtR1a3N_lvVPg_BFemGo4j_ozH9pHMvHAoMrt21XAvQ49d87Dh27B9A:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+set-cookie: _shopify_marketing=:AaDdJY6oAAEACfh3yFB8ar5dhyefozcTI86MvXXzzb16M7jtsbT3OKjermoJugthAD-yLaBdd3wC-qEiNrJJOTqMsTcTXRyqtZyzPJrRCCeTKBA0FkgUYK0z3xLc8Z2-yjkQoDhCKIKT2ERtrmXdXss0pPQ:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin, <//soyapariscoussinergonomique.com/cdn/shop/t/2/assets/base.css?v=12306032551326734671785976118>; as="style"; rel="preload", <https://soyapariscoussinergonomique.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css>; as="style"; rel="preload"; crossorigin, </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+x-permitted-cross-domain-policies: none
+etag: W/"page_cache:75777507463:IndexController:a428343cfe1b6e39047c8957d7c9ac64:d8556fa718a04185f77da99892c7971d"
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+shopify-complexity-score: 357
+shopify-complexity-score-v2: 357
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+vary: Accept
+vary: accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr-US
+accept-ch: Sec-CH-Viewport-Width
+powered-by: Shopify
+server-timing: processing;dur=364;desc="gc:10", db;dur=121, db_async;dur=58.302, parse;dur=11, render;dur=99, asn;desc="396982", edge;desc="IAD", country;desc="US", theme;desc="153259933831", pageType;desc="index", servedBy;desc="5q2h", requestID;desc="918dd689-6760-4ed7-98e2-9a02302318c0-1790416620", _y;desc="3082d932-f992-446d-a8c8-a57aef79239a", _s;desc="9f179318-4caf-4561-861a-23c1147d1388", _cmp;desc="3.AMPS_US_f_f_RUCQ0vNHQAWNUkX7G5Fjkg", _cta;desc="1", _ye;desc="1821974221", _se;desc="1790418421", compressionLevel;desc="5", compressionTime;dur=8.245, earlyhints
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+x-xss-protection: 1; mode=block
+alt-svc: h3=":443"; ma=86400
+server: cloudflare
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Ipl0%2FGu4yGki0nopp7h4Y4s3yIAgerORB%2F9fLmrLDgOGNQaGDFmKAVUli%2Biwvk1B4ym8Ro2HLRmfpUfXD4BywtxMqXOm3KTfJrIzBD4d4zyuuusW8bNnj9rvASSeA5xiT2EWt%2BmC3xE990gNAbzJlZo%3D"}]}
+x-content-type-options: nosniff
+x-request-id: 918dd689-6760-4ed7-98e2-9a02302318c0-1790416620
+cf-ray: a41166e82aa401e1-IAD
+

@@ -1,0 +1,5 @@
+fenêtre 11,6 h : 5088 à 9614 EUR TTC
+x 24/11,6 : 10526 à 19890 EUR/jour
+enquêteur recalculé : 5385 à 9235
+Fenêtre 09:48 -> 10:31 UTC (43 min) : 3.0 +71 (Blanc -3928->-3963, Bleu -2006->-2018, Gris -2442->-2451, Beige -1418->-1433), housses 3.0 +51, 2.0 +35, housse 2.0 +32 ; puis 10:31 -> 11:14 : 0 sur les deux fiches (ventes/samples.jsonl).
+Ratio housse/oreiller nuit : 3.0 79 % ; 2.0 69 % ; cumul exposé 2.0 : 81 %

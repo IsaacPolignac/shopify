@@ -1,0 +1,89 @@
+# Contre-enquête pub — extractions Wayback (26/09/2026 ~11:40 UTC), fichiers soya2/ventes/wayback/*.html (contenu brut id_)
+## Compteur d'avis affiché
+p20_20250419.html :: 
+p20_20250520.html :: 
+p20_20250815.html :: 
+p20_20250826.html :: 
+p20_20250827.html :: 
+p20_20250831.html :: 
+p20_20251028.html :: 
+p30_20251028.html :: 
+p20_20251226.html :: 
+p20_20251228.html :: 
+p30_20260108.html :: 
+p30_20260127.html :: 
+p30_20260208.html :: 
+p30_20260214.html :: 
+p20_20260217.html :: 
+p30_20260217.html :: 
+p30_20260219.html :: 
+p30_20260224.html :: 
+p20_20260323.html :: 
+p20_20260420.html :: 
+p30_20260420.html :: 
+p30_20260630.html :: 
+p30_20260803.html :: 
+p30_20260824.html :: 
+p30_20260907.html :: 
+## Nom du thème et bandeaux (texte HTML visible SOLDES/FRENCH DAYS/BLACK NOVEMBER, blockTitle Kaching)
+p20_20250419.html | EUR | SOYA BACK TO BACK | "blockTitle":"OFFRE EXCLUSIVE" | visible: 
+p20_20250520.html | EUR | SOYA V2 – Version Transformation \u0026 Preuve Sociale | "blockTitle":"OFFRE EXCLUSIVE" | visible: 
+p20_20250815.html | EUR | SOYA V3 – Version Transformation \u0026 Preu... | "blockTitle":"SOLDES D'ÉTÉ | FIN AUJOURD'HUI À 00H" | visible: 
+p20_20250826.html | EUR | SOYA V3 – Version Transformation \u0026 Preu... | "blockTitle":"SOLDES D'ÉTÉ | FIN AUJOURD'HUI À 00H" | visible: 
+p20_20250827.html | EUR | SOYA V3 – Version Transformation \u0026 Preu... | "blockTitle":"SOLDES D'ÉTÉ | FIN AUJOURD'HUI À 00H" | visible: 
+p20_20250831.html | EUR | SOYA V3 – Version Transformation \u0026 Preu... | "blockTitle":"SOLDES D'ÉTÉ | FIN AUJOURD'HUI À 00H" | visible: 
+p20_20251028.html | EUR | SOYA V4 – Version 3.0 Transformation \u0026 Preu... | "blockTitle":"DESTOCKAGE TOTAL | FIN AUJOURD'HUI À 00H" | visible: 
+p30_20251028.html | EUR | SOYA V4 – Version 3.0 Transformation \u0026 Preu... | "blockTitle":"OFFRE DE LANCEMENT I FIN AUJOURD'HUI à 00H" | visible: 
+h20_20251104.html | EUR | SOYA V5 – Version 3.0 Black November |  | visible: 
+p20_20251226.html | EUR | SOYA V8 – Version 3.0 Noël | "blockTitle":"🎁 OFFRE SPÉCIALE DE NOËL 🎁" | visible: 
+p20_20251228.html | EUR | SOYA V8 – Version 3.0 Noël | "blockTitle":"🎁 OFFRE SPÉCIALE DE NOËL 🎁" | visible: 
+p30_20260108.html | EUR | SOYA V10 – Version 3.0 Soldes d'hiver | "blockTitle":"❄️ SOLDES D’HIVER – FIN À MINUIT ❄️" | visible: 
+p30_20260127.html | USD | SOYA V10 – Version 3.0 Soldes d'hiver | "blockTitle":"❄️ SOLDES D’HIVER – FIN À MINUIT ❄️" | visible: 
+p30_20260208.html | USD | SOYA V10 – Version 3.0 Soldes d'hiver | "blockTitle":"❄️ SOLDES D’HIVER – FIN À MINUIT ❄️" | visible: 
+p30_20260214.html | EUR | SOYA V11 – Version 3.0 Saint-Valentin | "blockTitle":"OFFRE SPÉCIALE SAINT-VALENTIN" | visible: 
+p20_20260217.html | USD | SOYA V11 – Version 3.0 Saint-Valentin | "blockTitle":"OFFRE SAINT-VALENTIN | FIN À MINUIT" | visible: 
+p30_20260217.html | USD | SOYA V11 – Version 3.0 Saint-Valentin | "blockTitle":"OFFRE SAINT-VALENTIN | FIN À MINUIT" | visible: 
+p30_20260219.html | USD | SOYA V11 – Version 3.0 Saint-Valentin | "blockTitle":"OFFRE SAINT-VALENTIN | FIN À MINUIT" | visible: 
+p30_20260224.html | USD | SOYA V11 – Version 3.0 Offre exclusive 20 février | "blockTitle":"OFFRE EXCLUSIVE | FIN À MINUIT" | visible: 
+p20_20260323.html | EUR | SOYA V11 – Version 3.0 Offre exclusive 20 février | "blockTitle":"OFFRE EXCLUSIVE | FIN À MINUIT" | visible: 
+p20_20260420.html | EUR | SOYA V11 – Version 3.0 french days | "blockTitle":"FRENCH DAYS | JUSQU'À -60%" | visible: 
+p30_20260420.html | EUR | SOYA V11 – Version 3.0 french days | "blockTitle":"FRENCH DAYS | JUSQU'À -60%" | visible: 
+p30_20260630.html | EUR | V14 – Version 3.0 Soldes d'été | "blockTitle":"SOLDES D’ÉTÉ | JUSQU’À -60%" | visible: 
+p30_20260803.html | EUR | V14 – Version 3.0 Soldes d'été | "blockTitle":"SOLDES D’ÉTÉ | JUSQU’À -60%" | visible: 
+p30_20260824.html | EUR | V14 – Version 3.0 Soldes d'été | "blockTitle":"SOLDES D’ÉTÉ | JUSQU’À -60%" | visible: 
+p30_20260907.html | EUR | V15 – Version 3.0 Promo Rentrée | "blockTitle":"OFFRE DE RENTRÉE | JUSQU'À -60%" | visible: 
+## URL publicitaires archivées (CDX)
+20250815154645 https://soya-paris.com/products/oreiller-soya-2-0?variant=44394185326792&country=FR&currency=EUR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic
+20250826075048 https://soya-paris.com/products/oreiller-soya-2-0?variant=44394185326792&country=FR&currency=EUR&srsltid=AfmBOoo1fXY5iikmZ_F8I8e1ptpeQ_2HZoWk106hQ5NeeFm2LHlEyAVHkeo
+20251027170313 https://soya-paris.com/?utm_medium=company_profile&utm_source=trustpilot&utm_campaign=domain_click
+20251222000659 https://soya-paris.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnyqibhCSuzQRN49I5OXGJ0Y5tTowBjrNn_JjG1-d7YsUc2EMbuYlF9upXXrs_aem_lK4geOJE9ouahHf9CK-Z2Q
+20251226185358 https://soya-paris.com/products/oreiller-soya-2-0?variant=44394185326792&country=FR&currency=EUR&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&srsltid=AfmBOoo1fXY5iikmZ_F8I8e1ptpeQ_2HZoWk106hQ5NeeFm2LHlEyAVHkeo
+20260217154832 https://soya-paris.com/products/oreiller-soya-2-0?tw_source=google&tw_adid=748884517347&tw_campaign=22489769215&tw_kwdid=kwd-390453911726&gad_source=1&gad_campaignid=22489769215&gbraid=0AAAAA-C3fopXLvBV84y9AMRdIDJfl9To4&gclid=CjwKCAiAwNDMBhBfEiwAd7ti1AWafW4uz6MAEHXhi4RW5dxfkOKeH2cuEo_5LsZIMIP58-I5g1AG_BoC-AAQAvD_BwE
+20260420150703 https://soya-paris.com/products/oreiller-soya-2-0?tw_source=google&tw_adid=748884517347&tw_campaign=22489769215&tw_kwdid=kwd-390453911726&gad_source=1&gad_campaignid=22489769215&gbraid=0AAAAA-C3foqJmnjRuXLmBWW5g5D5K5mRi&gclid=EAIaIQobChMI2fyr75vakgMVYzQIBR2OVhk2EAAYASAAEgIUJ_D_BwE
+20260420150725 https://soya-paris.com/products/oreiller-soya-2-0?tw_source=google&tw_adid=748884517347&tw_campaign=22489769215&tw_kwdid=kwd-390453911726&gad_source=1&gad_campaignid=22489769215&gbraid=0AAAAA-C3foqJmnjRuXLmBWW5g5D5K5mRi
+## Compteur d'avis affiché (regex tolérante aux espaces insécables)
+p20_20250419.html :: None
+p20_20250520.html :: None
+p20_20250815.html :: None
+p20_20250826.html :: None
+p20_20250827.html :: None
+p20_20250831.html :: None
+p20_20251028.html :: None
+p30_20251028.html :: None
+p20_20251226.html :: None
+p20_20251228.html :: None
+p30_20260108.html :: None
+p30_20260127.html :: None
+p30_20260208.html :: None
+p30_20260214.html :: None
+p20_20260217.html :: None
+p30_20260217.html :: None
+p30_20260219.html :: None
+p30_20260224.html :: None
+p20_20260323.html :: None
+p20_20260420.html :: None
+p30_20260420.html :: None
+p30_20260630.html :: None
+p30_20260803.html :: None
+p30_20260824.html :: None
+p30_20260907.html :: None

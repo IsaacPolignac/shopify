@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 423 
+date: Sat, 26 Sep 2026 09:57:03 GMT
+content-type: text/html; charset=utf-8
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+shopify-complexity-score: 40
+shopify-complexity-score-v2: 40
+set-cookie: _shopify_essential=:AaDdJZk_AAEAnBWRUv-H5SXeBWFo-oWRtw7m3pWXK-E2u8EPqFM3lvHIStKeyeXnUDX1PA4Kq62jfwIuBIQ4roUDuut9MOiWnUy--3DIw96Yp2qcXxc6jJrN1joZneK61JdyeBzakqO2oShv-ObWZX9JhYlIZ6GlOsx3Pkp3zjxlRj_uQuXtlOW6a712t12IsnvLE0P1-YsS3cHK5AE0K2UfFxYt9YeOrUrCy6TJuDzTE3FR1g:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=sdTHjTwI4ofVkoW2RPfP%2FTxcgkqOmpZQrCXXWZXoYBjrzRCGwOUYeKxmC68Ewqur8NyxZEPuu%2FqsKWPH526KOTblxXjtpF00czYFEPFjhqpQ%2FUvgpsMMGnf9HvUpjRYnvl1%2BR%2BArt3QiAg%3D%3D"}]}
+vary: Accept,accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: en
+cache-control: private, no-store
+link: </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+powered-by: Shopify
+server-timing: processing;dur=24, db;dur=6, db_async;dur=3.562, asn;desc="396982", edge;desc="IAD", country;desc="US", pageType;desc="index", servedBy;desc="9rwk", requestID;desc="c47b4cc7-c17e-4c74-9f09-a62a718587a5-1790416623", _y;desc="8cbc502a-a36f-4394-a5f6-831ce59bea06", _s;desc="16cea725-3891-4183-b76a-3c18dfdfcd4a", _cmp;desc="3.AMPS_US_f_f_rz9NS-GWQyeFw9XsIHvJjg", _cta;desc="1", _ye;desc="1821974223", _se;desc="1790418423"
+x-download-options: noopen
+x-xss-protection: 1; mode=block
+cf-cache-status: DYNAMIC
+server: cloudflare
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=86400
+x-permitted-cross-domain-policies: none
+x-request-id: c47b4cc7-c17e-4c74-9f09-a62a718587a5-1790416623
+cf-ray: a41166fb5a6d2c61-IAD
+

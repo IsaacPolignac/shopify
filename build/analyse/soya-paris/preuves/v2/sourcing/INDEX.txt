@@ -1,0 +1,9 @@
+Mission « sourcing, coût, marge » — preuves brutes (26/09/2026)
+img_soya/         82 images produits Soya (products.json -> images[].src, CDN Shopify, ?width=600) : v3 (3.0), v2 (2.0), enf, henf, lomb, h3 (housse 3.0), h2 (housse 2.0), v1, regl, voy ; urls.tsv = nom local / URL / src
+img_mkt/          images de marché : mic_* (Made-in-China Jintongyuan / Taineng Jikang), jty_p6036_* (listing 60*36*13/9), jty_knee_*, derila_*, confal_*, comfy_*
+web/              pages brutes : fiches Made-in-China (prix par palier, MOQ, colisage), recherches Made-in-China (Butterfly_Pillow, Kids_Memory_Foam_Pillow, Memory_Foam_Pillow_Cover, prix knee pillow), TinEye (rev_tineye*, tin_*.json), pages bloquées (Alibaba vide, AliExpress captcha, Temu JS, DHgate 403, eBay 403, Amazon 202 vide)
+tp/               Trustpilot : p1.html (blocage AWS WAF en curl) ; trustpilot_extraits_2026-09-26.txt (extraits WebFetch)
+phash.py          aHash / dHash / pHash (DCT 32->8) maison ; hash_cross.tsv (Soya x Somnila, 159 x 136) ; hash_mkt.tsv (Soya x marché) ; hashes.json
+sheet.py          planches ; sh_*.jpg (planches), board_forme.jpg, board_details.jpg (comparaison des moules)
+mic_cards.py      extraction des cartes produits Made-in-China (titre, prix, MOQ, société)
+marge.py          modèle de coût et de marge (hypothèses en tête) ; marge_out.txt = sorties

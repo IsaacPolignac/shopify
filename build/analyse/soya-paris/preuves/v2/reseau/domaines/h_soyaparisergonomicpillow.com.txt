@@ -1,0 +1,31 @@
+HTTP/1.1 200 Connection Established
+
+HTTP/2 402 
+date: Sat, 26 Sep 2026 09:57:02 GMT
+content-type: text/html; charset=utf-8
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+shopify-complexity-score: 220
+shopify-complexity-score-v2: 220
+set-cookie: _shopify_essential=:AaDdJZQfAAEA5jY-IJdsZtCxBwTkt2yjYjDpCkz6dyaAmjB22_Ro44KttHcZWFD0RBU5Ns9iUXLvE1_xisjCASoJsy-8XX1emWMHj5nGrzN8gd0KJHiVNadhEQ55fEWEC4R1iKIAW1BExTLT2HKdUsOsV0EF9K2BBuZ99TKA_y2kQpeUa11Pf9u9gchjWt5viFMtw-11cS_ZYOK4gVBEmNh3FzFa01_4iQJzzDPY5RajebsxFg:; Max-Age=31536000; Path=/; HttpOnly; Secure; Priority=High; SameSite=Lax
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=3K2pcBrqGLH%2F1nct321X7Vgmh6aWAGZUuKtn0lAWJevaxUXqPgd%2FN69HfTf1AxI7TLOt5oZlgJeAGrwPvryte1iYx3qbERVUJJJ5slrjWqeMxeRnxgCBqAditM8Pto5GjWSaNh2uYfOD3gdV1GE%3D"}]}
+vary: Accept,accept-encoding
+cdn-cache-control: no-cache, no-store
+content-language: fr
+cache-control: private, no-store
+link: </.well-known/ucp>; rel="ucp"; version="2026-08-25"
+powered-by: Shopify
+server-timing: processing;dur=113, db;dur=34, db_async;dur=30.492, asn;desc="396982", edge;desc="IAD", country;desc="US", pageType;desc="index", servedBy;desc="qgzj", requestID;desc="07a4730a-d810-4363-a4ae-a95d7b18b010-1790416622", _y;desc="e4f83a25-a527-4479-b3e8-631bca75bbc7", _s;desc="390c60bc-e553-4a53-be00-adf7916981f9", _cmp;desc="3.AMPS_US_f_f_RnObD*gdRHiZn3c4QkQDwQ", _cta;desc="1", _ye;desc="1821974222", _se;desc="1790418422"
+x-download-options: noopen
+x-xss-protection: 1; mode=block
+cf-cache-status: DYNAMIC
+server: cloudflare
+nel: {"report_to":"cf-nel","success_fraction":0.01,"max_age":604800}
+x-content-type-options: nosniff
+alt-svc: h3=":443"; ma=86400
+x-permitted-cross-domain-policies: none
+x-request-id: 07a4730a-d810-4363-a4ae-a95d7b18b010-1790416622
+cf-ray: a41166f29839d6e8-IAD
+
