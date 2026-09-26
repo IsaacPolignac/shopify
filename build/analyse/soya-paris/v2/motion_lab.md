@@ -2,7 +2,7 @@
 
 **Méthode.** Chaque interaction a été enregistrée avec le screencast de Chrome (protocole DevTools `Page.startScreencast`). Chrome n'émet une image que lorsque l'écran change, et chaque image est horodatée : on obtient donc le vrai rythme d'affichage, pas une vidéo à cadence fixe. En parallèle, un échantillonneur tournait à chaque image rendue (`requestAnimationFrame`) et relevait `opacity`, `transform`, `clip-path`, `visibility` et la position de l'élément animé. Pour chaque transition détectée, la durée est mesurée de la première à la dernière image qui change. La courbe réelle est ensuite comparée par moindres carrés à `linear`, `ease`, `ease-in`, `ease-out`, `ease-in-out`, `(.86,0,.07,1)` et `(.22,1,.36,1)`.
 
-**Conditions.** Ordinateur 1440 × 900 et mobile 390 × 844, marché France (EUR), vidéos bloquées, SVG de la galerie remplacés par des rectangles gris (ils font planter le navigateur de capture, voir § 10). Enregistrements du 26/09/2026 entre 11:45 et 12:15 UTC.
+**Conditions.** Ordinateur 1440 × 900 et mobile 390 × 844, marché France (EUR), vidéos bloquées, SVG de la galerie remplacés par des rectangles gris (ils font planter le navigateur de capture, voir § 10). Enregistrements du 26/09/2026 entre 09:50 et 10:00 UTC (11:50 à 12:00 à Paris ; le compte à rebours affichait alors 12:04:52 avant minuit).
 
 **Preuves.** `preuves/motion/` contient pour chaque scénario :
 - une planche horodatée (`<scénario>-planche.jpg`, 24 images réparties sur l'enregistrement) ;
