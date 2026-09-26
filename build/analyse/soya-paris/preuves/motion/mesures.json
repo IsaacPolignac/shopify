@@ -1,0 +1,282 @@
+{
+ "atc-d": {
+  "frames": 285,
+  "duree_ms": 5037,
+  "courbes": {
+   "button.button--xl div": [
+    {
+     "prop": "opacity",
+     "from": 1.0,
+     "to": 0.0,
+     "start_ms": 405,
+     "dur_ms": 149,
+     "frames": 10,
+     "curve": "ease",
+     "rmse": 0.012
+    },
+    {
+     "prop": "translateY",
+     "from": 0.0,
+     "to": -10.0,
+     "start_ms": 405,
+     "dur_ms": 149,
+     "frames": 10,
+     "curve": "ease",
+     "rmse": 0.012
+    }
+   ],
+   "button.button--xl .button__loader": [
+    {
+     "prop": "opacity",
+     "from": 0.0,
+     "to": 1.0,
+     "start_ms": 554,
+     "dur_ms": 150,
+     "frames": 10,
+     "curve": "ease",
+     "rmse": 0.019
+    },
+    {
+     "prop": "translateY",
+     "from": 10.0,
+     "to": 0.0,
+     "start_ms": 554,
+     "dur_ms": 150,
+     "frames": 10,
+     "curve": "ease",
+     "rmse": 0.019
+    }
+   ]
+  },
+  "probe_keys": [
+   "button.button--xl div",
+   "button.button--xl .button__loader",
+   ".button__loader span"
+  ]
+ },
+ "drawers-d": {
+  "frames": 1,
+  "duree_ms": 27,
+  "courbes": {},
+  "probe_keys": []
+ },
+ "drawers2-d": {
+  "frames": 206,
+  "duree_ms": 35572,
+  "courbes": {},
+  "probe_keys": [
+   "cart",
+   "search",
+   "qbErr"
+  ]
+ },
+ "drawers2-m": {
+  "frames": 290,
+  "duree_ms": 7487,
+  "courbes": {
+   "quickbuy quick-buy-drawer": [
+    {
+     "prop": "opacity",
+     "from": 0.0,
+     "to": 1.0,
+     "start_ms": 579,
+     "dur_ms": 148,
+     "frames": 10,
+     "curve": "ease",
+     "rmse": 0.012
+    }
+   ]
+  },
+  "probe_keys": [
+   "cart",
+   "search",
+   "quickbuy"
+  ]
+ },
+ "hover-d": {
+  "frames": 150,
+  "duree_ms": 4239,
+  "courbes": {
+   "card product-card img:nth-of-type(1)": [
+    {
+     "prop": "opacity",
+     "from": 1.0,
+     "to": 0.0,
+     "start_ms": 40,
+     "dur_ms": 195,
+     "frames": 12,
+     "curve": "ease-in-out",
+     "rmse": 0.034
+    }
+   ],
+   "card product-card img:nth-of-type(2)": [
+    {
+     "prop": "opacity",
+     "from": 0.0,
+     "to": 1.0,
+     "start_ms": 40,
+     "dur_ms": 195,
+     "frames": 12,
+     "curve": "ease-in-out",
+     "rmse": 0.034
+    }
+   ],
+   "card product-card .product-card__figure img + img": [
+    {
+     "prop": "opacity",
+     "from": 0.0,
+     "to": 1.0,
+     "start_ms": 40,
+     "dur_ms": 195,
+     "frames": 12,
+     "curve": "ease-in-out",
+     "rmse": 0.034
+    }
+   ],
+   "logo .image-link-blocks img": [
+    {
+     "prop": "scale",
+     "from": 1.0,
+     "to": 1.059,
+     "start_ms": 28,
+     "dur_ms": 899,
+     "frames": 54,
+     "curve": "ease",
+     "rmse": 0.083
+    }
+   ],
+   "logo [class*=image-link] img": [
+    {
+     "prop": "scale",
+     "from": 1.0,
+     "to": 1.059,
+     "start_ms": 28,
+     "dur_ms": 899,
+     "frames": 54,
+     "curve": "ease",
+     "rmse": 0.083
+    }
+   ]
+  },
+  "probe_keys": [
+   "card",
+   "logo"
+  ]
+ },
+ "load-d": {
+  "frames": 16,
+  "duree_ms": 8454,
+  "courbes": {},
+  "probe_keys": []
+ },
+ "load-m": {
+  "frames": 34,
+  "duree_ms": 8192,
+  "courbes": {},
+  "probe_keys": []
+ },
+ "menu-m": {
+  "frames": 44,
+  "duree_ms": 1249,
+  "courbes": {},
+  "probe_keys": [
+   "menu",
+   "found"
+  ]
+ },
+ "pdp-d": {
+  "frames": 113,
+  "duree_ms": 7538,
+  "courbes": {},
+  "probe_keys": [
+   "nOffers",
+   "acc",
+   "sticky"
+  ]
+ },
+ "pdp-m": {
+  "frames": 117,
+  "duree_ms": 34058,
+  "courbes": {},
+  "probe_keys": [
+   "nOffers",
+   "accErr",
+   "sticky"
+  ]
+ },
+ "popup-d": {
+  "frames": 55,
+  "duree_ms": 5818,
+  "courbes": {},
+  "probe_keys": []
+ },
+ "scroll-d": {
+  "frames": 177,
+  "duree_ms": 9873,
+  "courbes": {
+   ".media-with-text__media": [
+    {
+     "prop": "opacity",
+     "from": 0.0,
+     "to": 1.0,
+     "start_ms": 403,
+     "dur_ms": 301,
+     "frames": 17,
+     "curve": "ease",
+     "rmse": 0.028
+    }
+   ],
+   ".media-with-text .prose": [
+    {
+     "prop": "opacity",
+     "from": 0.0,
+     "to": 1.0,
+     "start_ms": 695,
+     "dur_ms": 207,
+     "frames": 14,
+     "curve": "ease",
+     "rmse": 0.035
+    }
+   ],
+   "product-card": [
+    {
+     "prop": "opacity",
+     "from": 0.0,
+     "to": 1.0,
+     "start_ms": 1888,
+     "dur_ms": 359,
+     "frames": 22,
+     "curve": "ease",
+     "rmse": 0.012
+    },
+    {
+     "prop": "translateY",
+     "from": 15.0,
+     "to": 0.0,
+     "start_ms": 1888,
+     "dur_ms": 359,
+     "frames": 22,
+     "curve": "ease",
+     "rmse": 0.012
+    }
+   ]
+  },
+  "probe_keys": [
+   ".media-with-text__media",
+   ".media-with-text .prose",
+   "product-card",
+   ".section-header"
+  ]
+ },
+ "scroll-m": {
+  "frames": 174,
+  "duree_ms": 3223,
+  "courbes": {},
+  "probe_keys": [
+   ".media-with-text__media",
+   ".media-with-text .prose",
+   "product-card",
+   ".section-header"
+  ]
+ }
+}
