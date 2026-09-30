@@ -1,0 +1,14 @@
+{
+ "model": "marketing-studio/image/sunburst",
+ "references": [
+  "build/images/higgsfield/ref/neck-01_ref-neutral_1x1.png",
+  "build/images/higgsfield/out/neck-01_couverture_v2.jpg"
+ ],
+ "arguments": {
+  "prompt": "Product photograph for an online store gallery, square frame: the white neck pillow on a real bed in a calm bedroom at dawn, seen from the front-left at a 30-degree angle, about 70 cm away, camera slightly above the mattress.\nThe pillow lies on a white cotton percale fitted sheet with soft natural creases, a washed linen duvet in pale misty blue-grey folded back and softly out of focus in the near foreground, and a light oak headboard and an off-white wall blurred behind. Low morning sun from a window on the left rakes across the pillow, lighting its left lobes warmly and leaving the right side in cool soft shade, with a soft shadow falling to the right.\nShot on a full-frame mirrorless camera with a 50 mm lens at f/2.8, ISO 400: the front roll, nubs and button are in sharp focus, the back lobes soften slightly, the headboard melts into bokeh. The pillow fills about 60 percent of the frame width.\n\nImage 1 shows the exact product's shape and Image 2 shows its real knit cover. Reproduce this exact pillow and do not redesign it: a wide, low, cloud-shaped memory foam pillow, 62 cm wide, 42 cm deep, 13 cm high at the back roll and 11 cm at the front roll; soft rounded lobes along the outline, a broad rounded wing on each side at the base; one small fabric-covered button in a shallow dimple at the center of the top; at the middle of the front edge, a short rounded tongue with seven shallow round nubs, four in the back row and three in the front row. The cover is white cotton jersey knit with fine stitch rows, a few soft natural wrinkles and a slightly puckered seam. It is dense, heavy foam that rests with its weight, never inflated or plush-toy-like. No extra lobes, buttons, zips, tags or piping.\n\nIt must be indistinguishable from an unretouched photograph taken by a professional photographer in a real home: natural window light with a warm direct side and cool bluish ambient shade, true optical depth of field with smooth bokeh, slight chromatic softness toward the corners, fine sensor noise, small real-world imperfections (a stray fold, a faint crease, dust motes in the light, slightly uneven textiles), the pillow not perfectly aligned with the frame. No people or faces, no text, logo, watermark or label, no CGI or 3D render look, no waxy or airbrushed surfaces, no glossy plastic, no cutout or pasted-on look, no saturated or powder blue, no HDR, no oversharpening.",
+  "quality": "max",
+  "resolution": "2k",
+  "aspect_ratio": "1:1"
+ },
+ "output": "build/images/higgsfield/out/g3_a_hero34"
+}
