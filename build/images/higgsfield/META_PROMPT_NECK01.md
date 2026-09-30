@@ -1,9 +1,9 @@
 # Photo de couverture Neck 01 : méthode et prompt
 
-Image retenue :  (1536 × 1536, carré pour la fiche produit).
+Image retenue : `out/neck-01_couverture_v1.jpg` (1536 × 1536, carré pour la fiche produit).
 
 ## Méthode (méta-prompt)
-1. **Référence du vrai produit**, pour que l'oreiller ne soit pas inventé : photo fournisseur , détourée sur fond gris neutre, car le ciel bleu saturé d'origine déteignait sur le rendu.
+1. **Référence du vrai produit**, pour que l'oreiller ne soit pas inventé : photo fournisseur `build/images/source/09-oreiller-cervical/oreiller-cervical_blanc_34_51.jpg`, détourée sur fond gris neutre, car le ciel bleu saturé d'origine déteignait sur le rendu.
 2. **Méta-prompt en 9 blocs** : usage et cadrage, verrou du produit, matière, décor, lumière, appareil, composition, couleur et rendu, exclusions. Il suit le brand book (aube, lin lavé, trame visible, aucun visage, aucun texte).
 3. **Trois rédacteurs**, chacun sur une mise en scène, puis **un juge** qui garde et affine les deux meilleurs prompts.
 4. **Première génération**, puis **deux critiques indépendants**, l'un sur le réalisme, l'autre sur la fidélité au produit et à la marque. Ils ont relevé :
@@ -15,7 +15,8 @@ Image retenue :  (1536 × 1536, carré pour la fiche produit).
 6. **Retouche légère** : balance des blancs sur le lobe éclairé (≈ 236/235/232) et grain monochrome de 1,5 %. Rien d'autre n'est modifié.
 
 ## Paramètres
-- Modèle :  ;  2k ;  1:1 ;  false ;  false ;  101.
+- Modèle : `alibaba/qwen-image-3/edit` ; `resolution` 2k ; `aspect_ratio` 1:1 ; `prompt_extend` false ; `enable_thinking` false ; `seed` 101.
+- Script : `python3 build/images/higgsfield/generate_image.py spec.json` (clé `HF_KEY` dans `.env.local`).
 - Coût : environ 0,075 $ par image (estimation de l'API).
 
 ## Prompt
