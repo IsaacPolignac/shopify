@@ -41,9 +41,10 @@ def main(spec_path):
     arguments = dict(spec["arguments"])
 
     try:
-        if spec.get("reference"):
-            ref_url = higgsfield_client.upload_file(ROOT / spec["reference"])
-            arguments["image_urls"] = [ref_url] + list(arguments.get("image_urls", []))
+        refs = ([spec["reference"]] if spec.get("reference") else []) + list(spec.get("references", []))
+        if refs:
+            urls = [higgsfield_client.upload_file(ROOT / ref) for ref in refs]
+            arguments["image_urls"] = urls + list(arguments.get("image_urls", []))
         result = higgsfield_client.subscribe(
             spec["model"],
             arguments=arguments,
